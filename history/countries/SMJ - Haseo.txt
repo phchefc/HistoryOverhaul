@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = warlord_state
+government_rank = 1
+primary_culture = korean
+religion = mahayana
+technology_group = early_chinese
+capital = 2694
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Unified Silla
+
+889.1.1 = {
+	monarch = {
+		name = "Sun-sik"
+		dynasty = "Kim"
+		adm = 2
+		dip = 4
+		mil = 3
+		leader = {	name = "Kim Sun-sik"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 940.1.1 }
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

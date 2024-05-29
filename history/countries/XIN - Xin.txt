@@ -1,0 +1,58 @@
+government = monarchy
+add_government_reform = celestial_empire
+government_rank = 3
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+add_accepted_culture = vietnamese
+add_accepted_culture = buyeo
+culture_group_union = east_asian
+capital = 700	# Chang'an
+
+8.1.1 = {
+ 	monarch = {
+		name = "Mang"
+		dynasty = "Wang"
+		death_date = 23.10.5
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = XIN
+		name = "Xiaomu"
+		dynasty = "Wang"
+		death_date = 21.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+23.1.1 = {
+	queen = {
+		country_of_origin = XIN
+		dynasty = "Shi"
+		death_date = 23.10.5
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	} 
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,57 @@
+732 = "Sakbang"
+733 = "Seohae"
+734 = "Gyoju"
+735 = "Yangju"
+1845 = "Seogyeong"
+2694 = "Donggye"
+2744 = "Bukgye"
+2743 = "Gilju"
+4230 = "Gwangju"
+4231 = "Gyeonggi"
+
+# Manchuria
+704 = "Yoseo"
+2109 = "Buyeo"
+726 = "Simyang"
+731 = "Cheoli"
+730 = "Gillim"
+2107 = "Yeongan"
+2106 = "Gongheom"
+3010 = "Bisa"
+2113 = "Cheonsan"
+2112 = "Pasok"
+2110 = "Jangnyeong"
+2111 = "Onyeo"
+2108 = "Yongwon"
+2188 = "Makhil"
+2186 = "Dongpyeong"
+1850 = "Anbyeon"
+4201 = "Hwanju"
+4217 = "Anwon"
+4652 = "Ansi"
+4653 = "Hyeondeok"
+4655 = "Yeongju"
+4661 = "Dongju"
+4663 = "Hoewon"
+
+#Japan
+1020 = "Gyeongdo"		#Kyoto
+1028 = "Donggyeong"		#Tokyo
+
+#China
+667 = "Gwangju"			#Guangzhou
+679 = "Seongdo"			#Chengdu
+680 = "Junggyeong"		#Chongqing
+684 = "Hangju"			#Hangzhou
+688 = "Gaebong"			#Kaifeng
+700 = "Gyeongjo"		#Xi'an
+1816 = "Bukgyeong"		#Beijing
+1821 = "Namgyeong"		#Nanjing
+1822 = "Soju"			#Suzhou
+1829 = "Hamun"			#Xiamen
+3009 = "Cheongdo"		#Qingdao
+1836 = "Nagyang"		#Luoyang
+685 = "Yangju"			#Yangzhou
+2154 = "Daebuk"			#Kelam
+
+# EH version

@@ -1,0 +1,476 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = TKI
+capital = 1023
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1000.1.1 = {
+	set_country_flag = daimyo
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Asano clan
+
+1582.6.21 = {
+	monarch = {
+		name = "Nagamasa"
+		dynasty = "Asano"
+		birth_date = 1547.1.1
+		death_date = 1611.5.29
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Choseiin"
+		dynasty = "Asano"
+		birth_date = 1550.1.1
+		death_date = 1616.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1593.1.1 = { capital = 1029 }
+
+# Hiroshima Han
+
+1600.10.21 = {
+	capital = 1825	# Hiroshima
+	monarch = {
+		name = "Masanori"
+		dynasty = "Fukushima"
+		birth_date = 1561.1.1
+		death_date = 1624.8.26
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Omasa"
+		dynasty = "Tsuda"
+		birth_date = 1565.1.1
+		death_date = 1602.5.16
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1602.5.16 = {
+	queen = {
+		country_of_origin = TKG
+		name = "Shosenin"
+		dynasty = "Makino"
+		birth_date = 1580.1.1
+		death_date = 1642.1.18
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1619.1.1 = {
+	monarch = {
+		name = "Nagaakira"
+		dynasty = "Asano"
+		birth_date = 1586.3.18
+		death_date = 1632.10.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Furihime"
+		dynasty = "Tokugawa"
+		birth_date = 1580.1.1
+		death_date = 1617.9.27
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Mitsuakira"
+		monarch_name = "Mitsuakira"
+		dynasty = "Asano"
+		birth_date = 1617.9.11
+		death_date = 1693.5.27
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1632.10.16 = {
+	monarch = {
+		name = "Mitsuakira"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MAE
+		name = "Manhime"
+		dynasty = "Maeda"
+		birth_date = 1620.12.15
+		death_date = 1700.9.10
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1637.6.21 = {
+	heir = {
+		name = "Tsunaakira"
+		monarch_name = "Tsunaakira"
+		dynasty = "Asano"
+		birth_date = 1637.6.21
+		death_date = 1673.2.18
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1672.4.18 = {
+	monarch = {
+		name = "Tsunaakira"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Aiko"
+		dynasty = "Kujo"
+		birth_date = 1635.1.1
+		death_date = 1659.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tsunanaga"
+		monarch_name = "Tsunanaga"
+		dynasty = "Asano"
+		birth_date = 1659.7.18
+		death_date = 1708.4.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1673.2.18 = {
+	monarch = {
+		name = "Tsunanaga"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Atehime"
+		dynasty = "Tokugawa"
+		birth_date = 1666.1.1
+		death_date = 1683.7.17
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1681.8.14 = {
+	heir = {
+		name = "Yoshinaga"
+		monarch_name = "Yoshinaga"
+		dynasty = "Asano"
+		birth_date = 1681.8.14
+		death_date = 1752.2.27
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1708.4.1 = {
+	monarch = {
+		name = "Yoshinaga"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MAE
+		name = "Ushihime"
+		dynasty = "Maeda"
+		birth_date = 1685.1.1
+		death_date = 1750.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1717.9.27 = {
+	heir = {
+		name = "Munetsune"
+		monarch_name = "Munetsune"
+		dynasty = "Asano"
+		birth_date = 1717.9.27
+		death_date = 1788.1.2
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1752.2.27 = {
+	monarch = {
+		name = "Munetsune"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MAE
+		name = "Kiyohime"
+		dynasty = "Maeda"
+		birth_date = 1720.1.1
+		death_date = 1790.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shigeakira"
+		monarch_name = "Shigeakira"
+		dynasty = "Asano"
+		birth_date = 1743.12.2
+		death_date = 1814.1.4
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1763.2.21 = {
+	monarch = {
+		name = "Shigeakira"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Kunihime"
+		dynasty = "Tokugawa"
+		birth_date = 1736.1.1
+		death_date = 1767.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1773.11.5 = {
+	heir = {
+		name = "Narikata"
+		monarch_name = "Narikata"
+		dynasty = "Asano"
+		birth_date = 1773.11.5
+		death_date = 1831.1.4
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1799.8.21 = {
+	monarch = {
+		name = "Narikata"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1817.11.7 = {
+	heir = {
+		name = "Naritaka"
+		monarch_name = "Naritaka"
+		dynasty = "Asano"
+		birth_date = 1817.11.7
+		death_date = 1868.2.5
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1831.1.4 = {
+	monarch = {
+		name = "Naritaka"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Suehime"
+		dynasty = "Tokugawa"
+		birth_date = 1817.1.1
+		death_date = 1872.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1836.12.19 = {
+	heir = {
+		name = "Yoshiteru"
+		monarch_name = "Yoshiteru"
+		dynasty = "Asano"
+		birth_date = 1836.12.19
+		death_date = 1858.10.16
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1858.4.12 = {
+	monarch = {
+		name = "Yoshiteru"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Toshihime"
+		dynasty = "Tokugawa"
+		birth_date = 1840.1.1
+		death_date = 1900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagamichi"
+		monarch_name = "Nagamichi"
+		dynasty = "Asano"
+		birth_date = 1812.9.4
+		death_date = 1872.8.29
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1858.10.16 = {
+	monarch = {
+		name = "Nagamichi"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Shunhime"
+		dynasty = "Asano"
+		birth_date = 1840.1.1
+		death_date = 1900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagakoto"
+		monarch_name = "Nagakoto"
+		dynasty = "Asano"
+		birth_date = 1842.8.28
+		death_date = 1937.2.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1869.1.24 = {
+	monarch = {
+		name = "Nagakoto"
+		dynasty = "Asano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Tsunahime"
+		dynasty = "Yamanouchi"
+		birth_date = 1845.1.1
+		death_date = 1935.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

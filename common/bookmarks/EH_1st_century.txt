@@ -1,0 +1,24 @@
+
+bookmark =
+{
+	name = "1ST_CENTURY_NAME"
+	desc = "1ST_CENTURY_DESC"
+	date = 7.1.1
+	
+	country = ROM
+	country = SCB
+	country = PRT
+	country = KUS
+	country = HND
+	country = XIO
+	country = YAM
+	country = GOG
+	country = BKJ
+	country = SLL
+	country = FUN
+	country = AKS
+	country = TTH
+	
+}
+
+# EH version

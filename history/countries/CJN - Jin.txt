@@ -1,0 +1,315 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+technology_group = eastern_nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = mahayana
+primary_culture = manchu
+add_accepted_culture = khitan
+historical_rival = LIO
+capital = 2188 # Huining
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+# Jurchen Jin dynasty
+
+1115.1.28 = { changed_tag_from = HSM }
+
+1115.1.28 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 3
+	technology_group = chinese
+	monarch = {
+		name = "Aguda" #Taizu
+		dynasty = "Wanggiya"
+		birth_date = 1068.8.1
+		adm = 3
+		dip = 4
+		mil = 6
+		leader = {	name = "Wanggiya Aguda"     	type = general	fire = 4	shock = 4	manuever = 3	siege = 2  death_date = 1123.9.19 }
+	}
+	queen = {
+		country_of_origin = CJN
+		name = "Qinxian"
+		dynasty = "Heshilie"
+		birth_date = 1075.1.1
+		death_date = 1136.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wuqimai"
+		monarch_name = "Taizong"
+		dynasty = "Wanggiya"
+		birth_date = 1075.11.25
+		death_date = 1135.2.9
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Wanggiya Wuqimai"     	type = general	fire = 2	shock = 4	manuever = 0	siege = 1  death_date = 1135.2.9 }
+	}
+}
+
+1115.1.28 = { leader = { name = "Xiemaoali"     	type = general	fire = 4	shock = 3	manuever = 0	siege = 0  death_date = 1150.1.1 } } # Not an actual death date
+
+1123.9.19 = {
+	monarch = {
+		name = "Wuqimai" #Taizong
+		dynasty = "Wanggiya"
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Wanggiya Wuqimai"     	type = general	fire = 2	shock = 4	manuever = 0	siege = 1  death_date = 1135.2.9 }
+	}
+	queen = {
+		country_of_origin = CJN
+		name = "Qinren"
+		dynasty = "Tangkuo"
+		birth_date = 1080.1.1
+		death_date = 1143.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hela"
+		monarch_name = "Xizong"
+		dynasty = "Wanggiya"
+		birth_date = 1119.2.28
+		death_date = 1150.1.9
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1127.1.9 = {
+	add_accepted_culture = chihan
+	add_accepted_culture = shandong_culture
+	add_accepted_culture = hubei
+	add_accepted_culture = jin
+	add_accepted_culture = jianghuai
+	add_accepted_culture = zhongyuan
+}
+
+1135.2.9 = {
+	monarch = {
+		name = "Hela" #Xizong
+		dynasty = "Wanggiya"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}	
+
+1138.1.1 = {
+	queen = {
+		country_of_origin = CJN
+		name = "Daoping"
+		dynasty = "Peiman"
+		birth_date = 1115.1.1
+		death_date = 1149.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Coup
+
+1150.1.9 = {
+	monarch = {
+		name = "Dugunai" #Hailingwang
+		dynasty = "Wanggiya"
+		birth_date = 1122.2.24
+		adm = 0
+		dip = 0
+		mil = 5
+		leader = {	name = "Wanggiya Dugunai"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 1161.10.27 }
+	}
+	queen = {
+		country_of_origin = CJN
+		dynasty = "Tushan"
+		birth_date = 1125.1.1
+		death_date = 1170.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1153.1.1 = { capital = 1816 } # Zhongdu
+
+# Coup
+
+1161.10.27 = {
+	religion = confucianism
+	monarch = {
+		name = "Wulu" #Shizong
+		dynasty = "Wanggiya"
+		birth_date = 1123.3.29
+		adm = 5
+		dip = 4
+		mil = 5
+		leader = {	name = "Wanggiya Wulu"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 0  death_date = 1189.1.20 }
+	}
+	queen = {
+		country_of_origin = CJN
+		name = "Yuan"
+		dynasty = "Zhang"
+		birth_date = 1130.1.1
+		death_date = 1181.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1168.8.31 = {
+	heir = {
+		name = "Madage"
+		monarch_name = "Zhangzong"
+		dynasty = "Wanggiya"
+		birth_date = 1168.8.31
+		death_date = 1208.12.29
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1189.1.20 = {
+	monarch = {
+		name = "Madage" #Zhangzong
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = CJN
+		name = "Shi'er"
+		dynasty = "Li"
+		birth_date = 1170.1.1
+		death_date = 1209.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1208.12.29 = {
+	monarch = {
+		name = "Yongji" #Weishaowang
+		dynasty = "Wanggiya"
+		birth_date = 1180.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CJN
+		dynasty = "Tushan"
+		birth_date = 1168.1.1
+		death_date = 1214.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+1213.9.22 = {
+	monarch = {
+		name = "Wudubu" #Xuanzong
+		dynasty = "Wanggiya"
+		birth_date = 1163.4.18
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CJN
+		name = "Rensheng"
+		dynasty = "Wang"
+		birth_date = 1170.1.1
+		death_date = 1224.1.14
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ningjiasu"
+		monarch_name = "Aizong"
+		dynasty = "Wanggiya"
+		birth_date = 1198.9.25
+		death_date = 1234.2.9
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1214.1.1 = { capital = 688 } # Kaifeng
+
+1224.1.14 = {
+	monarch = {
+		name = "Ningjiasu" #Aizong
+		dynasty = "Wanggiya"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CJN
+		dynasty = "Tushan"
+		birth_date = 1200.1.1
+		death_date = 1234.2.9
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1233.1.1 = { capital = 2175 } # Caizhou
+
+1234.2.9 = {
+	monarch = {
+		name = "Hudun" #Modi
+		dynasty = "Wanggiya"
+		birth_date = 1210.1.1
+		death_date = 1234.2.10
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

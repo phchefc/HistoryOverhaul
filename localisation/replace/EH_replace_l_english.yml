@@ -1,0 +1,33 @@
+﻿l_english:
+ CGS:0 "Zhuang"
+ CGS_ADJ:0 "Zhuang"
+ LSO:0 "Song"
+ LSO_ADJ:0 "Song"
+ WYA:0 "Yan"
+ WYA_ADJ:0 "Yan"
+
+ HMI:0 "Hami"
+ HMI_ADJ:0 "Hami"
+ SUE:0 "Kashgar"
+ SUE_ADJ:0 "Kashgarian"
+ SYG:0 "Tsaidam"
+ SYG_ADJ:0 "Tsaidam"
+ XIY:0 "Turfan"
+ XIY_ADJ:0 "Turfan"
+ 
+ EMI:0 "Ezo"
+ EMI_ADJ:0 "Ezo"
+ GAY:0 "Gaya"
+ GAY_ADJ:0 "Gaya"
+ 
+ GBR:0 "United Kingdom"
+ GBR_ADJ:0 "British"
+ MLK:0 "Artsakh"
+ MLK_ADJ:0 "Karabakh"
+
+ jinhan:0 "Samhan"
+ altaic_new:0 "Menggu"
+ manchu_new:0 "Dongbei"
+ korean_new:0 "Chaoxian"
+  
+ # EH version

@@ -1,0 +1,169 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+primary_culture = roman
+add_accepted_culture = greek
+add_accepted_culture = gallian
+add_accepted_culture = frankish
+add_accepted_culture = berber
+add_accepted_culture = iberi
+add_accepted_culture = illyrian
+religion = hellenism
+technology_group = roman_group
+historical_friend = A01
+capital = 104 # Mediolanum
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Dioceses of Italy and Africa
+
+286.4.1 = {
+	monarch = {
+		name = "Maximian"
+		culture = dalmatian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+305.5.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+306.7.25 = {
+	monarch = {
+		name = "Severus II"
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+}
+
+# Coup
+
+306.10.28 = {
+	monarch = {
+		name = "Maxentius"
+		culture = dacian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+312.10.28 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# Western Roman Empire
+
+337.9.9 = {
+	monarch = {
+		name = "Constans"
+		dynasty = "Constantinian"
+		adm = 3
+		dip = 3
+		mil = 3
+		religion = chalcedonism
+	}
+}
+
+350.1.18 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+355.11.6 = {
+	capital = 183
+	monarch = {
+		name = "Julian II"
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = zealot_personality
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+361.11.3 = {
+	capital = 104
+	monarch = {
+		name = "(vacant)" # Sole ruler
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+364.3.28 = {
+	monarch = {
+		name = "Valentinian I"
+		dynasty = "Valentinian"
+		culture = dalmatian
+		adm = 2
+		dip = 4
+		mil = 3
+		religion = chalcedonism
+	}
+}
+
+375.11.17 = {
+	monarch = {
+		name = "Valentinian II"
+		dynasty = "Valentinian"
+		culture = dalmatian
+		adm = 1
+		dip = 2
+		mil = 1
+		religion = chalcedonism
+	}
+}
+
+390.1.1 = { decision = dummy_empire_declining }
+
+392.4.15 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

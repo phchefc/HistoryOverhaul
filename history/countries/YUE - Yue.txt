@@ -1,0 +1,112 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = cantonese
+capital = 667
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Kuaiji)
+
+189.9.28 = {
+	government_rank = 1
+	primary_culture = wu
+	capital = 2149
+	monarch = {
+		name = "Lang"
+		dynasty = "Wang"
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Lingnan)
+
+885.1.1 = {
+	primary_culture = cantonese
+	capital = 2157
+	monarch = {
+		name = "(Lingnan Circuit)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Ming dynasty (Guangdong)
+
+1649.1.1 = {
+	government_rank = 2
+	capital = 667
+	monarch = {
+		name = "Kexi"
+		dynasty = "Shang"
+		birth_date = 1604.8.25
+		death_date = 1676.11.12
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1649.1.1 = {
+	heir = {
+		name = "Zhixin"
+		monarch_name = "Zhixin"
+		dynasty = "Shang"
+		birth_date = 1636.8.2
+		death_date = 1680.10.9
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+1676.1.1 = {
+	monarch = {
+		name = "Zhixin"
+		dynasty = "Shang"
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+# Guangdong clique
+
+1916.6.7 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = military_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = military_junta
+	religion = secularism
+	technology_group = asian
+	monarch = {
+		name = "Chen Jiongming"
+		birth_date = 1878.1.13
+		adm = 3
+		dip = 4
+		mil = 2
+		leader = {	name = "Chen Jiongming"     	type = general	fire = 1	shock = 0	manuever = 1	siege = 0  death_date = 1933.1.13 }
+	}
+}

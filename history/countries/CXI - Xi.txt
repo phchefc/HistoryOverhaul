@@ -1,0 +1,46 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = sichuanese
+capital = 2172 # Yichuan
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1641.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Xianzhong"
+		dynasty = "Zhang"
+		birth_date = 1606.9.18
+		adm = 0
+		dip = 1
+		mil = 4
+		leader = {	name = "Zhang Xianzhong"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 1647.1.2 }
+	}
+}
+
+1643.1.1 = { government_rank = 2 }
+1644.2.9 = { government_rank = 3 }
+1644.8.9 = { capital = 679 } # Chengdu
+
+1647.1.2 = {
+	monarch = {
+		name = "Kewang"
+		dynasty = "Sun"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}

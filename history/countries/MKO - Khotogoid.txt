@@ -1,0 +1,82 @@
+government = tribal
+add_government_reform = steppe_horde
+technology_group = eastern_nomad_group
+religion = vajrayana
+primary_culture = mongol
+capital = 4679
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Altan Khan of the Khalkha
+
+1609.1.1 = {
+	monarch = {
+		name = "Ubasi" # Ubasi Khong Tayiji
+		dynasty = "Khotogoid"
+		birth_date = 1580.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1609.1.1 = {
+	heir = {
+		name = "Badma Erdeni"
+		monarch_name = "Badma Erdeni Khong Tayiji"
+		dynasty = "Khotogoid"
+		birth_date = 1600.1.1
+		death_date = 1658.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1623.1.1 = {
+	monarch = {
+		name = "Badma Erdeni" # Badma Erdeni Khong Tayiji
+		dynasty = "Khotogoid"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1630.1.1 = {
+	heir = {
+		name = "Erinchin Lobsang"
+		monarch_name = "Erinchin Lobsang Tayiji"
+		dynasty = "Khotogoid"
+		birth_date = 1630.1.1
+		death_date = 1691.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1658.1.1 = {
+	monarch = {
+		name = "Erinchin Lobsang" # Erinchin Lobsang Tayiji 
+		dynasty = "Khotogoid"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+# Annexed by Zunghar in 1691

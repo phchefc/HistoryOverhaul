@@ -1,0 +1,191 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+primary_culture = roman
+add_accepted_culture = greek
+add_accepted_culture = gallian
+add_accepted_culture = frankish
+add_accepted_culture = berber
+add_accepted_culture = iberi
+add_accepted_culture = illyrian
+religion = hellenism
+technology_group = roman_group
+historical_friend = A02
+capital = 85
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Gallic Roman Empire
+
+260.1.1 = {
+	monarch = {
+		name = "Postumus"
+		culture = frankish
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+269.1.1 = {
+	monarch = {
+		name = "Marius"
+		culture = frankish
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+269.6.1 = {
+	monarch = {
+		name = "Victorinus"
+		culture = gallian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+270.1.1 = {
+	capital = 80
+	monarch = {
+		name = "Tetricus I"
+		culture = aquitanian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+270.6.1 = {
+	monarch = {
+		name = "Tetricus II"
+		culture = aquitanian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+274.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# Dioceses of Gaul, Vienne and Britain
+
+293.3.1 = {
+	monarch = {
+		name = "Constantinus I Chlorus"
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = tolerant_personality
+}
+
+306.7.25 = {
+	monarch = {
+		name = "Constantine I"
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 5
+		dip = 4
+		mil = 5
+		religion = chalcedonism
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = tolerant_personality
+}
+
+324.9.18 = {
+	monarch = {
+		name = "(vacant)" # Sole ruler
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# Western Roman Empire
+
+337.9.9 = {
+	monarch = {
+		name = "Constantinus II"
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 3
+		dip = 2
+		mil = 4
+		religion = arianism
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = tolerant_personality
+	add_ruler_personality = benevolent_personality
+}
+
+340.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+375.11.17 = {
+	monarch = {
+		name = "Gratian"
+		dynasty = "Valentinian"
+		culture = dalmatian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+383.8.25 = {
+	monarch = {
+		name = "Magnus Maximus"
+		culture = iberi
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+383.8.28 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+390.1.1 = { decision = dummy_empire_declining }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,903 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = hubei
+capital = 701 # Tongwan
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Hu Xia
+
+260.1.1 = {
+	monarch = {
+		name = "Qubei"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+272.1.1 = {
+	monarch = {
+		name = "Gaoshengyuan"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+309.1.1 = {
+	monarch = {
+		name = "Hu"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+341.1.1 = {
+	monarch = {
+		name = "Wuheng"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+356.1.1 = {
+	monarch = {
+		name = "Eloutou"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+358.1.1 = {
+	monarch = {
+		name = "Xiwuqi"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+359.1.1 = {
+	monarch = {
+		name = "Weichen"
+		dynasty = "Liu"
+		culture = mongol
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SXI
+		dynasty = "Fu"
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+391.1.1 = {
+	monarch = {
+		name = "Bobo" #Wulie
+		dynasty = "Helian"
+		birth_date = 381.1.1
+		culture = mongol
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	name = "Helian Bobo"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 425.6.1 } # Not an actual death date
+	}
+	queen = {
+		country_of_origin = SXI
+		dynasty = "Liang"
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+407.1.1 = {
+	government_rank = 3 
+	technology_group = early_chinese 
+	capital = 698 
+}
+
+407.1.1 = {
+	heir = {
+		name = "Chang"
+		monarch_name = "Chang"
+		dynasty = "Helian"
+		birth_date = 407.1.1
+		death_date = 434.1.1
+		culture = mongol
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+425.6.1 = {
+	monarch = {
+		name = "Chang"
+		dynasty = "Helian"
+		culture = mongol
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+425.1.1 = {
+	heir = {
+		name = "Ding"
+		monarch_name = "Ding"
+		dynasty = "Helian"
+		birth_date = 410.1.1
+		death_date = 432.5.13
+		culture = mongol
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+428.6.1 = {
+	monarch = {
+		name = "Ding"
+		dynasty = "Helian"
+		culture = mongol
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# End of the Sui dynasty (Xia)
+
+617.2.15 = {
+	government_rank = 2
+	capital = 2137
+	monarch = {
+		name = "Jiande"
+		dynasty = "Dou"
+		birth_date = 573.1.1
+		adm = 5
+		dip = 2
+		mil = 3
+		leader = {	name = "Dou Jiande"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 0  death_date = 621.5.28 } # Discharge
+	}
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Cao"
+		birth_date = 575.1.1
+		death_date = 621.8.3
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+621.5.28 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+621.8.3 = {
+	monarch = {
+		name = "Heita" # Handong
+		dynasty = "Liu"
+		birth_date = 573.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+		leader = {	name = "Liu Heita"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 623.1.1 } # Not an actual death date
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Sui dynasty (Dingnan)
+
+881.1.1 = {
+	government_rank = 1
+	religion = vajrayana
+	primary_culture = tangut
+	add_accepted_culture = xibei
+	capital = 701
+	monarch = {
+		name = "Sigong"
+		dynasty = "Li"
+		birth_date = 851.1.1
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+
+881.1.1 = {
+	heir = {
+		name = "Sijian"
+		monarch_name = "Sijian"
+		dynasty = "Li"
+		birth_date = 856.1.1
+		death_date = 908.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+886.1.1 = {
+	monarch = {
+		name = "Sijian"
+		dynasty = "Li"
+		birth_date = 856.1.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+886.1.1 = {
+	heir = {
+		name = "Yichang"
+		monarch_name = "Yichang"
+		dynasty = "Li"
+		birth_date = 878.1.1
+		death_date = 910.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+908.1.1 = {
+	monarch = {
+		name = "Yichang" #1st reign
+		dynasty = "Li"
+		birth_date = 878.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+909.1.1 = {
+	monarch = {
+		name = "Renfu" #1st reign
+		dynasty = "Li"
+		birth_date = 880.1.1
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}
+
+909.6.1 = {
+	monarch = {
+		name = "Yichang" #2nd reign
+		dynasty = "Li"
+		birth_date = 878.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+910.1.1 = {
+	monarch = {
+		name = "Renfu" #2nd reign
+		dynasty = "Li"
+		birth_date = 880.1.1
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}
+
+910.1.1 = {
+	heir = {
+		name = "Yichao"
+		monarch_name = "Yichao"
+		dynasty = "Li"
+		birth_date = 903.1.1
+		death_date = 935.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+933.3.10 = {
+	monarch = {
+		name = "Yichao"
+		dynasty = "Li"
+		birth_date = 903.1.1
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+933.3.10 = {
+	heir = {
+		name = "Yixing"
+		monarch_name = "Yixing"
+		dynasty = "Li"
+		birth_date = 905.1.1
+		death_date = 967.10.20
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+935.1.1 = {
+	monarch = {
+		name = "Yixing"
+		dynasty = "Li"
+		birth_date = 905.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+937.1.1 = {
+	heir = {
+		name = "Kerui"
+		monarch_name = "Kerui"
+		dynasty = "Li"
+		birth_date = 937.1.1
+		death_date = 978.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+967.10.20 = {
+	monarch = {
+		name = "Kerui"
+		dynasty = "Li"
+		birth_date = 937.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+967.10.20 = {
+	heir = {
+		name = "Jiyun"
+		monarch_name = "Jiyun"
+		dynasty = "Li"
+		birth_date = 948.1.1
+		death_date = 980.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+978.1.1 = {
+	monarch = {
+		name = "Jiyun"
+		dynasty = "Li"
+		birth_date = 948.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+978.1.1 = {
+	heir = {
+		name = "Jipeng"
+		monarch_name = "Jipeng"
+		dynasty = "Li"
+		birth_date = 950.1.1
+		death_date = 994.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+980.1.1 = {
+	monarch = {
+		name = "Jipeng"
+		dynasty = "Li"
+		birth_date = 950.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+980.1.1 = {
+	heir = {
+		name = "Jiqian"
+		monarch_name = "Jiqian"
+		dynasty = "Li"
+		birth_date = 963.1.1
+		death_date = 1004.1.1
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+982.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Jiqian"
+		dynasty = "Li"
+		birth_date = 963.1.1
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Yeli"
+		birth_date = 965.1.1
+		death_date = 1007.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Deming"
+		monarch_name = "Deming"
+		dynasty = "Li"
+		birth_date = 981.1.1
+		death_date = 1031.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1002.1.1 = { capital = 698 }
+
+1004.1.26 = {
+	monarch = {
+		name = "Deming"
+		dynasty = "Li"
+		birth_date = 981.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Weimu"
+		birth_date = 985.1.1
+		death_date = 1034.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yuanhao"
+		monarch_name = "Jingzong"
+		dynasty = "Li"
+		birth_date = 1003.6.7
+		death_date = 1048.1.19
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1032.11.15 = {
+	monarch = {
+		name = "Yuanhao"
+		dynasty = "Li"
+		birth_date = 1003.6.7
+		adm = 5
+		dip = 4
+		mil = 4
+		leader = {	name = "Li Yuanhao"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 1048.1.19 }
+	}
+	queen = {
+		country_of_origin = XIA
+		name = "Xiancheng"
+		dynasty = "Yeli"
+		birth_date = 1005.1.1
+		death_date = 1048.1.19
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Western Xia
+
+1038.11.10 = { government_rank = 3 }
+
+1048.1.19 = {
+	monarch = {
+		name = "Yizong" #Yizong
+		dynasty = "Li"
+		birth_date = 1047.3.5
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1059.1.1 = {
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Mozang"
+		birth_date = 1045.1.1
+		death_date = 1061.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1061.1.1 = {
+	queen = {
+		country_of_origin = XIA
+		name = "Xiancheng"
+		dynasty = "Liang"
+		birth_date = 1050.1.1
+		death_date = 1085.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bingchang"
+		monarch_name = "Huizong"
+		dynasty = "Li"
+		birth_date = 1061.1.1
+		death_date = 1086.8.21
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1068.1.1 = {
+	monarch = {
+		name = "Bingchang" #Huizong
+		dynasty = "Li"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1083.1.1 = {
+	queen = {
+		country_of_origin = XIA
+		name = "Zhaojian"
+		dynasty = "Liang"
+		birth_date = 1060.1.1
+		death_date = 1099.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qianshun"
+		monarch_name = "Chongzong"
+		dynasty = "Li"
+		birth_date = 1083.1.1
+		death_date = 1139.7.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1086.8.21 = {
+	monarch = {
+		name = "Qianshun" #Chongzong
+		dynasty = "Li"
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1105.1.1 = {
+	queen = {
+		country_of_origin = LIO
+		name = "Nanxian"
+		dynasty = "Yelu"
+		birth_date = 1085.1.1
+		death_date = 1125.3.26
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1124.1.1 = {
+	heir = {
+		name = "Renxiao"
+		monarch_name = "Renzong"
+		dynasty = "Li"
+		birth_date = 1124.1.1
+		death_date = 1193.10.16
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1138.1.1 = {
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Ren"
+		birth_date = 1120.1.1
+		death_date = 1170.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1139.7.1 = {
+	monarch = {
+		name = "Renxiao" #Renzong
+		dynasty = "Li"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Wang"
+		birth_date = 1125.1.1
+		death_date = 1167.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1167.1.1 = {
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Luo"
+		birth_date = 1150.1.1
+		death_date = 1210.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1177.1.1 = {
+	heir = {
+		name = "Chunyou"
+		monarch_name = "Huanzong"
+		dynasty = "Li"
+		birth_date = 1177.1.1
+		death_date = 1206.3.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+1193.10.16 = {
+	monarch = {
+		name = "Chunyou" #Huanzong
+		dynasty = "Li"
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+# Coup
+
+1206.3.1 = {
+	monarch = {
+		name = "Anquan" #Xiangzong
+		dynasty = "Li"
+		birth_date = 1170.1.1
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+1211.8.12 = {
+	monarch = {
+		name = "Zunxu" #Shenzong
+		dynasty = "Li"
+		birth_date = 1163.1.1
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1211.8.12 = {
+	heir = {
+		name = "Dewang"
+		monarch_name = "Xianzong"
+		dynasty = "Li"
+		birth_date = 1181.1.1
+		death_date = 1206.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1223.12.1 = {
+	monarch = {
+		name = "Dewang" #Xianzong
+		dynasty = "Li"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1223.12.1 = {
+	heir = {
+		name = "Xian"
+		monarch_name = "Modi"
+		dynasty = "Li"
+		birth_date = 1203.1.1
+		death_date = 1227.8.28
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1226.7.1 = {
+	monarch = {
+		name = "Xian"
+		dynasty = "Li"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Yuan dynasty (Ming Xia)
+
+1360.5.10 = { 
+	government_rank = 2
+	religion = confucianism
+	primary_culture = sichuanese
+	add_accepted_culture = yi
+	capital = 680
+	monarch = {
+		name = "Yuzhen"
+		dynasty = "Ming"
+		birth_date = 1331.10.2
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Peng"
+		birth_date = 1138.11.11
+		death_date = 1404.5.10
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sheng"
+		monarch_name = "Sheng"
+		dynasty = "Ming"
+		birth_date = 1355.12.16
+		death_date = 1393.4.6
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1361.12.19 = { government_rank = 3 }
+
+1366.3.17 = {
+	monarch = {
+		name = "Sheng"
+		dynasty = "Ming"
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+1367.8.21 = {
+	queen = {
+		country_of_origin = XIA
+		dynasty = "Wang"
+		birth_date = 1358.1.1
+		death_date = 1390.9.2
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

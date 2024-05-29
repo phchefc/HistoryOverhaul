@@ -1,0 +1,427 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+primary_culture = jinhan
+religion = muism
+technology_group = early_chinese
+capital = 4227
+
+# Byeonhan confederacy
+
+2.1.1 = {
+	monarch = {
+		name = "Ibiga"
+		death_date = 42.3.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = BHN
+		name = "Jeonggyeonmoju"
+		death_date = 42.3.16
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+30.1.1 = {
+	heir = {
+		name = "Suro"
+		monarch_name = "Suro"
+		dynasty = "Kim"
+		birth_date = 30.1.1
+		death_date = 199.3.13
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+# Geumgwan Gaya
+
+42.3.16 = {
+	government_rank = 2
+	monarch = {
+		name = "Suro"
+		dynasty = "Kim"
+		birth_date = 30.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+48.1.1 = {
+	queen = {
+		country_of_origin = MHJ
+		name = "Hwang-ok"
+		dynasty = "Heo"
+		birth_date = 32.1.1
+		death_date = 188.1.1
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+169.1.1 = {
+	heir = {
+		name = "Geodeung"
+		monarch_name = "Geodeung"
+		dynasty = "Kim"
+		birth_date = 169.1.1
+		death_date = 259.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+199.3.13 = {
+	monarch = {
+		name = "Geodeung"
+		dynasty = "Kim"
+		birth_date = 169.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Mojeong"
+		dynasty = "Shin"
+		birth_date = 180.1.1
+		death_date = 260.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+229.1.1 = {
+	heir = {
+		name = "Mapum"
+		monarch_name = "Mapum"
+		dynasty = "Kim"
+		birth_date = 229.1.1
+		death_date = 291.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+259.9.17 = {
+	monarch = {
+		name = "Mapum"
+		dynasty = "Kim"
+		birth_date = 229.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Hogu"
+		dynasty = "Jo"
+		birth_date = 240.1.1
+		death_date = 290.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+261.1.1 = {
+	heir = {
+		name = "Geojilmi"
+		monarch_name = "Geojilmi"
+		dynasty = "Kim"
+		birth_date = 261.1.1
+		death_date = 346.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+291.1.29 = {
+	monarch = {
+		name = "Geojilmi"
+		dynasty = "Kim"
+		birth_date = 261.1.1
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Ji"
+		dynasty = "A"
+		birth_date = 270.1.1
+		death_date = 350.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+316.1.1 = {
+	heir = {
+		name = "Isipum"
+		monarch_name = "Isipum"
+		dynasty = "Kim"
+		birth_date = 316.1.1
+		death_date = 407.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+346.7.7 = {
+	monarch = {
+		name = "Isipum"
+		dynasty = "Kim"
+		birth_date = 316.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Jeongsin"
+		dynasty = "Geuk"
+		birth_date = 330.1.1
+		death_date = 410.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+377.1.1 = {
+	heir = {
+		name = "Jwaji"
+		monarch_name = "Jwaji"
+		dynasty = "Kim"
+		birth_date = 377.1.1
+		death_date = 421.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+407.4.10 = {
+	monarch = {
+		name = "Jwaji"
+		dynasty = "Kim"
+		birth_date = 377.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Yongnyeo"
+		birth_date = 380.1.1
+		death_date = 410.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+410.1.1 = {
+	queen = {
+		country_of_origin = GAY
+		name = "Boksu"
+		birth_date = 390.1.1
+		death_date = 440.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chwihui"
+		monarch_name = "Chwihui"
+		dynasty = "Kim"
+		birth_date = 391.1.1
+		death_date = 451.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+421.4.12 = {
+	monarch = {
+		name = "Chwihui"
+		dynasty = "Kim"
+		birth_date = 391.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Indeok"
+		birth_date = 390.1.1
+		death_date = 450.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jilji"
+		monarch_name = "Jilji"
+		dynasty = "Kim"
+		birth_date = 421.1.1
+		death_date = 492.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}
+
+451.2.3 = {
+	religion = mahayana
+	monarch = {
+		name = "Jilji"
+		dynasty = "Kim"
+		birth_date = 421.1.1
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Bangwon"
+		dynasty = "Kim"
+		birth_date = 420.1.1
+		death_date = 490.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+462.1.1 = {
+	heir = {
+		name = "Gyeomji"
+		monarch_name = "Gyeomji"
+		dynasty = "Kim"
+		birth_date = 462.1.1
+		death_date = 521.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+491.10.4 = {
+	monarch = {
+		name = "Gyeomji"
+		dynasty = "Kim"
+		birth_date = 462.1.1
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Suk"
+		birth_date = 460.1.1
+		death_date = 520.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Guhyeong"
+		monarch_name = "Guhyeong"
+		dynasty = "Kim"
+		birth_date = 491.1.1
+		death_date = 532.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+}
+
+521.4.8 = {
+	monarch = {
+		name = "Guhyeong"
+		dynasty = "Kim"
+		birth_date = 491.1.1
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = GAY
+		name = "Gyehwa"
+		birth_date = 490.1.1
+		death_date = 530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Fall of Geumgwan Gaya, Dae Gaya seized power of Gaya confederacy in 532
+
+532.9.1 = {
+	monarch = {
+		name = "Wolgwang"
+		dynasty = "Kim"
+		birth_date = 510.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

@@ -1,0 +1,97 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+primary_culture = roman
+add_accepted_culture = greek
+add_accepted_culture = old_egyptian
+add_accepted_culture = aramaic
+add_accepted_culture = illyrian
+add_accepted_culture = thracian
+add_accepted_culture = dacian
+religion = hellenism
+technology_group = roman_group
+historical_friend = A04
+capital = 316 # Nicaea
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Diocesis of the East
+
+284.11.20 = {
+	monarch = {
+		name = "Diocletian"
+		culture = dalmatian
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = zealot_personality
+}
+
+305.5.1 = {
+	monarch = {
+		name = "Maximinus Daia"
+		culture = thracian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+311.8.1 = {
+	monarch = {
+		name = "Licinius I"
+		dynasty = "Constantinian"
+		culture = thracian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+}
+
+324.11.19 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# Eastern Roman Empire
+
+337.9.9 = {
+	monarch = {
+		name = "Constantius II"
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 3
+		dip = 3
+		mil = 3
+		religion = arianism
+	}
+}
+
+350.1.18 = {
+	monarch = {
+		name = "(vacant)" # Sole ruler
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

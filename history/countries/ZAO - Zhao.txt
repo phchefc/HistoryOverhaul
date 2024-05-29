@@ -1,0 +1,280 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = hubei
+capital = 2137
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Jin dynasty (Zhao)
+
+277.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Lun" # Prince of Zhao
+		dynasty = "Sima"
+		birth_date = 247.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+		leader = {	name = "Sima Lun"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 301.5.30 }
+	}
+}
+
+# Later Zhao
+
+318.8.31 = {
+	government_rank = 1
+	religion = tengri_pagan_reformed
+	secondary_religion = mahayana
+	monarch = {
+		name = "Le" #Ming
+		dynasty = "Shi"
+		birth_date = 274.1.1
+		culture = turkish
+		adm = 5
+		dip = 3
+		mil = 5
+		leader = {	name = "Shi Le"     	type = general	fire = 3	shock = 3	manuever = 1	siege = 1  death_date = 333.7.1 } # Not an actual death date
+	}
+	queen = {
+		country_of_origin = ZAO
+		dynasty = "Liu"
+		birth_date = 280.1.1
+		death_date = 333.7.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hong"
+		monarch_name = "Hong"
+		dynasty = "Shi"
+		birth_date = 313.1.1
+		death_date = 334.4.1
+		culture = turkish
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+319.11.1 = { government_rank = 2 }
+330.9.1 = { government_rank = 3 }
+
+333.7.1 = {
+	monarch = {
+		name = "Hong"
+		dynasty = "Shi"
+		culture = turkish
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+333.7.1 = {
+	heir = {
+		name = "Hu"
+		monarch_name = "Wu"
+		dynasty = "Shi"
+		birth_date = 295.1.1
+		death_date = 349.5.26
+		culture = turkish
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+334.4.1 = {
+	monarch = {
+		name = "Hu" #Wu 
+		dynasty = "Shi"
+		culture = turkish
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+337.1.1 = {
+	queen = {
+		country_of_origin = ZAO
+		name = "Yingtao"
+		dynasty = "Zheng"
+		birth_date = 300.1.1
+		death_date = 349.3.26
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+337.6.1 = {
+	queen = {
+		country_of_origin = ZAO
+		name = "Zhu"
+		dynasty = "Du"
+		birth_date = 300.1.1
+		death_date = 351.4.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+339.1.1 = {
+	heir = {
+		name = "Shi"
+		monarch_name = "Shi"
+		dynasty = "Shi"
+		birth_date = 339.1.1
+		death_date = 349.5.1
+		culture = turkish
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+349.1.1 = {
+	queen = {
+		country_of_origin = ZAO
+		dynasty = "Liu"
+		birth_date = 318.1.1
+		death_date = 349.3.26
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+349.3.26 = {
+	monarch = {
+		name = "Shi"
+		dynasty = "Shi"
+		culture = turkish
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+349.5.1 = {
+	monarch = {
+		name = "Zun"
+		dynasty = "Shi"
+		culture = turkish
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ZAO
+		dynasty = "Zheng"
+		birth_date = 320.1.1
+		death_date = 349.11.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+349.11.1 = {
+	monarch = {
+		name = "Jian"
+		dynasty = "Shi"
+		culture = turkish
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+350.2.1 = {
+	monarch = {
+		name = "Zhi"
+		dynasty = "Shi"
+		culture = turkish
+		adm = 0
+		dip = 2
+		mil = 0
+	}
+}
+
+351.1.1 = { government_rank = 2 }
+
+351.4.1 = { religion = confucianism }
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Zhao)
+
+883.1.1 = {
+	government_rank = 1
+	capital = 4195
+	monarch = {
+		name = "Rong"
+		dynasty = "Wang"
+		birth_date = 877.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+910.1.1 = { government_rank = 2 }
+
+921.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Wenli"
+		dynasty = "Zhang"
+		birth_date = 890.1.1
+		death_date = 921.9.15
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Yuan dynasty (Henan)
+
+1360.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Baobao" # King of Henan
+		dynasty = "Wang"
+		birth_date = 1320.1.1
+		culture = mongol
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	name = "Köke Temür"     	type = general	fire = 3	shock = 3	manuever = 1	siege = 0  death_date = 1375.1.1 } # Not an actual death date
+	}
+}

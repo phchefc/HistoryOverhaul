@@ -1,0 +1,15 @@
+
+bookmark =
+{
+	name = "IMJIN_WAR_NAME"
+	desc = "IMJIN_WAR_DESC"
+	date = 1592.5.25
+	
+	country = KOR
+	country = MNG
+	country = TYT
+	country = TKG
+	country = MJZ
+}
+
+# EH version

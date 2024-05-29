@@ -1,0 +1,30 @@
+
+bookmark =
+{
+	name = "EH_PRESENT_DAY_NAME"
+	desc = "EH_PRESENT_DAY_DESC"
+	date = 2025.1.27
+	
+	country = USA
+	country = CHN
+	country = GER
+	country = JAP
+	country = INI
+	country = GBR
+	country = FR2
+	country = BRZ
+	country = ITA
+	country = CAN
+	country = RUS
+	country = MEX
+	country = AUS
+	country = SKO
+	country = SPA
+	country = IDN
+	country = NED
+	country = TKY
+	country = SAU
+	country = SWI
+}
+
+# EH version

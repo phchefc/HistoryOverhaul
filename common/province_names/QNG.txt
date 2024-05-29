@@ -1,0 +1,25 @@
+667 = "Canton"
+669 = "Foochow"
+674 = "Kweiyang"
+679 = "Chengtu"
+686 = "Anching"
+688 = "Kaifeng"
+691 = "Tsinan"
+699 = "Lanchow"
+700 = "Si'an"	
+1816 = "Beijing"
+1821 = "Kiangning"
+1822 = "Soochow"
+1840 = "Kweilin"
+2169 = "Baoníng"				#Langzhong
+1836 = "Luoyang"
+
+#Manchuria
+726 = "Mukden"
+730 = "Kirin"
+725 = "Tsitsihar"
+
+# Xinkiang
+715 = "Tihwa"
+
+# EH version

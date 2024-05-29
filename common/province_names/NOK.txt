@@ -1,0 +1,55 @@
+732 = "Hamnam"
+733 = "Hwangnam"
+2694 = "Yongdong"
+735 = "Seoul"			#Gyeonggi
+2745 = "Pusan"
+737 = "Chonpuk"
+1013 = "Ch'ungnam"
+4227 = "Kyongnam"
+734 = "Yongso"
+2744 = "Pyongbuk"
+2743 = "Ryanggang"
+2742 = "Hampuk"
+2741 = "Cheju"
+736 = "Kyongpuk"
+4228 = "Chonnam"
+4229 = "Ch'ungpuk"
+4230 = "Kyonggi"
+4231 = "Hwangpuk"
+4232 = "Chagang"
+
+# Manchuria
+704 = "Yoso"
+2109 = "Paektonap"
+726 = "Simyang"
+731 = "Samsong"
+730 = "Killim"
+2107 = "Yongan"
+2111 = "Amnok"
+2108 = "Kando"
+2188 = "Hoeryong"
+1850 = "Anju"
+4201 = "Konju"
+4217 = "Anwon"
+
+#Japan
+1020 = "Kyongdo"		#Kyoto
+1028 = "Tonggyong"		#Tokyo
+
+#China
+667 = "Kwangchu"			#Guangzhou
+679 = "Songdo"			#Chengdu
+680 = "Chunggyong"		#Chongqing
+684 = "Hangchu"			#Hangzhou
+688 = "Kaepong"			#Kaifeng
+700 = "Soan"			#Xi'an
+1816 = "Pukgyong"		#Beijing
+1821 = "Namgyong"		#Nanjing
+1822 = "Sochu"			#Suzhou
+1829 = "Hamun"			#Xiamen
+3009 = "Chongdo"		#Qingdao
+1836 = "Nagyang"		#Luoyang
+685 = "Yangchu"			#Yangzhou
+2154 = "Taepuk"			#Kelam
+
+# EH version

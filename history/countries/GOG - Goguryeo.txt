@@ -1,0 +1,767 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = buyeo
+religion = muism
+technology_group = early_chinese
+capital = 4201 # Gungnae
+
+2.1.1 = {
+	monarch = {
+		name = "Yuri"
+		dynasty = "Hae"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "Song"
+		death_date = 17.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+4.1.1 = {
+	heir = {
+		name = "Muhyul"
+		monarch_name = "Daemusin"
+		dynasty = "Hae"
+		birth_date = 4.1.1
+		death_date = 44.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+18.10.1 = {
+	monarch = {
+		name = "Muhyul" # Daemusin
+		dynasty = "Hae"
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Hae Muhyul"     	type = general	fire = 3	shock = 2	manuever = 0	siege = 1  death_date = 44.10.1 }
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "Hae"
+		death_date = 50.1.1
+		female = yes
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+	heir = {
+		name = "Saekju"
+		monarch_name = "Minjung"
+		dynasty = "Hae"
+		birth_date = 8.1.1
+		death_date = 48.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+44.10.1 = {
+	monarch = {
+		name = "Saekju" # Minjung
+		dynasty = "Hae"
+		birth_date = 8.1.1
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+48.1.1 = {
+	monarch = {
+		name = "U" # Mobon
+		dynasty = "Hae"
+		birth_date = 29.1.1
+		adm = 0
+		dip = 1
+		mil = 4
+	}
+}
+
+# Coup
+
+53.11.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	monarch = {
+		name = "Gung" # Taejo (He died in 121 according to the Book of the Later Han)
+		dynasty = "Go"
+		birth_date = 47.1.1
+		adm = 4
+		dip = 3
+		mil = 5
+		leader = {	name = "Go Gung"     	type = general	fire = 3	shock = 3	manuever = 2	siege = 2  death_date = 121.6.1 }
+	}
+	heir = {
+		name = "Suseong"
+		monarch_name = "Chadae"
+		dynasty = "Go"
+		birth_date = 53.1.1
+		death_date = 165.1.1
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 3
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+146.12.1 = {
+	monarch = {
+		name = "Suseong" # Chadae (He throned in 121 according to the Book of the Later Han)
+		dynasty = "Go"
+		adm = 0
+		dip = 2
+		mil = 3
+	}
+}
+
+# Coup
+
+165.10.1 = {
+	monarch = {
+		name = "Baekgo" # Sindae
+		dynasty = "Go"
+		birth_date = 100.1.1
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Nam-mu"
+		monarch_name = "Gogukcheon"
+		dynasty = "Go"
+		birth_date = 160.1.1
+		death_date = 197.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+165.10.1 = { leader = {	name = "Myeongnim Dap-bu"		type = general	fire = 2	shock = 2	manuever = 4	siege = 0  death_date = 179.11.1 } } # Not an actual death date 
+
+179.12.1 = {
+	monarch = {
+		name = "Nam-mu" # Gogukcheon
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "U"
+		death_date = 160.1.1
+		female = yes
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+	heir = {
+		name = "Yeon-u"
+		monarch_name = "Sansang"
+		dynasty = "Go"
+		birth_date = 165.1.1
+		death_date = 227.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 3v
+	}
+}
+
+197.5.1 = {
+	monarch = {
+		name = "Yeon-u" # Sansang
+		dynasty = "Go"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "U"
+		death_date = 160.1.1
+		female = yes
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}
+
+209.9.1 = {
+	heir = {
+		name = "Uwigeo"
+		monarch_name = "Dongcheon"
+		dynasty = "Go"
+		birth_date = 209.9.1
+		death_date = 248.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+227.5.1 = {
+	monarch = {
+		name = "Uwigeo" # Dongcheon
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	heir = {
+		name = "Yeonbul"
+		monarch_name = "Jungcheon"
+		dynasty = "Go"
+		birth_date = 224.1.1
+		death_date = 270.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+244.10.1 = { leader = {	name = "Yuyu"		type = general	fire = 2	shock = 2	manuever = 4	siege = 0  death_date = 246.6.1 } } # Not an actual death date
+
+248.9.1 = {
+	monarch = {
+		name = "Yeonbul" # Jungcheon
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "Yeon"
+		death_date = 220.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+255.1.1 = {
+	heir = {
+		name = "Yangno"
+		monarch_name = "Seocheon"
+		dynasty = "Go"
+		birth_date = 255.1.1
+		death_date = 292.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+270.10.1 = {
+	monarch = {
+		name = "Yangno" # Seocheon
+		dynasty = "Go"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "U"
+		death_date = 255.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sangbu"
+		monarch_name = "Bongsang"
+		dynasty = "Go"
+		birth_date = 270.1.1
+		death_date = 300.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+292.3.1 = {
+	monarch = {
+		name = "Sangbu" # Bongsang
+		dynasty = "Go"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Coup
+
+300.9.1 = {
+	monarch = {
+		name = "Eulbul" # Micheon
+		dynasty = "Go"
+		birth_date = 281.1.1
+		adm = 4
+		dip = 3
+		mil = 5
+		leader = {	name = "Go Eulbul"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 2  death_date = 331.2.1 }
+	}
+	queen = {
+		country_of_origin = GOG
+		dynasty = "Ju"
+		death_date = 280.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+314.1.1 = {
+	heir = {
+		name = "Sayu"
+		monarch_name = "Gogug-won"
+		dynasty = "Go"
+		birth_date = 310.1.1
+		death_date = 371.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+331.2.1 = {
+	monarch = {
+		name = "Sayu" # Gogug-won
+		dynasty = "Go"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+350.1.1 = {
+	heir = {
+		name = "Gubu"
+		monarch_name = "Sosurim"
+		dynasty = "Go"
+		birth_date = 350.1.1
+		death_date = 384.1.1
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+371.10.24 = { historical_rival = BKJ }
+
+371.10.24 = {
+	monarch = {
+		name = "Gubu" # Sosurim
+		dynasty = "Go"
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+	heir = {
+		name = "Yiryeon"
+		monarch_name = "Gogug-yang"
+		dynasty = "Go"
+		birth_date = 355.1.1
+		death_date = 384.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+372.6.1 = { religion = mahayana }
+
+384.11.1 = {
+	monarch = {
+		name = "Yiryeon" # Gogug-yang
+		dynasty = "Go"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Damdeok"
+		monarch_name = "Gwanggaeto"
+		dynasty = "Go"
+		birth_date = 374.1.1
+		death_date = 413.1.1
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 6
+	}
+}
+
+391.5.1 = {
+	monarch = {
+		name = "Damdeok" # Gwanggaeto
+		dynasty = "Go"
+		adm = 5
+		dip = 4
+		mil = 6
+		leader = {	name = "Go Damdeok"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 1  death_date = 413.10.1 }
+	}
+}
+
+394.1.1 = {
+	heir = {
+		name = "Georyeon"
+		monarch_name = "Jangsu"
+		dynasty = "Go"
+		birth_date = 394.1.1
+		death_date = 491.1.1
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}
+
+413.10.1 = {
+	monarch = {
+		name = "Georyeon" # Jangsu
+		dynasty = "Go"
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}
+
+427.1.1 = { capital = 1845 } # Pyongyang
+
+460.1.1 = {
+	heir = {
+		name = "Na-un"
+		monarch_name = "Munja"
+		dynasty = "Go"
+		birth_date = 460.1.1
+		death_date = 519.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+491.12.1 = {
+	monarch = {
+		name = "Na-un" # Munja
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Heung-an"
+		monarch_name = "Anjang"
+		dynasty = "Go"
+		birth_date = 475.1.1
+		death_date = 531.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+519.1.1 = {
+	monarch = {
+		name = "Heung-an" # Anjang
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Boyeon"
+		monarch_name = "An-won"
+		dynasty = "Go"
+		birth_date = 480.1.1
+		death_date = 545.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+531.5.1 = {
+	monarch = {
+		name = "Boyeon" # An-won
+		dynasty = "Go"
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = BKJ
+		dynasty = "Han"
+		birth_date = 480.1.1
+		death_date = 545.1.1
+		female = yes
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+537.1.1 = {
+	heir = {
+		name = "Pyeongseong"
+		monarch_name = "Yang-won"
+		dynasty = "Go"
+		birth_date = 537.1.1
+		death_date = 559.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+545.3.1 = {
+	monarch = {
+		name = "Pyeongseong" # Yang-won
+		dynasty = "Go"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Yangseong"
+		monarch_name = "Pyeong-won"
+		dynasty = "Go"
+		birth_date = 540.1.1
+		death_date = 590.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+554.7.1 = {
+	historical_rival = SLL
+	remove_historical_rival = BKJ
+}
+
+559.3.1 = {
+	monarch = {
+		name = "Yangseong" # Pyeong-won
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+570.1.1 = {
+	heir = {
+		name = "Won"
+		monarch_name = "Yeong-yang"
+		dynasty = "Go"
+		birth_date = 570.1.1
+		death_date = 618.9.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+590.10.1 = {
+	monarch = {
+		name = "Won" # Yeong-yang
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Geonmu"
+		monarch_name = "Yeong-nyu"
+		dynasty = "Go"
+		birth_date = 580.1.1
+		death_date = 642.1.1
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+598.6.1 = { leader = {	name = "Eulji Mundeok"     	type = general	fire = 4	shock = 4	manuever = 4	siege = 1  death_date = 614.10.1 } } # Not an actual death date
+
+618.9.1 = {
+	monarch = {
+		name = "Geonmu" # Yeong-nyu
+		dynasty = "Go"
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+640.1.1 = { leader = {	name = "Yeon Gaesomun"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 665.7.1 } }
+640.1.1 = { leader = {	name = "Yang Manchun"     	type = general	fire = 3	shock = 4	manuever = 2	siege = 3  death_date = 671.7.1 } } # Not an actual death date
+
+# Coup
+
+642.10.1 = {
+	monarch = {
+		name = "Bojang"
+		dynasty = "Go"
+		birth_date = 618.9.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Little Goguryeo
+
+668.10.31 = {
+	government = monarchy
+	add_government_reform = warlord_state
+	government_rank = 1
+}
+
+673.1.1 = { capital = 726 }
+
+686.1.1 = {
+	monarch = {
+		name = "Bowon"
+		dynasty = "Go"
+		birth_date = 665.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+699.1.1 = {
+	monarch = {
+		name = "Deokmu"
+		dynasty = "Go"
+		birth_date = 650.1.1
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+718.1.1 = {
+	monarch = {
+		name = "Yeon"
+		dynasty = "Go"
+		birth_date = 680.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+721.1.1 = {
+	monarch = {
+		name = "Jin"
+		dynasty = "Go"
+		birth_date = 700.1.1
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+773.1.1 = {
+	primary_culture = korean
+	monarch = {
+		name = "(unknown)"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Later Goguryeo (Taebong)
+
+892.1.1 = {
+	capital = 732
+	monarch = {
+		name = "Gung-ye"
+		dynasty = "Kim"
+		birth_date = 869.5.5
+		adm = 1
+		dip = 2
+		mil = 4
+		leader = {	name = "Gung-ye"     	type = general	fire = 3	shock = 2	manuever = 0	siege = 1  death_date = 918.6.15 }
+	}
+	queen = {
+		country_of_origin = SPS
+		dynasty = "Gang"
+		birth_date = 880.1.1
+		death_date = 915.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+896.1.1 = { leader = {	name = "Wang Geon"     	type = general	fire = 4	shock = 4	manuever = 1	siege = 1  death_date = 918.6.15 } } # Rise to the throne
+898.1.1 = { capital = 4231 } # Songak
+
+901.7.1 = { 
+	government_rank = 2
+	historical_rival = BKJ
+}
+905.1.1 = { capital = 732 } # Cheolwon
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

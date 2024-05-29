@@ -1,0 +1,1991 @@
+namespace = eh_italian
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Italian
+########################################################################
+
+# Kingdom of Italy
+country_event = {
+	id = eh_italian.1
+	title = "eh_italian.1.t"
+	desc = "eh_italian.1.d"
+	picture = FEUDALISM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			IT2 = { country_event = { id = eh_medieval_europe.33 days = 3 } }
+			MLO = {
+				104 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLO }
+						}
+					}
+					cede_province = MLO
+					add_core = MLO
+					remove_core = IT2
+				}
+			}
+			BSC = {
+				107 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BSC }
+						}
+					}
+					cede_province = BSC
+					add_core = BSC
+					remove_core = IT2
+				}
+				4739 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BSC }
+						}
+					}
+					cede_province = BSC
+					add_core = BSC
+					remove_core = IT2
+				}
+				3141 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BSC }
+						}
+					}
+					cede_province = BSC
+					add_core = BSC
+					remove_core = IT2
+				}
+			}
+			PAR = {
+				105 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAR }
+						}
+					}
+					cede_province = PAR
+					add_core = PAR
+					remove_core = IT2
+				}
+			}
+			MAN = {
+				109 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAN }
+						}
+					}
+					cede_province = MAN
+					add_core = MAN
+					remove_core = IT2
+				}
+			}
+			MOD = {
+				106 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOD }
+						}
+					}
+					cede_province = MOD
+					add_core = MOD
+					remove_core = IT2
+				}
+			}
+			FER = {
+				113 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FER }
+						}
+					}
+					cede_province = FER
+					add_core = FER
+					remove_core = IT2
+				}
+			}
+			VRN = {
+				venetia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VRN }
+							NOT = { province_id = 112 }
+						}
+					}
+					cede_province = VRN
+					add_core = VRN
+					remove_core = IT2
+				}
+				110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VRN }
+						}
+					}
+					cede_province = VRN
+					add_core = VRN
+					remove_core = IT2
+				}
+			}
+			VEN = {
+				112 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VEN }
+						}
+					}
+					cede_province = VEN
+					add_core = VEN
+					remove_core = IT2
+				}
+			}
+			MFA = {
+				2981 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MFA }
+						}
+					}
+					cede_province = MFA
+					add_core = MFA
+					remove_core = IT2
+				}
+			}
+			COR = {
+				1247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COR }
+						}
+					}
+					cede_province = COR
+					add_core = COR
+					remove_core = IT2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.1.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				IT2 = { was_player = yes }
+			}
+			switch_tag = MLO
+		}
+	}
+}
+
+# Italian city-states
+country_event = {
+	id = eh_italian.2
+	title = "eh_italian.2.t"
+	desc = "eh_italian.2.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PAP
+		is_year = 1050
+		NOT = { is_year = 1060 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SAV = {
+				add_treasury = 10000
+				add_years_of_income = 1
+				add_accepted_culture = arpitan
+				add_accepted_culture = swiss
+				piedmont_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SAV }
+							NOT = { province_id = 2981 }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = MLO
+				}
+				205 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = MLO
+				}
+				4719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = MLO
+				}
+			}
+			GEN = {
+				101 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = MLO
+				}
+				2992 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = MLO
+				}
+			}
+			PIS = {
+				115 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PIS }
+						}
+					}
+					cede_province = PIS
+					add_core = PIS
+					remove_core = LAN
+				}
+				corsica_sardinia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PIS }
+							NOT = { province_id = 1247 }
+						}
+					}
+					cede_province = PIS
+					add_core = PIS
+					remove_core = BYZ
+				}
+			}
+			SIC = {
+				apulia_area = {
+					limit = {
+						NOT = { owned_by = SIC }
+					}
+					cede_province = SIC
+					add_core = SIC
+					remove_core = BYZ
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SIC }
+						}
+					}
+					cede_province = SIC
+					add_core = SIC
+					remove_core = BYZ
+				}
+				123 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SIC }
+						}
+					}
+					cede_province = SIC
+					add_core = SIC
+					remove_core = BYZ
+				}
+				2984 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SIC }
+						}
+					}
+					cede_province = SIC
+					add_core = SIC
+					remove_core = BYZ
+				}
+			}
+			NIC = {
+				102 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIC }
+						}
+					}
+					cede_province = NIC
+					add_core = NIC
+					remove_core = MLO
+				}
+			}
+			TNT = {
+				110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TNT }
+						}
+					}
+					cede_province = TNT
+					add_core = TNT
+					remove_core = CAR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.2.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_italian.2.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				MLO = { was_player = yes }
+			}
+			switch_tag = SAV
+		}
+	}
+	
+	option = {
+		name = "eh_italian.2.c"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				MLO = { was_player = yes }
+			}
+			switch_tag = LAN
+		}
+	}
+}
+
+# Italian Renaissance
+country_event = {
+	id = eh_italian.3
+	title = "eh_italian.3.t"
+	desc = "eh_italian.3.d"
+	picture = IMPORTANT_STATUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LAN
+		is_year = 1435
+		NOT = { is_year = 1445 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			LAN = {
+				tuscany_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LAN }
+							NOT = { province_id = 117 }
+							NOT = { province_id = 2980 }
+						}
+					}
+					cede_province = LAN
+					add_core = LAN
+				}
+			}
+			MLO = {
+				lombardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MLO }
+							NOT = { province_id = 107 }
+							NOT = { province_id = 109 }
+						}
+					}
+					cede_province = MLO
+					add_core = MLO
+				}
+				105 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLO }
+						}
+					}
+					cede_province = MLO
+					add_core = MLO
+				}
+			}
+			SIC = {
+				change_tag = NAP
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				set_government_rank = 2
+				set_capital = 121
+				change_primary_culture = neapolitan
+				add_accepted_culture = sicilian
+				swap_free_idea_group = yes
+				apulia_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+				}
+				calabria_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+				}
+				naples_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAP }
+						}
+					}
+					cede_province = NAP
+					add_core = NAP
+				}
+			}
+			SIE = {
+				117 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SIE }
+						}
+					}
+					cede_province = SIE
+					add_core = SIE
+				}
+			}
+			LUC = {
+				2980 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LUC }
+						}
+					}
+					cede_province = LUC
+					add_core = LUC
+				}
+			}
+			ARA = {
+				inherit = SAR
+				sicily_area = {
+					limit = {
+						NOT = { owned_by = ARA }
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = SIC
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { owned_by = ARA }
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = SIC
+				}
+				corsica_sardinia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ARA }
+							NOT = { province_id = 1247 }
+						}
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = SIC
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.3.a"
+		ai_chance = { factor = 100 }
+		LAN = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			define_ruler = {
+				name = "Cosimo"
+				dynasty = "de' Medici"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 5
+				age = 50
+			}
+			define_consort = {
+				name = "Contessina"
+				dynasty = "de' Bardi"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "de' Medici"
+			}
+			116 = {
+				add_institution_embracement = {
+					which = renaissance
+					value = 100
+				}
+			}
+		}
+		MLO = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			define_ruler = {
+				name = "Francesco I"
+				dynasty = "Sforza"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 5
+				age = 49
+			}
+			define_consort = {
+				name = "Bianca Maria"
+				dynasty = "Visconti"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Sforza"
+			}
+		}
+		SAV = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			define_ruler = {
+				dynasty = "di Savoia"
+			}
+			define_heir = {
+				dynasty = "di Savoia"
+			}
+		}
+	}
+}
+
+# Battle of Anghiari and Battle of Cascina
+country_event = {
+	id = eh_italian.4
+	title = "eh_italian.4.t"
+	desc = "eh_italian.4.d"
+	picture = PAINTER_ARTIST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LAN
+		is_year = 1500
+		NOT = { is_year = 1510 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_italian.4.a"
+		ai_chance = { factor = 50 }
+		LAN = {
+			define_advisor = {
+				type = artist
+				name = "Leonardo da Vinci"
+				culture = tuscan
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.4.b"
+		ai_chance = { factor = 50 }
+		LAN = {
+			define_advisor = {
+				type = artist
+				name = "Michelangelo Buonarroti"
+				culture = tuscan
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Battle of Pavia
+country_event = {
+	id = eh_italian.5
+	title = "eh_italian.5.t"
+	desc = "eh_italian.5.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		is_year = 1525
+		NOT = { is_year = 1530 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SPA = {
+				lombardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = FRA
+				}
+			}
+			SAV = {
+				102 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = FRA
+				}
+				103 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = FRA
+				}
+				205 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = FRA
+				}
+				1875 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = FRA
+				}
+				4719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAV }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = FRA
+				}
+			}
+			PAR = {
+				105 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAR }
+						}
+					}
+					cede_province = PAR
+					add_core = PAR
+					remove_core = FRA
+				}
+			}
+			GEN = {
+				101 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = FRA
+				}
+				2992 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = FRA
+				}
+			}
+			KNI = {
+				126 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KNI }
+						}
+					}
+					cede_province = KNI
+					add_core = KNI
+					remove_core = SPA
+				}
+			}
+			SWI = {
+				romandie_area = {
+					limit = {
+						NOT = { owned_by = SWI }
+					}
+					cede_province = SWI
+					add_core = SWI
+					remove_core = FRA
+				}
+				4740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWI }
+						}
+					}
+					cede_province = SWI
+					add_core = SWI
+					remove_core = FRA
+				}
+			}
+			TUR = {
+				320 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = KNI
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.5.a"
+		ai_chance = { factor = 100 }
+		FRA = { add_prestige = -10 }
+		SAV = {
+			define_ruler = {
+				dynasty = "di Savoia"
+			}
+			define_heir = {
+				dynasty = "di Savoia"
+			}
+		}
+	}
+}
+
+# Congress of Vienna
+country_event = {
+	id = eh_italian.6
+	title = "eh_italian.6.t"
+	desc = "eh_italian.6.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			SPI = {
+				piedmont_area = {
+					limit = {
+						NOT = { owned_by = SPI }
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+				liguria_area = {
+					limit = {
+						NOT = { owned_by = SPI }
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+				205 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+				2979 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+				4719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+				4728 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+			}
+			PAP = {
+				lazio_area = {
+					limit = {
+						NOT = { owned_by = PAP }
+					}
+					cede_province = PAP
+					add_core = PAP
+					remove_core = FR2
+				}
+				central_italy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAP }
+							NOT = { province_id = 120 }
+						}
+					}
+					cede_province = PAP
+					add_core = PAP
+					remove_core = FR2
+				}
+				114 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAP }
+						}
+					}
+					cede_province = PAP
+					add_core = PAP
+					remove_core = FR2
+				}
+				4730 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAP }
+						}
+					}
+					cede_province = PAP
+					add_core = PAP
+					remove_core = FR2
+				}
+			}
+			TTS = {
+				apulia_area = {
+					limit = {
+						NOT = { owned_by = TTS }
+					}
+					cede_province = TTS
+					add_core = TTS
+					remove_core = NAP
+				}
+				naples_area = {
+					limit = {
+						NOT = { owned_by = TTS }
+					}
+					cede_province = TTS
+					add_core = TTS
+					remove_core = NAP
+				}
+				calabria_area = {
+					limit = {
+						NOT = { owned_by = TTS }
+					}
+					cede_province = TTS
+					add_core = TTS
+					remove_core = NAP
+				}
+				sicily_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TTS }
+							NOT = { province_id = 126 }
+						}
+					}
+					cede_province = TTS
+					add_core = TTS
+					remove_core = SIC
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { owned_by = TTS }
+					}
+					cede_province = TTS
+					add_core = TTS
+					remove_core = SIC
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TTS }
+						}
+					}
+					cede_province = TTS
+					add_core = TTS
+					remove_core = FR2
+				}
+			}
+			TUS = {
+				tuscany_area = {
+					limit = {
+						NOT = { owned_by = TUS }
+					}
+					cede_province = TUS
+					add_core = TUS
+					remove_core = FR2
+				}
+			}
+			MOD = {
+				106 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOD }
+						}
+					}
+					cede_province = MOD
+					add_core = MOD
+					remove_core = IT2
+				}
+			}
+			PAR = {
+				105 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAR }
+						}
+					}
+					cede_province = PAR
+					add_core = PAR
+					remove_core = IT2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.6.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				TUS = { was_player = yes }
+			}
+			switch_tag = SPI
+		}
+		SPI = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			set_capital = 103
+			grant_independence = yes
+		}
+		NAP = {
+			change_tag = TTS
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			grant_independence = yes
+			define_ruler = {
+				dynasty = "de Bourbon"
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+			}
+		}
+	}
+}
+
+# Risorgimento
+country_event = {
+	id = eh_italian.7
+	title = "eh_italian.7.t"
+	desc = "eh_italian.7.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPI
+		is_year = 1845
+		NOT = { is_year = 1850 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_italian.7.a"
+		ai_chance = { factor = 100 }
+		SPI = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			define_ruler = {
+				name = "Vittorio Emmanuele II"
+				dynasty = "di Savoia"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 5
+				age = 28
+			}
+			define_consort = {
+				name = "Rosa"
+				dynasty = "Vercellana"
+				culture = piedmontese
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "di Savoia"
+			}
+			define_advisor = {
+				type = statesman
+				name = "Camillo Benso"
+				culture = piedmontese
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Second Italian War of Independence
+country_event = {
+	id = eh_italian.8
+	title = "eh_italian.8.t"
+	desc = "eh_italian.8.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPI
+		is_year = 1855
+		NOT = { is_year = 1860 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SPI = {
+				lombardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPI }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = FR2
+				}
+			}
+			TUS = {
+				change_tag = ITC
+				emilia_romagna_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPI }
+							NOT = { province_id = 113 }
+						}
+					}
+					cede_province = ITC
+					add_core = ITC
+					remove_core = PAP
+				}
+				119 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITC }
+						}
+					}
+					cede_province = ITC
+					add_core = ITC
+					remove_core = PAP
+				}
+				2977 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITC }
+						}
+					}
+					cede_province = ITC
+					add_core = ITC
+					remove_core = PAP
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.8.a"
+		ai_chance = { factor = 100 }
+		SPI = {
+			vassalize = ITC
+			define_general = {
+				name = "Giuseppe Garibaldi"
+				shock = 4
+				fire = 4
+				manuever = 5
+				siege = 2
+			}
+		}
+	}
+}
+
+# Third Italian War of Independence
+country_event = {
+	id = eh_italian.9
+	title = "eh_italian.9.t"
+	desc = "eh_italian.9.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPI
+		is_year = 1868
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SPI = {
+				change_tag = ITA
+				inherit = ITC
+				inherit = TTS
+				italy_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITA }
+							NOT = { province_id = 102 }
+							NOT = { province_id = 118 }
+							NOT = { province_id = 126 }
+							NOT = { province_id = 205 }
+							NOT = { province_id = 1247 }
+							NOT = { province_id = 4732 }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = TTS
+				}
+				4738 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = HAB
+				}
+			}
+			FR2 = {
+				102 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ITA
+				}
+				205 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ITA
+				}
+				4719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ITA
+				}
+			}
+			GR2 = {
+				142 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = GBR
+				}
+				4698 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.9.a"
+		ai_chance = { factor = 100 }
+		ITA = { country_event = { id = eh_italian.10 days = 300 } }
+	}
+}
+
+# Capture of Rome
+country_event = {
+	id = eh_italian.10
+	title = "eh_italian.10.t"
+	desc = "eh_italian.10.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			PAP = { set_papacy_active = no }
+			ITA = {
+				118 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = PAP
+				}
+				4732 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = PAP
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.10.a"
+		ai_chance = { factor = 100 }
+		ITA = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			set_capital = 118
+			change_primary_culture = umbrian
+			change_religion = catholic
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			swap_free_idea_group = yes
+			118 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# Italian Colonial Empire
+country_event = {
+	id = eh_italian.11
+	title = "eh_italian.11.t"
+	desc = "eh_italian.11.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ITA = {
+				mogadishu_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITA }
+							NOT = { province_id = 2795 }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				1230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				3267 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				2787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				2766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				2774 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				2765 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+			}
+			SPA = {
+				southern_morocco_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 1110 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				1996 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				3021 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				4080 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				3237 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.11.a"
+		ai_chance = { factor = 100 }
+		BR2 = {
+			change_tag = BRZ
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Deodoro da Fonseca"
+			}
+			763 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# March on Rome
+country_event = {
+	id = eh_italian.12
+	title = "eh_italian.12.t"
+	desc = "eh_italian.12.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITA
+		is_year = 1922
+		NOT = { is_year = 1923 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ITA = {
+				majarteen_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITA }
+							NOT = { province_id = 2784 }
+							NOT = { province_id = 2783 }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = MJE
+				}
+				2786 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = MJE
+				}
+			}
+			ET2 = {
+				inherit = DER
+				ogaden_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = DER
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_italian.12.a"
+		ai_chance = { factor = 100 }
+		ITA = {
+			set_country_flag = eh_fascist
+			change_government = republic
+			add_government_reform = fascist_government
+			set_government_rank = 3
+			set_capital = 118
+			change_primary_culture = umbrian
+			change_religion = secularism
+			define_ruler = {
+				name = "Benito Mussolini"
+				change_adm = 2
+				change_dip = 1
+				change_mil = 3
+				age = 39
+			}
+		}
+	}
+}
+
+# First Italian Republic
+country_event = {
+	id = eh_italian.13
+	title = "eh_italian.13.t"
+	desc = "eh_italian.13.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITA
+		is_year = 1946
+		NOT = { is_year = 1948 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_italian.13.a"
+		ai_chance = { factor = 100 }
+		ITA = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 118
+			change_primary_culture = umbrian
+			change_religion = secularism
+			define_ruler = {
+				name = "Enrico De Nicola"
+			}
+		}
+	}
+}
+
+# Hellenic Republic
+country_event = {
+	id = eh_italian.14
+	title = "eh_italian.14.t"
+	desc = "eh_italian.14.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GR2
+		is_year = 1973
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_italian.14.a"
+		ai_chance = { factor = 100 }
+		GR2 = {
+			change_tag = GRE
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 146
+			change_primary_culture = greek
+			change_religion = orthodox
+			add_country_modifier = {
+				name = great_power
+				duration = 70000
+			}
+			define_ruler = {
+				name = "Michail Stasinopoulos"
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Cosimo de' Medici
+country_event = {
+	id = eh_italian.15
+	title = "eh_italian.15.t"
+	desc = "eh_italian.15.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		tag = LAN
+		is_year = 1435
+		NOT = { is_year = 1465 }
+		NOT = { has_ruler = "Cosimo" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_italian.15.a"
+		ai_chance = { factor = 100 }
+		LAN = {
+			change_government = monarchy
+			add_government_reform = merchant_aristocracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Cosimo"
+				dynasty = "de' Medici"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 5
+				min_age = 45
+				max_age = 75
+			}
+			define_consort = {
+				name = "Contessina"
+				dynasty = "de' Bardi"
+				culture = tuscan
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Lorenzo de' Medici
+country_event = {
+	id = eh_italian.16
+	title = "eh_italian.16.t"
+	desc = "eh_italian.16.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		tag = LAN
+		is_year = 1470
+		NOT = { is_year = 1490 }
+		NOT = { has_ruler = "Lorenzo" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_italian.16.a"
+		ai_chance = { factor = 100 }
+		LAN = {
+			change_government = republic
+			add_government_reform = provincial_governments_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Lorenzo"
+				dynasty = "de' Medici"
+				change_adm = 6
+				change_dip = 4
+				change_mil = 3
+				min_age = 20
+				max_age = 40
+			}
+			define_consort = {
+				name = "Clarice"
+				dynasty = "Orsini"
+				culture = umbrian
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Vittorio Emmanuele II
+country_event = {
+	id = eh_italian.17
+	title = "eh_italian.17.t"
+	desc = "eh_italian.17.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = SPI
+			tag = ITA
+		}
+		is_year = 1855
+		NOT = { is_year = 1875 }
+		NOT = { has_ruler = "Vittorio Emmanuele II" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_italian.17.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			define_ruler = {
+				name = "Vittorio Emmanuele II"
+				dynasty = "di Savoia"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 5
+				min_age = 35
+				max_age = 55
+			}
+			define_consort = {
+				name = "Rosa"
+				dynasty = "Vercellana"
+				culture = piedmontese
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Benito Mussolini
+country_event = {
+	id = eh_italian.18
+	title = "eh_italian.18.t"
+	desc = "eh_italian.18.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	trigger = {
+		tag = ITA
+		is_year = 1925
+		NOT = { is_year = 1943 }
+		OR = {
+			NOT = { has_ruler = "Benito Mussolini" }
+			NOT = { has_ruler = "Vittorio Emmanuele III" }
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_italian.18.a"
+		ai_chance = { factor = 100 }
+		ITA = {
+			set_country_flag = eh_fascist
+			change_government = republic
+			add_government_reform = fascist_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Benito Mussolini"
+				change_adm = 2
+				change_dip = 1
+				change_mil = 3
+				min_age = 40
+				max_age = 60
+			}
+		}
+	}
+}
+
+# World War I - Start for Italy
+country_event = {
+	id = eh_italian.19
+	title = "eh_italian.19.t"
+	desc = "eh_italian.19.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_italian.19.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Armistice of 11 November 1918 - Finish for Italy
+country_event = {
+	id = eh_italian.20
+	title = "eh_italian.20.t"
+	desc = "eh_italian.20.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_italian.20.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# EH version

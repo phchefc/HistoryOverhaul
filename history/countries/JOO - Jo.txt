@@ -1,0 +1,206 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = FUJ
+capital = 1024
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+# Jo clan
+
+1040.1.1 = {
+	monarch = {
+		name = "Koremochi"
+		dynasty = "Jo"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+1070.1.1 = {
+	monarch = {
+		name = "Shigemochi"
+		dynasty = "Jo"
+		adm = 1
+		dip = 5
+		mil = 1
+	}
+}
+
+1100.1.1 = {
+	monarch = {
+		name = "Sadamochi"
+		dynasty = "Jo"
+		adm = 1
+		dip = 5
+		mil = 0
+	}
+}
+
+1120.1.1 = {
+	monarch = {
+		name = "Nagamoto"
+		dynasty = "Jo"
+		adm = 5
+		dip = 1
+		mil = 5
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1140.1.1 = {
+	monarch = {
+		name = "Sukekuni"
+		dynasty = "Jo"
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+1140.1.1 = {
+	heir = {
+		name = "Sukenaga"
+		monarch_name = "Sukenaga"
+		dynasty = "Jo"
+		birth_date = 1130.1.1
+		death_date = 1181.3.11
+		claim = 95
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}
+
+1160.1.1 = {
+	monarch = {
+		name = "Sukenaga"
+		dynasty = "Jo"
+		birth_date = 1130.1.1
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}
+
+1160.1.1 = {
+	heir = {
+		name = "Sukemori"
+		monarch_name = "Sukemori"
+		dynasty = "Jo"
+		birth_date = 1160.1.1
+		death_date = 1200.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}
+
+1181.3.11 = {
+	monarch = {
+		name = "Sukemori"
+		dynasty = "Jo"
+		birth_date = 1160.1.1
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Tosa-Ichijo
+
+1475.1.1 = {
+	capital = 1819
+	monarch = {
+		name = "Norifusa"
+		dynasty = "Ichijo"
+		birth_date = 1440.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = ICH
+		name = "Shoji"
+		dynasty = "Reisen"
+		birth_date = 1440.1.1
+		death_date = 1500.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1480.11.6 = { 
+	monarch = {
+		name = "Fusaie"
+		dynasty = "Ichijo"
+		birth_date = 1450.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = ICH
+		dynasty = "Hino"
+		birth_date = 1450.1.1
+		death_date = 1510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1539.12.23 = { 
+	monarch = {
+		name = "Fusafuyu"
+		dynasty = "Ichijo"
+		birth_date = 1480.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1541.11.23 = { 
+	monarch = {
+		name = "Fusamoto"
+		dynasty = "Ichijo"
+		birth_date = 1510.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1549.5.9 = { 
+	monarch = {
+		name = "Kanesada"
+		dynasty = "Ichijo"
+		birth_date = 1540.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+# EH version

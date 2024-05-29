@@ -1,0 +1,474 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = FUJ
+capital = 4191 # Shimotsuke
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1338.2.23 = {
+	monarch = {
+		name = "Kintsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1302.1.1
+		adm = 4
+		dip = 5
+		mil = 4
+	}
+	queen = {
+		country_of_origin = CBA
+		dynasty = "Chiba"
+		birth_date = 1305.1.1
+		death_date = 1365.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ujitsuna"
+		monarch_name = "Ujitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1326.1.1
+		death_date = 1370.7.28
+		claim = 95
+		adm = 5
+		dip = 1
+		mil = 0
+	}
+}
+
+1356.12.17 = {
+	monarch = {
+		name = "Ujitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1326.1.1
+		adm = 5
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SBA
+		dynasty = "Shiba"
+		birth_date = 1330.1.1
+		death_date = 1390.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Mitotsuna"
+		monarch_name = "Mitotsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1350.1.1
+		death_date = 1380.6.19
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 1
+	}
+}
+
+1370.7.28 = {
+	monarch = {
+		name = "Mitotsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1350.1.1
+		adm = 5
+		dip = 5
+		mil = 1
+	}
+}
+
+1376.1.1 = {
+	heir = {
+		name = "Mitsutsuna"
+		monarch_name = "Mitsutsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1376.1.1
+		death_date = 1407.11.2
+		claim = 95
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}
+
+1380.6.19 = {
+	monarch = {
+		name = "Mitsutsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1376.1.1
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}
+
+1396.1.1 = {
+	heir = {
+		name = "Mochitsuna"
+		monarch_name = "Mochitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1396.1.1
+		death_date = 1423.9.13
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 0
+	}
+}
+
+1407.11.2 = {
+	monarch = {
+		name = "Mochitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1396.1.1
+		adm = 2
+		dip = 5
+		mil = 0
+	}
+}
+
+1407.11.2 = {
+	heir = {
+		name = "Ietsuna"
+		monarch_name = "Ietsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1393.1.1
+		death_date = 1440.1.1
+		claim = 95
+		adm = 3
+		dip = 0
+		mil = 1
+	}
+}
+
+1423.9.13 = {
+	monarch = {
+		name = "Ietsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1393.1.1
+		adm = 3
+		dip = 0
+		mil = 1
+	}
+}
+
+1423.9.13 = {
+	heir = {
+		name = "Hitotsuna"
+		monarch_name = "Hitotsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1420.1.1
+		death_date = 1460.3.23
+		claim = 95
+		adm = 4
+		dip = 0
+		mil = 0
+	}
+}
+
+1440.1.1 = {
+	monarch = {
+		name = "Hitotsuna" 
+		dynasty = "Utsunomiya"
+		birth_date = 1420.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1443.1.1 = {
+	heir = {
+		name = "Akitsuna"
+		monarch_name = "Akitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1443.1.1
+		death_date = 1463.11.23
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1460.3.23 = {
+	monarch = {
+		name = "Akitsuna" 
+		dynasty = "Utsunomiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1460.3.23 = {
+	heir = {
+		name = "Masatsuna"
+		monarch_name = "Masatsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1447.1.1
+		death_date = 1477.10.7
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1463.11.23 = {
+	monarch = {
+		name = "Masatsuna"
+		dynasty = "Utsunomiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = UES
+		dynasty = "Uesugi"
+		birth_date = 1450.1.1
+		death_date = 1510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1468.1.1 = {
+	heir = {
+		name = "Shigetsuna"
+		monarch_name = "Shigetsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1468.1.1
+		death_date = 1516.12.1
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+	
+1477.10.7 = { 
+	monarch = {
+		name = "Shigetsuna"
+		dynasty = "Utsunomiya"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	queen = {
+		country_of_origin = UTN
+		dynasty = "Nasu"
+		birth_date = 1470.1.1
+		death_date = 1530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1497.1.1 = {
+	heir = {
+		name = "Tadatsuna"
+		monarch_name = "Tadatsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1497.1.1
+		death_date = 1527.8.12
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+	
+1516.12.1 = { 
+	monarch = {
+		name = "Tadatsuna"
+		dynasty = "Utsunomiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = UTN
+		dynasty = "Mashiko"
+		birth_date = 1500.1.1
+		death_date = 1570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Okitsuna"
+		monarch_name = "Okitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1514.1.1
+		death_date = 1536.9.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1527.8.12 = { 
+	monarch = {
+		name = "Okitsuna"
+		dynasty = "Utsunomiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1527.8.12 = {
+	heir = {
+		name = "Hisatsuna"
+		monarch_name = "Hisatsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1513.1.1
+		death_date = 1549.10.7
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1536.9.1 = { 
+	monarch = {
+		name = "Hisatsuna"
+		dynasty = "Utsunomiya"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = UTN
+		dynasty = "Yuki"
+		birth_date = 1515.1.1
+		death_date = 1575.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1545.1.1 = {
+	heir = {
+		name = "Hirotsuna"
+		monarch_name = "Hirotsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1545.1.1
+		death_date = 1576.8.30
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1549.10.7 = { 
+	monarch = {
+		name = "Hirotsuna"
+		dynasty = "Utsunomiya"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1568.1.1 = {
+	queen = {
+		country_of_origin = STK
+		name = "Nanryoin"
+		dynasty = "Satake"
+		birth_date = 1550.1.1
+		death_date = 1610.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kunitsuna"
+		monarch_name = "Kunitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1568.1.1
+		death_date = 1607.1.9
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1576.8.30 = { 
+	monarch = {
+		name = "Kunitsuna"
+		dynasty = "Utsunomiya"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		name = "Gososho"
+		dynasty = "Satake"
+		birth_date = 1570.1.1
+		death_date = 1630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1582.6.21 = {
+	government = monarchy
+	add_government_reform = indep_daimyo	#Honnoji
+	government_rank = 1
+}
+1590.1.1 = {
+	government = monarchy
+	add_government_reform = daimyo		#Odawara Campaign
+	government_rank = 1
+}
+
+1598.1.1 = {
+	heir = {
+		name = "Yoshitsuna"
+		monarch_name = "Yoshitsuna"
+		dynasty = "Utsunomiya"
+		birth_date = 1598.1.1
+		death_date = 1664.1.1
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+# EH version

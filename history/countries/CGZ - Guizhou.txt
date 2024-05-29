@@ -1,0 +1,98 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = yi
+capital = 674
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1916.6.7 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = military_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = military_junta
+	religion = secularism
+	technology_group = asian
+	monarch = {
+		name = "Liu Xianshi"
+		birth_date = 1870.5.8
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1920.11.1 = {
+	monarch = {
+		name = "Wang Wenhua"
+		birth_date = 1888.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1921.3.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1922.8.1 = {
+	monarch = {
+		name = "Yuan Zuming"
+		birth_date = 1895.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1926.6.1 = {
+	monarch = {
+		name = "Feng Xicheng"
+		birth_date = 1895.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1929.4.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1932.2.1 = {
+	monarch = {
+		name = "Wang Jialie"
+		birth_date = 1893.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

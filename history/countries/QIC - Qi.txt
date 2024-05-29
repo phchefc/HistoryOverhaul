@@ -1,0 +1,538 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = shandong_culture
+capital = 690
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Jin dynasty (Duan Qi)
+
+350.2.1 = {
+	monarch = {
+		name = "Kan"
+		dynasty = "Duan"
+		birth_date = 320.1.1
+		culture = khitan
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# Southern Qi dynasty
+
+479.5.29 = {
+	government = monarchy
+	add_government_reform = celestial_empire
+	government_rank = 3
+	primary_culture = wu
+	add_accepted_culture = yi
+	add_accepted_culture = zhuang
+	add_accepted_culture = vietnamese
+	capital = 1821	# Jiankang
+	monarch = {
+		name = "Daocheng" #Gao
+		dynasty = "Xiao"
+		birth_date = 427.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Xiao Daocheng"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 482.4.11 }
+	}
+	heir = {
+		name = "Ze"
+		monarch_name = "Wu"
+		dynasty = "Xiao"
+		birth_date = 440.1.1
+		death_date = 493.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+482.4.11 = {
+	monarch = {
+		name = "Ze" #Wu
+		dynasty = "Xiao"
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Zhaoye"
+		monarch_name = "Zhaoye"
+		dynasty = "Xiao"
+		birth_date = 473.1.1
+		death_date = 494.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+493.8.27 = {
+	monarch = {
+		name = "Zhaoye"
+		dynasty = "Xiao"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Jingying"
+		dynasty = "He"
+		birth_date = 475.1.1
+		death_date = 494.9.7
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+494.9.7 = {
+	monarch = {
+		name = "Zhaowen"
+		dynasty = "Xiao"
+		birth_date = 480.1.1
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Shaoming"
+		dynasty = "Wang"
+		birth_date = 480.1.1
+		death_date = 540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+494.11.23 = {
+	monarch = {
+		name = "Luan" #Ming
+		dynasty = "Xiao"
+		birth_date = 452.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+	heir = {
+		name = "Baojuan"
+		monarch_name = "Baojuan"
+		dynasty = "Xiao"
+		birth_date = 483.1.1
+		death_date = 501.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+498.9.1 = {
+	monarch = {
+		name = "Baojuan"
+		dynasty = "Xiao"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Lingqu"
+		dynasty = "Chu"
+		birth_date = 455.1.1
+		death_date = 510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+501.12.31 = {
+	monarch = {
+		name = "Baorong" #He
+		dynasty = "Xiao"
+		birth_date = 488.1.1
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Shunhua"
+		dynasty = "Wang"
+		birth_date = 490.1.1
+		death_date = 502.4.30
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+550.1.1 = {
+	remove_accepted_culture = yi
+	remove_accepted_culture = zhuang
+	remove_accepted_culture = vietnamese
+}
+
+# Northern Qi dynasty
+
+550.6.9 = {
+	add_government_reform = chinese_warlord
+	primary_culture = hubei
+	capital = 2137
+	monarch = {
+		name = "Yang" #Wenxuan
+		dynasty = "Gao"
+		birth_date = 526.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Zu'e"
+		dynasty = "Li"
+		birth_date = 530.1.1
+		death_date = 590.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yin"
+		monarch_name = "Yin"
+		dynasty = "Gao"
+		birth_date = 545.1.1
+		death_date = 561.9.1
+		claim = 95
+		adm = 5
+		dip = 0
+		mil = 0
+	}
+}
+
+550.6.9 = { leader = {	name = "Gao Changgong"     	type = general	fire = 4	shock = 4	manuever = 3	siege = 0  death_date = 573.5.1 } }
+
+559.11.25 = {
+	monarch = {
+		name = "Yin"
+		dynasty = "Gao"
+		adm = 5
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Nansheng"
+		dynasty = "Li"
+		birth_date = 540.1.1
+		death_date = 600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+560.9.8 = {
+	monarch = {
+		name = "Yan" #Xiaozhao
+		dynasty = "Gao"
+		birth_date = 535.1.1
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Shuncheng"
+		dynasty = "Yuan"
+		birth_date = 540.1.1
+		death_date = 600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Zhan"
+		monarch_name = "Wucheng"
+		dynasty = "Gao"
+		birth_date = 537.1.1
+		death_date = 565.1.1
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}
+
+561.12.3 = {
+	monarch = {
+		name = "Zhan" #Wucheng
+		dynasty = "Gao"
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = QIC
+		dynasty = "Hu"
+		birth_date = 540.1.1
+		death_date = 600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wei"
+		monarch_name = "Wei"
+		dynasty = "Gao"
+		birth_date = 556.5.1
+		death_date = 577.11.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+565.6.8 = {
+	monarch = {
+		name = "Wei"
+		dynasty = "Gao"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		name = "Yeli"
+		dynasty = "Mu"
+		birth_date = 560.1.1
+		death_date = 620.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+570.1.1 = {
+	heir = {
+		name = "Heng"
+		monarch_name = "Heng"
+		dynasty = "Gao"
+		birth_date = 570.1.1
+		death_date = 578.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+577.2.4 = {
+	monarch = {
+		name = "Heng"
+		dynasty = "Gao"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+577.3.1 = {
+	monarch = {
+		name = "Shaoyi"
+		dynasty = "Gao"
+		birth_date = 555.1.1
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+# End of the Tang dynasty (Pinglu)
+
+765.1.1 = {
+	government_rank = 1
+	primary_culture = shandong_culture
+	capital = 690
+	monarch = {
+		name = "Zhengji"
+		dynasty = "Li"
+		birth_date = 733.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+		leader = {	name = "Li Zhengji"     	type = general	fire = 3	shock = 2	manuever = 0	siege = 0  death_date = 781.1.1 } # Not an actual death date
+	}
+}
+
+758.1.1 = {
+	heir = {
+		name = "Na"
+		monarch_name = "Na"
+		dynasty = "Li"
+		birth_date = 758.1.1
+		death_date = 792.6.13
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+781.1.1 = {
+	monarch = {
+		name = "Na"
+		dynasty = "Li"
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+781.1.1 = {
+	heir = {
+		name = "Shigu"
+		monarch_name = "Shigu"
+		dynasty = "Li"
+		birth_date = 775.1.1
+		death_date = 806.1.1
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+782.1.1 = { government_rank = 2 capital = 691 }
+
+792.6.13 = {
+	monarch = {
+		name = "Shigu"
+		dynasty = "Li"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+792.6.13 = {
+	heir = {
+		name = "Shidao"
+		monarch_name = "Shidao"
+		dynasty = "Li"
+		birth_date = 775.1.1
+		death_date = 819.3.8
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
+806.1.1 = {
+	monarch = {
+		name = "Shidao"
+		dynasty = "Li"
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Huang Qi)
+
+881.1.1 = {
+	government_rank = 3
+	capital = 700
+	monarch = {
+		name = "Chao"
+		dynasty = "Huang"
+		birth_date = 835.1.1
+		adm = 0
+		dip = 0
+		mil = 4
+		leader = {	name = "Huang Chao"     	type = general	fire = 4	shock = 2	manuever = 0	siege = 0  death_date = 884.1.1 }
+	}
+	queen = {
+		country_of_origin = QIC
+		dynasty = "Cao"
+		birth_date = 840.1.1
+		death_date = 884.7.13
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+883.1.1 = { capital = 2501 }
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Song dynasty (Liu Qi)
+
+1130.10.12 = {
+	capital = 2137
+	monarch = {
+		name = "Yu"
+		dynasty = "Liu"
+		birth_date = 1073.1.1
+		death_date = 1146.10.18
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = QIC
+		dynasty = "Qian"
+		birth_date = 1075.1.1
+		death_date = 1135.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

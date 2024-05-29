@@ -1,0 +1,202 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = chihan
+capital = 1816
+
+# End of the Western Han dynasty (You)
+
+23.10.5 = {
+	monarch = {
+		name = "Chong"
+		dynasty = "Peng"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (You)
+
+189.9.28 = {
+	monarch = {
+		name = "Zan"
+		dynasty = "Gongsun"
+		birth_date = 155.1.1
+		adm = 1
+		dip = 1
+		mil = 4
+		leader = {	name = "Gongsun Zan"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 0  death_date = 192.6.1 } # Not an actual death date
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Western Jin dynasty (Duan)
+
+270.1.1 = {
+	government = tribal
+	add_government_reform = steppe_horde
+	religion = tengri_pagan_reformed
+	technology_group = eastern_nomad_group
+	capital = 4194
+	monarch = {
+		name = "Qizhen"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+303.1.1 = {
+	monarch = {
+		name = "Wuwuchen"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+307.1.1 = { government_rank = 2 }
+
+311.1.1 = {
+	monarch = {
+		name = "Jilujuan"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+318.1.1 = {
+	monarch = {
+		name = "Shefuchen"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+318.6.1 = {
+	monarch = {
+		name = "Pidi"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+321.1.1 = {
+	monarch = {
+		name = "Mopei"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+325.6.1 = {
+	monarch = {
+		name = "Ya"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+326.1.1 = {
+	monarch = {
+		name = "Liao"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+338.1.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 1
+	technology_group = early_chinese
+	religion = confucianism
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Yiwu)
+
+881.1.1 = {
+	capital = 696
+	monarch = {
+		name = "Chucun"
+		dynasty = "Wang"
+		birth_date = 831.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+895.6.1 = {
+	monarch = {
+		name = "Gao"
+		dynasty = "Wang"
+		birth_date = 870.1.1
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+900.6.1 = {
+	monarch = {
+		name = "Chuzhi"
+		dynasty = "Wang"
+		birth_date = 862.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+909.1.1 = { government_rank = 2 }
+
+922.3.1 = {
+	monarch = {
+		name = "Du"
+		dynasty = "Wang"
+		birth_date = 862.1.1
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,759 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = FUJ
+capital = 4182 # Hizen
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Shoni clan
+
+1185.6.19 = {
+	monarch = {
+		name = "Sukeyori"
+		dynasty = "Muto"
+		birth_date = 1160.1.1
+		adm = 5
+		dip = 5
+		mil = 2
+	}
+}
+
+1198.1.1 = {
+	heir = {
+		name = "Sukeyoshi"
+		monarch_name = "Sukeyoshi"
+		dynasty = "Shoni"
+		birth_date = 1198.1.1
+		death_date = 1281.8.28
+		claim = 95
+		adm = 0
+		dip = 3
+		mil = 3
+	}
+}
+
+1228.9.24 = {
+	monarch = {
+		name = "Sukeyoshi"
+		dynasty = "Shoni"
+		birth_date = 1198.1.1
+		adm = 0
+		dip = 3
+		mil = 3
+	}
+}
+
+1229.1.1 = {
+	heir = {
+		name = "Tsunesuke"
+		monarch_name = "Tsunesuke"
+		dynasty = "Shoni"
+		birth_date = 1229.1.1
+		death_date = 1292.9.14
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+1281.8.28 = {
+	monarch = {
+		name = "Tsunesuke"
+		dynasty = "Shoni"
+		birth_date = 1229.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1281.8.28 = {
+	heir = {
+		name = "Sadatsune"
+		monarch_name = "Sadatsune"
+		dynasty = "Shoni"
+		birth_date = 1272.1.1
+		death_date = 1336.4.11
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+}
+
+1292.9.14 = {
+	monarch = {
+		name = "Sadatsune"
+		dynasty = "Shoni"
+		birth_date = 1272.1.1
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+}
+
+1294.1.1 = {
+	heir = {
+		name = "Yorinao"
+		monarch_name = "Yorinao"
+		dynasty = "Shoni"
+		birth_date = 1294.1.1
+		death_date = 1372.1.30
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1336.4.11 = {
+	monarch = {
+		name = "Yorinao"
+		dynasty = "Shoni"
+		birth_date = 1294.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1372.1.30  = {
+	monarch = {
+		name = "Fuyusuke" # 1294 - 1375.9.22 
+		dynasty = "Shoni"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1375.9.22  = {
+	monarch = {
+		name = "Fuyusuke" # ?? - ??
+		dynasty = "Shoni"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1375.9.22 = {
+	heir = {
+		name = "Mitsusada"
+		monarch_name = "Mitsusada"
+		dynasty = "Shoni"
+		birth_date = 1375.9.22
+		death_date = 1404.1.1
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1387.1.1 = {
+	monarch = {
+		name = "Sadayori" # ? - 1404 
+		dynasty = "Shoni"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1387.1.1 = {
+	heir = {
+		name = "Mitsusada"
+		monarch_name = "Mitsusada"
+		dynasty = "Shoni"
+		birth_date = 1380.1.1
+		death_date = 1433.9.29
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1404.1.1 = {
+	monarch = {
+		name = "Mistusada"
+		dynasty = "Shoni"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1404.1.1 = {
+	heir = {
+		name = "Suketsugu"
+		monarch_name = "Suketsugu"
+		dynasty = "Shoni"
+		birth_date = 1400.1.1
+		death_date = 1441.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1433.9.29 = {
+	monarch = {
+		name = "Suketsugu"
+		dynasty = "Shoni"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1441.1.1 = {
+	monarch = {
+		name = "Noriyori" 
+		dynasty = "Shoni"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SOO
+		dynasty = "So"
+		birth_date = 1430.1.1
+		death_date = 1490.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1450.1.1 = {
+	heir = {
+		name = "Masasuke"
+		monarch_name = "Masasuke"
+		dynasty = "Shoni"
+		birth_date = 1450.1.1
+		death_date = 1497.1.1
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1468.1.1 = {
+	monarch = {
+		name = "Masasuke" 
+		dynasty = "Shoni"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1491.1.1 = {
+	heir = {
+		name = "Sukemoto"
+		monarch_name = "Sukemoto"
+		dynasty = "Shoni"
+		birth_date = 1491.1.1
+		death_date = 1536.1.22
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1497.1.1 = {
+	monarch = {
+		name = "Sukemoto" 
+		dynasty = "Shoni"
+#		birth_date = 1491.1.1
+#		death_date = 1536.1.22		
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Otomo"
+		birth_date = 1495.1.1
+		death_date = 1555.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1529.1.1 = {
+	heir = {
+		name = "Fuyuhisa"
+		monarch_name = "Fuyuhisa"
+		dynasty = "Shoni"
+		birth_date = 1529.1.1
+		death_date = 1559.2.18	
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1536.1.22 = {
+	monarch = {
+		name = "Fuyuhisa" 
+		dynasty = "Shoni"
+#		birth_date = 1529.1.1
+#		death_date = 1559.2.18	
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+# Ryuzoji clan, replaced Shoni clan
+
+1559.2.18 = { # Fall of the Shoni Clan, Rise of their retainer, the Ryuzoji
+	monarch = {
+		name = "Takanobu" #1529.3.24-1584.5.4
+		dynasty = "Ryuzoji"	
+		adm = 4
+		dip = 3
+		mil = 6
+	}
+	queen = {
+		country_of_origin = SHN
+		dynasty = "Ryuzoji"
+		birth_date = 1530.1.1
+		death_date = 1590.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Masaie"
+		monarch_name = "Masaie"
+		dynasty = "Ryuzoji"
+		birth_date = 1556.1.1
+		death_date = 1607.11.21	
+		claim = 90
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1582.6.21 = {
+	government = monarchy
+	add_government_reform = indep_daimyo	#Honnoji
+	government_rank = 1
+}
+
+1584.5.4 = {
+	monarch = {
+		name = "Masaie"
+		dynasty = "Ryuzoji"	
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SHN
+		dynasty = "Arima"
+		birth_date = 1560.1.1
+		death_date = 1620.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1587.1.1 = {
+	government = monarchy
+	add_government_reform = daimyo		#submit to Toyotomi
+	government_rank = 1
+}
+
+# Nabeshima clan, replaced Ryuzoji clan
+
+1607.11.21 = { #The Nabeshima replaced the Ryuzoji
+	monarch = {
+		name = "Naoshige" #1538.4.12-1618.7.24
+		dynasty = "Nabeshima"	
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SHN
+		name = "Youtaiin"
+		dynasty = "Ishii"
+		birth_date = 1540.1.1
+		death_date = 1600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Katsushige"
+		monarch_name = "Katsushige"
+		dynasty = "Nabeshima"
+		birth_date = 1580.12.4
+		death_date = 1657.5.7
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1618.7.24 = {
+	monarch = {
+		name = "Katsushige" #1580.12.4-1657.5.7
+		dynasty = "Nabeshima"	
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SHN
+		name = "Kikuhime"
+		dynasty = "Okabe"
+		birth_date = 1588.1.1
+		death_date = 1661.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1632.7.10 = {
+	heir = {
+		name = "Mitsushige"
+		monarch_name = "Mitsushige"
+		dynasty = "Nabeshima"
+		birth_date = 1632.7.10
+		death_date = 1700.7.2
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1657.5.7 = {
+	monarch = {
+		name = "Mitsushige" #1632.7.10-1700.7.2
+		dynasty = "Nabeshima"	
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = UES
+		name = "Torahime"
+		dynasty = "Uesugi"
+		birth_date = 1635.1.1
+		death_date = 1695.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tsunashige"
+		monarch_name = "Tsunashige"
+		dynasty = "Nabeshima"
+		birth_date = 1652.6.10
+		death_date = 1707.1.5
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1700.7.2 = {
+	monarch = {
+		name = "Tsunashige" #1652.6.10-1707.1.5
+		dynasty = "Nabeshima"	
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		dynasty = "Matsudaira"
+		birth_date = 1655.1.1
+		death_date = 1715.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshishige"
+		monarch_name = "Yoshishige"
+		dynasty = "Nabeshima"
+		birth_date = 1664.5.14
+		death_date = 1730.5.4
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1707.1.5 = {
+	monarch = {
+		name = "Yoshishige" #1664.5.14-1730.5.4
+		dynasty = "Nabeshima"	
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SHN
+		dynasty = "Kamishiro"
+		birth_date = 1665.1.1
+		death_date = 1725.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Muneshige"
+		monarch_name = "Muneshige"
+		dynasty = "Nabeshima"
+		birth_date = 1687.2.3
+		death_date = 1755.1.7
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1730.5.4 = {
+	monarch = {
+		name = "Muneshige" #1687.2.3-1755.1.7
+		dynasty = "Nabeshima"	
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SHN
+		name = "Sadahime"
+		dynasty = "Kuze"
+		birth_date = 1690.1.1
+		death_date = 1750.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Munenori"
+		monarch_name = "Munenori"
+		dynasty = "Nabeshima"
+		birth_date = 1718.5.19
+		death_date = 1780.3.7
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1755.1.7 = {
+	monarch = {
+		name = "Munenori" #1718.5.19-1780.3.7
+		dynasty = "Nabeshima"	
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SHN
+		name = "Tsunahime"
+		dynasty = "Nakanoin"
+		birth_date = 1720.1.1
+		death_date = 1780.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shigemochi"
+		monarch_name = "Shigemochi"
+		dynasty = "Nabeshima"
+		birth_date = 1733.8.27
+		death_date = 1770.8.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1760.1.1 = {
+	monarch = {
+		name = "Shigemochi" #1718.5.19-1770.8.1
+		dynasty = "Nabeshima"	
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Atsuko"
+		dynasty = "Tokugawa"
+		birth_date = 1720.1.1
+		death_date = 1780.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1770.8.1 = {
+	monarch = {
+		name = "Harushige" #1745.8.30-1805.2.9
+		dynasty = "Nabeshima"	
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SHN
+		name = "Tohime"
+		dynasty = "Nakanoin"
+		birth_date = 1750.1.1
+		death_date = 1810.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1780.10.20 = {
+	heir = {
+		name = "Narinao"
+		monarch_name = "Narinao"
+		dynasty = "Nabeshima"
+		birth_date = 1780.10.20
+		death_date = 1839.3.13
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1805.2.9 = {
+	monarch = {
+		name = "Narinao" #1780.10.20-1839.3.13
+		dynasty = "Nabeshima"	
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Sachi"
+		dynasty = "Ikeda"
+		birth_date = 1780.1.1
+		death_date = 1840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1815.1.16 = {
+	heir = {
+		name = "Naomasa"
+		monarch_name = "Naomasa"
+		dynasty = "Nabeshima"
+		birth_date = 1815.1.16
+		death_date = 1871.3.8
+		claim = 90
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}
+
+1830.2.7 = {
+	monarch = {
+		name = "Naomasa"
+		dynasty = "Nabeshima"	
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Morihime"
+		dynasty = "Tokugawa"
+		birth_date = 1811.1.1
+		death_date = 1846.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1861.11.20 = {
+	monarch = {
+		name = "Naohiro"
+		dynasty = "Nabeshima"	
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	queen = {
+		country_of_origin = SHN
+		name = "Taneko"
+		dynasty = "Umeki"
+		birth_date = 1850.1.1
+		death_date = 1880.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

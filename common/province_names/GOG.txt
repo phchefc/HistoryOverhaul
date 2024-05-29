@@ -1,0 +1,27 @@
+732 = "Biyeol"
+734 = "Bugwon"		#West Gangwon
+735 = "Namgyeong"		#Hanseong
+736 = "Horo"
+737 = "Geumma"
+1013 = "Ungcheon"
+4229 = "Sabeol"
+1845 = "Pyeongyang"
+2694 = "Haseo"
+4227 = "Daeya"
+2744 = "Anpyeong"
+2743 = "Namhae"
+2742 = "Chaek"
+2741 = "Tamna"				#Jeju
+2745 = "Saro"
+4228 = "Domu"
+4229 = "Sabeol"
+4230 = "Mosu"			#Suwon
+4231 = "Paeseo"
+4232 = "Amnok"
+
+# Manchuria
+730 = "Dongmo"
+2110 = "Shin"
+4201 = "Gungnae"
+
+# EH version

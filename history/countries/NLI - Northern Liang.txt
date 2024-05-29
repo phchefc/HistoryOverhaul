@@ -1,0 +1,152 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xibei
+capital = 708
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# Northern Liang
+
+397.1.1 = {
+	monarch = {
+		name = "Ye"
+		dynasty = "Duan"
+		birth_date = 365.1.1
+		culture = mongol
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+# Coup
+
+401.1.1 = {
+	monarch = {
+		name = "Mengxun" #Taizu
+		dynasty = "Juqu"
+		birth_date = 368.1.1
+		culture = mongol
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = LNN
+		dynasty = "Meng"
+		birth_date = 370.1.1
+		death_date = 430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Mujian"
+		monarch_name = "Ai"
+		dynasty = "Juqu"
+		birth_date = 401.1.1
+		death_date = 442.1.1
+		culture = mongol
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+421.1.1 = { government_rank = 2 }
+
+433.1.1 = {
+	monarch = {
+		name = "Mujian" #Ai
+		dynasty = "Juqu"
+		culture = mongol
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LNW
+		name = "Jingshou"
+		dynasty = "Li"
+		birth_date = 400.1.1
+		death_date = 437.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+437.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		name = "Wuwei"
+		dynasty = "Tuoba"
+		birth_date = 410.1.1
+		death_date = 470.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+439.1.1 = { capital = 707 }
+
+# Northern Liang (Gaochang)
+
+442.1.1 = {
+	capital = 2884
+	monarch = {
+		name = "Wuhui"
+		dynasty = "Juqu"
+		birth_date = 410.1.1
+		culture = mongol
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+442.1.1 = {
+	heir = {
+		name = "Anzhou"
+		monarch_name = "Anzhou"
+		dynasty = "Juqu"
+		birth_date = 415.1.1
+		death_date = 460.1.1
+		culture = mongol
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+444.1.1 = {
+	monarch = {
+		name = "Anzhou"
+		dynasty = "Juqu"
+		culture = mongol
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

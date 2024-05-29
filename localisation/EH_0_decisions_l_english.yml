@@ -1,0 +1,78 @@
+﻿l_english:
+ #### Cheats ####
+ cheat_mod_title:0 "Choose cheat types"
+ cheat_mod_desc:0 "This decision allows you to decide the change of your plays."
+ 
+ #### Chinese decisions ####
+ restore_han_dynasty_shu_title:0 "Restore Han dynasty"
+ restore_han_dynasty_shu_desc:0 "I hope that Your Majesty will be close to them and will place your faith in them. In this way, the Han dynasty will be revived very soon."
+ restore_han_dynasty_title:0 "Restore Han dynasty"
+ restore_han_dynasty_desc:0 "I hope that Your Majesty will be close to them and will place your faith in them. In this way, the Han dynasty will be revived very soon."
+ form_china_nationalist_title:0 "Form Nationalist China"
+ form_china_nationalist_desc:0 "For centuries the Chinese countries has been named after to the ruling dynasty. Now that there is no ruling dynasty anymore, it's time to get rid of this outdated system and call our nation simply China."
+ form_china_prc_title:0 "Form Communist China"
+ form_china_prc_desc:0 "For centuries the Chinese countries has been named after to the ruling dynasty. Now that there is no ruling dynasty anymore, it's time to get rid of this outdated system and call our nation simply China."
+ restore_mandate_title:0 "Restore Mandate of Heaven"
+ restore_mandate_desc:0 "Restore Mandate of Heaven"
+ move_capital_to_beijing_title:0 "Move capital to Beijing"
+ move_capital_to_beijing_desc:0 "Our empire is powerful, but only by controlling China can we become the strongest empire in the world. We should conquer the important cities of northern China and establish an imperial dynasty in order to solidify our claim on the Mandate of Heaven and the rest of China."
+ 
+ #### Japanese decisions ####
+ feudal_japanese_nation_title:0 "Restore Imperial authorities"
+ feudal_japanese_nation_desc:0 "Emperor Kammu reigned from 781 to 806, and it was during his reign that Japanese imperial power reached its peak."
+
+ #### Korean decisions ####
+ united_korea_nation_title:0 "United Korea nation"
+ united_korea_nation_desc:0 "After World War II and beginning in the Cold War, Korea was divided into two countries along the 38th parallel. In 1950, North Korea invaded the South, beginning the Korean War, which ended in stalemate in 1953. Since the end of the Korean War, reunification has become more of a challenge as the two countries have grown to be increasingly divergent at a steady pace."
+ 
+ #### Western World ####
+ macedonian_nation_title:0 "Restore Alexander's Empire"
+ macedonian_nation_desc:0 "Alexander the Great was a king of the ancient Greek kingdom of Macedon. He succeeded his father Philip II to the throne in 336 BC at the age of 20, and spent most of his ruling years conducting a lengthy military campaign throughout Western Asia and Egypt. By the age of thirty, he had created one of the largest empires in history, stretching from Greece to northwestern India. He was undefeated in battle and is widely considered to be one of history's greatest and most successful military commanders. With his death marking the start of the Hellenistic period, Alexander's legacy includes the cultural diffusion and syncretism that his conquests engendered, such as Greco-Buddhism and Hellenistic Judaism."
+ 
+ #### Culture ####
+ french_culture_title:0 "French culture"
+ french_culture_desc:0 "Restore French culture."
+ english_culture_title:0 "English culture"
+ english_culture_desc:0 "Restore English culture."
+ german_culture_title:0 "German culture"
+ german_culture_desc:0 "Restore German culture."
+ italian_culture_title:0 "Italian culture"
+ italian_culture_desc:0 "Restore Italian culture."
+ spanish_culture_title:0 "Spanish culture"
+ spanish_culture_desc:0 "Restore Spanish culture."
+ russian_culture_title:0 "Russian culture"
+ russian_culture_desc:0 "Restore Russian culture."
+ expulsion_of_germans_title:0 "Flight and expulsion of Germans"
+ expulsion_of_germans_desc:0 "During the later stages of World War II and the post-war period, Germans and Volksdeutsche fled and were expelled from various Eastern and Central European countries."
+ european_culture_title:0 "European culture"
+ european_culture_desc:0 "Restore European culture."
+ siberian_culture_title:0 "Siberian culture"
+ siberian_culture_desc:0 "Restore Siberian culture."
+ arabic_culture_title:0 "Arabic culture"
+ arabic_culture_desc:0 "Restore Arabic culture."
+ turkish_culture_title:0 "Turkish culture"
+ turkish_culture_desc:0 "Restore Turkish culture."
+ anglo_american_culture_title:0 "Anglo American culture"
+ anglo_american_culture_desc:0 "Restore Anglo American culture."
+ latin_american_culture_title:0 "Latin American culture"
+ latin_american_culture_desc:0 "Restore Latin American culture."
+ modern_american_culture_title:0 "Modern American culture"
+ modern_american_culture_desc:0 "Restore Modern American culture."
+ han_chinese_culture_title:0 "Han Chinese culture"
+ han_chinese_culture_desc:0 "Restore Han Chinese culture."
+ han_chinese_culture_qng_title:0 "Han Chinese culture"
+ han_chinese_culture_qng_desc:0 "Restore Han Chinese culture."
+ modern_chinese_culture_title:0 "Modern Chinese culture"
+ modern_chinese_culture_desc:0 "Restore Modern Chinese culture."
+ mongolian_culture_title:0 "Mongolian culture"
+ mongolian_culture_desc:0 "Restore Mongolian culture."
+ modern_mongolian_culture_title:0 "Mongolian culture"
+ modern_mongolian_culture_desc:0 "Restore Mongolian culture."
+
+ #### Sports ####
+ held_ancient_sports_title:0 "Ancient Sports Events"
+ held_ancient_sports_desc:0 "Held sports events!"
+ held_modern_sports_title:0 "Sports Events"
+ held_modern_sports_desc:0 "Held sports events!"
+ 
+ # EH version

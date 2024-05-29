@@ -1,0 +1,522 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = bai
+add_accepted_culture = yi
+religion = mahayana
+technology_group = early_chinese
+capital = 661 # Dali
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Former Dail
+
+937.1.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 3
+	monarch = {
+		name = "Siping" #Taizu
+		dynasty = "Duan"
+		birth_date = 893.1.1
+		adm = 4
+		dip = 3
+		mil = 6
+		leader = {	name = "Duan Siping"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 1  death_date = 944.1.1 }
+	}
+}
+
+937.1.1 = {
+	heir = {
+		name = "Siying"
+		monarch_name = "Siying"
+		dynasty = "Duan"
+		birth_date = 910.1.1
+		death_date = 945.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+944.1.1 = {
+	monarch = {
+		name = "Siying"
+		dynasty = "Duan"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+945.1.1 = {
+	monarch = {
+		name = "Siliang" #Taizong
+		dynasty = "Duan"
+		birth_date = 895.1.1
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+945.1.1 = {
+	heir = {
+		name = "Sicong"
+		monarch_name = "Sicong"
+		dynasty = "Duan"
+		birth_date = 910.1.1
+		death_date = 968.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+952.1.1 = {
+	monarch = {
+		name = "Sicong"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+952.1.1 = {
+	heir = {
+		name = "Sushun"
+		monarch_name = "Sushun"
+		dynasty = "Duan"
+		birth_date = 940.1.1
+		death_date = 985.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+968.1.1 = {
+	monarch = {
+		name = "Sushun"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+968.1.1 = {
+	heir = {
+		name = "Suying"
+		monarch_name = "Suying"
+		dynasty = "Duan"
+		birth_date = 968.1.1
+		death_date = 1009.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+985.1.1 = {
+	monarch = {
+		name = "Suying"
+		dynasty = "Duan"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+985.1.1 = {
+	heir = {
+		name = "Sulian"
+		monarch_name = "Sulian"
+		dynasty = "Duan"
+		birth_date = 985.1.1
+		death_date = 1022.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1009.1.1 = {
+	monarch = {
+		name = "Sulian"
+		dynasty = "Duan"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1022.1.1 = {
+	monarch = {
+		name = "Sulong"
+		dynasty = "Duan"
+		birth_date = 1000.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1026.1.1 = {
+	monarch = {
+		name = "Suzhen"
+		dynasty = "Duan"
+		birth_date = 1000.1.1
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1026.1.1 = {
+	heir = {
+		name = "Suxing"
+		monarch_name = "Suxing"
+		dynasty = "Duan"
+		birth_date = 1020.1.1
+		death_date = 1044.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1041.1.1 = {
+	monarch = {
+		name = "Suxing"
+		dynasty = "Duan"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1041.1.1 = {
+	heir = {
+		name = "Silian"
+		monarch_name = "Xingzong"
+		dynasty = "Duan"
+		birth_date = 1020.1.1
+		death_date = 1075.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1044.1.1 = {
+	monarch = {
+		name = "Silian" #Xingzong
+		dynasty = "Duan"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1044.1.1 = {
+	heir = {
+		name = "Lianyi"
+		monarch_name = "Lianyi"
+		dynasty = "Duan"
+		birth_date = 1040.1.1
+		death_date = 1080.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1075.1.1 = {
+	monarch = {
+		name = "Lianyi"
+		dynasty = "Duan"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+1080.1.1 = {
+	monarch = {
+		name = "Yizhen"
+		dynasty = "Yang"
+		birth_date = 1060.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+# Coup
+
+1080.6.1 = {
+	monarch = {
+		name = "Shouhui"
+		dynasty = "Duan"
+		birth_date = 1040.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1080.6.1 = {
+	heir = {
+		name = "Zhengming"
+		monarch_name = "Zhengming"
+		dynasty = "Duan"
+		birth_date = 1060.1.1
+		death_date = 1094.1.1
+		claim = 95
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+}
+
+1081.1.1 = {
+	monarch = {
+		name = "Zhengming" 
+		dynasty = "Duan"
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+}
+
+# Da Zhong
+
+1094.1.1 = {
+	monarch = {
+		name = "Shengtai" 
+		dynasty = "Gao"
+		birth_date = 1050.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+# Later Dail
+
+1096.1.1 = {
+	monarch = {
+		name = "Zhengchun" #Zhongzong
+		dynasty = "Duan"
+		birth_date = 1060.1.1
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+1096.1.1 = {
+	heir = {
+		name = "Yu"
+		monarch_name = "Xianzong"
+		dynasty = "Duan"
+		birth_date = 1090.1.1
+		death_date = 1147.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1108.1.1 = {
+	monarch = {
+		name = "Yu" #Xianzong
+		dynasty = "Duan"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1108.1.1 = {
+	heir = {
+		name = "Zhengxing"
+		monarch_name = "Xuanzong"
+		dynasty = "Duan"
+		birth_date = 1108.1.1
+		death_date = 1171.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1147.1.1 = {
+	monarch = {
+		name = "Zhengxing"
+		dynasty = "Duan"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1147.1.1 = {
+	heir = {
+		name = "Zhixing"
+		monarch_name = "Xuanzong"
+		dynasty = "Duan"
+		birth_date = 1147.1.1
+		death_date = 1200.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1171.1.1 = {
+	monarch = {
+		name = "Zhixing" #Xuanzong
+		dynasty = "Duan"
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1171.1.1 = {
+	heir = {
+		name = "Zhilian"
+		monarch_name = "Yingzong"
+		dynasty = "Duan"
+		birth_date = 1160.1.1
+		death_date = 1204.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1200.1.1 = {
+	monarch = {
+		name = "Zhilian" #Yingzong
+		dynasty = "Duan"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1200.1.1 = {
+	heir = {
+		name = "Zhixiang"
+		monarch_name = "Shenzong"
+		dynasty = "Duan"
+		birth_date = 1165.1.1
+		death_date = 1238.1.1
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 1
+	}
+}
+
+1204.1.1 = {
+	monarch = {
+		name = "Zhixiang" #Shenzong
+		dynasty = "Duan"
+		adm = 4
+		dip = 2
+		mil = 1
+	}
+}
+
+1204.1.1 = {
+	heir = {
+		name = "Ziangxing"
+		monarch_name = "Ziangxing"
+		dynasty = "Duan"
+		birth_date = 1195.1.1
+		death_date = 1251.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+}
+
+1238.1.1 = {
+	monarch = {
+		name = "Ziangxing"
+		dynasty = "Duan"
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+}
+
+1238.1.1 = {
+	heir = {
+		name = "Xingzhi"
+		monarch_name = "Xingzhi"
+		dynasty = "Duan"
+		birth_date = 1220.1.1
+		death_date = 1260.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+1251.1.1 = {
+	monarch = {
+		name = "Xingzhi"
+		dynasty = "Duan"
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Later Dail
+
+1368.1.23 = {
+	government_rank = 1
+	monarch = {
+		name = "Gong"
+		dynasty = "Duan"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

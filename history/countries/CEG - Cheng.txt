@@ -1,0 +1,188 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = sichuanese
+capital = 679	# Chengdu
+
+# End of the Western Han dynasty (Chengjia)
+
+23.10.5 = {
+	government_rank = 3
+	monarch = {
+		name = "Shu"
+		dynasty = "Gongsun"
+		adm = 1
+		dip = 0
+		mil = 3
+		leader = {	name = "Gongsun Shu"     	type = general	fire = 1	shock = 2	manuever = 0	siege = 0  death_date = 36.12.25 }
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Jin dynasty (Chengdu)
+
+289.1.1 = {
+	government_rank = 2
+	capital = 679
+	monarch = {
+		name = "Ying" # Prince of Chengdu
+		dynasty = "Sima"
+		birth_date = 279.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+		leader = {	name = "Sima Ying"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 306.1.1 } # Not an actual death date
+	}
+	queen = {
+		country_of_origin = CEG
+		dynasty = "Yue"
+		birth_date = 280.1.1
+		death_date = 340.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Cheng Han
+
+304.10.1 = {
+	monarch = {
+		name = "Xiong"
+		dynasty = "Li"
+		birth_date = 274.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Li Xiong"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 1  death_date = 334.5.1 }
+	}
+	queen = {
+		country_of_origin = CEG
+		dynasty = "Ren"
+		birth_date = 280.1.1
+		death_date = 340.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ban"
+		monarch_name = "Ban"
+		dynasty = "Li"
+		birth_date = 288.1.1
+		death_date = 334.12.5
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+306.1.1 = { government_rank = 3 }
+
+334.5.1 = {
+	monarch = {
+		name = "Ban"
+		dynasty = "Li"
+		birth_date = 288.1.1
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CEG
+		dynasty = "Yan"
+		birth_date = 290.1.1
+		death_date = 350.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qi"
+		monarch_name = "Qi"
+		dynasty = "Li"
+		birth_date = 314.1.1
+		death_date = 338.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+334.12.5 = {
+	monarch = {
+		name = "Qi"
+		dynasty = "Li"
+		birth_date = 314.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+338.1.1 = {
+	monarch = {
+		name = "Shou"
+		dynasty = "Li"
+		birth_date = 300.1.1
+		adm = 2
+		dip = 0
+		mil = 4
+	}
+	queen = {
+		country_of_origin = CEG
+		dynasty = "Yan"
+		birth_date = 300.1.1
+		death_date = 360.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shi"
+		monarch_name = "Shi"
+		dynasty = "Li"
+		birth_date = 320.1.1
+		death_date = 361.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+343.1.1 = {
+	monarch = {
+		name = "Shi"
+		dynasty = "Li"
+		birth_date = 320.1.1
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = CEG
+		dynasty = "Li"
+		birth_date = 320.1.1
+		death_date = 380.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }

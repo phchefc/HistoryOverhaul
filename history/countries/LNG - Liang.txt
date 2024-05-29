@@ -1,0 +1,293 @@
+government = monarchy
+add_government_reform = celestial_empire
+government_rank = 3
+technology_group = early_chinese
+religion = confucianism
+primary_culture = wu
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+add_accepted_culture = vietnamese
+culture_group_union = east_asian
+capital = 1821 #Jiankang
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# Southern Liang dynasty
+
+502.5.1 = {
+	monarch = {
+		name = "Yan" #Wu
+		dynasty = "Xiao"
+		birth_date = 464.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = LNG
+		name = "Lingguang"
+		dynasty = "Ding"
+		birth_date = 484.1.1
+		death_date = 526.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+503.12.2 = {
+	heir = {
+		name = "Gang"
+		monarch_name = "Jianwen"
+		dynasty = "Xiao"
+		birth_date = 503.12.2
+		death_date = 551.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+526.1.1 = {
+	queen = {
+		country_of_origin = LNG
+		name = "Lingying"
+		dynasty = "Ruan"
+		birth_date = 477.1.1
+		death_date = 542.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+549.9.23 = {
+	monarch = {
+		name = "Gang" #Jianwen
+		dynasty = "Xiao"
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+551.10.23 = {
+	monarch = {
+		name = "Dong"
+		dynasty = "Xiao"
+		birth_date = 520.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LNG
+		dynasty = "Zhang"
+		birth_date = 520.1.1
+		death_date = 552.12.23
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+551.12.1 = { capital = 2172 }
+
+552.12.13 = {
+	monarch = {
+		name = "Yi" #Yuan
+		dynasty = "Xiao"
+		birth_date = 508.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LNG
+		name = "Wangfeng"
+		dynasty = "Xia"
+		birth_date = 510.1.1
+		death_date = 570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yuanming"
+		monarch_name = "Min"
+		dynasty = "Xiao"
+		birth_date = 500.1.1
+		death_date = 556.6.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+555.1.1 = {
+	capital = 1821
+	monarch = {
+		name = "Yuanming" #Min
+		dynasty = "Xiao"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+555.11.1 = {
+	monarch = {
+		name = "Fangzhi" #Jing
+		dynasty = "Xiao"
+		birth_date = 543.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LNG
+		dynasty = "Wang"
+		birth_date = 545.1.1
+		death_date = 558.5.5
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+600.1.1 = {
+	remove_accepted_culture = yi
+	remove_accepted_culture = zhuang
+	remove_accepted_culture = vietnamese
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Later Liang dynasty
+
+#883.5.3 = {
+#	add_country_flag = marionett_master
+#}
+
+883.5.3 = {
+	add_government_reform = chinese_warlord
+	government_rank = 1
+	primary_culture = zhongyuan
+	capital = 688
+	monarch = {
+		name = "Wen" #Taizu
+		dynasty = "Zhu"
+		birth_date = 852.10.21
+		adm = 1
+		dip = 2
+		mil = 4
+		leader = {	name = "Zhu Wen"     	type = general	fire = 4	shock = 3	manuever = 0	siege = 1  death_date = 912.7.18 }
+	}
+	queen = {
+		country_of_origin = LNG
+		dynasty = "Zhang"
+		birth_date = 855.1.1
+		death_date = 904.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}	
+
+888.1.1 = {
+	heir = {
+		name = "Yougui"
+		monarch_name = "Yougui"
+		dynasty = "Zhu"
+		birth_date = 888.1.1
+		death_date = 913.3.27
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+#907.6.1 = {
+#	clr_country_flag = marionett_master
+#}
+
+907.6.1 = {
+	add_government_reform = celestial_empire 
+	government_rank = 3 
+	capital = 2492 
+} #Luoyang
+
+912.7.18 = {
+	monarch = {
+		name = "Yougui"
+		dynasty = "Zhu"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = LNG
+		dynasty = "Zhang"
+		birth_date = 890.1.1
+		death_date = 913.3.27
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Zhen"
+		monarch_name = "Zhen"
+		dynasty = "Zhu"
+		birth_date = 888.10.20
+		death_date = 923.9.18
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+913.1.1 = { capital = 688 } #Kaifeng
+
+913.3.27 = {
+	monarch = {
+		name = "Zhen"
+		dynasty = "Zhu"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LNG
+		dynasty = "Zhang"
+		birth_date = 890.1.1
+		death_date = 915.11.4
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+923.11.19 = { add_government_reform = chinese_warlord }
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

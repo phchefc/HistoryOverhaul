@@ -1,0 +1,49 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xibei
+capital = 4198
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Qi)
+
+887.1.1 = {
+	monarch = {
+		name = "Maozhen"
+		dynasty = "Li"
+		birth_date = 856.1.1
+		adm = 0
+		dip = 2
+		mil = 3
+		leader = {	name = "Li Maozhen"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 924.5.17 }
+	}
+}	
+
+907.6.1 = {
+	queen = {
+		country_of_origin = QI2
+		name = "Xiande"
+		dynasty = "Liu"
+		birth_date = 877.1.1
+		death_date = 943.11.8
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

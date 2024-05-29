@@ -1,0 +1,96 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = korean
+religion = confucianism
+technology_group = early_chinese
+historical_rival = SKO
+historical_rival = USA
+historical_friend = SOV
+historical_friend = CHN
+capital = 1845	# Pyongyang
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1910.1.1 = { religion = secularism }
+1920.1.1 = { technology_group = asian }
+
+1925.4.27 = { 
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = communist_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = communist_government
+}
+
+1945.8.15 = {
+	monarch = {
+		name = "(Soviet Civil Administration)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1946.2.8 = {
+	monarch = {
+		name = "(Provisional People's Committee)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1948.9.9 = {
+	monarch = {
+		name = "Kim Il-sung"
+		birth_date = 1912.4.15
+		adm = 2
+		dip = 2
+		mil = 4
+		religion = irreligious
+	}
+}
+
+1950.6.25 = { leader = {	name = "Kim Chaek"     	type = general	fire = 1	shock = 1	manuever = 4	siege = 1  death_date = 1951.1.31 } }
+1950.10.9 = { capital = 4358 }
+1950.12.6 = { capital = 1845 }
+1972.12.28 = { set_legacy_government = communist_government }
+
+1994.7.8 = {
+	monarch = {
+		name = "Kim Jong-il"
+		birth_date = 1941.2.16
+		adm = 0
+		dip = 2
+		mil = 5
+		religion = irreligious
+	}
+}
+
+2011.12.29 = {
+	monarch = {
+		name = "Kim Jong-un"
+		birth_date = 1984.1.8
+		adm = 1
+		dip = 3
+		mil = 3
+		religion = irreligious
+	}
+}
+
+# EH version

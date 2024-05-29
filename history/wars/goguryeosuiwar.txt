@@ -1,0 +1,77 @@
+name = "Goguryeo-Sui War"
+
+war_goal = {
+	type = take_capital_force_tributary
+	casus_belli = cb_force_tributary
+	tag = GOG
+}
+
+# First invasion
+
+598.6.1 = {
+	add_attacker = SUI
+	add_defender = GOG
+	add_defender = SMM
+}
+
+# Withdraw
+598.9.1 = {
+	rem_attacker = SUI
+	rem_defender = GOG
+	rem_defender = SMM
+}
+
+# Second invasion
+
+612.3.15 = {
+	add_attacker = SUI
+	add_defender = GOG
+}
+
+612.6.1 = {
+	battle = {
+		name = "Yodong"
+		location = 726
+		attacker = {
+			commander = "Yang Guang"
+			infantry = 200000
+			losses = 90	# percent
+			country = SUI
+		}
+		defender = {
+			commander = "Eulji Mundeok"
+			infantry = 100000
+			losses = 10	# percent
+			country = GOG
+		}
+		result = no
+	}
+}
+
+612.9.1 = {
+	battle = {
+		name = "Salsu"
+		location = 2744
+		attacker = {
+			commander = "Yuwen Shu"
+			infantry = 305000
+			losses = 95	# percent
+			country = SUI
+		}
+		defender = {
+			commander = "Eulji Mundeok"
+			cavalry = 50000
+			losses = 10	# percent
+			country = GOG
+		}
+		result = no
+	}
+}
+
+# Truce
+614.10.1 = {
+	rem_attacker = SUI
+	rem_defender = GOG
+}
+
+# EH version

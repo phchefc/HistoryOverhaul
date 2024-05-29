@@ -1,0 +1,307 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+mercantilism = 0.2
+primary_culture = tibetan
+religion = tibetan_bon
+technology_group = early_chinese
+capital = 677 # Lhasa
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+629.1.1 = { religion = vajrayana }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1399.1.1 = { decision = monastic_education }
+
+# Rinpungpa dynasty
+
+1435.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Norzang"
+		dynasty = "Rinpungpa"
+		birth_date = 1403.1.1
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+1445.1.1 = {
+	heir = {
+		name = "Kunzang"
+		monarch_name = "Kunzang"
+		dynasty = "Rinpungpa"
+		birth_date = 1445.1.1
+		death_date = 1479.1.1
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+1466.1.1 = {
+	monarch = {
+		name = "Kunzang"
+		dynasty = "Rinpungpa"
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+1466.1.1 = {
+	heir = {
+		name = "Donyo Dorje"
+		monarch_name = "Donyo Dorje"
+		dynasty = "Rinpungpa"
+		birth_date = 1463.1.1
+		death_date = 1512.3.23
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+1479.1.1 = {
+	monarch = {
+		name = "Donyo Dorje"
+		dynasty = "Rinpungpa"
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+# Coup
+
+1512.3.23 = {
+	monarch = {
+		name = "Ngawang Namgyal"
+		dynasty = "Rinpungpa"
+		birth_date = 1490.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1525.1.1 = {
+	heir = {
+		name = "Dondup Tseten Dorje"
+		monarch_name = "Dondup Tseten Dorje"
+		dynasty = "Rinpungpa"
+		birth_date = 1525.1.1
+		death_date = 1620.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1544.1.1 = {
+	monarch = {
+		name = "Dondup Tseten Dorje"
+		dynasty = "Rinpungpa"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1544.1.1 = {
+	heir = {
+		name = "Ngawang Jigme Drakpa"
+		monarch_name = "Ngawang Jigme Drakpa"
+		dynasty = "Rinpungpa"
+		birth_date = 1530.1.1
+		death_date = 1597.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1557.1.1 = {
+	monarch = {
+		name = "Ngawang Jigme Drakpa"
+		dynasty = "Rinpungpa"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+# Tsangpa dynasty
+
+1565.1.1 = {
+	monarch = {
+		name = "Tseten"
+		dynasty = "Tsangpa"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1565.1.1 = {
+	heir = {
+		name = "Lhawang Dorje"
+		monarch_name = "Lhawang Dorje"
+		dynasty = "Tsangpa"
+		birth_date = 1560.1.1
+		death_date = 1599.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1582.1.1 = {
+	monarch = {
+		name = "Lhawang Dorje"
+		dynasty = "Tsangpa"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1582.1.1 = {
+	heir = {
+		name = "Tensung"
+		monarch_name = "Tensung"
+		dynasty = "Tsangpa"
+		birth_date = 1565.1.1
+		death_date = 1611.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+
+1599.1.1 = {
+	monarch = {
+		name = "Tensung"
+		dynasty = "Tsangpa"
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+
+1599.1.1 = {
+	heir = {
+		name = "Phuntsok Namgyal"
+		monarch_name = "Phuntsok Namgyal"
+		dynasty = "Tsangpa"
+		birth_date = 1580.1.1
+		death_date = 1620.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1611.1.1 = {
+	monarch = {
+		name = "Phuntsok Namgyal"
+		dynasty = "Tsangpa"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1611.1.1 = {
+	heir = {
+		name = "Tenkyong"
+		monarch_name = "Tenkyong"
+		dynasty = "Tsangpa"
+		birth_date = 1600.1.1
+		death_date = 1642.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1620.1.1 = {
+	monarch = {
+		name = "Tenkyong"
+		dynasty = "Tsangpa"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+# Dominations of Khoshuud and Zunghar (1642-1720)
+
+# Gashi and Pholha clans
+
+1721.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Khangchenne"
+		dynasty = "Gashi"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1727.8.5 = {
+	monarch = {
+		name = "Sonam Tobgye"
+		dynasty = "Pholha"
+		birth_date = 1689.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1727.8.5 = {
+	heir = {
+		name = "Gyurme Namgyal"
+		monarch_name = "Gyurme Namgyal"
+		dynasty = "Pholha"
+		birth_date = 1710.1.1
+		death_date = 1750.11.11
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1747.3.12 = {
+	monarch = {
+		name = "Gyurme Namgyal"
+		dynasty = "Pholha"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Rule ceded to Dalai Lama

@@ -1,0 +1,64 @@
+name = "Silla-Tang War"
+
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 736
+}
+
+670.11.1 = {
+	add_attacker = TNG
+	add_attacker = SMM
+	add_defender = SLL
+}
+
+675.9.29 = {
+	battle = {
+		name = "Maeso"
+		location = 735
+		attacker = {
+			commander = "Li Jinxing"
+			infantry = 30000
+			cavalry = 10000
+			losses = 70	# percent
+			country = TNG
+		}
+		defender = {
+			commander = "Kim Wonsul"
+			infantry = 30000
+			losses = 10	# percent
+			country = SLL
+		}
+		result = no
+	}
+}
+
+676.10.1 = {
+	battle = {
+		name = "Gibeolpo"
+		location = 4234
+		attacker = {
+			commander = "Xue Rengui"
+			heavy_ship = 10
+			light_ship = 20
+			losses = 80	# percent
+			country = TNG
+		}
+		defender = {
+			commander = "Sideuk"
+			heavy_ship = 10
+			light_ship = 10
+			losses = 10	# percent
+			country = SLL
+		}
+		result = no
+	}
+}
+
+676.11.1 = {
+	rem_attacker = TNG
+	rem_attacker = SMM
+	rem_defender = SLL
+}
+
+# EH version

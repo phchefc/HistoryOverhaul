@@ -1,0 +1,394 @@
+government = tribal
+add_government_reform = tribal_kingdom
+mercantilism = 0.1
+technology_group = early_chinese
+religion = mahayana
+primary_culture = tocharian
+capital = 4207 # Turfan
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+400.1.1 = { government = monarchy add_government_reform = autocracy_reform }
+
+# Gaochang
+
+460.1.1 = {
+	primary_culture = xibei
+	add_accepted_culture = tocharian
+ 	monarch = {
+		name = "Bozhou"
+		dynasty = "Kan"
+		birth_date = 430.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+460.1.1 = {
+	heir = {
+		name = "Yicheng"
+		monarch_name = "Yicheng"
+		dynasty = "Kan"
+		birth_date = 450.1.1
+		death_date = 478.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+477.1.1 = {
+ 	monarch = {
+		name = "Yicheng"
+		dynasty = "Kan"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+477.1.1 = {
+	heir = {
+		name = "Shougui"
+		monarch_name = "Shougui"
+		dynasty = "Kan"
+		birth_date = 455.1.1
+		death_date = 491.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+478.1.1 = {
+ 	monarch = {
+		name = "Shougui"
+		dynasty = "Kan"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+491.1.1 = {
+ 	monarch = {
+		name = "Mengming"
+		dynasty = "Zhang"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+496.1.1 = {
+ 	monarch = {
+		name = "Ru"
+		dynasty = "Ma"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+501.1.1 = {
+ 	monarch = {
+		name = "Jia"
+		dynasty = "Qu"
+		birth_date = 470.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+501.1.1 = {
+	heir = {
+		name = "Guang"
+		monarch_name = "Guang"
+		dynasty = "Qu"
+		birth_date = 501.1.1
+		death_date = 530.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+525.1.1 = {
+ 	monarch = {
+		name = "Guang"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+525.1.1 = {
+	heir = {
+		name = "Jian"
+		monarch_name = "Jian"
+		dynasty = "Qu"
+		birth_date = 505.1.1
+		death_date = 549.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+530.1.1 = {
+ 	monarch = {
+		name = "Jian"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+530.1.1 = {
+	heir = {
+		name = "Xuanxi"
+		monarch_name = "Xuanxi"
+		dynasty = "Qu"
+		birth_date = 530.1.1
+		death_date = 551.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+549.1.1 = {
+ 	monarch = {
+		name = "Xuanxi"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+549.1.1 = {
+	heir = {
+		name = "Heping"
+		monarch_name = "Heping"
+		dynasty = "Qu"
+		birth_date = 532.1.1
+		death_date = 555.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+551.1.1 = {
+ 	monarch = {
+		name = "Heping"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+551.1.1 = {
+	heir = {
+		name = "Baomao"
+		monarch_name = "Baomao"
+		dynasty = "Qu"
+		birth_date = 535.1.1
+		death_date = 560.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+555.1.1 = {
+ 	monarch = {
+		name = "Baomao"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+555.1.1 = {
+	heir = {
+		name = "Qiangu"
+		monarch_name = "Qiangu"
+		dynasty = "Qu"
+		birth_date = 550.1.1
+		death_date = 601.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+560.1.1 = {
+ 	monarch = {
+		name = "Qiangu"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+580.1.1 = {
+	heir = {
+		name = "Boya"
+		monarch_name = "Boya"
+		dynasty = "Qu"
+		birth_date = 580.1.1
+		death_date = 613.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+601.1.1 = {
+ 	monarch = {
+		name = "Boya"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+585.1.1 = {
+	heir = {
+		name = "Yihe"
+		monarch_name = "Yihe"
+		dynasty = "Qu"
+		birth_date = 585.1.1
+		death_date = 619.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+613.1.1 = {
+ 	monarch = {
+		name = "Yihe"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+613.1.1 = {
+	heir = {
+		name = "Boya"
+		monarch_name = "Boya"
+		dynasty = "Qu"
+		birth_date = 590.1.1
+		death_date = 623.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+619.1.1 = {
+ 	monarch = {
+		name = "Boya"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+619.1.1 = {
+	heir = {
+		name = "Wentai"
+		monarch_name = "Wentai"
+		dynasty = "Qu"
+		birth_date = 605.1.1
+		death_date = 640.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+623.1.1 = {
+ 	monarch = {
+		name = "Wentai"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+623.1.1 = {
+	heir = {
+		name = "Zhisheng"
+		monarch_name = "Zhisheng"
+		dynasty = "Qu"
+		birth_date = 620.1.1
+		death_date = 640.6.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+640.1.1 = {
+ 	monarch = {
+		name = "Zhisheng"
+		dynasty = "Qu"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+640.6.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+

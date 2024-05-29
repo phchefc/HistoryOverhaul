@@ -1,0 +1,525 @@
+government = tribal
+add_government_reform = tribal_kingdom
+technology_group = early_chinese
+religion = mahayana
+primary_culture = saka
+capital = 2124 # Yarkand
+religious_school = hanafi_school
+
+2.1.1 = {
+	monarch = {
+		name = "Yan"
+		dynasty = "Yarkand"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+2.1.1 = {
+	heir = {
+		name = "Kang"
+		monarch_name = "Kang"
+		dynasty = "Yarkand"
+		birth_date = 2.1.1
+		death_date = 33.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+18.1.1 = {
+	monarch = {
+		name = "Kang"
+		dynasty = "Yarkand"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+18.1.1 = {
+	heir = {
+		name = "Xian"
+		monarch_name = "Xian"
+		dynasty = "Yarkand"
+		birth_date = 12.1.1
+		death_date = 86.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+33.1.1 = {
+	monarch = {
+		name = "Xian"
+		dynasty = "Yarkand"
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+50.1.1 = {
+	heir = {
+		name = "Qili"
+		monarch_name = "Qili"
+		dynasty = "Yarkand"
+		birth_date = 50.1.1
+		death_date = 100.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+86.1.1 = {
+	monarch = {
+		name = "Qili"
+		dynasty = "Yarkand"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+95.1.1 = {
+	monarch = {
+		name = "(unknown)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+400.1.1 = { government = monarchy add_government_reform = autocracy_reform }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+840.1.1 = { primary_culture = uyghur }
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Western Moghulistan Khanate (Yarkand Khanate)
+
+1462.1.1 = {
+	government = monarchy 
+	add_government_reform = iqta
+	religion = sunni
+	monarch = {
+		name = "Yunus"
+		dynasty = "Borjigin"
+		birth_date = 1416.1.1
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+1462.1.1 = {
+	heir = {
+		name = "Mahmud"
+		monarch_name = "Mahmud"
+		dynasty = "Borjigin"
+		birth_date = 1440.1.1
+		death_date = 1508.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 6
+	}
+}
+
+1487.1.1 = {
+	monarch = {
+		name = "Mahmud"
+		dynasty = "Borjigin"
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+# Annexed by Uyghurstan between 1508 and 1514
+
+1514.5.1 = {
+	monarch = {
+		name = "Said Khan"
+		dynasty = "Borjigin"
+		birth_date = 1487.1.1
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1514.5.1 = {
+	heir = {
+		name = "Abdurashid"
+		monarch_name = "Abdurashid"
+		dynasty = "Borjigin"
+		birth_date = 1510.1.1
+		death_date = 1560.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1533.7.9 = {
+	monarch = {
+		name = "Abdurashid"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1533.7.9 = {
+	heir = {
+		name = "Abdul Karim"
+		monarch_name = "Abdul Karim"
+		dynasty = "Borjigin"
+		birth_date = 1530.1.1
+		death_date = 1591.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1560.1.1 = {
+	monarch = {
+		name = "Abdul Karim"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1560.1.1 = {
+	heir = {
+		name = "Muhammad"
+		monarch_name = "Muhammad"
+		dynasty = "Borjigin"
+		birth_date = 1532.1.1
+		death_date = 1609.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1591.1.1 = {
+	monarch = {
+		name = "Muhammad"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	add_piety = 0.5
+}
+
+1591.1.1 = {
+	heir = {
+		name = "Shudja ad-Din Ahmad"
+		monarch_name = "Shudja ad-Din Ahmad"
+		dynasty = "Borjigin"
+		birth_date = 1560.1.1
+		death_date = 1618.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1610.1.1 = {
+	monarch = {
+		name = "Shudja ad-Din Ahmad"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1618.1.1 = {
+	monarch = {
+		name = "Kuraysh"
+		dynasty = "Borjigin"
+		birth_date = 1580.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+# Coup
+
+1618.1.9 = {
+	monarch = {
+		name = "Abd al-Latif"
+		dynasty = "Borjigin"
+		birth_date = 1605.1.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1618.1.9 = {
+	heir = {
+		name = "Ahmad"
+		monarch_name = "Ahmad"
+		dynasty = "Borjigin"
+		birth_date = 1611.1.1
+		death_date = 1638.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1630.1.1 = {
+	monarch = {
+		name = "Ahmad" #1st reign
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+# Coup
+
+1633.1.1 = {
+	monarch = {
+		name = "Mahmud"
+		dynasty = "Borjigin"
+		birth_date = 1614.1.1
+		adm = 2
+		dip = 0
+		mil = 2
+	}
+}
+
+# Coup
+
+1636.1.1 = {
+	monarch = {
+		name = "Ahmad" #2nd reign
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1638.1.1 = {
+	monarch = {
+		name = "Abdullah"
+		dynasty = "Borjigin"
+		birth_date = 1600.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1638.1.1 = {
+	heir = {
+		name = "Nur ad-Din"
+		monarch_name = "Nur ad-Din"
+		dynasty = "Borjigin"
+		birth_date = 1622.1.1
+		death_date = 1675.10.30
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1667.1.1 = {
+	monarch = {
+		name = "Nur ad-Din"
+		dynasty = "Borjigin"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+# Coup
+
+1668.1.1 = {
+	monarch = {
+		name = "Ismail"
+		dynasty = "Borjigin" #1st reign
+		birth_date = 1645.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+# Coup
+
+1669.1.1 = {
+	monarch = {
+		name = "Yulbars"
+		dynasty = "Borjigin"
+		birth_date = 1630.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1669.1.1 = {
+	heir = {
+		name = "Abd al Latif"
+		monarch_name = "Abd al Latif"
+		dynasty = "Borjigin"
+		birth_date = 1650.1.1
+		death_date = 1670.4.2
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1670.1.1 = {
+	monarch = {
+		name = "Abd al Latif"
+		dynasty = "Borjigin"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1670.4.2 = {
+	monarch = {
+		name = "Ismail"	#2nd reign
+		dynasty = "Borjigin"
+		birth_date = 1645.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1678.4.2 = {
+	monarch = {
+		name = "Abd ar-Rashid Khan"
+		dynasty = "Borjigin"
+		birth_date = 1630.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1680.1.1 = {
+	monarch = {
+		name = "Muhammad Imin" #1st reign
+		dynasty = "Borjigin"
+		birth_date = 1640.1.1
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+1681.1.1 = {
+	government = theocracy
+	add_government_reform = leading_clergy_reform
+	monarch = {
+		name = "Appak"
+		dynasty = "Khoja"
+		birth_date = 1626.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+# Coup
+
+1690.1.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	monarch = {
+		name = "Muhammad Imin" #2nd reign
+		dynasty = "Borjigin"
+		birth_date = 1640.1.1
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+1692.1.1 = {
+	government = theocracy
+	add_government_reform = leading_clergy_reform
+	monarch = {
+		name = "Yahiya"
+		dynasty = "Khoja"
+		birth_date = 1645.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1695.1.1 = {
+	government = monarchy
+	add_government_reform = iqta
+	monarch = {
+		name = "Hanim"
+		dynasty = "Borjigin"
+		birth_date = 1630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1695.8.1 = {
+	monarch = {
+		name = "Muhammad Mumin" #Akbash Khan
+		dynasty = "Borjigin"
+		birth_date = 1675.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

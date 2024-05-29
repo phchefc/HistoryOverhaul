@@ -1,0 +1,137 @@
+name = "Goguryeo-Tang War"
+
+war_goal = {
+	type = take_capital_force_tributary
+	casus_belli = cb_force_tributary
+	tag = GOG
+}
+
+# First invasion
+
+645.5.1 = {
+	add_attacker = TNG
+	add_defender = GOG
+	add_defender = SMM
+}
+
+645.6.23 = {
+	battle = {
+		name = "Jupil"
+		location = 4652
+		attacker = {
+			commander = "Li Shi-min"
+			infantry = 100000
+			losses = 10	# percent
+			country = TNG
+		}
+		defender = {
+			commander = "Go Yeon-su"
+			infantry = 150000
+			losses = 30	# percent
+			country = GOG
+		}
+		result = yes
+	}
+}
+
+645.8.10 = {
+	battle = {
+		name = "Ansi"
+		location = 4652
+		attacker = {
+			commander = "Li Shi-min"
+			infantry = 100000
+			losses = 70	# percent
+			country = TNG
+		}
+		defender = {
+			commander = "Yang Man-chun"
+			infantry = 10000
+			losses = 10	# percent
+			country = GOG
+		}
+		result = no
+	}
+}
+
+# Withdraw
+645.9.20 = {
+	rem_attacker = TNG
+	rem_defender = GOG
+	rem_defender = SMM
+}
+
+# Second invasion
+
+661.8.1 = {
+	add_attacker = TNG
+	add_attacker = SLL
+	add_defender = GOG
+	add_defender = SMM
+}
+
+662.1.1 = {
+	battle = {
+		name = "Sasu"
+		location = 1845
+		attacker = {
+			commander = "Pang Xiaotai"
+			infantry = 20000
+			losses = 90	# percent
+			country = TNG
+		}
+		defender = {
+			commander = "Yeon Gaesomun"
+			cavalry = 10000
+			losses = 10	# percent
+			country = GOG
+		}
+		result = no
+	}
+}
+
+# The alliance troops withdraw
+662.2.1 = {
+	rem_attacker = TNG
+	rem_attacker = SLL
+	rem_defender = GOG
+	rem_defender = SMM
+}
+
+# Third invasion
+
+667.3.1 = {
+	add_attacker = TNG
+	add_attacker = SLL
+	add_attacker = KHT
+	add_defender = GOG
+}
+
+668.8.12 = {
+	battle = {
+		name = "Pyongyang"
+		location = 1845
+		attacker = {
+			commander = "Li Shiji"
+			infantry = 70000
+			losses = 10	# percent
+			country = TNG
+		}
+		defender = {
+			commander = "Yeon Namgeon"
+			infantry = 100000
+			losses = 90	# percent
+			country = GOG
+		}
+		result = yes
+	}
+}
+
+668.10.31 = {
+	rem_attacker = TNG
+	rem_attacker = SLL
+	rem_attacker = KHT
+	rem_defender = GOG
+}
+
+# EH version

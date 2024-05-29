@@ -1,0 +1,14 @@
+
+bookmark =
+{
+	name = "KOREAN_WAR_NAME"
+	desc = "KOREAN_WAR_DESC"
+	date = 1950.6.25
+	
+	country = SKO
+	country = USA
+	country = NOK
+	country = CHN
+}
+
+# EH version

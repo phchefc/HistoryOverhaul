@@ -1,0 +1,20 @@
+732 = "Hamnam"
+733 = "Hwangnam"
+2694 = "Yeongdong"
+735 = "Seoul"			#Gyeonggi
+2745 = "Busan"
+737 = "Jeonbuk"
+1013 = "Chungnam"
+4227 = "Gyeongnam"
+734 = "Yeongseo"
+2744 = "Pyeongbuk"
+2743 = "Yanggang"
+2742 = "Hambuk"
+736 = "Gyeongbuk"
+4228 = "Jeonnam"
+4229 = "Chungbuk"
+4230 = "Gyeonggi"
+4231 = "Hwangbuk"
+4232 = "Jagang"
+
+# EH version

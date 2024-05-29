@@ -1,0 +1,9503 @@
+namespace = eh_asia_CMB
+namespace = eh_asia_IDN
+namespace = eh_asia_MNM
+namespace = eh_asia_MLA
+namespace = eh_asia_LAO
+namespace = eh_asia_PHI
+namespace = eh_asia_THL
+namespace = eh_asia_VTN
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Cambodia
+########################################################################
+
+# Rise of the Funan
+country_event = {
+	id = eh_asia_CMB.1
+	title = "eh_asia_CMB.1.t"
+	desc = "eh_asia_CMB.1.d"
+	picture = FEAST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FUN
+		is_year = 290
+		NOT = { is_year = 300 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_CMB.1.a"
+		ai_chance = { factor = 100 }
+		FUN = {
+			inherit = MNX
+			inherit = CMB
+			inherit = PEA
+			cambodia_area = {
+				limit = {
+					NOT = { owned_by = FUN }
+				}
+				cede_province = FUN
+				add_core = FUN
+				remove_core = PEA
+			}
+			central_thai_area = {
+				limit = {
+					NOT = { owned_by = FUN }
+				}
+				cede_province = FUN
+				add_core = FUN
+				remove_core = PEA
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = { owned_by = FUN }
+				}
+				cede_province = FUN
+				add_core = FUN
+				remove_core = MNX
+			}
+			tenasserim_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = KED }
+						NOT = { province_id = 574 }
+						NOT = { province_id = 2391 }
+					}
+				}
+				cede_province = FUN
+				add_core = FUN
+				remove_core = LGK
+			}
+		}
+		PPA = {
+			2393 = {
+				if = {
+					limit = {
+						NOT = { owned_by = PPA }
+					}
+				}
+				cede_province = PPA
+				add_core = PPA
+				remove_core = LGK
+			}
+		}
+	}
+}
+
+# Rise of the Chenla
+country_event = {
+	id = eh_asia_CMB.2
+	title = "eh_asia_CMB.2.t"
+	desc = "eh_asia_CMB.2.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FUN
+		is_year = 540
+		NOT = { is_year = 550 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_CMB.2.a"
+		ai_chance = { factor = 100 }
+		FUN = {
+			change_tag = CNA
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			set_capital = 609
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_prestige = 30
+			add_years_of_income = 3
+			swap_free_idea_group = yes
+			inherit = KUY
+			define_ruler = {
+				name = "Bhavavarman I"
+				dynasty = "Chenla"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 2
+				claim = 95
+			}
+			khorat_area = {
+				limit = {
+					NOT = { owned_by = CNA }
+				}
+				cede_province = CNA
+				add_core = CNA
+				remove_core = KUY
+			}
+			4838 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CNA }
+					}
+				}
+				cede_province = CNA
+				add_core = CNA
+				remove_core = KUY
+			}
+			4839 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CNA }
+					}
+				}
+				cede_province = CNA
+				add_core = CNA
+				remove_core = KUY
+			}
+		}
+		THA = {
+			591 = {
+				if = {
+					limit = {
+						NOT = { owned_by = THA }
+					}
+				}
+				cede_province = THA
+				add_core = THA
+				remove_core = CNA
+			}
+			2404 = {
+				if = {
+					limit = {
+						NOT = { owned_by = THA }
+					}
+				}
+				cede_province = THA
+				add_core = THA
+				remove_core = CNA
+			}
+		}
+		LGK = {
+			tenasserim_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = KED }
+						NOT = { province_id = 574 }
+						NOT = { province_id = 2391 }
+					}
+				}
+				cede_province = LGK
+				add_core = LGK
+				remove_core = CNA
+			}
+		}
+		KED = {
+			malacca_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = KED }
+						NOT = { province_id = 4812 }
+					}
+				}
+				cede_province = KED
+				add_core = KED
+				remove_core = LGK
+			}
+			2391 = {
+				if = {
+					limit = {
+						NOT = { owned_by = KED }
+					}
+				}
+				cede_province = KED
+				add_core = KED
+				remove_core = LGK
+			}
+		}
+		LAW = { country_event = { id = eh_asia_THL.1 days = 7 } }
+	}
+}
+
+# Rise of the Khmer
+country_event = {
+	id = eh_asia_CMB.3
+	title = "eh_asia_CMB.3.t"
+	desc = "eh_asia_CMB.3.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CNA
+		is_year = 800
+		NOT = { is_year = 810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_CMB.3.a"
+		ai_chance = { factor = 100 }
+		CNA = {
+			change_tag = CMB
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = buddhism
+			set_government_rank = 2
+			set_capital = 609
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Jayavarman II"
+				dynasty = "Khmer"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 3
+				age = 30
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Khmer"
+			}
+			every_owned_province = { change_religion = buddhism }
+			4838 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CMB }
+					}
+				}
+				cede_province = CMB
+				add_core = CMB
+				remove_core = KUY
+			}
+		}
+	}
+}
+
+# Angkor Empire
+country_event = {
+	id = eh_asia_CMB.4
+	title = "eh_asia_CMB.4.t"
+	desc = "eh_asia_CMB.4.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CMB
+		is_year = 900
+		NOT = { is_year = 910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NAN = {
+				yun_gui_borderland_area = {
+					limit = { 
+						culture = northern_thai 
+					}
+					change_culture = bai
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_CMB.4.a"
+		ai_chance = { factor = 100 }
+		CMB = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			inherit = LAV
+			central_thai_area = {
+				limit = {
+					NOT = { owned_by = CMB }
+				}
+				cede_province = CMB
+				add_core = CMB
+				remove_core = LAV
+			}
+			sukhothai_area = {
+				limit = {
+					NOT = { owned_by = CMB }
+				}
+				cede_province = CMB
+				add_core = CMB
+				remove_core = LAV
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = { owned_by = CMB }
+				}
+				cede_province = CMB
+				add_core = CMB
+				remove_core = LAV
+			}
+			north_laos_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = CMB }
+						NOT = { province_id = 1844 }
+					}
+				}
+				cede_province = CMB
+				add_core = CMB
+			}
+			vientiane_area = {
+				limit = {
+					NOT = { owned_by = CMB }
+				}
+				cede_province = CMB
+				add_core = CMB
+			}
+			champasak_area = {
+				limit = {
+					NOT = { owned_by = CMB }
+				}
+				cede_province = CMB
+				add_core = CMB
+			}
+			609 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_prosperity = 1
+				add_institution_embracement = {
+					which = crop_rotation
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Fall of the Khmer
+country_event = {
+	id = eh_asia_CMB.5
+	title = "eh_asia_CMB.5.t"
+	desc = "eh_asia_CMB.5.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CMB
+		is_year = 1100
+		NOT = { is_year = 1110 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			CMB = {
+				add_adm_power = -100
+				add_dip_power = -100
+				add_mil_power = -100
+				add_stability = -1
+				add_manpower = -10
+				add_sailors = -1000
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				add_prestige = -10
+				add_inflation = 1
+				add_corruption = 10
+			}
+			LAV = {
+				central_thai_area = {
+					limit = {
+						NOT = { owned_by = LAV }
+					}
+					change_culture = central_thai
+					cede_province = LAV
+					add_core = LAV
+					remove_core = CMB
+				}
+				north_tenasserim_area = {
+					limit = {
+						NOT = { owned_by = LAV }
+					}
+					cede_province = LAV
+					add_core = LAV
+					remove_core = CMB
+				}
+				sukhothai_area = {
+					limit = {
+						NOT = { owned_by = LAV }
+					}
+					change_culture = central_thai
+					cede_province = LAV
+					add_core = LAV
+					remove_core = CMB
+				}
+			}
+			HRP = {
+				northern_thai_area = {
+					limit = {
+						NOT = { owned_by = HRP }
+					}
+					change_culture = northern_thai
+					cede_province = HRP
+					add_core = HRP
+					remove_core = CMB
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_CMB.5.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				CMB = { was_player = yes }
+			}
+			switch_tag = LAV
+		}
+	}
+}
+
+# Kingdom of Cambodia
+country_event = {
+	id = eh_asia_CMB.6
+	title = "eh_asia_CMB.6.t"
+	desc = "eh_asia_CMB.6.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FR2
+		is_year = 1946
+		NOT = { is_year = 1948 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			KHM = {
+				change_government = monarchy
+				add_government_reform = multi_party_system
+				set_government_rank = 2
+				change_technology_group = asian
+				change_religion = buddhism
+				add_stability = 1
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				add_prestige = 20
+				set_capital = 2380
+				cambodia_area = {
+					limit = {
+						NOT = { owned_by = KHM }
+					}
+					change_religion = buddhism
+					cede_province = KHM
+					add_core = KHM
+					remove_core = FR2
+				}
+				angkor_area = {
+					limit = {
+						NOT = { owned_by = KHM }
+					}
+					change_religion = buddhism
+					cede_province = KHM
+					add_core = KHM
+					remove_core = FR2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_CMB.6.a"
+		ai_chance = { factor = 100 }
+		KHM = {
+			define_ruler = {
+				name = "Sihanouk"
+				dynasty = "Norodom"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 3
+				claim = 95
+				age = 23
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+}
+
+# Khmer Republic
+country_event = {
+	id = eh_asia_CMB.7
+	title = "eh_asia_CMB.7.t"
+	desc = "eh_asia_CMB.7.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 1970
+		NOT = { is_year = 1972 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_CMB.7.a"
+		ai_chance = { factor = 100 }
+		KHM = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			add_stability = -1
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			set_capital = 2380
+			define_ruler = {
+				name = "Cheng Heng"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 60
+			}
+			country_event = { id = eh_asia_CMB.8 days = 300 }
+		}
+	}
+}
+
+# Khmer Rouge
+country_event = {
+	id = eh_asia_CMB.8
+	title = "eh_asia_CMB.8.t"
+	desc = "eh_asia_CMB.8.d"
+	picture = COMMUNISM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_CMB.8.a"
+		ai_chance = { factor = 100 }
+		KHM = {
+			set_country_flag = eh_communist
+			set_country_flag = eh_override_name
+			change_government = republic
+			add_government_reform = communist_government
+			change_religion = secularism
+			set_government_rank = 2
+			set_capital = 2380
+			add_stability = -3
+			add_prestige = -30
+			add_manpower = -30
+			add_sailors = -1000
+			add_corruption = 30
+			add_inflation = 3
+			override_country_name = "Kampuchea"
+			define_ruler = {
+				name = "Pol Pot"
+				change_adm = 0
+				change_dip = 1
+				change_mil = 6
+				age = 55
+			}
+		}
+	}
+}
+
+# Third Indochina War
+country_event = {
+	id = eh_asia_CMB.9
+	title = "eh_asia_CMB.9.t"
+	desc = "eh_asia_CMB.9.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_CMB.9.a"
+		ai_chance = { factor = 100 }
+		KHM = {
+			clr_country_flag = sino_vietnamese_war
+			change_government = republic
+			add_government_reform = communist_government
+			add_prestige = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			white_peace = VTN
+			define_ruler = {
+				name = "Heng Samrin"
+				change_adm = 1
+				change_dip = 1
+				change_mil = 2
+				age = 40
+			}
+		}
+		VTN = {
+			clr_country_flag = sino_vietnamese_war
+			add_prestige = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			white_peace = CHN
+			country_event = { id = eh_asia_CMB.12 days = 1 }
+		}
+		CHN = { 
+			clr_country_flag = sino_vietnamese_war
+			country_event = { id = eh_asia_CMB.12 days = 1 }
+		}
+	}
+}
+
+# Modern Cambodia
+country_event = {
+	id = eh_asia_CMB.10
+	title = "eh_asia_CMB.10.t"
+	desc = "eh_asia_CMB.10.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KHM
+		is_year = 1990
+		NOT = { is_year = 1995 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_asia_CMB.10.a"
+		ai_chance = { factor = 100 }
+		KHM = {
+			clr_country_flag = eh_communist
+			clr_country_flag = eh_override_name
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = buddhism
+			add_stability = 1
+			add_prestige = 20
+			set_capital = 2380
+			restore_country_name = yes
+			define_ruler = {
+				name = "Sihanouk"
+				dynasty = "Norodom"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				claim = 95
+				age = 68
+			}
+			define_consort = {
+				name = "Monineath"
+				dynasty = "Norodom"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+}
+
+# Third Indochina War - Start for Cambodia
+country_event = {
+	id = eh_asia_CMB.11
+	title = "eh_asia_CMB.11.t"
+	desc = "eh_asia_CMB.11.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_CMB.11.a"
+		ai_chance = { factor = 100 }
+		KHM = { country_event = { id = eh_asia_CMB.9 days = 100 } }
+	}
+}
+
+# Third Indochina War - Finish for Vietnam
+country_event = {
+	id = eh_asia_CMB.12
+	title = "eh_asia_CMB.12.t"
+	desc = "eh_asia_CMB.12.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_CMB.12.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+########################################################################
+# Events for the Indonesia
+########################################################################
+
+# Rise of the Srivijaya
+country_event = {
+	id = eh_asia_IDN.1
+	title = "eh_asia_IDN.1.t"
+	desc = "eh_asia_IDN.1.d"
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KDS
+		is_year = 700
+		NOT = { is_year = 710 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.1.a"
+		ai_chance = { factor = 100 }
+		KDS = {
+			change_tag = SRI
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = buddhism
+			set_government_rank = 2
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Dapunta Hyang Sri Jayanasa"
+				dynasty = "Srivijaya"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 3
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Srivijaya"
+			}
+			jambi_area = {
+				limit = {
+					NOT = { owned_by = SRI }
+				}
+				cede_province = SRI
+				add_core = SRI
+			}
+			batak_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SRI }
+						NOT = { province_id = 2684 }
+						NOT = { province_id = 4811 }
+					}
+				}
+				cede_province = SRI
+				add_core = SRI
+			}
+			central_sumatra_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SRI }
+						NOT = { province_id = 618 }
+						NOT = { province_id = 4810 }
+					}
+				}
+				cede_province = SRI
+				add_core = SRI
+			}
+			south_sumatra_area = {
+				limit = {
+					NOT = { owned_by = SRI }
+				}
+				cede_province = SRI
+				add_core = SRI
+			}
+			minangkabau_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SRI }
+						NOT = { province_id = 2683 }
+					}
+				}
+				cede_province = SRI
+				add_core = SRI
+			}
+		}
+	}
+}
+
+# Golden age of the Srivijaya
+country_event = {
+	id = eh_asia_IDN.2
+	title = "eh_asia_IDN.2.t"
+	desc = "eh_asia_IDN.2.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SRI
+		is_year = 800
+		NOT = { is_year = 810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.2.a"
+		ai_chance = { factor = 100 }
+		SRI = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_navy_tradition = 10
+			add_prestige = 30
+			add_years_of_income = 3
+			malaya_region = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SRI }
+						NOT = { area = indian_ocean_islands_area }
+						NOT = { area = tenasserim_area }
+						NOT = { province_id = 599 }
+						NOT = { province_id = 2393 }
+						NOT = { province_id = 2683 }
+						NOT = { province_id = 2684 }
+						NOT = { province_id = 3213 }
+					}
+				}
+				cede_province = SRI
+				add_core = SRI
+				remove_core = LGK
+			}
+		}
+	}
+}
+
+# Rise of the Majapahit
+country_event = {
+	id = eh_asia_IDN.3
+	title = "eh_asia_IDN.3.t"
+	desc = "eh_asia_IDN.3.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SRI
+		is_year = 1290
+		NOT = { is_year = 1300 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.3.a"
+		ai_chance = { factor = 100 }
+		SRI = {
+			change_tag = MAJ
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			inherit = KDR
+			define_ruler = {
+				name = "Raden Wijaya"
+				dynasty = "Rajasanagara"
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Rajasanagara"
+			}
+			east_java_area = {
+				limit = {
+					NOT = { owned_by = MAJ }
+				}
+				cede_province = MAJ
+				add_core = MAJ
+				remove_core = KDR
+			}
+			central_java_area = {
+				limit = {
+					NOT = { owned_by = MAJ }
+				}
+				cede_province = MAJ
+				add_core = MAJ
+				remove_core = KDR
+			}
+			surabaya_area = {
+				limit = {
+					NOT = { owned_by = MAJ }
+				}
+				cede_province = MAJ
+				add_core = MAJ
+				remove_core = KDR
+			}
+		}
+		SUN = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = hinduism
+			set_government_rank = 2
+			west_java_area = {
+				limit = {
+					NOT = { owned_by = SUN }
+				}
+				cede_province = SUN
+				add_core = SUN
+				remove_core = MAJ
+			}
+			banten_area = {
+				limit = {
+					NOT = { owned_by = SUN }
+				}
+				cede_province = SUN
+				add_core = SUN
+				remove_core = MAJ
+			}
+		}
+		KED = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			2394 = {
+				if = {
+					limit = {
+						NOT = { owned_by = KED }
+					}
+				}
+				cede_province = KED
+				add_core = KED
+				remove_core = MAJ
+			}
+			4813 = {
+				if = {
+					limit = {
+						NOT = { owned_by = KED }
+					}
+				}
+				cede_province = KED
+				add_core = KED
+				remove_core = MAJ
+			}
+		}
+		PAT = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			594 = {
+				if = {
+					limit = {
+						NOT = { owned_by = KED }
+					}
+				}
+				cede_province = PAT
+				add_core = PAT
+				remove_core = MAJ
+			}
+			4812 = {
+				if = {
+					limit = {
+						NOT = { owned_by = KED }
+					}
+				}
+				cede_province = PAT
+				add_core = PAT
+				remove_core = MAJ
+			}
+		}
+		CTU = {
+			change_tag = KEL
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = buddhism
+			set_government_rank = 2
+		}
+		PAH = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = buddhism
+			set_government_rank = 2
+			malaya_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = PAH }
+						NOT = { province_id = 599 }
+						NOT = { province_id = 2393 }
+					}
+				}
+				cede_province = PAH
+				add_core = PAH
+				remove_core = MAJ
+			}
+			malacca_area = {
+				limit = {
+					NOT = { owned_by = PAH }
+				}
+				cede_province = PAH
+				add_core = PAH
+				remove_core = MAJ
+			}
+			johor_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = PAH }
+						NOT = { province_id = 3213 }
+					}
+				}
+				cede_province = PAH
+				add_core = PAH
+				remove_core = MAJ
+			}
+		}
+		PGR = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = buddhism
+			set_government_rank = 2
+			minangkabau_area = {
+				limit = {
+					NOT = { owned_by = PGR }
+				}
+				cede_province = PGR
+				add_core = PGR
+				remove_core = MAJ
+			}
+		}
+		PSA = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			batak_area = {
+				limit = {
+					NOT = { owned_by = PSA }
+				}
+				cede_province = PSA
+				add_core = PSA
+				remove_core = MAJ
+			}
+			north_sumatra_area = {
+				limit = {
+					NOT = { owned_by = PSA }
+				}
+				cede_province = PSA
+				add_core = PSA
+				remove_core = MAJ
+			}
+			4810 = {
+				if = {
+					limit = {
+						NOT = { owned_by = PSA }
+					}
+				}
+				cede_province = PSA
+				add_core = PSA
+				remove_core = MAJ
+			}
+		}
+	}
+}
+
+# Fall of the Majapahit
+country_event = {
+	id = eh_asia_IDN.4
+	title = "eh_asia_IDN.4.t"
+	desc = "eh_asia_IDN.4.d"
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MAJ
+		is_year = 1440
+		NOT = { is_year = 1450 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.4.a"
+		ai_chance = { factor = 100 }
+		MAJ = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_manpower = -10
+			add_sailors = -1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = -10
+			add_corruption = 10
+			add_inflation = 1
+		}
+		BLI = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			631 = {
+				if = {
+					limit = {
+						NOT = { owned_by = BLI }
+					}
+				}
+				cede_province = BLI
+				add_core = BLI
+				remove_core = MAJ
+			}
+		}
+		CRB = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			4791 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CRB }
+					}
+				}
+				cede_province = CRB
+				add_core = CRB
+				remove_core = MAJ
+			}
+		}
+		DMK = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			central_java_area = {
+				limit = {
+					NOT = { owned_by = DMK }
+				}
+				cede_province = DMK
+				add_core = DMK
+				remove_core = MAJ
+			}
+		}
+		SAK = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			central_sumatra_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SAK }
+						NOT = { province_id = 620 }
+					}
+				}
+				cede_province = SAK
+				add_core = SAK
+				remove_core = MAJ
+			}
+			jambi_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SAK }
+						NOT = { province_id = 2677 }
+						NOT = { province_id = 4844 }
+					}
+				}
+				cede_province = SAK
+				add_core = SAK
+				remove_core = MAJ
+			}
+		}
+		PLB = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			south_sumatra_area = {
+				limit = {
+					NOT = { owned_by = PLB }
+				}
+				cede_province = PLB
+				add_core = PLB
+				remove_core = MAJ
+			}
+			jambi_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = PLB }
+						NOT = { province_id = 2679 }
+					}
+				}
+				cede_province = PLB
+				add_core = PLB
+				remove_core = MAJ
+			}
+			rejang_area = {
+				limit = {
+					NOT = { owned_by = PLB }
+				}
+				cede_province = PLB
+				add_core = PLB
+				remove_core = MAJ
+			}
+			2677 = {
+				if = {
+					limit = {
+						NOT = { owned_by = PLB }
+					}
+				}
+				cede_province = PLB
+				add_core = PLB
+				remove_core = MAJ
+			}
+			4844 = {
+				if = {
+					limit = {
+						NOT = { owned_by = PLB }
+					}
+				}
+				cede_province = PLB
+				add_core = PLB
+				remove_core = MAJ
+			}
+		}
+	}
+}
+
+# Portugese East Indies
+country_event = {
+	id = eh_asia_IDN.5
+	title = "eh_asia_IDN.5.t"
+	desc = "eh_asia_IDN.5.d"
+	picture = COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POR
+		is_year = 1550
+		NOT = { is_year = 1560 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			POR = {
+				timor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { province_id = 2696 }
+							NOT = { province_id = 2725 }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				633 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+			PSA = {
+				change_tag = ATJ
+				4810 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ATJ }
+						}
+					}
+					cede_province = ATJ
+					add_core = ATJ
+					remove_core = BLM
+				}
+			}
+			SUN = {
+				change_tag = BAN
+				rejang_area = {
+					limit = {
+						NOT = { owned_by = BAN }
+					}
+					cede_province = BAN
+					add_core = BAN
+					remove_core = PLB
+				}
+				623 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAN }
+						}
+					}
+					cede_province = BAN
+					add_core = BAN
+					remove_core = PLB
+				}
+			}
+			CRB = {
+				west_java_area = {
+					limit = {
+						NOT = { owned_by = CRB }
+					}
+					cede_province = CRB
+					add_core = CRB
+					remove_core = MAJ
+				}
+			}
+			MAJ = { change_tag = BLM }
+		}
+	}
+		
+	
+	option = {
+		name = "eh_asia_IDN.5.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				BLM = { was_player = yes }
+			}
+			switch_tag = DMK
+		}
+	}
+}
+
+# Dutch East India Company (1)
+country_event = {
+	id = eh_asia_IDN.6
+	title = "eh_asia_IDN.6.t"
+	desc = "eh_asia_IDN.6.d"
+	picture = HOUSE_OF_TRADE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MTR
+		is_year = 1740
+		NOT = { is_year = 1750 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			NED = {
+				add_prestige = 10
+				spice_islands_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				timor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 2695 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = POR
+				}
+				molluca_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				628 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = MTR
+				}
+				633 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = POR
+				}
+				644 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				2713 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.6.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				DMK = { was_player = yes }
+			}
+			switch_tag = NED
+		}
+	}
+}
+
+# Dutch East Indies (1)
+country_event = {
+	id = eh_asia_IDN.7
+	title = "eh_asia_IDN.7.t"
+	desc = "eh_asia_IDN.7.d"
+	picture = HOUSE_OF_TRADE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		is_year = 1840
+		NOT = { is_year = 1850 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SRW = {
+				2704 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SRW }
+						}
+					}
+					cede_province = SRW
+					add_core = SRW
+				}
+				2705 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SRW }
+						}
+					}
+					cede_province = SRW
+					add_core = SRW
+				}
+				4804 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SRW }
+						}
+					}
+					cede_province = SRW
+					add_core = SRW
+				}
+			}
+			NED = {
+				add_prestige = 10
+				inherit = BAN
+				inherit = BLM
+				inherit = CRB
+				inherit = MTR
+				inherit = PLB
+				central_java_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				west_java_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				east_java_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				minangkabau_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				central_sumatra_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				south_sumatra_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				jambi_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = JOH
+				
+				}
+				lesser_sunda_islands_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				makassar_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				south_sulawesi_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				621 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.7.a"
+		ai_chance = { factor = 100 }
+		GBR = { 
+			create_subject = {
+				subject_type = private_enterprise
+				subject = SRW
+			}
+		}
+	}
+}
+
+# Dutch East Indies (2)
+country_event = {
+	id = eh_asia_IDN.8
+	title = "eh_asia_IDN.8.t"
+	desc = "eh_asia_IDN.8.d"
+	picture = HOUSE_OF_TRADE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		is_year = 1890
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.8.a"
+		ai_chance = { factor = 100 }
+		NED = {
+			add_prestige = 10
+			inherit = ATJ
+			define_ruler = {
+				name = "Wilhelmina"
+				dynasty = "van Oranje"
+				change_adm = 5
+				change_dip = 3
+				change_mil = 4
+				claim = 95
+				female = yes
+				age = 10
+			}
+			kalimantan_area = {
+				limit = {
+					NOT = { owned_by = NED }
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			minangkabau_area = {
+				limit = {
+					NOT = { owned_by = NED }
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			berau_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = NED }
+						NOT = { province_id = 2703 }
+					}
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			north_sumatra_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = NED }
+						NOT = { province_id = 574 }
+					}
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			central_sumatra_area = {
+				limit = {
+					NOT = { owned_by = NED }
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			south_sumatra_area = {
+				limit = {
+					NOT = { owned_by = NED }
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			batak_area = {
+				limit = {
+					NOT = { owned_by = NED }
+				}
+				cede_province = NED
+				add_core = NED
+			}
+			640 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = NED }
+					}
+				}
+				cede_province = NED
+				add_core = NED
+				remove_core = LFA
+			}
+		}
+	}
+}
+
+# Indonesian National Awakening
+country_event = {
+	id = eh_asia_IDN.9
+	title = "eh_asia_IDN.9.t"
+	desc = "eh_asia_IDN.9.d"
+	picture = ANGRY_MOB_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		is_year = 1905
+		NOT = { is_year = 1910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			NED = {
+				indonesia_region = {
+					limit = {
+						AND = {
+							NOT = { area = sabah_area }
+							NOT = { area = brunei_area }
+							NOT = { province_id = 2703 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				moluccas_region = {
+					limit = {
+						AND = {
+							NOT = { area = mindanao_area }
+							NOT = { area = west_mindanao_area }
+							NOT = { area = luzon_area }
+							NOT = { area = southern_luzon_area }
+							NOT = { area = visayas_area }
+							NOT = { area = palawan_area }
+							NOT = { area = papua_area }
+							NOT = { province_id = 2695 }
+							NOT = { province_id = 2719 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				malaya_region = {
+					limit = {
+						AND = {
+							NOT = { area = tenasserim_area }
+							NOT = { area = malacca_area }
+							NOT = { area = malaya_area }
+							NOT = { area = north_malaya_area }
+							NOT = { area = johor_area }
+							NOT = { area = indian_ocean_islands_area }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.9.a"
+		ai_chance = { factor = 100 }
+		NED = {
+			malaya_region = {
+				limit = { owned_by = NED }
+				add_core = IDN
+				add_unrest = 0.1
+			}
+			moluccas_region = {
+				limit = { owned_by = NED }
+				add_core = IDN
+				add_unrest = 0.1
+			}
+			indonesia_region = {
+				limit = { owned_by = NED }
+				add_core = IDN
+				add_unrest = 0.1
+			}
+		}
+	}
+}
+
+# Indonesian National Revolution
+country_event = {
+	id = eh_asia_IDN.10
+	title = "eh_asia_IDN.10.t"
+	desc = "eh_asia_IDN.10.d"
+	picture = WW_ALLIES_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			IDN = {
+				change_government = republic
+				add_government_reform = powerful_head_of_state
+				add_republican_tradition = -10
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_stability = 1
+				add_prestige = 50
+				add_years_of_income = 2
+				white_peace = NED
+				every_owned_province = {
+					add_base_tax = -2
+					add_base_production = -2
+					add_base_manpower = -2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.10.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				NED = { was_player = yes }
+			}
+			switch_tag = IDN
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.10.b"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# New Order
+country_event = {
+	id = eh_asia_IDN.11
+	title = "eh_asia_IDN.11.t"
+	desc = "eh_asia_IDN.11.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IDN
+		is_year = 1965
+		NOT = { is_year = 1970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			IDN = {
+				vogelkop_area = {
+					limit = {
+						NOT = { owned_by = IDN }
+					}
+					add_base_tax = -2
+					add_base_production = -2
+					add_base_manpower = -2
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				northern_papua_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = IDN }
+							NOT = { province_id = 2719 }
+						}
+					}
+					add_base_tax = -2
+					add_base_production = -2
+					add_base_manpower = -2
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_IDN.11.a"
+		ai_chance = { factor = 100 }
+		IDN = {
+			set_country_flag = eh_military_gov
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			add_republican_tradition = -10
+			add_stability = -1
+			add_prestige = -10
+			add_corruption = 30
+			add_inflation = 3
+			define_ruler = {
+				name = "Suharto"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 4
+				age = 47
+			}
+		}
+	}
+}
+
+# 1997 Financial crisis
+country_event = {
+	id = eh_asia_IDN.12
+	title = "eh_asia_IDN.12.t"
+	desc = "eh_asia_IDN.12.d"
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IDN
+		is_year = 1997
+		NOT = { is_year = 1998 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_IDN.12.a"
+		ai_chance = { factor = 100 }
+		IDN = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+			country_event = { id = eh_asia_IDN.12 days = 100 }
+		}
+	}
+}
+
+# Fall of Suharto
+country_event = {
+	id = eh_asia_IDN.13
+	title = "eh_asia_IDN.13.t"
+	desc = "eh_asia_IDN.13.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_IDN.13.a"
+		ai_chance = { factor = 100 }
+		IDN = {
+			clr_country_flag = eh_military_gov
+			change_government = republic
+			add_government_reform = democracy_reform
+			add_republican_tradition = 10
+			add_stability = 1
+			define_ruler = {
+				name = "Bavharuddin Jusuf Habibie"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 61
+			}
+		}
+	}
+}
+
+# Modern Indonesia
+country_event = {
+	id = eh_asia_IDN.14
+	title = "eh_asia_IDN.14.t"
+	desc = "eh_asia_IDN.14.d"
+	picture = NY_SKYLINE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IDN
+		is_year = 2000
+		NOT = { is_year = 2020 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_IDN.14.a"
+		ai_chance = { factor = 100 }
+		IDN = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = 10
+			add_years_of_income = 2
+			central_java_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			east_java_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			west_java_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			630 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		ETI = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = secularism
+			set_capital = 2695
+			2695 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ETI }
+					}
+				}
+				cede_province = ETI
+				add_core = ETI
+				remove_core = IDN
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Myanmar
+########################################################################
+
+# Rise of the Pagan
+country_event = {
+	id = eh_asia_MNM.1
+	title = "eh_asia_MNM.1.t"
+	desc = "eh_asia_MNM.1.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PAG
+		is_year = 850
+		NOT = { is_year = 860 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_MNM.1.a"
+		ai_chance = { factor = 100 }
+		PAG = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			change_religion = buddhism
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			swap_free_idea_group = yes
+			every_owned_province = { change_religion = buddhism }
+			upper_burma_area = {
+				limit = { owned_by = PAG }
+				change_culture = burmese
+			}
+			lower_burma_area = {
+				limit = { owned_by = PAG }
+				change_culture = burmese
+			}
+			chindwin_area = {
+				limit = { owned_by = PAG }
+				change_culture = burmese
+			}
+			define_ruler = {
+				name = "Pyinbya"
+				dynasty = "Pagan"
+				change_adm = 4
+				change_dip = 1
+				change_mil = 4
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Pagan"
+			}
+		}
+	}
+}
+
+# Pagan Empire
+country_event = {
+	id = eh_asia_MNM.2
+	title = "eh_asia_MNM.2.t"
+	desc = "eh_asia_MNM.2.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PAG
+		is_year = 1050
+		NOT = { is_year = 1060 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_MNM.2.a"
+		ai_chance = { factor = 100 }
+		PAG = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			inherit = POG
+			inherit = THA
+			define_ruler = {
+				name = "Anawrahta"
+				dynasty = "Pagan"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 4
+				claim = 95
+				age = 30
+			}
+			define_heir = {
+				dynasty = "Pagan"
+			}
+			burma_region = {
+				limit = {
+					AND = {
+						NOT = { owned_by = PAG }
+						NOT = { area = karenni_area }
+						NOT = { area = shan_hill_area }
+						NOT = { area = arakan_area }
+						NOT = { province_id = 580 }
+						NOT = { province_id = 2395 }
+						NOT = { province_id = 2396 }
+					}
+				}
+				cede_province = PAG
+				add_core = PAG
+			}
+		}
+	}
+}
+
+# Fall of the Pagan
+country_event = {
+	id = eh_asia_MNM.3
+	title = "eh_asia_MNM.3.t"
+	desc = "eh_asia_MNM.3.d"
+	picture = ASSASSINATION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PAG
+		is_year = 1280
+		NOT = { is_year = 1290 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PAG = { change_tag = MYI }
+			MYA = {
+				change_government = tribal
+				add_government_reform = tribal_kingdom
+				change_religion = buddhism
+				set_government_rank = 2
+				every_owned_province = { change_religion = buddhism }
+				582 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MYA }
+						}
+					}
+					cede_province = MYA
+					add_core = MYA
+					remove_core = MYI
+				}
+				2397 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MYA }
+						}
+					}
+					cede_province = MYA
+					add_core = MYA
+					remove_core = MYI
+				}
+				4405 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MYA }
+						}
+					}
+					cede_province = MYA
+					add_core = MYA
+					remove_core = MYI
+				}
+			}
+			PEG = {
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				change_religion = buddhism
+				set_government_rank = 2
+				every_owned_province = { change_religion = buddhism }
+				lower_burma_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAG }
+							NOT = { province_id = 591 }
+							NOT = { province_id = 2404 }
+						}
+					}
+					cede_province = PEG
+					add_core = PEG
+					remove_core = MYI
+				}
+			}
+			TAU = {
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				change_religion = buddhism
+				set_government_rank = 2
+				every_owned_province = { change_religion = buddhism }
+				585 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = TAU }
+						}
+					}
+					cede_province = TAU
+					add_core = TAU
+					remove_core = MYI
+				}
+				4396 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = TAU }
+						}
+					}
+					cede_province = TAU
+					add_core = TAU
+					remove_core = MYI
+				}
+			}
+			HSI = {
+				2400 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = HSI }
+						}
+					}
+					cede_province = HSI
+					add_core = HSI
+					remove_core = MYI
+				}
+				4397 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = HSI }
+						}
+					}
+					cede_province = HSI
+					add_core = HSI
+					remove_core = MYI
+				}
+			}
+			MNI = {
+				588 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MNI }
+						}
+					}
+					cede_province = MNI
+					add_core = MNI
+					remove_core = MYI
+				}
+				4406 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MNI }
+						}
+					}
+					cede_province = MNI
+					add_core = MNI
+					remove_core = MYI
+				}
+			}
+			MPA = {
+				2401 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MPA }
+						}
+					}
+					cede_province = MPA
+					add_core = MPA
+					remove_core = MYI
+				}
+				4398 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MPA }
+						}
+					}
+					cede_province = MPA
+					add_core = MPA
+					remove_core = MYI
+				}
+			}
+			SUK = {
+				591 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SUK }
+						}
+					}
+					cede_province = SUK
+					add_core = SUK
+					remove_core = MYI
+				}
+				2404 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SUK }
+						}
+					}
+					cede_province = SUK
+					add_core = SUK
+					remove_core = MYI
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MNM.3.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AVA = { was_player = yes }
+			}
+			switch_tag = TAU
+		}
+	}
+}
+
+# Rise of the Taungoo
+country_event = {
+	id = eh_asia_MNM.4
+	title = "eh_asia_MNM.4.t"
+	desc = "eh_asia_MNM.4.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AVA
+		is_year = 1530
+		NOT = { is_year = 1540 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TAU = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_stability = 1
+				add_manpower = 30
+				add_sailors = 1000
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				add_prestige = 30
+				add_years_of_income = 3
+				inherit = PEG
+				define_ruler = {
+					name = "Tabinshwehti"
+					dynasty = "Taungoo"
+					change_adm = 4
+					change_dip = 3
+					change_mil = 6
+					claim = 95
+					age = 15
+				}
+				define_heir_to_general = {	fire = 3	shock = 2	manuever = 2	siege = 0 }
+				define_consort = {
+					name = "Dhamma"
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					female = yes
+				}
+				remove_heir = { allow_new_heir = no }
+				lower_burma_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAG }
+							NOT = { province_id = 591 }
+							NOT = { province_id = 2404 }
+						}
+					}
+					cede_province = TAU
+					add_core = TAU
+					remove_core = PEG
+				}
+			}
+			HSE = {
+				change_tag = SST
+				add_adm_power = -100
+				add_dip_power = -100
+				add_mil_power = -100
+				add_stability = -1
+				add_manpower = -10
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				add_prestige = -10
+				add_inflation = 1
+				add_corruption = 10
+				inherit = AVA
+				inherit = MYA
+				burma_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SST }
+							NOT = { area = lower_burma_area }
+							NOT = { area = arakan_area }
+							NOT = { province_id = 585 }
+							NOT = { province_id = 4396 }
+						}
+					}
+					cede_province = SST
+					add_core = SST
+					remove_core = AVA
+				}
+				4473 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SST }
+						}
+					}
+					cede_province = SST
+					add_core = SST
+					remove_core = KAL
+				}
+			}
+			ARK = {
+				568 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = ARK }
+						}
+					}
+					cede_province = ARK
+					add_core = ARK
+					remove_core = BNG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MNM.4.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# First Toungoo Empire
+country_event = {
+	id = eh_asia_MNM.5
+	title = "eh_asia_MNM.5.t"
+	desc = "eh_asia_MNM.5.d"
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TAU
+		is_year = 1550
+		NOT = { is_year = 1560 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_MNM.5.a"
+		ai_chance = { factor = 100 }
+		TAU = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			change_religion = buddhism
+			inherit = AVA
+			inherit = SST
+			define_ruler = {
+				name = "Bayinnaung"
+				dynasty = "Taungoo"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 6
+				claim = 95
+				age = 34
+			}
+			define_heir_to_general = {	fire = 5	shock = 3	manuever = 3	siege = 2 }
+			define_consort = {
+				name = "Atula Thiri"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Nanda Bayin"
+				dynasty = "Taungoo"
+				change_adm = 1
+				change_dip = 2
+				change_mil = 2
+				claim = 95
+				age = 15
+			}
+			every_owned_province = { change_religion = buddhism }
+			burma_region = {
+				limit = {
+					AND = {
+						NOT = { owned_by = TAU }
+						NOT = { area = arakan_area }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = SST
+			}
+			4473 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = TAU }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = SST
+			}
+		}
+	}
+}
+
+# After the Burmese-Siamese wars
+country_event = {
+	id = eh_asia_MNM.6
+	title = "eh_asia_MNM.6.t"
+	desc = "eh_asia_MNM.6.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_MNM.6.a"
+		ai_chance = { factor = 100 }
+		TAU = {
+			clr_country_flag = taungoo_empire
+			add_prestige = 20
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			white_peace = AYU
+			white_peace = LXA
+			vassalize = AYU
+			vassalize = LNA
+			vassalize = LXA
+			591 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = TAU }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = AYU
+			}
+			2404 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = TAU }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = AYU
+			}
+		}
+		AYU = {
+			clr_country_flag = taungoo_empire
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_manpower = -10
+			add_sailors = -1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = -10
+			add_inflation = 1
+			add_corruption = 10
+			inherit = LIG
+			tenasserim_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = AYU }
+						NOT = { province_id = 574 }
+					}
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = LIG
+			}
+			country_event = { id = eh_asia_THL.22 days = 1 }
+		}
+		LXA = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_manpower = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = -10
+			add_inflation = 1
+			add_corruption = 10
+		}
+	}
+}
+
+# Fall of the Toungoo Empire
+country_event = {
+	id = eh_asia_MNM.7
+	title = "eh_asia_MNM.7.t"
+	desc = "eh_asia_MNM.7.d"
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_MNM.7.a"
+		ai_chance = { factor = 100 }
+		TAU = {
+			clr_country_flag = taungoo_empire
+			white_peace = AYU
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_manpower = -10
+			add_sailors = -1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = -10
+			add_inflation = 1
+			add_corruption = 10
+			create_subject = {
+				subject_type = tributary_state
+				subject = SST
+			}
+		}
+		SST = {
+			change_government = tribal
+			add_government_reform = tribal_kingdom
+			set_government_rank = 2
+			kachin_area = {
+				limit = {
+					NOT = { owned_by = SST }
+				}
+				cede_province = SST
+				add_core = SST
+				remove_core = TAU
+			}
+			shan_hill_area = {
+				limit = {
+					NOT = { owned_by = SST }
+				}
+				cede_province = SST
+				add_core = SST
+				remove_core = TAU
+			}
+			karenni_area = {
+				limit = {
+					NOT = { owned_by = SST }
+				}
+				cede_province = SST
+				add_core = SST
+				remove_core = TAU
+			}
+			chindwin_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SST }
+						NOT = { province_id = 4393 }
+					}
+				}
+				cede_province = SST
+				add_core = SST
+				remove_core = TAU
+			}
+			4473 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = SST }
+					}
+				}
+				cede_province = SST
+				add_core = SST
+				remove_core = TAU
+			}
+		}
+		AYU = {
+			clr_country_flag = taungoo_empire
+			add_stability = 1
+			add_prestige = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			set_government_rank = 2
+			grant_independence = yes
+			vassalize = LNA
+			609 = {
+				if = {
+					limit = {
+						NOT = { owned_by = AYU }
+					}
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = CMB
+			}
+			country_event = { id = eh_asia_THL.24 days = 1 }
+		}
+		LXA = { 
+			grant_independence = yes
+			set_government_rank = 2
+		}
+	}
+}
+
+# Konbaung dynasty
+country_event = {
+	id = eh_asia_MNM.8
+	title = "eh_asia_MNM.8.t"
+	desc = "eh_asia_MNM.8.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+        tag = TAU
+        is_year = 1750
+		NOT = { is_year = 1760 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_MNM.8.a"
+		ai_chance = { factor = 100 }
+		TAU = {
+			set_country_flag = taungoo_empire
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			inherit = SST
+			define_ruler = {
+				name = "Alaungpaya"
+				dynasty = "Konbaung"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				claim = 95
+				age = 38
+			}
+			define_heir_to_general = {	fire = 5	shock = 3	manuever = 3	siege = 2 }
+			define_heir = {
+				name = "Naungdawgyi"
+				dynasty = "Konbaung"
+				change_adm = 0
+				change_dip = 1
+				change_mil = 0
+				claim = 95
+				age = 15
+			}
+			burma_region = {
+				limit = {
+					AND = {
+						NOT = { owned_by = TAU }
+						NOT = { area = arakan_area }
+						NOT = { area = lower_burma_area }
+						NOT = { province_id = 585 }
+						NOT = { province_id = 587 }
+						NOT = { province_id = 4396 }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = SST
+			}
+			declare_war_with_cb = {
+				who = AYU
+				casus_belli = cb_imperial
+			}
+		}
+		AYU = {
+			set_country_flag = taungoo_empire
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_manpower = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = -10
+			add_inflation = 1
+			add_corruption = 10
+			country_event = { id = eh_asia_THL.25 days = 1 }
+		}
+		PEG = {
+			lower_burma_area = {
+				limit = {
+					NOT = { owned_by = PEG }
+				}
+				cede_province = PEG
+				add_core = PEG
+				remove_core = TAU
+			}
+			585 = {
+				if = {
+					limit = {
+						NOT = { owned_by = PEG }
+					}
+				}
+				cede_province = PEG
+				add_core = PEG
+				remove_core = TAU
+			}
+			4396 = {
+				if = {
+					limit = {
+						NOT = { owned_by = PEG }
+					}
+				}
+				cede_province = PEG
+				add_core = PEG
+				remove_core = TAU
+			}
+		}
+		ANN = {
+			mekong_area = {
+				limit = {
+					NOT = { owned_by = ANN }
+				}
+				cede_province = ANN
+				add_core = ANN
+				remove_core = CMB
+			}
+		}
+	}
+}
+
+# Qing invasion of Myanmar
+country_event = {
+	id = eh_asia_MNM.9
+	title = "eh_asia_MNM.9.t"
+	desc = "eh_asia_MNM.9.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_MNM.9.a"
+		ai_chance = { factor = 100 }
+		TAU = {
+			clr_country_flag = ten_great_campaigns
+			white_peace = QNG
+			add_prestige = 10
+			add_manpower = -10
+		}
+		QNG = {
+			add_prestige = -10
+			create_subject = {
+				subject_type = tributary_state
+				subject = TAU
+			}
+		}
+	}
+}
+
+# First Anglo-Burmese War
+country_event = {
+	id = eh_asia_MNM.10
+	title = "eh_asia_MNM.10.t"
+	desc = "eh_asia_MNM.10.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = TAU
+        is_year = 1825
+		NOT = { is_year = 1830 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_MNM.10.a"
+		ai_chance = { factor = 100 }
+		TAU = {
+			add_stability = -10
+			add_prestige = -10
+			add_manpower = -10
+			add_sailors = -1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+		}
+		GBR = {
+			create_subject = {
+				subject_type = protectorate
+				subject = MLB
+			}
+			arakan_area = {
+				limit = {
+					NOT = { owned_by = GBR }
+				}
+				cede_province = GBR
+				add_core = GBR
+				remove_core = TAU
+			}
+			596 = {
+				if = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+				}
+				cede_province = GBR
+				add_core = GBR
+				remove_core = NED
+			}
+		}
+		EIC = {
+			inherit = ASS
+			assam_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = EIC }
+						NOT = { province_id = 1788 }
+					}
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = ASS
+			}
+			western_assam_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = EIC }
+						NOT = { province_id = 1950 }
+					}
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = ASS
+			}
+			naga_hills_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = EIC }
+						NOT = { province_id = 2041 }
+					}
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = ASS
+			}
+		}
+	}
+}
+
+# Second Anglo-Burmese War
+country_event = {
+	id = eh_asia_MNM.11
+	title = "eh_asia_MNM.11.t"
+	desc = "eh_asia_MNM.11.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = TAU
+        is_year = 1850
+		NOT = { is_year = 1855 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TAU = {
+				add_stability = -10
+				add_prestige = -10
+				add_manpower = -10
+				add_sailors = -1000
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+			}
+			GBR = {
+				lower_burma_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TAU
+				}
+				585 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TAU
+				}
+				4396 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TAU
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MNM.11.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				TAU = { was_player = yes }
+			}
+			switch_tag = AYU
+		}
+	}
+}
+
+# British Burma
+country_event = {
+	id = eh_asia_MNM.12
+	title = "eh_asia_MNM.12.t"
+	desc = "eh_asia_MNM.12.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_MNM.12.a"
+		ai_chance = { factor = 100 }
+		BRJ = {
+			add_prestige = 10
+			burma_region = {
+				limit = {
+					NOT = { owned_by = BRJ }
+				}
+				cede_province = BRJ
+				add_core = BRJ
+				remove_core = TAU
+			}
+			2041 = {
+				if = {
+					limit = {
+						NOT = { owned_by = BRJ }
+					}
+				}
+				cede_province = BRJ
+				add_core = BRJ
+				remove_core = TAU
+			}
+		}
+	}
+}
+
+# Post-independence Burma
+country_event = {
+	id = eh_asia_MNM.13
+	title = "eh_asia_MNM.13.t"
+	desc = "eh_asia_MNM.13.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_asia_MNM.13.a"
+		ai_chance = { factor = 100 }
+		BRM = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = buddhism
+			add_prestige = 10
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+}
+
+# Socialist Burma
+country_event = {
+	id = eh_asia_MNM.14
+	title = "eh_asia_MNM.14.t"
+	desc = "eh_asia_MNM.14.d"
+	picture = COMMUNISM_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = SIA
+        is_year = 1960
+		NOT = { is_year = 1965 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_MNM.14.a"
+		ai_chance = { factor = 100 }
+		BRM = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			add_republican_tradition = -10
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			define_ruler = {
+				name = "Ne Win"
+				change_adm = 0
+				change_dip = 1
+				change_mil = 5
+				age = 50
+			}
+			define_ruler_to_general = {	fire = 3	shock = 3	manuever = 0	siege = 0 }
+		}
+	}
+}
+
+# State Peace and Development Council
+country_event = {
+	id = eh_asia_MNM.15
+	title = "eh_asia_MNM.15.t"
+	desc = "eh_asia_MNM.15.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = BRM
+        is_year = 1960
+		NOT = { is_year = 1965 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_MNM.15.a"
+		ai_chance = { factor = 100 }
+		BRM = {
+			set_country_flag = eh_military_gov
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			add_republican_tradition = -10
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+		}
+	}
+}
+
+# Renamed from Burma to Myanmar
+country_event = {
+	id = eh_asia_MNM.16
+	title = "eh_asia_MNM.16.t"
+	desc = "eh_asia_MNM.16.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = BRM
+        is_year = 1989
+		NOT = { is_year = 1990 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_MNM.16.a"
+		ai_chance = { factor = 100 }
+		BRM = {
+			change_tag = MNM
+			add_stability = 1
+			add_prestige = 10
+			add_corruption = 10
+		}
+	}
+}
+
+# Civilian government
+country_event = {
+	id = eh_asia_MNM.17
+	title = "eh_asia_MNM.17.t"
+	desc = "eh_asia_MNM.17.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = MNM
+        is_year = 2010
+		NOT = { is_year = 2015 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_MNM.17.a"
+		ai_chance = { factor = 100 }
+		MNM = {
+			clr_country_flag = eh_military_gov
+			change_government = republic
+			add_government_reform = democracy_reform
+			add_republican_tradition = 10
+			add_stability = 1
+			add_prestige = 10
+			define_advisor = {
+				type = statesman
+				name = "Aung San Suu Kyi"
+				culture = burmese
+				skill = 3
+				discount = yes
+				female = yes
+			}
+		}
+	}
+}
+
+# 2021 Myanmar coup d'état
+country_event = {
+	id = eh_asia_MNM.18
+	title = "eh_asia_MNM.18.t"
+	desc = "eh_asia_MNM.18.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = MNM
+        is_year = 2021
+		NOT = { is_year = 2022 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_MNM.18.a"
+		ai_chance = { factor = 100 }
+		MNM = {
+			set_country_flag = eh_military_gov
+			set_country_flag = uprising_eh
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			add_republican_tradition = -10
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+		}
+	}
+}
+
+########################################################################
+# Events for the Malaysia
+########################################################################
+
+# Rise of the Malacca
+country_event = {
+	id = eh_asia_MLA.1
+	title = "eh_asia_MLA.1.t"
+	desc = "eh_asia_MLA.1.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MAJ
+		is_year = 1350
+		NOT = { is_year = 1360 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_MLA.1.a"
+		ai_chance = { factor = 100 }
+		PAH = {
+			change_tag = MLC
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+		}
+		MAJ = {
+			define_advisor = {
+				type = statesman
+				name = "Gajah Mada"
+				culture = javanese
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Brunei, Johor and Perak
+country_event = {
+	id = eh_asia_MLA.2
+	title = "eh_asia_MLA.2.t"
+	desc = "eh_asia_MLA.2.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MAJ
+		is_year = 1520
+		NOT = { is_year = 1530 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			BEI = {
+				add_sailors = 1000
+				brunei_area = {
+					limit = {
+						NOT = { owned_by = BEI }
+					}
+					cede_province = BEI
+					add_core = BEI
+				}
+				sabah_area = {
+					limit = {
+						NOT = { owned_by = BEI }
+					}
+					cede_province = BEI
+					add_core = BEI
+				}
+			}
+			MLC = {
+				change_tag = JOH
+				jambi_area = {
+					limit = {
+						NOT = { owned_by = JOH }
+					}
+					cede_province = JOH
+					add_core = JOH
+					remove_core = SAK
+				}
+				620 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JOH }
+						}
+					}
+					cede_province = JOH
+					add_core = JOH
+					remove_core = SAK
+				}
+			}
+			PRK = {
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				change_religion = sunni
+				set_government_rank = 2
+				595 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRK }
+						}
+					}
+					cede_province = PRK
+					add_core = PRK
+					remove_core = MLC
+				}
+				2392 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRK }
+						}
+					}
+					cede_province = PRK
+					add_core = PRK
+					remove_core = MLC
+				}
+				4812 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRK }
+						}
+					}
+					cede_province = PRK
+					add_core = PRK
+					remove_core = MLC
+				}
+			}
+			POR = {
+				alentejo_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				beieras_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				mozambique_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ZAN
+				}
+				mascat_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = OM2
+				}
+				dhofar_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = OM2
+				}
+				334 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				395 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ALH
+				}
+				398 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = BIJ
+				}
+				596 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = MLC
+				}
+				753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				760 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1186 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ZAN
+				}
+				1192 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ZAN
+				}
+				1110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ORM
+				}
+				4287 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				4413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				4455 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MLA.2.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				MLC = { was_player = yes }
+			}
+			switch_tag = JOH
+		}
+	}
+}
+
+# Lanfang
+country_event = {
+	id = eh_asia_MLA.3
+	title = "eh_asia_MLA.3.t"
+	desc = "eh_asia_MLA.3.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BEI
+		is_year = 1770
+		NOT = { is_year = 1780 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MLA.3.a"
+		ai_chance = { factor = 100 }
+		LFA = {
+			640 = {
+				if = {
+					limit = {
+						NOT = { owned_by = LFA }
+					}
+				}
+				cede_province = LFA
+				add_core = LFA
+				remove_core = BEI
+			}
+			4802 = {
+				if = {
+					limit = {
+						NOT = { owned_by = LFA }
+					}
+				}
+				cede_province = LFA
+				add_core = LFA
+				remove_core = BEI
+			}
+		}
+		NED = {
+			650 = {
+				if = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+				}
+				cede_province = NED
+				add_core = NED
+			}
+		}
+	}
+}
+
+# British Malaya
+country_event = {
+	id = eh_asia_MLA.4
+	title = "eh_asia_MLA.4.t"
+	desc = "eh_asia_MLA.4.d"
+	picture = HOUSE_OF_TRADE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JOH
+		is_year = 1870
+		NOT = { is_year = 1880 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				create_subject = {
+					subject_type = protectorate
+					subject = JOH
+				}
+				malacca_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = JOH
+				}
+				brunei_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 636 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = BEI
+				}
+				3213 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = JOH
+				}
+				4812 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = JOH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MLA.4.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				JOH = { was_player = yes }
+			}
+			switch_tag = GBR
+		}
+	}
+}
+
+# British Borneo
+country_event = {
+	id = eh_asia_MLA.5
+	title = "eh_asia_MLA.5.t"
+	desc = "eh_asia_MLA.5.d"
+	picture = HOUSE_OF_TRADE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1880
+		NOT = { is_year = 1890 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_MLA.5.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			inherit = SRW
+			create_subject = {
+				subject_type = protectorate
+				subject = KED
+			}
+			create_subject = {
+				subject_type = protectorate
+				subject = BEI
+			}
+			sabah_area = {
+				limit = {
+					NOT = { owned_by = GBR }
+				}
+				cede_province = GBR
+				add_core = GBR
+				remove_core = SRW
+			}
+			johor_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = GBR }
+						NOT = { province_id = 597 }
+					}
+				}
+				cede_province = GBR
+				add_core = GBR
+				remove_core = JOH
+			}
+			2703 = {
+				if = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+				}
+				cede_province = GBR
+				add_core = GBR
+				remove_core = BEI
+			}
+		}
+	}
+}
+
+# Federation of Malaya
+country_event = {
+	id = eh_asia_MLA.6
+	title = "eh_asia_MLA.6.t"
+	desc = "eh_asia_MLA.6.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1955
+		NOT = { is_year = 1960 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_MLA.6.a"
+		ai_chance = { factor = 100 }
+		MSA = {
+			change_government = monarchy
+			add_government_reform = elective_monarchy_reform
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = secularism
+			set_capital = 2398
+			inherit = JOH
+			inherit = KED
+			malaya_area = {
+				limit = {
+					NOT = { owned_by = MSA }
+				}
+				cede_province = MSA
+				add_core = MSA
+				remove_core = GBR
+			}
+			malacca_area = {
+				limit = {
+					NOT = { owned_by = MSA }
+				}
+				cede_province = MSA
+				add_core = MSA
+				remove_core = GBR
+			}
+			north_malaya_area = {
+				limit = {
+					NOT = { owned_by = MSA }
+				}
+				cede_province = MSA
+				add_core = MSA
+				remove_core = GBR
+			}
+			johor_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = MSA }
+						NOT = { province_id = 2686 }
+						NOT = { province_id = 3213 }
+						NOT = { province_id = 4815 }
+					}
+				}
+				cede_province = MSA
+				add_core = MSA
+				remove_core = GBR
+			}
+		}
+	}
+}
+
+# Federation of Malaysia
+country_event = {
+	id = eh_asia_MLA.7
+	title = "eh_asia_MLA.7.t"
+	desc = "eh_asia_MLA.7.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1960
+		NOT = { is_year = 1965 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_asia_MLA.7.a"
+		ai_chance = { factor = 100 }
+		MSA = {
+			change_tag = MLA
+			brunei_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = MLA }
+						NOT = { province_id = 636 }
+					}
+				}
+				cede_province = MLA
+				add_core = MLA
+				remove_core = GBR
+			}
+			sabah_area = {
+				limit = {
+					NOT = { owned_by = MLA }
+				}
+				cede_province = MLA
+				add_core = MLA
+				remove_core = GBR
+			}
+			2703 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MLA }
+					}
+				}
+				cede_province = MLA
+				add_core = MLA
+				remove_core = GBR
+			}
+			4815 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MLA }
+					}
+				}
+				cede_province = MLA
+				add_core = MLA
+				remove_core = GBR
+			}
+			country_event = { id = eh_asia_MLA.8 days = 300 }
+		}
+	}
+}
+
+# Independence of Singapore
+country_event = {
+	id = eh_asia_MLA.8
+	title = "eh_asia_MLA.8.t"
+	desc = "eh_asia_MLA.8.d"
+	picture = NY_SKYLINE_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_MLA.8.a"
+		ai_chance = { factor = 100 }
+		SGA = {
+			change_government = republic
+			add_government_reform = plutocratic_republic
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = secularism
+			add_prestige = 10
+			add_adm_tech = 70
+			add_dip_tech = 70
+			add_mil_tech = 70
+			define_ruler = {
+				name = "Lee Kuan Yew"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 1
+				age = 46
+			}
+			4815 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SGA }
+					}
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+				change_trade_goods = electronics
+				cede_province = SGA
+				add_core = SGA
+				remove_core = MLA
+			}
+		}
+		MLA = {
+			add_prestige = -10
+			every_owned_province = { change_religion = sunni }
+		}
+	}
+}
+
+# Independence of Brunei
+country_event = {
+	id = eh_asia_MLA.9
+	title = "eh_asia_MLA.9.t"
+	desc = "eh_asia_MLA.9.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1984
+		NOT = { is_year = 1987 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_asia_MLA.9.a"
+		ai_chance = { factor = 100 }
+		BEI = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = sunni
+			add_prestige = 10
+			grant_independence = yes
+			636 = {
+				if = {
+					limit = {
+						NOT = { owned_by = BEI }
+					}
+				}
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 1
+				change_trade_goods = oil
+				cede_province = BEI
+				add_core = BEI
+				remove_core = GBR
+			}
+		}
+	}
+}
+
+# 1997 Financial crisis
+country_event = {
+	id = eh_asia_MLA.10
+	title = "eh_asia_MLA.10.t"
+	desc = "eh_asia_MLA.10.d"
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MLA
+		is_year = 1997
+		NOT = { is_year = 1998 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_MLA.10.a"
+		ai_chance = { factor = 100 }
+		MLA = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+	}
+}
+
+# Modern Malaysia
+country_event = {
+	id = eh_asia_MLA.11
+	title = "eh_asia_MLA.11.t"
+	desc = "eh_asia_MLA.11.d"
+	picture = NY_SKYLINE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MLA
+		is_year = 2010
+		NOT = { is_year = 2020 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_MLA.11.a"
+		ai_chance = { factor = 100 }
+		MLA = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = 10
+			add_years_of_income = 2
+			malaya_region = {
+				limit = { owned_by = MLA }
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Laos
+########################################################################
+
+# Laotian Muangs
+country_event = {
+	id = eh_asia_LAO.1
+	title = "eh_asia_LAO.1.t"
+	desc = "eh_asia_LAO.1.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CMB
+		is_year = 1100
+		NOT = { is_year = 1110 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_LAO.1.a"
+		ai_chance = { factor = 100 }
+		MPH = {
+			change_government = tribal
+			add_government_reform = tribal_kingdom
+			set_government_rank = 2
+			change_religion = buddhism
+			north_laos_area = {
+				limit = {
+					NOT = { owned_by = MPH }
+				}
+				change_culture = lao
+				cede_province = MPH
+				add_core = MPH
+			}
+			champasak_area = {
+				limit = {
+					NOT = { owned_by = MPH }
+				}
+				change_culture = lao
+				cede_province = MPH
+				add_core = MPH
+			}
+			vientiane_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = MPH }
+						NOT = { province_id = 4838 }
+					}
+				}
+				cede_province = MPH
+				add_core = MPH
+				remove_core = CMB
+			}
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+}
+
+# Rise of the Lan Xang
+country_event = {
+	id = eh_asia_LAO.2
+	title = "eh_asia_LAO.2.t"
+	desc = "eh_asia_LAO.2.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CMB
+		is_year = 1350
+		NOT = { is_year = 1360 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			MPH = {
+				change_tag = LXA
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				set_government_rank = 2
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				north_laos_area = {
+					limit = {
+						NOT = { owned_by = LXA }
+					}
+					cede_province = LXA
+					add_core = LXA
+					remove_core = SUK
+				}
+				champasak_area = {
+					limit = {
+						NOT = { owned_by = LXA }
+					}
+					cede_province = LXA
+					add_core = LXA
+					remove_core = SUK
+				}
+				vientiane_area = {
+					limit = {
+						NOT = { owned_by = LXA }
+					}
+					cede_province = LXA
+					add_core = LXA
+					remove_core = SUK
+				}
+				2371 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LXA }
+						}
+					}
+					cede_province = LXA
+					add_core = LXA
+					remove_core = SUK
+				}
+				2386 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LXA }
+						}
+					}
+					cede_province = LXA
+					add_core = LXA
+					remove_core = SUK
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_LAO.2.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				CMB = { was_player = yes }
+			}
+			switch_tag = LXA
+		}
+	}
+}
+
+# Luang Prabang, Vientiane, and Champasak
+country_event = {
+	id = eh_asia_LAO.3
+	title = "eh_asia_LAO.3.t"
+	desc = "eh_asia_LAO.3.d"
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LXA
+		is_year = 1700
+		NOT = { is_year = 1710 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_LAO.3.a"
+		ai_chance = { factor = 100 }
+		LXA = {
+			change_tag = LUA
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Kitsarat"
+				dynasty = "Prabang"
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				claim = 95 
+			}
+		}
+		VIE = {
+			611 = {
+				if = {
+					limit = {
+						NOT = { owned_by = VIE }
+					}
+				}
+				cede_province = VIE
+				add_core = VIE
+			}
+			614 = {
+				if = {
+					limit = {
+						NOT = { owned_by = VIE }
+					}
+				}
+				cede_province = VIE
+				add_core = VIE
+			}
+			2382 = {
+				if = {
+					limit = {
+						NOT = { owned_by = VIE }
+					}
+				}
+				cede_province = VIE
+				add_core = VIE
+			}
+			2384 = {
+				if = {
+					limit = {
+						NOT = { owned_by = VIE }
+					}
+				}
+				cede_province = VIE
+				add_core = VIE
+			}
+			2385 = {
+				if = {
+					limit = {
+						NOT = { owned_by = VIE }
+					}
+				}
+				cede_province = VIE
+				add_core = VIE
+			}
+			2386 = {
+				if = {
+					limit = {
+						NOT = { owned_by = VIE }
+					}
+				}
+				cede_province = VIE
+				add_core = VIE
+			}
+		}
+		CHK = {
+			champasak_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = CHK }
+						NOT = { province_id = 611 }
+						NOT = { province_id = 2382 }
+					}
+				}
+				cede_province = CHK
+				add_core = CHK
+			}
+			2383 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CHK }
+					}
+				}
+				cede_province = CHK
+				add_core = CHK
+			}
+			4838 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CHK }
+					}
+				}
+				cede_province = CHK
+				add_core = CHK
+			}
+		}
+		AYU = { create_guarantee = LUA }
+	}
+}
+
+# Luang Prabang diplomacy
+country_event = {
+	id = eh_asia_LAO.4
+	title = "eh_asia_LAO.4.t"
+	desc = "eh_asia_LAO.4.d"
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LUA
+		is_year = 1830
+		NOT = { is_year = 1840 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			LUA = { add_prestige = 10 }
+			RTN = {
+				add_prestige = 10
+				inherit = VIE
+				vassalize = CHK
+				vassalize = LUA
+				vassalize = CMB
+				khorat_area = {
+					limit = {
+						NOT = { owned_by = RTN }
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = VIE
+				}
+				vientiane_area = {
+					limit = {
+						NOT = { owned_by = RTN }
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = VIE
+				}
+				599 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTN }
+						}
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = JOH
+				}
+				611 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTN }
+						}
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = VIE
+				}
+				614 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTN }
+						}
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = VIE
+				}
+				2393 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTN }
+						}
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = JOH
+				}
+				2382 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTN }
+						}
+					}
+					cede_province = RTN
+					add_core = RTN
+					remove_core = VIE
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_LAO.4.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				LUA = { was_player = yes }
+			}
+			switch_tag = RTN
+		}
+	}
+}
+
+# French Protectorate of Laos
+country_event = {
+	id = eh_asia_LAO.5
+	title = "eh_asia_LAO.5.t"
+	desc = "eh_asia_LAO.5.d"
+	picture = COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LUA
+		is_year = 1890
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_LAO.5.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			add_prestige = 10
+			inherit = LUA
+			north_laos_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = LUA
+			}
+			champasak_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = CHK
+			}
+		}
+	}
+}
+
+# Kingdom of Laos
+country_event = {
+	id = eh_asia_LAO.6
+	title = "eh_asia_LAO.6.t"
+	desc = "eh_asia_LAO.6.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 1945
+		NOT = { is_year = 1947 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		LUA = {
+			north_laos_area = {
+				limit = {
+					NOT = { owned_by = LUA }
+				}
+				cede_province = LUA
+				add_core = LUA
+				remove_core = FR2
+			}
+			champasak_area = {
+				limit = {
+					NOT = { owned_by = LUA }
+				}
+				cede_province = LUA
+				add_core = LUA
+				remove_core = FR2
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_LAO.6.a"
+		ai_chance = { factor = 100 }
+		LUA = {
+			set_country_flag = eh_override_name
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = buddhism
+			add_prestige = 10
+			override_country_name = "Laos"
+			define_ruler = {
+				name = "Sisavang Vong"
+				dynasty = "Prabang"
+				change_adm = 1
+				change_dip = 3
+				change_mil = 3
+				claim = 95
+				age = 60
+			}
+		}
+	}
+}
+
+# Pathet Lao
+country_event = {
+	id = eh_asia_LAO.7
+	title = "eh_asia_LAO.7.t"
+	desc = "eh_asia_LAO.7.d"
+	picture = COMMUNISM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 1955
+		NOT = { is_year = 1960 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_LAO.7.a"
+		ai_chance = { factor = 100 }
+		LUA = {
+			set_country_flag = uprising_eh
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_legitimacy = -10
+			add_manpower = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_inflation = 1
+			every_owned_province = {
+				add_unrest = 0.1
+				add_core = LAO
+			}
+			random_owned_province = {
+				limit = { area = north_laos_area }
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = LAO
+				}
+			}
+			random_owned_province = {
+				limit = { area = north_laos_area }
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = LAO
+				}
+			}
+			random_owned_province = {
+				limit = { area = champasak_area }
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = LAO
+				}
+			}
+			country_event = { id = eh_asia_LAO.8 days = 300 }
+		}
+	}
+}
+
+# Modern Laos
+country_event = {
+	id = eh_asia_LAO.8
+	title = "eh_asia_LAO.8.t"
+	desc = "eh_asia_LAO.8.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			LUA = {
+				every_owned_province = {
+					kill_units = {
+						who = REB
+						type = infantry
+					}
+					kill_units = {
+						who = REB
+						type = cavalry
+					}
+					kill_units = {
+						who = REB
+						type = artillery
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_LAO.8.a"
+		ai_chance = { factor = 100 }
+		LUA = {
+			set_country_flag = eh_communist
+			clr_country_flag = eh_override_name
+			clr_country_flag = uprising_eh
+			change_tag = LAO
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = secularism
+			add_prestige = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			restore_country_name = yes
+			define_ruler = {
+				name = "Souphanouvong"
+				change_adm = 2
+				change_dip = 3
+				change_mil = 3
+				age = 66
+			}
+			every_owned_province = {
+				add_unrest = -0.1
+				cede_province = LAO
+				add_core = LAO
+			}
+			add_trust = {
+				who = NVI
+				value = 25
+				mutual = yes
+			}
+		}
+		NVI = { create_guarantee = LAO }
+	}
+}
+
+########################################################################
+# Events for the Philippines
+########################################################################
+
+# Spanish rule
+country_event = {
+	id = eh_asia_PHI.1
+	title = "eh_asia_PHI.1.t"
+	desc = "eh_asia_PHI.1.d"
+	picture = COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1570
+		NOT = { is_year = 1580 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_PHI.1.a"
+		ai_chance = { factor = 100 }
+		luzon_area = {
+			limit = {
+				AND = {	
+					NOT = { owned_by = SPA }
+					NOT = { province_id = 4348 }
+				}
+			}
+			cede_province = SPA
+			add_core = SPA
+		}
+		southern_luzon_area = {
+			limit = {
+				NOT = { owned_by = SPA }
+			}
+			cede_province = SPA
+			add_core = SPA
+		}
+		visayas_area = {
+			limit = {
+				NOT = { owned_by = SPA }
+			}
+			cede_province = SPA
+			add_core = SPA
+		}
+		2702 = {
+			if = {
+				limit = {
+					NOT = { owned_by = SPA }
+				}
+			}
+			cede_province = SPA
+			add_core = SPA
+		}
+		4354 = {
+			if = {
+				limit = {
+					NOT = { owned_by = SPA }
+				}
+			}
+			cede_province = SPA
+			add_core = SPA
+		}
+	}
+}
+
+# Philippine Revolution
+country_event = {
+	id = eh_asia_PHI.2
+	title = "eh_asia_PHI.2.t"
+	desc = "eh_asia_PHI.2.d"
+	picture = REVOLUTION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1895
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			A16 = {
+				change_culture = filipino
+				luzon_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = SPA
+				}
+				southern_luzon_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = SPA
+				}
+				visayas_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = SPA
+				}
+				palawan_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = SPA
+				}
+				west_mindanao_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = SPA
+				}
+				mindanao_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = SPA
+				}
+			}
+			SPA = { country_event = { id = eh_spanish.22 days = 100 } }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_PHI.2.a"
+		ai_chance = { factor = 100 }
+		A16 = {
+			change_government = republic
+			add_government_reform = democracy_reform
+		}
+	}
+}
+
+# American rule
+country_event = {
+	id = eh_asia_PHI.3
+	title = "eh_asia_PHI.3.t"
+	desc = "eh_asia_PHI.3.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				inherit = UHW
+				moluccas_region = {
+					limit = {
+						owned_by = A16
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = A16
+				}
+				492 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = SPA
+				}
+				1235 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = SPA
+				}
+				1240 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = HAW
+				}
+				1994 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+			}
+			DE2 = {
+				1995 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = SPA
+				}
+				1996 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = SPA
+				}
+			}
+			CAN = {
+				3099 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+			}
+			DAN = {
+				1804 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+				}
+			}
+			CUB = {
+				cuba_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CUB }
+							NOT = { province_id = 4800 }
+						}
+					}
+					cede_province = CUB
+					add_core = CUB
+					remove_core = SPA
+				}
+				east_cuba_area = {
+					limit = {
+						NOT = { owned_by = CUB }
+					}
+					cede_province = CUB
+					add_core = CUB
+					remove_core = SPA
+				} 
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_PHI.3.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			clr_country_flag = spanish_american_war
+			add_prestige = -10
+			white_peace = USA
+		}
+		USA = {
+			clr_country_flag = spanish_american_war
+			add_prestige = 10
+			country_event = { id = eh_USA.28 days = 1 }
+		}
+		CUB = {
+			every_owned_province = {
+				change_culture = iberian_caribbean
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Commonwealth of the Philippines
+country_event = {
+	id = eh_asia_PHI.4
+	title = "eh_asia_PHI.4.t"
+	desc = "eh_asia_PHI.4.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1935
+		NOT = { is_year = 1936 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			A16 = {
+				change_culture = filipino
+				luzon_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = USA
+				}
+				southern_luzon_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = USA
+				}
+				visayas_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = USA
+				}
+				palawan_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = USA
+				}
+				west_mindanao_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = USA
+				}
+				mindanao_area = {
+					limit = {
+						NOT = { owned_by = A16 }
+					}
+					cede_province = A16
+					add_core = A16
+					remove_core = USA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_PHI.4.a"
+		ai_chance = { factor = 100 }
+		A16 = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			swap_free_idea_group = yes
+		}
+		USA = { 
+			create_subject = {
+				subject_type = sphere_member
+				subject = A16
+			}
+		}
+	}
+}
+
+# Third Republic
+country_event = {
+	id = eh_asia_PHI.5
+	title = "eh_asia_PHI.5.t"
+	desc = "eh_asia_PHI.5.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A16
+		is_year = 1946
+		NOT = { is_year = 1947 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_PHI.5.a"
+		ai_chance = { factor = 100 }
+		A16 = { grant_independence = yes }
+	}
+}
+
+# Fourth Republic
+country_event = {
+	id = eh_asia_PHI.6
+	title = "eh_asia_PHI.6.t"
+	desc = "eh_asia_PHI.6.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A16
+		is_year = 1965
+		NOT = { is_year = 1970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_PHI.6.a"
+		ai_chance = { factor = 100 }
+		A16 = {
+			set_country_flag = eh_military_gov
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			add_republican_tradition = -10
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_sailors = -1000
+			add_corruption = 10
+			add_inflation = 1
+			define_ruler = {
+				name = "Ferdinand Marcos"
+				change_adm = 0
+				change_dip = 0
+				change_mil = 5
+				age = 48
+			}
+		}
+	}
+}
+
+# Fifth Republic
+country_event = {
+	id = eh_asia_PHI.7
+	title = "eh_asia_PHI.7.t"
+	desc = "eh_asia_PHI.7.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A16
+		is_year = 1980
+		NOT = { is_year = 1985 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_PHI.7.a"
+		ai_chance = { factor = 100 }
+		A16 = {
+			clr_country_flag = eh_military_gov
+			change_government = republic
+			add_government_reform = democracy_reform
+			add_republican_tradition = 10
+			define_ruler = {
+				name = "Corazon Aquino"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 3
+				female = yes
+				age = 53
+			}
+		}
+	}
+}
+
+# 1997 Financial crisis
+country_event = {
+	id = eh_asia_PHI.8
+	title = "eh_asia_PHI.8.t"
+	desc = "eh_asia_PHI.8.d"
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A16
+		is_year = 1997
+		NOT = { is_year = 1998 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_PHI.8.a"
+		ai_chance = { factor = 100 }
+		A16 = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+	}
+}
+
+# Modern Philippines
+country_event = {
+	id = eh_asia_PHI.9
+	title = "eh_asia_PHI.9.t"
+	desc = "eh_asia_PHI.9.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A16
+		is_year = 2016
+		NOT = { is_year = 2017 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_PHI.9.a"
+		ai_chance = { factor = 100 }
+		A16 = {
+			add_stability = 1
+			add_prestige = 10
+			define_ruler = {
+				name = "Rodrigo Duterte"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 4
+				age = 71
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Thailand
+########################################################################
+
+# Rise of the Dvaravati
+country_event = {
+	id = eh_asia_THL.1
+	title = "eh_asia_THL.1.t"
+	desc = "eh_asia_THL.1.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			DVA = {
+				change_government = tribal
+				add_government_reform = tribal_federation
+				set_government_rank = 2
+				add_adm_tech = 7
+				add_dip_tech = 7
+				add_mil_tech = 7
+				inherit = LAW
+				define_ruler = {
+					name = "Phraya Kalavarnadit"
+					dynasty = "Dvaravati"
+					change_adm = 4
+					change_dip = 3
+					change_mil = 1
+					claim = 95
+				}
+				define_heir = {
+					dynasty = "Dvaravati"
+				}
+				northern_thai_area = {
+					limit = {
+						NOT = { owned_by = DVA }
+					}
+					cede_province = DVA
+					add_core = DVA
+					remove_core = CNA
+				}
+				sukhothai_area = {
+					limit = {
+						NOT = { owned_by = DVA }
+					}
+					cede_province = DVA
+					add_core = DVA
+					remove_core = CNA
+				}
+				central_thai_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DVA }
+							NOT = { province_id = 603 }
+						}
+					}
+					cede_province = DVA
+					add_core = DVA
+					remove_core = CNA
+				}
+				north_tenasserim_area = {
+					limit = {
+						NOT = { owned_by = DVA }
+					}
+					cede_province = DVA
+					add_core = DVA
+					remove_core = CNA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_THL.1.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				CMB = { was_player = yes }
+			}
+			switch_tag = DVA
+		}
+	}
+	
+	option = {
+		name = "eh_asia_THL.1.b"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Lavo and Hariphunchai
+country_event = {
+	id = eh_asia_THL.2
+	title = "eh_asia_THL.2.t"
+	desc = "eh_asia_THL.2.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DVA
+		is_year = 640
+		NOT = { is_year = 650 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.2.a"
+		ai_chance = { factor = 100 }
+		DVA = { 
+			change_tag = LAV
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			central_thai_area = { change_culture = central_thai }
+		}
+		HRP = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Jamadevi"
+				dynasty = "Haripunchai"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 2
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Haripunchai"
+			}
+			northern_thai_area = {
+				limit = {
+					NOT = { owned_by = HRP }
+				}
+				change_culture = northern_thai
+				cede_province = HRP
+				add_core = HRP
+				remove_core = DVA
+			}
+			karenni_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = DVA }
+						NOT = { province_id = 587 }
+					}
+				}
+				cede_province = HRP
+				add_core = HRP
+				remove_core = DVA
+			}
+			601 = {
+				if = {
+					limit = {
+						NOT = { owned_by = HRP }
+					}
+				}
+				cede_province = HRP
+				add_core = HRP
+				remove_core = DVA
+			}
+		}
+	}
+}
+
+# Rise of the Sukhothai
+country_event = {
+	id = eh_asia_THL.3
+	title = "eh_asia_THL.3.t"
+	desc = "eh_asia_THL.3.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LAV
+		is_year = 1240
+		NOT = { is_year = 1250 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.3.a"
+		ai_chance = { factor = 100 }
+		LAV = {
+			change_tag = SUK
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			change_religion = buddhism
+			set_capital = 601
+			define_ruler = {
+				name = "Sri Indraditya"
+				dynasty = "Phra Ruang"
+				change_adm = 2
+				change_dip = 1
+				change_mil = 3
+				age = 32
+				claim = 95
+			}
+			define_heir = {
+				name = "Ram Khamhaeng"
+				dynasty = "Phra Ruang"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 4
+				age = 1
+				claim = 95
+			}
+			every_owned_province = {
+				change_culture = central_thai
+				change_religion = buddhism
+			}
+		}
+		LGK = {
+			change_tag = LIG
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			change_religion = sunni
+			set_government_rank = 2
+			tenasserim_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = LIG }
+						NOT = { province_id = 574 }
+						NOT = { province_id = 594 }
+					}
+				}
+				cede_province = LIG
+				add_core = LIG
+				remove_core = SRI
+			}
+		}
+	}
+}
+
+# Ram Khamhaeng
+country_event = {
+	id = eh_asia_THL.4
+	title = "eh_asia_THL.4.t"
+	desc = "eh_asia_THL.4.d"
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SUK
+		is_year = 1280
+		NOT = { is_year = 1290 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.4.a"
+		ai_chance = { factor = 100 }
+		SUK = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			create_guarantee = LNA
+			create_guarantee = MPH
+			define_ruler = {
+				name = "Ram Khamhaeng"
+				dynasty = "Phra Ruang"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 4
+				age = 39
+				claim = 95
+			}
+			define_heir = {
+				name = "Loethai"
+				dynasty = "Phra Ruang"
+				change_adm = 0
+				change_dip = 4
+				change_mil = 1
+				age = 22
+				claim = 95
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = { owned_by = SUK }
+				}
+				cede_province = SUK
+				add_core = SUK
+				remove_core = PAG
+			}
+			north_laos_area = {
+				limit = {
+					NOT = { owned_by = SUK }
+				}
+				cede_province = SUK
+				add_core = SUK
+				remove_core = MPH
+			}
+			sukhothai_area = {
+				limit = {
+					NOT = { owned_by = SUK }
+				}
+				cede_province = SUK
+				add_core = SUK
+				remove_core = LAV
+			}
+			1817 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SUK }
+					}
+				}
+				cede_province = SUK
+				add_core = SUK
+				remove_core = CMB
+			}
+		}
+		HRP = {
+			change_tag = LNA
+			every_owned_province = { change_culture = northern_thai }
+		}
+	}
+}
+
+# Rise of the Ayutthaya
+country_event = {
+	id = eh_asia_THL.5
+	title = "eh_asia_THL.5.t"
+	desc = "eh_asia_THL.5.d"
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SUK
+		is_year = 1350
+		NOT = { is_year = 1360 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.5.a"
+		ai_chance = { factor = 100 }
+		AYU = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			define_ruler = {
+				name = "Somdet Phra Chao"
+				dynasty = "Uthong"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 4
+				claim = 95
+				age = 30
+			}
+			define_heir = {
+				name = "Ramesuan"
+				dynasty = "Uthong"
+				change_adm = 2
+				change_dip = 3
+				change_mil = 3
+				claim = 95
+				age = 11
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = { owned_by = AYU }
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = SUK
+			}
+			central_thai_area = {
+				limit = {
+					NOT = { owned_by = AYU }
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = SUK
+			}
+			591 = {
+				if = {
+					limit = {
+						NOT = { owned_by = AYU }
+					}
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = SUK
+			}
+			2404 = {
+				if = {
+					limit = {
+						NOT = { owned_by = AYU }
+					}
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = SUK
+			}
+			4834 = {
+				if = {
+					limit = {
+						NOT = { owned_by = AYU }
+					}
+				}
+				cede_province = AYU
+				add_core = AYU
+				remove_core = SUK
+			}
+		}
+		LNA = {
+			northern_thai_area = {
+				limit = {
+					NOT = { owned_by = LNA }
+				}
+				cede_province = LNA
+				add_core = LNA
+				remove_core = SUK
+			}
+		}
+		MYI = {
+			change_tag = AVA
+			swap_free_idea_group = yes
+		}
+	}
+}
+
+# Fall of the Suhkothai
+country_event = {
+	id = eh_asia_THL.6
+	title = "eh_asia_THL.6.t"
+	desc = "eh_asia_THL.6.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SUK
+		is_year = 1370
+		NOT = { is_year = 1380 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			AYU = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_stability = 1
+				add_manpower = 30
+				add_sailors = 1000
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				add_prestige = 30
+				add_years_of_income = 3
+				create_subject = {
+					subject_type = tributary_state
+					subject = SUK
+				}
+				define_ruler = {
+					name = "Ramesuan I"
+					dynasty = "Suphannaphum"
+					change_adm = 3
+					change_dip = 3
+					change_mil = 4
+					claim = 95
+					age = 31
+				}
+				define_heir = {
+					dynasty = "Suphannaphum"
+				}
+				khorat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AYU }
+							NOT = { province_id = 2383 }
+							NOT = { province_id = 2386 }
+						}
+					}
+					cede_province = AYU
+					add_core = AYU
+					remove_core = SUK
+				}
+				2388 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AYU }
+						}
+					}
+					cede_province = AYU
+					add_core = AYU
+					remove_core = SUK
+				}
+				4833 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AYU }
+						}
+					}
+					cede_province = AYU
+					add_core = AYU
+					remove_core = SUK
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_THL.6.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				SUK = { was_player = yes }
+			}
+			switch_tag = AYU
+		}
+	}
+}
+
+# Burmese-Siamese wars
+country_event = {
+	id = eh_asia_THL.7
+	title = "eh_asia_THL.7.t"
+	desc = "eh_asia_THL.7.d"
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AYU
+		is_year = 1560
+		NOT = { is_year = 1570 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.7.a"
+		ai_chance = { factor = 100 }
+		AYU = {
+			set_country_flag = taungoo_empire
+			add_stability = -1
+			inherit = SUK
+			create_subject = {
+				subject_type = tributary_state
+				subject = LNA
+			}
+			define_ruler = {
+				name = "Thammaraja I"
+				dynasty = "Suhkothai"
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+				claim = 95
+			}
+			define_heir = {
+				name = "Naresuan"
+				dynasty = "Suhkothai"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 6
+				claim = 95
+				age = 14
+			}
+			declare_war_with_cb = {
+				who = TAU
+				casus_belli = cb_humiliate
+			}
+		}
+		TAU = {
+			set_country_flag = taungoo_empire
+			country_event = { id = eh_asia_THL.21 days = 1 }
+		}
+	}
+}
+
+# Naresuan
+country_event = {
+	id = eh_asia_THL.8
+	title = "eh_asia_THL.8.t"
+	desc = "eh_asia_THL.8.d"
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AYU
+		is_year = 1590
+		NOT = { is_year = 1600 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.8.a"
+		ai_chance = { factor = 100 }
+		AYU = {
+			set_country_flag = taungoo_empire
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			define_ruler = {
+				name = "Naresuan"
+				dynasty = "Suhkothai"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 6
+				claim = 95
+				age = 35
+			}
+			define_heir_to_general = {	fire = 4	shock = 3	manuever = 4	siege = 1 }
+			define_consort = {
+				name = "Mani Rattana"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Suhkothai"
+			}
+			declare_war_with_cb = {
+				who = TAU
+				casus_belli = cb_independence_war
+			}
+		}
+		TAU = {
+			set_country_flag = taungoo_empire
+			add_stability = -1
+			add_prestige = -10
+			add_legitimacy = -10
+			add_manpower = -10
+			add_sailors = -1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_corruption = 10
+			add_inflation = 1
+			country_event = { id = eh_asia_THL.23 days = 1 } 
+		}
+		LXA = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+		}
+		TOK = {
+			red_river_delta_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = TOK }
+						NOT = { province_id = 2371 }
+					}
+				}
+				cede_province = TOK
+				add_core = TOK
+				remove_core = DV2
+			}
+		}
+		ANN = {
+			tay_nguyen_area = {
+				limit = {
+					NOT = { owned_by = ANN }
+				}
+				cede_province = ANN
+				add_core = ANN
+				remove_core = CHA
+			}
+		}
+		DMK = { change_tag = MTR }
+	}
+}
+
+# Fall of the Ayutthaya
+country_event = {
+	id = eh_asia_THL.9
+	title = "eh_asia_THL.9.t"
+	desc = "eh_asia_THL.9.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.9.a"
+		ai_chance = { factor = 100 }
+		AYU = {
+			clr_country_flag = taungoo_empire
+			white_peace = TAU
+			add_prestige = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+		}
+		TAU = {
+			clr_country_flag = taungoo_empire
+			add_prestige = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			kill_ruler = yes
+			inherit = PEG
+			burma_region = {
+				limit = {
+					AND = {
+						NOT = { owned_by = TAU }
+						NOT = { area = arakan_area }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = PEG
+			}
+			2041 = {
+				if = {
+					limit = {
+						NOT = { owned_by = TAU }
+					}
+				}
+				cede_province = TAU
+				add_core = TAU
+				remove_core = MLB
+			}
+			country_event = { id = eh_asia_THL.26 days = 1 }
+		}
+	}
+}
+
+# Rise of the Thonburi
+country_event = {
+	id = eh_asia_THL.10
+	title = "eh_asia_THL.10.t"
+	desc = "eh_asia_THL.10.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AYU
+		is_year = 1765
+		NOT = { is_year = 1770 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_THL.10.a"
+		ai_chance = { factor = 100 }
+		AYU = {
+			change_tag = THB
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			define_ruler = {
+				name = "Phya Taksin"
+				dynasty = "Thonburi"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 6
+				claim = 95
+				age = 33
+			}
+			define_heir_to_general = {	fire = 2	shock = 4	manuever = 4	siege = 0 }
+			define_consort = {
+				name = "Batboricha"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			remove_heir = { allow_new_heir = no }
+			594 = {
+				if = {
+					limit = {
+						NOT = { owned_by = THB }
+					}
+				}
+				cede_province = THB
+				add_core = THB
+				remove_core = PAT
+			}
+		}
+		CMB = {
+			609 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CMB }
+					}
+				}
+				cede_province = CMB
+				add_core = CMB
+				remove_core = THB
+			}
+			2379 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CMB }
+					}
+				}
+				cede_province = CMB
+				add_core = CMB
+				remove_core = THB
+			}
+		}
+	}
+}
+
+# Rattanakosin period
+country_event = {
+	id = eh_asia_THL.11
+	title = "eh_asia_THL.11.t"
+	desc = "eh_asia_THL.11.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = THB
+		is_year = 1780
+		NOT = { is_year = 1790 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.11.a"
+		ai_chance = { factor = 100 }
+		THB = {
+			change_tag = RTN
+			add_government_reform = siamese_absolutism
+			change_government = monarchy
+			set_government_rank = 2
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			create_alliance = ANN
+			vassalize = LNA
+			set_capital = 4831
+			define_ruler = {
+				name = "Rama I"
+				dynasty = "Chakri"
+				change_adm = 6
+				change_dip = 3
+				change_mil = 5
+				claim = 95
+				age = 46
+			}
+			define_heir_to_general = {	fire = 2	shock = 4	manuever = 4	siege = 0 }
+			define_consort = {
+				name = "Amarindra"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Rama II"
+				dynasty = "Chakri"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 4
+				claim = 95
+				age = 13
+			}
+			609 = {
+				if = {
+					limit = {
+						NOT = { owned_by = RTN }
+					}
+				}
+				cede_province = RTN
+				add_core = RTN
+				remove_core = CMB
+			}
+			2379 = {
+				if = {
+					limit = {
+						NOT = { owned_by = RTN }
+					}
+				}
+				cede_province = RTN
+				add_core = RTN
+				remove_core = CMB
+			}
+		}
+	}
+}
+
+# Chulalongkorn
+country_event = {
+	id = eh_asia_THL.12
+	title = "eh_asia_THL.12.t"
+	desc = "eh_asia_THL.12.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RTN
+		is_year = 1865
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_THL.12.a"
+		ai_chance = { factor = 100 }
+		RTN = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			inherit = LNA
+			vassalize = CMB
+			define_ruler = {
+				name = "Chulalongkorn"
+				dynasty = "Chakri"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 2
+				claim = 95
+				age = 13
+			}
+			define_consort = {
+				name = "Saovabha Phongsri"
+				dynasty = "Chakri"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			remove_heir = { allow_new_heir = no }
+			khorat_area = { change_culture = central_thai }
+			country_event = { id = eh_asia_THL.13 days = 300 }
+		}
+	}
+}
+
+# Territorial losses (1)
+country_event = {
+	id = eh_asia_THL.13
+	title = "eh_asia_THL.13.t"
+	desc = "eh_asia_THL.13.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.13.a"
+		ai_chance = { factor = 100 }
+		RTN = {
+			add_prestige = 10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			4831 = {
+				add_institution_embracement = {
+					which = imperialism
+					value = 50
+				}
+			}
+		}
+		FR2 = {
+			create_guarantee = RTN
+			inherit = CMB
+			angkor_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = FR2 }
+						NOT = { province_id = 609 }
+					}
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = CMB
+			}
+			cambodia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = FR2 }
+						NOT = { province_id = 2379 }
+					}
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = CMB
+			}
+		}
+		GBR = { create_guarantee = RTN }
+	}
+}
+
+# Territorial losses (2)
+country_event = {
+	id = eh_asia_THL.14
+	title = "eh_asia_THL.14.t"
+	desc = "eh_asia_THL.14.d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RTN
+		is_year = 1900
+		NOT = { is_year = 1910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.14.a"
+		ai_chance = { factor = 100 }
+		RTN = {
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+		}
+		GBR = {
+			vassalize = KED
+			malaya_area = {
+				limit = {
+					NOT = { owned_by = GBR }
+				}
+				cede_province = GBR
+				add_core = GBR
+				remove_core = RTN
+			}
+		}
+		FR2 = {
+			champasak_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = RTN
+			}
+			angkor_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = RTN
+			}
+			cambodia_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = RTN
+			}
+		}
+	}
+}
+
+# Siamese revolution of 1932
+country_event = {
+	id = eh_asia_THL.15
+	title = "eh_asia_THL.15.t"
+	desc = "eh_asia_THL.15.d"
+	picture = REVOLUTION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RTN
+		is_year = 1932
+		NOT = { is_year = 1935 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_THL.15.a"
+		ai_chance = { factor = 100 }
+		RTN = {
+			change_tag = SIA
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			change_technology_group = asian
+			change_religion = buddhism
+			add_stability = 1
+			add_prestige = 10
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Ananda Mahidol"
+				dynasty = "Chakri"
+				change_adm = 4
+				change_dip = 4
+				change_mil = 1
+				claim = 95
+				age = 10
+			}
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+}
+
+# Postwar Thailand
+country_event = {
+	id = eh_asia_THL.16
+	title = "eh_asia_THL.16.t"
+	desc = "eh_asia_THL.16.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.16.a"
+		ai_chance = { factor = 100 }
+		SIA = {
+			set_government_rank = 2
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			grant_independence = yes
+			define_ruler = {
+				name = "Bhumibol Adulyadej"
+				dynasty = "Chakri"
+				change_adm = 3
+				change_dip = 4
+				change_mil = 4
+				claim = 95
+				age = 19
+			}
+			define_consort = {
+				name = "Sirikit"
+				dynasty = "Kitiyakara"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+}
+
+# 1973 Thai student uprising
+country_event = {
+	id = eh_asia_THL.17
+	title = "eh_asia_THL.17.t"
+	desc = "eh_asia_THL.17.d"
+	picture = REVOLUTION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 1973
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_THL.17.a"
+		ai_chance = { factor = 100 }
+		SIA = {
+			add_stability = -1
+			add_prestige = -10
+			add_corruption = 10
+			add_inflation = 1
+			601 = {
+				add_unrest = 0.1
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 0
+				}
+				change_controller = REB
+			}
+			4831 = {
+				add_unrest = 0.1
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 0
+				}
+				change_controller = REB
+			}
+		}
+	}
+}
+
+# 1997 Financial crisis
+country_event = {
+	id = eh_asia_THL.18
+	title = "eh_asia_THL.18.t"
+	desc = "eh_asia_THL.18.d"
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 1997
+		NOT = { is_year = 1998 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_THL.18.a"
+		ai_chance = { factor = 100 }
+		SIA = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+	}
+}
+
+# Democracy and Political crisis
+country_event = {
+	id = eh_asia_THL.19
+	title = "eh_asia_THL.19.t"
+	desc = "eh_asia_THL.19.d"
+	picture = REVOLUTION_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 2005
+		NOT = { is_year = 2015 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_THL.19.a"
+		ai_chance = { factor = 100 }
+		SIA = {
+			add_stability = -1
+			add_prestige = -10
+			add_legitimacy = 10
+			add_corruption = 30
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			central_thai_area = {
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			4831 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+
+# The New King
+country_event = {
+	id = eh_asia_THL.20
+	title = "eh_asia_THL.20.t"
+	desc = "eh_asia_THL.20.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SIA
+		is_year = 2016
+		NOT = { is_year = 2017 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_THL.20.a"
+		ai_chance = { factor = 100 }
+		SIA = {
+			define_ruler = {
+				name = "Vajiralongkorn"
+				dynasty = "Chakri"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				claim = 95
+				age = 64
+			}
+			define_consort = {
+				name = "Suthida"
+				dynasty = "Tidjai"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Dipangkorn Rasmijoti"
+				dynasty = "Chakri"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				claim = 95
+				age = 11
+			}
+		}
+	}
+}
+
+# Burmese-Siamese wars - Start for Taungoo
+country_event = {
+	id = eh_asia_THL.21
+	title = "eh_asia_THL.21.t"
+	desc = "eh_asia_THL.21.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.21.a"
+		ai_chance = { factor = 100 }
+		TAU = { country_event = { id = eh_asia_MNM.6 days = 100 } }
+	}
+}
+
+# After the Burmese-Siamese wars - Finish for Ayutthaya
+country_event = {
+	id = eh_asia_THL.22
+	title = "eh_asia_THL.22.t"
+	desc = "eh_asia_THL.22.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.22.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Naresuan - Start for Taungoo
+country_event = {
+	id = eh_asia_THL.23
+	title = "eh_asia_THL.23.t"
+	desc = "eh_asia_THL.23.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.23.a"
+		ai_chance = { factor = 100 }
+		TAU = { country_event = { id = eh_asia_MNM.7 days = 300 } }
+	}
+}
+
+# Naresuan - Finish for Ayutthaya
+country_event = {
+	id = eh_asia_THL.24
+	title = "eh_asia_THL.24.t"
+	desc = "eh_asia_THL.24.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.24.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Konbaung dynasty - Start for Ayutthaya
+country_event = {
+	id = eh_asia_THL.25
+	title = "eh_asia_THL.25.t"
+	desc = "eh_asia_THL.25.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.25.a"
+		ai_chance = { factor = 100 }
+		AYU = { country_event = { id = eh_asia_THL.9 days = 100 } }
+	}
+}
+
+# Fall of the Ayutthaya - Finish for Taungoo
+country_event = {
+	id = eh_asia_THL.26
+	title = "eh_asia_THL.26.t"
+	desc = "eh_asia_THL.26.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_THL.26.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+########################################################################
+# Events for the Vietnam
+########################################################################
+
+# Trưng Sisters
+country_event = {
+	id = eh_asia_VTN.1
+	title = "eh_asia_VTN.1.t"
+	desc = "eh_asia_VTN.1.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		is_year = 40
+		NOT = { is_year = 45 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_asia_VTN.1.a"
+		ai_chance = { factor = 100 }
+		HND = {
+			613 = {
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					leader = "Trung Trac"
+				}
+			}
+			1016 = {
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					leader = "Trung Nhi"
+				}
+			}
+		}
+	}
+}
+
+# Champa
+country_event = {
+	id = eh_asia_VTN.2
+	title = "eh_asia_VTN.2.t"
+	desc = "eh_asia_VTN.2.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HUY
+		is_year = 200
+		NOT = { is_year = 220 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_VTN.2.a"
+		ai_chance = { factor = 100 }
+		HUY = {
+			change_tag = CHA
+			define_ruler = {
+				name = "Sri Mara"
+				dynasty = "Cham"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 4
+				age = 20
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Cham"
+			}
+		}
+	}
+}
+
+# Early Ly dynasty
+country_event = {
+	id = eh_asia_VTN.3
+	title = "eh_asia_VTN.3.t"
+	desc = "eh_asia_VTN.3.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LNG
+		is_year = 540
+		NOT = { is_year = 550 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			DAI = {
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				set_government_rank = 2
+				set_capital = 616
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_stability = 1
+				add_manpower = 30
+				add_sailors = 1000
+				add_prestige = 30
+				add_years_of_income = 3
+				red_river_delta_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAI }
+							NOT = { province_id = 2371 }
+						}
+					}
+					change_culture = vietnamese
+					cede_province = DAI
+					add_core = DAI
+					remove_core = LNG
+				}
+				vietnam_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAI }
+							NOT = { province_id = 2373 }
+						}
+					}
+					change_culture = vietnamese
+					cede_province = DAI
+					add_core = DAI
+					remove_core = LNG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.3.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			define_ruler = {
+				name = "Bon"
+				dynasty = "Ly"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 5
+				age = 40
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Ly"
+			}
+		}
+	}
+}
+
+# Third Chinese domination
+country_event = {
+	id = eh_asia_VTN.4
+	title = "eh_asia_VTN.4.t"
+	desc = "eh_asia_VTN.4.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.4.a"
+		ai_chance = { factor = 100 }
+		SUI = {
+			clr_country_flag = sui_ly_war
+			add_prestige = 10
+			inherit = DAI
+			red_river_delta_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SUI }
+						NOT = { province_id = 2371 }
+					}
+				}
+				cede_province = SUI
+				add_core = SUI
+				remove_core = LNG
+			}
+			vietnam_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SUI }
+						NOT = { province_id = 2373 }
+					}
+				}
+				cede_province = SUI
+				add_core = SUI
+				remove_core = LNG
+			}
+		}
+		DAI = { clr_country_flag = sui_ly_war }
+	}
+}
+
+# Anarchy of the 12 Warlords
+country_event = {
+	id = eh_asia_VTN.5
+	title = "eh_asia_VTN.5.t"
+	desc = "eh_asia_VTN.5.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TNG
+		is_year = 930
+		NOT = { is_year = 935 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			DAI = {
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				set_government_rank = 3
+				set_capital = 613
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Bo Linh"
+					dynasty = "Dinh"
+					change_adm = 4
+					change_dip = 3
+					change_mil = 3
+					age = 40
+					claim = 95
+				}
+				define_heir = {
+					dynasty = "Dinh"
+				}
+				610 = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 1
+					}
+				}
+				613 = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 1
+					}
+				}
+				2372 = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 1
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.5.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				TNG = { was_player = yes }
+			}
+			switch_tag = DAI
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.5.b"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Early Le dynasty
+country_event = {
+	id = eh_asia_VTN.6
+	title = "eh_asia_VTN.6.t"
+	desc = "eh_asia_VTN.6.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.6.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			clr_country_flag = song_unification
+			set_capital = 613
+			add_prestige = 10
+			white_peace = SNG
+			define_ruler = {
+				name = "Hoan"
+				dynasty = "Le"
+				change_adm = 2
+				change_dip = 4
+				change_mil = 4
+				claim = 95
+				age = 39
+			}
+			define_heir = {
+				dynasty = "Le"
+			}
+		}
+		SNG = {
+			clr_country_flag = song_unification
+			add_prestige = -10
+			add_army_tradition = -10
+			create_subject = {
+				subject_type = tributary_state
+				subject = DAI
+			}
+			country_event = { id = eh_asia_VTN.30 days = 1 }
+		}
+	}
+}
+
+# Ly dynasty
+country_event = {
+	id = eh_asia_VTN.7
+	title = "eh_asia_VTN.7.t"
+	desc = "eh_asia_VTN.7.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAI
+		is_year = 1000
+		NOT = { is_year = 1010 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_VTN.7.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			set_capital = 616
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			define_ruler = {
+				name = "Cong Uan"
+				dynasty = "Ly"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				claim = 95
+				age = 36
+			}
+			define_heir = {
+				dynasty = "Ly"
+			}
+		}
+	}
+}
+
+# Tran dynasty
+country_event = {
+	id = eh_asia_VTN.8
+	title = "eh_asia_VTN.8.t"
+	desc = "eh_asia_VTN.8.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAI
+		is_year = 1225
+		NOT = { is_year = 1230 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_VTN.8.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			define_ruler = {
+				name = "Canh"
+				dynasty = "Tran"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				claim = 95
+				age = 8
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+		CMB = {
+			change_religion = buddhism
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+}
+
+# Mongol invasions of Vietnam
+country_event = {
+	id = eh_asia_VTN.9
+	title = "eh_asia_VTN.9.t"
+	desc = "eh_asia_VTN.9.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAI
+		is_year = 1270
+		NOT = { is_year = 1280 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_VTN.9.a"
+		ai_chance = { factor = 100 }
+		YUA = {
+			set_country_flag = mongol_invasion_vietnam
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			declare_war_with_cb = {
+				who = DAI
+				casus_belli = cb_force_tributary
+			}
+			country_event = { id = eh_asia_CHN.16 days = 1 }
+		}
+		DAI = {
+			set_country_flag = mongol_invasion_vietnam
+			add_stability = 1
+			add_manpower = 30
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			define_ruler = {
+				name = "Hoang"
+				dynasty = "Tran"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 4
+				claim = 95
+				age = 18
+			}
+			remove_heir = { allow_new_heir = no }
+			define_general = {
+				name = "Tran Hung Dao"
+				shock = 4
+				fire = 4
+				manuever = 3
+				siege = 0
+			}
+			613 = {
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				infantry = DAI
+				cavalry = DAI
+				cavalry = DAI
+				cavalry = DAI
+				cavalry = DAI
+			}
+			country_event = { id = eh_asia_VTN.10 days = 100 }
+		}
+	}
+}
+
+# Tran Hung Dao
+country_event = {
+	id = eh_asia_VTN.10
+	title = "eh_asia_VTN.10.t"
+	desc = "eh_asia_VTN.10.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.10.a"
+		ai_chance = { factor = 100 }
+		YUA = {
+			clr_country_flag = mongol_invasion_vietnam
+			add_prestige = -10
+			create_subject = {
+				subject_type = tributary_state
+				subject = DAI
+			}
+			country_event = { id = eh_asia_CHN.17 days = 1 }
+		}
+		DAI = {
+			clr_country_flag = mongol_invasion_vietnam
+			add_stability = 1
+			add_prestige = 10
+		}
+	}
+}
+
+# Le Loi
+country_event = {
+	id = eh_asia_VTN.11
+	title = "eh_asia_VTN.11.t"
+	desc = "eh_asia_VTN.11.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			MNG = {
+				add_mandate = -10
+				add_stability = -1
+				add_prestige = -10
+				red_river_delta_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MNG }
+							NOT = { province_id = 2371 }
+						}
+					}
+					cede_province = MNG
+					add_core = MNG
+					remove_core = DAI
+				}
+				2373 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MNG }
+						}
+					}
+					cede_province = MNG
+					add_core = MNG
+					remove_core = DAI
+				}
+				1022 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = MNG }
+						}
+					}
+					cede_province = MNG
+					add_core = MNG
+					remove_core = CHA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.11.a"
+		ai_chance = { factor = 100 }
+		MNG = {
+			clr_country_flag = ming_ho_war
+			set_country_flag = uprising_eh
+			random_owned_province = {
+				limit = { area = red_river_delta_area }
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = DAI
+				}
+			}
+			random_owned_province = {
+				limit = { area = red_river_delta_area }
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = DAI
+				}
+			}
+			random_owned_province = {
+				limit = { area = vietnam_area }
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = DAI
+				}
+			}
+		}
+		DAI = {
+			clr_country_flag = ming_ho_war
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 1
+			add_manpower = 30
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			define_ruler = {
+				name = "Loi"
+				dynasty = "Le"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				claim = 95
+				age = 33
+			}
+			define_ruler_to_general = {	fire = 4	shock = 4	manuever = 5	siege = 0 }
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+}
+
+# Le dynasty
+country_event = {
+	id = eh_asia_VTN.12
+	title = "eh_asia_VTN.12.t"
+	desc = "eh_asia_VTN.12.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = DAI
+        is_year = 1425
+		NOT = { is_year = 1430 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_asia_VTN.12.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_prestige = 30
+			add_years_of_income = 3
+			red_river_delta_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = DAI }
+						NOT = { province_id = 2371 }
+					}
+				}
+				cede_province = DAI
+				add_core = DAI
+				remove_core = MNG
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { owned_by = DAI }
+				}
+				cede_province = DAI
+				add_core = DAI
+				remove_core = MNG
+			}
+			1022 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = DAI }
+					}
+				}
+				cede_province = DAI
+				add_core = DAI
+				remove_core = MNG
+			}
+		}
+		MNG = {
+			clr_country_flag = uprising_eh
+			create_subject = {
+				subject_type = tributary_state
+				subject = DAI
+			}
+		}
+		AYU = {
+			2379 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = AYU }
+					}
+				}
+				add_core = AYU
+				cede_province = AYU
+				remove_core = CMB
+			}
+		}
+		LXA = {
+			2383 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = LXA }
+					}
+				}
+				add_core = LXA
+				cede_province = LXA
+				remove_core = CMB
+			}
+		}
+	}
+}
+
+# Mac dynasty
+country_event = {
+	id = eh_asia_VTN.13
+	title = "eh_asia_VTN.13.t"
+	desc = "eh_asia_VTN.13.d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = DAI
+        is_year = 1520
+		NOT = { is_year = 1530 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_VTN.13.a"
+		ai_chance = { factor = 100 }
+		DV2 = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 3
+			set_capital = 616
+			add_legitimacy = -10
+			define_ruler = {
+				dynasty = "Mac"
+			}
+			define_heir = {
+				dynasty = "Mac"
+			}
+			red_river_delta_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = DV2 }
+						NOT = { province_id = 2371 }
+					}
+				}
+				cede_province = DV2
+				add_core = DV2
+				remove_core = TOK
+			}
+		}
+		DAI = {
+			change_tag = TOK
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			set_capital = 1016
+			add_prestige = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+		}
+		CHA = {
+			tay_nguyen_area = {
+				limit = {
+					NOT = { owned_by = DAI }
+				}
+				cede_province = CHA
+				add_core = CHA
+				remove_core = TOK
+			}
+		}
+		MNG = {
+			create_subject = {
+				subject_type = tributary_state
+				subject = DV2
+			}
+		}
+	}
+}
+
+# Nguyen and Trinh lords
+country_event = {
+	id = eh_asia_VTN.14
+	title = "eh_asia_VTN.14.t"
+	desc = "eh_asia_VTN.14.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = TOK
+        is_year = 1540
+		NOT = { is_year = 1550 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_asia_VTN.14.a"
+		ai_chance = { factor = 100 }
+		DV2 = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_manpower = -10
+			add_sailors = -1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = -10
+			add_corruption = 10
+			add_inflation = 1
+		}
+		ANN = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 1
+			set_capital = 610
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			define_ruler = {
+				name = "Kim"
+				dynasty = "Nguyen"
+				change_adm = 3
+				change_dip = 4
+				change_mil = 3
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Nguyen"
+			}
+			1022 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ANN }
+					}
+				}
+				cede_province = ANN
+				add_core = ANN
+				remove_core = TOK
+			}
+			2373 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ANN }
+					}
+				}
+				cede_province = ANN
+				add_core = ANN
+				remove_core = TOK
+			}
+			4822 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ANN }
+					}
+				}
+				cede_province = ANN
+				add_core = ANN
+				remove_core = TOK
+			}
+		}
+		TOK = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 1
+			set_capital = 2385
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			red_river_delta_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = DAI }
+						NOT = { province_id = 616 }
+						NOT = { province_id = 2371 }
+						NOT = { province_id = 4820 }
+					}
+				}
+				cede_province = TOK
+				add_core = TOK
+				remove_core = DV2
+			}
+			define_ruler = {
+				name = "Kiem"
+				dynasty = "Trinh"
+				change_adm = 2
+				change_dip = 3
+				change_mil = 3
+				claim = 95
+			}
+			define_heir = {
+				dynasty = "Trinh"
+			}
+		}
+		MNG = {
+			create_subject = {
+				subject_type = tributary_state
+				subject = TOK
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = ANN
+			}
+		}
+	}
+}
+
+# Tay Son dynasty
+country_event = {
+	id = eh_asia_VTN.15
+	title = "eh_asia_VTN.15.t"
+	desc = "eh_asia_VTN.15.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = TOK
+        is_year = 1775
+		NOT = { is_year = 1780 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ANN = {
+				set_government_rank = 2
+				set_capital = 605
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Phuc Anh"
+					dynasty = "Nguyen"
+					change_adm = 4
+					change_dip = 3
+					change_mil = 5
+					claim = 95
+					age = 22
+				}
+				define_ruler_to_general = {	fire = 2	shock = 3	manuever = 5	siege = 1	}
+				define_heir = {
+					dynasty = "Nguyen"
+				}
+			}
+			DV2 = {
+				set_government_rank = 3
+				set_capital = 610
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Van Nhac"
+					dynasty = "Nguyen"
+					change_adm = 4
+					change_dip = 2
+					change_mil = 2
+					claim = 95
+				}
+				define_heir = {
+					dynasty = "Nguyen"
+				}
+				champa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DV2 }
+							NOT = { province_id = 606 }
+						}
+					}
+					cede_province = DV2
+					add_core = DV2
+					remove_core = TOK
+				}
+				tay_nguyen_area = {
+					limit = {
+						NOT = { owned_by = DV2 }
+					}
+					cede_province = DV2
+					add_core = DV2
+					remove_core = TOK
+				}
+			}
+			TOK = {
+				set_government_rank = 3
+				set_capital = 616
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Hue"
+					dynasty = "Nguyen"
+					change_adm = 3
+					change_dip = 3
+					change_mil = 4
+					claim = 95
+				}
+				define_ruler_to_general = {	fire = 2	shock = 3	manuever = 4	siege = 1	}
+				define_heir = {
+					dynasty = "Nguyen"
+				}
+				red_river_delta_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DV2 }
+							NOT = { province_id = 2371 }
+						}
+					}
+					cede_province = TOK
+					add_core = TOK
+					remove_core = ANN
+				}
+				vietnam_area = {
+					limit = {
+						NOT = { owned_by = TOK }
+					}
+					cede_province = TOK
+					add_core = TOK
+					remove_core = ANN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.15.a"
+		if = {
+			limit = {
+				TOK = { was_player = yes }
+			}
+			switch_tag = ANN
+		}
+	}
+}
+
+# Qing invasion of Vietnam
+country_event = {
+	id = eh_asia_VTN.16
+	title = "eh_asia_VTN.16.t"
+	desc = "eh_asia_VTN.16.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.16.a"
+		ai_chance = { factor = 100 }
+		TOK = {
+			clr_country_flag = ten_great_campaigns
+			white_peace = QNG
+			add_prestige = 10
+			add_stability = -1
+			add_manpower = -10
+		}
+		QNG = {
+			clr_country_flag = ten_great_campaigns
+			add_prestige = -10
+			create_subject = {
+				subject_type = tributary_state
+				subject = TOK
+			}
+		}
+	}
+}
+
+# Nguyen dynasty
+country_event = {
+	id = eh_asia_VTN.17
+	title = "eh_asia_VTN.17.t"
+	desc = "eh_asia_VTN.17.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			ANN = {
+				every_owned_province = {
+					add_core = DAI
+					remove_core = ANN
+				}
+			}
+			DAI = {
+				change_government = monarchy
+				add_government_reform = confucian_bureaucracy
+				set_government_rank = 3
+				change_religion = confucianism
+				add_harmonized_religion = mahayana
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.17.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			inherit = ANN
+			inherit = DV2
+			inherit = TOK
+			set_capital = 610
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_prestige = 30
+			add_treasury = 20000
+			add_years_of_income = 3
+			vassalize = CHA
+			vassalize = CMB
+			red_river_delta_area = {
+				limit = {
+					NOT = { owned_by = DAI }
+				}
+				add_core = DAI
+				cede_province = DAI
+				remove_core = TOK
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { owned_by = DAI }
+				}
+				add_core = DAI
+				cede_province = DAI
+				remove_core = TOK
+			}
+			tay_nguyen_area = {
+				limit = {
+					NOT = { owned_by = DAI }
+				}
+				add_core = DAI
+				cede_province = DAI
+				remove_core = DV2
+			}
+			champa_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = DAI }
+						NOT = { province_id = 606 }
+					}
+				}
+				add_core = DAI
+				cede_province = DAI
+				remove_core = DV2
+			}
+			mekong_area = {
+				limit = {
+					NOT = { owned_by = DAI }
+				}
+				add_core = DAI
+				cede_province = DAI
+				remove_core = ANN
+			}
+			every_owned_province = { change_culture = vietnamese }
+		}
+	}
+}
+
+# French Cochinchina
+country_event = {
+	id = eh_asia_VTN.18
+	title = "eh_asia_VTN.18.t"
+	desc = "eh_asia_VTN.18.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = DAI
+        is_year = 1860
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			DAI = {
+				add_stability = -1
+				add_prestige = -10
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+			}
+			FR2 = {
+				mekong_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					add_core = FR2
+					cede_province = FR2
+					remove_core = DAI
+				}
+				champa_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					add_core = FR2
+					cede_province = FR2
+					remove_core = DAI
+				}
+				tay_nguyen_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					add_core = FR2
+					cede_province = FR2
+					remove_core = DAI
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.18.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				DAI = { was_player = yes }
+			}
+			switch_tag = FR2
+		}
+	}
+}
+
+# French Protectorate of Annam and Tonkin
+country_event = {
+	id = eh_asia_VTN.19
+	title = "eh_asia_VTN.19.t"
+	desc = "eh_asia_VTN.19.d"
+	picture = HOUSE_OF_TRADE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.19.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			add_prestige = 10
+			inherit = DAI
+			red_river_delta_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = DAI
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { owned_by = FR2 }
+				}
+				cede_province = FR2
+				add_core = FR2
+				remove_core = DAI
+			}
+		}
+		DAI = {
+			clr_country_flag = eh_override_name
+			restore_country_name = yes 
+		}
+	}
+}
+
+# First Indochina War
+country_event = {
+	id = eh_asia_VTN.20
+	title = "eh_asia_VTN.20.t"
+	desc = "eh_asia_VTN.20.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = FR2
+        is_year = 1946
+		NOT = { is_year = 1954 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NVI = {
+				set_country_flag = first_indochina_war
+				set_country_flag = eh_communist
+				change_government = republic
+				add_government_reform = communist_government
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Ho Chi Minh"
+					change_adm = 3
+					change_dip = 3
+					change_mil = 5
+					age = 56
+				}
+			}
+			SVI = {
+				change_government = republic
+				add_government_reform = democracy_reform
+				set_government_rank = 2
+				change_technology_group = asian
+				change_religion = secularism
+				set_capital = 605
+				define_ruler = {
+					name = "Nguyen Van Xuan"
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					age = 54
+				}
+				champa_area = {
+					limit = {
+						NOT = { owned_by = SVI }
+					}
+					change_religion = mahayana
+					cede_province = SVI
+					add_core = SVI
+					remove_core = FR2
+				}
+				mekong_area = {
+					limit = {
+						NOT = { owned_by = SVI }
+					}
+					change_religion = mahayana
+					cede_province = SVI
+					add_core = SVI
+					remove_core = FR2
+				}
+				tay_nguyen_area = {
+					limit = {
+						NOT = { owned_by = SVI }
+					}
+					change_religion = mahayana
+					cede_province = SVI
+					add_core = SVI
+					remove_core = FR2
+				}
+			}
+			FR2 = { set_country_flag = first_indochina_war }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.20.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				FR2 = { was_player = yes }
+			}
+			switch_tag = NVI
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.20.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				FR2 = { was_player = yes }
+			}
+			switch_tag = SVI
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.20.c"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# 1954 Geneva Conference
+country_event = {
+	id = eh_asia_VTN.21
+	title = "eh_asia_VTN.21.t"
+	desc = "eh_asia_VTN.21.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = NVI
+        is_year = 1954
+		NOT = { is_year = 1955 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_asia_VTN.21.a"
+		ai_chance = { factor = 100 }
+		NVI = {
+			clr_country_flag = first_indochina_war
+			add_stability = 1
+			add_prestige = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			create_subject = {
+				subject_type = client_vassal
+				subject = VTC
+			}
+		}
+		VTC = {
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			champa_area = {
+				limit = { 
+					owned_by = SVI
+				}
+				add_core = VTC
+			}
+			mekong_area = {
+				limit = {
+					AND = {
+						owned_by = SVI
+						NOT = { province_id = 2391 }
+					}
+				}
+				add_core = VTC
+			}
+		}
+		SVI = {
+			add_corruption = 10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			define_ruler = {
+				name = "Ngo Dinh Diem"
+				change_adm = 2
+				change_dip = 4
+				change_mil = 2
+				age = 53
+			}
+		}
+		FR2 = {
+			clr_country_flag = first_indochina_war
+			add_prestige = -10
+			white_peace = NVI
+		}
+	}
+}
+
+# Gulf of Tonkin incident
+country_event = {
+	id = eh_asia_VTN.22
+	title = "eh_asia_VTN.22.t"
+	desc = "eh_asia_VTN.22.d"
+	picture = FLAGSHIP_SUNK_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = NVI
+        is_year = 1964
+		NOT = { is_year = 1965 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NVI = {
+				set_country_flag = vietnam_war
+				add_stability = 1
+				add_prestige = 10
+				add_manpower = 50
+				add_sailors = 3000
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+			}
+			VTC = {
+				set_country_flag = vietnam_war
+				set_country_flag = eh_communist
+				change_government = republic
+				add_government_reform = communist_government
+				set_government_rank = 2
+				change_technology_group = asian
+				change_religion = secularism
+				set_capital = 2386
+				add_manpower = 50
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Nguyen Huu Tho"
+					change_adm = 2
+					change_dip = 2
+					change_mil = 3
+					age = 59
+				}
+				tay_nguyen_area = {
+					limit = {
+						NOT = { owned_by = VTC }
+					}
+					cede_province = VTC
+					add_core = VTC
+					remove_core = SVI
+				}
+			}
+			SVI = {
+				set_country_flag = vietnam_war
+				set_country_flag = uprising_eh
+				add_adm_power = -100
+				add_dip_power = -100
+				add_mil_power = -100
+				add_stability = -1
+				add_prestige = -10
+				add_republican_tradition = -10
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				form_coalition_against = NVI
+				form_coalition_against = VTC
+				define_ruler = {
+					name = "Nguyen Van Thieu"
+					change_adm = 3
+					change_dip = 5
+					change_mil = 3
+					age = 41
+				}
+			}
+			USA = {
+				set_country_flag = vietnam_war
+				form_coalition_against = NVI
+				form_coalition_against = VTC
+				define_ruler = {
+					name = "Lyndon Johnson"
+					change_adm = 1
+					change_dip = 2
+					change_mil = 3
+					age = 55
+				}
+			}
+			AUS = {
+				set_country_flag = vietnam_war
+				form_coalition_against = NVI
+				form_coalition_against = VTC
+			}
+			SKO = {
+				set_country_flag = vietnam_war
+				form_coalition_against = NVI
+				form_coalition_against = VTC
+			}
+			SIA = {
+				set_country_flag = vietnam_war
+				form_coalition_against = NVI
+				form_coalition_against = VTC
+			}
+		}
+	}
+
+	option = {
+		name = "eh_asia_VTN.22.a"
+		ai_chance = { factor = 100 }
+		NVI = {
+			create_subject = {
+				subject_type = client_vassal
+				subject = VTC
+			}
+		}
+		USA = {	country_event = { id = eh_USA.33 days = 1 } }
+		SKO = { country_event = { id = eh_asia_KOR.17 days = 1 } }
+	}
+}
+
+# Vietnam War
+country_event = {
+	id = eh_asia_VTN.23
+	title = "eh_asia_VTN.23.t"
+	desc = "eh_asia_VTN.23.d"
+	picture = WW_ALLIES_eventPicture
+
+	trigger = {
+		tag = NVI
+		OR = {
+			610 = {
+				NOT = { controlled_by = NVI }
+			}
+			616 = {
+				NOT = { controlled_by = NVI }
+			}
+		}
+		is_year = 1965
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_asia_VTN.23.a"
+		ai_chance = { factor = 100 }
+		NVI = {
+			add_prestige = 1
+			add_manpower = 5
+			add_sailors = 50
+			add_years_of_income = 1
+			add_army_tradition = 5
+			add_army_professionalism = 0.1
+			add_war_exhaustion = -1
+			red_river_delta_area = {
+				limit = {
+					NOT = { controlled_by = NVI }
+				}
+				change_controller = NVI
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { controlled_by = NVI }
+				}
+				change_controller = NVI
+			}
+		}
+		VTC = {
+			add_prestige = 1
+			add_manpower = 5
+			add_years_of_income = 1
+			add_army_tradition = 5
+			add_army_professionalism = 0.1
+			add_war_exhaustion = -1
+			2386 = {
+				if = {
+					limit = {
+						NOT = { controlled_by = VTC }
+					}
+				}
+				change_controller = VTC
+			}
+		}
+		SVI = {
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			add_prestige = -1
+			add_manpower = -5
+			add_war_exhaustion = 1
+			add_republican_tradition = -5
+			add_army_tradition = -5
+			add_army_professionalism = -0.1
+			add_corruption = 0.5
+			add_inflation = 0.5
+		}
+		USA = {
+			add_prestige = -1
+			add_war_exhaustion = 0.2
+		}
+	}
+}
+
+# Tet Offensive
+country_event = {
+	id = eh_asia_VTN.24
+	title = "eh_asia_VTN.24.t"
+	desc = "eh_asia_VTN.24.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = SVI
+        is_year = 1968
+		NOT = { is_year = 1969 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			NVI = {
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				define_ruler = {
+					name = "Ton Duc Thang"
+					change_adm = 2
+					change_dip = 4
+					change_mil = 3
+				}
+				red_river_delta_area = {
+					limit = {
+						NOT = { controlled_by = NVI }
+					}
+					add_devastation = 10
+					change_controller = NVI
+				}
+				vietnam_area = {
+					limit = {
+						NOT = { controlled_by = NVI }
+					}
+					add_devastation = 10
+					change_controller = NVI
+				}
+			}
+			SVI = {
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				add_prestige = -10
+				add_war_exhaustion = 2
+				605 = {
+					if = {
+						limit = {
+							NOT = { controlled_by = SVI }
+						}
+					}
+					add_devastation = 30
+					change_controller = SVI
+				}
+			}
+			USA = {
+				add_prestige = -10
+				add_war_exhaustion = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.24.a"
+		if = {
+			limit = {
+				SVI = { was_player = yes }
+			}
+			switch_tag = NVI
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.24.b"
+	}
+}
+
+# Paris Peace Accords
+country_event = {
+	id = eh_asia_VTN.25
+	title = "eh_asia_VTN.25.t"
+	desc = "eh_asia_VTN.25.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = NVI
+		is_year = 1973
+		NOT = { is_year = 1974 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_asia_VTN.25.a"
+		ai_chance = { factor = 100 }
+		NVI = {
+			add_stability = 1
+			add_prestige = 10
+			white_peace = USA
+			white_peace = SKO
+			white_peace = SIA
+			white_peace = AUS
+			declare_war_with_cb = {
+				who = SVI
+				casus_belli = cb_spread_communism
+			}
+			country_event = { id = eh_asia_VTN.26 days = 100 }
+		}
+		VTC = {
+			champa_area = {
+				limit = {
+					NOT = { owned_by = VTC }
+				}
+				change_controller = VTC
+			}
+		}
+		SVI = {
+			add_stability = -1
+			add_prestige = -10
+			add_war_exhaustion = 2
+			add_corruption = 10
+			add_inflation = 1
+			add_army_tradition = -10
+			country_event = { id = eh_asia_VTN.31 days = 1 }
+		}
+		USA = { 
+			clr_country_flag = vietnam_war
+			country_event = { id = eh_USA.34 days = 1 }
+		}
+		SKO = { 
+			clr_country_flag = vietnam_war
+			country_event = { id = eh_asia_KOR.18 days = 1 }
+		}
+		SIA = { clr_country_flag = vietnam_war }
+		AUS = { clr_country_flag = vietnam_war }
+	}
+}
+
+# Fall of Saigon
+country_event = {
+	id = eh_asia_VTN.26
+	title = "eh_asia_VTN.26.t"
+	desc = "eh_asia_VTN.26.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			NVI = {
+				inherit = SVI
+				inherit = VTC
+				red_river_delta_area = {
+					limit = {
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+				}
+				vietnam_area = {
+					limit = {
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+				}
+				champa_area = {
+					limit = {
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+					remove_core = SVI
+				}
+				tay_nguyen_area = {
+					limit = {
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+					remove_core = SVI
+				}
+				mekong_area = {
+					limit = {
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+					remove_core = SVI
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_asia_VTN.26.a"
+		ai_chance = { factor = 100 }
+		NVI = {
+			set_country_flag = eh_communist
+			clr_country_flag = vietnam_war
+			change_tag = VTN
+			change_government = republic
+			add_government_reform = communist_government
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_war_exhaustion = -10
+			swap_free_idea_group = yes
+			every_owned_province = { add_devastation = 80 }
+		}
+		SVI = {
+			clr_country_flag = vietnam_war
+			clr_country_flag = uprising_eh
+		}
+		VTC = {
+			clr_country_flag = vietnam_war
+			clr_country_flag = eh_communist
+		}
+	}
+}
+
+# Third Indochina War
+country_event = {
+	id = eh_asia_VTN.27
+	title = "eh_asia_VTN.27.t"
+	desc = "eh_asia_VTN.27.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = VTN
+		is_year = 1975
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_asia_VTN.27.a"
+		ai_chance = { factor = 100 }
+		VTN = {
+			set_country_flag = sino_vietnamese_war
+			declare_war_with_cb = {
+				who = KHM
+				casus_belli = cb_super_badboy
+			}
+		}
+		KHM = {
+			set_country_flag = sino_vietnamese_war
+			country_event = { id = eh_asia_CMB.11 days = 1 }
+		}
+		CHN = { country_event = { id = eh_china_PRC.12 days = 30 } }
+	}
+}
+
+# Doi Moi
+country_event = {
+	id = eh_asia_VTN.28
+	title = "eh_asia_VTN.28.t"
+	desc = "eh_asia_VTN.28.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = VTN
+		is_year = 2010
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	option = {
+		name = "eh_asia_VTN.28.a"
+		ai_chance = { factor = 100 }
+		VTN = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			605 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			616 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+
+# Ly-Song War - Start for Dai Viet
+country_event = {
+	id = eh_asia_VTN.29
+	title = "eh_asia_VTN.29.t"
+	desc = "eh_asia_VTN.29.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.29.a"
+		ai_chance = { factor = 100 }
+		DAI = { country_event = { id = eh_asia_VTN.6 days = 100 } }
+	}
+}
+
+# Ly-Song War - Finish for Song
+country_event = {
+	id = eh_asia_VTN.30
+	title = "eh_asia_VTN.30.t"
+	desc = "eh_asia_VTN.30.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.30.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Vietnam War - Start for South Vietnam
+country_event = {
+	id = eh_asia_VTN.31
+	title = "eh_asia_VTN.31.t"
+	desc = "eh_asia_VTN.31.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.31.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Sino-Vietnamese War - Start for Vietnam
+country_event = {
+	id = eh_asia_VTN.32
+	title = "eh_asia_VTN.32.t"
+	desc = "eh_asia_VTN.32.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_VTN.32.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Nguyen dynasty
+country_event = {
+	id = eh_asia_VTN.33
+	title = "eh_asia_VTN.33.t"
+	desc = "eh_asia_VTN.33.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = ANN
+        is_year = 1800
+		NOT = { is_year = 1805 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ANN = { country_event = { id = eh_asia_VTN.17 days = 3 } }
+			DAI = {
+				610 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAI }
+						}
+					}
+					cede_province = DAI
+					add_core = DAI
+					remove_core = TOK
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_VTN.33.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				ANN = { was_player = yes }
+			}
+			switch_tag = DAI
+		}
+	}
+}
+
+# Dai Nam
+country_event = {
+	id = eh_asia_VTN.34
+	title = "eh_asia_VTN.34.t"
+	desc = "eh_asia_VTN.34.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+        tag = DAI
+        is_year = 1835
+		NOT = { is_year = 1840 }
+		has_global_flag = eh_historic
+    }
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_asia_VTN.34.a"
+		ai_chance = { factor = 100 }
+		DAI = {
+			set_country_flag = eh_override_name
+			override_country_name = "Dai Nam"
+		}
+	}
+}
+
+# EH version

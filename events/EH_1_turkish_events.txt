@@ -1,0 +1,4906 @@
+namespace = eh_asia_turkey
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Turkey
+########################################################################
+
+# Fall of the Western Gokturk
+country_event = {
+	id = eh_asia_turkey.1
+	title = "eh_asia_turkey.1.t"
+	desc = "eh_asia_turkey.1.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GOK
+		is_year = 650
+		NOT = { is_year = 660 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			WGO = { 
+				change_tag = KGA
+				ishim_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KGA }
+							NOT = { province_id = 1074 }
+						}
+					}
+					cede_province = KGA
+					add_core = KGA
+				}
+				465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KGA }
+						}
+					}
+					cede_province = KGA
+					add_core = KGA
+				}
+				1966 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KGA }
+						}
+					}
+					cede_province = KGA
+					add_core = KGA
+				}
+			}
+			OGH = {
+				transcaspia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = OGH }
+							NOT = { province_id = 437 }
+							NOT = { province_id = 438 }
+							NOT = { province_id = 2349 }
+						}
+					}
+					cede_province = OGH
+					add_core = OGH
+				}
+				465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OGH }
+						}
+					}
+					cede_province = OGH
+					add_core = OGH
+					remove_core = KGA
+				}
+				2370 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OGH }
+						}
+					}
+					cede_province = OGH
+					add_core = OGH
+					remove_core = KGA
+				}
+			}
+			TRG = {
+				jetysuu_area = {
+					limit = {
+						NOT = { owned_by = TRG }
+					}
+					cede_province = TRG
+					add_core = TRG
+					remove_core = KGA
+				}
+				2364 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRG }
+						}
+					}
+					cede_province = TRG
+					add_core = TRG
+					remove_core = KGA
+				}
+			}
+			CAC = {
+				457 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAC }
+						}
+					}
+					cede_province = CAC
+					add_core = CAC
+					remove_core = KGA
+				}
+				1969 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAC }
+						}
+					}
+					cede_province = CAC
+					add_core = CAC
+					remove_core = KGA
+				}
+				2356 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAC }
+						}
+					}
+					cede_province = CAC
+					add_core = CAC
+					remove_core = KGA
+				}
+			}
+			FRG = {
+				ferghana_area = {
+					limit = {
+						NOT = { owned_by = FRG }
+					}
+					cede_province = FRG
+					add_core = FRG
+					remove_core = KGA
+				}
+				1968 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRG }
+						}
+					}
+					cede_province = FRG
+					add_core = FRG
+					remove_core = KGA
+				}
+			}
+			SOG = {
+				transoxiana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOG }
+							NOT = { province_id = 442 }
+							NOT = { province_id = 1968 }
+						}
+					}
+					cede_province = SOG
+					add_core = SOG
+					remove_core = KGA
+				}
+				455 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOG }
+						}
+					}
+					cede_province = SOG
+					add_core = SOG
+					remove_core = KGA
+				}
+				2363 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOG }
+						}
+					}
+					cede_province = SOG
+					add_core = SOG
+					remove_core = KGA
+				}
+			}
+			KHZ = {
+				lower_yik_area = {
+					limit = {
+						NOT = { owned_by = KHZ }
+					}
+					cede_province = KHZ
+					add_core = KHZ
+					remove_core = KGA
+				}
+				2201 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KHZ }
+						}
+					}
+					cede_province = KHZ
+					add_core = KHZ
+					remove_core = KGA
+				}
+				2197 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KHZ }
+						}
+					}
+					cede_province = KHZ
+					add_core = KHZ
+					remove_core = KGA
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_asia_turkey.1.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_asia_turkey.1.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				GOK = { was_player = yes }
+			}
+			switch_tag = OGH
+		}
+	}
+}
+
+# Rise of the Seljuk Empire
+country_event = {
+	id = eh_asia_turkey.2
+	title = "eh_asia_turkey.2.t"
+	desc = "eh_asia_turkey.2.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ABA
+		is_year = 1035
+		NOT = { is_year = 1040 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SEL = {
+				add_country_modifier = {
+					name = major_power
+					duration = 50000
+				}
+				balkh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 452 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				transoxiana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 454 }
+							NOT = { province_id = 1968 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				merv_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				herat_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				mashhad_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				transcaspia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 439 }
+							NOT = { province_id = 443 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				khiva_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 2370 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = GHZ
+				}
+				iraq_e_ajam_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = QOM
+				}
+				azerbaijan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 4300 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = QOM
+				}
+				birjand_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = QOM
+				}
+				kerman_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 2234 }
+							NOT = { province_id = 4345 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = PER
+				}
+				414 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SEL }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = QOM
+				}
+			}
+			SIS = {
+				sistan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SIS }
+							NOT = { province_id = 2230 }
+						}
+					}
+					cede_province = SIS
+					add_core = SIS
+					remove_core = GHZ
+				}
+			}
+			FAT = {
+				syria_area = {
+					limit = {
+						NOT = { owned_by = FAT }
+					}
+					cede_province = FAT
+					add_core = FAT
+					remove_core = SY2
+				}
+				aleppo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FAT }
+							NOT = { province_id = 2313 }
+							NOT = { province_id = 4298 }
+						}
+					}
+					cede_province = FAT
+					add_core = FAT
+					remove_core = SY2
+				}
+				syrian_desert_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FAT }
+							NOT = { province_id = 2334 }
+						}
+					}
+					cede_province = FAT
+					add_core = FAT
+					remove_core = SY2
+				}
+			}
+			ABA = {
+				iraq_arabi_area = {
+					limit = {
+						NOT = { owned_by = ABA }
+					}
+					cede_province = ABA
+					add_core = ABA
+					remove_core = PER
+				}
+				basra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ABA }
+							NOT = { province_id = 3211 }
+						}
+					}
+					cede_province = ABA
+					add_core = ABA
+					remove_core = PER
+				}
+				415 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ABA }
+						}
+					}
+					cede_province = ABA
+					add_core = ABA
+					remove_core = PER
+				}
+				2340 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ABA }
+						}
+					}
+					cede_province = ABA
+					add_core = ABA
+					remove_core = PER
+				}
+			}
+			ZNG = {
+				al_jazira_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZNG }
+							NOT = { province_id = 4292 }
+						}
+					}
+					cede_province = ZNG
+					add_core = ZNG
+					remove_core = ABA
+				}
+				4293 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZNG }
+						}
+					}
+					cede_province = ZNG
+					add_core = ZNG
+					remove_core = ABA
+				}
+			}
+			KRD = {
+				north_kurdistan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KRD }
+							NOT = { province_id = 2306 }
+							NOT = { province_id = 2307 }
+						}
+					}
+					cede_province = KRD
+					add_core = KRD
+					remove_core = SY2
+				}
+			}
+			ORM = {
+				2999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ORM }
+						}
+					}
+					cede_province = ORM
+					add_core = ORM
+					remove_core = PER
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_asia_turkey.2.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				ABA = { was_player = yes }
+			}
+			switch_tag = SEL
+		}
+	}
+}
+
+# Seljukid expansion
+country_event = {
+	id = eh_asia_turkey.3
+	title = "eh_asia_turkey.3.t"
+	desc = "eh_asia_turkey.3.d"
+	picture = qizilbash_cavalry_charging_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SEL
+		is_year = 1065
+		NOT = { is_year = 1070 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SEL = {
+				inherit = ZNG
+				inherit = ABA
+				inherit = PER
+				inherit = TBR
+				persia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 2999 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = PER
+				}
+				syria_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = FAT
+				}
+				aleppo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 2313 }
+							NOT = { province_id = 4298 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = FAT
+				}
+				palestine_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 364 }
+							NOT = { province_id = 3263 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = FAT
+				}
+				syrian_desert_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 2334 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = FAT
+				}
+				al_jazira_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = ZNG
+				}
+				north_kurdistan_area = {
+					limit = {
+						NOT = { owned_by = SEL }
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = KRD
+				}
+				armenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SEL }
+							NOT = { province_id = 2202 }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+					remove_core = AM2
+				}
+				424 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SEL }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+				}
+				4302 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SEL }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+				}
+				4340 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SEL }
+						}
+					}
+					cede_province = SEL
+					add_core = SEL
+				}
+			}
+			SLT = {
+				331 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SLT }
+						}
+					}
+					cede_province = SLT
+					add_core = SLT
+					remove_core = GEO
+				}
+				2204 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SLT }
+						}
+					}
+					cede_province = SLT
+					add_core = SLT
+					remove_core = GEO
+				}
+				4303 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SLT }
+						}
+					}
+					cede_province = SLT
+					add_core = SLT
+					remove_core = GEO
+				}
+			}
+			KBA = {
+				barbary_coast_area = {
+					limit = {
+						NOT = { owned_by = KBA }
+					}
+					cede_province = KBA
+					add_core = KBA
+					remove_core = TUN
+				}
+				kabylia_area = {
+					limit = {
+						NOT = { owned_by = KBA }
+					}
+					cede_province = KBA
+					add_core = KBA
+					remove_core = TUN
+				}
+				hautes_plaines_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KBA }
+							NOT = { province_id = 2463 }
+						}
+					}
+					cede_province = KBA
+					add_core = KBA
+					remove_core = TUN
+				}
+				2458 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = KBA }
+						}
+					}
+					cede_province = KBA
+					add_core = KBA
+					remove_core = TUN
+				}
+			}
+			TGT = {
+				351 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = TGT }
+						}
+					}
+					cede_province = TGT
+					add_core = TGT
+					remove_core = MZB
+				}
+				2456 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = TGT }
+						}
+					}
+					cede_province = TGT
+					add_core = TGT
+					remove_core = MZB
+				}
+				2472 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = TGT }
+						}
+					}
+					cede_province = TGT
+					add_core = TGT
+					remove_core = MZB
+				}
+			}
+			GHD = {
+				352 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = GHD }
+						}
+					}
+					cede_province = GHD
+					add_core = GHD
+					remove_core = TUN
+				}
+			}
+			ANZ = {
+				4272 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = ANZ }
+						}
+					}
+					cede_province = ANZ
+					add_core = ANZ
+					remove_core = NAJ
+				}
+			}
+			ALH = {
+				bahrain_area = {
+					limit = {
+						NOT = { owned_by = ALH }
+					}
+					cede_province = ALH
+					add_core = ALH
+					remove_core = ABA
+				}
+			}
+			ASX = {
+				386 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = ASX }
+						}
+					}
+					cede_province = ASX
+					add_core = ASX
+					remove_core = YEM
+				}
+				4278 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = ASX }
+						}
+					}
+					cede_province = ASX
+					add_core = ASX
+					remove_core = YEM
+				}
+			}
+			DAW = {
+				yamamah_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAW }
+							NOT = { province_id = 1779 }
+							NOT = { province_id = 4275 }
+						}
+					}
+					cede_province = DAW
+					add_core = DAW
+					remove_core = NAJ
+				}
+			}
+			SHM = {
+				393 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SHM }
+						}
+					}
+					cede_province = SHM
+					add_core = SHM
+					remove_core = NAJ
+				}
+				2337 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SHM }
+						}
+					}
+					cede_province = SHM
+					add_core = SHM
+					remove_core = NAJ
+				}
+				2338 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = SHM }
+						}
+					}
+					cede_province = SHM
+					add_core = SHM
+					remove_core = NAJ
+				}
+			}
+			QRM = { change_tag = YAS }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.3.a"
+		ai_chance = { factor = 100 }
+		SEL = {
+			set_country_flag = islamic_expansion
+			declare_war_with_cb = {
+				who = BYZ
+				casus_belli = cb_annex
+			}
+		}
+		BYZ = {
+			set_country_flag = islamic_expansion
+			country_event = { id = eh_medieval_europe.15 days = 300 }
+		}
+	}
+}
+
+# Rise of the Ottomans
+country_event = {
+	id = eh_asia_turkey.4
+	title = "eh_asia_turkey.4.t"
+	desc = "eh_asia_turkey.4.d"
+	picture = qizilbash_cavalry_charging_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		is_year = 1300
+		NOT = { is_year = 1310 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				hudavendigar_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				2299 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+			}
+			KAR = {
+				karaman_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KAR }
+							NOT = { province_id = 2299 }
+						}
+					}
+					cede_province = KAR
+					add_core = KAR
+					remove_core = RUM
+				}
+				2302 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAR }
+						}
+					}
+					cede_province = KAR
+					add_core = KAR
+					remove_core = RUM
+				}
+			}
+			GRM = {
+				germiyan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GRM }
+							NOT = { province_id = 1848 }
+						}
+					}
+					cede_province = GRM
+					add_core = GRM
+					remove_core = RUM
+				}
+				4312 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRM }
+						}
+					}
+					cede_province = GRM
+					add_core = GRM
+					remove_core = RUM
+				}
+			}
+			CND = {
+				325 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CND }
+						}
+					}
+					cede_province = CND
+					add_core = CND
+					remove_core = RUM
+				}
+				4313 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CND }
+						}
+					}
+					cede_province = CND
+					add_core = CND
+					remove_core = RUM
+				}
+			}
+			ANG = {
+				326 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ANG }
+						}
+					}
+					cede_province = ANG
+					add_core = ANG
+					remove_core = RUM
+				}
+			}
+			TEK = {
+				2298 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TEK }
+						}
+					}
+					cede_province = TEK
+					add_core = TEK
+					remove_core = RUM
+				}
+			}
+			SRU = {
+				2297 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SRU }
+						}
+					}
+					cede_province = SRU
+					add_core = SRU
+					remove_core = BYZ
+				}
+			}
+			AYD = {
+				318 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AYD }
+						}
+					}
+					cede_province = AYD
+					add_core = AYD
+					remove_core = BYZ
+				}
+				4309 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AYD }
+						}
+					}
+					cede_province = AYD
+					add_core = AYD
+					remove_core = BYZ
+				}
+			}
+			HMD = {
+				1848 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HMD }
+						}
+					}
+					cede_province = HMD
+					add_core = HMD
+					remove_core = RUM
+				}
+			}
+			RS2 = {
+				albania_area = {
+					limit = {
+						NOT = { owned_by = RS2 }
+					}
+					cede_province = RS2
+					add_core = RS2
+					remove_core = BYZ
+				}
+				serbia_area = {
+					limit = {
+						NOT = { owned_by = RS2 }
+					}
+					cede_province = RS2
+					add_core = RS2
+					remove_core = HU2
+				}
+				3001 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RS2 }
+						}
+					}
+					cede_province = RS2
+					add_core = RS2
+					remove_core = BYZ
+				}
+				4780 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RS2 }
+						}
+					}
+					cede_province = RS2
+					add_core = RS2
+					remove_core = BYZ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.4.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			change_government = monarchy
+			add_government_reform = ottoman_government
+			set_government_rank = 2
+			set_capital = 317
+			add_treasury = 10000
+			change_primary_culture = turkish
+			add_accepted_culture = greek
+			change_religion = sunni
+			define_ruler = {
+				dynasty = "Osmanoglu"
+			}
+			define_heir = {
+				dynasty = "Osmanoglu"
+			}
+		}
+	}
+
+	option = {
+		name = "eh_asia_turkey.4.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				BYZ = { was_player = yes }
+			}
+			switch_tag = TUR
+		}
+		TUR = {
+			change_government = monarchy
+			add_government_reform = ottoman_government
+			set_government_rank = 2
+			set_capital = 317
+			add_treasury = -10000
+			change_primary_culture = turkish
+			add_accepted_culture = greek
+			change_religion = sunni
+			define_ruler = {
+				dynasty = "Osmanoglu"
+			}
+			define_heir = {
+				dynasty = "Osmanoglu"
+			}
+		}
+	}
+}
+
+# Early Ottoman expansion
+country_event = {
+	id = eh_asia_turkey.5
+	title = "eh_asia_turkey.5.t"
+	desc = "eh_asia_turkey.5.d"
+	picture = janissaries_in_formation_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1370
+		NOT = { is_year = 1380 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				149 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					change_culture = turkish
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				326 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				4705 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				2750 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BG2
+				}
+				4779 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+			}
+			BOS = {
+				bosnia_area = {
+					limit = {
+						NOT = { owned_by = BOS }
+					}
+					change_culture = bosnian
+					cede_province = BOS
+					add_core = BOS
+					remove_core = HU2
+				}
+				1828 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOS }
+						}
+					}
+					change_culture = bosnian
+					cede_province = BOS
+					add_core = BOS
+					remove_core = HU2
+				}
+			}
+			PO2 = {
+				281 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PO2 }
+						}
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = LT2
+				}
+			}
+			LT2 = {
+				inherit = YOT
+				podlasie_area = {
+					limit = {
+						NOT = { owned_by = LT2 }
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = YOT
+				}
+				282 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = WHH
+				}
+				283 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = WHH
+				}
+				1936 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = YOT
+				}
+				2406 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = WHH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.5.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			set_government_rank = 3
+			set_capital = 149
+			aydin_area = { change_culture = turkish }
+			hudavendigar_area = { change_culture = turkish }
+			kastamonu_area  = { change_culture = turkish }
+		}
+	}
+}
+
+# Timur invasions of Anatolia
+country_event = {
+	id = eh_asia_turkey.6
+	title = "eh_asia_turkey.6.t"
+	desc = "eh_asia_turkey.6.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1405
+		NOT = { is_year = 1410 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TIM = {
+				erzurum_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TIM }
+							NOT = { province_id = 330 }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				329 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				414 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				415 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				2306 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = BTL
+				}
+				2209 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				2210 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				4294 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+				4315 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIM }
+						}
+					}
+					cede_province = TIM
+					add_core = TIM
+					remove_core = ERE
+				}
+			}
+			LRI = {
+				413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LRI }
+						}
+					}
+					cede_province = LRI
+					add_core = LRI
+					remove_core = TIM
+				}
+			}
+			KAR = {
+				2301 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAR }
+						}
+					}
+					cede_province = KAR
+					add_core = KAR
+					remove_core = ERE
+				}
+			}
+			DUL = {
+				4310 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DUL }
+						}
+					}
+					cede_province = DUL
+					add_core = DUL
+					remove_core = ERE
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.6.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			add_stability = -1
+			add_prestige = -10
+			add_legitimacy = -10
+			add_manpower = -10
+		}
+	}
+}
+
+# Ottoman expedition to Balkan
+country_event = {
+	id = eh_asia_turkey.7
+	title = "eh_asia_turkey.7.t"
+	desc = "eh_asia_turkey.7.d"
+	picture = janissaries_in_formation_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1430
+		NOT = { is_year = 1440 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				macedonia_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				147 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				4699 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EPI
+				}
+			}
+			BYZ = {
+				morea_area = {
+					limit = {
+						NOT = { owned_by = BYZ }
+					}
+					cede_province = BYZ
+					add_core = BYZ
+					remove_core = ACH
+				}
+			}
+			SHY = {
+				inherit = KZH
+				add_adm_tech = 30
+				add_dip_tech = 30
+				add_mil_tech = 30
+				aqmola_area = {
+					limit = {
+						NOT = { owned_by = SHY }
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				ishim_area = {
+					limit = {
+						NOT = { owned_by = SHY }
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				balchasj_area = {
+					limit = {
+						NOT = { owned_by = SHY }
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				kazakhstan_area = {
+					limit = {
+						NOT = { owned_by = SHY }
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				syr_darya_area = {
+					limit = {
+						NOT = { owned_by = SHY }
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				kyzylkum_area = {
+					limit = {
+						NOT = { owned_by = SHY }
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				ob_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SHY }
+							NOT = { province_id = 480 }
+						}
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				yrtesh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SHY }
+							NOT = { province_id = 2434 }
+						}
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				440 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SHY }
+						}
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+				1966 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SHY }
+						}
+					}
+					cede_province = SHY
+					add_core = SHY
+					remove_core = GLH
+				}
+			}
+			NOG = {
+				lower_yik_area = {
+					limit = {
+						NOT = { owned_by = NOG }
+					}
+					cede_province = NOG
+					add_core = NOG
+					remove_core = GLH
+				}
+				bashkiria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOG }
+							NOT = { province_id = 475 }
+							NOT = { province_id = 2444 }
+						}
+					}
+					cede_province = NOG
+					add_core = NOG
+					remove_core = GLH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.7.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			vassalize = WAL
+			add_country_modifier = {
+				name = major_power
+				duration = 150000
+			}
+		}
+		HAB = {
+			set_emperor = yes
+			define_ruler = {
+				dynasty = "von Habsburg"
+			}
+			define_heir = {
+				dynasty = "von Habsburg"
+			}
+		}
+	}
+}
+
+# Fall of the Constantinople
+country_event = {
+	id = eh_asia_turkey.8
+	title = "eh_asia_turkey.8.t"
+	desc = "eh_asia_turkey.8.d"
+	picture = SIEGE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				clr_country_flag = byzantium_turkish_wars
+				inherit = BYZ
+				inherit = ATH
+				inherit = CND
+				inherit = RS2
+				morea_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 163 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				serbia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 4239 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RS2
+				}
+				rascia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 138 }
+							NOT = { province_id = 4754 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RS2
+				}
+				142 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				147 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				151 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BYZ
+				}
+				325 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = CND
+				}
+				328 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = CND
+				}
+				3003 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				4698 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+			BYZ = { clr_country_flag = byzantium_turkish_wars }
+			RS2 = { clr_country_flag = byzantium_turkish_wars }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.8.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			set_capital = 151
+			add_prestige = 10
+			add_stability = 1
+			anatolia_region = {
+				limit = { owned_by = TUR }
+				change_religion = sunni
+			}
+			thrace_area = {
+				change_culture = turkish
+				change_religion = sunni
+			}
+		}
+	}
+}
+
+# Suleiman the Magnificent
+country_event = {
+	id = eh_asia_turkey.9
+	title = "eh_asia_turkey.9.t"
+	desc = "eh_asia_turkey.9.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			ADA = {
+				somaliland_area = {
+					limit = {
+						NOT = { owned_by = ADA }
+					}
+					cede_province = ADA
+					add_core = ADA
+					remove_core = WAR
+				}
+				majarteen_area = {
+					limit = {
+						NOT = { owned_by = ADA }
+					}
+					cede_province = ADA
+					add_core = ADA
+					remove_core = MRE
+				}
+				1208 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ADA }
+						}
+					}
+					cede_province = ADA
+					add_core = ADA
+					remove_core = AJU
+				}
+				2778 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ADA }
+						}
+					}
+					cede_province = ADA
+					add_core = ADA
+					remove_core = AJU
+				}
+				2795 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ADA }
+						}
+					}
+					cede_province = ADA
+					add_core = ADA
+					remove_core = AJU
+				}
+				2785 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ADA }
+						}
+					}
+					cede_province = ADA
+					add_core = ADA
+					remove_core = AJU
+				}
+			}
+			RUS = {
+				inherit = RYA
+				inherit = OKA
+				inherit = PSK
+				russia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { area = tambov_area }
+							NOT = { province_id = 30 }
+							NOT = { province_id = 1778 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = LT2
+				}
+				chernigov_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = LT2
+				}
+				298 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = LT2
+				}
+			}
+			CRI = {
+				tambov_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CRI }
+							NOT = { province_id = 304 }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				299 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				467 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				2409 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+			}
+			KAZ = {
+				saratov_area = {
+					limit = {
+						NOT = { owned_by = KAZ }
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+			}
+			GOL = { change_tag = AST }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.9.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			add_stability = 1
+			add_prestige = 10
+			add_legitimacy = 10
+			vassalize = TRA
+			define_ruler = {
+				name = "Suleyman I Kanuni"
+				dynasty = "Osmanoglu"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 6
+				age = 26
+			}
+			define_consort = {
+				name = "Roxelana"
+				dynasty = "Lisowska"
+				culture = ruthenian
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				female = yes
+				age = 20
+			}
+			define_heir = {
+				dynasty = "Osmanoglu"
+			}
+		}
+	}
+}
+
+# Campaigns of Suleiman the Magnificent
+country_event = {
+	id = eh_asia_turkey.10
+	title = "eh_asia_turkey.10.t"
+	desc = "eh_asia_turkey.10.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1550
+		NOT = { is_year = 1560 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			TUR = {
+				transdanubia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 135 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+				alfold_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 1953 }
+							NOT = { province_id = 4125 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+				vojvodina_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+				north_kurdistan_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				iraq_arabi_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				basra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 3211 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = BSR
+				}
+				al_jazira_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				shahrizor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 2211 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				bahrain_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 395 }
+							NOT = { province_id = 396 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = ALH
+				}
+				tihama_al_yemen_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = YEM
+				}
+				upper_yemen_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = YEM
+				}
+				yemen_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = YEM
+				}
+				asir_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 386 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RAS
+				}
+				136 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				2348 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = GEN
+				}
+				2308 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				4753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				4302 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+			}
+			MOR = {
+				sus_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOR }
+							NOT = { province_id = 3031 }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = POR
+				}
+				western_morocco_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = POR
+				}
+				tafilalt_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = TLC
+				}
+				1127 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+				}
+				2465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = TLC
+				}
+				3252 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+				}
+			}
+			ALG = {
+				algiers_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ALG }
+							NOT = { province_id = 2465 }
+						}
+					}
+					cede_province = ALG
+					add_core = ALG
+					remove_core = TLC
+				}
+				339 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALG }
+						}
+					}
+					cede_province = ALG
+					add_core = ALG
+					remove_core = KBA
+				}
+				340 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALG }
+						}
+					}
+					cede_province = ALG
+					add_core = ALG
+					remove_core = TUN
+				}
+				1882 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALG }
+						}
+					}
+					cede_province = ALG
+					add_core = ALG
+					remove_core = TLC
+				}
+				2458 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALG }
+						}
+					}
+					cede_province = ALG
+					add_core = ALG
+					remove_core = TLC
+				}
+			}
+			TUN = {
+				352 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = TUN }
+						}
+					}
+					cede_province = TUN
+					add_core = TUN
+					remove_core = GHD
+				}
+			}
+			HED = {
+				386 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HED }
+						}
+					}
+					cede_province = HED
+					add_core = HED
+					remove_core = YEM
+				}
+				4278 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HED }
+						}
+					}
+					cede_province = HED
+					add_core = HED
+					remove_core = YEM
+				}
+			}
+			BBR = {
+				change_culture = somali
+				somaliland_area = {
+					limit = {
+						NOT = { owned_by = BBR }
+					}
+					cede_province = BBR
+					add_core = BBR
+					remove_core = HAR
+				}
+			}
+			MRE = {
+				majarteen_area = {
+					limit = {
+						NOT = { owned_by = MRE }
+					}
+					cede_province = MRE
+					add_core = MRE
+					remove_core = HAR
+				}
+				2778 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MRE }
+						}
+					}
+					cede_province = MRE
+					add_core = MRE
+					remove_core = HAR
+				}
+			}
+			AJU = {
+				ajuuran_area = {
+					limit = {
+						NOT = { owned_by = AJU }
+					}
+					cede_province = AJU
+					add_core = AJU
+					remove_core = HAR
+				}
+				2795 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AJU }
+						}
+					}
+					cede_province = AJU
+					add_core = AJU
+					remove_core = HAR
+				}
+			}
+			KBU = {
+				futa_jallon_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KBU }
+							NOT = { province_id = 1117 }
+						}
+					}
+					cede_province = KBU
+					add_core = KBU
+					remove_core = JOL
+				}
+				2239 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KBU }
+						}
+					}
+					cede_province = KBU
+					add_core = KBU
+					remove_core = JOL
+				}
+			}
+			FUL = {
+				1116 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FUL }
+						}
+					}
+					cede_province = FUL
+					add_core = FUL
+					remove_core = JOL
+				}
+				1117 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FUL }
+						}
+					}
+					cede_province = FUL
+					add_core = FUL
+				}
+				1120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FUL }
+						}
+					}
+					cede_province = FUL
+					add_core = FUL
+					remove_core = ML2
+				}
+			}
+			YAT = {
+				1135 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAT }
+						}
+					}
+					cede_province = YAT
+					add_core = YAT
+					remove_core = SON
+				}
+				2265 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAT }
+						}
+					}
+					cede_province = YAT
+					add_core = YAT
+					remove_core = SON
+				}
+			}
+			FRA = {
+				inherit = BRI
+				inherit = NEV
+				brittany_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = BRI
+				}
+				87 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ENG
+				}
+				181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = NEV
+				}
+				187 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = LOR
+				}
+				188 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = LOR
+				}
+				191 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = NEV
+				}
+				4766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = LOR
+				}
+			}
+			SPA = {
+				1743 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = FRA
+				}
+			}
+			DAN = {
+				inherit = NO2
+				northern_norway = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				western_norway = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				eastern_norway = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				iceland_area = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				16 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				315 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				1104 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+				1979 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = NO2
+				}
+			}
+			RUS = {
+				kazan_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KAZ
+				}
+				saratov_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KAZ
+				}
+				samara_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KAZ
+				}
+				kama_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KAZ
+				}
+				tambov_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				volga_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KAZ
+				}
+				bashkiria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 1965 }
+							NOT = { province_id = 2441 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KAZ
+				}
+				astrakhan_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = AST
+				}
+				lower_don_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 467 }
+							NOT = { province_id = 2409 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = AST
+				}
+				299 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				467 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				2413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				2409 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+			}
+			GAZ = {
+				2201 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAZ }
+						}
+					}
+					cede_province = GAZ
+					add_core = GAZ
+					remove_core = AST
+				}
+				2197 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAZ }
+						}
+					}
+					cede_province = GAZ
+					add_core = GAZ
+					remove_core = CIR
+				}
+				2208 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAZ }
+						}
+					}
+					cede_province = GAZ
+					add_core = GAZ
+					remove_core = CIR
+				}
+			}
+			ZAZ = {
+				283 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAZ }
+						}
+					}
+					cede_province = ZAZ
+					add_core = ZAZ
+					remove_core = CRI
+				}
+				291 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAZ }
+						}
+					}
+					cede_province = ZAZ
+					add_core = ZAZ
+					remove_core = CRI
+				}
+				2406 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAZ }
+						}
+					}
+					cede_province = ZAZ
+					add_core = ZAZ
+					remove_core = CRI
+				}
+				2411 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAZ }
+						}
+					}
+					cede_province = ZAZ
+					add_core = ZAZ
+					remove_core = CRI
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.10.a"
+		ai_chance = { factor = 100 }
+		ADA = { change_tag = HAR }
+		BBR = { change_tag = WAR }
+		HAB = { set_emperor = yes }
+		balkan_region = { set_in_empire = no }
+		carpathia_region = { set_in_empire = no }
+		italy_region = { set_in_empire = no }
+		every_province = {
+			limit = { owned_by = FRA }
+			set_in_empire = no
+		}
+		every_province = {
+			limit = { owned_by = SPA }
+			set_in_empire = no
+		}
+	}
+}
+
+# Ottoman-Persian wars
+country_event = {
+	id = eh_asia_turkey.11
+	title = "eh_asia_turkey.11.t"
+	desc = "eh_asia_turkey.11.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1600
+		NOT = { is_year = 1610 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				tabriz_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				armenia_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				samtskhe_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 2196 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				shahrizor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 2211 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				shirvan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 424 }
+							NOT = { province_id = 4340 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				kartli_kakheti_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 4301 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+				164 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = NAX
+				}
+				425 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+			}
+			PER = {
+				tabarestan_area = {
+					limit = {
+						NOT = { owned_by = PER }
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = TAB
+				}
+				424 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = TAB
+				}
+				4340 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = TAB
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.11.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Ottoman-Persian wars
+country_event = {
+	id = eh_asia_turkey.12
+	title = "eh_asia_turkey.12.t"
+	desc = "eh_asia_turkey.12.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1640
+		NOT = { is_year = 1650 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				samtskhe_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 2196 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PER
+				}
+			}
+			PER = {
+				inherit = BAL
+				sistan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PER }
+							NOT = { province_id = 2229 }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = BAL
+				}
+				makran_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PER }
+							NOT = { province_id = 2231 }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = BAL
+				}
+			}
+			MUG = {
+				ahmednagar_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = AHM
+				}
+				447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = PER
+				}
+				449 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = PER
+				}
+				577 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = PER
+				}
+				2034 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = AHM
+				}
+				2229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = PER
+				}
+			}
+			BIJ = {
+				rayalaseema_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 1949 }
+							NOT = { province_id = 2090 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = VIJ
+				}
+				2031 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = VIJ
+				}
+				4422 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = VIJ
+				}
+			}
+			RAS = {
+				yemen_area = {
+					limit = {
+						NOT = { owned_by = RAS }
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+				tihama_al_yemen_area = {
+					limit = {
+						NOT = { owned_by = RAS }
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.12.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Battle of Vienna
+country_event = {
+	id = eh_asia_turkey.13
+	title = "eh_asia_turkey.13.t"
+	desc = "eh_asia_turkey.13.d"
+	picture = SIEGE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1680
+		NOT = { is_year = 1685 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				154 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+				163 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+				281 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PLC
+				}
+				1943 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = PLC
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.13.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			set_country_flag = great_turkish_war
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			declare_war_with_cb = {
+				who = HAB
+				casus_belli = cb_annex
+			}
+		}
+		HAB = {
+			set_country_flag = great_turkish_war
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			134 = { add_building = fort_18th }
+			country_event = { id = eh_german.12 days = 700 }
+		}
+	}
+}
+
+# Greek War of Independence
+country_event = {
+	id = eh_asia_turkey.14
+	title = "eh_asia_turkey.14.t"
+	desc = "eh_asia_turkey.14.d"
+	picture = SIEGE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1832
+		NOT = { is_year = 1835 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GR2 = {
+				morea_area = {
+					limit = {
+						NOT = { owned_by = GR2 }
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				central_greece_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GR2 }
+							NOT = { province_id = 147 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				164 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				4699 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+			}
+			EG2 = {
+				palestine_area = {
+					limit = {
+						NOT = { owned_by = EG2 }
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = TUR
+				}
+				trans_jordan_area = {
+					limit = {
+						NOT = { owned_by = EG2 }
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = TUR
+				}
+				syria_area = {
+					limit = {
+						NOT = { owned_by = EG2 }
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = TUR
+				}
+				syrian_desert_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EG2 }
+							NOT = { province_id = 2334 }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = TUR
+				}
+				aleppo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EG2 }
+							NOT = { province_id = 4298 }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = TUR
+				}
+			}
+			SHM = {
+				393 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SHM }
+						}
+					}
+					cede_province = SHM
+					add_core = SHM
+					remove_core = TUR
+				}
+				4272 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SHM }
+						}
+					}
+					cede_province = SHM
+					add_core = SHM
+					remove_core = TUR
+				}
+				2337 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SHM }
+						}
+					}
+					cede_province = SHM
+					add_core = SHM
+					remove_core = TUR
+				}
+			}
+			NAJ = {
+				392 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAJ }
+						}
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = TUR
+				}
+				394 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAJ }
+						}
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = TUR
+				}
+				2347 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAJ }
+						}
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = TUR
+				}
+				2338 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAJ }
+						}
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = TUR
+				}
+				4273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAJ }
+						}
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = EG2
+				}
+				4274 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAJ }
+						}
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = TUR
+				}
+			}
+			RUS = {
+				inherit = ARM
+				armenia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = ARM
+				}
+				aqmola_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				kazakhstan_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				balchasj_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				4340 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PER
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.14.a"
+		ai_chance = { factor = 100 }
+		GR2 = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			set_capital = 146
+			change_primary_culture = greek
+			change_religion = orthodox
+			every_owned_province = { change_religion = orthodox }
+		}
+		TUR = { remove_accepted_culture = greek }
+	}
+}
+
+# Crimean War - Outcomes
+country_event = {
+	id = eh_asia_turkey.15
+	title = "eh_asia_turkey.15.t"
+	desc = "eh_asia_turkey.15.d"
+	picture = SIEGE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				syr_darya_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				1970 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+			}
+			WAL = {
+				inherit = MOL
+				4529 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WAL }
+						}
+					}
+					cede_province = WAL
+					add_core = WAL
+					remove_core = MOL
+				}
+				4530 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WAL }
+						}
+					}
+					cede_province = WAL
+					add_core = WAL
+					remove_core = MOL
+				}
+			}
+			ZZB = {
+				central_swahili_coast_area = {
+					limit = {
+						NOT = { owned_by = ZZB }
+					}
+					cede_province = ZZB
+					add_core = ZZB
+					remove_core = OM2
+				}
+				mogadishu_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZZB }
+							NOT = { province_id = 2795 }
+						}
+					}
+					cede_province = ZZB
+					add_core = ZZB
+					remove_core = OM2
+				}
+				1200 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZZB }
+						}
+					}
+					cede_province = ZZB
+					add_core = ZZB
+					remove_core = OM2
+				}
+				1204 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZZB }
+						}
+					}
+					cede_province = ZZB
+					add_core = ZZB
+					remove_core = OM2
+				}
+				2774 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZZB }
+						}
+					}
+					cede_province = ZZB
+					add_core = ZZB
+					remove_core = OM2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.15.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			clr_country_flag = crimean_war
+			white_peace = RUS
+		}
+		RUS = { clr_country_flag = crimean_war }
+		GBR = { clr_country_flag = crimean_war }
+		FR2 = { clr_country_flag = crimean_war }
+	}
+}
+
+# Decline of Ottoman
+country_event = {
+	id = eh_asia_turkey.16
+	title = "eh_asia_turkey.16.t"
+	desc = "eh_asia_turkey.16.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1875
+		NOT = { is_year = 1880 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			AUH = {
+				bosnia_area = {
+					limit = {
+						NOT = { owned_by = AUH }
+					}
+					cede_province = AUH
+					add_core = AUH
+					remove_core = TUR
+				}
+				1828 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUH }
+						}
+					}
+					cede_province = AUH
+					add_core = AUH
+					remove_core = TUR
+				}
+			}
+			SER = {
+				1827 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SER }
+						}
+					}
+					cede_province = SER
+					add_core = SER
+					remove_core = TUR
+				}
+				3000 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SER }
+						}
+					}
+					cede_province = SER
+					add_core = SER
+					remove_core = TUR
+				}
+			}
+			BUL = {
+				change_government = monarchy
+				add_government_reform = multi_party_system
+				set_government_rank = 2
+				set_capital = 1765
+				change_primary_culture = bulgarian
+				change_religion = orthodox
+				bulgaria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BUL }
+							NOT = { province_id = 2750 }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+					remove_core = TUR
+				}
+				silistria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BUL }
+							NOT = { province_id = 4706 }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+					remove_core = TUR
+				}
+			}
+			RMN = {
+				4706 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RMN }
+						}
+					}
+					cede_province = RMN
+					add_core = RMN
+					remove_core = TUR
+				}
+			}
+			GR2 = {
+				142 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = GBR
+				}
+			}
+			RUS = {
+				samtskhe_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = TUR
+				}
+				transcaspia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KHI
+				}
+				2127 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = BUK
+				}
+				460 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = FRG
+				}
+				2350 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KHI
+				}
+				2370 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KHI
+				}
+			}
+			TUR = {
+				bahrain_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 396 }
+							NOT = { province_id = 2340 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = NAJ
+				}
+				390 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RAS
+				}
+				4280 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RAS
+				}
+				4281 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RAS
+				}
+			}
+			EG2 = {
+				ifat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EG2 }
+							NOT = { province_id = 2793 }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = HAR
+				}
+				darfur_central_sahara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EG2 }
+							NOT = { province_id = 3026 }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = DAR
+				}
+				kurdufan_area = {
+					limit = {
+						NOT = { owned_by = EG2 }
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = DAR
+				}
+				south_sudan_area = {
+					limit = {
+						NOT = { owned_by = EG2 }
+					}
+					cede_province = EG2
+					add_core = EG2
+				}
+				1208 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = WAR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.16.a"
+		ai_chance = { factor = 100 }
+		TUR = { add_prestige = -10 }
+		BUL = { 
+			change_religion = orthodox
+			every_owned_province = { change_religion = orthodox }
+		}
+	}
+}
+
+# Young Turk Revolution
+country_event = {
+	id = eh_asia_turkey.17
+	title = "eh_asia_turkey.17.t"
+	desc = "eh_asia_turkey.17.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1905
+		NOT = { is_year = 1910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ASX = {
+				386 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASX }
+						}
+					}
+					cede_province = ASX
+					add_core = ASX
+					remove_core = TUR
+				}
+				2346 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASX }
+						}
+					}
+					cede_province = ASX
+					add_core = ASX
+					remove_core = TUR
+				}
+			}
+			RAS = {
+				upper_yemen_area = {
+					limit = {
+						NOT = { owned_by = RAS }
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+				387 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RAS }
+						}
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+				4279 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RAS }
+						}
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+				4280 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RAS }
+						}
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+			}
+			NJR = {
+				391 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NJR }
+						}
+					}
+					cede_province = NJR
+					add_core = NJR
+					remove_core = TUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.17.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			change_government = monarchy
+			add_government_reform = reorganized_ottoman_government
+			add_stability = -1
+			add_prestige = -10
+		}
+	}
+}
+
+# Dissolution of the Ottoman Empire
+country_event = {
+	id = eh_asia_turkey.18
+	title = "eh_asia_turkey.18.t"
+	desc = "eh_asia_turkey.18.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1920
+		NOT = { is_year = 1922 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				palestine_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 364 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				trans_jordan_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				basra_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				iraq_arabi_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				shahrizor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2211 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				2334 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				411 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				2309 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				2792 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DER
+				}
+				4268 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+				4270 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TUR
+				}
+			}
+			FR2 = {
+				syria_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = TUR
+				}
+				aleppo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FR2 }
+							NOT = { province_id = 4298 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = TUR
+				}
+				al_jazira_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FR2 }
+							NOT = { province_id = 411 }
+							NOT = { province_id = 2309 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = TUR
+				}
+				405 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = TUR
+				}
+				4271 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = TUR
+				}
+			}
+			GR2 = {
+				149 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				318 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				4779 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				4309 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+			}
+			NAJ = {
+				inherit = SHM
+				qasim_area = {
+					limit = {
+						NOT = { owned_by = NAJ }
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = SHM
+				}
+				nafud_area = {
+					limit = {
+						NOT = { owned_by = NAJ }
+					}
+					cede_province = NAJ
+					add_core = NAJ
+					remove_core = SHM
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.18.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			remove_country_modifier = major_power
+			every_owned_province = {
+				kill_units = {
+					who = TUR
+					type = infantry
+				}
+				kill_units = {
+					who = TUR
+					type = cavalry
+				}
+				kill_units = {
+					who = TUR
+					type = artillery
+				}
+			}
+			country_event = { id = eh_asia_turkey.19 days = 300 }
+		}
+		GR2 = {
+			add_manpower = 25
+			every_owned_province = { change_religion = orthodox }
+		}
+	}
+}
+
+# Turkish War of Independence
+country_event = {
+	id = eh_asia_turkey.19
+	title = "eh_asia_turkey.19.t"
+	desc = "eh_asia_turkey.19.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			TUR = {
+				change_tag = TKY
+				anatolia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TKY }
+							NOT = { province_id = 321 }
+						}
+					}
+					cede_province = TKY
+					add_core = TKY
+				}
+				149 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TKY }
+						}
+					}
+					cede_province = TKY
+					add_core = TKY
+					remove_core = GR2
+				}
+				4779 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TKY }
+						}
+					}
+					cede_province = TKY
+					add_core = TKY
+					remove_core = GR2
+				}
+			}
+			PER = {
+				2207 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MGR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_turkey.19.a"
+		ai_chance = { factor = 100 }
+		TKY = {
+			clr_country_flag = turkish_war_of_independence
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 326
+			change_primary_culture = turkish
+			change_religion = secularism
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Mustafa Kemal Ataturk"
+				culture = turkish
+				change_adm = 5
+				change_dip = 5
+				change_mil = 4
+				age = 48
+			}
+		}
+		every_country = {
+			limit = { is_subject_of = TKY }
+			grant_independence = yes
+		}
+	}
+}
+
+# Modern Turkey
+country_event = {
+	id = eh_asia_turkey.20
+	title = "eh_asia_turkey.20.t"
+	desc = "eh_asia_turkey.20.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TKY
+		is_year = 2014
+		NOT = { is_year = 2016 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_turkey.20.a"
+		ai_chance = { factor = 100 }
+		TKY = {
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			define_ruler = {
+				name = "Recep Tayyip Erdogan"
+				culture = turkish
+				change_adm = 3
+				change_dip = 4
+				change_mil = 4
+			}
+			151 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			326 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Mehmet II
+country_event = {
+	id = eh_asia_turkey.21
+	title = "eh_asia_turkey.21.t"
+	desc = "eh_asia_turkey.21.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = TUR
+		is_year = 1450
+		NOT = { is_year = 1480 }
+		NOT = { has_ruler = "Mehmet II Fatih" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_asia_turkey.21.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			change_government = monarchy
+			add_government_reform = ottoman_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Mehmet II Fatih"
+				dynasty = "Osmanoglu"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 6	
+				min_age = 18
+				max_age = 45
+			}
+			define_ruler_to_general = {	fire = 6	shock = 4	manuever = 4	siege = 2 }
+			define_consort = {
+				name = "Gulbahar"
+				culture = albanian
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Suleiman I
+country_event = {
+	id = eh_asia_turkey.22
+	title = "eh_asia_turkey.22.t"
+	desc = "eh_asia_turkey.22.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = TUR
+		is_year = 1520
+		NOT = { is_year = 1560 }
+		NOT = { has_ruler = "Suleyman I Kanuni" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_asia_turkey.22.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			change_government = monarchy
+			add_government_reform = ottoman_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Suleyman I Kanuni"
+				dynasty = "Osmanoglu"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 6
+				min_age = 25
+				max_age = 65
+			}
+			define_consort = {
+				name = "Roxelana"
+				dynasty = "Lisowska"
+				culture = ruthenian
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				female = yes
+			}
+		}
+	}
+}
+
+# Setting on the Ottoman disasters
+country_event = {
+	id = eh_asia_turkey.23
+	title = "eh_asia_turkey.23.t"
+	desc = "eh_asia_turkey.23.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = TUR
+		is_year = 1300
+		NOT = { is_year = 1900 }
+		NOT = { has_country_flag = ottoman_disasters }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = "eh_asia_turkey.23.a"
+		ai_chance = { factor = 100 }
+		TUR = {
+			set_country_flag = ottoman_disasters
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			add_country_modifier = {
+				name = promoting_art
+				duration = 3000
+			}
+			define_ruler = {
+				dynasty = "Osmanoglu"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+			}
+			define_advisor = {
+				type = theologian
+				culture = turkish
+				skill = 3
+				discount = yes
+				female = no
+			}
+			define_advisor = {
+				type = statesman
+				culture = turkish
+				skill = 3
+				discount = yes
+				female = no
+			}
+			define_advisor = {
+				type = commandant
+				culture = turkish
+				skill = 3
+				discount = yes
+				female = no
+			}
+			country_event = { id = internal_conflicts.8 days = 3 }
+		}
+	}
+}
+
+country_event = { id = internal_conflicts.8 days = 3 }
+
+# Mustafa Kemal
+country_event = {
+	id = eh_asia_turkey.24
+	title = "eh_asia_turkey.24.t"
+	desc = "eh_asia_turkey.24.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	trigger = {
+		tag = TKY
+		is_year = 1925
+		NOT = { is_year = 1935 }
+		NOT = { has_ruler = "Mustafa Kemal Ataturk" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_asia_turkey.24.a"
+		ai_chance = { factor = 100 }
+		TKY = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Mustafa Kemal Ataturk"
+				culture = turkish
+				change_adm = 5
+				change_dip = 5
+				change_mil = 4
+				min_age = 45
+				max_age = 55
+			}
+		}
+	}
+}
+
+# French campaign in Egypt and Syria - Start for Turkish
+country_event = {
+	id = eh_asia_turkey.25
+	title = "eh_asia_turkey.25.t"
+	desc = "eh_asia_turkey.25.d"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_turkey.25.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# French campaign in Egypt and Syria - Finish for Turkish
+country_event = {
+	id = eh_asia_turkey.26
+	title = "eh_asia_turkey.26.t"
+	desc = "eh_asia_turkey.26.d"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_turkey.26.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# World War I - Start for Turkish
+country_event = {
+	id = eh_asia_turkey.27
+	title = "eh_asia_turkey.27.t"
+	desc = "eh_asia_turkey.27.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_turkey.27.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Treaty of Versailles - Finish for Turkish
+country_event = {
+	id = eh_asia_turkey.28
+	title = "eh_asia_turkey.28.t"
+	desc = "eh_asia_turkey.28.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_turkey.28.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Korean War - Start for Turkish
+country_event = {
+	id = eh_asia_turkey.29
+	title = "eh_asia_turkey.29.t"
+	desc = "eh_asia_turkey.29.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_turkey.29.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Korean War - Finish for Turkish
+country_event = {
+	id = eh_asia_turkey.30
+	title = "eh_asia_turkey.30.t"
+	desc = "eh_asia_turkey.30.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_asia_turkey.30.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# EH version

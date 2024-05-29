@@ -1,0 +1,61 @@
+government = republic
+add_government_reform = constitutional_republic
+religion = confucianism
+technology_group = early_chinese
+primary_culture = jianghuai
+historical_rival = CHN
+historical_friend = JAP
+capital = 1821	# Nanjing
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Reformed add_government_reform of China
+
+1938.3.28 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+	religion = secularism
+	technology_group = asian
+	monarch = {
+		name = "Liang Hongzhi"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+# Reorganized National add_government_reform of China
+
+1940.3.30 = {
+	monarch = {
+		name = "Wang Jingwei"
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+1944.9.1 = {
+	monarch = {
+		name = "Chen Gongbo"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}

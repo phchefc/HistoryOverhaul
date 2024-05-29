@@ -1,0 +1,96 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xibei
+capital = 2184
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# Southern Liang
+
+397.1.1 = {
+	monarch = {
+		name = "Wugu" #Liezu
+		dynasty = "Tufa"
+		birth_date = 365.1.1
+		culture = khitan #Xianbei
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+397.1.1 = {
+	heir = {
+		name = "Lilugu"
+		monarch_name = "Kang"
+		dynasty = "Tufa"
+		birth_date = 367.1.1
+		death_date = 402.1.1
+		culture = khitan #Xianbei
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+399.1.1 = {
+	monarch = {
+		name = "Lilugu" #Kang
+		dynasty = "Tufa"
+		culture = khitan #Xianbei
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+399.1.1 = {
+	heir = {
+		name = "Rutan"
+		monarch_name = "Jing"
+		dynasty = "Tufa"
+		birth_date = 370.1.1
+		death_date = 415.1.1
+		culture = khitan #Xianbei
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+402.1.1 = {
+	monarch = {
+		name = "Rutan" #Jing
+		dynasty = "Tufa"
+		culture = khitan #Xianbei
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LNS
+		dynasty = "Zhejue"
+		birth_date = 370.1.1
+		death_date = 430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

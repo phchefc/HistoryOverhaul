@@ -1,0 +1,2214 @@
+﻿namespace = eh_setting
+namespace = eh_culture
+namespace = eh_humanities
+namespace = eh_living
+namespace = eh_leisure
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for Cultural history
+########################################################################
+
+# Roman culture
+country_event = {
+	id = eh_culture.1
+	title = "eh_culture.1.t"
+	desc = "eh_culture.1.d"
+	picture = ROMAN_ACQUEDUCT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			tag = ROM
+			tag = ROW
+			tag = A01
+			tag = A02
+			tag = A03
+			tag = A04
+			tag = BYZ
+			tag = SOI
+		}
+		is_year = 2
+		NOT = { is_year = 1450 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.1.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Indian culture
+country_event = {
+	id = eh_culture.2
+	title = "eh_culture.2.t"
+	desc = "eh_culture.2.d"
+	picture = 1_Brahmin_Estate__eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = india_superregion }
+			capital_scope = { superregion = east_indies_superregion }
+		}
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.2.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Islamic culture
+country_event = {
+	id = eh_culture.3
+	title = "eh_culture.3.t"
+	desc = "eh_culture.3.d"
+	picture = big_arabian_city_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = africa_superregion }
+			capital_scope = { superregion = near_east_superregion }
+			capital_scope = { superregion = persia_superregion }
+		}
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# East Asian culture
+country_event = {
+	id = eh_culture.4
+	title = "eh_culture.4.t"
+	desc = "eh_culture.4.d"
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = far_east_superregion }
+			capital_scope = { superregion = east_indies_superregion }
+		}
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.4.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Mesoamerican culture
+country_event = {
+	id = eh_culture.5
+	title = "eh_culture.5.t"
+	desc = "eh_culture.5.d"
+	picture = HUMAN_SACRIFICE_eventPicture
+	
+	trigger = {
+		ROOT = {
+			AND = {
+				NOT = { has_country_flag = uncivilized_nation }
+				NOT = { technology_group = western }
+				capital_scope = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+			}
+		}
+		is_year = 2
+		NOT = { is_year = 1750 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.5.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			set_country_flag = uncivilized_nation
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+			add_country_modifier = {
+				name = uncivilized_nation
+				duration = 600000
+			}
+		}
+	}
+}
+
+# Indigenous culture of World
+country_event = {
+	id = eh_culture.6
+	title = "eh_culture.6.t"
+	desc = "eh_culture.6.d"
+	picture = INTI_GOD_eventPicture
+	
+	trigger = {
+		ROOT = {
+			AND = {
+				NOT = { has_country_flag = uncivilized_nation }
+				NOT = { technology_group = western }
+				capital_scope = {
+					OR = {
+						continent = oceania
+						superregion = southern_africa_superregion
+					}
+				}
+			}
+		}
+		is_year = 2
+		NOT = { is_year = 1850 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_culture.6.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			set_country_flag = uncivilized_nation
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+			add_country_modifier = {
+				name = uncivilized_nation
+				duration = 600000
+			}
+		}
+	}
+}
+
+# Medieval European culture
+country_event = {
+	id = eh_culture.7
+	title = "eh_culture.7.t"
+	desc = "eh_culture.7.d"
+	picture = RELIGION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+		}
+		is_year = 500
+		NOT = { is_year = 1400 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.7.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Renaissance
+country_event = {
+	id = eh_culture.8
+	title = "eh_culture.8.t"
+	desc = "eh_culture.8.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+			capital_scope = { superregion = china_superregion }
+		}
+		is_year = 1400
+		NOT = { is_year = 1600 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.8.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Baroque
+country_event = {
+	id = eh_culture.9
+	title = "eh_culture.9.t"
+	desc = "eh_culture.9.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+		}
+		is_year = 1600
+		NOT = { is_year = 1730 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.9.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Rococo
+country_event = {
+	id = eh_culture.10
+	title = "eh_culture.10.t"
+	desc = "eh_culture.10.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+		}
+		is_year = 1730
+		NOT = { is_year = 1790 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.10.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+		}
+	}
+}
+
+# Neoclassicism
+country_event = {
+	id = eh_culture.11
+	title = "eh_culture.11.t"
+	desc = "eh_culture.11.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+		}
+		is_year = 1790
+		NOT = { is_year = 1830 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.11.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+			add_republican_tradition = 5
+		}
+	}
+}
+
+# Romanticism
+country_event = {
+	id = eh_culture.12
+	title = "eh_culture.12.t"
+	desc = "eh_culture.12.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+			capital_scope = { superregion = north_america_superregion }
+		}
+		is_year = 1800
+		NOT = { is_year = 1850 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.12.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+			add_republican_tradition = 5
+		}
+	}
+}
+
+# Late 19th century culture
+country_event = {
+	id = eh_culture.13
+	title = "eh_culture.13.t"
+	desc = "eh_culture.13.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		OR = {
+			capital_scope = { superregion = europe_superregion }
+			capital_scope = { superregion = eastern_europe_superregion }
+			capital_scope = { superregion = north_america_superregion }
+		}
+		is_year = 1850
+		NOT = { is_year = 1920 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = { has_country_modifier = uncivilized_nation }
+				remove_country_modifier = uncivilized_nation
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_culture.13.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+			add_republican_tradition = 5
+		}
+	}
+}
+
+# Contemporary culture
+country_event = {
+	id = eh_culture.14
+	title = "eh_culture.14.t"
+	desc = "eh_culture.14.d"
+	picture = ARTWORK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		is_year = 1920
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.14.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_legitimacy = 5
+			add_republican_tradition = 5
+		}
+	}
+}
+
+# Global North and Global South
+country_event = {
+	id = eh_culture.15
+	title = "eh_culture.15.t"
+	desc = "eh_culture.15.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				NOT = { technology_group = western }
+				NOT = { tag = JAP }
+			}
+		}
+		is_year = 1850
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.15.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_country_modifier = {
+				name = minor_power
+				duration = 50000
+			}
+		}
+	}
+}
+
+# End of the Global North and Global South
+country_event = {
+	id = eh_culture.16
+	title = "eh_culture.16.t"
+	desc = "eh_culture.16.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = { has_country_modifier = minor_power }
+		is_year = 1980
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_culture.16.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			remove_country_modifier = minor_power
+		}
+	}
+}
+
+########################################################################
+# Events for Humanities
+########################################################################
+
+# Religion - Christianity
+country_event = {
+	id = eh_humanities.1
+	title = "eh_humanities.1.t"
+	desc = "eh_humanities.1.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = { religion_group = christian }
+		is_year = 800
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_humanities.1.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_unrest = -5
+			add_prestige = 5
+		}
+	}
+}
+
+# Religion - Islam
+country_event = {
+	id = eh_humanities.2
+	title = "eh_humanities.2.t"
+	desc = "eh_humanities.2.d"
+	picture = mecca_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = { religion_group = muslim }
+		is_year = 700
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_humanities.2.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_unrest = -5
+			add_prestige = 5
+		}
+	}
+}
+
+# Religion - Buddhism
+country_event = {
+	id = eh_humanities.3
+	title = "eh_humanities.3.t"
+	desc = "eh_humanities.3.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = { 
+			OR = {
+				religion_group = buddhic
+				religion_group = dharmic
+			}
+		}
+		is_year = 600
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_humanities.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_unrest = -5
+			add_prestige = 5
+		}
+	}
+}
+
+# Religion - East Asian
+country_event = {
+	id = eh_humanities.4
+	title = "eh_humanities.4.t"
+	desc = "eh_humanities.4.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = { religion_group = eastern }
+		is_year = 500
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_humanities.4.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_unrest = -5
+			add_prestige = 5
+		}
+	}
+}
+
+# Setting on the European religions before the Reformation
+country_event = {
+	id = eh_humanities.5
+	title = "eh_humanities.5.t"
+	desc = "eh_humanities.5.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = PAP
+				is_year = 1440
+				NOT = { is_year = 1450 }
+				NOT = { has_country_flag = before_reformation }
+			}
+			AND = {
+				tag = FRA
+				is_year = 1470
+				NOT = { is_year = 1480 }
+				NOT = { has_country_flag = before_reformation }
+			}
+			AND = {
+				tag = HAB
+				is_year = 1500
+				NOT = { is_year = 1510 }
+				NOT = { has_country_flag = before_reformation }
+			}
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			france_region = { change_religion = catholic }
+			low_countries_region = { change_religion = catholic }
+			italy_region = { change_religion = catholic }
+			north_german_region = {
+				limit = {
+					AND = {
+						NOT = { area = bohemia_area }
+						NOT = { area = moravia_area }
+						NOT = { area = erzgebirge_area }
+					}
+				}
+				change_religion = catholic
+			}
+			bohemia_area = { change_religion = hussite }
+			moravia_area = { change_religion = hussite }
+			erzgebirge_area = { change_religion = hussite }
+			south_german_region = { change_religion = catholic }
+			british_isles_region = { change_religion = catholic }
+			baltic_region = { change_religion = catholic }
+			poland_region = { change_religion = catholic }
+			croatia_area = { change_religion = catholic }
+			iberia_region = {
+				limit = {
+					AND = {
+						NOT = { area = lower_andalucia_area }
+						NOT = { area = upper_andalucia_area }
+					}
+				}
+				change_religion = catholic
+			}
+			scandinavia_region = {
+				limit = {
+					AND = {
+						NOT = { area = laponia_area }
+						NOT = { area = norrland_area }
+						NOT = { area = bothnia_area }
+						NOT = { area = northern_norway }
+					}
+				}
+				change_religion = catholic
+			}
+			carpathia_region = { 
+				limit = {
+					AND = {
+						NOT = { area = wallachia_area }
+						NOT = { area = moldavia_area }
+						NOT = { area = bessarabia_area }
+					}
+				}
+				change_religion = catholic
+			}
+			carpathia_region = {
+				limit = {
+					AND = {
+						area = wallachia_area
+						area = moldavia_area
+						area = bessarabia_area
+					}
+				}
+				change_religion = orthodox
+			}
+			balkan_region = {
+				limit = {
+					AND = {
+						NOT = { area = croatia_area }
+						NOT = { area = east_adriatic_coast_area }
+						NOT = { area = slavonia_area }
+					}
+				}
+				change_religion = orthodox
+			}
+			russia_region = { change_religion = orthodox }
+			ruthenia_region = { change_religion = orthodox }
+			anatolia_region = {
+				limit = { owned_by = BYZ }
+				change_religion = orthodox
+			}
+		}
+	}
+
+	option = {
+		name = "eh_humanities.5.a"
+		ai_chance = { factor = 100 }
+		ROOT = { set_country_flag = before_reformation }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { region = france_region }
+					capital_scope = { region = scandinavia_region }
+					capital_scope = { region = low_countries_region }
+					capital_scope = { region = italy_region }
+					capital_scope = { region = north_german_region }
+					capital_scope = { region = south_german_region }
+					capital_scope = { region = british_isles_region }
+					capital_scope = { region = baltic_region }
+					capital_scope = { region = poland_region }
+					capital_scope = { area = croatia_area }
+					capital_scope = {
+						AND = {
+							region = carpathia_region
+							NOT = { area = wallachia_area }
+							NOT = { area = moldavia_area }
+							NOT = { area = bessarabia_area }
+						}
+					}
+				}
+			}
+			change_religion = catholic
+		}
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = {
+						AND = {
+							region = balkan_region
+							NOT = { area = croatia_area }
+							NOT = { owned_by = TUR }
+						}
+					}
+					capital_scope = { region = russia_region }
+					capital_scope = { region = ruthenia_region }
+					capital_scope = { area = wallachia_area }
+					capital_scope = { area = moldavia_area }
+					capital_scope = { area = bessarabia_area }
+				}
+			}
+			change_religion = orthodox
+		}
+	}
+}
+
+# Setting on the European religions after the Reformation
+country_event = {
+	id = eh_humanities.6
+	title = "eh_humanities.6.t"
+	desc = "eh_humanities.6.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = PAP
+				is_year = 1600
+				NOT = { is_year = 1610 }
+				NOT = { has_country_flag = after_reformation }
+			}
+			AND = {
+				tag = FRA
+				is_year = 1650
+				NOT = { is_year = 1660 }
+				NOT = { has_country_flag = after_reformation }
+			}
+			AND = {
+				tag = HAB
+				is_year = 1700
+				NOT = { is_year = 1710 }
+				NOT = { has_country_flag = after_reformation }
+			}
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			ROOT = { set_country_flag = after_reformation }
+			france_region = { change_religion = catholic }
+			low_countries_region = {
+				limit = { 
+					owned_by = NED 
+				}
+				change_religion = reformed
+			}
+			low_countries_region = {
+				limit = { 
+					NOT = { owned_by = NED }
+				}
+				change_religion = catholic
+			}
+			italy_region = { change_religion = catholic }
+			north_german_region = { change_religion = protestant }
+			south_german_region = { change_religion = catholic }
+			british_isles_region = {
+				limit = {
+					AND = {
+						NOT = { area = lowlands_area }
+						NOT = { area = highlands_area }
+						NOT = { area = kingdom_of_the_isles_area }
+						NOT = { area = munster_area }
+						NOT = { area = connacht_area }
+						NOT = { area = leinster_area }
+						NOT = { area = ulster_area }
+					}
+				}
+				change_religion = anglican
+			}
+			british_isles_region = {
+				limit = {
+					AND = {
+						area = lowlands_area
+						area = highlands_area
+						area = kingdom_of_the_isles_area
+					}
+				}
+				change_religion = reformed
+			}
+			british_isles_region = {
+				limit = {
+					AND = {
+						area = munster_area
+						area = connacht_area
+						area = leinster_area
+						area = ulster_area
+					}
+				}
+				change_religion = catholic
+			}
+			baltic_region = { change_religion = catholic }
+			poland_region = { change_religion = catholic }
+			croatia_area = { change_religion = catholic }
+			iberia_region = {
+				limit = {
+					AND = {
+						NOT = { area = lower_andalucia_area }
+						NOT = { area = upper_andalucia_area }
+					}
+				}
+				change_religion = catholic
+			}
+			scandinavia_region = {
+				limit = {
+					AND = {
+						NOT = { area = laponia_area }
+						NOT = { area = norrland_area }
+						NOT = { area = bothnia_area }
+						NOT = { area = northern_norway }
+					}
+				}
+				change_religion = protestant
+			}
+			carpathia_region = {
+				limit = {
+					AND = {
+						NOT = { area = wallachia_area }
+						NOT = { area = moldavia_area }
+						NOT = { area = bessarabia_area }
+					}
+				}
+				change_religion = catholic
+			}
+			carpathia_region = {
+				limit = {
+					AND = {
+						area = wallachia_area
+						area = moldavia_area
+						area = bessarabia_area
+					}
+				}
+				change_religion = orthodox
+			}
+			balkan_region = {
+				limit = {
+					AND = {
+						NOT = { area = croatia_area }
+						NOT = { area = east_adriatic_coast_area }
+						NOT = { area = slavonia_area }
+						NOT = { province_id = 151 }
+					}
+				}
+				change_religion = orthodox
+			}
+			russia_region = { change_religion = orthodox }
+			ruthenia_region = { change_religion = orthodox }
+		}
+	}
+
+	option = {
+		name = "eh_humanities.6.a"
+		ai_chance = { factor = 100 }
+		151 = { change_religion = sunni }
+	}
+}
+
+# Philosophy
+country_event = {
+	id = eh_humanities.7
+	title = "eh_humanities.7.t"
+	desc = "eh_humanities.7.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_humanities.7.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_corruption = -5
+			add_prestige = 5
+		}
+	}
+}
+
+# Literature
+country_event = {
+	id = eh_humanities.8
+	title = "eh_humanities.8.t"
+	desc = "eh_humanities.8.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_humanities.8.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			change_innovativeness = 5
+			add_prestige = 5
+		}
+	}
+}
+
+# Law and politics
+country_event = {
+	id = eh_humanities.9
+	title = "eh_humanities.9.t"
+	desc = "eh_humanities.9.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_humanities.9.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_stability = 1
+			add_prestige = 5
+		}
+	}
+}
+
+# Linguistics
+country_event = {
+	id = eh_humanities.10
+	title = "eh_humanities.10.t"
+	desc = "eh_humanities.10.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1750
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_humanities.10.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_stability = 1
+			add_prestige = 5
+		}
+	}
+}
+
+# Sociology
+country_event = {
+	id = eh_humanities.11
+	title = "eh_humanities.11.t"
+	desc = "eh_humanities.11.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1800
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_humanities.11.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_stability = 1
+			add_prestige = 5
+		}
+	}
+}
+
+# Education
+country_event = {
+	id = eh_humanities.12
+	title = "eh_humanities.12.t"
+	desc = "eh_humanities.12.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_humanities.12.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			change_innovativeness = 5
+			add_prestige = 5
+		}
+	}
+}
+
+########################################################################
+# Events for Living
+########################################################################
+
+# Meat and Fish
+country_event = {
+	id = eh_living.1
+	title = "eh_living.1.t"
+	desc = "eh_living.1.d"
+	picture = FARMING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		OR = {
+			any_owned_province = { trade_goods = livestock }
+			any_owned_province = { trade_goods = fish }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_living.1.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Rice and Wheat
+country_event = {
+	id = eh_living.2
+	title = "eh_living.2.t"
+	desc = "eh_living.2.d"
+	picture = FARMING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		any_owned_province = { trade_goods = grain }
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_living.2.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = 1
+			country_event = { id = eh_living.7 days = 1 }
+		}
+	}
+}
+
+# Salt and Sugar
+country_event = {
+	id = eh_living.3
+	title = "eh_living.3.t"
+	desc = "eh_living.3.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		OR = {
+			any_owned_province = { trade_goods = salt }
+			any_owned_province = { trade_goods = sugar }
+		}
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Spice
+country_event = {
+	id = eh_living.4
+	title = "eh_living.4.t"
+	desc = "eh_living.4.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1400
+		any_owned_province = { trade_goods = spice }
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.4.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Coffee and Tea
+country_event = {
+	id = eh_living.5
+	title = "eh_living.5.t"
+	desc = "eh_living.5.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1600
+		OR = {
+			any_owned_province = { trade_goods = tea }
+			any_owned_province = { trade_goods = coffee }
+		}
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.5.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Spread of cuisines and foods
+country_event = {
+	id = eh_living.6
+	title = "eh_living.6.t"
+	desc = "eh_living.6.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1900
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.6.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Bread and Rice dishes
+country_event = {
+	id = eh_living.7
+	title = "eh_living.7.t"
+	desc = "eh_living.7.d"
+	picture = TRADEGOODS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_living.7.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+	
+	option = {
+		name = "eh_living.7.b"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+		}
+	}
+}
+
+# Noddles
+country_event = {
+	id = eh_living.8
+	title = "eh_living.8.t"
+	desc = "eh_living.8.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1400
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.8.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+	
+	option = {
+		name = "eh_living.8.b"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+		}
+	}
+}
+
+# Vegetarian cuisine
+country_event = {
+	id = eh_living.9
+	title = "eh_living.9.t"
+	desc = "eh_living.9.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		any_owned_province = { trade_goods = grain }
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.9.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+			country_event = { id = eh_living.10 days = 1 }
+		}
+	}
+}
+
+# Soybean
+country_event = {
+	id = eh_living.10
+	title = "eh_living.10.t"
+	desc = "eh_living.10.d"
+	picture = TRADEGOODS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_living.10.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Alcoholic beverages
+country_event = {
+	id = eh_living.11
+	title = "eh_living.11.t"
+	desc = "eh_living.11.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		any_owned_province = { trade_goods = wine }
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.11.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Cooking
+country_event = {
+	id = eh_living.12
+	title = "eh_living.12.t"
+	desc = "eh_living.12.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.12.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Food preservation
+country_event = {
+	id = eh_living.13
+	title = "eh_living.13.t"
+	desc = "eh_living.13.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_country_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+	
+	option = {
+		name = "eh_living.13.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+			country_event = { id = eh_living.14 days = 1 }
+		}
+	}
+}
+
+# Kitchen and Tools
+country_event = {
+	id = eh_living.14
+	title = "eh_living.14.t"
+	desc = "eh_living.14.d"
+	picture = TRADEGOODS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_living.14.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Housing
+country_event = {
+	id = eh_living.15
+	title = "eh_living.15.t"
+	desc = "eh_living.15.d"
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_living.15.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_stability = 1
+			add_prestige = 5
+		}
+	}
+}
+
+# Clothing
+country_event = {
+	id = eh_living.16
+	title = "eh_living.16.t"
+	desc = "eh_living.16.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_living.16.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_stability = 1
+			add_prestige = 5
+		}
+	}
+}
+
+########################################################################
+# Events for Sports
+########################################################################
+
+# Ancient sports events
+country_event = {
+	id = eh_leisure.1
+	title = "eh_leisure.1.t"
+	desc = "eh_leisure.1.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.1.a" # olympic games
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.2 days = 1 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.1.b" # chariot game
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.3 days = 1 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.1.c" # gladiator game
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.4 days = 1 }
+		}
+	}
+}
+
+# Ancient Olympic Games
+country_event = {
+	id = eh_leisure.2
+	title = "eh_leisure.2.t"
+	desc = "eh_leisure.2.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.2.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 1
+			add_unrest = -0.1
+		}
+	}
+}
+
+# Chariot Games
+country_event = {
+	id = eh_leisure.3
+	title = "eh_leisure.3.t"
+	desc = "eh_leisure.3.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 1
+			add_unrest = -0.1
+		}
+	}
+}
+
+# Gladiator Games
+country_event = {
+	id = eh_leisure.4
+	title = "eh_leisure.4.t"
+	desc = "eh_leisure.4.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.4.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 1
+			add_unrest = -0.1
+		}
+	}
+}
+
+# Modern sports events
+country_event = {
+	id = eh_leisure.5
+	title = "eh_leisure.5.t"
+	desc = "eh_leisure.5.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.5.a" # olympic games
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.7 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.5.b" # fifa world cup
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.8 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.5.c" # football leagues
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.21 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.5.e" # baseball leagues
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.22 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.5.f" # basketball leagues
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.23 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.5.g" # f-1 formula
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_leisure.24 days = 7 }
+		}
+	}
+}
+
+# Olympic Games
+country_event = {
+	id = eh_leisure.6
+	title = "eh_leisure.6.t"
+	desc = "eh_leisure.6.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.6.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			country_event = { id = eh_leisure.7 days = 700 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.6.b"
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Olympic Games
+country_event = {
+	id = eh_leisure.7
+	title = "eh_leisure.7.t"
+	desc = "eh_leisure.7.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.7.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = -1
+		}
+	}
+}
+
+# FIFA World Cup
+country_event = {
+	id = eh_leisure.8
+	title = "eh_leisure.8.t"
+	desc = "eh_leisure.8.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.8.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			country_event = { id = eh_leisure.9 days = 700 }
+		}
+	}
+	
+	option = {
+		name = "eh_leisure.8.b"
+		ai_chance = { factor = 50 }
+	}
+}
+
+# FIFA World Cup - Seeding
+country_event = {
+	id = eh_leisure.9
+	title = "eh_leisure.9.t"
+	desc = "eh_leisure.9.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.9.a"
+		ai_chance = { factor = 100 }
+		ROOT = { 
+			add_prestige = 5
+			add_years_of_income = -1
+			country_event = { id = eh_leisure.10 days = 300 }
+		}
+	}
+}
+
+# FIFA World Cup - Group stage
+country_event = {
+	id = eh_leisure.10
+	title = "eh_leisure.10.t"
+	desc = "eh_leisure.10.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.10.a"
+		ai_chance = { factor = 30 }
+		ROOT = { country_event = { id = eh_leisure.11 days = 10 } }
+	}
+	
+	option = {
+		name = "eh_leisure.10.b"
+		ai_chance = { factor = 30 }
+		ROOT = { country_event = { id = eh_leisure.11 days = 10 } }
+	}
+	
+	option = {
+		name = "eh_leisure.10.c"
+		ai_chance = { factor = 10 }
+		ROOT = { country_event = { id = eh_leisure.12 days = 10 } }
+	}
+	
+	option = {
+		name = "eh_leisure.10.e"
+		ai_chance = { factor = 30 }
+		ROOT = { country_event = { id = eh_leisure.11 days = 10 } }
+	}
+}
+
+# FIFA World Cup - Elimination of Group stage
+country_event = {
+	id = eh_leisure.11
+	title = "eh_leisure.11.t"
+	desc = "eh_leisure.11.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.11.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# FIFA World Cup - Round of 16
+country_event = {
+	id = eh_leisure.12
+	title = "eh_leisure.12.t"
+	desc = "eh_leisure.12.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.12.a"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.13 days = 4 } }
+	}
+	
+	option = {
+		name = "eh_leisure.12.b"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.14 days = 4 } }
+	}
+}
+
+# FIFA World Cup - Elimination of Round of 16
+country_event = {
+	id = eh_leisure.13
+	title = "eh_leisure.13.t"
+	desc = "eh_leisure.13.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.13.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# FIFA World Cup - Quater-finals
+country_event = {
+	id = eh_leisure.14
+	title = "eh_leisure.14.t"
+	desc = "eh_leisure.14.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.14.a"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.16 days = 4 } }
+	}
+	
+	option = {
+		name = "eh_leisure.14.b"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.15 days = 4 } }
+	}
+}
+
+# FIFA World Cup - Semi-finals
+country_event = {
+	id = eh_leisure.15
+	title = "eh_leisure.15.t"
+	desc = "eh_leisure.15.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.16.a"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.17 days = 4 } }
+	}
+	
+	option = {
+		name = "eh_leisure.16.b"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.18 days = 4 } }
+	}
+}
+
+# FIFA World Cup - Elimination of Quater-finals
+country_event = {
+	id = eh_leisure.16
+	title = "eh_leisure.16.t"
+	desc = "eh_leisure.16.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.16.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# FIFA World Cup - Third place
+country_event = {
+	id = eh_leisure.17
+	title = "eh_leisure.17.t"
+	desc = "eh_leisure.17.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.17.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# FIFA World Cup - Final
+country_event = {
+	id = eh_leisure.18
+	title = "eh_leisure.18.t"
+	desc = "eh_leisure.18.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.18.a"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.19 days = 4 } }
+	}
+	
+	option = {
+		name = "eh_leisure.18.b"
+		ai_chance = { factor = 50 }
+		ROOT = { country_event = { id = eh_leisure.20 days = 4 } }
+	}
+}
+
+# FIFA World Cup - Winner
+country_event = {
+	id = eh_leisure.19
+	title = "eh_leisure.19.t"
+	desc = "eh_leisure.19.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.19.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# FIFA World Cup - Finalist
+country_event = {
+	id = eh_leisure.20
+	title = "eh_leisure.20.t"
+	desc = "eh_leisure.20.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.20.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Football League
+country_event = {
+	id = eh_leisure.21
+	title = "eh_leisure.21.t"
+	desc = "eh_leisure.21.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.21.a"
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 1
+			add_years_of_income = 0.1
+		}
+	}
+}
+
+# Baseball League
+country_event = {
+	id = eh_leisure.22
+	title = "eh_leisure.22.t"
+	desc = "eh_leisure.22.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.22.a"
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 1
+			add_years_of_income = 0.1
+		}
+	}
+}
+
+# Basketball League
+country_event = {
+	id = eh_leisure.23
+	title = "eh_leisure.23.t"
+	desc = "eh_leisure.23.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.23.a"
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 1
+			add_years_of_income = 0.1
+		}
+	}
+}
+
+# F-1 Fomula
+country_event = {
+	id = eh_leisure.24
+	title = "eh_leisure.24.t"
+	desc = "eh_leisure.24.d"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_leisure.24.a"
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 1
+			add_years_of_income = 0.1
+		}
+	}
+}
+
+# EH version

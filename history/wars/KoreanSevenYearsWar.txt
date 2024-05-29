@@ -1,0 +1,432 @@
+name = "Imjin War"
+
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 736 # Gyeongsang
+}
+
+1592.5.25 = {
+	add_attacker = TYT
+	add_attacker = CSK
+	add_attacker = HSK
+	add_attacker = ITO
+	add_attacker = KUM
+	add_attacker = MRI
+	add_attacker = OTM
+	add_attacker = SMZ
+	add_attacker = SHN
+	add_attacker = SOO
+	add_attacker = AKM
+	add_defender = KOR
+}
+
+1592.5.26 = {
+	battle = {
+		name = "Busan"
+		location = 736
+		attacker = {
+			commander = "Konishi Yukinaga"
+			infantry = 18000
+			losses = 5	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Jeong Bal"
+			infantry = 8000
+			losses = 90	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1592.6.6 = {
+	battle = {
+		name = "Chungju"
+		location = 4299
+		attacker = {
+			commander = "Konishi Yukinaga"	# Konishi Yukinaga
+			infantry = 18000
+			losses = 3	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Shin Rip"	# Shin Rip
+			cavalry = 8000
+			losses = 38	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1592.6.16 = {
+	battle = {
+		name = "Okpo" # Yi's initial naval campaign
+		location = 1376
+		attacker = {
+			commander = "Todo Takatora"	# Todo Takatora
+			heavy_ship = 5
+			light_ship = 63
+			losses = 60	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Yi Sun-shin"	# Yi Sun-shin
+			heavy_ship = 28
+			light_ship = 18
+			losses = 0	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+1592.7.7 = {
+	battle = {
+		name = "Imjin River"
+		location = 735
+		attacker = {
+			commander = "Kato Kiyomasa"	
+			infantry = 20000
+			losses = 5	# percent
+			country = KUM
+		}
+		defender = {
+			commander = "Kim Myeong-won"
+			infantry = 13000
+			losses = 40	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1592.7.14 = {
+	battle = {
+		name = "Yongin"
+		location = 4230
+		attacker = {
+			commander = "Wakisaka Yasuharu"
+			cavalry = 1600
+			losses = 1	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Yi Gwang"
+			infantry = 70000
+			losses = 5	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1592.8.14 = {
+	battle = {
+		name = "Hansan" #Hansan Island
+		location = 1376
+		attacker = {
+			commander = "Wakisaka Yasuharu"	# Wakisaka
+			heavy_ship = 60
+			light_ship = 13
+			losses = 64	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Yi Sun-shin"	# Yi Sun-shin
+			heavy_ship = 56
+			losses = 0	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+1592.8.14 = {
+	battle = {
+		name = "Ichi"
+		location = 737
+		attacker = {
+			commander = "Kobayakawa Takakage"
+			infantry = 2000
+			losses = 10	# percent
+			country = MRI
+		}
+		defender = {
+			commander = "Gwon Yul"
+			infantry = 1500
+			losses = 1	# percent
+			country = TYT
+		}
+		result = no
+	}
+}
+
+1592.9.8 = {
+	rem_attacker = UES
+}
+
+1592.11.9 = {
+	battle = {
+		name = "Jinju"
+		location = 4227
+		attacker = {
+			commander = "Ukita Hideie"
+			infantry = 30000
+			losses = 40	# percent
+			country = AKM
+		}
+		defender = {
+			commander = "Kim Si-min"
+			infantry = 3800
+			losses = 20	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+1593.2.8 = {
+	battle = {
+		name = "Pyongyang" #2nd Battle of Pyongyang
+		location = 1845
+		attacker = {
+			commander = "Konishi Yukinaga"
+			infantry = 15000
+			losses = 8	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Li Rusong"
+			infantry = 53000
+			losses = 5	# percent
+			country = MNG
+		}
+		result = no
+	}
+}
+
+1593.2.27 = {
+	battle = {
+		name = "Byeokjegwan"
+		location = 735
+		attacker = {
+			commander = "Ukita Hideie"
+			infantry = 41000
+			losses = 8	# percent
+			country = AKM
+		}
+		defender = {
+			commander = "Li Rusong"
+			infantry = 20000
+			losses = 35	# percent
+			country = MNG
+		}
+		result = yes
+	}
+}
+
+1593.2.28 = {
+	battle = {
+		name = "Bukgwan"
+		location = 2743
+		attacker = {
+			commander = "Kato Kiyomasa"
+			infantry = 22000
+			losses = 40	# percent
+			country = KUM
+		}
+		defender = {
+			commander = "Jeong Mun-bu"
+			infantry = 5000
+			losses = 10	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+1593.3.14 = {
+	battle = {
+		name = "Haengju"
+		location = 735
+		attacker = {
+			commander = "Ukita Hideie"
+			infantry = 30000
+			losses = 20	# percent
+			country = AKM
+		}
+		defender = {
+			commander = "Gwon Yul"
+			infantry = 9000
+			losses = 5	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+1593.7.27 = {
+	battle = {
+		name = "Jinju"
+		location = 4227
+		attacker = {
+			commander = "Ukita Hideie"
+			infantry = 90000
+			losses = 15	# percent
+			country = AKM
+		}
+		defender = {
+			commander = "Gwon Yul"
+			infantry = 11000
+			losses = 100	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1597.8.27 = {
+	battle = {
+		name = "Chilcheollyang"
+		location = 1376
+		attacker = {
+			commander = "Todo Takatora"	# Todo Takatora
+			heavy_ship = 500
+			losses = 1	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Won Gyun"	# Won Gyun
+			heavy_ship = 169
+			losses = 93	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1597.9.26 = {
+	battle = {
+		name = "Namwon"
+		location = 737
+		attacker = {
+			commander = "Ukita Hideie"
+			infantry = 58000
+			losses = 10	# percent
+			country = AKM
+		}
+		defender = {
+			commander = "Yi Bok-nam"
+			infantry = 11000
+			losses = 100	# percent
+			country = KOR
+		}
+		result = yes
+	}
+}
+
+1597.10.16 = {
+	battle = {
+		name = "Jiksan"
+		location = 1013
+		attacker = {
+			commander = "Kuroda Nagamasa"
+			infantry = 30000
+			losses = 5	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Ma Gui"
+			infantry = 6000
+			cavalry = 2000
+			losses = 1	# percent
+			country = MNG
+		}
+		result = no
+	}
+}
+
+1597.10.26 = {
+	battle = {
+		name = "Myeongnyang"
+		location = 1389
+		attacker = {
+			commander = "Todo Takatora"	# Todo Takatora
+			heavy_ship = 133
+			light_ship = 200
+			losses = 10	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Yi Sun-shin"	# Yi Sun-shin
+			heavy_ship = 13
+			losses = 0	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+1598.2.19 = {
+	battle = {
+		name = "Ulsan"
+		location = 2745
+		attacker = {
+			commander = "Kato Kiyomasa"
+			infantry = 23000
+			losses = 50	# percent
+			country = KUM
+		}
+		defender = {
+			commander = "Yang Hao"
+			infantry = 50000
+			losses = 5	# percent
+			country = MNG
+		}
+		result = yes
+	}
+}
+
+1598.12.16 = {
+	battle = {
+		name = "Noryang"
+		location = 1389
+		attacker = {
+			commander = "Konishi Yukinaga"	# Konishi Yukinaga
+			heavy_ship = 200
+			light_ship = 300
+			losses = 90	# percent
+			country = TYT
+		}
+		defender = {
+			commander = "Yi Sun-shin"	# Yi Sun-shin
+			heavy_ship = 85
+			light_ship = 63
+			losses = 1	# percent
+			country = KOR
+		}
+		result = no
+	}
+}
+
+# The Japanese troops withdraw
+1598.12.24 = {
+	rem_attacker = TYT
+	rem_attacker = CSK
+	rem_attacker = HSK
+	rem_attacker = ITO
+	rem_attacker = KUM
+	rem_attacker = MRI
+	rem_attacker = OTM
+	rem_attacker = SMZ
+	rem_attacker = SHN
+	rem_attacker = SOO
+	rem_attacker = AKM
+	rem_defender = KOR
+	rem_defender = MNG
+}
+
+# EH version

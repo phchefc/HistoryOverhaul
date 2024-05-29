@@ -1,0 +1,320 @@
+government = monarchy
+add_government_reform = chinese_warlord
+primary_culture = taiwanese
+religion = confucianism
+technology_group = early_chinese
+capital = 738
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Ming dynasty (Tungning)
+
+1661.6.14 = {
+	government_rank = 2
+	primary_culture = chimin
+	add_accepted_culture = taiwanese
+	capital = 738
+	monarch = {
+		name = "Chenggong" # a.k.a Koxinga
+		dynasty = "Zheng"
+		birth_date = 1624.8.27
+		adm = 4
+		dip = 5
+		mil = 3
+		leader = {	name = "Zheng Chenggong"	type = admiral	fire = 5	shock = 5	manuever = 5	siege = 0	death_date = 1662.6.23 }
+	}
+	queen = {
+		country_of_origin = ZHE
+		name = "You"
+		dynasty = "Dong"
+		birth_date = 1623.10.17
+		death_date = 1681.7.30
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jing"
+		monarch_name = "Jing"
+		dynasty = "Zheng"
+		birth_date = 1642.11.4
+		death_date = 1681.3.17
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1662.6.23 = {
+	monarch = {
+		name = "Jing"
+		dynasty = "Zheng"
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = ZHE
+		dynasty = "Tang"
+		birth_date = 1642.1.31
+		death_date = 1666.8.24
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1670.8.13 = {
+	heir = {
+		name = "Kehshuan"
+		monarch_name = "Kehshuan"
+		dynasty = "Zheng"
+		birth_date = 1670.8.13
+		death_date = 1717.9.22
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+1681.3.17 = {
+	monarch = {
+		name = "Kehshuan"
+		dynasty = "Zheng"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = ZHE
+		dynasty = "Feng"
+		birth_date = 1670.1.1
+		death_date = 1730.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Guangdong Nationalist add_government_reform
+
+1912.8.25 = {
+	religion = secularism
+	technology_group = asian
+	monarch = {
+		name = "Sun Yat-sen"
+		birth_date = 1866.11.12
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}
+
+1926.5.19 = {
+	monarch = {
+		name = "Zhang Renjie"
+		birth_date = 1877.9.19
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1926.7.6 = {
+	monarch = {
+		name = "Chiang Kai-shek"
+		birth_date = 1887.10.31
+		adm = 3
+		dip = 2
+		mil = 5
+		leader = {	name = "Chiang Kai-shek"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 0  death_date = 1975.4.5 }
+	}
+}
+
+# Nanjing Nationalist government
+
+1927.4.18 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = constitutional_republic
+	capital = 1821 
+}
+
+1928.2.7 = {
+	monarch = {
+		name = "Tan Yankai"
+		birth_date = 1880.1.25
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1928.10.10 = {
+	capital = 682
+	monarch = {
+		name = "Chiang Kai-shek"
+		birth_date = 1887.10.31
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Chiang Kai-shek"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 0  death_date = 1975.4.5 }
+	}
+}
+
+1931.12.15 = {
+	monarch = {
+		name = "Lin Sen"
+		birth_date = 1868.3.16
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1938.10.27 = { capital = 680 }
+
+1943.8.1 = {
+	monarch = {
+		name = "Chiang Kai-shek"
+		birth_date = 1887.10.31
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Chiang Kai-shek"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 0  death_date = 1975.4.5 }
+	}
+}
+
+1945.9.2 = { remove_historical_rival = JAP }
+1948.5.20 = { capital = 1821 }
+
+1949.1.21 = {
+	monarch = {
+		name = "Li Zongren" # Acting President.
+		birth_date = 1890.8.13
+		adm = 3
+		dip = 4
+		mil = 2
+		leader = {	name = "Li Zongren"     		type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 1950.3.1 } # Exiled
+	}
+}
+
+1949.4.23 = { capital = 667 }
+1949.10.14 = { capital = 680 }
+1949.11.30 = { capital = 679 }
+
+# Chinese Taipei
+
+1949.12.10 = { capital = 2154 }
+
+1950.3.1 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = military_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = presidential_despot_reform
+	monarch = {
+		name = "Chiang Kai-shek"
+		birth_date = 1887.10.31
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Chiang Kai-shek"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 0  death_date = 1975.4.5 }
+	}
+}
+
+1975.4.6 = {
+	monarch = {
+		name = "Yen Chia-kan"
+		birth_date = 1905.10.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1978.5.20 = {
+	monarch = {
+		name = "Chiang Ching-kuo"
+		birth_date = 1910.4.27
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1987.7.15 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = constitutional_republic
+}
+
+1988.1.13 = {
+	technology_group = western
+	monarch = {
+		name = "Lee Teng-hui"
+		birth_date = 1923.1.15
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+2000.5.20 = {
+	monarch = {
+		name = "Chen Shui-bian"
+		birth_date = 1950.10.12
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+2008.5.20 = {
+	monarch = {
+		name = "Ma Ying-jeou"
+		birth_date = 1950.7.13
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+2016.5.20 = {
+	monarch = {
+		name = "Tsai Ing-wen"
+		birth_date = 1956.8.31
+		adm = 2
+		dip = 4
+		mil = 0
+		female = yes
+	}
+}

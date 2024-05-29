@@ -1,0 +1,1335 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = hungarian
+religion = tengri_pagan_reformed
+technology_group = western_nomad_group
+capital = 302
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+600.1.1 = {
+	monarch = {
+		name = "Nimrodos"
+		dynasty = "Magyar"
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+660.1.1 = {
+	monarch = {
+		name = "Magor"
+		dynasty = "Magyar"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+720.1.1 = {
+	monarch = {
+		name = "?yek"
+		dynasty = "Magyar"
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+760.1.1 = { capital = 1943 }
+
+780.1.1 = {
+	monarch = {
+		name = "Kurszan"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
+820.1.1 = {
+	heir = {
+		name = "Álmos"
+		monarch_name = "Álmos"
+		dynasty = "Árp?"
+		birth_date = 820.1.1
+		death_date = 895.1.1
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+854.1.1 = {
+	monarch = {
+		name = "Álmos"
+		dynasty = "Árp?"
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+854.1.1 = {
+	heir = {
+		name = "Árp?"
+		monarch_name = "Árp?"
+		dynasty = "Árp?"
+		birth_date = 845.1.1
+		death_date = 907.1.1
+		claim = 95
+		adm = 1
+		dip = 5
+		mil = 1
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+895.1.1 = {
+	monarch = {
+		name = "Árp?"
+		dynasty = "Árp?"
+		adm = 1
+		dip = 5
+		mil = 1
+	}
+}
+
+895.1.1 = {
+	heir = {
+		name = "Zolt?"
+		monarch_name = "Zolt?"
+		dynasty = "Árp?"
+		birth_date = 880.1.1
+		death_date = 947.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+897.1.1 = { capital = 153 } #Buda
+900.1.1 = { government = monarchy
+add_government_reform = feudalism_reform }
+900.1.1 = { technology_group = eastern }
+
+907.1.1 = {
+	monarch = {
+		name = "Zolt?"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+907.1.1 = {
+	heir = {
+		name = "Fajsz"
+		monarch_name = "Fajsz"
+		dynasty = "Árp?"
+		birth_date = 900.1.1
+		death_date = 955.1.1
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 5
+	}
+}
+
+947.1.1 = {
+	monarch = {
+		name = "Fajsz"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 1
+		mil = 5
+	}
+}
+
+947.1.1 = {
+	heir = {
+		name = "Taksony"
+		monarch_name = "Taksony"
+		dynasty = "Árp?"
+		birth_date = 905.1.1
+		death_date = 972.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+955.1.1 = {
+	monarch = {
+		name = "Taksony"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+955.1.1 = {
+	heir = {
+		name = "G?a"
+		monarch_name = "G?a"
+		dynasty = "Árp?"
+		birth_date = 945.1.1
+		death_date = 997.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+972.1.1 = {
+	monarch = {
+		name = "G?a"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+972.1.1 = {
+	heir = {
+		name = "Istv?"
+		monarch_name = "Istv? I"
+		dynasty = "Árp?"
+		birth_date = 967.1.1
+		death_date = 1038.8.15
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+997.1.1 = {
+	monarch = {
+		name = "Istv? I"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1000.1.1 = { religion = catholic }
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1010.1.1 = {
+	heir = {
+		name = "Pet?"
+		monarch_name = "Pet? I"
+		dynasty = "Árp?"
+		birth_date = 1010.1.1
+		death_date = 1059.8.30
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+}
+
+1038.8.15 = {
+	monarch = {
+		name = "Pet? I"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+}
+
+1041.1.1 = {
+	monarch = {
+		name = "S?uel I"
+		dynasty = "Aba"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1044.1.1 = {
+	monarch = {
+		name = "Pet? I"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+}
+
+
+1044.1.1 = {
+	heir = {
+		name = "Andr?"
+		monarch_name = "Andr? I"
+		dynasty = "Árp?"
+		birth_date = 1013.1.1
+		death_date = 1060.12.6
+		claim = 95
+		adm = 5
+		dip = 1
+		mil = 1
+	}
+}
+
+1046.1.1 = {
+	monarch = {
+		name = "Andr? I"
+		dynasty = "Árp?"
+		adm = 5
+		dip = 1
+		mil = 1
+	}
+}
+
+1046.1.1 = {
+	heir = {
+		name = "B?a"
+		monarch_name = "B?a I"
+		dynasty = "Árp?"
+		birth_date = 1016.1.1
+		death_date = 1063.9.11
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1060.12.6 = {
+	monarch = {
+		name = "B?a I"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1060.12.6 = {
+	heir = {
+		name = "Salamon"
+		monarch_name = "Salamon I"
+		dynasty = "Árp?"
+		birth_date = 1053.1.1
+		death_date = 1087.1.1
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+1063.9.11 = {
+	monarch = {
+		name = "Salamon I"
+		dynasty = "Árp?"
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+1063.9.11 = {
+	heir = {
+		name = "G?a"
+		monarch_name = "G?a I"
+		dynasty = "Árp?"
+		birth_date = 1044.1.1
+		death_date = 1077.4.25
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1074.1.1 = {
+	monarch = {
+		name = "G?a I"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1074.1.1 = {
+	heir = {
+		name = "L?zl?"
+		monarch_name = "L?zl?I"
+		dynasty = "Árp?"
+		birth_date = 1046.6.27
+		death_date = 1095.7.29
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1077.4.25 = {
+	monarch = {
+		name = "L?zl?I"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1077.4.25 = {
+	heir = {
+		name = "K?m?"
+		monarch_name = "K?m? I"
+		dynasty = "Árp?"
+		birth_date = 1074.1.1
+		death_date = 1116.2.3
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+1095.7.29 = {
+	monarch = {
+		name = "K?m? I"
+		dynasty = "Árp?"
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+1101.1.1 = {
+	heir = {
+		name = "Istv?"
+		monarch_name = "Istv? II"
+		dynasty = "Árp?"
+		birth_date = 1101.1.1
+		death_date = 1131.3.1
+		claim = 95
+		adm = 4
+		dip = 5
+		mil = 2
+	}
+}
+
+1116.2.3 = {
+	monarch = {
+		name = "Istv? II"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 5
+		mil = 2
+	}
+}
+
+1116.2.3 = {
+	heir = {
+		name = "B?a"
+		monarch_name = "B?a II"
+		dynasty = "Árp?"
+		birth_date = 1108.1.1
+		death_date = 1141.2.13
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+1131.3.1 = {
+	monarch = {
+		name = "B?a II"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+1131.3.1 = {
+	heir = {
+		name = "G?a"
+		monarch_name = "G?a II"
+		dynasty = "Árp?"
+		birth_date = 1130.1.1
+		death_date = 1162.5.31
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 5
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1141.2.13 = {
+	monarch = {
+		name = "G?a II"
+		dynasty = "Árp?"
+		adm = 1
+		dip = 3
+		mil = 5
+	}
+}
+
+1147.6.1 = {
+	heir = {
+		name = "Istv?"
+		monarch_name = "Istv? III"
+		dynasty = "Árp?"
+		birth_date = 1147.6.1
+		death_date = 1172.3.4
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+
+1162.5.31 = {
+	monarch = {
+		name = "Istv? III"
+		dynasty = "Árp?"
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+
+1162.5.31 = {
+	heir = {
+		name = "B?a"
+		monarch_name = "B?a III"
+		dynasty = "Árp?"
+		birth_date = 1148.1.1
+		death_date = 1196.4.23
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 1
+	}
+}
+
+1172.3.4 = {
+	monarch = {
+		name = "B?a III"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 1
+		mil = 1
+	}
+}
+
+1174.1.1 = {
+	heir = {
+		name = "Imre"
+		monarch_name = "Imre I"
+		dynasty = "Árp?"
+		birth_date = 1174.1.1
+		death_date = 1204.9.30
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+1196.4.23 = {
+	monarch = {
+		name = "Imre I"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+1199.1.1 = {
+	heir = {
+		name = "L?zl?"
+		monarch_name = "L?zl?III"
+		dynasty = "Árp?"
+		birth_date = 1199.1.1
+		death_date = 1205.5.7
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1204.9.30 = {
+	monarch = {
+		name = "L?zl?III"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1204.9.30 = {
+	heir = {
+		name = "Andr?"
+		monarch_name = "Andr? II"
+		dynasty = "Árp?"
+		birth_date = 1177.1.1
+		death_date = 1235.9.21
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+1205.5.7 = {
+	monarch = {
+		name = "Andr? II"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+1206.11.29 = {
+	heir = {
+		name = "B?a"
+		monarch_name = "B?a IV"
+		dynasty = "Árp?"
+		birth_date = 1206.11.29
+		death_date = 1270.5.3
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 5
+	}
+}
+
+1235.9.21 = {
+	monarch = {
+		name = "B?a IV"
+		dynasty = "Árp?"
+		adm = 4
+		dip = 1
+		mil = 5
+	}
+}
+
+1239.10.18 = {
+	heir = {
+		name = "Istv?"
+		monarch_name = "Istv? V"
+		dynasty = "Árp?"
+		birth_date = 1239.10.18
+		death_date = 1272.8.6
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1270.5.3 = {
+	monarch = {
+		name = "Istv? V"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1270.5.3 = {
+	heir = {
+		name = "L?zl?"
+		monarch_name = "L?zl?IV"
+		dynasty = "Árp?"
+		birth_date = 1262.8.5
+		death_date = 1290.7.10
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1272.8.6 = {
+	monarch = {
+		name = "L?zl?IV"
+		dynasty = "Árp?"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1272.8.6 = {
+	heir = {
+		name = "Andr?"
+		monarch_name = "Andr? III"
+		dynasty = "Árp?"
+		birth_date = 1265.1.1
+		death_date = 1301.1.14
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1290.7.10 = {
+	monarch = {
+		name = "Andr? III"
+		dynasty = "Árp?"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1301.1.14 = {
+	monarch = {
+		name = "V?lav III"
+		dynasty = "Premyslid"
+		adm = 5
+		dip = 2
+		mil = 4
+	}
+}
+
+1312.7.12 = {
+	monarch = {
+		name = "K?oly I"
+		dynasty = "de Anjou"
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+1326.3.5 = {
+	heir = {
+		name = "Lajos"
+		monarch_name = "Lajos I"
+		dynasty = "de Anjou"
+		birth_date = 1326.3.5
+		death_date = 1382.9.10
+		claim = 95
+		adm = 5
+		dip = 2
+		mil = 3
+	}
+}
+
+1342.7.21 = {
+	monarch = {
+		name = "Lajos I"
+		dynasty = "de Anjou"
+		adm = 5
+		dip = 2
+		mil = 3
+	}
+}
+
+1371.1.1 = {
+	heir = {
+		name = "M?ia"
+		monarch_name = "M?ia I"
+		dynasty = "de Anjou"
+		birth_date = 1371.1.1
+		death_date = 1395.5.17
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 4
+		female = yes
+	}
+}
+
+1382.9.10 = {
+	monarch = {
+		name = "M?ia I"
+		dynasty = "de Anjou"
+		adm = 4
+		dip = 4
+		mil = 4
+		female = yes
+	}
+}
+
+1387.3.31 = {
+	monarch = {
+		name = "Sigismund I"
+		dynasty = "von Luxemburg"
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+1437.1.1 = { leader = {	name = "J?os Hunyadi"         	type = general		fire = 4	shock = 4	manuever = 4	siege = 1	death_date = 1456.8.11 } }
+
+# Personal union with Habsburg under Albrecht II 1437-39
+# Personal union with Poland under Wladyslaw III 1439-44
+# Personal union with Habsburg under Ladislaus the Posthumous 1444-1457
+
+1444.11.10 = {
+	monarch = {
+		name = "(Regency Council)"
+		adm = 0
+		mil = 0
+		dip = 0
+		regent = yes
+	}
+}
+
+1452.1.1 = {
+	monarch = {
+		name = "Ladislaus Postumus"
+		dynasty = "von Habsburg"
+		culture = austrian
+		birth_date = 1440.2.22			
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1457.11.24 = {
+	monarch = {
+		name = "M?y?"
+		dynasty = "Corvin"
+		birth_date = 1443.2.23			
+		adm = 4
+		dip = 5
+		mil = 5
+		leader = {	name = "M?y? Corvin"         	type = general	fire = 3	shock = 4	manuever = 3	siege = 1 }
+	}
+}
+
+1462.1.1 = { leader = {	name = "Pal Kinizsi"           	type = general		fire = 2	shock = 3	manuever = 3	siege = 1	death_date = 1494.1.1 } }
+
+1500.1.1 = { decision = court_of_wards_and_liveries }
+
+1515.1.1 = { leader = {	name = "Miklos Zrinyi"         	type = general		fire = 2	shock = 4	manuever = 3	siege = 1	death_date = 1530.1.1 } }
+
+1526.8.30 = {
+	monarch = {
+		name = "J?os I"
+		dynasty = "Szapolyai"
+		adm = 5
+		dip = 4
+		mil = 3
+		leader = {	name = "J?os I Z?olya"       	type = general		fire = 2	shock = 2	manuever = 2	siege = 0}
+	}
+}
+
+1540.7.24 = {
+	monarch = {
+		name = "J?os II"
+		dynasty = "Szapolyai"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1540.8.30 = {
+	government = monarchy
+	add_government_reform = autocracy_reform 
+}
+
+1541.1.1 = { capital = 154 } # Pressburg
+
+1571.5.26 = {
+	monarch = {
+		name = "Istv?"
+		dynasty = "B?hory"
+		adm = 6
+		dip = 3
+		mil = 6
+	}
+}
+
+1576.5.3 = {
+	monarch = {
+		name = "Christofer"
+		dynasty = "B?hory"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1581.1.1 = {
+	monarch = {
+		name = "Sigismund"
+		dynasty = "B?hory"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1596.1.1 = { leader = {	name = "Istv? Bocskai"        	type = general		fire = 3	shock = 2	manuever = 3	siege = 0	death_date = 1606.1.1 } }
+
+1599.1.1 = {
+	monarch = {
+		name = "Mihai Viteazul"
+		dynasty ="Draculecti"
+		adm = 5
+		dip = 6
+		mil = 6
+	}
+}
+
+1602.1.1 = {
+	monarch = {
+		name = "Interregnum"
+		regent = yes
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1605.1.1 = {
+	monarch = {
+		name = "Istv?"
+		dynasty = "Bocskai"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1606.12.30 = {
+	monarch = {
+		name = "G?or"
+		dynasty = "B?hory"
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+1613.1.1 = {
+	monarch = {
+		name = "G?or"
+		dynasty = "Bethlen"
+		adm = 5
+		dip = 6
+		mil = 5
+		leader = {	name = "Gabor Bethlen"         	type = general		fire = 2	shock = 3	manuever = 5	siege = 1 } 
+	}
+}
+
+1629.11.17 = {
+	monarch = {
+		name = "Gy?gy I"
+		dynasty = "R??zy"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1648.1.1 = {
+	monarch = {
+		name = "Gy?gy II"
+		dynasty = "R??zy"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1649.1.1 = { leader = {	name = "Miklos Zrinyi II"      	type = general		fire = 3	shock = 3	manuever = 4	siege = 0	death_date = 1664.1.1 } }
+
+1665.1.1 = {
+	monarch = {
+		name = "Ferenc I"
+		dynasty = "R??zy"
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}
+
+1678.1.1 = { leader = {	name = "Imre Thokoly"          	type = general		fire = 1	shock = 3	manuever = 2	siege = 1	death_date = 1705.9.13 } }
+
+1691.1.1 = {
+	monarch = {
+		name = "Ferenc II"
+		dynasty = "R??zy"
+		adm = 5
+		dip = 6
+		mil = 5
+		leader = {	name = "Ferenc Rakoczi II"     	type = general		fire = 2	shock = 4	manuever = 2	siege = 0 }
+	}
+}
+
+1739.1.1 = { leader = {	name = "Ferenc Nadasdy"        	type = general		fire = 1	shock = 4	manuever = 4	siege = 0	death_date = 1763.1.1 } }
+
+1744.1.1 = { leader = {	name = "Andr? Hadik"          	type = general		fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1790.3.12 } }
+
+1784.1.1 = { capital = 153 } # Buda
+
+1900.1.1 = { technology_group = western }
+1910.1.1 = { religion = secularism }
+
+# Republic
+
+1918.10.31 = { 
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+}
+
+1918.10.31 = {
+	monarch = {
+		name = "Mihály Károlyi"
+		adm = 4
+		dip = 3
+		mil = 3
+		religion = catholic
+	}
+}
+
+1919.3.21 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = presidential_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = communist_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = communist_government
+	monarch = {
+		name = "Béla Kun"
+		adm = 2
+		dip = 3
+		mil = 4
+		religion = catholic
+	}
+}
+
+1919.8.1 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+	monarch = {
+		name = "Mihály Károlyi"
+		adm = 1
+		dip = 3
+		mil = 1
+		religion = catholic
+	}
+}
+
+1919.8.6 = {
+	set_legacy_government = constitutional_monarchy
+	monarch = {
+		name = "Joseph August"
+		adm = 4
+		dip = 3
+		mil = 4
+		religion = catholic
+		regent = yes
+	}
+}
+
+1919.8.23 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+	monarch = {
+		name = "István Friedrich"
+		adm = 1
+		dip = 4
+		mil = 1
+		religion = catholic
+	}
+}
+
+1919.11.24 = {
+	monarch = {
+		name = "Károly Huszár"
+		adm = 3
+		dip = 3
+		mil = 2
+		religion = catholic
+	}
+}
+
+1920.3.1 = {
+	set_legacy_government = constitutional_monarchy
+	monarch = {
+		name = "Miklós Horthy"
+		adm = 4
+		dip = 2
+		mil = 5
+		religion = catholic
+		regent = yes
+	}
+}
+
+1944.10.16 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+	monarch = {
+		name = "Ferenc Szálasi"
+		adm = 3
+		dip = 2
+		mil = 1
+		religion = catholic
+		regent = yes
+	}
+}
+
+1944.12.21 = {
+	set_legacy_government = constitutional_monarchy
+	monarch = {
+		name = "(regency council)"
+		adm = 2
+		dip = 2
+		mil = 1
+		religion = catholic
+		regent = yes
+	}
+}
+
+1946.2.1 = { 
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+}
+
+1946.2.1 = {
+	monarch = {
+		name = "Zoltán Tildy"
+		adm = 4
+		dip = 4
+		mil = 2
+		religion = catholic
+	}
+}
+
+1948.8.2 = {
+	monarch = {
+		name = "Árpád Szakasits"
+		adm = 3
+		dip = 4
+		mil = 2
+		religion = catholic
+	}
+}
+
+# Socialist Republic
+
+1949.8.23 = { 
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = presidential_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = communist_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = communist_government
+}
+
+1950.4.26 = {
+	monarch = {
+		name = "Sándor Rónai"
+		adm = 3
+		dip = 3
+		mil = 4
+		religion = catholic
+	}
+}
+
+1952.8.14 = {
+	monarch = {
+		name = "István Dobi"
+		adm = 3
+		dip = 4
+		mil = 4
+		religion = catholic
+	}
+}
+
+1967.4.13 = {
+	monarch = {
+		name = "Pál Losonczi"
+		adm = 5
+		dip = 4
+		mil = 3
+		religion = catholic
+	}
+}
+
+1987.6.25 = {
+	monarch = {
+		name = "Károly Németh"
+		adm = 2
+		dip = 3
+		mil = 3
+		religion = catholic
+	}
+}
+
+1988.6.29 = {
+	monarch = {
+		name = "Brunó Ferenc Straub"
+		adm = 3
+		dip = 3
+		mil = 3
+		religion = catholic
+	}
+}
+
+# Republic
+
+1989.10.18 = { 
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = presidental_republic
+}
+
+1989.10.18 = {
+	monarch = {
+		name = "Mátyás Szürös"
+		adm = 3
+		dip = 4
+		mil = 3
+		religion = catholic
+	}
+}
+
+1990.5.2 = {
+	monarch = {
+		name = "Árpád Göncz"
+		adm = 5
+		dip = 3
+		mil = 3
+		religion = catholic
+	}
+}
+
+2000.8.4 = {
+	monarch = {
+		name = "Ferenc Mádl"
+		adm = 3
+		dip = 5
+		mil = 3
+		religion = catholic
+	}
+}
+
+2004.1.1 = { decision = dummy_join_eu }
+
+2005.8.5 = {
+	monarch = {
+		name = "László Sólyom"
+		adm = 5
+		dip = 4
+		mil = 2
+		religion = catholic
+	}
+}
+
+2010.8.6 = {
+	monarch = {
+		name = "Pál Schmitt"
+		adm = 5
+		dip = 3
+		mil = 1
+		religion = catholic
+	}
+}
+
+2012.4.2 = {
+	monarch = {
+		name = "László Kövér"
+		adm = 2
+		dip = 4
+		mil = 2
+		religion = catholic
+	}
+}
+
+2012.5.10 = {
+	monarch = {
+		name = "János Áder"
+		adm = 4
+		dip = 4
+		mil = 3
+		religion = catholic
+	}
+}
+
+2022.5.10 = {
+	monarch = {
+		name = "Katalin Nov?"
+		birth_date = 1977.9.6
+		adm = 4
+		dip = 4
+		mil = 2
+		religion = reformed
+		female = yes
+	}
+}

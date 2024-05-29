@@ -1,0 +1,138 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+mercantilism = 0.1
+technology_group = eastern_nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = vajrayana
+primary_culture = mongol
+capital = 4670
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1551.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Altan"
+		dynasty = "Borjigin"
+		birth_date = 1507.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = { name = "Altan Khan"	type = general	fire = 3	shock = 5	manuever = 5	siege = 1 death_date = 1582.1.1 } # Not an actual death date
+	}
+	heir = {
+		name = "Sengge Duureng"
+		monarch_name = "Sengge Duureng"
+		dynasty = "Borjigin"
+		birth_date = 1530.1.1
+		death_date = 1586.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+1570.1.1 = {
+	queen = {
+		country_of_origin = MTM
+		name = "Erketu"
+		dynasty = "Borjigin"
+		birth_date = 1551.1.1
+		death_date = 1612.6.12
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1582.1.1 = {
+	monarch = {
+		name = "Sengge Duureng"
+		dynasty = "Borjigin"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = MTM
+		name = "Erketu"
+		dynasty = "Borjigin"
+		birth_date = 1551.1.1
+		death_date = 1612.6.12
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	heir = {
+		name = "Chelike"
+		monarch_name = "Namudai Sechen Khan"
+		dynasty = "Borjigin"
+		birth_date = 1550.1.1
+		death_date = 1613.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1586.1.1 = {
+	monarch = {
+		name = "Chelike" # Namudai Sechen Khan
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1586.1.1 = {
+	heir = {
+		name = "Boshugtu"
+		monarch_name = "Boshugtu Khong Tayiji"
+		dynasty = "Borjigin"
+		birth_date = 1580.1.1
+		death_date = 1627.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1613.1.1 = {
+	monarch = {
+		name = "Boshugtu" # Boshugtu Khong Tayiji
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1627.1.1 = {
+	monarch = {
+		name = "Emubu"
+		dynasty = "Borjigin"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+# Annexed by Qing in 1634

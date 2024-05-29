@@ -1,0 +1,23 @@
+country_decisions = {
+
+
+	cheat_mod = {
+		major = yes
+		potential = {
+			AND = {
+				ai = no
+				was_player = yes
+			}
+		}
+		effect = {
+			set_global_flag = eh_historic
+			country_event = { id = eh_setting.1 days = 1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}
+
+# EH version

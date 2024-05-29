@@ -1,0 +1,296 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xibei
+capital = 707
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+851.1.1 = {
+	monarch = {
+		name = "Yichao"
+		dynasty = "Zhang"
+		birth_date = 799.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Zhang Yichao"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 1  death_date = 867.1.1 }
+	}
+}
+
+851.1.1 = {
+	heir = {
+		name = "Huaishen"
+		monarch_name = "Huaishen"
+		dynasty = "Zhang"
+		birth_date = 831.1.1
+		death_date = 890.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+867.1.1 = {
+	monarch = {
+		name = "Huaishen"
+		dynasty = "Zhang"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Coup
+
+890.1.1 = {
+	monarch = {
+		name = "Huaijing"
+		dynasty = "Zhang"
+		birth_date = 840.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+892.1.1 = {
+	monarch = {
+		name = "Xun"
+		dynasty = "Suo"
+		birth_date = 840.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+# Coup
+
+894.1.1 = {
+	monarch = {
+		name = "Mingzhen"
+		dynasty = "Li"
+		birth_date = 840.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+896.1.1 = {
+	monarch = {
+		name = "Chengfeng"
+		dynasty = "Zhang"
+		birth_date = 860.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+910.1.1 = { government_rank = 2 }
+
+# Coup
+
+914.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Yijin"
+		dynasty = "Cao"
+		birth_date = 880.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+914.1.1 = {
+	heir = {
+		name = "Yuande"
+		monarch_name = "Yuande"
+		dynasty = "Cao"
+		birth_date = 900.1.1
+		death_date = 939.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+931.1.1 = { government_rank = 2 }
+
+935.1.1 = {
+	monarch = {
+		name = "Yuande"
+		dynasty = "Cao"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+935.1.1 = {
+	heir = {
+		name = "Yuanshen"
+		monarch_name = "Yuanshen"
+		dynasty = "Cao"
+		birth_date = 902.1.1
+		death_date = 944.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+939.1.1 = {
+	monarch = {
+		name = "Yuanshen"
+		dynasty = "Cao"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+939.1.1 = {
+	heir = {
+		name = "Yuanzhong"
+		monarch_name = "Yuanzhong"
+		dynasty = "Cao"
+		birth_date = 905.1.1
+		death_date = 974.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+944.1.1 = {
+	monarch = {
+		name = "Yuanzhong"
+		dynasty = "Cao"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+944.1.1 = {
+	heir = {
+		name = "Yangong"
+		monarch_name = "Yangong"
+		dynasty = "Cao"
+		birth_date = 940.1.1
+		death_date = 976.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+974.1.1 = {
+	monarch = {
+		name = "Yangong"
+		dynasty = "Cao"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+974.1.1 = {
+	heir = {
+		name = "Yanlu"
+		monarch_name = "Yanlu"
+		dynasty = "Cao"
+		birth_date = 960.1.1
+		death_date = 1002.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+976.1.1 = {
+	monarch = {
+		name = "Yanlu"
+		dynasty = "Cao"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+976.1.1 = {
+	heir = {
+		name = "Zongshou"
+		monarch_name = "Zongshou"
+		dynasty = "Cao"
+		birth_date = 965.1.1
+		death_date = 1014.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1002.1.1 = {
+	monarch = {
+		name = "Zongshou"
+		dynasty = "Cao"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1002.1.1 = {
+	heir = {
+		name = "Xianshun"
+		monarch_name = "Xianshun"
+		dynasty = "Cao"
+		birth_date = 990.1.1
+		death_date = 1040.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1014.1.1 = {
+	monarch = {
+		name = "Xianshun"
+		dynasty = "Cao"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

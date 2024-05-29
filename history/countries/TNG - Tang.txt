@@ -1,0 +1,820 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+capital = 693 # Taiyuan
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# Tang dynasty
+
+#617.12.20 = {
+#	add_country_flag = marionett_master
+#}
+
+617.12.20 = {
+	government_rank = 2
+	monarch = {
+		name = "Yuan" #Gaozu
+		dynasty = "Li"
+		birth_date = 566.4.7
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+#618.6.18 = {
+#	clr_country_flag = marionett_master
+#}
+
+618.6.18 = {
+	add_government_reform = celestial_empire
+	government_rank = 3
+	capital = 700
+	add_accepted_culture = yi
+	add_accepted_culture = zhuang
+	add_accepted_culture = vietnamese
+	add_accepted_culture = buyeo
+	culture_group_union = east_asian
+}
+
+619.6.1 = { leader = {	name = "Li Shiji"     	type = general	fire = 3	shock = 3	manuever = 2	siege = 0  death_date = 669.12.31 } }
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+620.6.1 = { leader = {	name = "Yuchi Gong"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 645.9.20 } } # Discharge
+
+626.7.2 = {
+	heir = {
+		name = "Shimin"
+		monarch_name = "Taizong"
+		dynasty = "Li"
+		birth_date = 598.1.28
+		death_date = 649.7.10
+		claim = 95
+		adm = 6
+		dip = 5
+		mil = 6
+		leader = {	name = "Li Shimin"     	type = general	fire = 4	shock = 4	manuever = 1	siege = 2  death_date = 649.7.15 }
+	}
+}
+
+626.9.4 = {
+	monarch = {
+		name = "Shimin" #Taizong
+		dynasty = "Li"
+		adm = 6
+		dip = 5
+		mil = 6
+		leader = {	name = "Li Shimin"     	type = general	fire = 4	shock = 4	manuever = 1	siege = 2  death_date = 649.7.15 }
+	}
+	queen = {
+		country_of_origin = TNG
+		name = "Wende"
+		dynasty = "Zhangsun"
+		birth_date = 601.3.15
+		death_date = 636.7.28
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+628.7.21 = {
+	heir = {
+		name = "Zhi"
+		monarch_name = "Gaozong"
+		dynasty = "Li"
+		birth_date = 628.7.21
+		death_date = 683.12.27
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+649.7.15 = {
+	monarch = {
+		name = "Zhi" #Gaozong
+		dynasty = "Li"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+650.2.12 = {
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Wang"
+		birth_date = 628.1.1
+		death_date = 655.11.27
+		female = yes
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+655.12.2 = {
+	queen = {
+		country_of_origin = TNG
+		name = "Zhao" #Wu Zetian
+		dynasty = "Wu"
+		birth_date = 624.2.17
+		death_date = 705.12.16
+		female = yes
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+
+656.11.26 = {
+	heir = {
+		name = "Xian"
+		monarch_name = "Zhongzong"
+		dynasty = "Li"
+		birth_date = 656.11.26
+		death_date = 710.7.3
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+683.12.27 = {
+	monarch = {
+		name = "Xian" #Zhongzong
+		dynasty = "Li"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Wei"
+		birth_date = 660.1.1
+		death_date = 710.7.28
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+684.2.27 = {
+	capital = 1836
+	monarch = {
+		name = "Dan" #Ruizong
+		dynasty = "Li"
+		birth_date = 662.6.22
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TNG
+		name = "Suming"
+		dynasty = "Liu"
+		birth_date = 665.1.1
+		death_date = 693.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Second Zhou (Wu Zhou)
+
+690.10.8 = {
+	monarch = {
+		name = "Zhao" #Wu Zetian
+		dynasty = "Wu"
+		birth_date = 624.2.17
+		female = yes
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+
+# Tang dynasty
+
+705.2.23 = {
+	capital = 700
+	monarch = {
+		name = "Xian" #Zhongzong
+		dynasty = "Li"
+		birth_date = 656.11.26
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Wei"
+		birth_date = 660.1.1
+		death_date = 710.7.28
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+710.7.8 = {
+	monarch = {
+		name = "Chongmao" #Shang
+		dynasty = "Li"
+		birth_date = 695.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Lu"
+		birth_date = 695.1.1
+		death_date = 710.7.25
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+710.7.25 = {
+	monarch = {
+		name = "Dan" #Ruizong
+		dynasty = "Li"
+		birth_date = 662.6.22
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+710.7.25 = {
+	heir = {
+		name = "Longji"
+		monarch_name = "Xuanzong"
+		dynasty = "Li"
+		birth_date = 685.9.8
+		death_date = 762.5.3
+		claim = 95
+		adm = 6
+		dip = 4
+		mil = 1
+	}
+}
+
+712.9.8 = {
+	monarch = {
+		name = "Longji" #Xuanzong
+		dynasty = "Li"
+		adm = 6
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Wang"
+		birth_date = 690.1.1
+		death_date = 724.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Heng"
+		monarch_name = "Suzong"
+		dynasty = "Li"
+		birth_date = 711.10.19
+		death_date = 762.5.16
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+721.1.1  = { leader = {	name = "Gao Xianzhi"         	type = general		fire = 3	shock = 3	manuever = 1	siege = 0  death_date = 756.6.1 } } # Not an actual death date
+749.1.1 = { leader = {	name = "Guo Ziyi"     	type = general	fire = 3	shock = 3	manuever = 1	siege = 1  death_date = 781.6.1 } } # Not an actual death date
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+756.6.1 = { capital = 679 }
+
+756.8.12 = {
+	monarch = {
+		name = "Heng" #Suzong
+		dynasty = "Li"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+756.8.12 = {
+	heir = {
+		name = "Yu"
+		monarch_name = "Daizong"
+		dynasty = "Li"
+		birth_date = 726.1.9
+		death_date = 779.6.12
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+757.11.1 = { 
+	capital = 700
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Zhang"
+		birth_date = 715.1.1
+		death_date = 762.5.16
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+762.5.16 = {
+	monarch = {
+		name = "Yu" #Daizong
+		dynasty = "Li"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+762.5.16 = {
+	heir = {
+		name = "Gua"
+		monarch_name = "Dezong"
+		dynasty = "Li"
+		birth_date = 742.5.27
+		death_date = 805.2.25
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+779.6.12 = {
+	monarch = {
+		name = "Gua" #Dezong
+		dynasty = "Li"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+779.6.12 = {
+	heir = {
+		name = "Song"
+		monarch_name = "Shunzong"
+		dynasty = "Li"
+		birth_date = 761.1.1
+		death_date = 806.1.25
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+786.12.3 = {
+	queen = {
+		country_of_origin = TNG
+		name = "Zhaode"
+		dynasty = "Wang"
+		birth_date = 745.1.1
+		death_date = 786.12.6
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+805.2.25 = {
+	monarch = {
+		name = "Song" #Shunzong
+		dynasty = "Li"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+805.2.25 = {
+	heir = {
+		name = "Chun"
+		monarch_name = "Xianzong"
+		dynasty = "Li"
+		birth_date = 778.3.17
+		death_date = 820.2.14
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+806.1.25 = {
+	monarch = {
+		name = "Chun" #Xianzong
+		dynasty = "Li"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+806.1.25 = {
+	heir = {
+		name = "Heng"
+		monarch_name = "Muzong"
+		dynasty = "Li"
+		birth_date = 795.7.26
+		death_date = 824.2.25
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+820.2.14 = {
+	monarch = {
+		name = "Heng" #Muzong
+		dynasty = "Li"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+820.2.14 = {
+	heir = {
+		name = "Zhan"
+		monarch_name = "Jingzong"
+		dynasty = "Li"
+		birth_date = 809.7.22
+		death_date = 827.1.9
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+824.2.25 = {
+	monarch = {
+		name = "Zhan" #Jingzong
+		dynasty = "Li"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+827.1.13 = {
+	monarch = {
+		name = "Ang" #Wenzong
+		dynasty = "Li"
+		birth_date = 809.11.20
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+840.2.10 = {
+	monarch = {
+		name = "Yan" #Wuzong
+		dynasty = "Li"
+		birth_date = 814.7.2
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+846.4.22 = {
+	monarch = {
+		name = "Chen" #Xuanzong
+		dynasty = "Li"
+		birth_date = 810.7.27
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+846.4.22 = {
+	heir = {
+		name = "Cui"
+		monarch_name = "Yizong"
+		dynasty = "Li"
+		birth_date = 833.12.29
+		death_date = 873.8.15
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+859.9.7 = {
+	monarch = {
+		name = "Cui" #Yizong
+		dynasty = "Li"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+862.6.8 = {
+	heir = {
+		name = "Xuan"
+		monarch_name = "Xizong"
+		dynasty = "Li"
+		birth_date = 862.6.8
+		death_date = 888.4.20
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+873.8.15 = {
+	monarch = {
+		name = "Xuan" #Xizong
+		dynasty = "Li"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+873.8.15 = {
+	heir = {
+		name = "Ye"
+		monarch_name = "Zhaozong"
+		dynasty = "Li"
+		birth_date = 867.3.31
+		death_date = 904.9.22
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+881.1.1 = { capital = 679 }
+883.1.1 = { capital = 700 }
+
+888.4.20 = {
+	monarch = {
+		name = "Ye" #Zhaozong
+		dynasty = "Li"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+892.10.27 = {
+	heir = {
+		name = "Zhu"
+		monarch_name = "Ai"
+		dynasty = "Li"
+		birth_date = 892.10.27
+		death_date = 908.3.26
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+898.1.1 = {
+	queen = {
+		country_of_origin = TNG
+		name = "Xuanmu"
+		dynasty = "He"
+		birth_date = 870.1.1
+		death_date = 906.1.22
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+904.1.1 = { capital = 1836 }
+
+904.9.26 = {
+	monarch = {
+		name = "Zhu" #Ai
+		dynasty = "Li"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Later Tang dynasty
+
+923.11.19 = {
+	monarch = {
+		name = "Cunxu" #Zhuangzong
+		dynasty = "Li"
+		birth_date = 885.12.2
+		culture = turkish
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = {	name = "Li Cunxu"     	type = general	fire = 3	shock = 4	manuever = 1	siege = 1  death_date = 926.5.25 }
+	}
+}
+
+926.5.25 = {
+	monarch = {
+		name = "Siyuan" #Mingzong
+		dynasty = "Li"
+		birth_date = 867.10.10
+		culture = turkish
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+926.5.25 = {
+	heir = {
+		name = "Conghou"
+		monarch_name = "Min"
+		dynasty = "Li"
+		birth_date = 914.12.17
+		death_date = 934.5.24
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+933.12.20 = {
+	monarch = {
+		name = "Conghou" #Min
+		dynasty = "Li"
+		culture = turkish
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+934.5.24 = {
+	monarch = {
+		name = "Congke"
+		dynasty = "Li"
+		birth_date = 885.2.11
+		culture = turkish
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+937.1.11 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+}
+
+# Southern Tang
+
+937.11.10 = {
+	primary_culture = wu
+	capital = 1821
+	monarch = {
+		name = "Bian" #Liezu
+		dynasty = "Li"
+		birth_date = 889.1.7
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = TNG
+		name = "Fujin"
+		dynasty = "Song"
+		birth_date = 890.1.1
+		death_date = 945.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jing"
+		monarch_name = "Yuanzong"
+		dynasty = "Li"
+		birth_date = 916.1.1
+		death_date = 961.8.12
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+943.3.30 = {
+	monarch = {
+		name = "Jing" #Yuanzong
+		dynasty = "Li"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Zhong"
+		birth_date = 920.1.1
+		death_date = 966.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yu"
+		monarch_name = "Yu"
+		dynasty = "Li"
+		birth_date = 937.1.1
+		death_date = 978.8.15
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+957.4.8 = {
+	government_rank = 2
+	remove_accepted_culture = yi
+	remove_accepted_culture = zhuang
+	remove_accepted_culture = vietnamese
+	remove_accepted_culture = buyeo
+}
+
+961.8.12 = {
+	monarch = {
+		name = "Yu"
+		dynasty = "Li"
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TNG
+		name = "Ehuang"
+		dynasty = "Zhou"
+		birth_date = 937.1.1
+		death_date = 964.12.8
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

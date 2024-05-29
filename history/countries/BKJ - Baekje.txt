@@ -1,0 +1,807 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = buyeo
+add_accepted_culture = jinhan
+religion = muism
+technology_group = early_chinese
+capital = 735
+
+2.1.1 = {
+	monarch = {
+		name = "Onjo"
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+10.1.1 = {
+	heir = {
+		name = "Daru"
+		monarch_name = "Daru"
+		dynasty = "Buyeo"
+		birth_date = 10.1.1
+		death_date = 77.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+28.2.1 = {
+	monarch = {
+		name = "Daru"
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+33.1.1 = {
+	heir = {
+		name = "Giru"
+		monarch_name = "Giru"
+		dynasty = "Buyeo"
+		birth_date = 33.1.1
+		death_date = 128.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+77.9.1 = {
+	monarch = {
+		name = "Giru"
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+90.1.1 = {
+	heir = {
+		name = "Gearu"
+		monarch_name = "Gearu"
+		dynasty = "Buyeo"
+		birth_date = 90.1.1
+		death_date = 166.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+128.11.1 = {
+	monarch = {
+		name = "Gearu"
+		dynasty = "Buyeo"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+140.1.1 = {
+	heir = {
+		name = "Chogo"
+		monarch_name = "Chogo"
+		dynasty = "Buyeo"
+		birth_date = 140.1.1
+		death_date = 214.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+166.11.1 = {
+	monarch = {
+		name = "Chogo"
+		dynasty = "Buyeo"
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+170.1.1 = {
+	heir = {
+		name = "Gusu"
+		monarch_name = "Gusu"
+		dynasty = "Buyeo"
+		birth_date = 170.1.1
+		death_date = 234.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+214.10.1 = {
+	monarch = {
+		name = "Gusu"
+		dynasty = "Buyeo"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+224.1.1 = {
+	heir = {
+		name = "Saban"
+		monarch_name = "Saban"
+		dynasty = "Buyeo"
+		birth_date = 224.1.1
+		death_date = 234.6.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+234.1.1 = {
+	monarch = {
+		name = "Saban"
+		dynasty = "Buyeo"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Coup
+
+234.6.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	monarch = {
+		name = "Goi"
+		dynasty = "Buyeo"
+		birth_date = 214.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	heir = {
+		name = "Chaekgye"
+		monarch_name = "Chaekgye"
+		dynasty = "Buyeo"
+		birth_date = 234.6.1
+		death_date = 298.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}
+
+286.11.1 = {
+	monarch = {
+		name = "Chaekgye"
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+	queen = {
+		country_of_origin = BUY
+		name = "Bogwa"
+		birth_date = 234.6.1
+		death_date = 298.9.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+	heir = {
+		name = "Bunseo"
+		monarch_name = "Bunseo"
+		dynasty = "Buyeo"
+		birth_date = 280.1.1
+		death_date = 304.1.1
+		claim = 95
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+298.9.1 = {
+	monarch = {
+		name = "Bunseo"
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+304.10.1 = {
+	monarch = {
+		name = "Biryu"
+		dynasty = "Buyeo"
+		birth_date = 280.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+344.10.1 = {
+	monarch = {
+		name = "Gye"
+		dynasty = "Buyeo"
+		birth_date = 300.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+346.9.1 = {
+	monarch = {
+		name = "Gu" # Geunchogo
+		dynasty = "Buyeo"
+		birth_date = 310.1.1
+		adm = 5
+		dip = 5
+		mil = 5
+		leader = {	name = "Buyeo Gu"     	type = general	fire = 3	shock = 3	manuever = 1	siege = 0  death_date = 375.11.1 }
+	}
+	queen = {
+		country_of_origin = BKJ
+		dynasty = "Jin"
+		birth_date = 310.1.1
+		death_date = 375.11.1
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Su"
+		monarch_name = "Geungusu"
+		dynasty = "Buyeo"
+		birth_date = 346.9.1
+		death_date = 384.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+369.9.1 = { historical_friend = YAM }
+
+371.10.24 = { historical_rival = GOG }
+
+375.11.1 = {
+	monarch = {
+		name = "Su" # Geungusu
+		dynasty = "Buyeo"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = BKJ
+		name = "Ai"
+		dynasty = "Jin"
+		birth_date = 346.1.1
+		death_date = 384.1.1
+		female = yes
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+	heir = {
+		name = "Chimnyu"
+		monarch_name = "Chimnyu"
+		dynasty = "Buyeo"
+		birth_date = 365.1.1
+		death_date = 385.11.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+384.4.1 = {
+	religion = mahayana
+	monarch = {
+		name = "Chimnyu"
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = BKJ
+		dynasty = "Jin"
+		birth_date = 365.1.1
+		death_date = 385.11.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+385.11.1 = {
+	monarch = {
+		name = "Jinsa"
+		dynasty = "Buyeo"
+		birth_date = 367.1.1
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+# Coup
+
+392.11.1 = {
+	monarch = {
+		name = "Asin"
+		dynasty = "Buyeo"
+		birth_date = 380.1.1
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+	queen = {
+		country_of_origin = BKJ
+		dynasty = "Hae"
+		birth_date = 380.1.1
+		death_date = 405.9.1
+		female = yes
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+392.11.1 = { leader = {	name = "Jin Mu"		type = general	fire = 2	shock = 2	manuever = 3	siege = 0  death_date = 405.9.1 } } # Not an actual death date
+
+394.1.1 = {
+	heir = {
+		name = "Yeong"
+		monarch_name = "Jeonji"
+		dynasty = "Buyeo"
+		birth_date = 394.1.1
+		death_date = 420.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+405.9.1 = {
+	monarch = {
+		name = "Yeong" # Jeonji
+		dynasty = "Buyeo"
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+	queen = {
+		country_of_origin = BKJ
+		name = "Palsu"
+		dynasty = "Hae"
+		birth_date = 394.1.1
+		death_date = 420.1.1
+		female = yes
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+415.1.1 = {
+	heir = {
+		name = "Guisin"
+		monarch_name = "Guisin"
+		dynasty = "Buyeo"
+		birth_date = 415.1.1
+		death_date = 427.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+420.3.1 = {
+	monarch = {
+		name = "Guisin"
+		dynasty = "Buyeo"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+427.12.1 = {
+	monarch = {
+		name = "Biyu"
+		dynasty = "Buyeo"
+		birth_date = 405.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+429.12.1 = {
+	heir = {
+		name = "Gyeongsa"
+		monarch_name = "Gaero"
+		dynasty = "Buyeo"
+		birth_date = 429.1.1
+		death_date = 475.6.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+455.9.1 = {
+	monarch = {
+		name = "Gyeongsa" # Gaero
+		dynasty = "Buyeo"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	heir = {
+		name = "Modo"
+		monarch_name = "Munju"
+		dynasty = "Buyeo"
+		birth_date = 450.1.1
+		death_date = 477.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+455.10.1 = { historical_friend = SLL }
+
+475.9.1 = {
+	capital = 1013
+	monarch = {
+		name = "Modo" # Munju
+		dynasty = "Buyeo"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Samgeun"
+		monarch_name = "Samgeun"
+		dynasty = "Buyeo"
+		birth_date = 465.1.1
+		death_date = 479.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+477.9.1 = {
+	monarch = {
+		name = "Samgeun"
+		dynasty = "Buyeo"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+479.11.1 = {
+	monarch = {
+		name = "Modae" # Dongseong
+		dynasty = "Buyeo"
+		birth_date = 460.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Buyeo Modae"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 1  death_date = 501.12.1 }
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+493.1.1 = {
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Kim"
+		birth_date = 475.1.1
+		death_date = 501.12.1
+		female = yes
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+501.12.1 = {
+	monarch = {
+		name = "Sama" # Muryeong
+		dynasty = "Buyeo"
+		birth_date = 462.1.1
+		adm = 5
+		dip = 4
+		mil = 5
+		leader = {	name = "Buyeo Sama"     	type = general	fire = 3	shock = 3	manuever = 1	siege = 0  death_date = 523.5.8 }
+	}
+	heir = {
+		name = "Myeongnong"
+		monarch_name = "Seong"
+		dynasty = "Buyeo"
+		birth_date = 500.1.1
+		death_date = 554.12.1
+		claim = 95
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+}
+
+523.5.8 = {
+	monarch = {
+		name = "Myeongnong" # Seong
+		dynasty = "Buyeo"
+		adm = 5
+		dip = 3
+		mil = 4
+		leader = {	name = "Buyeo Myeongnong"     	type = general	fire = 1	shock = 2	manuever = 1	siege = 0  death_date = 554.8.1 }
+	}
+}
+
+525.1.1 = {
+	heir = {
+		name = "Chang"
+		monarch_name = "Wideok"
+		dynasty = "Buyeo"
+		birth_date = 525.1.1
+		death_date = 598.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+554.7.1 = {
+	historical_rival = SLL
+	remove_historical_rival = GOG
+	remove_historical_friend = SLL
+}
+
+554.8.1 = {
+	monarch = {
+		name = "Chang" # Wideok
+		dynasty = "Buyeo"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Gye"
+		monarch_name = "Hye"
+		dynasty = "Buyeo"
+		birth_date = 527.1.1
+		death_date = 599.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}
+
+598.12.1 = {
+	monarch = {
+		name = "Gye" # Hye
+		dynasty = "Buyeo"
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+	heir = {
+		name = "Seon"
+		monarch_name = "Beop"
+		dynasty = "Buyeo"
+		birth_date = 560.1.1
+		death_date = 600.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+599.6.1 = {
+	monarch = {
+		name = "Seon" # Beop
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+	heir = {
+		name = "Jang"
+		monarch_name = "Mu"
+		dynasty = "Buyeo"
+		birth_date = 580.1.1
+		death_date = 641.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+600.5.1 = {
+	monarch = {
+		name = "Jang" # Mu
+		dynasty = "Buyeo"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = BKJ
+		dynasty = "Sataek"
+		birth_date = 580.1.1
+		death_date = 641.3.1
+		female = yes
+		adm = 1
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Uija"
+		monarch_name = "Uija"
+		dynasty = "Buyeo"
+		birth_date = 600.5.1
+		death_date = 660.12.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 5
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+641.3.1 = {
+	monarch = {
+		name = "Uija"
+		dynasty = "Buyeo"
+		adm = 1
+		dip = 0
+		mil = 5
+	}
+	queen = {
+		country_of_origin = BKJ
+		name = "Eungo"
+		birth_date = 600.1.1
+		death_date = 660.12.1
+		female = yes
+		adm = 0
+		dip = 5
+		mil = 2
+	}
+	heir = {
+		name = "Pung"
+		monarch_name = "Pung"
+		dynasty = "Buyeo"
+		birth_date = 623.1.1
+		death_date = 668.10.31
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 5
+	}
+}
+
+641.3.1 = { leader = {	name = "Buyeo Yunchung"		type = general	fire = 2	shock = 2	manuever = 4	siege = 0  death_date = 660.8.29 } } # Not an actual death date 
+650.1.1 = { leader = {	name = "Gyebaek"     	type = general	fire = 3	shock = 4	manuever = 2	siege = 0  death_date = 660.7.9 } }
+
+660.7.18 = {
+	monarch = {
+		name = "Pung"
+		dynasty = "Buyeo"
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}
+
+676.11.1 = { 
+	primary_culture = korean
+	remove_accepted_culture = jinhan
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Later Baekje
+
+889.1.1 = {
+	government = monarchy
+	add_government_reform = warlord_state
+	government_rank = 1
+	capital = 4354
+	monarch = {
+		name = "Hwon"
+		dynasty = "Gyeon"
+		birth_date = 867.1.1
+		adm = 0
+		dip = 1
+		mil = 6
+		leader = {	name = "Gyeon Hwon"     	type = general	fire = 4	shock = 3	manuever = 0	siege = 0  death_date = 935.3.1 } # Exiled
+	}
+	heir = {
+		name = "Singeom"
+		monarch_name = "Singeom"
+		dynasty = "Gyeon"
+		birth_date = 889.1.1
+		death_date = 936.11.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+892.1.1 = { capital = 737 }
+
+900.1.1 = {
+	government_rank = 2
+	historical_rival = GOG
+}
+
+918.6.15 = { historical_rival = GOR }
+
+935.3.1 = {
+	monarch = {
+		name = "Singeom"
+		dynasty = "Gyeon"
+		adm = 0
+		dip = 0
+		mil = 1
+		leader = {	name = "Gyeon Singeom"     	type = general	fire = 0	shock = 1	manuever = 0	siege = 0  death_date = 936.10.1 }
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

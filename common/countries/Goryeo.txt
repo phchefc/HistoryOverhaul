@@ -1,0 +1,125 @@
+#Country name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 0  52  120 }
+
+historical_idea_groups = {
+	early_adm_ideas
+	early_mil_ideas
+	early_religious_ideas
+	early_trade_ideas
+	naval_ideas
+	offensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Hyeon #0" = 40
+	"Geon #0" = 40
+	"Mu #0" = 40
+	"Yo #0" = 20
+	"So #1" = 20
+	"Ju #0" = 20
+	"Chi #0" = 20
+	"Song #0" = 20
+	"Sun #0" = 20
+	"Heum #0" = 20
+	"Hyeong #0" = 20
+	"Hwi #0" = 20
+	"Hun #0" = 20
+	"Un #0" = 20
+	"Uk #0" = 20
+	"Ong #1" = 20
+	"U #0" = 20
+	"Hae #0" = 20
+	"Ho #1" = 20
+	"Tak #0" = 10
+	"Yeong #0" = 10
+	"O #0" = 10
+	"Cheol #0" = 10
+	"Sik #0" = 10
+	"Geo #0" = 10
+	"Jang #0" = 10
+	"Do #0" = 10
+	"Jeong #0" = 10
+	"Heun #0" = 10
+	"Jeo #0" = 10
+	"Jeon #0" = 10
+	"Chang #0" = 10
+	"Hyeyoung #0" = -5
+	"Hyejeong #0" = -5
+	"Hyohye #0" = -5
+	"Uihye #0" = -5
+	"Hyosun #0" = -5
+	"Gyeonghui #0" = -5
+	"Insun #0" = -5
+	"Jeongsin #0" = -5
+	"Jeonghye #0" = -5
+	"Jeongsuk #0" = -5
+	"Jeong-an #0" = -5
+	"Jeonghyo #0" = -5
+	"Jeongmyeong #0" = -5
+	"Ik #1" = 1
+	"Mok #1" = 1
+	"Si #1" = 1
+	"I #0" = 0
+	"Sun #0" = 20
+	"Rip #0" = 0
+	"Il #0" = 0
+	"Dong #0" = 0
+	"Gwal #0" = 0
+	"Sang #0" = 0
+	"Ji #0" = 0
+	"U #0" = 0
+	"Gyu #0" = 0
+	"Dae #0" = 0
+	"Gu #0" = 0
+}
+
+leader_names = {
+	Kim Yi Pak Choe Jeong Gang Jo Yun Jang Im Han O Seo Shin 
+	Gwon Hwang An Song Jeon Hong Yu Go Mun Yang Son Bae Baek Heo 
+	Nam Shim Noh Ha Gwak Seong Cha Ju U Gu Min Jin Na Ji
+}
+
+ship_names = {
+	Baekdu Baekje 
+	Changbai
+	Duman Daedeok Dongmyeongseong
+	Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon"
+	Jirisan Jeongjong
+	Kumgangsan
+	Nakdong
+	Sincheon Silla Sobaek
+	Taebaek Taejo 
+	Hanseong Haemosu Habaek Hwaeomsa
+	Worak
+	Yuhwa Yeong 
+}
+
+army_names = {
+	"Palace Guards" "$PROVINCE$ Gun"
+}
+
+fleet_names = {
+	"$PROVINCE$ Sugun"
+}
+
+# EH version

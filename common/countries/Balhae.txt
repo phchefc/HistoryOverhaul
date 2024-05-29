@@ -1,0 +1,112 @@
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 162  105  131 }
+
+historical_idea_groups = {
+	early_adm_ideas
+	early_mil_ideas
+	early_religious_ideas
+	early_trade_ideas
+	defensive_ideas
+	offensive_ideas
+	administrative_ideas
+	economic_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	spy_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Hyeon #0" = 40
+	"Jo-yeong #0" = 40
+	"Muye #0" = 40
+	"Heum-mu #0" = 20
+	"Won-ui #1" = 20
+	"Hwa-yeo #0" = 20
+	"Hong-wi #0" = 20
+	"Sung-rin #0" = 20
+	"Won-yu #0" = 20
+	"Eon-ui #0" = 20
+	"Myeong-chung #0" = 20
+	"In-su #0" = 20
+	"Ijin #0" = 20
+	"Geonhwang #0" = 20
+	"Hyeonseok #0" = 20
+	"Wihae #1" = 20
+	"Inseon #0" = 20
+	"Gwanghyeon #0" = 20
+	"Jung-sang #0" = 40
+	"Hyeyoung #0" = -5
+	"Hyejeong #0" = -5
+	"Hyohye #0" = -5
+	"Uihye #0" = -5
+	"Hyosun #0" = -5
+	"Gyeonghui #0" = -5
+	"Insun #0" = -5
+	"Jeongsin #0" = -5
+	"Jeonghye #0" = -5
+	"Jeongsuk #0" = -5
+	"Jeong-an #0" = -5
+	"Jeonghyo #0" = -5
+	"Jeongmyeong #0" = -5
+	"Ik #1" = 1
+	"Mok #1" = 1
+	"Si #1" = 1
+	"I #0" = 0
+	"Sun #0" = 20
+	"Rip #0" = 0
+	"Il #0" = 0
+	"Dong #0" = 0
+	"Gwal #0" = 0
+	"Sang #0" = 0
+	"Ji #0" = 0
+	"U #0" = 0
+	"Gyu #0" = 0
+	"Dae #0" = 0
+	"Gu #0" = 0
+}
+
+leader_names = {
+	Dae Go Yi Wang Jang Yang Ma Bae Jo Du
+	Sil A Ju O Mi Yul Gong Seop Eo Mok Mo Ji Sa
+}
+
+ship_names = {
+	Baekdu Baekje 
+	Changbai
+	Duman Daedeok Dongmyeongseong
+	Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon"
+	Jirisan Jeongjong
+	Kumgangsan
+	Nakdong
+	Sincheon Silla Sobaek
+	Taebaek Taejo 
+	Hanseong Haemosu Habaek Hwaeomsa
+	Worak
+	Yuhwa Yeong 
+}
+
+army_names = {
+	"$PROVINCE$ Gun"
+}
+
+fleet_names = {
+	"$PROVINCE$ Sugun"
+}
+
+# EH version
+

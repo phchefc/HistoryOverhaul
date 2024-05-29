@@ -1,0 +1,174 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+primary_culture = roman
+add_accepted_culture = greek
+add_accepted_culture = gallian
+add_accepted_culture = frankish
+add_accepted_culture = berber
+add_accepted_culture = iberi
+add_accepted_culture = illyrian
+religion = chalcedonism
+technology_group = roman_group
+historical_friend = BYZ
+capital = 104 # Mediolanum
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+390.1.1 = { decision = dummy_empire_declining }
+
+395.1.17 = { changed_tag_from = ROM }
+
+395.1.17 = {
+	monarch = {
+		name = "Honorius"
+		dynasty = "Theodosian"
+		culture = dacian
+		adm = 0
+		dip = 2
+		mil = 0
+	}
+} # EH version
+
+395.1.17 = { leader = {	name = "Stilicho" type = general 	fire = 2 shock = 4 manuever = 2	siege = 2 death_date = 408.8.22 } }
+
+402.1.1 = { capital = 114 } #Ravenna
+
+423.8.27 = {
+	monarch = {
+		name = "Joannes"
+		dynasty = "Theodosian"
+		culture = dacian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+425.7.2 = {
+	monarch = {
+		name = "Valentinian III"
+		dynasty = "Theodosian"
+		culture = dacian
+		adm = 0
+		dip = 0
+		mil = 0
+		leader = {	name = "Valentinian III"      	type = general		fire = 2	shock = 2	manuever = 1	siege = 0}
+	}
+} # EH version
+
+425.10.19 = { leader = {	name = "Flavius Aetius" type = general 	fire = 3 shock = 4 manuever = 3	siege = 1 death_date = 454.9.21 } }
+
+455.3.17 = { decision = dummy_empire_fragmenting }
+
+455.3.17 = {
+	monarch = {
+		name = "Petronius Maximus"
+		adm = 0
+		dip = 0
+		mil = 1
+		leader = {	name = "Petronius Maximus"        	type = general		fire = 3	shock = 3	manuever = 3	siege = 0}
+	}
+} # EH version
+
+455.6.1 = {
+	monarch = {
+		name = "Avitus"
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+} # EH version
+
+457.4.1 = {
+	monarch = {
+		name = "Majorian"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+} # EH version
+
+461.11.1 = {
+	monarch = {
+		name = "Libius Severus"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+} # EH version
+
+467.4.12 = {
+	monarch = {
+		name = "Anthemius"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+} # EH version
+
+470.1.1 = { decision = dummy_empire_collapsing }
+
+472.4.11 = {
+	monarch = {
+		name = "Olybrius"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+} # EH version
+
+473.3.1 = {
+	monarch = {
+		name = "Glycerius"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+} # EH version
+
+474.6.10 = {
+	monarch = {
+		name = "Julius"
+		dynasty = "Nepos"
+		culture = dalmatian
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+} # EH version
+
+# Coup
+
+475.10.31 = {
+	monarch = {
+		name = "Romulus"
+		dynasty = "Augustus"
+		adm = 0
+		dip = 3
+		mil = 0
+	}
+} # EH version
+
+476.9.4 = { decision = dummy_clear_decline }
+
+476.9.4 = {
+	monarch = {
+		name = "Julius"
+		dynasty = "Nepos"
+		culture = dalmatian
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+} # EH version
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

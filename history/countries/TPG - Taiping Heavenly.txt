@@ -1,0 +1,67 @@
+government = theocracy 
+add_government_reform = leading_clergy_reform
+government_rank = 3
+technology_group = early_chinese
+religion = reformed
+primary_culture = wu
+historical_rival = QNG
+capital = 2162	# Jintian
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1851.1.11 = {
+	monarch = {
+		name = "Xiuquan"
+		dynasty = "Hong"
+		birth_date = 1814.1.1
+		adm = 3
+		dip = 2
+		mil = 4
+		leader = {	name = "Hong Xiuquan"     	type = general	fire = 3	shock = 3	manuever = 2	siege = 2  death_date = 1864.6.1 }
+	}
+	queen = {
+		country_of_origin = TPG
+		name = "Xiying"
+		dynasty = "Lai"
+		birth_date = 1815.1.1
+		death_date = 1864.11.18
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tianguifu"
+		monarch_name = "Tianguifu"
+		dynasty = "Hong"
+		birth_date = 1849.11.23
+		death_date = 1864.11.18
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+1853.3.1 = { capital = 1821 } # Tianjing
+
+1864.6.1 = {
+	monarch = {
+		name = "Tianguifu"
+		dynasty = "Hong"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}

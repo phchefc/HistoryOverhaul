@@ -1,0 +1,285 @@
+government = republic
+add_government_reform = constitutional_republic
+government_rank = 3
+primary_culture = chihan
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+add_accepted_culture = mongol
+add_accepted_culture = chahar
+add_accepted_culture = tangut
+culture_group_union = east_asian
+religion = confucianism
+technology_group = early_chinese
+capital = 1821	# Nanjing
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Republic of China
+
+1912.1.1 = {
+	religion = secularism
+	technology_group = asian
+	monarch = {
+		name = "Sun Yat-sen"
+		birth_date = 1866.11.12
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}
+
+1912.3.10 = {
+	capital = 1816	# Beijing
+	monarch = {
+		name = "Shikai"
+		dynasty = "Yuan"
+		birth_date = 1859.9.16
+		adm = 2
+		dip = 2
+		mil = 6
+		leader = {	name = "Yuan Shikai"     	type = general	fire = 2	shock = 2	manuever = 4	siege = 1  death_date = 1916.6.6 }
+	}
+}
+
+# Empire of China
+
+1915.12.22 = {
+	government = monarchy
+	add_government_reform = autocracy_reform 
+}
+
+1915.12.22 = {
+	heir = {
+		name = "Keding"
+		monarch_name = "Keding"
+		dynasty = "Yuan"
+		birth_date = 1878.1.1
+		death_date = 1958.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+# Republic of China (Beiyang add_government_reform)
+
+1916.3.22 = { 
+	government = republic
+	add_government_reform = constitutional_republic
+}
+
+1916.6.7 = {
+	monarch = {
+		name = "Li Yuanhong"
+		birth_date = 1864.10.19
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+1917.7.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	monarch = {
+		name = "Puyi" # Xuantong Emperor
+		dynasty = "Aisin Gioro"
+		birth_date = 1906.2.7
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1917.7.12 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+	government_rank = 2
+	monarch = {
+		name = "Li Yuanhong"
+		birth_date = 1864.10.19
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+1917.7.17 = {
+	monarch = {
+		name = "Feng Guozhang"
+		birth_date = 1859.1.7
+		adm = 2
+		dip = 2
+		mil = 3
+		leader = {	name = "Feng Guozhang"     	type = general	fire = 1	shock = 1	manuever = 0	siege = 0  death_date = 1919.12.12 }
+	}
+}
+
+1918.10.10 = {
+	monarch = {
+		name = "Xu Shichang"
+		birth_date = 1855.10.22
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+
+1922.6.2 = {
+	monarch = {
+		name = "Zhou Ziqi"
+		birth_date = 1869.11.17
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1922.6.11 = {
+	monarch = {
+		name = "Li Yuanhong"
+		birth_date = 1864.10.19
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+1923.6.13 = {
+	monarch = {
+		name = "Zhang Shaozeng"
+		birth_date = 1879.10.9
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1922.9.9 = {
+	monarch = {
+		name = "Gao Lingwei"
+		birth_date = 1870.9.12
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}
+
+1923.10.10 = {
+	monarch = {
+		name = "Cao Kun"
+		birth_date = 1862.12.12
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1924.11.2 = {
+	monarch = {
+		name = "Huang Fu"
+		birth_date = 1883.3.8
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+1924.11.24 = {
+	monarch = {
+		name = "Duan Qirui"
+		birth_date = 1865.3.6
+		adm = 3
+		dip = 2
+		mil = 2
+		leader = {	name = "Duan Qirui"     	type = general	fire = 1	shock = 2	manuever = 0	siege = 0  death_date = 1936.11.2 }
+	}
+}
+
+1926.4.20 = {
+	monarch = {
+		name = "Hu Weide"
+		birth_date = 1863.1.1
+		adm = 1
+		dip = 4
+		mil = 1
+	}
+}
+
+1926.5.13 = {
+	monarch = {
+		name = "Yan Huiqing"
+		birth_date = 1877.4.2
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1926.6.22 = {
+	monarch = {
+		name = "Du Xigui"
+		birth_date = 1875.11.12
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}
+
+1926.10.1 = {
+	monarch = {
+		name = "Wellington Koo"
+		birth_date = 1888.1.29
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1927.6.18 = {
+	monarch = {
+		name = "Zhang Zuolin"
+		death_date = 1928.6.4
+		adm = 2
+		dip = 3
+		mil = 3
+		leader = {	name = "Zhang Zuolin"     	type = general	fire = 3	shock = 2	manuever = 0	siege = 0  death_date = 1928.6.4 }
+	}
+}
+
+1930.1.1 = {
+	remove_accepted_culture = yi
+	remove_accepted_culture = zhuang
+	remove_accepted_culture = mongol
+	remove_accepted_culture = chahar
+	remove_accepted_culture = tangut
+}
+
+#Provisional add_government_reform of China (1937–40)
+
+1937.12.14 = {
+	monarch = {
+		name = "Wang Kemin"
+		birth_date = 1879.5.4
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}

@@ -1,0 +1,16 @@
+
+bookmark =
+{
+	name = "FALL_OF_TANG_NAME"
+	desc = "FALL_OF_TANG_DESC"
+	date = 907.5.1
+	
+	country = LNG
+	country = JIN
+	country = WUU
+	country = SHU
+	country = KHT
+	country = GOG
+}
+
+# EH version

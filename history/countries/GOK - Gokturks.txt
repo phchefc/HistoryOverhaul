@@ -1,0 +1,788 @@
+government = tribal
+add_government_reform = steppe_horde
+mercantilism = 0.1
+primary_culture = turkish
+add_accepted_culture = mongol
+add_accepted_culture = khazak
+add_accepted_culture = turkmeni
+religion = tengri_pagan_reformed
+technology_group = eastern_nomad_group
+capital = 2891	# Ordu Baliq
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+460.1.1 = {
+	monarch = {
+		name = "Ashina"
+		dynasty = "Ashina"
+		birth_date = 430.1.1
+		adm = 6
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = WEI
+		name = "Changle"
+		dynasty = "Yuan"
+		birth_date = 440.1.1
+		death_date = 490.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Axian Shad"
+		monarch_name = "Axian Shad"
+		dynasty = "Ashina"
+		birth_date = 460.1.1
+		death_date = 490.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+480.1.1 = {
+	monarch = {
+		name = "Axian Shad"
+		dynasty = "Ashina"
+		birth_date = 460.1.1
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+490.1.1 = {
+	heir = {
+		name = "Tuwu"
+		monarch_name = "Tuwu"
+		dynasty = "Ashina"
+		birth_date = 490.1.1
+		death_date = 534.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+510.1.1 = {
+	monarch = {
+		name = "Tuwu"
+		dynasty = "Ashina"
+		birth_date = 490.1.1
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+517.1.1 = {
+	heir = {
+		name = "Bumin"
+		monarch_name = "Bumin"
+		dynasty = "Ashina"
+		birth_date = 517.1.1
+		death_date = 552.1.1
+		claim = 95
+		adm = 4
+		dip = 6
+		mil = 5
+	}
+}
+
+534.1.1 = {
+	monarch = {
+		name = "Bumin"
+		dynasty = "Ashina"
+		birth_date = 517.1.1
+		adm = 3
+		dip = 2
+		mil = 4
+		leader = {	name = "Ashina Bumin"     	type = general	fire = 2	shock = 4	manuever = 0	siege = 1  death_date = 552.1.1 } # Not an actual death date
+	}
+}
+
+547.1.1 = {
+	heir = {
+		name = "Keluo"
+		monarch_name = "Issik"
+		dynasty = "Ashina"
+		birth_date = 522.1.1
+		death_date = 553.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+552.1.1 = {
+	monarch = {
+		name = "Keluo" #Issik
+		dynasty = "Ashina"
+		birth_date = 522.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+552.1.1 = {
+	heir = {
+		name = "Yandou"
+		monarch_name = "Muqan"
+		dynasty = "Ashina"
+		birth_date = 523.1.1
+		death_date = 572.1.1
+		claim = 95
+		adm = 1
+		dip = 4
+		mil = 5
+	}
+}
+
+553.1.1 = {
+	monarch = {
+		name = "Yandou" #Muqan
+		dynasty = "Ashina"
+		birth_date = 523.1.1
+		adm = 1
+		dip = 4
+		mil = 5
+	}
+}
+
+553.1.1 = {
+	heir = {
+		name = "Taspar"
+		monarch_name = "Taspar"
+		dynasty = "Ashina"
+		birth_date = 542.1.1
+		death_date = 581.1.1
+		claim = 95
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+}
+
+572.1.1 = {
+	monarch = {
+		name = "Taspar"
+		dynasty = "Ashina"
+		birth_date = 542.1.1
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+}
+
+572.1.1 = {
+	heir = {
+		name = "Shetu"
+		monarch_name = "Ishbara"
+		dynasty = "Ashina"
+		birth_date = 551.1.1
+		death_date = 587.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 4
+	}
+}
+
+581.1.1 = {
+	monarch = {
+		name = "Shetu" #Ishbara 
+		dynasty = "Ashina"
+		birth_date = 551.1.1
+		adm = 0
+		dip = 1
+		mil = 4
+	}
+	queen = {
+		country_of_origin = CZH
+		name = "Qianjin"
+		dynasty = "Yuwen"
+		birth_date = 550.1.1
+		death_date = 600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chuluohou"
+		monarch_name = "Bagha"
+		dynasty = "Ashina"
+		birth_date = 557.1.1
+		death_date = 588.1.1
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+587.1.1 = {
+	monarch = {
+		name = "Chuluohou" #Bagha 
+		dynasty = "Ashina"
+		birth_date = 557.1.1
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+587.1.1 = {
+	heir = {
+		name = "Yongyulu"
+		monarch_name = "Tulan"
+		dynasty = "Ashina"
+		birth_date = 558.1.1
+		death_date = 599.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+588.1.1 = {
+	monarch = {
+		name = "Yongyulu" #Tulan
+		dynasty = "Ashina"
+		birth_date = 558.1.1
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+588.1.1 = {
+	heir = {
+		name = "Jankan"
+		monarch_name = "Yami"
+		dynasty = "Ashina"
+		birth_date = 567.1.1
+		death_date = 609.1.1
+		claim = 95
+		adm = 5
+		dip = 2
+		mil = 0
+	}
+}
+
+# Eastern Turkic Khaganate
+
+599.1.1 = {
+	monarch = {
+		name = "Jankan" #Yami
+		dynasty = "Ashina"
+		birth_date = 567.1.1
+		adm = 5
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SUI
+		name = "Yicheng"
+		dynasty = "Yang"
+		birth_date = 570.1.1
+		death_date = 630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Duojishi"
+		monarch_name = " Shibi"
+		dynasty = "Ashina"
+		birth_date = 589.1.1
+		death_date = 619.1.1
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+609.1.1 = {
+	monarch = {
+		name = "Duojishi" #Shibi
+		dynasty = "Ashina"
+		birth_date = 589.1.1
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SUI
+		name = "Yicheng"
+		dynasty = "Yang"
+		birth_date = 570.1.1
+		death_date = 630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ilteber Shad"
+		monarch_name = "Chulo"
+		dynasty = "Ashina"
+		birth_date = 599.1.1
+		death_date = 620.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+}
+
+619.1.1 = {
+	monarch = {
+		name = "Ilteber Shad"
+		dynasty = "Ashina"
+		birth_date = 599.1.1
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SUI
+		name = "Yicheng"
+		dynasty = "Yang"
+		birth_date = 570.1.1
+		death_date = 630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tugbir"
+		monarch_name = "Illig"
+		dynasty = "Ashina"
+		birth_date = 599.1.1
+		death_date = 630.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+620.1.1 = {
+	monarch = {
+		name = "Tugbir" #Illig
+		dynasty = "Ashina"
+		birth_date = 599.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SUI
+		name = "Yicheng"
+		dynasty = "Yang"
+		birth_date = 570.1.1
+		death_date = 630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Simo"
+		monarch_name = "Simo"
+		dynasty = "Ashina"
+		birth_date = 620.1.1
+		death_date = 645.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+# Under Jimi system of Tang
+
+630.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+639.1.1 = {
+	monarch = {
+		name = "Simo" #Qilibi 
+		dynasty = "Ashina"
+		birth_date = 620.1.1
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+639.1.1 = {
+	heir = {
+		name = "Hubo"
+		monarch_name = "Chebi"
+		dynasty = "Ashina"
+		birth_date = 630.1.1
+		death_date = 679.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+645.1.1 = {
+	monarch = {
+		name = "Hubo" #Chebi  
+		dynasty = "Ashina"
+		birth_date = 630.1.1
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+645.1.1 = {
+	heir = {
+		name = "Nishubeg"
+		monarch_name = "Nishubeg"
+		dynasty = "Ashina"
+		birth_date = 645.1.1
+		death_date = 680.1.1
+		claim = 95
+		adm = 5
+		dip = 2
+		mil = 0
+	}
+}
+
+679.1.1 = {
+	monarch = {
+		name = "Nishubeg"
+		dynasty = "Ashina"
+		birth_date = 645.1.1
+		adm = 5
+		dip = 2
+		mil = 0
+	}
+}
+
+679.1.1 = {
+	heir = {
+		name = "Funian"
+		monarch_name = "Funian"
+		dynasty = "Ashina"
+		birth_date = 660.1.1
+		death_date = 681.1.1
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+680.1.1 = {
+	monarch = {
+		name = "Funian"
+		dynasty = "Ashina"
+		birth_date = 650.1.1
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+# Second Eastern Turkic Khaganate
+
+681.1.1 = {
+	monarch = {
+		name = "Qutlugh" #Ilterish
+		dynasty = "Ashina"
+		birth_date = 662.1.1
+		adm = 2
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = GOK
+		name = "El Bilge"
+		dynasty = "Ashina"
+		birth_date = 665.1.1
+		death_date = 720.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Mochuo"
+		monarch_name = "Qapaghan"
+		dynasty = "Ashina"
+		birth_date = 664.1.1
+		death_date = 716.7.22
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}
+
+694.1.1 = {
+	monarch = {
+		name = "Mochuo" #Qapaghan
+		dynasty = "Ashina"
+		birth_date = 664.1.1
+		adm = 3
+		dip = 5
+		mil = 4
+		leader = {	name = "Ashina Mochuo"     	type = general	fire = 3	shock = 4	manuever = 3	siege = 0  death_date = 716.7.22 }
+	}
+}
+
+694.1.1 = {
+	heir = {
+		name = "Inel"
+		monarch_name = "Inel"
+		dynasty = "Ashina"
+		birth_date = 686.1.1
+		death_date = 717.1.1
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 0
+	}
+}
+
+716.7.22 = {
+	monarch = {
+		name = "Inel"
+		dynasty = "Ashina"
+		birth_date = 686.1.1
+		adm = 3
+		dip = 5
+		mil = 0
+	}
+}
+
+716.7.22 = {
+	heir = {
+		name = "Mojilian"
+		monarch_name = "Bilge"
+		dynasty = "Ashina"
+		birth_date = 684.1.1
+		death_date = 734.11.25
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+717.1.1 = {
+	monarch = {
+		name = "Mojilian" #Bilge
+		dynasty = "Ashina"
+		birth_date = 684.1.1
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+	queen = {
+		country_of_origin = GOK
+		name = "Po Beg"
+		dynasty = "Ashide"
+		birth_date = 690.1.1
+		death_date = 750.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yollig"
+		monarch_name = "Yiran"
+		dynasty = "Ashina"
+		birth_date = 704.1.1
+		death_date = 735.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+}
+
+734.11.25 = {
+	monarch = {
+		name = "Yollig" #Yiran
+		dynasty = "Ashina"
+		birth_date = 704.1.1
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+}
+
+734.11.25 = {
+	heir = {
+		name = "Tengri"
+		monarch_name = "Tengri"
+		dynasty = "Ashina"
+		birth_date = 705.1.1
+		death_date = 741.1.1
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}
+
+735.1.1 = {
+	monarch = {
+		name = "Tengri"
+		dynasty = "Ashina"
+		birth_date = 705.1.1
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}
+
+735.1.1 = {
+	heir = {
+		name = "Kutluk Yabgu"
+		monarch_name = "Kutluk Yabgu"
+		dynasty = "Ashina"
+		birth_date = 710.1.1
+		death_date = 742.1.1
+		claim = 95
+		adm = 0
+		dip = 4
+		mil = 0
+	}
+}
+
+741.1.1 = {
+	monarch = {
+		name = "Kutluk Yabgu"
+		dynasty = "Ashina"
+		birth_date = 710.1.1
+		adm = 0
+		dip = 4
+		mil = 0
+	}
+}
+
+741.1.1 = {
+	heir = {
+		name = "Ozmysh"
+		monarch_name = "Ozmysh"
+		dynasty = "Ashina"
+		birth_date = 710.1.1
+		death_date = 744.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+742.1.1 = {
+	monarch = {
+		name = "Ozmysh"
+		dynasty = "Ashina"
+		birth_date = 710.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+744.1.1 = {
+	monarch = {
+		name = "Kulun Beg"
+		dynasty = "Ashina"
+		birth_date = 730.1.1
+		death_date = 745.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+745.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+747.1.1 = {
+	monarch = {
+		name = "Eletmish"
+		dynasty = "Ashina"
+		birth_date = 730.1.1
+		death_date = 759.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+747.1.1 = {
+	heir = {
+		name = "Bugu"
+		monarch_name = "Bugu"
+		dynasty = "Ashina"
+		birth_date = 740.1.1
+		death_date = 779.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+759.1.1 = {
+	monarch = {
+		name = "Bugu"
+		dynasty = "Ashina"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

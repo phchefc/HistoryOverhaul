@@ -1,0 +1,853 @@
+government = tribal
+add_government_reform = tribal_kingdom
+mercantilism = 0.2
+primary_culture = tibetan
+culture_group_union = tibetan_group
+religion = tibetan_bon
+technology_group = early_chinese
+capital = 677 # Lhasa
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+# Tibetan Empire
+
+629.1.1 = { changed_tag_from = YRL }
+
+629.1.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	government_rank = 3
+	religion = vajrayana
+	monarch = {
+		name = "Songtsen Gampo" #Gampo 1st reign
+		dynasty = "Yarlung"
+		birth_date = 605.1.1
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+	queen = {
+		country_of_origin = KTU
+		name = "Bhrikuti Devi"
+		dynasty = "Licchavi"
+		birth_date = 610.1.1
+		death_date = 650.1.1
+		female = yes
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+	heir = {
+		name = "Gungsrong Gungtsen"
+		monarch_name = "Gungsrong Gungtsen"
+		dynasty = "Yarlung"
+		birth_date = 621.1.1
+		death_date = 643.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+641.1.1 = {
+	monarch = {
+		name = "Gungsrong Gungtsen"
+		dynasty = "Yarlung"
+		birth_date = 621.1.1
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Mangsrong Mangtsen"
+		monarch_name = "Mangsrong Mangtsen"
+		dynasty = "Yarlung"
+		birth_date = 635.1.1
+		death_date = 676.1.1
+		claim = 95
+		adm = 1
+		dip = 5
+		mil = 2
+	}
+}
+
+646.1.1 = {
+	monarch = {
+		name = "Songtsen Gampo" #Gampo 2nd reign
+		dynasty = "Yarlung"
+		birth_date = 605.1.1
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+	queen = {
+		country_of_origin = TNG
+		name = "Wencheng"
+		dynasty = "Li"
+		birth_date = 628.1.1
+		death_date = 682.1.1
+		female = yes
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+	heir = {
+		name = "Mangsrong Mangtsen"
+		monarch_name = "Mangsrong Mangtsen"
+		dynasty = "Yarlung"
+		birth_date = 635.1.1
+		death_date = 676.1.1
+		claim = 95
+		adm = 1
+		dip = 5
+		mil = 2
+	}
+}
+
+649.1.1 = {
+	monarch = {
+		name = "Mangsrong Mangtsen"
+		dynasty = "Yarlung"
+		birth_date = 635.1.1
+		adm = 1
+		dip = 5
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TIB
+		name = "Khri ma lod"
+		birth_date = 640.1.1
+		death_date = 712.1.1
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+670.1.1 = {
+	heir = {
+		name = "Tridu Songtsen"
+		monarch_name = "Tridu Songtsen"
+		dynasty = "Yarlung"
+		birth_date = 670.1.1
+		death_date = 704.1.1
+		claim = 95
+		adm = 0
+		dip = 5
+		mil = 4
+	}
+}
+
+676.1.1 = {
+	monarch = {
+		name = "Tridu Songtsen"
+		dynasty = "Yarlung"
+		birth_date = 670.1.1
+		adm = 0
+		dip = 5
+		mil = 4
+	}
+	queen = {
+		country_of_origin = TIB
+		name = "mchims bza' btsan mo tog"
+		birth_date = 640.1.1
+		death_date = 712.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+704.1.1 = {
+	heir = {
+		name = "Me Agtsom"
+		monarch_name = "Me Agtsom"
+		dynasty = "Yarlung"
+		birth_date = 704.1.1
+		death_date = 755.1.1
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+705.1.1 = {
+	monarch = {
+		name = "Me Agtsom"
+		dynasty = "Yarlung"
+		birth_date = 704.1.1
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+742.1.1 = {
+	queen = {
+		country_of_origin = TIB
+		name = "sna-nam-bza' mang-po-rje bzhi-sting"
+		birth_date = 710.1.1
+		death_date = 770.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Trisong Detsen"
+		monarch_name = "Trisong Detsen"
+		dynasty = "Yarlung"
+		birth_date = 742.1.1
+		death_date = 797.1.1
+		claim = 95
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+755.1.1 = {
+	monarch = {
+		name = "Trisong Detsen"
+		dynasty = "Yarlung"
+		birth_date = 742.1.1
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = TIB
+		name = "Magyal Dongkar"
+		dynasty = "Tsepang"
+		birth_date = 745.1.1
+		death_date = 800.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+767.1.1 = {
+	heir = {
+		name = "Mune"
+		monarch_name = "Mune"
+		dynasty = "Yarlung"
+		birth_date = 767.1.1
+		death_date = 804.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+797.1.1 = {
+	monarch = {
+		name = "Mune"
+		dynasty = "Yarlung"
+		birth_date = 767.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = TIB
+		name = "pho-yong-bza' rgyal-mo-btsun"
+		dynasty = "Tsepang"
+		birth_date = 770.1.1
+		death_date = 840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sadnalegs"
+		monarch_name = "Sadnalegs"
+		dynasty = "Yarlung"
+		birth_date = 774.1.1
+		death_date = 815.1.1
+		claim = 95
+		adm = 3
+		dip = 0
+		mil = 4
+	}
+}
+
+804.1.1 = {
+	monarch = {
+		name = "Sadnalegs"
+		dynasty = "Yarlung"
+		birth_date = 774.1.1
+		adm = 3
+		dip = 0
+		mil = 4
+	}
+	queen = {
+		country_of_origin = TIB
+		name = "bro-bza' lha-rgyal-mang-mo-rje"
+		dynasty = "Tsepang"
+		birth_date = 780.1.1
+		death_date = 840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+806.1.1 = {
+	heir = {
+		name = "Ralpacan"
+		monarch_name = "Ralpacan"
+		dynasty = "Yarlung"
+		birth_date = 806.1.1
+		death_date = 836.1.1
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+815.1.1 = {
+	monarch = {
+		name = "Ralpacan"
+		dynasty = "Yarlung"
+		birth_date = 806.1.1
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+	heir = {
+		name = "Langdarma"
+		monarch_name = "Langdarma"
+		dynasty = "Yarlung"
+		birth_date = 800.1.1
+		death_date = 842.1.1
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+836.1.1 = {
+	monarch = {
+		name = "Langdarma"
+		dynasty = "Yarlung"
+		birth_date = 800.1.1
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+# Era of Fragmentation
+
+842.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "(regency)"
+		regent = yes
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Sakya Lamas
+
+1216.1.1 = {
+	government = theocracy 
+	add_government_reform = leading_clergy_reform
+	government_rank = 2
+	monarch = {
+		name = "Pandita"
+		dynasty = "Sakya"
+		birth_date = 1182.1.1
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1216.1.1 = {
+	heir = {
+		name = "Drogon Chogyal Phagpa"
+		monarch_name = "Drogon Chogyal Phagpa"
+		dynasty = "Sakya"
+		birth_date = 1216.1.1
+		death_date = 1280.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1251.1.1 = {
+	monarch = {
+		name = "Drogon Chogyal Phagpa"
+		dynasty = "Sakya"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1251.1.1 = {
+	heir = {
+		name = "Dharmapala Raksita"
+		monarch_name = "Dharmapala Raksita"
+		dynasty = "Sakya"
+		birth_date = 1250.1.1
+		death_date = 1282.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1280.1.1 = {
+	monarch = {
+		name = "Dharmapala Raksita"
+		dynasty = "Sakya"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1282.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1286.1.1 = {
+	monarch = {
+		name = "Jamyang Rinchen Gyaltsen"
+		dynasty = "Sakya"
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+1303.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1306.1.1 = {
+	monarch = {
+		name = "Zangpo Pal"
+		dynasty = "Sakya"
+		birth_date = 1270.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1323.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1325.1.1 = {
+	monarch = {
+		name = "Khatsun Namkha Lekpa Gyaltsen"
+		dynasty = "Sakya"
+		birth_date = 1250.1.1
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+1325.1.1 = {
+	heir = {
+		name = "Jamyang Donyo Gyaltsen"
+		monarch_name = "Jamyang Donyo Gyaltsen"
+		dynasty = "Sakya"
+		birth_date = 1255.1.1
+		death_date = 1344.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1341.1.1 = {
+	monarch = {
+		name = "Jamyang Donyo Gyaltsen"
+		dynasty = "Sakya"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1341.1.1 = {
+	heir = {
+		name = "Lama Dampa Sonam Gyaltsen"
+		monarch_name = "Lama Dampa Sonam Gyaltsen"
+		dynasty = "Sakya"
+		birth_date = 1260.1.1
+		death_date = 1344.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+1344.1.1 = {
+	monarch = {
+		name = "Lama Dampa Sonam Gyaltsen"
+		dynasty = "Sakya"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+1344.1.1 = {
+	heir = {
+		name = "Lotro Gyaltsen"
+		monarch_name = "Lotro Gyaltsen"
+		dynasty = "Sakya"
+		birth_date = 1290.1.1
+		death_date = 1356.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+1347.1.1 = {
+	monarch = {
+		name = "Lotro Gyaltsen"
+		dynasty = "Sakya"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+1356.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1399.1.1 = { decision = monastic_education }
+
+# Dalai Lamas
+
+1447.1.1 = {
+	government = theocracy 
+	add_government_reform = leading_clergy_reform
+	government_rank = 3
+	monarch = {
+		name = "Gedun Drup"
+		death_date = 1474.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1474.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1475.1.1 = {
+	monarch = {
+		name = "Gedun Gyatso"
+		birth_date = 1475.1.1
+		death_date = 1542.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1542.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1543.1.1 = {
+	monarch = {
+		name = "Sonam Gyatso"
+		birth_date = 1543.1.1
+		death_date = 1588.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1588.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1589.1.1 = {
+	monarch = {
+		name = "Yonten Gyatso"
+		birth_date = 1589.1.1
+		death_date = 1617.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1617.1.1 = {
+	monarch = {
+		name = "Ngawang Lobsang Gyatso"
+		birth_date = 1617.1.1
+		death_date = 1682.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1682.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1683.1.1 = {
+	monarch = {
+		name = "Tsangyang Gyatso"
+		birth_date = 1683.1.1
+		death_date = 1706.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1706.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1708.1.1 = {
+	monarch = {
+		name = "Kezang Gyatso"
+		birth_date = 1708.1.1
+		death_date = 1757.1.1
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+1757.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1758.1.1 = {
+	monarch = {
+		name = "Jampel Gyatso"
+		birth_date = 1758.1.1
+		death_date = 1804.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1804.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1805.1.1 = {
+	monarch = {
+		name = "Luntok Gyatso"
+		birth_date = 1805.1.1
+		death_date = 1815.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1815.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1816.3.29 = {
+	monarch = {
+		name = "Tshultrin Gyatso"
+		birth_date = 1816.3.29
+		death_date = 1837.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1837.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1838.11.1 = {
+	monarch = {
+		name = "Khendrup Gyatso"
+		birth_date = 1838.11.1
+		death_date = 1856.1.31
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+1856.1.31 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1857.1.26 = {
+	monarch = {
+		name = "Trinley Gyatso"
+		birth_date = 1857.1.26
+		death_date = 1875.4.25
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1875.4.25 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1876.1.12 = {
+	monarch = {
+		name = "Thubten Gyatso"
+		birth_date = 1876.1.12
+		death_date = 1933.12.17
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1940.2.22 = {
+	technology_group = asian
+	monarch = {
+		name = "Tenzin Gyatso"
+		birth_date = 1935.7.6
+		adm = 3
+		dip = 5
+		mil = 0
+	}
+}

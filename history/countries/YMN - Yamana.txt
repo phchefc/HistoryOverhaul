@@ -1,0 +1,240 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = NIT
+historical_friend = KMK
+capital = 1830	# Tajima
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1328.1.1 = {
+	monarch = {
+		name = "Tokiuji" # 1303 - 1371 
+		dynasty = "Yamana"
+		birth_date = 1303.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1328.1.1 = {
+	heir = {
+		name = "Moroyoshi"
+		monarch_name = "Moroyoshi"
+		dynasty = "Yamana"
+		birth_date = 1328.1.1
+		death_date = 1376.3.31
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1371.4.14 = {
+	monarch = {
+		name = "Moroyoshi"
+		dynasty = "Yamana"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1389.1.1 = {
+	monarch = {
+		name = "Tokihiro" # 1367 - 1435 
+		dynasty = "Yamana"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMN
+		dynasty = "Yamana"
+		birth_date = 1370.1.1
+		death_date = 1430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1404.7.6 = {
+	heir = {
+		name = "Mochitoyo"
+		monarch_name = "Mochitoyo"
+		dynasty = "Yamana"
+		birth_date = 1404.7.6
+		death_date = 1473.4.15
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+	
+1432.1.1 = { 
+	monarch = {
+		name = "Mochitoyo"
+		dynasty = "Yamana"
+#		birth_date = 1404.7.6
+#		death_date = 1473.4.15
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+1432.1.1 = {
+	heir = {
+		name = "Noritoyo"
+		monarch_name = "Noritoyo"
+		dynasty = "Yamana"
+		birth_date = 1424.1.1
+		death_date = 1467.10.7
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1467.10.7 = {
+	heir = {
+		name = "Masatoyo"
+		monarch_name = "Masatoyo"
+		dynasty = "Yamana"
+		birth_date = 1441.1.1
+		death_date = 1499.1.1
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+	
+1473.4.15 = { 
+	monarch = {
+		name = "Masatoyo"
+		dynasty = "Yamana"
+#		birth_date = 1441.1.1
+#		death_date = 1499.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1475.1.1 = {
+	heir = {
+		name = "Okitoyo"
+		monarch_name = "Okitoyo"
+		dynasty = "Yamana"
+		birth_date = 1468.1.1
+		death_date = 1536.7.20
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}	
+
+1499.1.1 = {
+	monarch = {
+		name = "Okitoyo"
+		dynasty = "Yamana"
+#		birth_date = 1468.1.1
+#		death_date = 1536.7.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nobutoyo"
+		monarch_name = "Nobutoyo"
+		dynasty = "Yamana"
+		birth_date = 1493.1.1
+		death_date = 1528.4.3
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1512.1.1 = {
+	monarch = {
+		name = "Nobutoyo"
+		dynasty = "Yamana"
+		birth_date = 1493.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1528.4.3 = { 
+	monarch = {
+		name = "Suketoyo"
+		dynasty = "Yamana"
+#		birth_date = 1511.1.1
+#		death_date = 1580.7.2
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ISK
+		dynasty = "Isshiki"
+		birth_date = 1515.1.1
+		death_date = 1575.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1559.1.1 = {
+	heir = {
+		name = "Takahiro"
+		monarch_name = "Takahiro"
+		dynasty = "Yamana"
+		birth_date = 1559.1.1
+		death_date = 1627.8.14
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1580.7.2 = { 
+	monarch = {
+		name = "Takahiro"
+		dynasty = "Yamana"
+		birth_date = 1559.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

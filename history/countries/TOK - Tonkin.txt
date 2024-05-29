@@ -1,0 +1,338 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = early_chinese
+religion = confucianism
+add_harmonized_religion = mahayana
+primary_culture = vietnamese
+capital = 610
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Trinh Dynasty
+
+#1545.6.23 = {
+#	add_country_flag = marionett_master
+#}
+
+1545.6.23 = {
+	government_rank = 1
+	monarch = {
+		name = "Kiem"
+		dynasty = "Trinh"
+		birth_date = 1503.9.14
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1545.6.23 = {
+	heir = {
+		name = "Coi"
+		monarch_name = "Tuan Duc"
+		dynasty = "Trinh"
+		birth_date = 1530.1.1
+		death_date = 1584.9.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1570.3.29 = {
+	monarch = {
+		name = "Coi"
+		dynasty = "Trinh"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Coup
+
+1570.9.19 = {
+	government_rank = 2
+	monarch = {
+		name = "Tung"
+		dynasty = "Trinh"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1577.1.1 = {
+	heir = {
+		name = "Trang"
+		monarch_name = "Trang"
+		dynasty = "Trinh"
+		birth_date = 1577.1.1
+		death_date = 1654.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1623.1.1 = {
+	monarch = {
+		name = "Trang"
+		dynasty = "Trinh"
+		adm = 2
+		dip = 2
+		mil = 3
+		leader = {	name = "Trinh Trang"    type = general	fire = 2	shock = 3	manuever = 2	siege = 0	death_date = 1657.5.28 }
+	}
+}
+
+1623.1.1 = {
+	heir = {
+		name = "Tac"
+		monarch_name = "Tag"
+		dynasty = "Trinh"
+		birth_date = 1606.1.1
+		death_date = 1682.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1657.5.28 = {
+	monarch = {
+		name = "Tac"
+		dynasty = "Trinh"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1654.1.1 = {
+	heir = {
+		name = "Can"
+		monarch_name = "Can"
+		dynasty = "Trinh"
+		birth_date = 1633.1.1
+		death_date = 1709.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1682.1.1 = {
+	monarch = {
+		name = "Can"
+		dynasty = "Trinh"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1686.1.1 = {
+	heir = {
+		name = "Cuong"
+		monarch_name = "Cuong"
+		dynasty = "Trinh"
+		birth_date = 1686.1.1
+		death_date = 1729.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1709.1.1 = {
+	monarch = {
+		name = "Cuong"
+		dynasty = "Trinh"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1711.1.1 = {
+	heir = {
+		name = "Giang"
+		monarch_name = "Giang"
+		dynasty = "Trinh"
+		birth_date = 1711.1.1
+		death_date = 1762.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1729.1.1 = {
+	monarch = {
+		name = "Giang"
+		dynasty = "Trinh"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1729.1.2 = {
+	monarch = {
+		name = "Doanh"
+		dynasty = "Trinh"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1739.1.1 = {
+	heir = {
+		name = "Sam"
+		monarch_name = "Sam"
+		dynasty = "Trinh"
+		birth_date = 1739.1.1
+		death_date = 1782.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1767.1.1 = {
+	monarch = {
+		name = "Sam"
+		dynasty = "Trinh"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1782.1.1 = {
+	monarch = {
+		name = "Can"
+		dynasty = "Trinh"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1782.3.1 = {
+	monarch = {
+		name = "Kai"
+		dynasty = "Trinh"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+#1786.7.23 = {
+#	clr_country_flag = marionett_master
+#}
+
+1786.10.3 = {
+	monarch = {
+		name = "Bong"
+		dynasty = "Trinh"
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+# Tay Son dynasty (Phu Xuan)
+
+1787.9.1 = {
+	capital = 610
+	monarch = {
+		name = "Hue"
+		dynasty = "Nguyen"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	leader = {	name = "Nguyen Hue"	type = general	fire = 2	shock = 3	manuever = 4	siege = 1	death_date = 1792.9.16  }
+}
+
+1787.9.1 = {
+	heir = {
+		name = "Quang Toan"
+		monarch_name = "Quang Toan"
+		dynasty = "Nguyen"
+		birth_date = 1782.1.1
+		death_date = 1802.7.21
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1788.11.25 = { government_rank = 3 }
+
+1792.9.16 = {
+	monarch = {
+		name = "Quang Toan"
+		dynasty = "Nguyen"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1802.7.21 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# French protectorate
+
+1886.4.8 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = abolish_presidency
+	set_legacy_government = parliamentary_republic
+	government_rank = 1
+	primary_culture = cosmopolitan_french
+	add_accepted_culture = vietnamese
+	capital = 613
+	monarch = {
+		name = "(French Tonkin)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}

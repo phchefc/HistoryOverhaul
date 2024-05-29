@@ -1,0 +1,374 @@
+government = tribal
+add_government_reform = steppe_horde
+technology_group = eastern_nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = mahayana
+primary_culture = khitan
+historical_rival = BLH
+historical_rival = CJN
+historical_rival = SNG
+capital = 2115
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Khitan Empire
+
+907.1.1 = { changed_tag_from = KHT }
+
+907.1.1 = {
+	government_rank = 3
+	monarch = {
+		name = "Abaoji" #Taizu
+		dynasty = "Yelu"
+		birth_date = 872.1.1
+		adm = 4
+		dip = 4
+		mil = 6
+		leader = {	name = "Yelu Abaoji"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 2  death_date = 926.9.6 }
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Ping"
+		dynasty = "Shulu"
+		birth_date = 879.10.19
+		death_date = 953.8.1
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	name = "Shulu Ping"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 947.5.16 } # Exiled
+	}
+	heir = {
+		name = "Deguang"
+		monarch_name = "Taizong"
+		dynasty = "Yelu"
+		birth_date = 902.12.25
+		death_date = 947.5.16
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+# Liao dynasty
+
+916.1.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	technology_group = chinese
+	add_accepted_culture = chihan
+	add_accepted_culture = jin
+	add_accepted_culture = manchu
+}
+
+926.9.6 = {
+	monarch = {
+		name = "Ping"
+		dynasty = "Shulu"
+		birth_date = 879.10.19
+		death_date = 953.8.1
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	name = "Shulu Ping"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 947.5.16 } # Exiled
+	}
+}
+
+927.12.11 = {
+	monarch = {
+		name = "Deguang" #Taizong
+		dynasty = "Yelu"
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Yelu Deguang"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 1  death_date = 947.5.16 }
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Wen"
+		dynasty = "Xiao"
+		birth_date = 905.1.1
+		death_date = 935.2.18
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+947.5.16 = {
+	monarch = {
+		name = "Ruan" #Shizong
+		dynasty = "Yelu"
+		birth_date = 919.1.29
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Sagezhi"
+		dynasty = "Xiao"
+		birth_date = 920.1.1
+		death_date = 951.10.8
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+951.10.7 = {
+	monarch = {
+		name = "Jing" #Muzong
+		dynasty = "Yelu"
+		birth_date = 931.9.19
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = LIO
+		dynasty = "Xiao"
+		birth_date = 930.1.1
+		death_date = 990.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+969.3.13 = {
+	monarch = {
+		name = "Xian" #Jingzong
+		dynasty = "Yelu"
+		birth_date = 948.9.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Yanyan"
+		dynasty = "Xiao"
+		birth_date = 953.1.1
+		death_date = 1009.12.23
+		female = yes
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+972.1.16 = {
+	heir = {
+		name = "Longxu"
+		monarch_name = "Shengzong"
+		dynasty = "Yelu"
+		birth_date = 972.1.16
+		death_date = 1031.6.25
+		claim = 95
+		adm = 6
+		dip = 3
+		mil = 5
+	}
+}
+
+982.10.13 = {
+	monarch = {
+		name = "Longxu" #Shengzong
+		dynasty = "Yelu"
+		adm = 6
+		dip = 3
+		mil = 5
+		leader = {	name = "Yelu Longxu"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 1  death_date = 1031.6.25 }
+	}
+}
+
+1016.4.3 = {
+	queen = {
+		country_of_origin = LIO
+		name = "Noujin"
+		dynasty = "Xiao"
+		birth_date = 990.1.1
+		death_date = 1057.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Zongzhen"
+		monarch_name = "Xingzong"
+		dynasty = "Yelu"
+		birth_date = 1016.4.3
+		death_date = 1055.8.28
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1031.6.25 = {
+	monarch = {
+		name = "Zongzhen" #Xingzong
+		dynasty = "Yelu"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Dali"
+		dynasty = "Xiao"
+		birth_date = 1020.1.1
+		death_date = 1080.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1032.9.14 = {
+	heir = {
+		name = "Hongji"
+		monarch_name = "Daozong"
+		dynasty = "Yelu"
+		birth_date = 1032.9.14
+		death_date = 1101.2.12
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1055.8.28 = {
+	monarch = {
+		name = "Hongji" #Daozong
+		dynasty = "Yelu"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Guanyin"
+		dynasty = "Xiao"
+		birth_date = 1040.1.1
+		death_date = 1075.12.13
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1075.6.5 = {
+	heir = {
+		name = "Yanxi"
+		monarch_name = "Tianzuo"
+		dynasty = "Yelu"
+		birth_date = 1075.6.5
+		death_date = 1128.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1101.2.12 = {
+	monarch = {
+		name = "Yanxi" #Tianzuo
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LIO
+		name = "Duolilan"
+		dynasty = "Xiao"
+		birth_date = 1080.1.1
+		death_date = 1128.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Later Liao
+
+1216.1.1 = {
+	capital = 4652
+	monarch = {
+		name = "Sibu"
+		dynasty = "Yelu"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1216.3.1 = {
+	monarch = {
+		name = "Qibu"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1216.9.1 = {
+	monarch = {
+		name = "Jinshan"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1217.1.1 = {
+	monarch = {
+		name = "Tongguyu"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1218.1.1 = {
+	monarch = {
+		name = "Hanshe"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

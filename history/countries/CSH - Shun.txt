@@ -1,0 +1,57 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+capital = 688 # Kaifeng
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1631.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Yingxiang"
+		dynasty = "Gao"
+		adm = 0
+		dip = 1
+		mil = 3
+		leader = {	name = "Gao Yingxiang"     	type = general	fire = 1	shock = 1	manuever = 0	siege = 0  death_date = 1636.1.1 } # Not an actual death date
+	}
+}
+
+1636.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Zicheng"
+		dynasty = "Li"
+		birth_date = 1606.9.22
+		adm = 2
+		dip = 3
+		mil = 4
+		leader = {	name = "Li Zicheng"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 2  death_date = 1645.5.17 }
+	}
+	queen = {
+		country_of_origin = CSH
+		name = "Guiying"
+		dynasty = "Gao"
+		birth_date = 1610.1.1
+		death_date = 1647.7.2
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1644.2.8 = { government_rank = 3 capital = 700 } # Xi'an

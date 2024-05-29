@@ -1,0 +1,7 @@
+382 = "Damaxk"			#Damascus
+4210 = "Tänritag"		#Tian Shan
+4693 = "Täklimakan"		#Takla Makan
+2122 = "Qumul"			#Hami
+2190 = "Ordu-Baliq"		#Qaraqolum
+
+# EH version

@@ -1,0 +1,820 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_rival = TYT
+historical_friend = KMK
+capital = 4360 # Mikawa
+	
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1338.2.23 = {
+	monarch = {
+		name = "Chikauji"
+		dynasty = "Matsudaira"
+		birth_date = 1320.1.1
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+1370.1.1 = {
+	queen = {
+		country_of_origin = TKG
+		name = "Mizume"
+		dynasty = "Matsudaira"
+		birth_date = 1350.1.1
+		death_date = 1410.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yasuchika"
+		monarch_name = "Yasuchika"
+		dynasty = "Matsudaira"
+		birth_date = 1370.1.1
+		death_date = 1440.6.14
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 0
+	}
+}
+
+1393.1.1 = {
+	monarch = {
+		name = "Yasuchika"
+		dynasty = "Matsudaira"
+		birth_date = 1370.1.1
+		adm = 0
+		dip = 2
+		mil = 0
+	}
+}
+
+1404.1.1 = {
+	heir = {
+		name = "Nobumitsu"
+		monarch_name = "Nobumitsu"
+		dynasty = "Matsudaira"
+		birth_date = 1404.1.1
+		death_date = 1488.8.29
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1440.6.14 = { 
+	monarch = {
+		name = "Nobumitsu"
+		dynasty = "Matsudaira"
+		birth_date = 1404.1.1
+		death_date = 1488.8.29
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = tactical_genius_personality
+	queen = {
+		country_of_origin = ISK
+		name = "Shinjoin"
+		dynasty = "Isshiki"
+		birth_date = 1410.1.1
+		death_date = 1470.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chikatada"
+		monarch_name = "Chikatada"
+		dynasty = "Matsudaira"
+		birth_date = 1431.1.1
+		death_date = 1501.9.22
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1488.8.29 = { 
+	monarch = {
+		name = "Chikatada"
+		dynasty = "Matsudaira"
+		birth_date = 1431.1.1
+		death_date = 1501.9.22
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Kashoin"
+		dynasty = "Suzuki"
+		birth_date = 1440.1.1
+		death_date = 1500.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagachika"
+		monarch_name = "Nagachika"
+		dynasty = "Matsudaira"
+		birth_date = 1473.1.1
+		death_date = 1544.9.9
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1501.9.22 = { 
+	monarch = {
+		name = "Nagachika"
+		dynasty = "Matsudaira"
+		birth_date = 1473.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	queen = {
+		country_of_origin = TKG
+		dynasty = "Matsudaira"
+		birth_date = 1480.1.1
+		death_date = 1540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nobutada"
+		monarch_name = "Nobutada"
+		dynasty = "Matsudaira"
+		birth_date = 1490.1.1
+		death_date = 1531.9.8
+		claim = 90
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1503.1.1 = { 
+	monarch = {
+		name = "Nobutada"
+		dynasty = "Matsudaira"
+		birth_date = 1490.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TKG
+		dynasty = "Okochi"
+		birth_date = 1490.1.1
+		death_date = 1550.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1511.9.28 = {
+	heir = {
+		name = "Kiyoyasu"
+		monarch_name = "Kiyoyasu"
+		dynasty = "Matsudaira"
+		birth_date = 1511.9.28
+		death_date = 1535.12.29
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+1523.1.1 = { 
+	monarch = {
+		name = "Kiyoyasu"
+		dynasty = "Matsudaira"
+		birth_date = 1511.9.28
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Haruhime"
+		dynasty = "Matsudaira"
+		birth_date = 1515.1.1
+		death_date = 1575.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1526.6.9 = {
+	heir = {
+		name = "Hirotada"
+		monarch_name = "Hirotada"
+		dynasty = "Matsudaira"
+		birth_date = 1526.6.9
+		death_date = 1549.4.3
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1535.12.29 = { 
+	monarch = {
+		name = "Hirotada"
+		dynasty = "Matsudaira"
+		birth_date = 1526.6.9
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Dai"
+		dynasty = "Mizuno"
+		birth_date = 1528.1.1
+		death_date = 1602.10.13
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1543.1.31 = {
+	heir = {
+		name = "Ieyasu"
+		monarch_name = "Ieyasu"
+		dynasty = "Tokugawa"
+		birth_date = 1543.1.31
+		death_date = 1616.5.22
+		claim = 90
+		adm = 5
+		dip = 6
+		mil = 4
+	}
+}
+
+1549.4.3 = { 
+	monarch = {
+		name = "Ieyasu"
+		dynasty = "Tokugawa"
+		birth_date = 1543.1.31
+		adm = 5
+		dip = 6
+		mil = 4
+		leader = {	name = "Tokugawa Ieyasu"     	type = general	fire = 3	shock = 3	manuever = 4	siege = 2  death_date = 1616.5.22 }
+	}
+}
+
+1557.1.1 = {
+	queen = {
+		country_of_origin = TKG
+		name = "Sena"
+		dynasty = "Sekiguchi"
+		birth_date = 1542.1.1
+		death_date = 1579.9.19
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1558.5.1 = { leader = { name = "Sakai Tadatsugu"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 1596.12.17 } }
+1563.9.1 = { leader = { name = "Honda Tadakatsu"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 1610.12.3 } }
+1566.1.1 = { leader = { name = "Sakakibara Yasumasa"    type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 1606.6.19 } }
+1575.1.1 = { leader = { name = "Ii Naomasa"     		type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 1602.3.24 } }
+
+1579.5.2 = {
+	queen = {
+		country_of_origin = TKG
+		name = "Tsubone"
+		dynasty = "Saigo"
+		birth_date = 1552.1.1
+		death_date = 1589.7.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hidetada"
+		monarch_name = "Hidetada"
+		dynasty = "Tokugawa"
+		birth_date = 1579.5.2
+		death_date = 1632.3.14
+		claim = 90
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}
+
+1582.6.21 = {
+	government = monarchy
+	add_government_reform = indep_daimyo	#Honnoji
+	government_rank = 1
+}
+1590.1.1 = {
+	government = monarchy
+	add_government_reform = daimyo		#Ieyasu submits to Toyotomi after promised Kanto in Odawara Campaign
+	government_rank = 1
+}
+
+1590.8.10   = { capital = 1028 } # Musashi (Edo)
+
+#1600.10.21 = {
+#	add_country_flag = marionett_master
+#}
+
+1603.3.24 = {
+	government = monarchy
+	add_government_reform = shogunate
+	government_rank = 2
+}
+
+1605.6.2 = { 
+	monarch = {
+		name = "Hidetada"
+		dynasty = "Tokugawa"
+#		birth_date = 1579.5.2
+#		death_date = 1632.3.14
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Oeyo"
+		dynasty = "Azai"
+		birth_date = 1573.1.1
+		death_date = 1626.11.3
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Iemitsu"
+		monarch_name = "Iemitsu"
+		dynasty = "Tokugawa"
+		birth_date = 1604.8.12
+		death_date = 1651.6.8
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1623.8.22 = { 
+	monarch = {
+		name = "Iemitsu"
+		dynasty = "Tokugawa"
+#		birth_date = 1604.8.12
+#		death_date = 1651.6.8
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Takako"
+		dynasty = "Takatsukasa"
+		birth_date = 1602.5.1
+		death_date = 1674.7.11
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1641.9.7 = {
+	queen = {
+		country_of_origin = TKG
+		name = "Ran"
+		dynasty = "Mashiyama"
+		birth_date = 1621.1.1
+		death_date = 1653.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ietsuna"
+		monarch_name = "Ietsuna"
+		dynasty = "Tokugawa"
+		birth_date = 1641.9.7
+		death_date = 1680.6.4
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1651.10.2 = {
+	monarch = {
+		name = "Ietsuna"
+		dynasty = "Tokugawa"
+#		birth_date = 1641.9.7
+#		death_date = 1680.6.4
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Akiko"
+		dynasty = "Yamato"
+		birth_date = 1640.4.4
+		death_date = 1676.9.12
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tsunayoshi"
+		monarch_name = "Tsunayoshi"
+		dynasty = "Tokugawa"
+		birth_date = 1646.2.23
+		death_date = 1709.2.9
+		claim = 90
+		adm = 6
+		dip = 5
+		mil = 3
+	}
+}
+
+1680.9.15 = { 
+	monarch = {
+		name = "Tsunayoshi"
+		dynasty = "Tokugawa"
+#		birth_date = 1646.2.23
+#		death_date = 1709.2.9
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Nobuko"
+		dynasty = "Takatsukasa"
+		birth_date = 1651.1.1
+		death_date = 1709.2.7
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ienobu"
+		monarch_name = "Ienobu"
+		dynasty = "Tokugawa"
+		birth_date = 1662.6.11
+		death_date = 1712.11.12
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1709.6.8 = { 
+	monarch = {
+		name = "Ienobu"
+		dynasty = "Tokugawa"
+#		birth_date = 1662.6.11
+#		death_date = 1712.11.12
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Hiroko"
+		dynasty = "Konoe"
+		birth_date = 1666.4.30
+		death_date = 1741.4.13
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1709.8.8 = {
+	heir = {
+		name = "Ietsugu"
+		monarch_name = "Ietsugu"
+		dynasty = "Tokugawa"
+		birth_date = 1709.8.8
+		death_date = 1716.6.19
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1713.4.26 = { 
+	monarch = {
+		name = "Ietsugu"
+		dynasty = "Tokugawa"
+#		birth_date = 1709.8.8
+#		death_date = 1716.6.19
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	
+}
+
+1716.9.28 = {
+	monarch = {
+		name = "Yoshimune"
+		dynasty = "Tokugawa"
+#		birth_date = 1684.11.17
+#		death_date = 1751.7.12
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1716.9.28 = {
+	heir = {
+		name = "Ieshige"
+		monarch_name = "Ieshige"
+		dynasty = "Tokugawa"
+		birth_date = 1712.7.28
+		death_date = 1761.7.13
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1745.11.2 = {
+	monarch = {
+		name = "Ieshige"
+		dynasty = "Tokugawa"
+#		birth_date = 1712.7.28
+#		death_date = 1761.7.13
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1745.11.2 = {
+	heir = {
+		name = "Ieharu"
+		monarch_name = "Ieharu"
+		dynasty = "Tokugawa"
+		birth_date = 1737.6.20
+		death_date = 1786.9.17
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1760.6.25 = { 
+	monarch = {
+		name = "Ieharu"
+		dynasty = "Tokugawa"
+#		birth_date = 1737.6.20
+#		death_date = 1786.9.17
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Tomoko"
+		dynasty = "Yamato"
+		birth_date = 1738.1.1
+		death_date = 1771.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1773.11.18 = {
+	heir = {
+		name = "Ienari"
+		monarch_name = "Ienari"
+		dynasty = "Tokugawa"
+		birth_date = 1773.11.18
+		death_date = 1841.2.27
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1787.5.31 = { 
+	monarch = {
+		name = "Ienari"
+		dynasty = "Tokugawa"
+#		birth_date = 1773.11.18
+#		death_date = 1841.2.27
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SMZ
+		name = "Tadako"
+		dynasty = "Konoe"
+		birth_date = 1773.8.6
+		death_date = 1844.12.19
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1793.6.22 = {
+	heir = {
+		name = "Ieyoshi"
+		monarch_name = "Ieyoshi"
+		dynasty = "Tokugawa"
+		birth_date = 1793.6.22
+		death_date = 1853.7.27
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1837.5.6 = { 
+	monarch = {
+		name = "Ieyoshi"
+		dynasty = "Tokugawa"
+#		birth_date = 1793.6.22
+#		death_date = 1853.7.27
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Takako"
+		dynasty = "Arisugawa"
+		birth_date = 1795.1.1
+		death_date = 1840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Iesada"
+		monarch_name = "Iesada"
+		dynasty = "Tokugawa"
+		birth_date = 1824.5.6
+		death_date = 1858.8.14
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1853.12.23 = { 
+	monarch = {
+		name = "Iesada"
+		dynasty = "Tokugawa"
+#		birth_date = 1824.5.6
+#		death_date = 1858.8.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SMZ
+		name = "Atsuko"
+		dynasty = "Shimazu"
+		birth_date = 1836.2.5
+		death_date = 1883.11.20
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1858.11.30 = { 
+	monarch = {
+		name = "Iemochi"
+		dynasty = "Tokugawa"
+#		birth_date = 1846.7.17
+#		death_date = 1866.8.29
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1860.2.1 = {
+	queen = {
+		country_of_origin = TKG
+		name = "Chikako"
+		dynasty = "Yamato"
+		birth_date = 1846.8.1
+		death_date = 1877.9.2
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1867.1.10 = { 
+	monarch = {
+		name = "Yoshinobu"
+		dynasty = "Tokugawa"
+		adm = 1
+		dip = 4
+		mil = 0
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Mikako"
+		dynasty = "Ichijo"
+		birth_date = 1835.1.1
+		death_date = 1894.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+#1868.1.3 = {
+#	clr_country_flag = marionett_master
+#}
+
+1868.5.3 = {
+	government = monarchy
+	add_government_reform = daimyo
+	government_rank = 1
+	monarch = {
+		name = "(Ouetsu Reppan Domei)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# EH version

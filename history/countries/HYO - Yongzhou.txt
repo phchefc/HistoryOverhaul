@@ -1,0 +1,138 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xibei
+capital = 2180
+
+# End of the Western Han dynasty (Yong)
+
+23.10.5 = {
+	monarch = {
+		name = "Xiao"
+		dynasty = "Wei"
+		adm = 0
+		dip = 1
+		mil = 3
+	}
+}
+
+33.1.1 = {
+	monarch = {
+		name = "Chun"
+		dynasty = "Wei"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Yong)
+
+#189.9.28 = {
+#	add_country_flag = marionett_master
+#}
+
+189.9.28 = {
+	monarch = {
+		name = "Zhuo"
+		dynasty = "Dong"
+		birth_date = 140.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+		leader = {	name = "Dong Zhuo"     	type = general	fire = 2	shock = 1	manuever = 0	siege = 0  death_date = 192.4.1 }
+	}
+}
+
+189.9.28 = { leader = {	name = "Lu Bu"     	type = general	fire = 4	shock = 4	manuever = 0	siege = 0  death_date = 192.6.1 } }
+
+# Coup
+
+192.4.1 = {
+	monarch = {
+		name = "Yun"
+		dynasty = "Wang"
+		birth_date = 137.1.1
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+192.6.1 = {
+	monarch = {
+		name = "Jue"
+		dynasty = "Li"
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+#195.6.1 = {
+#	clr_country_flag = marionett_master
+#}
+
+# End of the Eastern Han dynasty (Hanzhong)
+
+196.9.1 = {	
+	capital = 689
+	monarch = {
+		name = "Lu"
+		dynasty = "Zhang"
+		birth_date = 160.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# End of the Sui dynasty (Shuofang)
+
+617.12.20 = {
+	capital = 701
+	monarch = {
+		name = "Shidu"
+		dynasty = "Liang"
+		culture = mongol
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Lingwu)
+
+885.1.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 1
+	capital = 698
+	monarch = {
+		name = "(Lingwu Circuit)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,3392 @@
+namespace = eh_africa
+namespace = eh_oceania
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Sub-Saharan Africa
+########################################################################
+
+# Rise of the Aksum
+country_event = {
+	id = eh_africa.1
+	title = "eh_africa.1.t"
+	desc = "eh_africa.1.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AKS
+		is_year = 150
+		NOT = { is_year = 160 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			AKS = {
+				inherit = ADL
+				inherit = AFR
+				inherit = BEJ
+				inherit = YEH
+				aussa_area = {
+					limit = {
+						NOT = { owned_by = AKS }
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = AFR
+				}
+				1226 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = BEJ
+				}
+				1227 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = YEH
+				}
+				1230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = ADL
+				}
+				3267 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = ADL
+				}
+				2787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = ADL
+				}
+				2769 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = YEH
+				}
+				1214 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = YEH
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Partition of Meroe
+country_event = {
+	id = eh_africa.2
+	title = "eh_africa.2.t"
+	desc = "eh_africa.2.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AKS
+		is_year = 340
+		NOT = { is_year = 350 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			AKS = {
+				change_religion = coptic
+				asir_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AKS }
+							NOT = { province_id = 4282 }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = MIE
+				}
+				1229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = MAK
+				}
+				2346 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = MIE
+				}
+				2797 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = MAK
+				}
+				2798 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AKS }
+						}
+					}
+					cede_province = AKS
+					add_core = AKS
+					remove_core = MAK
+				}
+			}
+			NOB = {
+				1231 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOB }
+						}
+					}
+					cede_province = NOB
+					add_core = NOB
+					remove_core = MAK
+				}
+				1233 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOB }
+						}
+					}
+					cede_province = NOB
+					add_core = NOB
+					remove_core = MAK
+				}
+				1234 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOB }
+						}
+					}
+					cede_province = NOB
+					add_core = NOB
+					remove_core = MAK
+				}
+			}
+			BLE = {
+				2323 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLE }
+						}
+					}
+					cede_province = BLE
+					add_core = BLE
+					remove_core = AKS
+				}
+			}
+			MEO = { change_tag = MAK }
+		}
+	}
+
+	option = {
+		name = "eh_africa.2.a"
+		ai_chance = { factor = 100 }
+		AKS = {
+			every_owned_province = { change_religion = coptic }
+			country_event = { id = et.120 days = 100 }
+			country_event = { id = et.168 days = 100 }
+			country_event = { id = et.169 days = 100 }
+		}
+	}
+}
+
+# Fall of the Aksum Empire
+country_event = {
+	id = eh_africa.3
+	title = "eh_africa.3.t"
+	desc = "eh_africa.3.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AKS
+		is_year = 960
+		NOT = { is_year = 970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			AKS = {
+				change_tag = ET2
+				swap_free_idea_group = yes
+				define_ruler = {
+					dynasty = "Zagwe"
+				}
+				define_heir = {
+					dynasty = "Zagwe"
+				}
+				1224 = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 10
+						leader = "Gudit"
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.3.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_africa.3.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				ET2 = { was_player = yes }
+			}
+			switch_tag = GHA
+		}
+	}
+}
+
+# Rise of the Mali Empire
+country_event = {
+	id = eh_africa.4
+	title = "eh_africa.4.t"
+	desc = "eh_africa.4.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GHA
+		is_year = 1230
+		NOT = { is_year = 1240 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			sahel_region = { change_religion = sunni }
+			niger_region = { change_religion = sunni }
+			upper_nubia_area = { change_religion = sunni }
+			dongola_area = { change_religion = sunni }
+			GHA = {
+				change_tag = ML2
+				inherit = KAG
+				manding_area = {
+					limit = {
+						NOT = { owned_by = ML2 }
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = KAG
+				}
+				massina_area = {
+					limit = {
+						NOT = { owned_by = ML2 }
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = KAG
+				}
+				2253 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ML2 }
+						}
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = KNG
+				}
+				1122 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ML2 }
+						}
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = KNG
+				}
+			}
+			TMB = {
+				2247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TMB }
+						}
+					}
+					cede_province = TMB
+					add_core = TMB
+					remove_core = ML2
+				}
+				2260 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TMB }
+						}
+					}
+					cede_province = TMB
+					add_core = TMB
+					remove_core = ML2
+				}
+			}
+			ET2 = {
+				central_ethiopia_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				2770 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ET2 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+			}
+			BTI = {
+				2771 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BTI }
+						}
+					}
+					cede_province = BTI
+					add_core = BTI
+					remove_core = ET2
+				}
+			}
+			DAM = {
+				damot_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAM }
+							NOT = { province_id = 2770 }
+						}
+					}
+					cede_province = DAM
+					add_core = DAM
+				}
+			}
+			DWR = {
+				2761 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DWR }
+						}
+					}
+					cede_province = DWR
+					add_core = DWR
+				}
+				1210 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DWR }
+						}
+					}
+					cede_province = DWR
+					add_core = DWR
+				}
+			}
+			MED = {
+				1230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MED }
+						}
+					}
+					cede_province = MED
+					add_core = MED
+					remove_core = ET2
+				}
+				2787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MED }
+						}
+					}
+					cede_province = MED
+					add_core = MED
+					remove_core = ET2
+				}
+				2766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MED }
+						}
+					}
+					cede_province = MED
+					add_core = MED
+					remove_core = ET2
+				}
+				3267 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MED }
+						}
+					}
+					cede_province = MED
+					add_core = MED
+					remove_core = ET2
+				}
+			}
+			IFA = {
+				ifat_area = {
+					limit = {
+						NOT = { owned_by = IFA }
+					}
+					cede_province = IFA
+					add_core = IFA
+				}
+				1208 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IFA }
+						}
+					}
+					cede_province = IFA
+					add_core = IFA
+				}
+			}
+			SOA = {
+				4158 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOA }
+						}
+					}
+					cede_province = SOA
+					add_core = SOA
+				}
+			}
+			KAF = {
+				southern_ethiopia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KAF }
+							NOT = { province_id = 4158 }
+						}
+					}
+					cede_province = KAF
+					add_core = KAF
+				}
+			}
+			WLY = {
+				hadiya_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = WLY }
+							NOT = { province_id = 1799 }
+						}
+					}
+					cede_province = WLY
+					add_core = WLY
+				}
+			}
+			GZI = {
+				zimbabwe_area = {
+					limit = {
+						NOT = { owned_by = GZI }
+					}
+					cede_province = GZI
+					add_core = GZI
+				}
+				butua_area = {
+					limit = {
+						NOT = { owned_by = GZI }
+					}
+					cede_province = GZI
+					add_core = GZI
+				}
+				lower_zambezi_area = {
+					limit = {
+						NOT = { owned_by = GZI }
+					}
+					cede_province = GZI
+					add_core = GZI
+				}
+				2952 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GZI }
+						}
+					}
+					cede_province = GZI
+					add_core = GZI
+				}
+				3264 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GZI }
+						}
+					}
+					cede_province = GZI
+					add_core = GZI
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.4.a"
+		ai_chance = { factor = 100 }
+		ML2 = {
+			set_government_rank = 3
+			define_ruler = {
+				name = "Sundjata"
+				dynasty = "Keita"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 5
+			}
+			define_heir = {
+				dynasty = "Keita"
+			}
+		}
+		GZI = {
+			change_government = tribal
+			add_government_reform = tribal_despotism
+			set_government_rank = 2
+			change_primary_culture = shona
+			change_religion = shamanism
+		}
+		ET2 = { set_government_rank = 3 }
+	}
+}
+
+# Mansa Musa
+country_event = {
+	id = eh_africa.5
+	title = "eh_africa.5.t"
+	desc = "eh_africa.5.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ML2
+		is_year = 1320
+		NOT = { is_year = 1330 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			ML2 = {
+				inherit = TKR
+				futa_jallon_area = {
+					limit = {
+						NOT = { owned_by = ML2 }
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = TKR
+				}
+				jolof_area = {
+					limit = {
+						NOT = { owned_by = ML2 }
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = TKR
+				}
+				tekrur_area = {
+					limit = {
+						NOT = { owned_by = ML2 }
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = TKR
+				}
+				baghena_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ML2 }
+							NOT = { province_id = 2244 }
+							NOT = { province_id = 2247 }
+						}
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = TKR
+				}
+				1112 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ML2 }
+						}
+					}
+					cede_province = ML2
+					add_core = ML2
+					remove_core = TKR
+				}
+			}
+			IFA = {
+				aussa_area = {
+					limit = {
+						NOT = { owned_by = IFA }
+					}
+					cede_province = IFA
+					add_core = IFA
+					remove_core = AFR
+				}
+				shewa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = IFA }
+							NOT = { province_id = 2761 }
+						}
+					}
+					cede_province = IFA
+					add_core = IFA
+					remove_core = SOA
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.5.a"
+		ai_chance = { factor = 100 }
+		ML2 = {
+			add_treasury = 500000
+			add_inflation = 10
+			define_ruler = {
+				name = "Mansa Musa"
+				dynasty = "Keita"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 5
+				min_age = 20
+				max_age = 50
+			}
+			define_consort = {
+				name = "Inari"
+				dynasty = "Kunate"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Keita"
+			}
+		}
+		MOR = {
+			596 = { discover_country = MOR }
+			667 = { discover_country = MOR }
+			684 = { discover_country = MOR }
+			1816 = { discover_country = MOR }
+			define_advisor = {
+				type = navigator
+				name = "Ibn Battuta"
+				culture = moroccan
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Fall of the Mali Empire
+country_event = {
+	id = eh_africa.6
+	title = "eh_africa.6.t"
+	desc = "eh_africa.6.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ML2
+		is_year = 1370
+		NOT = { is_year = 1380 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			ZAF = {
+				baghena_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZAF }
+							NOT = { province_id = 2244 }
+							NOT = { province_id = 2247 }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = ML2
+				}
+				1123 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = ML2
+				}
+				1131 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = ML2
+				}
+				2259 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = ML2
+				}
+			}
+			JOL = {
+				jolof_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = JOL }
+							NOT = { province_id = 2239 }
+						}
+					}
+					cede_province = JOL
+					add_core = JOL
+					remove_core = ML2
+				}
+			}
+			AIR = {
+				azbin_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AIR }
+							NOT = { province_id = 2272 }
+						}
+					}
+					cede_province = AIR
+					add_core = AIR
+					remove_core = KBO
+				}
+				east_azbin_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AIR }
+							NOT = { province_id = 2275 }
+						}
+					}
+					cede_province = AIR
+					add_core = AIR
+					remove_core = KBO
+				}
+			}
+			ET2 = {
+				shewa_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ADL
+				}
+				1210 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ET2 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ADL
+				}
+			}
+			BEJ = {
+				1226 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEJ }
+						}
+					}
+					cede_province = BEJ
+					add_core = BEJ
+					remove_core = MAK
+				}
+				1229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEJ }
+						}
+					}
+					cede_province = BEJ
+					add_core = BEJ
+					remove_core = MAK
+				}
+			}
+			IFA = { change_tag = ADA }
+			GZI = { change_tag = ZIM }
+		}
+	}
+
+	option = {
+		name = "eh_africa.6.a"
+		ai_chance = { factor = 100 }
+		1112 = {
+			cede_province = ---
+			remove_core = ML2
+		}
+		1115 = {
+			cede_province = ---
+			remove_core = ML2
+		}
+		2272 = {
+			cede_province = ---
+			remove_core = ML2
+		}
+	}
+}
+
+# Rise of the Songhai Empire
+country_event = {
+	id = eh_africa.7
+	title = "eh_africa.7.t"
+	desc = "eh_africa.7.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ML2
+		is_year = 1460
+		NOT = { is_year = 1470 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SON = {
+				2262 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SON }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = TMB
+				}
+				2278 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SON }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = ZZZ
+				}
+			}
+			JNN = {
+				1134 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JNN }
+						}
+					}
+					cede_province = JNN
+					add_core = JNN
+					remove_core = ML2
+				}
+				2261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JNN }
+						}
+					}
+					cede_province = JNN
+					add_core = JNN
+					remove_core = ML2
+				}
+			}
+			RZW = {
+				1189 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RZW }
+						}
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+				1185 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RZW }
+						}
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+				3265 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RZW }
+						}
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+			}
+			MAK = { change_tag = ABB }
+		}
+	}
+
+	option = {
+		name = "eh_africa.7.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				ML2 = { was_player = yes }
+			}
+			switch_tag = SON
+		}
+	}
+}
+
+# Expansion of the Songhai Empire 
+country_event = {
+	id = eh_africa.8
+	title = "eh_africa.8.t"
+	desc = "eh_africa.8.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SON
+		is_year = 1510
+		NOT = { is_year = 1520 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SON = {
+				inherit = TMB
+				inherit = ZAF
+				azawad_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SON }
+							NOT = { province_id = 1130 }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = TMB
+				}
+				baghena_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SON }
+							NOT = { province_id = 2244 }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = ZAF
+				}
+				niger_bend_area = {
+					limit = {
+						NOT = { owned_by = SON }
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = TMB
+				}
+				jenne_area = {
+					limit = {
+						NOT = { owned_by = SON }
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = JNN
+				}
+				1123 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SON }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = ZAF
+				}
+				1131 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SON }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = ZAF
+				}
+				2273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SON }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = AIR
+				}
+			}
+			FUL = {
+				tekrur_area = {
+					limit = {
+						NOT = { owned_by = FUL }
+					}
+					cede_province = FUL
+					add_core = FUL
+					remove_core = JOL
+				}
+			}
+			ASH = {
+				1138 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASH }
+						}
+					}
+					cede_province = ASH
+					add_core = ASH
+				}
+				2257 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASH }
+						}
+					}
+					cede_province = ASH
+					add_core = ASH
+				}
+			}
+			BEJ = {
+				change_tag = NUB
+				dongola_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NUB }
+							NOT = { province_id = 1228 }
+						}
+					}
+					cede_province = NUB
+					add_core = NUB
+					remove_core = ABB
+				}
+				sennar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NUB }
+							NOT = { province_id = 1217 }
+						}
+					}
+					cede_province = NUB
+					add_core = NUB
+					remove_core = ALO
+				}
+				upper_nubia_area = {
+					limit = {
+						NOT = { owned_by = NUB }
+					}
+					cede_province = NUB
+					add_core = NUB
+					remove_core = ALO
+				}
+				kurdufan_area = {
+					limit = {
+						NOT = { owned_by = NUB }
+					}
+					cede_province = NUB
+					add_core = NUB
+				}
+				1232 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NUB }
+						}
+					}
+					cede_province = NUB
+					add_core = NUB
+					remove_core = MAM
+				}
+				2324 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NUB }
+						}
+					}
+					cede_province = NUB
+					add_core = NUB
+					remove_core = MAM
+				}
+			}
+			KON = { change_religion = catholic }
+		}
+	}
+
+	option = {
+		name = "eh_africa.8.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Fall of the Songhai Empire
+country_event = {
+	id = eh_africa.9
+	title = "eh_africa.9.t"
+	desc = "eh_africa.9.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SON
+		is_year = 1590
+		NOT = { is_year = 1600 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MOR = {
+				azawad_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOR }
+							NOT = { province_id = 1130 }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = SON
+				}
+				niger_bend_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOR }
+							NOT = { province_id = 2264 }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = SON
+				}
+				jenne_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOR }
+							NOT = { province_id = 2263 }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = SON
+				}
+				2253 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = ML2
+				}
+				2247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = SON
+				}
+				2250 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = ML2
+				}
+			}
+			AIR = {
+				2273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AIR }
+						}
+					}
+					cede_province = AIR
+					add_core = AIR
+					remove_core = SON
+				}
+			}
+			DAR = {
+				darfur_central_sahara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAR }
+							NOT = { province_id = 3026 }
+						}
+					}
+					cede_province = DAR
+					add_core = DAR
+				}
+			}
+			FUL = {
+				2243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FUL }
+						}
+					}
+					cede_province = FUL
+					add_core = FUL
+					remove_core = SON
+				}
+			}
+			KNG = {
+				1122 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KNG }
+						}
+					}
+					cede_province = KNG
+					add_core = KNG
+					remove_core = ML2
+				}
+			}
+			YAT = {
+				2263 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAT }
+						}
+					}
+					cede_province = YAT
+					add_core = YAT
+					remove_core = SON
+				}
+				2264 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAT }
+						}
+					}
+					cede_province = YAT
+					add_core = YAT
+					remove_core = SON
+				}
+			}
+			ZAF = {
+				massina_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZAF }
+							NOT = { province_id = 2250 }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SON
+				}
+				2245 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SON
+				}
+				2246 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SON
+				}
+			}
+			NUB = {
+				1217 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NUB }
+						}
+					}
+					cede_province = NUB
+					add_core = NUB
+				}
+			}
+			HAR = { change_tag = AFR }
+		}
+	}
+
+	option = {
+		name = "eh_africa.9.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				SON = { was_player = yes }
+			}
+			switch_tag = MOR
+		}
+	}
+	
+	option = {
+		name = "eh_africa.9.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				SON = { was_player = yes }
+			}
+			switch_tag = ET2
+		}
+	}
+}
+
+# Moroccan retreat
+country_event = {
+	id = eh_africa.10
+	title = "eh_africa.10.t"
+	desc = "eh_africa.10.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		is_year = 1620
+		NOT = { is_year = 1630 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			TMB = {
+				niger_bend_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TMB }
+							NOT = { province_id = 2260 }
+							NOT = { province_id = 2264 }
+						}
+					}
+					cede_province = TMB
+					add_core = TMB
+					remove_core = MOR
+				}
+				1129 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TMB }
+						}
+					}
+					cede_province = TMB
+					add_core = TMB
+					remove_core = MOR
+				}
+			}
+			SON = {
+				2271 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SON }
+						}
+					}
+					cede_province = SON
+					add_core = SON
+					remove_core = MOR
+				}
+			}
+			JNN = {
+				jenne_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = JNN }
+							NOT = { province_id = 2263 }
+						}
+					}
+					cede_province = JNN
+					add_core = JNN
+					remove_core = MOR
+				}
+				2253 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JNN }
+						}
+					}
+					cede_province = JNN
+					add_core = JNN
+					remove_core = MOR
+				}
+				2250 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JNN }
+						}
+					}
+					cede_province = JNN
+					add_core = JNN
+					remove_core = MOR
+				}
+			}
+			SOF = {
+				1123 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				1124 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				2249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+			}
+			ZAF = {
+				2247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = MOR
+				}
+				2260 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = MOR
+				}
+			}
+			POR = {
+				1167 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1172 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.10.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Bamana Empire
+country_event = {
+	id = eh_africa.11
+	title = "eh_africa.11.t"
+	desc = "eh_africa.11.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		is_year = 1670
+		NOT = { is_year = 1680 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SOF = {
+				inherit = ML2
+				inherit = ZAF
+				massina_area = {
+					limit = {
+						NOT = { owned_by = SOF }
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				baghena_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOF }
+							NOT = { province_id = 2244 }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				manding_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOF }
+							NOT = { province_id = 1120 }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ML2
+				}
+				2260 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				2259 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = JNN
+				}
+				2261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = JNN
+				}
+			}
+			ET2 = {
+				inherit = DAM
+				damot_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = DAM
+				}
+				1210 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ET2 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = DAM
+				}
+			}
+			HOB = {
+				2783 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOB }
+						}
+					}
+					cede_province = HOB
+					add_core = HOB
+					remove_core = AJU
+				}
+				2795 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOB }
+						}
+					}
+					cede_province = HOB
+					add_core = HOB
+					remove_core = AJU
+				}
+				2785 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOB }
+						}
+					}
+					cede_province = HOB
+					add_core = HOB
+					remove_core = AJU
+				}
+				2782 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOB }
+						}
+					}
+					cede_province = HOB
+					add_core = HOB
+					remove_core = AJU
+				}
+				2780 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOB }
+						}
+					}
+					cede_province = HOB
+					add_core = HOB
+					remove_core = AJU
+				}
+			}
+			BAG = {
+				1159 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAG }
+						}
+					}
+					cede_province = BAG
+					add_core = BAG
+				}
+			}
+			WAD = {
+				2932 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WAD }
+						}
+					}
+					cede_province = WAD
+					add_core = WAD
+				}
+				2288 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WAD }
+						}
+					}
+					cede_province = WAD
+					add_core = WAD
+				}
+				3235 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WAD }
+						}
+					}
+					cede_province = WAD
+					add_core = WAD
+				}
+			}
+			MRE = { change_tag = MJE }
+		}
+	}
+
+	option = {
+		name = "eh_africa.11.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_africa.11.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				MOR = { was_player = yes }
+			}
+			switch_tag = SOF
+		}
+	}
+}
+
+# Africa in the 18th century
+country_event = {
+	id = eh_africa.12
+	title = "eh_africa.12.t"
+	desc = "eh_africa.12.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOF
+		is_year = 1730
+		NOT = { is_year = 1740 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			AJU = { change_tag = GLE }
+			ASH = {
+				inherit = BON
+				2253 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASH }
+						}
+					}
+					cede_province = ASH
+					add_core = ASH
+					remove_core = BON
+				}
+				2250 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASH }
+						}
+					}
+					cede_province = ASH
+					add_core = ASH
+					remove_core = BON
+				}
+			}
+			DAH = {
+				1141 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAH }
+						}
+					}
+					cede_province = DAH
+					add_core = DAH
+				}
+				3007 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAH }
+						}
+					}
+					cede_province = DAH
+					add_core = DAH
+				}
+			}
+			LND = {
+				kasai_area = {
+					limit = {
+						NOT = { owned_by = LND }
+					}
+					cede_province = LND
+					add_core = LND
+				}
+				4094 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LND }
+						}
+					}
+					cede_province = LND
+					add_core = LND
+				}
+				4088 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LND }
+						}
+					}
+					cede_province = LND
+					add_core = LND
+				}
+				4107 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LND }
+						}
+					}
+					cede_province = LND
+					add_core = LND
+				}
+				4095 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LND }
+						}
+					}
+					cede_province = LND
+					add_core = LND
+				}
+				4096 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LND }
+						}
+					}
+					cede_province = LND
+					add_core = LND
+				}
+			}
+			KNG = {
+				2253 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KNG }
+						}
+					}
+					cede_province = KNG
+					add_core = KNG
+					remove_core = JNN
+				}
+				2250 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KNG }
+						}
+					}
+					cede_province = KNG
+					add_core = KNG
+					remove_core = JNN
+				}
+			}
+			XHO = {
+				1180 = {
+					if = {
+						limit = {
+							NOT = { owned_by = XHO }
+						}
+					}
+					cede_province = XHO
+					add_core = XHO
+				}
+			}
+			ZUL = {
+				1181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZUL }
+						}
+					}
+					cede_province = ZUL
+					add_core = ZUL
+				}
+				789 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZUL }
+						}
+					}
+					cede_province = ZUL
+					add_core = ZUL
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.12.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Sokoto Caliphate
+country_event = {
+	id = eh_africa.13
+	title = "eh_africa.13.t"
+	desc = "eh_africa.13.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOF
+		is_year = 1800
+		NOT = { is_year = 1810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SOK = {
+				zazzau_area = {
+					limit = {
+						NOT = { owned_by = SOK }
+					}
+					cede_province = SOK
+					add_core = SOK
+					remove_core = HAU
+				}
+				katsina_area = {
+					limit = {
+						NOT = { owned_by = SOK }
+					}
+					cede_province = SOK
+					add_core = SOK
+					remove_core = KTS
+				}
+				hausa_area = {
+					limit = {
+						NOT = { owned_by = SOK }
+					}
+					cede_province = SOK
+					add_core = SOK
+					remove_core = KAN
+				}
+				lower_niger_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOK }
+							NOT = { province_id = 1114 }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+					remove_core = NUP
+				}
+				adamawa_plateau_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOK }
+							NOT = { province_id = 3033 }
+							NOT = { province_id = 3101 }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+					remove_core = KAN
+				}
+				3273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOK }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+				}
+				1152 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOK }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+				}
+				1164 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOK }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+				}
+				3059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOK }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+				}
+				2289 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOK }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+				}
+				2283 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOK }
+						}
+					}
+					cede_province = SOK
+					add_core = SOK
+				}
+			}
+			RZW = {
+				inherit = ZIM
+				zimbabwe_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RZW }
+							NOT = { province_id = 3017 }
+						}
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+				matabeleland_area = {
+					limit = {
+						NOT = { owned_by = RZW }
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+				butua_area = {
+					limit = {
+						NOT = { owned_by = RZW }
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+				1190 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RZW }
+						}
+					}
+					cede_province = RZW
+					add_core = RZW
+					remove_core = ZIM
+				}
+			}
+			ZAF = {
+				jenne_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZAF }
+							NOT = { province_id = 2263 }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SOF
+				}
+				1131 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SOF
+				}
+				2247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SOF
+				}
+				2260 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAF }
+						}
+					}
+					cede_province = ZAF
+					add_core = ZAF
+					remove_core = SOF
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.13.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Cape Colony
+country_event = {
+	id = eh_africa.14
+	title = "eh_africa.14.t"
+	desc = "eh_africa.14.d"
+	picture = SOUTH_AFRICA_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1850
+		NOT = { is_year = 1855 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ZA2 = {
+				transvaal_area = {
+					limit = {
+						NOT = { owned_by = ZA2 }
+					}
+					cede_province = ZA2
+					add_core = ZA2
+					remove_core = GBR
+				}
+				limpopo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZA2 }
+							NOT = { province_id = 1182 }
+							NOT = { province_id = 1800 }
+						}
+					}
+					cede_province = ZA2
+					add_core = ZA2
+					remove_core = GBR
+				}
+			}
+			OFS = {
+				2856 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OFS }
+						}
+					}
+					cede_province = OFS
+					add_core = OFS
+					remove_core = GBR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.14.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Toucouleur Empire
+country_event = {
+	id = eh_africa.15
+	title = "eh_africa.15.t"
+	desc = "eh_africa.15.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOF
+		is_year = 1860
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SOF = {
+				inherit = ZAF
+				jenne_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOF }
+							NOT = { province_id = 2263 }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				niger_bend_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOF }
+							NOT = { province_id = 2264 }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+				tekrur_area = {
+					limit = {
+						NOT = { owned_by = SOF }
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = FUL
+				}
+				1120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = FUL
+				}
+				2247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOF }
+						}
+					}
+					cede_province = SOF
+					add_core = SOF
+					remove_core = ZAF
+				}
+			}
+			FUL = {
+				inherit = KBU
+				2238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FUL }
+						}
+					}
+					cede_province = FUL
+					add_core = FUL
+					remove_core = KBU
+				}
+				2239 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FUL }
+						}
+					}
+					cede_province = FUL
+					add_core = FUL
+					remove_core = KBU
+				}
+			}
+			JOL = {
+				1112 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JOL }
+						}
+					}
+					cede_province = JOL
+					add_core = JOL
+					remove_core = FUL
+				}
+				1116 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JOL }
+						}
+					}
+					cede_province = JOL
+					add_core = JOL
+					remove_core = FUL
+				}
+			}
+			LES = {
+				3011 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LES }
+						}
+					}
+					cede_province = LES
+					add_core = LES
+					remove_core = XHO
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.15.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Africa in the mid-20th century
+country_event = {
+	id = eh_africa.16
+	title = "eh_africa.16.t"
+	desc = "eh_africa.16.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			africa = {
+				limit = { 
+					NOT = { owned_by = ZA2 }
+				}
+				add_devastation = 80
+				add_base_tax = -5
+				add_base_production = -5
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.16.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				AND = {
+					capital_scope = { continent = africa }
+					NOT = { tag = ZA2 }
+				}
+			}
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+            add_stability = -1
+			add_adm_tech = -3
+			add_dip_tech = -3
+			add_mil_tech = -3
+		}
+	}
+}
+
+# Abolition of Apartheid
+country_event = {
+	id = eh_africa.17
+	title = "eh_africa.17.t"
+	desc = "eh_africa.17.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ZA2
+		is_year = 1990
+		NOT = { is_year = 1995 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	immediate = {
+		hidden_effect = {
+			NMB = {
+				damaraland_area = {
+					limit = {
+						NOT = { owned_by = NMB }
+					}
+					cede_province = NMB
+					add_core = NMB
+					remove_core = ZA2
+				}
+				3066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NMB }
+						}
+					}
+					cede_province = NMB
+					add_core = NMB
+					remove_core = ZA2
+				}
+				3223 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NMB }
+						}
+					}
+					cede_province = NMB
+					add_core = NMB
+					remove_core = ZA2
+				}
+				3225 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NMB }
+						}
+					}
+					cede_province = NMB
+					add_core = NMB
+					remove_core = ZA2
+				}
+			}
+			ERT = {
+				2765 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERT }
+						}
+					}
+					cede_province = ERT
+					add_core = ERT
+					remove_core = FR2
+				}
+				1230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERT }
+						}
+					}
+					cede_province = ERT
+					add_core = ERT
+					remove_core = ET2
+				}
+				2787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERT }
+						}
+					}
+					cede_province = ERT
+					add_core = ERT
+					remove_core = ET2
+				}
+				2766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERT }
+						}
+					}
+					cede_province = ERT
+					add_core = ERT
+					remove_core = ET2
+				}
+				3267 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERT }
+						}
+					}
+					cede_province = ERT
+					add_core = ERT
+					remove_core = ET2
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.17.a"
+		ai_chance = { factor = 100 }
+		ZA2 = {
+			change_tag = RSA
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_republican_tradition = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			define_ruler = {
+				name = "Nelson Mandela"
+				change_adm = 4
+				change_dip = 6
+				change_mil = 1
+				age = 76
+			}
+		}
+		ET2 = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			change_religion = secularism
+		}
+	}
+}
+
+# Africa in the 21st century
+country_event = {
+	id = eh_africa.18
+	title = "eh_africa.18.t"
+	desc = "eh_africa.18.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RSA
+		is_year = 2010
+		NOT = { is_year = 2020 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			SSU = {
+				south_sudan_area = {
+					limit = {
+						NOT = { owned_by = SSU }
+					}
+					cede_province = SSU
+					add_core = SSU
+					remove_core = SUD
+				}
+				1217 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SSU }
+						}
+					}
+					cede_province = SSU
+					add_core = SSU
+					remove_core = SUD
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_africa.18.a"
+		ai_chance = { factor = 100 }
+		africa = {
+			limit = {
+				AND = {
+					NOT = { owned_by = RSA }
+					NOT = { owned_by = MOR }
+					NOT = { owned_by = ALG }
+					NOT = { owned_by = EG2 }
+				}
+			}
+			add_unrest = 10
+		}
+	}
+}
+
+########################################################################
+# Events for the Oceania
+########################################################################
+
+# European exploration of Australia
+country_event = {
+	id = eh_oceania.1
+	title = "eh_oceania.1.t"
+	desc = "eh_oceania.1.d"
+	picture = EXPLORERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1800
+		NOT = { is_year = 1810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				tasmania_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1090 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			UHW = {
+				northern_polynesia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UHW }
+							NOT = { province_id = 1997 }
+						}
+					}
+					cede_province = UHW
+					add_core = UHW
+				}
+			}
+			THT = {
+				1987 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THT }
+						}
+					}
+					cede_province = THT
+					add_core = THT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_oceania.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Independence of Australia
+country_event = {
+	id = eh_oceania.2
+	title = "eh_oceania.2.t"
+	desc = "eh_oceania.2.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1901
+		NOT = { is_year = 1903 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {	
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			AUS = {
+				australia_region = {
+					limit = {
+						NOT = { owned_by = AUS }
+					}
+					cede_province = AUS
+					add_core = AUS
+					remove_core = GBR
+				}
+				papua_area = {
+					limit = {
+						NOT = { owned_by = AUS }
+					}
+					cede_province = AUS
+					add_core = AUS
+					remove_core = GBR
+				}
+				2719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUS }
+						}
+					}
+					cede_province = AUS
+					add_core = AUS
+					remove_core = GBR
+				}
+			}
+			GBR = {
+				1238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				1989 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = TOG
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_oceania.2.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_oceania.2.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				GBR = { was_player = yes }
+			}
+			switch_tag = AUS
+		}
+	}
+}
+
+# Independence of New Zealand
+country_event = {
+	id = eh_oceania.3
+	title = "eh_oceania.3.t"
+	desc = "eh_oceania.3.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1907
+		NOT = { is_year = 1910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			NZL = {
+				te_ika_a_maui_waho_area = {
+					limit = {
+						NOT = { owned_by = NZL }
+					}
+					cede_province = NZL
+					add_core = NZL
+					remove_core = GBR
+				}
+				te_ika_a_maui_hauauru_area = {
+					limit = {
+						NOT = { owned_by = NZL }
+					}
+					cede_province = NZL
+					add_core = NZL
+					remove_core = GBR
+				}
+				te_waipounamu_area = {
+					limit = {
+						NOT = { owned_by = NZL }
+					}
+					cede_province = NZL
+					add_core = NZL
+					remove_core = GBR
+				}
+				3215 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NZL }
+						}
+					}
+					cede_province = NZL
+					add_core = NZL
+					remove_core = GBR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_oceania.3.a"
+		ai_chance = { factor = 100 }
+		AUS = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = {
+				limit = {
+					AND = {
+						NOT = { area = eastern_outback_area }
+						NOT = { area = central_australia_area }
+					}
+				}
+				change_culture = british_australian
+				change_religion = protestant
+			}
+			add_country_modifier = {
+				name = great_power
+				duration = 100000
+			}
+		}
+		NZL = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = {
+				change_culture = british_australian
+				change_religion = protestant
+			}
+			add_country_modifier = {
+				name = great_power
+				duration = 100000
+			}
+		}
+	}
+}
+
+# Independence of the Oceanian Islands
+country_event = {
+	id = eh_oceania.4
+	title = "eh_oceania.4.t"
+	desc = "eh_oceania.4.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1975
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	immediate = {
+		hidden_effect = {
+			COK = {
+				3238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COK }
+						}
+					}
+					cede_province = COK
+					add_core = COK
+					remove_core = GBR
+				}
+			}
+			VIT = {
+				fiji_area = {
+					limit = {
+						NOT = { owned_by = VIT }
+					}
+					cede_province = VIT
+					add_core = VIT
+					remove_core = GBR
+				}
+			}
+			NAU = {
+				1992 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAU }
+						}
+					}
+					cede_province = NAU
+					add_core = NAU
+					remove_core = GBR
+				}
+			}
+			NIU = {
+				3216 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIU }
+						}
+					}
+					cede_province = NIU
+					add_core = NIU
+					remove_core = GBR
+				}
+			}
+			MIC = {
+				1995 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MIC }
+						}
+					}
+					cede_province = MIC
+					add_core = MIC
+					remove_core = GBR
+				}
+			}
+			MRS = {
+				1993 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MRS }
+						}
+					}
+					cede_province = MRS
+					add_core = MRS
+					remove_core = GBR
+				}
+			}
+			SAM = {
+				1243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAM }
+						}
+					}
+					cede_province = SAM
+					add_core = SAM
+					remove_core = GBR
+				}
+			}
+			SLM = {
+				1238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SLM }
+						}
+					}
+					cede_province = SLM
+					add_core = SLM
+					remove_core = GBR
+				}
+			}
+			TOG = {
+				1989 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TOG }
+						}
+					}
+					cede_province = TOG
+					add_core = TOG
+					remove_core = GBR
+				}
+			}
+			TVL = {
+				1990 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TVL }
+						}
+					}
+					cede_province = TVL
+					add_core = TVL
+					remove_core = GBR
+				}
+			}
+			PNG = {
+				papua_area = {
+					limit = {
+						NOT = { owned_by = PNG }
+					}
+					cede_province = PNG
+					add_core = PNG
+					remove_core = AUS
+				} 
+				2719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PNG }
+						}
+					}
+					cede_province = PNG
+					add_core = PNG
+					remove_core = AUS
+				}
+				1236 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PNG }
+						}
+					}
+					cede_province = PNG
+					add_core = PNG
+					remove_core = AUS
+				}
+			}
+			PLU = {
+				1996 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLU }
+						}
+					}
+					cede_province = PLU
+					add_core = PLU
+					remove_core = GBR
+				}
+			}
+			KIR = {
+				1241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KIR }
+						}
+					}
+					cede_province = KIR
+					add_core = KIR
+					remove_core = GBR
+				}
+				1991 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KIR }
+						}
+					}
+					cede_province = KIR
+					add_core = KIR
+					remove_core = GBR
+				}
+				3112 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KIR }
+						}
+					}
+					cede_province = KIR
+					add_core = KIR
+					remove_core = GBR
+				}
+			}
+			VNU = {
+				1239 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VNU }
+						}
+					}
+					cede_province = VNU
+					add_core = VNU
+					remove_core = GBR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_oceania.4.a"
+		ai_chance = { factor = 100 }
+		PNG = {
+			every_owned_province = { change_culture = papuan }
+		}
+	}
+}
+
+# Modern Oceania
+country_event = {
+	id = eh_oceania.5
+	title = "eh_oceania.5.t"
+	desc = "eh_oceania.5.d"
+	picture = FEAST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		is_year = 2000
+		NOT = { is_year = 2005 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_oceania.5.a"
+		ai_chance = { factor = 100 }
+		AUS = {
+			1090 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+		}
+		NZL = {
+			1107 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Abolition of the White Australia policy
+country_event = {
+	id = eh_oceania.6
+	title = "eh_oceania.6.t"
+	desc = "eh_oceania.6.d"
+	picture = FEAST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUS
+		is_year = 1970
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_oceania.6.a"
+		ai_chance = { factor = 100 }
+		AUS = {
+			add_prestige = 10
+			every_owned_province = {
+				limit = {
+					AND = {
+						NOT = { area = western_australia_area }
+						NOT = { area = northern_australia_area }
+						NOT = { area = north_queensland_area }
+						NOT = { area = eastern_outback_area }
+						NOT = { area = central_australia_area }
+						NOT = { area = pilbara_area }
+						NOT = { area = top_end_area }
+					}
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+		}
+		NZL = {
+			add_prestige = 10
+			every_owned_province = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# EH version

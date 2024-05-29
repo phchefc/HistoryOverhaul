@@ -1,0 +1,14 @@
+
+bookmark =
+{
+	name = "FALL_OF_MING_NAME"
+	desc = "FALL_OF_MING_DESC"
+	date = 1644.6.5
+	
+	country = QNG
+	country = MNG
+	country = CSH
+	country = CXI
+}
+
+# EH version

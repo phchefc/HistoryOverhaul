@@ -1,0 +1,228 @@
+government = monarchy
+add_government_reform = confucian_bureaucracy
+government_rank = 2
+primary_culture = korean
+religion = confucianism
+add_harmonized_religion = mahayana
+technology_group = early_chinese
+capital = 735	# Hanseong
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1863.12.13 = {
+	monarch = {
+		name = "Hui" # Gojong
+		dynasty = "Yi"
+		birth_date = 1852.9.8
+		adm = 1
+		dip = 2
+		mil = 0
+		religion = confucianism
+	}
+}
+
+1866.3.21 = {
+	queen = {
+		country_of_origin = KOR
+		name = "Ja-yeong" # Myeongseong
+		dynasty = "Min"
+		birth_date = 1851.11.17
+		death_date = 1895.10.8
+		female = yes
+		adm = 2
+		dip = 5
+		mil = 0
+	}
+}
+
+1874.3.25 = {
+	heir = {
+		name = "Cheok"
+		monarch_name = "Sunjong"
+		dynasty = "Yi"
+		birth_date = 1874.3.25
+		death_date = 1926.4.24
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+		religion = confucianism
+	}
+}
+
+# Korean Empire
+
+1897.10.12 = { changed_tag_from = KOR }
+1897.10.12 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	government_rank = 3
+}
+
+1907.7.20 = {
+	monarch = {
+		name = "Cheok" # Sunjong
+		dynasty = "Yi"
+		adm = 0
+		dip = 0
+		mil = 0
+		religion = confucianism
+	}
+	queen = {
+		country_of_origin = KOR
+		name = "Sunjeong" # Sunjeong
+		dynasty = "Yun"
+		birth_date = 1894.9.19
+		death_date = 1966.2.3
+		female = yes
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+# Provisional government of the Republic of Korea
+
+1919.4.13 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = constitutional_republic
+	religion = secularism
+	technology_group = asian
+	government_rank = 2
+	monarch = {
+		name = "Rhee Syng-man"
+		birth_date = 1875.4.18
+		adm = 2
+		dip = 5
+		mil = 1
+		religion = protestant
+	}
+}
+
+1925.3.24 = {
+	monarch = {
+		name = "Park Eun-sik"
+		birth_date = 1859.9.30
+		adm = 1
+		dip = 2
+		mil = 1
+		religion = confucianism
+	}
+}
+
+1925.9.1 = {
+	monarch = {
+		name = "Lee Sang-ryong"
+		birth_date = 1858.12.28
+		adm = 1
+		dip = 2
+		mil = 1
+		religion = confucianism
+	}
+}
+
+1926.2.18 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 1
+		dip = 1
+		mil = 1
+		regent = yes
+	}
+}
+
+1926.7.7 = {
+	monarch = {
+		name = "Hong Jin"
+		birth_date = 1877.10.3
+		adm = 1
+		dip = 2
+		mil = 1
+		religion = confucianism
+	}
+}
+
+1926.12.14 = {
+	monarch = {
+		name = "Kim Koo"
+		birth_date = 1876.8.29
+		adm = 2
+		dip = 0
+		mil = 5
+		religion = protestant
+	}
+}
+
+1927.8.19 = {
+	monarch = {
+		name = "Yi Dong-nyeong"
+		birth_date = 1869.2.17
+		adm = 1
+		dip = 1
+		mil = 1
+		religion = confucianism
+	}
+}
+
+1934.1.2 = {
+	monarch = {
+		name = "Song Byeong-jo"
+		birth_date = 1869.2.17
+		adm = 1
+		dip = 1
+		mil = 1
+		religion = confucianism
+	}
+}
+
+1936.11.10 = {
+	monarch = {
+		name = "Yi Dong-nyeong"
+		birth_date = 1869.2.17
+		adm = 1
+		dip = 1
+		mil = 1
+		religion = confucianism
+	}
+}
+
+1940.3.13 = {
+	monarch = {
+		name = "Kim Koo"
+		birth_date = 1876.8.29
+		adm = 2
+		dip = 0
+		mil = 5
+		religion = protestant
+	}
+}
+
+1947.3.3 = {
+	monarch = {
+		name = "Rhee Syng-man"
+		birth_date = 1875.4.18
+		adm = 2
+		dip = 5
+		mil = 1
+		religion = protestant
+	}
+}
+
+# EH version

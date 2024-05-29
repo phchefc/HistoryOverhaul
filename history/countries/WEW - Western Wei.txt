@@ -1,0 +1,113 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 3
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+capital = 700 # Chang'an
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# Western Wei
+
+535.1.1 = { changed_tag_from = WEI }
+
+535.1.1 = {
+	monarch = {
+		name = "Baoju" #Wen
+		dynasty = "Yuan"
+		birth_date = 507.1.1
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = WEW
+		name = "Wen"
+		dynasty = "Yifu"
+		birth_date = 510.1.1
+		death_date = 540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qin"
+		monarch_name = "Qin"
+		dynasty = "Yuan"
+		birth_date = 525.1.1
+		death_date = 554.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+538.1.1 = {
+	queen = {
+		country_of_origin = ROU
+		name = "Dao"
+		dynasty = "Yujiulu"
+		birth_date = 525.1.1
+		death_date = 540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+551.3.28 = {
+	monarch = {
+		name = "Qin"
+		dynasty = "Yuan"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WEW
+		dynasty = "Yuwen"
+		birth_date = 525.1.1
+		death_date = 554.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+554.4.1 = {
+	monarch = {
+		name = "Kuo" #Gong
+		dynasty = "Tuoba"
+		birth_date = 537.1.1
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WEW
+		dynasty = "Ruogan"
+		birth_date = 540.1.1
+		death_date = 600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

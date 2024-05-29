@@ -1,0 +1,28 @@
+
+2 = {
+	diplomats = 5
+	governing_capacity = 500
+	global_autonomy = -0.025
+	global_unrest = -1
+	administrative_efficiency = 0.2
+	diplomatic_upkeep = 10
+	free_leader_pool = 10
+	global_unrest = -1
+	num_accepted_cultures = 10
+	reduced_liberty_desire = 10
+}
+
+3 = {
+	governing_capacity = 1000
+	global_autonomy = -0.05
+	max_absolutism = 5
+	administrative_efficiency = 0.2
+	diplomats = 10
+	diplomatic_upkeep = 200
+	free_leader_pool = 20
+	global_unrest = -2
+	num_accepted_cultures = 20
+	reduced_liberty_desire = 200
+}
+
+# EH version

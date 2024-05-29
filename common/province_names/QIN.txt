@@ -1,0 +1,82 @@
+665 = "Gaoyao"					#Shiuhing
+667 = "Nanhai"
+669 = "Minzhong"
+670 = "Luling"
+672 = "Wuling"
+679 = "Shu"
+680 = "Ba"							#Chongqing	
+2172 = "Nan"							#Jiangling
+682 = "Jiangxia"
+684 = "Qiantang"
+2142 = "Donghai"
+686 = "Lujiang"
+2175 = "Huaiyang"
+688 = "Dang"			#Kaifeng
+2139 = "Jiaodong"
+691 = "Jibei"
+696 = "Fanyang"	   
+694 = "Hedong"
+695 = "Julu"
+2136 = "Shanggu"
+697 = "Dai"
+699 = "Longxi"
+700 = "Xianyang"			#Xi'an
+704 = "Liaoxi"
+707 = "Dunhuang"
+708 = "Zhangye"
+1816 = "Ji"
+1821 = "Jianye"				#Nanjing				|incomplete
+1822 = "Wu"
+1838 = "Jiujiang"
+1840 = "Yulin"
+2182 = "Wuwei"
+2184 = "Xiping"
+2161 = "Hepu"
+2158 = "Cangwu"
+2150 = "Xindu"
+2149 = "Kuaiji"
+2146 = "Danyang"
+2147 = "Linchuan"
+2174 = "Guiyang"
+2173 = "Qianzhong"
+2169 = "Guanghan"
+681 = "Guling"
+1836 = "Sanchuan"
+2176 = "Liang"
+2144 = "Chen"
+2141 = "Xue"
+2143 = "Sishui"
+685 = "Guangling"
+690 = "Beihai"
+2138 = "Bohai"
+2140 = "Dong"
+2137 = "Wei"
+692 = "Henai"
+2178 = "Shangdang"
+2179 = "Shang"
+2181 = "Beidi"
+4194 = "Youbeiping"
+4195 = "Hengshan"
+4196 = "Langya"
+4197 = "Qichun"
+4198 = "Anding"
+4211 = "Dangqu"				#Dazhou					|incomplete
+4213 = "Jianwei"
+
+#Korea
+733 = "Daifang"				#Hwangju
+1845 = "Chaoxian"				#Pyongan
+
+#Manchuria
+2109 = "Fuyu"
+726 = "Liaodong"
+3010 = "Beisha"
+4652 = "Anshi"
+2112 = "Anping"
+
+#Vietnam
+613 = "Jiaozhi"
+610 = "Jiuzhen"
+1016 = "Rinan"
+
+# EH version

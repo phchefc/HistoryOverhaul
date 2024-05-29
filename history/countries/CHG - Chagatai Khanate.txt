@@ -1,0 +1,504 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = mongol
+add_accepted_culture = uyghur
+add_accepted_culture = uzbehk
+religion = tengri_pagan_reformed
+technology_group = eastern_nomad_group
+capital = 715
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1227.8.25 = {
+	monarch = {
+		name = "Chagatay"
+		dynasty = "Borjigin"
+		birth_date = 1183.12.22
+		adm = 2
+		dip = 2
+		mil = 5
+		leader = {	name = "Borjigin Chagatay"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 1  death_date = 1242.1.1 } # Not an actual death date
+	}
+	queen = {
+		country_of_origin = KHA
+		name = "Yesulun"
+		birth_date = 1185.1.1
+		death_date = 1230.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qara Hulegu"
+		monarch_name = "Qara Hulegu"
+		dynasty = "Borjigin"
+		birth_date = 1220.1.1
+		death_date = 1252.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1242.1.1 = {
+	monarch = {
+		name = "Qara Hulegu" #1st reign
+		dynasty = "Borjigin"
+		birth_date = 1220.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1246.1.1 = {
+	monarch = {
+		name = "Yesu Mongke"
+		dynasty = "Borjigin"
+		birth_date = 1200.1.1
+		adm = 1
+		dip = 1
+		mil = 4
+	}
+}
+
+1251.1.1 = {
+	monarch = {
+		name = "Qara Hulegu" #2nd reign
+		dynasty = "Borjigin"
+		birth_date = 1220.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1251.1.1 = {
+	heir = {
+		name = "Mubarak"
+		monarch_name = "Mubarak Shah"
+		dynasty = "Borjigin"
+		birth_date = 1245.1.1
+		death_date = 1266.9.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1252.1.1 = {
+	monarch = {
+		name = "Mubarak Shah" #1st reign
+		dynasty = "Borjigin"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1260.1.1 = {
+	monarch = {
+		name = "Alghu bin Baidar"
+		dynasty = "Borjigin"
+		birth_date = 1230.1.1
+		adm = 1
+		dip = 2
+		mil = 4
+	}
+}
+
+1266.3.1 = {
+	monarch = {
+		name = "Mubarak Shah" #2nd reign
+		dynasty = "Borjigin"
+		birth_date = 1245.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+# Coup
+
+1266.9.1 = {
+	monarch = {
+		name = "Ghiyas-ud-din Baraq"
+		dynasty = "Borjigin"
+		adm = 1
+		dip = 5
+		mil = 2
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Ogedeid Coup
+
+1270.1.1 = {
+	monarch = {
+		name = "Kaidu"
+		dynasty = "Borjigin"
+		birth_date = 1230.1.1
+		adm = 3
+		dip = 4
+		mil = 6
+		leader = {	name = "Borjigin Kaidu"     	type = general	fire = 2	shock = 4	manuever = 0	siege = 1  death_date = 1301.1.1 } # Not an actual death date
+	}
+}
+
+1270.1.1 = {
+	heir = {
+		name = "Chapar"
+		monarch_name = "Chapar"
+		dynasty = "Borjigin"
+		birth_date = 1260.1.1
+		death_Date = 1306.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1301.1.1 = {
+	monarch = {
+		name = "Chapar"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+# Chagatayid Restoration
+
+1306.1.1 = {
+	monarch = {
+		name = "Duwa"
+		dynasty = "Borjigin"
+		birth_date = 1260.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1306.1.1 = {
+	heir = {
+		name = "Konchek"
+		monarch_name = "Konchek"
+		dynasty = "Borjigin"
+		birth_date = 1280.1.1
+		death_date = 1308.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1307.1.1 = {
+	monarch = {
+		name = "Konchek"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1308.1.1 = {
+	monarch = {
+		name = "Taliqu"
+		dynasty = "Borjigin"
+		birth_date = 1270.1.1
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1308.1.1 = {
+	heir = {
+		name = "Kebek"
+		monarch_name = "Kebek"
+		dynasty = "Borjigin"
+		birth_date = 1283.1.1
+		death_date = 1325.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1309.1.1 = {
+	monarch = {
+		name = "Kebek" #1st reign
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+# Coup
+
+1310.1.1 = {
+	monarch = {
+		name = "Esen Buqa I"
+		dynasty = "Borjigin"
+		birth_date = 1285.1.1
+		adm = 4
+		dip = 2
+		mil = 1
+	}
+}
+
+1310.1.1 = {
+	heir = {
+		name = "Kebek"
+		monarch_name = "Kebek"
+		dynasty = "Borjigin"
+		birth_date = 1283.1.1
+		death_date = 1325.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1318.1.1 = {
+	monarch = {
+		name = "Kebek" #2nd reign
+		dynasty = "Borjigin"
+		birth_date = 1283.1.1
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1318.1.1 = {
+	heir = {
+		name = "Eljigidey"
+		monarch_name = "Eljigidey"
+		dynasty = "Borjigin"
+		birth_date = 1285.1.1
+		death_date = 1329.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1325.1.1 = {
+	monarch = {
+		name = "Eljigidey"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+# Coup
+
+1329.1.1 = {
+	monarch = {
+		name = "Duwa Temur"
+		dynasty = "Borjigin"
+		birth_date = 1290.1.1
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}
+
+1329.1.1 = {
+	heir = {
+		name = "Ala-ad-din Tarmashirin"
+		monarch_name = "Ala-ad-din Tarmashirin"
+		dynasty = "Borjigin"
+		birth_date = 1292.1.1
+		death_date = 1334.1.1
+		claim = 95
+		adm = 1
+		dip = 4
+		mil = 5
+	}
+}
+
+1330.1.1 = { primary_culture = kirgiz }
+
+1331.1.1 = {
+	monarch = {
+		name = "Ala-ad-din Tarmashirin"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}
+
+1331.1.1 = {
+	heir = {
+		name = "Buzan"
+		monarch_name = "Buzan"
+		dynasty = "Borjigin"
+		birth_date = 1305.1.1
+		death_date = 1335.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+}
+
+1334.1.1 = {
+	monarch = {
+		name = "Buzan"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+}
+
+1334.1.1 = {
+	heir = {
+		name = "Changshi"
+		monarch_name = "Changshi"
+		dynasty = "Borjigin"
+		birth_date = 1320.1.1
+		death_date = 1338.1.1
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 5
+	}
+}
+
+1335.1.1 = {
+	monarch = {
+		name = "Changshi"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 5
+		mil = 5
+	}
+}
+
+1335.1.1 = {
+	heir = {
+		name = "Yesun Temur"
+		monarch_name = "Yesun Temur"
+		dynasty = "Borjigin"
+		birth_date = 1300.1.1
+		death_date = 1342.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+}
+
+1338.1.1 = {
+	monarch = {
+		name = "Yesun Temur"
+		dynasty = "Borjigin"
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+}
+
+1338.1.1 = {
+	heir = {
+		name = "Muhammad"
+		monarch_name = "Muhammad I"
+		dynasty = "Borjigin"
+		birth_date = 1300.1.1
+		death_date = 1343.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1342.1.1 = {
+	religion = sunni
+	religious_school = hanafi_school
+	monarch = {
+		name = "Muhammad I"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1342.1.1 = {
+	heir = {
+		name = "Qazan Khan"
+		monarch_name = "Qazan Khan"
+		dynasty = "Borjigin"
+		birth_date = 1300.1.1
+		death_date = 1346.1.1
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1343.1.1 = {
+	monarch = {
+		name = "Qazan Khan"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1343.1.1 = {
+	heir = {
+		name = "Danishmendji"
+		monarch_name = "Danishmendji"
+		dynasty = "Borjigin"
+		birth_date = 1310.1.1
+		death_date = 1348.1.1
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 1
+	}
+}
+
+1346.1.1 = {
+	monarch = {
+		name = "Danishmendji"
+		dynasty = "Borjigin"
+		death_date = 1348.1.1
+		adm = 3
+		dip = 5
+		mil = 1
+	}
+}

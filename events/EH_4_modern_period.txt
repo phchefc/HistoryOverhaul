@@ -1,0 +1,6289 @@
+namespace = eh_ww1
+namespace = eh_ww2
+namespace = eh_cold_war
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the World War I
+########################################################################
+
+# Triple Alliance and Triple Entente
+country_event = {
+	id = eh_ww1.1
+	title = "eh_ww1.1.t"
+	desc = "eh_ww1.1.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1900
+		NOT = { is_year = 1905 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			africa = {
+				add_base_tax = -10
+				add_base_production = -10
+			}
+			asia = {
+				limit = {
+					AND = {
+						NOT = { superregion = china_superregion }
+						NOT = { region = japan_region }
+						NOT = { region = korea_region }
+						NOT = { province_id = 522 }
+						NOT = { province_id = 529 }
+						NOT = { province_id = 561 }
+					}
+				}
+				add_base_tax = -10
+				add_base_production = -10
+			}
+			south_america = {
+				add_base_tax = -5
+				add_base_production = -5
+			}
+			USA = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			GBR = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			CAN = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			DE2 = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			SWI = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			NED = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			BEL = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			LUX = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			FR2 = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			ITA = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			DAN = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			SWE = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			NOR = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+			JAP = {
+				add_country_modifier = {
+					name = great_power
+					duration = 100000
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww1.1.a"
+		ai_chance = { factor = 100 }
+		DE2 = {
+			add_historical_friend = AUH
+			add_historical_friend = TUR
+			add_historical_rival = GBR
+			add_historical_rival = FR2
+			add_historical_rival = RUS
+			create_alliance = AUH
+			add_trust = {
+				who = AUH
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = TUR
+				value = 25
+				mutual = yes
+			}
+		}
+		AUH = {
+			add_historical_friend = AUH
+			add_historical_friend = TUR
+			add_historical_rival = GBR
+			add_historical_rival = FR2
+			add_historical_rival = RUS
+			define_advisor = {
+				type = natural_scientist
+				name = "Sigmund Freud"
+				culture = austrian
+				skill = 6
+				discount = yes
+			}
+		}
+		TUR = {
+			add_historical_friend = DE2
+			add_historical_friend = AUH
+			add_historical_rival = GBR
+			add_historical_rival = FR2
+			add_historical_rival = RUS
+		}
+		GBR = {
+			add_historical_friend = FR2
+			add_historical_friend = RUS
+			add_historical_rival = DE2
+			add_historical_rival = AUH
+			add_historical_rival = TUR
+			create_alliance = FR2
+			create_alliance = RUS
+			add_trust = {
+				who = FR2
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = RUS
+				value = 25
+				mutual = yes
+			}
+		}
+		FR2 = {
+			add_historical_friend = GBR
+			add_historical_friend = RUS
+			add_historical_rival = DE2
+			add_historical_rival = AUH
+			add_historical_rival = TUR
+			create_alliance = RUS
+			add_trust = {
+				who = RUS
+				value = 25
+				mutual = yes
+			}
+		}
+		RUS = {
+			add_historical_friend = FR2
+			add_historical_friend = RUS
+			add_historical_rival = DE2
+			add_historical_rival = AUH
+			add_historical_rival = TUR
+		}
+		ITA = {
+			add_historical_friend = GBR
+			add_historical_friend = FR2
+			add_historical_friend = RUS
+		}
+		USA = {
+			define_ruler = {
+				name = "Theodore Roosevelt"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 4
+				age = 43
+			}
+			define_advisor = {
+				type = army_reformer
+				name = "Wright Brothers"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+		}
+	}
+}
+
+# Assassination of Archduke Franz Ferdinand
+country_event = {
+	id = eh_ww1.2
+	title = "eh_ww1.2.t"
+	desc = "eh_ww1.2.d"
+	picture = ASSASSINATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AUH
+		is_year = 1914
+		NOT = { is_year = 1915 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			AUH = {
+				form_coalition_against = GBR
+				form_coalition_against = FR2
+				form_coalition_against = RUS
+				form_coalition_against = ITA
+				form_coalition_against = BEL
+				form_coalition_against = SER
+				add_trust = {
+					who = TUR
+					value = 25
+					mutual = yes
+				}
+			}
+			DE2 = {
+				create_guarantee = AUH
+				form_coalition_against = GBR
+				form_coalition_against = FR2
+				form_coalition_against = RUS
+				form_coalition_against = ITA
+				form_coalition_against = BEL
+				form_coalition_against = SER
+				add_trust = {
+					who = AUH
+					value = 25
+					mutual = yes
+				}
+				add_trust = {
+					who = TUR
+					value = 25
+					mutual = yes
+				}
+			}
+			GBR = {
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+				add_trust = {
+					who = FR2
+					value = 25
+					mutual = yes
+				}
+				add_trust = {
+					who = RUS
+					value = 25
+					mutual = yes
+				}
+				add_trust = {
+					who = ITA
+					value = 25
+					mutual = yes
+				}
+			}
+			FR2 = {
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+				add_trust = {
+					who = RUS
+					value = 25
+					mutual = yes
+				}
+				add_trust = {
+					who = ITA
+					value = 25
+					mutual = yes
+				}
+			}
+			RUS = {
+				create_guarantee = SER
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+				add_trust = {
+					who = ITA
+					value = 25
+					mutual = yes
+				}
+			}
+			ITA = {
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+				add_trust = {
+					who = DE2
+					value = -25
+					mutual = yes
+				}
+				add_trust = {
+					who = AUH
+					value = -25
+					mutual = yes
+				}
+				320 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = TUR
+				}
+			}
+			SER = {
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+				rascia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SER }
+							NOT = { province_id = 138 }
+							NOT = { province_id = 4754 }
+						}
+					}
+					cede_province = SER
+					add_core = SER
+					remove_core = TUR
+				}
+				3001 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SER }
+						}
+					}
+					cede_province = SER
+					add_core = SER
+					remove_core = TUR
+				}
+				4780 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SER }
+						}
+					}
+					cede_province = SER
+					add_core = SER
+					remove_core = TUR
+				}
+			}
+			GR2 = {
+				macedonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GR2 }
+							NOT = { province_id = 3001 }
+							NOT = { province_id = 4780 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				aegean_archipelago_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GR2 }
+							NOT = { province_id = 320 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				northern_greece_area = {
+					limit = {
+						NOT = { owned_by = GR2 }
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+				163 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+			}
+			BUL = {
+				1764 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUL }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+					remove_core = TUR
+				}
+				4705 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUL }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+					remove_core = TUR
+				}
+			}
+			ALB = {
+				albania_area = {
+					limit = {
+						NOT = { owned_by = ALB }
+					}
+					change_culture = albanian
+					cede_province = ALB
+					add_core = ALB
+					remove_core = TUR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww1.2.a"
+		ai_chance = { factor = 100 }
+		AUH = {
+			set_country_flag = ww1
+			add_army_tradition = -10
+			add_navy_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = 80
+			add_sailors = 800
+			remove_heir = { allow_new_heir = no }
+			declare_war_with_cb = {
+				who = SER
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_ww1.3 days = 300 }
+		}
+		DE2 = {
+			set_country_flag = ww1
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 150
+			add_sailors = 1500
+			join_all_offensive_wars_of = AUH
+			country_event = { id = eh_german.53 days = 1 }
+		}
+		TUR = {
+			set_country_flag = ww1
+			add_army_tradition = -10
+			add_navy_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = 30
+			add_sailors = 300
+		}
+		GBR = { 
+			set_country_flag = ww1
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 90
+			add_sailors = 900
+		}
+		FR2 = { 
+			set_country_flag = ww1
+			add_army_tradition = -10
+			add_navy_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = -90
+			add_sailors = -900
+		}
+		RUS = {
+			set_country_flag = ww1
+			add_army_tradition = -10
+			add_navy_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = -120
+			add_sailors = -1200
+			join_all_defensive_wars_of = SER
+			country_event = { id = eh_russian.49 days = 1 }
+		}
+		SER = { set_country_flag = ww1 }
+	}
+}
+
+# Western Front
+country_event = {
+	id = eh_ww1.3
+	title = "eh_ww1.3.t"
+	desc = "eh_ww1.3.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DE2 = {
+				white_peace = RUS
+				white_peace = SER
+				create_alliance = AUH
+				create_alliance = TUR
+				add_trust = {
+					who = GBR
+					value = -50
+					mutual = yes
+				}
+				add_trust = {
+					who = FR2
+					value = -50
+					mutual = yes
+				}
+				add_trust = {
+					who = RUS
+					value = -50
+					mutual = yes
+				}
+			}
+			AUH = {
+				white_peace = RUS
+				white_peace = SER
+				create_alliance = TUR
+				add_trust = {
+					who = GBR
+					value = -50
+					mutual = yes
+				}
+				add_trust = {
+					who = FR2
+					value = -50
+					mutual = yes
+				}
+				add_trust = {
+					who = RUS
+					value = -50
+					mutual = yes
+				}
+			}
+			GBR = {
+				add_trust = {
+					who = FR2
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = CAN
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = AUS
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = NZL
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = RUS
+					value = 25
+					mutual = yes
+				}
+				create_alliance = FR2
+				create_alliance = CAN
+				create_alliance = AUS
+				create_alliance = NZL
+				create_guarantee = FR2
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			FR2 = {
+				add_trust = {
+					who = RUS
+					value = 25
+					mutual = yes
+				}
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			RUS = {
+				create_guarantee = FR2
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			BEL = { 
+				set_country_flag = ww1
+				create_guarantee = FR2
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww1.3.a"
+		ai_chance = { factor = 100 }
+		DE2 = {
+			declare_war_with_cb = {
+				who = FR2
+				casus_belli = cb_imperial
+			}
+		}
+		AUH = {
+			join_all_offensive_wars_of = DE2
+			country_event = { id = eh_ww1.4 days = 30 }
+		}
+		TUR = {
+			join_all_defensive_wars_of = DE2
+			country_event = { id = eh_asia_turkey.27 days = 1 }
+		}
+		FR2 = {
+			country_event = { id = eh_french.59 days = 1 }
+		}
+		GBR = { 
+			join_all_defensive_wars_of = FR2
+			country_event = { id = eh_britain.65 days = 1 }
+		}
+		RUS = { join_all_defensive_wars_of = FR2 }
+		BEL = { join_all_defensive_wars_of = FR2 }
+		SER = { clr_country_flag = ww1 }
+	}
+}
+
+# Trench warfare
+country_event = {
+	id = eh_ww1.4
+	title = "eh_ww1.4.t"
+	desc = "eh_ww1.4.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DE2 = {
+				low_countries_region = {
+					limit = { owned_by = BEL }
+					change_controller = DE2
+				}
+				88 = { change_controller = DE2 }
+				181 = { change_controller = DE2 }
+				1743 = { change_controller = DE2 }
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww1.4.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AUH = { was_player = yes }
+			}
+			switch_tag = DE2
+		}
+	}
+}
+
+# Eastern Front
+country_event = {
+	id = eh_ww1.5
+	title = "eh_ww1.5.t"
+	desc = "eh_ww1.5.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DE2
+		is_year = 1915
+		NOT = { is_year = 1917 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			DE2 = {
+				europe = {
+					limit = {
+						AND = {
+							owned_by = DE2
+							NOT = { controlled_by = DE2 }
+						}
+					}
+					change_controller = DE2
+				}
+				low_countries_region = {
+					limit = { owned_by = BEL }
+					change_controller = DE2
+				}
+				poland_region = { change_controller = DE2 }
+				curonia_area = { change_controller = DE2 }
+				samogitia_area = { change_controller = DE2 }
+				podlasie_area = { change_controller = DE2 }
+				88 = { change_controller = DE2 }
+				181 = { change_controller = DE2 }
+				272 = { change_controller = DE2 }
+				1743 = { change_controller = DE2 }
+				4535 = { change_controller = DE2 }
+				4536 = { change_controller = DE2 }
+				4537 = { change_controller = DE2 }
+			}
+			AUH = {
+				europe = {
+					limit = {
+						AND = {
+							owned_by = AUH
+							NOT = { controlled_by = AUH }
+						}
+					}
+					change_controller = AUH
+				}
+				podolia_volhynia_area = { change_controller = AUH }
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww1.5.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			set_country_flag = uprising_eh
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_army_tradition = -10
+			add_navy_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_inflation = 1
+			add_war_exhaustion = 1
+			add_manpower = 120
+			add_sailors = 1200
+			33 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+			295 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# American entry into World War I
+country_event = {
+	id = eh_ww1.6
+	title = "eh_ww1.6.t"
+	desc = "eh_ww1.6.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1917
+		NOT = { is_year = 1918 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_country_flag = ww1
+				add_trust = {
+					who = GBR
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = CAN
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = AUS
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = NZL
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = FR2
+					value = 50
+					mutual = yes
+				}
+				create_alliance = GBR
+				create_alliance = CAN
+				create_alliance = AUS
+				create_alliance = NZL
+				create_alliance = FR2
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			GBR = {
+				create_alliance = CAN
+				create_alliance = AUS
+				create_alliance = NZL
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			FR2 = {
+				create_alliance = CAN
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+				add_manpower = 90
+				add_sailors = 900
+			}
+			ITA = {
+				set_country_flag = ww1
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			CAN = { 
+				set_country_flag = ww1
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			AUS = { 
+				set_country_flag = ww1
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+			NZL = { 
+				set_country_flag = ww1
+				form_coalition_against = DE2
+				form_coalition_against = AUH
+				form_coalition_against = TUR
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww1.6.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 50
+			add_sailors = 500
+			join_all_defensive_wars_of = FR2
+			define_ruler = {
+				name = "Woodrow Wilson"
+				change_adm = 5
+				change_dip = 6
+				change_mil = 4
+				age = 57
+			}
+		}
+		CAN = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 10
+			add_sailors = 500
+			join_all_defensive_wars_of = FR2
+		}
+		AUS = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 10
+			add_sailors = 500
+			join_all_defensive_wars_of = FR2
+		}
+		NZL = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 10
+			add_sailors = 500
+			join_all_defensive_wars_of = FR2
+		}
+		ITA = {
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 60
+			add_sailors = 600
+			join_all_defensive_wars_of = FR2
+			country_event = { id = eh_italian.19 days = 1 }
+		}
+	}
+}
+
+# Armistice of 11 November 1918
+country_event = {
+	id = eh_ww1.7
+	title = "eh_ww1.7.t"
+	desc = "eh_ww1.7.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1918
+		NOT = { is_year = 1919 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	immediate = {
+		hidden_effect = {
+			DE2 = {
+				white_peace = GBR
+				white_peace = CAN
+				white_peace = AUS
+				white_peace = NZL
+				white_peace = FR2
+				white_peace = RUS
+				white_peace = USA
+				white_peace = ITA
+			}
+			AUH = {
+				white_peace = GBR
+				white_peace = CAN
+				white_peace = AUS
+				white_peace = NZL
+				white_peace = FR2
+				white_peace = RUS
+				white_peace = USA
+				white_peace = ITA
+			}
+			TUR = {
+				white_peace = GBR
+				white_peace = CAN
+				white_peace = AUS
+				white_peace = NZL
+				white_peace = FR2
+				white_peace = RUS
+				white_peace = USA
+				white_peace = ITA
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww1.7.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			clr_country_flag = ww1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_army_tradition = 30
+			add_navy_tradition = 30
+			add_army_professionalism = 0.3
+			add_stability = 3
+			add_prestige = 30
+			add_inflation = -3
+			add_war_exhaustion = -3
+		}
+		GBR = {
+			clr_country_flag = ww1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_army_tradition = 30
+			add_navy_tradition = 30
+			add_army_professionalism = 0.3
+			add_stability = 3
+			add_prestige = 30
+			add_inflation = -3
+			add_war_exhaustion = -3
+			country_event = { id = eh_britain.66 days = 1 }
+		}
+		FR2 = {
+			clr_country_flag = ww1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_stability = 3
+			add_prestige = 30
+			add_inflation = -3
+			add_war_exhaustion = -3
+			country_event = { id = eh_french.60 days = 1 }
+		}
+		ITA = {
+			clr_country_flag = ww1
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_stability = 1
+			add_prestige = 10
+			add_inflation = -1
+			add_war_exhaustion = -1
+			country_event = { id = eh_italian.20 days = 1 }
+		}
+		DE2 = {
+			clr_country_flag = ww1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_army_tradition = -30
+			add_navy_tradition = -30
+			add_army_professionalism = -0.3
+			add_stability = 3
+			add_prestige = -30
+			add_inflation = 3
+			add_war_exhaustion = -3
+			country_event = { id = eh_german.54 days = 1 }
+		}
+		AUH = {
+			clr_country_flag = ww1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_army_tradition = -30
+			add_navy_tradition = -30
+			add_army_professionalism = -0.3
+			add_stability = 3
+			add_prestige = -30
+			add_inflation = 3
+			add_war_exhaustion = -3
+		}
+		TUR = {
+			clr_country_flag = ww1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_army_tradition = -30
+			add_navy_tradition = -30
+			add_army_professionalism = -0.3
+			add_stability = 3
+			add_prestige = -30
+			add_inflation = 3
+			add_war_exhaustion = -3
+			country_event = { id = eh_asia_turkey.28 days = 1 }
+		}
+		BEL = { clr_country_flag = ww1 }
+		CAN = { clr_country_flag = ww1 }
+		AUS = { clr_country_flag = ww1 }
+		NZL = { clr_country_flag = ww1 }
+	}
+}
+
+# Treaty of Versailles - World
+country_event = {
+	id = eh_ww1.8
+	title = "eh_ww1.8.t"
+	desc = "eh_ww1.8.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				493 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = DAN
+				}
+			}
+			GBR = {
+				somaliland_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = WAR
+				}
+				buzinza_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				tanzania_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				central_swahili_coast_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				mombasa_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				buha_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 4070 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				1243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				1249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				1992 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				4073 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				3059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				2792 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2789 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4041 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				4042 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+				4043 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DE2
+				}
+			}
+			FR2 = {
+				alsace_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				cameroon_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FR2 }
+							NOT = { province_id = 3059 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				188 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				3007 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				3020 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				1160 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				2286 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				3033 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				3063 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				2295 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				3101 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+				3103 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DE2
+				}
+			}
+			SOV = {
+				transoxiana_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = BUK
+				}
+				khiva_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = BUK
+				}
+				444 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = BUK
+				}
+			}
+			ITA = {
+				carinthia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITA }
+							NOT = { province_id = 129 }
+							NOT = { province_id = 4751 }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = AUH
+				}
+				110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = AUH
+				}
+				1794 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = CYR
+				}
+				4758 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = AUH
+				}
+				4172 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = CYR
+				}
+			}
+			BEL = {
+				flanders_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 4769 }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DE2
+				}
+				wallonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 94 }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DE2
+				}
+				brabant_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DE2
+				}
+				rwanda_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DE2
+				}
+				4070 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DE2
+				}
+			}
+			AUS = {
+				1236 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUS }
+						}
+					}
+					cede_province = AUS
+					add_core = AUS
+					remove_core = DE2
+				}
+			}
+			ZA2 = {
+				damaraland_area = {
+					limit = {
+						NOT = { owned_by = ZA2 }
+					}
+					cede_province = ZA2
+					add_core = ZA2
+					remove_core = DE2
+				}
+				namaqualand_area = {
+					limit = {
+						NOT = { owned_by = ZA2 }
+					}
+					cede_province = ZA2
+					add_core = ZA2
+					remove_core = DE2
+				}
+				3223 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZA2 }
+						}
+					}
+					cede_province = ZA2
+					add_core = ZA2
+					remove_core = DE2
+				}
+			}
+			JAP = {
+				1993 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAP }
+						}
+					}
+					cede_province = JAP
+					add_core = JAP
+					remove_core = DE2
+				}
+				1995 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAP }
+						}
+					}
+					cede_province = JAP
+					add_core = JAP
+					remove_core = DE2
+				}
+				1996 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAP }
+						}
+					}
+					cede_province = JAP
+					add_core = JAP
+					remove_core = DE2
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww1.8.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = { is_subject_of = DE2 }
+			grant_independence = yes
+		}
+		every_country = {
+			limit = { is_subject_of = AUH }
+			grant_independence = yes
+		}
+		every_country = {
+			limit = { is_subject_of = TUR }
+			grant_independence = yes
+		}
+		europe = { add_devastation = 50 }
+		FR2 = { country_event = { id = eh_modern_europe.11 days = 7 } }
+	}
+}
+
+########################################################################
+# Events for the World War II
+########################################################################
+
+# Nazi seized power
+country_event = {
+	id = eh_ww2.1
+	title = "eh_ww2.1.t"
+	desc = "eh_ww2.1.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_ww2.1.a"
+		ai_chance = { factor = 100 }
+		DEF = {
+			change_government = republic
+			add_government_reform = fascist_government
+			set_government_rank = 3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = -30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Adolf Hitler"
+				change_adm = 4
+				change_dip = 0
+				change_mil = 5
+				age = 44
+			}
+			define_advisor = {
+				type = fortification_expert
+				name = "Wernher von Braun"
+				culture = prussian
+				skill = 6
+				discount = yes
+			}
+		}
+		GBR = {
+			define_ruler = {
+				name = "George VI"
+				dynasty = "of Windsor"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 3
+				age = 40
+			}
+			define_consort = {
+				name = "Elizabeth"
+				dynasty = "Bowes-Lyon"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 35
+				female = yes
+			}
+			define_heir = {
+				name = "Elizabeth"
+				dynasty = "of Windsor"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 2
+				age = 10
+				female = yes
+			}
+			define_advisor = {
+				type = artist
+				name = "Charlie Chaplin"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+		}
+		USA = {
+			define_advisor = {
+				type = natural_scientist
+				name = "Albert Einstein"
+				culture = israeli
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Robert Oppenheimer"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Enrico Fermi"
+				culture = umbrian
+				skill = 6
+				discount = yes
+			}
+		}
+	}
+}
+
+# Anschluss
+country_event = {
+	id = eh_ww2.2
+	title = "eh_ww2.2.t"
+	desc = "eh_ww2.2.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DEF
+		is_year = 1938
+		NOT = { is_year = 1939 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			DEF = {
+				inherit = HAB
+				austria_proper_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = HAB
+				}
+				inner_austria_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = HAB
+				}
+				tirol_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DEF }
+							NOT = { province_id = 110 }
+							NOT = { province_id = 4758 }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = HAB
+				}
+				erzgebirge_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = CZS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww2.2.a"
+		ai_chance = { factor = 100 }
+		DEF = { country_event = { id = eh_ww2.3 days = 7 } }
+		ITA = { country_event = { id = eh_modern_europe.12 days = 7 } }
+	}
+}
+
+# Axis powers
+country_event = {
+	id = eh_ww2.3
+	title = "eh_ww2.3.t"
+	desc = "eh_ww2.3.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			DEF = {
+				add_historical_friend = JAP
+				add_historical_friend = ITA
+				add_historical_rival = USA
+				add_historical_rival = GBR
+				add_historical_rival = FR2
+				add_historical_rival = SOV
+				create_alliance = ITA
+				dissolve_parliament = yes
+			}
+			ITA = { 
+				add_historical_friend = DEF
+				add_historical_friend = JAP
+				add_historical_rival = USA
+				add_historical_rival = GBR
+				add_historical_rival = FR2
+				add_historical_rival = SOV
+				dissolve_parliament = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.3.a"
+		ai_chance = { factor = 100 }
+		DEF = {
+			add_trust = {
+				who = ITA
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = GBR
+				value = -50
+				mutual = yes
+			}
+			add_trust = {
+				who = FR2
+				value = -50
+				mutual = yes
+			}
+		}
+		ITA = {
+			add_trust = {
+				who = GBR
+				value = -50
+				mutual = yes
+			}
+			add_trust = {
+				who = FR2
+				value = -50
+				mutual = yes
+			}
+		}
+		JAP = { country_event = { id = eh_japan_JP2.25 days = 1 } }
+		GBR = { country_event = { id = eh_ww2.4 days = 7 } }
+	}
+}
+
+# Allied powers
+country_event = {
+	id = eh_ww2.4
+	title = "eh_ww2.4.t"
+	desc = "eh_ww2.4.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			GBR = {
+				add_historical_friend = USA
+				add_historical_friend = FR2
+				add_historical_friend = CAN
+				add_historical_friend = AUS
+				add_historical_friend = NZL
+				add_historical_rival = DEF
+				add_historical_rival = ITA
+				add_historical_rival = JAP
+				add_trust = {
+					who = USA
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = FR2
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = CAN
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = AUS
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = NZL
+					value = 50
+					mutual = yes
+				}
+				add_trust = {
+					who = POL
+					value = 25
+					mutual = yes
+				}
+			}
+			FR2 = {
+				add_historical_friend = USA
+				add_historical_friend = GBR
+				add_historical_rival = DEF
+				add_historical_rival = ITA
+				add_historical_rival = JAP
+				add_trust = {
+					who = POL
+					value = 25
+					mutual = yes
+				}
+			}
+			USA = {
+				add_historical_friend = GBR
+				add_historical_friend = FR2
+				add_historical_friend = CAN
+				add_historical_friend = AUS
+				add_historical_friend = NZL
+				add_historical_rival = DEF
+				add_historical_rival = ITA
+				add_historical_rival = JAP
+			}
+		}
+	}
+
+	option = {
+		name = "eh_ww2.4.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Invasion of Poland
+country_event = {
+	id = eh_ww2.5
+	title = "eh_ww2.5.t"
+	desc = "eh_ww2.5.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DEF
+		is_year = 1939
+		NOT = { is_year = 1940 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			GBR = { 
+				form_coalition_against = DEF
+				form_coalition_against = ITA
+				create_alliance = POL
+				create_guarantee = POL
+			}
+			FR2 = {
+				form_coalition_against = DEF
+				form_coalition_against = ITA
+				create_alliance = POL
+				create_guarantee = POL
+			}
+			POL = {
+				form_coalition_against = DEF
+				form_coalition_against = ITA
+			}
+			SOV = {
+				add_historical_friend = DEF
+				add_trust = {
+					who = DEF
+					value = 25
+					mutual = yes
+				}
+				add_trust = {
+					who = POL
+					value = -25
+					mutual = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.5.a"
+		ai_chance = { factor = 100 }
+		DEF = {
+			set_country_flag = ww2
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 120
+			add_sailors = 1200
+			add_trust = {
+				who = ITF
+				value = 50
+				mutual = yes
+			}
+			declare_war_with_cb = {
+				who = POL
+				casus_belli = cb_imperial
+			}
+		}
+		ITA = {
+			set_country_flag = ww2
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 80
+			add_sailors = 800
+		}
+		GBR = {
+			set_country_flag = ww2
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 100
+			add_sailors = 1000
+			join_all_defensive_wars_of = POL
+			country_event = { id = eh_britain.67 days = 1 }
+		}
+		FR2 = {
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = -100
+			add_sailors = -1000
+		}
+		POL = { 
+			set_country_flag = ww2
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = -10
+			add_sailors = -100
+		}
+	}
+}
+
+# Battle of France
+country_event = {
+	id = eh_ww2.6
+	title = "eh_ww2.6.t"
+	desc = "eh_ww2.6.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FR2
+		is_year = 1940
+		NOT = { is_year = 1941 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			FR2 = {
+				form_coalition_against = DEF
+				form_coalition_against = ITF
+			}
+			GBR = {
+				form_coalition_against = DEF
+				form_coalition_against = ITF
+				define_advisor = {
+					type = statesman
+					name = "Winston Churchill"
+					culture = english
+					skill = 6
+					discount = yes
+				}
+				define_general = {
+					name = "Bernard Montgomery"
+					shock = 5
+					fire = 4
+					manuever = 2
+					siege = 1
+				}
+			}
+			SOV = {
+				form_coalition_against = DEF
+				form_coalition_against = ITF
+				white_peace = JAP
+				ruthenia_region = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = POL
+				}
+				lithuania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { province_id = 4535 }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = POL
+				}
+				volhynia_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = POL
+				}
+				red_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = POL
+				}
+				podlasie_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = POL
+				}
+				pripyat_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = POL
+				}
+				define_general = {
+					name = "Aleksandr Vasilevsky"
+					shock = 5
+					fire = 4
+					manuever = 2
+					siege = 2
+				}
+				define_general = {
+					name = "Georgy Zhukov"
+					shock = 6
+					fire = 4
+					manuever = 2
+					siege = 3
+				}
+			}
+			DEF = {
+				white_peace = GBR
+				white_peace = FR2
+				inherit = POL
+				inherit = CZS
+				inherit = DNZ
+				poland_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DEF }
+							NOT = { area = red_ruthenia_area }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = POL
+				}
+				erzgebirge_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = CZS
+				}
+				bohemia_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = CZS
+				}
+				moravia_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = CZS
+				}
+				40 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = POL
+				}
+				43 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = DNZ
+				}
+				2997 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = POL
+				}
+				define_advisor = {
+					type = statesman
+					name = "Joseph Goebbels"
+					culture = hessian
+					skill = 3
+					discount = yes
+				}
+				define_general = {
+					name = "Erwin Rommel"
+					shock = 5
+					fire = 5
+					manuever = 6
+					siege = 1
+				}
+			}
+			ITA = {
+				inherit = ALB
+				albania_area = {
+					limit = {
+						NOT = { owned_by = ITA }
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = ALB
+				}
+			}
+			SVK = {
+				slovakia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SVK }
+							NOT = { province_id = 162 }
+						}
+					}
+					cede_province = SVK
+					add_core = SVK
+					remove_core = POL
+				}
+				162 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SVK }
+						}
+					}
+					cede_province = SVK
+					add_core = SVK
+					remove_core = CZS
+				}
+			}
+			POL = { clr_country_flag = ww2 }
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.6.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			add_historical_friend = SOV
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 100
+			add_sailors = 3000
+			create_alliance = FR2
+		}
+		SOV = {
+			add_historical_friend = USA
+			add_historical_friend = GBR
+			add_historical_friend = FR2
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_manpower = 500
+			add_sailors = 3000
+		}
+		FR2 = {
+			set_country_flag = ww2
+			europe = {
+				limit = { owned_by = FR2 }
+				kill_units = {
+					who = FR2
+					type = artillery
+				}
+				kill_units = {
+					who = FR2
+					type = cavalry
+				}
+				kill_units = {
+					who = FR2
+					type = infantry
+				}
+			}
+			join_all_defensive_wars_of = GBR
+			country_event = { id = eh_french.61 days = 1 }
+		}
+		DEF = {
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_manpower = 200
+			add_sailors = 3000
+			inherit = POL
+			create_subject = {
+				subject_type = sphere_member
+				subject = DAN
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = NOR
+			}
+			declare_war_with_cb = {
+				who = GBR
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_german.55 days = 1 }
+		}
+		JAP = { country_event = { id = eh_japan_JP2.28 days = 100 } }
+	}
+}
+
+# Battle of Britain
+country_event = {
+	id = eh_ww2.7
+	title = "eh_ww2.7.t"
+	desc = "eh_ww2.7.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1941
+		NOT = { is_year = 1942 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			HUN = {
+				transylvania_area = {
+					limit = {
+						NOT = { owned_by = HUN }
+					}
+					cede_province = HUN
+					add_core = HUN
+					remove_core = RMN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.7.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			home_counties_area = { add_devastation = 30 }
+			wessex_area = { add_devastation = 10 }
+			west_midlands_area = { add_devastation = 10 }
+			lowlands_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# Eastern Front
+country_event = {
+	id = eh_ww2.8
+	title = "eh_ww2.8.t"
+	desc = "eh_ww2.8.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DEF
+		is_year = 1941
+		NOT = { is_year = 1942 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			DEF = {
+				serbia_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+				129 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+				163 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+				1827 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+				148 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+				4702 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+				4751 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+				}
+			}
+			ITA = {
+				136 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				138 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				1766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				4753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				4754 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+			}
+			HUN = {
+				vojvodina_area = {
+					limit = {
+						NOT = { owned_by = HUN }
+					}
+					cede_province = HUN
+					add_core = HUN
+				}
+			}
+			BUL = {
+				3001 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUL }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+				}
+				4705 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUL }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+				}
+				4780 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUL }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+				}
+			}
+			SOV = {
+				inherit = EST
+				inherit = LTV
+				inherit = LIT
+				baltic_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { area = west_prussia_area }
+							NOT = { area = east_prussia_area }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = LTV
+				}
+				30 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = FIN
+				}
+				32 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = FIN
+				}
+			}
+			JAP = { country_event = { id = eh_japan_JP2.29 days = 100 } }
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.8.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			set_country_flag = ww2
+			add_manpower = 500
+			add_army_tradition = -30
+			add_army_professionalism = -0.3
+			join_all_defensive_wars_of = GBR
+			country_event = { id = eh_russian.51 days = 1 }
+		}
+	}
+}
+
+# Battle of Stalingrad
+country_event = {
+	id = eh_ww2.9
+	title = "eh_ww2.9.t"
+	desc = "eh_ww2.9.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DEF = {
+				europe = {
+					limit = { 
+						owned_by = DEF 
+					}
+					change_controller = DEF 
+				}
+				crimea_region = {
+					limit = { 
+						NOT = { area = astrakhan_area }
+					}
+					change_controller = DEF 
+				}
+				poland_region = { change_controller = DEF }
+				baltic_region = { change_controller = DEF }
+				ruthenia_region = { change_controller = DEF }
+				karelia_area = { change_controller = DEF }
+				novgorod_area = { change_controller = DEF }
+				pskov_area = { change_controller = DEF }
+				smolensk_area = { change_controller = DEF }
+				tver_area = { change_controller = DEF }
+			}
+			ITA = {
+				central_greece_area = {
+					limit = {
+						NOT = { owned_by = ITA }
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				morea_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITA }
+							NOT = { province_id = 163 }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				aegean_archipelago_area = {
+					limit = {
+						NOT = { owned_by = ITA }
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				northern_greece_area = {
+					limit = {
+						NOT = { owned_by = ITA }
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+				1853 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.9.a"
+		ai_chance = { factor = 100 }
+		DEF = {
+			add_prestige = -10
+			add_manpower = -100
+		}
+		SOV = {
+			add_prestige = 10
+			add_manpower = 500
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_war_exhaustion = -10
+		}
+	}
+}
+
+# African Campaign
+country_event = {
+	id = eh_ww2.10
+	title = "eh_ww2.10.t"
+	desc = "eh_ww2.10.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FR2
+		is_year = 1943
+		NOT = { is_year = 1944 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			FR2 = {
+				africa = {
+					limit = {
+						AND = {
+							owned_by = FRV
+							NOT = { owned_by = FR2 }
+							NOT = { region = kongo_region }
+							NOT = { area = borkou_ennedi_tibesti }
+							NOT = { area = kanem_area }
+							NOT = { area = chari_logone_area }
+							NOT = { area = cameroon_area }
+							NOT = { area = adamawa_plateau_area }
+							NOT = { province_id = 1166 }
+							NOT = { province_id = 1169 }
+							NOT = { province_id = 1160 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = FRV
+				}
+				north_america = {
+					limit = {
+						AND = {
+							owned_by = FRV
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = FRV
+				}
+				south_america = {
+					limit = {
+						AND = {
+							owned_by = FRV
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = FRV
+				}
+				mashriq_region = {
+					limit = {
+						AND = {
+							owned_by = FRV
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = FRV
+				}
+				fezzan_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ITA
+				}
+				2450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ITA
+				}
+			}
+			GBR = {
+				tripolitania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2450 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = ITA
+				}
+				cyrenaica_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = ITA
+				}
+				1794 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = ITA
+				}
+				4172 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = ITA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.10.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			set_capital = 338
+			add_stability = 1
+			add_prestige = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+		}
+		ITA = { country_event = { id = eh_ww2.11 days = 100 } }
+	}
+}
+
+# Italian campaign
+country_event = {
+	id = eh_ww2.11
+	title = "eh_ww2.11.t"
+	desc = "eh_ww2.11.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				add_stability = 1
+				add_prestige = 10
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+			}
+			GBR = {
+				add_stability = 1
+				add_prestige = 10
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+			}
+			SOV = {
+				add_stability = 1
+				add_prestige = 10
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				russia_region = { change_controller = SOV }
+				crimea_region = {
+					limit = {
+						NOT = { area = yedisan_area }
+					}
+					change_controller = SOV
+				}
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { area = minsk_area }
+							NOT = { area = pripyat_area }
+							NOT = { area = volhynia_area }
+							NOT = { area = podlasie_area }
+						}
+					}
+					change_controller = SOV
+				}
+				smolensk_area = { change_controller = SOV }
+				tver_area = { change_controller = SOV }
+			}
+			DEF = {
+				add_stability = -1
+				add_prestige = -10
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				carinthia_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				rascia_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				albania_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				northern_greece_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				central_greece_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				morea_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				aegean_archipelago_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+				1853 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = ITA
+				}
+			}
+			ITF = {
+				italy_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITF }
+							NOT = { area = corsica_sardinia_area }
+							NOT = { area = calabria_area }
+							NOT = { area = naples_area }
+							NOT = { area = sicily_area }
+							NOT = { area = western_sicily_area }
+							NOT = { area = apulia_area }
+							NOT = { province_id = 102 }
+							NOT = { province_id = 120 }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = ITF
+					add_core = ITF
+				}
+				110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITF }
+						}
+					}
+					cede_province = ITF
+					add_core = ITF
+				}
+				4738 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITF }
+						}
+					}
+					cede_province = ITF
+					add_core = ITF
+				}
+				4758 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITF }
+						}
+					}
+					cede_province = ITF
+					add_core = ITF
+				}
+			}
+			ITA = {
+				white_peace = USA
+				add_trust = {
+					who = DEF
+					value = -50
+					mutual = yes
+				}
+				add_trust = {
+					who = JAP
+					value = -50
+					mutual = yes
+				}
+			}
+			ET2 = {
+				tigray_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				central_ethiopia_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				southern_ethiopia_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				hadiya_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				damot_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				shewa_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				ogaden_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				red_sea_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ET2 }
+							NOT = { province_id = 1232 }
+							NOT = { province_id = 2324 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				aussa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ET2 }
+							NOT = { province_id = 1215 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+				ifat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ET2 }
+							NOT = { province_id = 1212 }
+							NOT = { province_id = 2793 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+					remove_core = ITA
+				}
+			}
+			TKY = {
+				2313 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TKY }
+						}
+					}
+					cede_province = TKY
+					add_core = TKY
+					remove_core = FR2
+				}
+			}
+			LEB = {
+				378 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LEB }
+						}
+					}
+					cede_province = LEB
+					add_core = LEB
+					remove_core = FR2
+				}
+				1855 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LEB }
+						}
+					}
+					cede_province = LEB
+					add_core = LEB
+					remove_core = FR2
+				}
+			}
+			CRO = {
+				bosnia_area = {
+					limit = {
+						NOT = { owned_by = CRO }
+					}
+					cede_province = CRO
+					add_core = CRO
+					remove_core = YUG
+				}
+				croatia_area = {
+					limit = {
+						NOT = { owned_by = CRO }
+					}
+					cede_province = CRO
+					add_core = CRO
+					remove_core = YUG
+				}
+				slavonia_area = {
+					limit = {
+						NOT = { owned_by = CRO }
+					}
+					cede_province = CRO
+					add_core = CRO
+					remove_core = YUG
+				}
+				east_adriatic_coast_area = {
+					limit = {
+						NOT = { owned_by = CRO }
+					}
+					cede_province = CRO
+					add_core = CRO
+					remove_core = YUG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.11.a"
+		ai_chance = { factor = 100 }
+		DEF = { 
+			create_subject = {
+				subject_type = sphere_member
+				subject = ITF
+			}
+		}
+		ITF = {
+			set_country_flag = ww2
+			set_country_flag = eh_fascist
+			change_government = republic
+			add_government_reform = fascist_government
+			set_government_rank = 3
+			create_alliance = DEF
+			create_alliance = JAP
+			set_capital = 107
+			join_all_offensive_wars_of = DEF
+			add_trust = {
+				who = DEF
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = JAP
+				value = 50
+				mutual = yes
+			}
+			define_ruler = {
+				name = "Benito Mussolini"
+				change_adm = 2
+				change_dip = 1
+				change_mil = 3
+				age = 60
+			}
+		}
+		ITA = {
+			clr_country_flag = eh_fascist
+			change_government = monarchy
+			add_government_reform = parliamentary_reform
+			set_government_rank = 2
+			set_capital = 121
+			define_ruler = {
+				name = "Vittorio Emmanuele III"
+				dynasty = "di Savoia"
+				change_adm = 2
+				change_dip = 4
+				change_mil = 3
+				age = 74
+			}
+			define_consort = {
+				name = "Elena"
+				dynasty = "Njegos"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 70
+				female = yes
+			}
+			define_heir = {
+				name = "Umberto II"
+				dynasty = "di Savoia"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+			}
+		}
+		ET2 = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 3
+			set_capital = 1213
+			define_ruler = {
+				name = "Haile Selassie I"
+				dynasty = "Solomonid"
+				change_adm = 3
+				change_dip = 6
+				change_mil = 4
+				age = 52
+			}
+			define_heir = {
+				dynasty = "Solomonid"
+			}
+		}
+	}
+}
+
+# Cairo Declaration
+country_event = {
+	id = eh_ww2.12
+	title = "eh_ww2.12.t"
+	desc = "eh_ww2.12.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1943
+		NOT = { is_year = 1944 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_ww2.12.a"
+		ai_chance = { factor = 100 }
+		USA = { 
+			add_prestige = 10
+			add_war_exhaustion = -10
+		}
+		GBR = { 
+			add_prestige = 10
+			add_war_exhaustion = -10
+		}
+		FRM = {
+			add_prestige = 10
+			add_war_exhaustion = -10
+		}
+		FR2 = { add_war_exhaustion = -10 }
+		SOV = { add_war_exhaustion = -10 }
+		DEF = { add_prestige = -10 }
+		ITF = { add_prestige = -10 }
+		JAP = { add_prestige = -10 }
+	}
+}
+
+# Normandy landings
+country_event = {
+	id = eh_ww2.13
+	title = "eh_ww2.13.t"
+	desc = "eh_ww2.13.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1944
+		NOT = { is_year = 1945 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			FR2 = {
+				inherit = FRV
+				france_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FR2 }
+							NOT = { area = ile_de_france_area }
+							NOT = { area = picardy_area }
+							NOT = { area = lorraine_area }
+							NOT = { area = champagne_area }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+				89 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+				186 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+				1247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = FRV
+				}
+				1880 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+			}
+			SOV = {
+				russia_region = { change_controller = SOV }
+				ruthenia_region = { change_controller = SOV }
+				crimea_region = { change_controller = SOV }
+				baltic_region = {
+					limit = {
+						AND = {
+							NOT = { area = estonia_ingria_area }
+							NOT = { area = livonia_area }
+						}
+					}
+					change_controller = SOV
+				}
+				bessarabia_area = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = RMN
+				}
+				3061 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = RMN
+				}
+			}
+			RMN = {
+				transylvania_area = {
+					limit = {
+						NOT = { owned_by = RMN }
+					}
+					cede_province = RMN
+					add_core = RMN
+					remove_core = HUN
+				}
+			}
+			DEF = {
+				vojvodina_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = HUN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.13.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			add_prestige = 10
+			france_region = {
+				limit = { owned_by = FR2 }
+				remove_core = FRV
+			}
+		}
+		USA = { add_prestige = 10 }
+		GBR = { add_prestige = 10 }
+		SOV = { add_prestige = 10 }
+		FRV = { clr_country_flag = ww2 }
+	}
+}
+
+# Western Allied invasion of Germany
+country_event = {
+	id = eh_ww2.14
+	title = "eh_ww2.14.t"
+	desc = "eh_ww2.14.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1945
+		NOT = { is_year = 1946 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				hesse_area = { change_controller = USA }
+				westphalia_area = { change_controller = USA }
+				north_rhine_area = { change_controller = USA }
+			}
+			GBR = {
+				low_countries_region = {
+					limit = {
+						NOT = { area = frisia_area }
+					}
+					change_controller = GBR
+				}
+				vojvodina_area = { change_controller = GBR }
+				serbia_area = { change_controller = GBR }
+				albania_area = { change_controller = GBR }
+				rascia_area = { change_controller = GBR }
+			}
+			FR2 = {
+				france_region = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+				alsace_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+				4769 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = DEF
+				}
+			}
+			SOV = {
+				baltic_region = { change_controller = SOV }
+				poland_region = {
+					limit = {
+						AND = {
+							NOT = { area = silesia_area }
+							NOT = { area = wielkopolska_area }
+						}
+					}
+					change_controller = SOV
+				}
+			}
+			GR2 = {
+				central_greece_area = {
+					limit = {
+						NOT = { owned_by = GR2 }
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = DEF
+				}
+				morea_area = {
+					limit = {
+						NOT = { owned_by = GR2 }
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = DEF
+				}
+				northern_greece_area = {
+					limit = {
+						NOT = { owned_by = GR2 }
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = DEF
+				}
+				macedonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GR2 }
+							NOT = { province_id = 3001 }
+							NOT = { province_id = 4780 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = DEF
+				}
+				aegean_archipelago_area = {
+					limit = {
+						NOT = { owned_by = GR2 }
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = DEF
+				}
+				4705 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = DEF
+				}
+			}
+			DEF = {
+				vojvodina_area = {
+					limit = {
+						NOT = { owned_by = DEF }
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = HUN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.14.a"
+		ai_chance = { factor = 100 }
+		USA = { country_event = { id = eh_ww2.15 days = 100 } }
+		FR2 = { set_capital = 183 }
+		ITA = { clr_country_flag = ww2 }
+	}
+}
+
+# Yalta Conference
+country_event = {
+	id = eh_ww2.15
+	title = "eh_ww2.15.t"
+	desc = "eh_ww2.15.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				lower_rhineland_area = { change_controller = USA }
+				palatinate_area = { change_controller = USA }
+			}
+			SOV = { 
+				wielkopolska_area = { change_controller = SOV }
+				west_prussia_area = { change_controller = SOV }
+				east_prussia_area = { change_controller = SOV }
+			}
+			ITA = {
+				inherit = ITF
+				italy_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ITA }
+							NOT = { province_id = 102 }
+							NOT = { province_id = 126 }
+							NOT = { province_id = 1247 }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = ITF
+				}
+				110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = ITF
+				}
+				4738 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = ITF
+				}
+				4758 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITA }
+						}
+					}
+					cede_province = ITA
+					add_core = ITA
+					remove_core = ITF
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.15.a"
+		ai_chance = { factor = 100 }
+		USA = { add_prestige = 10 }
+		GBR = { add_prestige = 10 }
+		SOV = { add_prestige = 10 }
+		ITF = { clr_country_flag = ww2 }
+		DEF = { country_event = { id = eh_ww2.16 days = 30 } }
+		JAP = { 
+			add_prestige = -10
+			country_event = { id = eh_japan_JP2.36 days = 10 }
+		}
+	}
+}
+
+# German Instrument of Surrender
+country_event = {
+	id = eh_ww2.16
+	title = "eh_ww2.16.t"
+	desc = "eh_ww2.16.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			europe = { add_devastation = 80 }
+			DEF = {
+				remove_country_modifier = major_power
+				add_trust = {
+					who = JAP
+					value = -50
+					mutual = yes
+				}
+				define_ruler = {
+					name = "Allied Occupation"
+				}
+			}
+			WGE = {
+				85 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = WGE }
+						}
+					}
+					cede_province = WGE
+					add_core = WGE
+					remove_core = DEF
+				}
+			}
+			EGE = {
+				mittelmark_area = {
+					limit = {
+						NOT = { owned_by = EGE }
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+				vorpommern_area = {
+					limit = {
+						NOT = { owned_by = EGE }
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+				mecklenburg_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EGE }
+							NOT = { province_id = 45 }
+						}
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+				thuringia_area = {
+					limit = {
+						NOT = { owned_by = EGE }
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+				northern_saxony_area = {
+					limit = {
+						NOT = { owned_by = EGE }
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+				south_saxony_area = {
+					limit = {
+						NOT = { owned_by = EGE }
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+				lusatia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EGE }
+							NOT = { province_id = 4778 }
+						}
+					}
+					cede_province = EGE
+					add_core = EGE
+					remove_core = DEF
+				}
+			}
+			HAB = {
+				austria_proper_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = DEF
+				}
+				inner_austria_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = DEF
+				}
+				tirol_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 110 }
+							NOT = { province_id = 4758 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = DEF
+				}
+				east_bavaria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 4709 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = DEF
+				}
+			}
+			DAN = {
+				denmark_area = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = DEF
+				}
+				jutland_area = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = DEF
+				}
+				greenland_area = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = DEF
+				}
+				3008 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = DEF
+				}
+			}
+			NOR = {
+				western_norway = {
+					limit = {
+						NOT = { owned_by = NOR }
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DEF
+				}
+				eastern_norway = {
+					limit = {
+						NOT = { owned_by = NOR }
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DEF
+				}
+				northern_norway = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOR }
+							NOT = { province_id = 10 }
+						}
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DEF
+				}
+				315 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOR }
+						}
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DEF
+				}
+			}
+			NED = {
+				holland_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = DEF
+				}
+				north_brabant_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = DEF
+				}
+				frisia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 1931 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = DEF
+				}
+			}
+			BEL = {
+				flanders_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 4769 }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DEF
+				}
+				wallonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 94 }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DEF
+				}
+				brabant_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+					remove_core = DEF
+				}
+			}
+			LUX = {
+				94 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = LUX }
+						}
+					}
+					cede_province = LUX
+					add_core = LUX
+					remove_core = DEF
+				}
+			}
+			POL = {
+				poland_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POL }
+							NOT = { area = red_ruthenia_area }
+						}
+					}
+					change_religion = catholic
+					cede_province = POL
+					add_core = POL
+					remove_core = DEF
+				}
+				east_prussia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POL }
+							NOT = { province_id = 40 }
+							NOT = { province_id = 41 }
+							NOT = { province_id = 767 }
+						}
+					}
+					change_religion = catholic
+					cede_province = POL
+					add_core = POL
+					remove_core = DEF
+				}
+				west_prussia_area = {
+					limit = {
+						NOT = { owned_by = POL }
+					}
+					change_religion = catholic
+					cede_province = POL
+					add_core = POL
+					remove_core = DEF
+				}
+				hinter_pommern_area = {
+					limit = {
+						NOT = { owned_by = POL }
+					}
+					change_religion = catholic
+					cede_province = POL
+					add_core = POL
+					remove_core = DEF
+				}
+				neumark_area = {
+					limit = {
+						NOT = { owned_by = POL }
+					}
+					change_religion = catholic
+					cede_province = POL
+					add_core = POL
+					remove_core = DEF
+				}
+				269 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = POL }
+						}
+					}
+					add_core = POL
+					cede_province = POL
+					remove_core = SOV
+				}
+				4924 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = POL }
+						}
+					}
+					add_core = POL
+					cede_province = POL
+					remove_core = SOV
+				}
+				2424 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = POL }
+						}
+					}
+					add_core = POL
+					cede_province = POL
+					remove_core = SOV
+				}
+				4778 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = POL }
+						}
+					}
+					add_core = POL
+					cede_province = POL
+					remove_core = DEF
+				}
+			}
+			CZS = {
+				inherit = SVK
+				erzgebirge_area = {
+					limit = {
+						NOT = { owned_by = CZS }
+					}
+					cede_province = CZS
+					add_core = CZS
+					remove_core = DEF
+				}
+				bohemia_area = {
+					limit = {
+						NOT = { owned_by = CZS }
+					}
+					cede_province = CZS
+					add_core = CZS
+					remove_core = DEF
+				}
+				moravia_area = {
+					limit = {
+						NOT = { owned_by = CZS }
+					}
+					cede_province = CZS
+					add_core = CZS
+					remove_core = DEF
+				}
+				slovakia_area = {
+					limit = {
+						NOT = { owned_by = CZS }
+					}
+					cede_province = CZS
+					add_core = CZS
+					remove_core = DEF
+				}
+			}
+			YUG = {
+				inherit = CRO
+				carinthia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YUG }
+							NOT = { province_id = 4738 }
+						}
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = ITF
+				}
+				croatia_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = CRO
+				}
+				slavonia_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = CRO
+				}
+				bosnia_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = CRO
+				}
+				east_adriatic_coast_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = CRO
+				}
+				vojvodina_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = DEF
+				}
+				serbia_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = DEF
+				}
+				rascia_area = {
+					limit = {
+						NOT = { owned_by = YUG }
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = DEF
+				}
+				3001 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YUG }
+						}
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = DEF
+				}
+				4780 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YUG }
+						}
+					}
+					cede_province = YUG
+					add_core = YUG
+					remove_core = DEF
+				}
+			}
+			ALB = {
+				albania_area = {
+					limit = {
+						NOT = { owned_by = ALB }
+					}
+					cede_province = ALB
+					add_core = ALB
+					remove_core = DEF
+				}
+			}
+			SOV = {
+				baltic_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { area = west_prussia_area }
+							NOT = { province_id = 2958 }
+							NOT = { province_id = 3100 }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = DEF
+				}
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { province_id = 269 }
+							NOT = { province_id = 4924 }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = DEF
+				}
+				red_ruthenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { province_id = 2424 }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = DEF
+				}
+				716 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = TTU
+				}
+				1952 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = HUN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.16.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				DEF = { was_player = yes }
+			}
+			switch_tag = WGE
+		}
+		every_country = {
+			limit = { is_subject_of = DEF }
+			grant_independence = yes
+		}
+		every_country = {
+			limit = { war_with = DEF }
+			white_peace = DEF
+		}
+		USA = { country_event = { id = eh_ww2.17 days = 30 } }
+		DAN = {
+			set_capital = 12
+			grant_independence = yes
+		}
+		NOR = { 
+			set_capital = 17
+			grant_independence = yes
+		}
+		NED = { 
+			set_capital = 97
+			grant_independence = yes
+		}
+		BEL = { 
+			set_capital = 92
+			grant_independence = yes
+		}
+		HAB = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 134
+			change_primary_culture = austrian
+			change_religion = secularism
+			grant_independence = yes
+			add_treasury = 10000
+		}
+		CZS = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 266
+			change_primary_culture = czech
+			change_religion = secularism
+			grant_independence = yes
+			add_treasury = 10000
+		}
+		POL = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 257
+			change_primary_culture = polish
+			change_religion = secularism
+			grant_independence = yes
+			add_treasury = 10000
+			every_owned_province = {
+				limit = {
+					NOT = { area = silesia_area }
+				}
+				change_culture = polish
+				add_devastation = 50
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+		}
+		HUN = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 153
+			change_primary_culture = hungarian
+			change_religion = secularism
+			grant_independence = yes
+			add_treasury = 10000
+		}
+		CZS = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 266
+			change_primary_culture = czech
+			change_religion = secularism
+			grant_independence = yes
+			add_treasury = 10000
+		}
+		YUG = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 4362
+			change_primary_culture = serbian
+			change_religion = secularism
+			grant_independence = yes
+			add_treasury = 10000
+		}
+		EGE = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 50
+			change_primary_culture = prussian
+			change_religion = secularism
+			add_treasury = 10000
+			every_owned_province = { change_culture = prussian }
+		}
+		DEF = {
+			clr_country_flag = ww2
+			clr_country_flag = eh_fascist
+			country_event = { id = eh_german.56 days = 1 }
+		}
+	}
+}
+
+# Potsdam Declaration
+country_event = {
+	id = eh_ww2.17
+	title = "eh_ww2.17.t"
+	desc = "eh_ww2.17.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			africa_superregion = {
+				add_base_tax = -10
+				add_base_production = -10
+				add_base_manpower = -1
+			}
+			southern_africa_superregion = {
+				limit = {
+					NOT = { province_id = 1177 }
+				}
+				add_base_tax = -10
+				add_base_production = -10
+				add_base_manpower = -1
+			}
+			china_superregion = {
+				limit = {
+					AND = {
+						NOT = { province_id = 667 }
+						NOT = { province_id = 1816 }
+						NOT = { province_id = 1822 }
+						NOT = { province_id = 3005 }
+					}
+				}
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -2
+			}
+			far_east_superregion = {
+				limit = {
+					AND = {
+						NOT = { province_id = 735 }
+						NOT = { province_id = 1020 }
+						NOT = { province_id = 1028 }
+					}
+				}
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -1
+			}
+			india_superregion = {
+				limit = {
+					AND = {
+						NOT = { province_id = 522 }
+						NOT = { province_id = 529 }
+						NOT = { province_id = 561 }
+					}
+				}
+				add_base_tax = -10
+				add_base_production = -10
+				add_base_manpower = -1
+			}
+			east_indies_superregion = {
+				limit = {
+					AND = {
+						NOT = { province_id = 630 }
+						NOT = { province_id = 4815 }
+						NOT = { province_id = 4831 }
+					}
+				}
+				add_base_tax = -10
+				add_base_production = -10
+				add_base_manpower = -2
+			}
+			tartary_superregion = {
+				add_base_tax = -10
+				add_base_production = -10
+				add_base_manpower = -1
+			}
+			near_east_superregion = {
+				limit = {
+					NOT = { province_id = 361 }
+				}
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+			persia_superregion = {
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+			europe_superregion = {
+				limit = {
+					AND = {
+						NOT = { province_id = 630 }
+						NOT = { province_id = 4815 }
+						NOT = { province_id = 4831 }
+					}
+				}
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -1
+			}
+			eastern_europe_superregion = {
+				limit = {
+					AND = {
+						NOT = { province_id = 33 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 153 }
+						NOT = { province_id = 257 }
+						NOT = { province_id = 295 }
+					}
+				}
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.17.a"
+		ai_chance = { factor = 100 }
+		USA = { 
+			add_prestige = 10
+			define_ruler = {
+				name = "Harry Truman"
+				change_adm = 0
+				change_dip = 1
+				change_mil = 2
+				age = 61
+			}
+		}
+		GBR = { add_prestige = 10 }
+		FRM = { add_prestige = 10 }
+		JAP = { 
+			add_prestige = -10
+			country_event = { id = eh_japan_JP2.37 days = 30 }
+		}
+	}
+}
+
+# Japanese Instrument of Surrender
+country_event = {
+	id = eh_ww2.18
+	title = "eh_ww2.18.t"
+	desc = "eh_ww2.18.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				moluccas_region = {
+					limit = { owned_by = A16 }
+					change_controller = A16
+				}
+				1993 = {
+					if = {
+						limit = { owned_by = JAP }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = JAP
+				}
+				1995 = {
+					if = {
+						limit = { owned_by = JAP }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = JAP
+				}
+			}
+			SOV = {
+				1032 = {
+					if = {
+						limit = { owned_by = JAP }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = JAP
+				}
+				1033 = {
+					if = {
+						limit = { owned_by = JAP }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = JAP
+				}
+				3010 = {
+					if = {
+						limit = { owned_by = JAP }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = JAP
+				}
+			}
+			GBR = {
+				north_malaya_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = JAP
+				}
+			}
+			NED = {
+				vogelkop_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = JAP
+				}
+				northern_papua_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 2719 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = JAP
+				}
+			}
+			FRM = {
+				south_china_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRM }
+							NOT = { area = guangxi_area }
+							NOT = { area = jiangsu_area }
+							NOT = { province_id = 668 }
+							NOT = { province_id = 3005 }
+							NOT = { province_id = 2161 }
+							NOT = { province_id = 685 }
+						}
+					}
+					cede_province = FRM
+					add_core = FRM
+					remove_core = CNF
+				}
+				xinan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRM }
+							NOT = { area = yun_gui_borderland_area }
+							NOT = { province_id = 662 }
+							NOT = { province_id = 663 }
+						}
+					}
+					cede_province = FRM
+					add_core = FRM
+				}
+				anhui_area = {
+					limit = {
+						NOT = { owned_by = FRM }
+					}
+					cede_province = FRM
+					add_core = FRM
+				}
+				north_henan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRM }
+							NOT = { province_id = 692 }
+						}
+					}
+					cede_province = FRM
+					add_core = FRM
+				}
+				henan_area = {
+					limit = {
+						NOT = { owned_by = FRM }
+					}
+					cede_province = FRM
+					add_core = FRM
+				}
+				shaanxi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRM }
+							NOT = { province_id = 2179 }
+						}
+					}
+					cede_province = FRM
+					add_core = FRM
+				}
+				1816 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRM }
+						}
+					}
+					cede_province = FRM
+					add_core = FRM
+					remove_core = CNF
+				}
+				4194 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRM }
+						}
+					}
+					cede_province = FRM
+					add_core = FRM
+					remove_core = CNF
+				}
+				country_event = { id = eh_asia_CHN.27 days = 1 }
+			}
+			A12 = {
+				shanxi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = A12 }
+							NOT = { province_id = 694 }
+							NOT = { province_id = 2178 }
+						}
+					}
+					cede_province = A12
+					add_core = A12
+					remove_core = CNF
+				}
+				701 = {
+					if = {
+						limit = {
+							NOT = { owned_by = A12 }
+						}
+					}
+					cede_province = A12
+					add_core = A12
+					remove_core = CNF
+				}
+				702 = {
+					if = {
+						limit = {
+							NOT = { owned_by = A12 }
+						}
+					}
+					cede_province = A12
+					add_core = A12
+					remove_core = CNF
+				}
+				4223 = {
+					if = {
+						limit = {
+							NOT = { owned_by = A12 }
+						}
+					}
+					cede_province = A12
+					add_core = A12
+					remove_core = CNF
+				}
+			}
+			CGX = {
+				guangxi_area = {
+					limit = {
+						NOT = { owned_by = CGX }
+					}
+					cede_province = CGX
+					add_core = CGX
+				}
+				2161 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CGX }
+						}
+					}
+					cede_province = CGX
+					add_core = CGX
+				}
+			}
+			CHN = {
+				manchuria_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CHN }
+							NOT = { area = east_heilongjiang_area }
+							NOT = { area = central_ilin_hala_area }
+							NOT = { area = ilan_hala_area }
+							NOT = { area = central_jilin_area }
+							NOT = { area = furdan_area }
+							NOT = { province_id = 3010 }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MCK
+				}
+				cicigar_area = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MCK
+				}
+				chahar_area = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MCK
+				}
+				eastern_mongolia = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MGJ
+				}
+				inner_mongolia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CHN }
+							NOT = { province_id = 702 }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MGJ
+				}
+				hebei_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CHN }
+							NOT = { province_id = 1816 }
+							NOT = { province_id = 4194 }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				south_hebei_area = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				west_shandong_area = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				shandong_area = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				jiangsu_area = {
+					limit = {
+						NOT = { owned_by = CHN }
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				694 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				723 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MGJ
+				}
+				685 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				692 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				2136 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				2178 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = CNF
+				}
+				2179 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+				}
+				2181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+				}
+				4673 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHN }
+						}
+					}
+					cede_province = CHN
+					add_core = CHN
+					remove_core = MGJ
+				}
+			}
+			NOK = {
+				pyongan_area = {
+					limit = {
+						NOT = { owned_by = NOK }
+					}
+					cede_province = NOK
+					add_core = NOK
+					remove_core = JAP
+				}
+				hamgyeong_area = {
+					limit = {
+						NOT = { owned_by = NOK }
+					}
+					cede_province = NOK
+					add_core = NOK
+					remove_core = JAP
+				}
+				western_korea_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOK }
+							NOT = { province_id = 735 }
+							NOT = { province_id = 4230 }
+						}
+					}
+					cede_province = NOK
+					add_core = NOK
+					remove_core = JAP
+				}
+			}
+			SKO = {
+				south_korea_area = {
+					limit = {
+						NOT = { owned_by = SKO }
+					}
+					cede_province = SKO
+					add_core = SKO
+					remove_core = JAP
+				}
+				eastern_korea_area = {
+					limit = {
+						NOT = { owned_by = SKO }
+					}
+					cede_province = SKO
+					add_core = SKO
+					remove_core = JAP
+				}
+				western_korea_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SKO }
+							NOT = { province_id = 733 }
+							NOT = { province_id = 4231 }
+						}
+					}
+					cede_province = SKO
+					add_core = SKO
+					remove_core = JAP
+				}
+			}
+			NVI = {
+				red_river_delta_area = {
+					limit = { 
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+					remove_core = FR2
+				}
+				vietnam_area = {
+					limit = { 
+						NOT = { owned_by = NVI }
+					}
+					cede_province = NVI
+					add_core = NVI
+					remove_core = FR2
+				}
+			}
+			IDN = {
+				malaya_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = IDN }
+							NOT = { area = tenasserim_area }
+							NOT = { area = malacca_area }
+							NOT = { area = malaya_area }
+							NOT = { area = johor_area }
+							NOT = { area = indian_ocean_islands_area }
+							NOT = { area = north_malaya_area }
+							NOT = { province_id = 574 }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				moluccas_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = IDN }
+							NOT = { area = papua_area }
+							NOT = { area = northern_papua_area }
+							NOT = { area = vogelkop_area }
+							NOT = { area = luzon_area }
+							NOT = { area = southern_luzon_area }
+							NOT = { area = palawan_area }
+							NOT = { area = visayas_area }
+							NOT = { area = west_mindanao_area }
+							NOT = { area = mindanao_area }
+							NOT = { province_id = 2695 }
+							NOT = { province_id = 3114 }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				indonesia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = IDN }
+							NOT = { area = brunei_area }
+							NOT = { area = sabah_area }
+							NOT = { province_id = 2703 }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				646 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = GBR
+				}
+				659 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				2684 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				4802 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				659 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				2683 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				2686 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+				3213 = {
+					if = {
+						limit = {
+							NOT = { owned_by = IDN }
+						}
+					}
+					cede_province = IDN
+					add_core = IDN
+					remove_core = NED
+				}
+			}
+			every_country = {
+				limit = { is_subject_of = JAP }
+				grant_independence = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_ww2.18.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			clr_country_flag = ww2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_army_tradition = 30
+			add_navy_tradition = 30
+			add_army_professionalism = 0.3
+			add_stability = 3
+			add_prestige = 30
+			add_inflation = -3
+			add_war_exhaustion = -3
+			add_historical_rival = SOV
+			remove_historical_friend = SOV
+			remove_historical_rival = DEF
+			remove_historical_rival = ITF
+			remove_historical_rival = JAP
+			add_trust = {
+				who = GBR
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = CAN
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = AUS
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = NZL
+				value = 25
+				mutual = yes
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = JAP
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = SKO
+			}
+			country_event = { id = eh_USA.30 days = 1 }
+		}
+		SOV = {
+			clr_country_flag = ww2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_army_tradition = 30
+			add_navy_tradition = 30
+			add_army_professionalism = 0.3
+			add_stability = 3
+			add_prestige = 30
+			add_inflation = -3
+			add_war_exhaustion = -3
+			add_historical_rival = USA
+			remove_historical_friend = USA
+			remove_historical_rival = DEF
+			remove_historical_rival = ITF
+			remove_historical_rival = JAP
+			add_trust = {
+				who = CHN
+				value = 25
+				mutual = yes
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = NOK
+			}
+			country_event = { id = eh_russian.52 days = 1 }
+		}
+		GBR = {
+			clr_country_flag = ww2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_army_tradition = 30
+			add_navy_tradition = 30
+			add_army_professionalism = 0.3
+			add_stability = 3
+			add_prestige = 30
+			add_inflation = -3
+			add_war_exhaustion = -3
+			add_historical_rival = SOV
+			remove_historical_friend = SOV
+			remove_historical_rival = DEF
+			remove_historical_rival = ITF
+			remove_historical_rival = JAP
+			add_trust = {
+				who = FR2
+				value = 25
+				mutual = yes
+			}
+			country_event = { id = eh_britain.68 days = 1 }
+		}
+		FR2 = {
+			clr_country_flag = ww2
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_stability = 3 
+			add_prestige = 30
+			add_historical_rival = SOV
+			remove_historical_friend = SOV
+			remove_historical_rival = DEF
+			remove_historical_rival = ITF
+			remove_historical_rival = JAP
+			inherit = KHM
+			inherit = SVI
+			country_event = { id = eh_french.64 days = 1 }
+		}
+		NED = {
+			clr_country_flag = ww2
+			remove_country_modifier = major_power
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_stability = 3 
+			add_prestige = 30
+			define_ruler = {
+				name = "Juliana I"
+				dynasty = "van Oranje"
+				change_adm = 3
+				change_dip = 4
+				change_mil = 2
+				female = yes
+				age = 39
+			}
+			declare_war_with_cb = {
+				who = IDN
+				casus_belli = cb_independence_war
+			}
+			country_event = { id = eh_asia_IDN.10 days = 300 } 
+		}
+		CAN = { 
+			clr_country_flag = ww2
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_stability = 3 
+			add_prestige = 30
+		}
+		AUS = { 
+			clr_country_flag = ww2
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_stability = 3 
+			add_prestige = 30
+			grant_independence = yes
+		}
+		NZL = { 
+			clr_country_flag = ww2
+			grant_independence = yes
+		}
+		FRM = {
+			clr_country_flag = ww2
+			clr_country_flag = second_sino_japanese_war
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_stability = 3
+			add_prestige = 30
+			remove_historical_rival = JAP
+			set_capital = 1821
+			china_superregion = {
+				limit = { owned_by = FRM }
+				add_devastation = 80
+			}
+			country_event = { id = eh_asia_CHN.26 days = 1 }
+		}
+		A12 = {
+			clr_country_flag = ww2
+			clr_country_flag = second_sino_japanese_war
+			set_capital = 2505
+		}
+		CGX = {
+			clr_country_flag = ww2
+			clr_country_flag = second_sino_japanese_war
+		}
+		CHN = {
+			clr_country_flag = ww2
+			clr_country_flag = second_sino_japanese_war
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_stability = 3 
+			add_prestige = 30
+			inherit = MCK
+			inherit = MGJ
+			inherit = CNF
+			add_country_modifier = {
+				name = major_power
+				duration = 100000
+			}
+			china_superregion = {
+				limit = { owned_by = CHN }
+				add_devastation = 80
+				add_core = CHN
+			}
+			manchuria_region = {
+				limit = { owned_by = CHN }
+				add_devastation = 80
+				add_core = CHN
+			}
+			country_event = { id = eh_asia_CHN.26 days = 1 }
+		}
+		NOK = {
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 1845
+			change_technology_group = asian
+			change_primary_culture = korean
+			change_religion = secularism
+			add_historical_friend = SOV
+			add_historical_rival = SKO
+			add_trust = {
+				who = SOV
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = CHN
+				value = 25
+				mutual = yes
+			}
+			every_owned_province = { add_devastation = 50 }
+		}
+		SKO = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 735
+			change_technology_group = asian
+			change_primary_culture = korean
+			change_religion = secularism
+			add_historical_friend = USA
+			add_historical_rival = NOK
+			add_trust = {
+				who = USA
+				value = 25
+				mutual = no
+			}
+			add_trust = {
+				who = JAP
+				value = -25
+				mutual = yes
+			}
+			every_owned_province = { add_devastation = 50 }
+		}
+		NVI = {
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			set_capital = 616
+			change_technology_group = asian
+			change_primary_culture = vietnamese
+			change_religion = secularism
+			add_trust = {
+				who = SOV
+				value = 25
+				mutual = no
+			}
+			add_trust = {
+				who = FR2
+				value = -25
+				mutual = yes
+			}
+		}
+		SVI = {
+			clr_country_flag = eh_override_name
+			restore_country_name = yes
+		}
+		IDN = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 630
+			change_technology_group = asian
+			change_primary_culture = javanese
+			change_religion = secularism
+			define_ruler = {
+				name = "Sukarno"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 4
+			}
+			every_owned_province = { change_religion = sunni }
+			add_trust = {
+				who = NED
+				value = -25
+				mutual = yes
+			}
+		}
+		GR2 = {
+			clr_country_flag = ww2
+			every_owned_province = { add_devastation = 50 }
+		}
+		SIA = { country_event = { id = eh_asia_THL.16 days = 3 } }
+	}
+}
+
+########################################################################
+# Events for the Cold War
+########################################################################
+
+# Iron Curtain
+country_event = {
+	id = eh_cold_war.1
+	title = "eh_cold_war.1.t"
+	desc = "eh_cold_war.1.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1947
+		NOT = { is_year = 1949 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_cold_war.1.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_trust = {
+				who = GBR
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = FR2
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = WGE
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = ITA
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = NED
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = BEL
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = LUX
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = HAB
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = SWI
+				value = 10
+				mutual = yes
+			}
+			add_trust = {
+				who = DAN
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = NOR
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = SWE
+				value = 25
+				mutual = yes
+			}
+			add_trust = {
+				who = ICE
+				value = 10
+				mutual = yes
+			}
+			add_trust = {
+				who = IRE
+				value = 10
+				mutual = yes
+			}
+			add_trust = {
+				who = POR
+				value = 10
+				mutual = yes
+			}
+			add_trust = {
+				who = GR2
+				value = 10
+				mutual = yes
+			}
+			add_trust = {
+				who = TKY
+				value = 10
+				mutual = yes
+			}
+			country_event = { id = eh_cold_war.2 days = 300 }
+		}
+		SOV = {
+			create_subject = {
+				subject_type = sphere_member
+				subject = POL
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = CZS
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = HUN
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = RMN
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = BUL
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = ALB
+			}
+			add_trust = {
+				who = EGE
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = POL
+				value = 50
+				mutual = no
+			}
+			add_trust = {
+				who = CZS
+				value = 50
+				mutual = no
+			}
+			add_trust = {
+				who = HUN
+				value = 50
+				mutual = no
+			}
+			add_trust = {
+				who = RMN
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = BUL
+				value = 50
+				mutual = yes
+			}
+			add_trust = {
+				who = ALB
+				value = 50
+				mutual = yes
+			}
+		}
+	}
+}
+
+# Marshall Plan
+country_event = {
+	id = eh_cold_war.2
+	title = "eh_cold_war.2.t"
+	desc = "eh_cold_war.2.d"
+	picture = ECONOMY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_cold_war.2.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_stability = 1
+			add_prestige = 10
+			add_treasury = -100000
+		}
+		GBR = { 
+			add_treasury = 330000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}
+		}
+		FR2 = { 
+			add_treasury = 230000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}
+		}
+		WGE = { 
+			add_treasury = 145000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}
+		}
+		ITA = { 
+			add_treasury = 120000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}
+		}
+		NED = { 
+			add_treasury = 113000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		BEL = { 
+			add_treasury = 78000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		HAB = { 
+			add_treasury = 47000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		DAN = { 
+			add_treasury = 38500
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		GR2 = { 
+			add_treasury = 37500
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		NOR = { 
+			add_treasury = 37000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		SWE = { 
+			add_treasury = 35000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		SWI = { 
+			add_treasury = 25000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		TKY = { 
+			add_treasury = 14000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		IRE = { 
+			add_treasury = 13000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		POR = { 
+			add_treasury = 7000
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+		ICE = { 
+			add_treasury = 4500
+			add_trust = {
+				who = USA
+				value = 100
+				mutual = yes
+			}			
+		}
+	}
+}
+
+# Hungarian Revolution of 1956
+
+# Protests of 1968
+
+# Prague Spring
+
+# Space Race
+country_event = {
+	id = eh_cold_war.3
+	title = "eh_cold_war.3.t"
+	desc = "eh_cold_war.3.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1960
+		NOT = { is_year = 1970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_cold_war.3.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_prestige = 10
+			add_years_of_income = -5
+			define_advisor = {
+				type = natural_scientist
+				name = "Neil Armstrong"
+				culture = american
+				skill = 3
+				discount = yes
+			}
+		}
+		SOV = {
+			add_prestige = 5
+			add_years_of_income = -1
+			define_advisor = {
+				type = natural_scientist
+				name = "Yurii Gagarin"
+				culture = russian
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Nuclear arms race
+country_event = {
+	id = eh_cold_war.4
+	title = "eh_cold_war.4.t"
+	desc = "eh_cold_war.4.d"
+	picture = NUCLEAR_ENERGY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1970
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_cold_war.4.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_prestige = 5
+			add_years_of_income = -1
+		}
+		SOV = {
+			add_prestige = 10
+			add_years_of_income = -5
+		}
+	}
+}
+
+# Non Proliferation Treaty
+
+# Malta Summit
+country_event = {
+	id = eh_cold_war.5
+	title = "eh_cold_war.5.t"
+	desc = "eh_cold_war.5.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1989
+		NOT = { is_year = 1990 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_cold_war.5.a"
+		ai_chance = { factor = 100 }
+		USA = { 
+			add_prestige = 10
+			define_ruler = {
+				name = "George Bush"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 6
+				age = 65
+			}
+		}
+		SOV = { add_prestige = 10 }
+	}
+}
+
+# Revolutions of 1989
+country_event = {
+	id = eh_cold_war.6
+	title = "eh_cold_war.6.t"
+	desc = "eh_cold_war.6.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POL
+		is_year = 1989
+		NOT = { is_year = 1990 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			POL = { grant_independence = yes }
+			CZS = { grant_independence = yes }
+			HUN = { grant_independence = yes }
+			RMN = { grant_independence = yes }
+			BUL = { grant_independence = yes }
+			ALB = { grant_independence = yes }
+		}
+	}
+
+	option = {
+		name = "eh_cold_war.6.a"
+		ai_chance = { factor = 100 }
+		POL = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			mazovia_area = {
+				limit = { owned_by = POL }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+		}
+		CZS = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			erzgebirge_area = {
+				limit = { owned_by = CZS }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			266 = {
+				if = {
+					limit = { owned_by = CZS }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+		}
+		HUN = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			transdanubia_area = {
+				limit = { owned_by = HUN }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+		}
+		RMN = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		BUL = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		ALB = {
+			clr_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+	}
+}
+
+# Dissolution of the Soviet Union
+country_event = {
+	id = eh_cold_war.7
+	title = "eh_cold_war.7.t"
+	desc = "eh_cold_war.7.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		is_year = 1991
+		NOT = { is_year = 1992 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SOV = { country_event = { id = eh_russian.54 days = 1 } }
+			RUS = {
+				295 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SOV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_cold_war.7.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				SOV = { was_player = yes }
+			}
+			switch_tag = RUS
+		}
+	}
+}
+
+# Olympic Games boycotts
+country_event = {
+	id = eh_cold_war.8
+	title = "eh_cold_war.8.t"
+	desc = "eh_cold_war.8.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1984
+		NOT = { is_year = 1985 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_cold_war.8.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_trust = {
+				who = SOV
+				value = -50
+				mutual = yes
+			}
+		}
+	}
+}
+
+# EH version

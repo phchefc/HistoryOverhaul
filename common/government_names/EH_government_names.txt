@@ -1,0 +1,773 @@
+# For specific government types
+# Will pick the first valid one it finds in list
+
+########################################################################
+# China
+########################################################################
+
+gov_chinese_warlord = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = GOVERNOR
+		2 = DAWANG
+		3 = HUANGDI
+	}
+
+	ruler_female = {
+		1 = TAIFEI
+		2 = TAIHOU
+		3 = HUANGTAIHOU
+	}
+	
+	consort_male = {
+		1 = GONG
+		2 = GONG
+		3 = QINWANG
+	}
+
+	consort_female = {
+		1 = FEI
+		2 = WANGHOU
+		3 = HUANGHOU
+	}
+	
+	heir_male = {
+		1 = GONGZI
+		2 = SHIZI
+		3 = TAIZI
+	}
+	
+	heir_female = {
+		1 = WENGZHU
+		2 = GONGZHU
+		3 = GONGZHU
+	}
+	
+	trigger = {
+		AND = {
+			has_reform = chinese_warlord
+			culture_group = east_asian
+		}
+	}
+} # EH version
+
+tusi_chiefdom = {
+	rank = {
+		1 = CHIEFDOM
+		2 = CHIEFDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = TUSI
+		2 = TUSI
+		3 = WANG
+	}
+
+	ruler_female = {
+		1 = TUSI
+		2 = TUSI
+		3 = WANG
+	}
+	
+	consort_male = {
+		1 = GONG
+		2 = GONG
+		3 = QINWANG
+	}
+
+	consort_female = {
+		1 = FUREN
+		2 = FUREN
+		3 = WANGHOU
+	}
+	
+	heir_male = {
+		1 = GONGZI
+		2 = GONGZI
+		3 = TAIZI
+	}
+	
+	heir_female = {
+		1 = WENGZHU
+		2 = WENGZHU
+		3 = GONGZHU
+	}
+
+	trigger = {
+		OR = {
+			government = monarchy
+			government = tribal
+		}
+		OR = {
+			primary_culture = yi
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = zhuang
+			primary_culture = hakka
+		}
+	}
+}
+
+########################################################################
+# China Tartary
+########################################################################
+
+gov_great_mongol_state_reform = {
+	rank = {
+		3 = KHAGANATE
+	}
+	
+	ruler_male = {
+		3 = KHAGAN
+	}
+	
+	ruler_female = {
+		3 = GREAT_KHATUN
+	}
+	
+	consort_male = {
+		3 = KHAGAN
+	}
+
+	consort_female = {
+		3 = KHANUM
+	}
+	
+	heir_male = {
+		3 = KHANZADEH
+	}
+
+	heir_female = {
+		3 = KHANUM
+	}
+	
+	trigger = {
+		has_reform = great_mongol_state_reform
+	}
+}
+
+tibetan_monarchy = {
+	rank = {
+		1 = CHIEFDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = TSENPO
+		2 = TSENPO
+		3 = TSENPO
+	}
+	
+	ruler_female = {
+		1 = TSENPO
+		2 = TSENPO
+		3 = TSENPO
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		OR = {
+			government = monarchy
+			government = tribal
+		}
+		culture_group = tibetan_group
+	}
+}
+
+########################################################################
+# Japan
+########################################################################
+
+japanese_monarchy_1 = {
+	rank = {
+		1 = CHIEFDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = KIMI
+		2 = OKIMI
+		3 = TENNO
+	}
+	
+	ruler_female = {
+		1 = KIMI
+		2 = OKIMI
+		3 = TENNO
+	}
+
+	consort_female = {
+		1 = KOGO
+		2 = KOGO
+		3 = KOGO
+	}
+	
+	heir_male = {
+		1 = TAISHI
+		2 = TAISHI
+		3 = TAISHI
+	}
+	
+	heir_female = {
+		1 = HIME
+		2 = HIME
+		3 = HIME
+	}
+
+	trigger = {
+		AND = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			culture_group = japanese_g
+			is_year = 2
+			NOT = { is_year = 780 }
+		}
+	}
+}
+
+japanese_monarchy_2 = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = EMPEROR
+		2 = EMPEROR
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = EMPEROR
+		2 = EMPEROR
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = EMPRESS
+		2 = EMPRESS
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = CROWN_PRINCE
+		2 = CROWN_PRINCE
+		3 = CROWN_PRINCE
+	}
+	
+	heir_female = {
+		1 = CROWN_PRINCESS
+		2 = CROWN_PRINCESS
+		3 = CROWN_PRINCESS
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = shogunate }
+		OR = {
+			tag = JAP
+			tag = JP2
+			tag = YAM
+			tag = MCK
+		}
+	}
+}
+
+genji_clans = {
+	rank = {
+		1 = DAIMYO
+		2 = SHOGUNATE
+		3 = SHOGUNATE
+	}
+
+	ruler_male = {
+		1 = DAIMYO
+		2 = SHOGUN
+		3 = SHOGUN
+	}
+	
+	ruler_female = {
+		1 = HIME
+		2 = MIDAIDOKORO
+		3 = MIDAIDOKORO
+	}
+	
+	consort_male = {
+		1 = FUGUN
+		2 = FUGUN
+		3 = FUGUN
+	}
+
+	consort_female = {
+		1 = HIME
+		2 = MIDAIDOKORO
+		3 = MIDAIDOKORO
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = japanese_g
+		NOT = {
+			OR = {
+				tag = JAP
+				tag = JP2
+				tag = TIA
+				tag = CBA
+				tag = HJO
+				tag = HTK
+				tag = ODA
+				tag = TYT
+				tag = ITO
+				tag = RYU
+			}
+		}
+	}
+}
+
+heike_clans = {
+	rank = {
+		1 = DAIMYO
+		2 = SHOGUNATE
+		3 = SHOGUNATE
+	}
+
+	ruler_male = {
+		1 = DAIMYO
+		2 = KAMPAKU
+		3 = KAMPAKU
+	}
+	
+	ruler_female = {
+		1 = HIME
+		2 = MANDOKORO
+		3 = MANDOKORO
+	}
+	
+	consort_male = {
+		1 = FUGUN
+		2 = FUGUN
+		3 = FUGUN
+	}
+
+	consort_female = {
+		1 = HIME
+		2 = MANDOKORO
+		3 = MANDOKORO
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			tag = TIA
+			tag = CBA
+			tag = HJO
+			tag = HTK
+			tag = ODA
+			tag = TYT
+			tag = ITO
+		}
+	}
+}
+
+########################################################################
+# Korea
+########################################################################
+
+korean_chiefdom = {
+	rank = {
+		1 = CHIEFDOM
+		2 = KINGDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = SINJI
+		2 = WANG
+		3 = WANG
+	}
+	
+	ruler_female = {
+		1 = SINJI
+		2 = WANG
+		3 = WANG
+	}
+
+	consort_female = {
+		1 = BUIN
+		2 = BUIN
+		3 = WANGHU
+	}
+	
+	heir_male = {
+		1 = SEJA
+		2 = SEJA
+		3 = TAEJA
+	}
+	
+	heir_female = {
+		1 = ONGJU
+		2 = GONGJU
+		3 = GONGJU
+	}
+
+	trigger = {
+		AND = {
+			government = tribal
+			culture_group = korean_g
+		}
+	}
+}
+
+korean_dynasties = {
+	rank = {
+		1 = KINGDOM
+		2 = KINGDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = WANG
+		2 = WANG
+		3 = DAEWANG
+	}
+	
+	ruler_female = {
+		1 = DAEBI
+		2 = DAEBI
+		3 = DAEBI
+	}
+
+	consort_female = {
+		1 = WANGHU
+		2 = WANGHU
+		3 = HWANGHU
+	}
+	
+	heir_male = {
+		1 = SEJA
+		2 = SEJA
+		3 = TAEJA
+	}
+	
+	heir_female = {
+		1 = ONGJU
+		2 = GONGJU
+		3 = GONGJU
+	}
+
+	trigger = {
+		AND = {
+			government = monarchy
+			culture_group = korean_g
+			NOT = { tag = JOE }
+			NOT = { has_reform = warlord_state }
+		}
+	}
+}
+
+korean_empire = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = HWANGJE
+		2 = HWANGJE
+		3 = HWANGJE
+	}
+	
+	ruler_female = {
+		1 = TAEHU
+		2 = TAEHU
+		3 = HWANGTAEHU
+	}
+
+	consort_female = {
+		1 = HWANGHU
+		2 = HWANGHU
+		3 = HWANGHU
+	}
+	
+	heir_male = {
+		1 = TAEJA
+		2 = TAEJA
+		3 = TAEJA
+	}
+	
+	heir_female = {
+		1 = GONGJU
+		2 = GONGJU
+		3 = GONGJU
+	}
+
+	trigger = {
+		government = monarchy
+		tag = JOE
+	}
+}
+
+korean_warlord = {
+	rank = {
+		1 = WARLORD_STATE
+		2 = KINGDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = SEONGJU
+		2 = WANG
+		3 = DAEWANG
+	}
+	
+	ruler_female = {
+		1 = BUIN
+		2 = BI
+		3 = DAEBI
+	}
+
+	consort_female = {
+		1 = BUIN
+		2 = BI
+		3 = WANGHU
+	}
+	
+	heir_male = {
+		1 = GONGJA
+		2 = SEJA
+		3 = TAEJA
+	}
+	
+	heir_female = {
+		1 = ONGJU
+		2 = GONGJU
+		3 = GONGJU
+	}
+
+	trigger = {
+		AND = {
+			has_reform = warlord_state
+			culture_group = korean_g
+		}
+	}
+}
+
+########################################################################
+# Western
+########################################################################
+
+ancient_roman_tetrachy = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = CAESARES
+		2 = CAESARES
+		3 = AUGUSTI
+	}
+	
+	trigger = {
+		has_reform = roman_empire_reform
+		OR = {
+			tag = A01
+			tag = A02
+			tag = A03
+			tag = A04
+		}
+	}
+}
+
+ancient_egyptiotes = {
+	rank = {
+		1 = PRINCEDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = NOMARCH
+		2 = PHARAOH
+		3 = GREAT_PHARAOH
+	}
+
+	ruler_female = {
+		1 = NOMARCH
+		2 = PHARAOH_fem
+		3 = GREAT_PHARAOH_fem
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = KING_CONSORT
+		3 = KING_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN
+		3 = QUEEN
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		AND = {
+			tag = EGP
+			primary_culture = greek
+			religion = hellenism
+		}
+	}
+}
+
+western_monarchy = {
+	rank = {
+		1 = KINGDOM
+		2 = KINGDOM
+		3 = KINGDOM
+	}
+
+	ruler_male = {
+		1 = KING
+		2 = KING
+		3 = KING
+	}
+
+	ruler_female = {
+		1 = QUEEN
+		2 = QUEEN
+		3 = QUEEN
+	}
+
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = QUEEN_CONSORT
+		2 = QUEEN_CONSORT
+		3 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			tag = GBR
+			tag = ENG
+			tag = SCO
+			AND = {
+				tag = FR2
+				NOT = { dynasty = "Bonaparte" }
+			}
+			AND = {
+				tag = ITA
+				is_year = 1850
+				NOT = { is_year = 1950 }
+			}
+			tag = PRU
+			tag = SPA
+			tag = POR
+			tag = NED
+			tag = BEL
+			tag = DAN
+			tag = SWE
+			tag = NOR
+			tag = NO2
+			tag = SAU
+			tag = JOR
+			tag = MOR
+		}
+	}
+}
+
+modern_emirate = {
+	rank = {
+		1 = EMIRATE
+		2 = EMIRATE
+		3 = EMIRATE
+	}
+
+	ruler_male = {
+		1 = EMIR
+		2 = EMIR
+		3 = EMIR
+	}
+
+	ruler_female = {
+		1 = EMIRA
+		2 = EMIRA
+		3 = EMIRA
+	}
+
+	trigger = {
+		OR = {
+			tag = AF2
+			tag = KUW
+			tag = QTR
+		}
+	}
+}
+
+# EH version

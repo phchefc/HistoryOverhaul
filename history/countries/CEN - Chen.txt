@@ -1,0 +1,170 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = wu
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+add_accepted_culture = vietnamese
+capital = 1821
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+557.11.1 = {
+	government = monarchy
+	add_government_reform = celestial_empire
+	government_rank = 3
+	monarch = {
+		name = "Baxian" #Wu
+		dynasty = "Chen"
+		birth_date = 503.1.1
+		adm = 5
+		dip = 3
+		mil = 3
+		leader = {	name = "Chen Baxian"     	type = general	fire = 2	shock = 2	manuever = 1	siege = 0  death_date = 559.6.1 }
+	}
+	queen = {
+		country_of_origin = CEN
+		name = "Yao'er"
+		dynasty = "Zhang"
+		birth_date = 506.1.1
+		death_date = 570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qian"
+		monarch_name = "Wen"
+		dynasty = "Chen"
+		birth_date = 522.1.1
+		death_date = 566.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+559.6.1 = {
+	monarch = {
+		name = "Qian" #Wen
+		dynasty = "Chen"
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = CEN
+		name = "Miaorong"
+		dynasty = "Shen"
+		birth_date = 525.1.1
+		death_date = 605.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bozong"
+		monarch_name = "Bozong"
+		dynasty = "Chen"
+		birth_date = 554.1.1
+		death_date = 570.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+566.6.1 = {
+	monarch = {
+		name = "Bozong"
+		dynasty = "Chen"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = CEN
+		dynasty = "Wang"
+		birth_date = 555.1.1
+		death_date = 585.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+568.1.1 = {
+	monarch = {
+		name = "Xu" #Xuan
+		dynasty = "Chen"
+		birth_date = 530.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = CEN
+		name = "Jingyan"
+		dynasty = "Liu"
+		birth_date = 531.1.1
+		death_date = 615.3.20
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shubao"
+		monarch_name = "Houzhu"
+		dynasty = "Chen"
+		birth_date = 553.12.3
+		death_date = 604.12.16
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+582.2.20 = {
+	monarch = {
+		name = "Shubao" #Houzhu
+		dynasty = "Chen"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CEN
+		name = "Wuhua"
+		dynasty = "Shen"
+		birth_date = 560.1.1
+		death_date = 630.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+604.12.16 = { government = monarchy add_government_reform = chinese_warlord }
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

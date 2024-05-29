@@ -1,0 +1,125 @@
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 173  42  62 }
+
+historical_idea_groups = {
+	early_adm_ideas
+	early_mil_ideas
+	early_religious_ideas
+	early_trade_ideas
+	defensive_ideas
+	offensive_ideas
+	administrative_ideas
+	economic_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	spy_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Hyeon #0" = 40
+	"Jumong #0" = 40
+	"Yuri #0" = 40
+	"Muhyul #0" = 20
+	"Saekju #1" = 20
+	"Aeru #0" = 20
+	"Gung #0" = 20
+	"Suseong #0" = 20
+	"Baekgo #0" = 20
+	"Nam-mu #0" = 20
+	"Yeon-u #0" = 20
+	"Uwigeo #0" = 20
+	"Yeonbul #0" = 20
+	"Yangno #0" = 20
+	"Sangbu #0" = 20
+	"Eulbul #1" = 20
+	"Sayu #0" = 20
+	"Gubu #0" = 20
+	"Yiryeon #1" = 20
+	"Damdeok #0" = 10
+	"Georyeon #0" = 10
+	"Na-un #0" = 10
+	"Heung-an #0" = 10
+	"Boyeon #0" = 10
+	"Pyeongseong #0" = 10
+	"Yangseong #0" = 10
+	"Won #0" = 10
+	"Geonmu #0" = 10
+	"Bojang #0" = 10
+	"Deokmu #0" = 10
+	"Gung-ye #0" = 10
+	"Hyeyoung #0" = -5
+	"Hyejeong #0" = -5
+	"Pyeonggang #0" = -5
+	"Uihye #0" = -5
+	"Hyosun #0" = -5
+	"Gyeonghui #0" = -5
+	"Insun #0" = -5
+	"Jeongsin #0" = -5
+	"Jeonghye #0" = -5
+	"Jeongsuk #0" = -5
+	"Jeong-an #0" = -5
+	"Jeonghyo #0" = -5
+	"Jeongmyeong #0" = -5
+	"Ik #1" = 1
+	"Mok #1" = 1
+	"Si #1" = 1
+	"I #0" = 0
+	"Sun #0" = 20
+	"Rip #0" = 0
+	"Il #0" = 0
+	"Dong #0" = 0
+	"Gwal #0" = 0
+	"Sang #0" = 0
+	"Ji #0" = 0
+	"U #0" = 0
+	"Gyu #0" = 0
+	"Dae #0" = 0
+	"Gu #0" = 0
+}
+
+leader_names = {
+	Go Yeon Jang Yang Mo Hae Bu Dam Do Du Myeongrim
+	Sa Seol Seon Ye On Wang U Wi Yu Eul Eulji
+	Kim Yi Pak Choe Jeong Gang Jo Yun Jang Im Han O Seo Shin 
+}
+
+ship_names = {
+	Baekdu Baekje 
+	Changbai
+	Duman Daedeok Dongmyeongseong
+	Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon"
+	Jirisan Jeongjong
+	Kumgangsan
+	Nakdong
+	Sincheon Silla Sobaek
+	Taebaek Taejo 
+	Hanseong Haemosu Habaek Hwaeomsa
+	Worak
+	Yuhwa Yeong 
+}
+
+army_names = {
+	"$PROVINCE$ Gun" "Gaema Cavalry"
+}
+
+fleet_names = {
+	"$PROVINCE$ Sugun"
+}
+
+# EH version
+

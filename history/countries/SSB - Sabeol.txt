@@ -1,0 +1,65 @@
+government = monarchy
+add_government_reform = warlord_state
+government_rank = 1
+primary_culture = korean
+religion = mahayana
+technology_group = early_chinese
+capital = 4229
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+# State of Jang-an
+
+822.3.1 = {
+	government_rank = 2
+	capital = 1013
+	monarch = {
+		name = "Heon-chang"
+		dynasty = "Kim"
+		birth_date = 800.1.1
+		adm = 0
+		dip = 0
+		mil = 1
+		leader = {	name = "Kim Heon-chang"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 822.4.1 }
+	}
+}
+
+822.4.1 = {
+	government_rank = 1
+	capital = 4229
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Unified Silla
+
+889.1.1 = {
+	monarch = {
+		name = "Ajagae"
+		dynasty = "Yi"
+		birth_date = 840.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+		leader = {	name = "Yi Ajagae"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 920.1.1 } # Not an actual death date
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

@@ -1,0 +1,401 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xibei
+capital = 2182
+
+# End of the Western Han dynasty (Liang)
+
+23.10.5 = {
+	monarch = {
+		name = "Long"
+		dynasty = "Dou"
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Liang)
+
+189.9.28 = {
+	monarch = {
+		name = "(unknown)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+192.1.1 = {
+	monarch = {
+		name = "Teng"
+		dynasty = "Ma"
+		birth_date = 160.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+192.1.1 = {
+	heir = {
+		name = "Chao"
+		monarch_name = "Chao"
+		dynasty = "Ma"
+		birth_date = 176.1.1
+		death_date = 222.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 4
+		leader = {	name = "Ma Chao"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 222.1.1 }
+	}
+}
+
+212.1.1 = {
+	monarch = {
+		name = "Chao"
+		dynasty = "Ma"
+		adm = 0
+		dip = 1
+		mil = 4
+		leader = {	name = "Ma Chao"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 222.1.1 }
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Former Liang
+
+301.1.1 = {
+	monarch = {
+		name = "Gui" #Wu
+		dynasty = "Zhang"
+		birth_date = 255.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+		leader = {	name = "Zhang Gui"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 314.3.4 }
+	}
+	heir = {
+		name = "Shi"
+		monarch_name = "Ming"
+		dynasty = "Zhang"
+		birth_date = 284.1.1
+		death_date = 320.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+314.3.4 = {
+	government_rank = 2
+	monarch = {
+		name = "Shi" #Ming
+		dynasty = "Zhang"
+		birth_date = 284.1.1
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+	heir = {
+		name = "Mao"
+		monarch_name = "Cheng"
+		dynasty = "Zhang"
+		birth_date = 277.1.1
+		death_date = 324.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+320.1.1 = {
+	monarch = {
+		name = "Mao" #Cheng
+		dynasty = "Zhang"
+		birth_date = 277.1.1
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+320.1.1 = {
+	heir = {
+		name = "Jun"
+		monarch_name = "Zhongcheng"
+		dynasty = "Zhang"
+		birth_date = 307.1.1
+		death_date = 346.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+324.1.1 = {
+	monarch = {
+		name = "Jun" #Zhongcheng
+		dynasty = "Zhang"
+		birth_date = 307.1.1
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Yan"
+		birth_date = 310.1.1
+		death_date = 370.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+327.1.1 = {
+	heir = {
+		name = "Chonghua"
+		monarch_name = "Huan"
+		dynasty = "Zhang"
+		birth_date = 327.1.1
+		death_date = 353.9.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+346.1.1 = {
+	monarch = {
+		name = "Chonghua" #Huan
+		dynasty = "Zhang"
+		birth_date = 327.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Pei"
+		birth_date = 330.1.1
+		death_date = 354.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yaoling"
+		monarch_name = "Ai"
+		dynasty = "Zhang"
+		birth_date = 344.1.1
+		death_date = 354.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+353.9.1 = {
+	monarch = {
+		name = "Yaoling" #Ai 
+		dynasty = "Zhang"
+		birth_date = 344.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Coup
+
+354.1.1 = {
+	monarch = {
+		name = "Zuo" #Wei
+		dynasty = "Zhang"
+		birth_date = 324.1.1
+		adm = 0
+		dip = 1
+		mil = 3
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Xin"
+		birth_date = 330.1.1
+		death_date = 355.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+355.1.1 = {
+	monarch = {
+		name = "Xuanjing" #Jingdao
+		dynasty = "Zhang"
+		birth_date = 350.1.1
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# Coup
+
+364.1.1 = {
+	monarch = {
+		name = "Tianxi" #Dao
+		dynasty = "Zhang"
+		birth_date = 346.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+# Later Liang
+
+386.10.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Guang" #Taizu
+		dynasty = "Lu"
+		birth_date = 338.1.1
+		adm = 4
+		dip = 3
+		mil = 4
+		leader = {	name = "Lu Guang"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 1  death_date = 400.1.1 }
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Shi"
+		birth_date = 340.1.1
+		death_date = 400.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shao"
+		monarch_name = "Yin"
+		dynasty = "Lu"
+		birth_date = 360.1.1
+		death_date = 400.6.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+396.1.1 = { government_rank = 3 }
+
+400.1.1 = {
+	monarch = {
+		name = "Shao"
+		dynasty = "Lu"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Zhang"
+		birth_date = 365.1.1
+		death_date = 400.6.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+400.6.1 = {
+	monarch = {
+		name = "Zuan"
+		dynasty = "Lu"
+		birth_date = 365.1.1
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Yang"
+		birth_date = 365.1.1
+		death_date = 401.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+403.1.1 = {
+	monarch = {
+		name = "Long"
+		dynasty = "Lu"
+		birth_date = 365.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = HLN
+		dynasty = "Yang"
+		birth_date = 370.1.1
+		death_date = 417.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# End of the Sui dynasty (Liang)
+
+617.6.1 = {
+	monarch = {
+		name = "Gui"
+		dynasty = "Li"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

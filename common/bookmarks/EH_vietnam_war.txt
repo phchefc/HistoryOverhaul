@@ -1,0 +1,15 @@
+
+bookmark =
+{
+	name = "VIETNAM_WAR_NAME"
+	desc = "VIETNAM_WAR_DESC"
+	date = 1964.8.2
+	
+	country = NVI
+	country = VTC
+	country = SVI
+	country = USA
+	country = SKO
+}
+
+# EH version

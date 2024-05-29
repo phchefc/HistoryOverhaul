@@ -1,0 +1,247 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = uyghur
+add_accepted_culture = xibei
+religion = tengri_pagan_reformed
+technology_group = eastern_nomad_group
+capital = 708
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+840.1.1 = { secondary_religion = vajrayana }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+894.1.1 = {
+ 	monarch = {
+		name = "Renmei" #Huaijian
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+894.1.1 = {
+	heir = {
+		name = "Diyin"
+		monarch_name = "Diyin"
+		dynasty = "Ediz"
+		birth_date = 890.1.1
+		death_date = 926.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+924.1.1 = {
+ 	monarch = {
+		name = "Diyin"
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+924.1.1 = {
+	heir = {
+		name = "Aduoyu"
+		monarch_name = "Shunhua"
+		dynasty = "Ediz"
+		birth_date = 895.1.1
+		death_date = 933.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+926.1.1 = {
+ 	monarch = {
+		name = "Aduoyu" #Shunhua
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+926.1.1 = {
+	heir = {
+		name = "Jingqiong"
+		monarch_name = "Jingqiong"
+		dynasty = "Ediz"
+		birth_date = 910.1.1
+		death_date = 975.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+933.1.1 = {
+ 	monarch = {
+		name = "Jingqiong"
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+933.1.1 = {
+	heir = {
+		name = "Mili'e"
+		monarch_name = "Mili'e"
+		dynasty = "Ediz"
+		birth_date = 930.1.1
+		death_date = 983.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+975.1.1 = {
+ 	monarch = {
+		name = "Mili'e"
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+975.1.1 = {
+	heir = {
+		name = "Lusheng"
+		monarch_name = "Lusheng"
+		dynasty = "Ediz"
+		birth_date = 950.1.1
+		death_date = 1003.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+983.1.1 = {
+ 	monarch = {
+		name = "Lusheng"
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+983.1.1 = {
+	heir = {
+		name = "Yeluoge"
+		monarch_name = "Zhongshun Baode"
+		dynasty = "Ediz"
+		birth_date = 983.1.1
+		death_date = 1016.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1003.1.1 = {
+ 	monarch = {
+		name = "Yeluoge" #Zhongshun Baode
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1003.1.1 = {
+	heir = {
+		name = "Guihua"
+		monarch_name = "Huaining Shunhua"
+		dynasty = "Ediz"
+		birth_date = 1003.1.1
+		death_date = 1023.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1016.1.1 = {
+ 	monarch = {
+		name = "Guihua" #Huaining Shunhua
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1016.1.1 = {
+	heir = {
+		name = "Guihua"
+		monarch_name = "Huaining Shunhua"
+		dynasty = "Ediz"
+		birth_date = 1005.1.1
+		death_date = 1028.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1023.1.1 = {
+ 	monarch = {
+		name = "Tongshun" #Guizhong Baoshun
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1023.1.1 = {
+	heir = {
+		name = "Yasu"
+		monarch_name = "Baoguo"
+		dynasty = "Ediz"
+		birth_date = 1010.1.1
+		death_date = 1036.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1028.1.1 = {
+ 	monarch = {
+		name = "Yasu" #Baoguo
+		dynasty = "Ediz"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

@@ -1,0 +1,66 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+technology_group = middle_eastern
+religion = sunni
+primary_culture = afghani
+capital = 451 # Kabul
+religious_school = hanafi_school
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+650.1.1 = { technology_group = muslim }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1996.4.4 = {
+	government_rank = 1
+	monarch = {
+		name = "Mohammed Omar"
+		birth_date = 1950.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+1996.9.27 = { government_rank = 2 }
+2001.11.13 = { government_rank = 1 }
+
+2013.4.23 = {
+	monarch = {
+		name = "Akhtar Mansour"
+		birth_date = 1960.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+2015.7.29 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+2016.5.21 = {
+	monarch = {
+		name = "Hibatullah Akhundzada"
+		birth_date = 1970.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+2021.8.19 = { government_rank = 2 }

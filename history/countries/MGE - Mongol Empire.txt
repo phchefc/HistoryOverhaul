@@ -1,0 +1,238 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 3
+technology_group = eastern_nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = vajrayana
+primary_culture = mongol
+add_accepted_culture = uyghur
+add_accepted_culture = persian
+add_accepted_culture = khorasani
+add_accepted_culture = khazak
+add_accepted_culture = astrakhani
+add_accepted_culture = nogaybak
+add_accepted_culture = mishary
+add_accepted_culture = uzbehk
+add_accepted_culture = chihan
+culture_group_union = mongolic
+historical_rival = CJN
+historical_rival = TAT
+capital = 4678
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1206.3.1 = { changed_tag_from = KMO decision = dummy_nomad_conquest }
+
+1206.3.1 = {
+	government_rank = 3
+	monarch = {
+        name = "Temujin" #Genghis
+		dynasty = "Borjigin"
+		birth_date = 1162.1.1
+		death_date = 1227.8.18
+		adm = 5
+		dip = 6
+		mil = 6
+		leader = {	name = "Borjigin Temujin"     	type = general	fire = 6	shock = 6	manuever = 3	siege = 3  death_date = 1227.8.25 }
+	}
+	queen = {
+		country_of_origin = KHA
+		name = "Borte"
+		dynasty = "Khongirad"
+		birth_date = 1161.1.1
+		death_date = 1230.1.1
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Tolui"
+		monarch_name = "Tolui"
+		dynasty = "Borjigin"
+		birth_date = 1192.1.1
+		death_date = 1229.9.13
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 6
+	}
+}
+
+1206.3.1 = { leader = {	name = "Subutai"     	type = general	fire = 6	shock = 6	manuever = 3	siege = 3  death_date = 1248.1.1 } } # Not an actual death date
+1206.3.1 = { leader = {	name = "Kubilai"     	type = general	fire = 4	shock = 3	manuever = 3	siege = 1  death_date = 1211.1.1 } } # Not an actual death date
+1206.3.1 = { leader = {	name = "Jebe"     		type = general	fire = 4	shock = 4	manuever = 3	siege = 1  death_date = 1223.5.23 } }
+
+1227.8.25 = {
+	monarch = {
+		name = "Tolui"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 2
+		mil = 6
+		leader = {	name = "Borjigin Tolui"     	type = general	fire = 2	shock = 4	manuever = 0	siege = 2  death_date = 1229.9.13 }
+	}
+}
+
+1229.9.13 = {
+	monarch = {
+		name = "Ogedei"
+		dynasty = "Borjigin"
+		birth_date = 1186.1.1
+		adm = 5
+		dip = 5
+		mil = 5
+		leader = {	name = "Borjigin Ogedei"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 2  death_date = 1241.12.11 }
+	}
+	queen = {
+		country_of_origin = KHA
+		name = "Moge"
+		birth_date = 1190.1.1
+		death_date = 1241.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1241.12.11 = {
+	monarch = {
+		name = "Toregene"
+		dynasty = "Naiman"
+		birth_date = 1190.1.1
+		female = yes
+		adm = 5
+		dip = 5
+		mil = 3
+	}
+	heir = {
+		name = "Guyuk"
+		monarch_name = "Guyuk"
+		dynasty = "Borjigin"
+		birth_date = 1206.1.1
+		death_date = 1248.4.24
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1246.8.24 = {
+	monarch = {
+		name = "Guyuk"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = KHA
+		name = "Oghul Qaimish"
+		dynasty = "Merkit"
+		birth_date = 1210.1.1
+		death_date = 1251.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1248.4.24 = {
+	monarch = {
+		name = "(regency council)"
+		regent = yes
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1251.7.1 = {
+	monarch = {
+		name = "Mongke"
+		dynasty = "Borjigin"
+		birth_date = 1209.1.10
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+	queen = {
+		country_of_origin = KHA
+		name = "Oghul-Khoimish"
+		dynasty = "Oirat"
+		birth_date = 1210.1.1
+		death_date = 1260.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1259.8.11 = {
+	monarch = {
+		name = "(regency council)"
+		regent = yes
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1260.5.5 = {
+	monarch = {
+		name = "Kublai" #Shizu
+		dynasty = "Borjigin"
+		birth_date = 1215.9.23
+		adm = 6
+		dip = 5
+		mil = 6
+		leader = {	name = "Borjigin Kublai"     	type = general	fire = 4	shock = 4	manuever = 0	siege = 2  death_date = 1294.2.18 }
+	}
+	queen = {
+		country_of_origin = KHA
+		name = "Chabi"
+		dynasty = "Khongirad"
+		birth_date = 1225.1.1
+		death_date = 1281.3.20
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1260.5.5 = { leader = {	name = "Bayan"     	type = general	fire = 4	shock = 3	manuever = 0	siege = 2  death_date = 1295.1.11 } }
+
+1265.10.15 = {
+	heir = {
+		name = "Temur"
+		monarch_name = "Temur"
+		dynasty = "Borjigin"
+		birth_date = 1265.10.15
+		death_date = 1307.2.10
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1267.1.1 = { capital = 1816 }
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Escalate to Yuan dynasty

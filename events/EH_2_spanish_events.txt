@@ -1,0 +1,4317 @@
+namespace = eh_spanish
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Spanish
+########################################################################
+
+# Northern Christian realms
+country_event = {
+	id = eh_spanish.1
+	title = "eh_spanish.1.t"
+	desc = "eh_spanish.1.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ASU
+		is_year = 920
+		NOT = { is_year = 930 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			CAS = {
+				215 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAS }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = CRD
+				}
+				1746 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAS }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = CRD
+				}
+				4552 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAS }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = CRD
+				}
+			}
+			LON = {
+				galicia_area = {
+					limit = {
+						NOT = { owned_by = LON }
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = ASU
+				}
+				207 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LON }
+						}
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = ASU
+				}
+				208 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LON }
+						}
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = ASU
+				}
+				231 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LON }
+						}
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = CRD
+				}
+				4553 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LON }
+						}
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = ASU
+				}
+			}
+			VAS = {
+				change_tag = NAV
+				change_government = monarchy
+				add_government_reform = courts_of_navarra
+				set_government_rank = 1
+				210 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAV }
+						}
+					}
+					cede_province = NAV
+					add_core = NAV
+				}
+				2989 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAV }
+						}
+					}
+					cede_province = NAV
+					add_core = NAV
+					remove_core = CRD
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.1.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			change_technology_group = western
+			swap_free_idea_group = yes
+			inherit = ASU
+			add_treasury = 10000
+			add_years_of_income = 1
+		}
+		A10 = { 
+			grant_independence = yes
+			add_treasury = 10000
+			add_years_of_income = 1
+		}
+		CRD = { 
+			set_government_rank = 2
+			add_treasury = 10000
+			add_years_of_income = 1
+		}
+		ARA = {
+			grant_independence = yes
+			add_treasury = 10000
+			add_years_of_income = 1
+		}
+		LON = { vassalize = CAS }
+	}
+}
+
+# Al-Andalus
+country_event = {
+	id = eh_spanish.2
+	title = "eh_spanish.2.t"
+	desc = "eh_spanish.2.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CRD
+		is_year = 1020
+		NOT = { is_year = 1030 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			LON = {
+				216 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LON }
+						}
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = CRD
+				}
+				232 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LON }
+						}
+					}
+					cede_province = LON
+					add_core = LON
+					remove_core = CRD
+				}
+			}
+			A10 = {
+				2988 = {
+					if = {
+						limit = {
+							NOT = { owned_by = A10 }
+						}
+					}
+					cede_province = A10
+					add_core = A10
+					remove_core = CRD
+				}
+			}
+			ALR = {
+				221 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALR }
+						}
+					}
+					cede_province = ALR
+					add_core = ALR
+					remove_core = CRD
+				}
+				222 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALR }
+						}
+					}
+					cede_province = ALR
+					add_core = ALR
+					remove_core = CRD
+				}
+			}
+			BDJ = {
+				beieras_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BDJ }
+							NOT = { province_id = 231 }
+							NOT = { province_id = 232 }
+						}
+					}
+					cede_province = BDJ
+					add_core = BDJ
+					remove_core = CRD
+				}
+				alentejo_area = {
+					limit = {
+						NOT = { owned_by = BDJ }
+					}
+					cede_province = BDJ
+					add_core = BDJ
+					remove_core = CRD
+				}
+				218 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BDJ }
+						}
+					}
+					cede_province = BDJ
+					add_core = BDJ
+					remove_core = CRD
+				}
+			}
+			DEN = {
+				baleares_area = {
+					limit = {
+						NOT = { owned_by = DEN }
+					}
+					cede_province = DEN
+					add_core = DEN
+					remove_core = CRD
+				}
+				1750 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEN }
+						}
+					}
+					cede_province = DEN
+					add_core = DEN
+					remove_core = CRD
+				}
+				4547 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEN }
+						}
+					}
+					cede_province = DEN
+					add_core = DEN
+					remove_core = CRD
+				}
+				4549 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEN }
+						}
+					}
+					cede_province = DEN
+					add_core = DEN
+					remove_core = CRD
+				}
+			}
+			GRA = {
+				223 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRA }
+						}
+					}
+					cede_province = GRA
+					add_core = GRA
+					remove_core = CRD
+				}
+				1748 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRA }
+						}
+					}
+					cede_province = GRA
+					add_core = GRA
+					remove_core = CRD
+				}
+				2754 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRA }
+						}
+					}
+					cede_province = GRA
+					add_core = GRA
+					remove_core = CRD
+				}
+			}
+			STS = {
+				4548 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STS }
+						}
+					}
+					cede_province = STS
+					add_core = STS
+					remove_core = CRD
+				}
+			}
+			TOL = {
+				castille_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TOL }
+							NOT = { province_id = 215 }
+							NOT = { province_id = 2755 }
+						}
+					}
+					cede_province = TOL
+					add_core = TOL
+					remove_core = CRD
+				}
+				toledo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TOL }
+							NOT = { province_id = 221 }
+							NOT = { province_id = 2754 }
+							NOT = { province_id = 4547 }
+						}
+					}
+					cede_province = TOL
+					add_core = TOL
+					remove_core = CRD
+				}
+				extremadura_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TOL }
+							NOT = { province_id = 218 }
+						}
+					}
+					cede_province = TOL
+					add_core = TOL
+					remove_core = CRD
+				}
+			}
+			TTA = {
+				220 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TTA }
+						}
+					}
+					cede_province = TTA
+					add_core = TTA
+					remove_core = CRD
+				}
+				4550 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TTA }
+						}
+					}
+					cede_province = TTA
+					add_core = TTA
+					remove_core = CRD
+				}
+			}
+			ZAR = {
+				aragon_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZAR }
+							NOT = { province_id = 211 }
+						}
+					}
+					cede_province = ZAR
+					add_core = ZAR
+					remove_core = CRD
+				}
+				2755 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAR }
+						}
+					}
+					cede_province = ZAR
+					add_core = ZAR
+					remove_core = CRD
+				}
+			}
+			BYZ = {
+				balkan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BYZ }
+							NOT = { area = croatia_area }
+							NOT = { area = slavonia_area }
+							NOT = { area = bosnia_area }
+							NOT = { area = east_adriatic_coast_area }
+							NOT = { province_id = 138 }
+						}
+					}
+					cede_province = BYZ
+					add_core = BYZ
+					remove_core = BG2
+				}
+				285 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BYZ }
+						}
+					}
+					cede_province = BYZ
+					add_core = BYZ
+					remove_core = KHZ
+				}
+				2410 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BYZ }
+						}
+					}
+					cede_province = BYZ
+					add_core = BYZ
+					remove_core = KHZ
+				}
+			}
+			HU2 = {
+				carpathia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HU2 }
+							NOT = { area = moldavia_area }
+							NOT = { area = bessarabia_area }
+							NOT = { area = wallachia_area }
+						}
+					}
+					cede_province = HU2
+					add_core = HU2
+					remove_core = BG2
+				}
+			}
+			KIE = {
+				change_culture = ruthenian
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { area = podolia_volhynia_area }
+							NOT = { province_id = 269 }
+							NOT = { province_id = 291 }
+							NOT = { province_id = 299 }
+							NOT = { province_id = 1937 }
+							NOT = { province_id = 1944 }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = LDN
+				}
+				moscow_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+				}
+				novgorod_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+				}
+				tver_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+				}
+				pskov_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+				}
+				karelia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { province_id = 30 }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+				}
+				smolensk_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = SVR
+				}
+				chernigov_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = SVR
+				}
+				ryazan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { province_id = 1778 }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = MES
+				}
+				oka_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = SVR
+				}
+				suzdal_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = MUR
+				}
+				vladimir_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = MRY
+				}
+				yaroslavl_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { province_id = 1753 }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = MRY
+				}
+				red_ruthenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { province_id = 1940 }
+							NOT = { province_id = 2424 }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = PO2
+				}
+				4261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KIE }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = VEP
+				}
+			}
+			PEC = {
+				crimea_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PEC }
+							NOT = { area = astrakhan_area }
+							NOT = { area = crimea_area }
+							NOT = { province_id = 287 }
+							NOT = { province_id = 2414 }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				wallachia_area = {
+					limit = {
+						NOT = { owned_by = PEC }
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = BG2
+				}
+				moldavia_area = {
+					limit = {
+						NOT = { owned_by = PEC }
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = BG2
+				}
+				bessarabia_area = {
+					limit = {
+						NOT = { owned_by = PEC }
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = BG2
+				}
+				podolia_volhynia_area = {
+					limit = {
+						NOT = { owned_by = PEC }
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				sloboda_ukraine_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PEC }
+							NOT = { province_id = 298 }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				tambov_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PEC }
+							NOT = { province_id = 304 }
+							NOT = { province_id = 2415 }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				284 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEC }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				466 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEC }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				468 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEC }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.2.a"
+		ai_chance = { factor = 100 }
+		TTA = { change_tag = VAL }
+	}
+	
+	option = {
+		name = "eh_spanish.2.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				CRD = { was_player = yes }
+			}
+			switch_tag = CAS
+		}
+		TTA = { change_tag = VAL }
+	}
+}
+
+# Rise of the Almoravid
+country_event = {
+	id = eh_spanish.3
+	title = "eh_spanish.3.t"
+	desc = "eh_spanish.3.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		is_year = 1095
+		NOT = { is_year = 1100 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			MOR = {
+				inherit = TLC
+				inherit = SIJ
+				inherit = CRD
+				define_ruler = {
+					dynasty = "Almoravid"
+				}
+				define_heir = {
+					dynasty = "Almoravid"
+				}
+				alentejo_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = BDJ
+				}
+				extremadura_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = TOL
+				}
+				lower_andalucia_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = CRD
+				}
+				upper_andalucia_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = GRA
+				}
+				toledo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOR }
+							NOT = { province_id = 219 }
+							NOT = { province_id = 2751 }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = TOL
+				}
+				valencia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOR }
+							NOT = { province_id = 220 }
+							NOT = { province_id = 4550 }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = VAL
+				}
+			}
+			MJR = {
+				baleares_area = {
+					limit = {
+						NOT = { owned_by = MJR }
+					}
+					cede_province = MJR
+					add_core = MJR
+					remove_core = DEN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.3.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			define_general = {
+				name = "El Cid"
+				shock = 3
+				fire = 3
+				manuever = 2
+				siege = 2
+				trait = inspirational_leader_general_personality
+			}
+			castille_area = {
+				limit = {
+					NOT = { owned_by = CAS }
+				}
+				cede_province = CAS
+				add_core = CAS
+				remove_core = TOL
+			}
+			219 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+				}
+				cede_province = CAS
+				add_core = CAS
+				remove_core = TOL
+			}
+			2751 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+				}
+				cede_province = CAS
+				add_core = CAS
+				remove_core = TOL
+			}
+			2989 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+				}
+				cede_province = CAS
+				add_core = CAS
+				remove_core = NAV
+			}
+		}
+		LON = {
+			beieras_area = {
+				limit = {
+					NOT = { owned_by = LON }
+				}
+				cede_province = LON
+				add_core = LON
+				remove_core = BDJ
+			}
+		}
+	}
+}
+
+# Early Reconquista
+country_event = {
+	id = eh_spanish.4
+	title = "eh_spanish.4.t"
+	desc = "eh_spanish.4.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAS
+		is_year = 1140
+		NOT = { is_year = 1150 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			POR = {
+				beieras_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = LON
+				}
+				227 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = MOR
+				}
+				4787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = MOR
+				}
+			}
+			ARA = {
+				inherit = A10
+				inherit = ZAR
+				aragon_area = {
+					limit = {
+						NOT = { owned_by = ARA }
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = ZAR
+				}
+				catalonia_area = {
+					limit = {
+						NOT = { owned_by = ARA }
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = A10
+				}
+				197 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ARA }
+						}
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = A10
+				}
+			}
+			MOR = {
+				inherit = VAL
+				valencia_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = VAL
+				}
+				define_ruler = {
+					dynasty = "Almohad"
+				}
+				define_heir = {
+					dynasty = "Almohad"
+				}
+			}
+			TMB = {
+				1128 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TMB }
+						}
+					}
+					cede_province = TMB
+					add_core = TMB
+					remove_core = MOR
+				}
+				1129 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TMB }
+						}
+					}
+					cede_province = TMB
+					add_core = TMB
+					remove_core = MOR
+				}
+			}
+			1127 = {
+				cede_province = ---
+				remove_core = MOR
+			}
+			3252 = {
+				cede_province = ---
+				remove_core = MOR
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.4.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_spanish.4.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				CAS = { was_player = yes }
+			}
+			switch_tag = POR
+		}
+	}
+}
+
+# Muslim decline and defeat
+country_event = {
+	id = eh_spanish.5
+	title = "eh_spanish.5.t"
+	desc = "eh_spanish.5.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAS
+		is_year = 1240
+		NOT = { is_year = 1250 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			CAS = {
+				set_government_rank = 2
+				inherit = LON
+				asturias_area = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = LON
+				}
+				galicia_area = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = LON
+				}
+				leon_area = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = LON
+				}
+				toledo_area = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = MOR
+				}
+				lower_andalucia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CAS }
+							NOT = { province_id = 226 }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = MOR
+				}
+				extremadura_area = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = MOR
+				}
+				1748 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAS }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+					remove_core = MOR
+				}
+			}
+			ARA = {
+				set_government_rank = 2
+				valencia_area = {
+					limit = {
+						NOT = { owned_by = ARA }
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = MOR
+				}
+				baleares_area = {
+					limit = {
+						NOT = { owned_by = ARA }
+					}
+					cede_province = ARA
+					add_core = ARA
+					remove_core = MJR
+				}
+			}
+			POR = {
+				set_government_rank = 2
+				alentejo_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = MOR
+				}
+			}
+			NAV = {
+				210 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAV }
+						}
+					}
+					cede_province = NAV
+					add_core = NAV
+				}
+			}
+			GRA = {
+				set_government_rank = 1
+				upper_andalucia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GRA }
+							NOT = { province_id = 1748 }
+						}
+					}
+					cede_province = GRA
+					add_core = GRA
+					remove_core = MOR
+				}
+				226 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRA }
+						}
+					}
+					cede_province = GRA
+					add_core = GRA
+					remove_core = MOR
+				}
+			}
+			TLC = {
+				algiers_area = {
+					limit = {
+						NOT = { owned_by = TLC }
+					}
+					cede_province = TLC
+					add_core = TLC
+					remove_core = MOR
+				}
+				hautes_plaines_area = {
+					limit = {
+						NOT = { owned_by = TLC }
+					}
+					cede_province = TLC
+					add_core = TLC
+					remove_core = MOR
+				}
+				barbary_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLC }
+							NOT = { province_id = 338 }
+						}
+					}
+					cede_province = TLC
+					add_core = TLC
+					remove_core = MOR
+				}
+				349 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TLC }
+						}
+					}
+					cede_province = TLC
+					add_core = TLC
+					remove_core = MOR
+				}
+			}
+			TUN = {
+				kabylia_area = {
+					limit = {
+						NOT = { owned_by = TUN }
+					}
+					cede_province = TUN
+					add_core = TUN
+				}
+				338 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUN }
+						}
+					}
+					cede_province = TUN
+					add_core = TUN
+				}
+				2458 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUN }
+						}
+					}
+					cede_province = TUN
+					add_core = TUN
+				}
+				define_ruler = {
+					dynasty = "Hafsid"
+				}
+				define_heir = {
+					dynasty = "Hafsid"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.5.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			set_capital = 219
+			change_primary_culture = castillian
+			change_religion = catholic
+			define_ruler = {
+				dynasty = "de Trastamara"
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						NOT = { area = asturias_area }
+						NOT = { area = galicia_area }
+						NOT = { area = basque_country }
+					}
+				}
+				change_culture = castillian
+				change_religion = catholic
+			}
+		}
+		ARA = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			set_capital = 213
+			change_primary_culture = aragonese
+			add_accepted_culture = catalan
+			change_religion = catholic
+			define_ruler = {
+				dynasty = "de Trastamara"
+			}
+			every_owned_province = {
+				limit = {
+					NOT = { area = aragon_area }
+				}
+				change_culture = catalan
+				change_religion = catholic
+			}
+		}
+		POR = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			set_capital = 227
+			change_primary_culture = portugese
+			change_religion = catholic
+			every_owned_province = {
+				limit = {
+					NOT = { culture = portugese }
+				}
+				change_culture = portugese
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Setting on the Iberian Wedding
+country_event = {
+	id = eh_spanish.6
+	title = "eh_spanish.6.t"
+	desc = "eh_spanish.6.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = CAS
+		CAS = {
+			OR = {
+				junior_union_with = ARA
+				senior_union_with = ARA
+			}
+		}
+		is_year = 950
+		NOT = { is_year = 1475 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_spanish.6.a"
+		ai_chance = { factor = 100 }
+		CAS = { break_union = ARA }
+	}
+}
+
+# Granada War
+country_event = {
+	id = eh_spanish.7
+	title = "eh_spanish.7.t"
+	desc = "eh_spanish.7.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAS
+		is_year = 1492
+		NOT = { is_year = 1495 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CAS = {
+				create_union = ARA
+				create_union = NAP
+				create_union = NAV
+				define_ruler = {
+					name = "Isabel I"
+					dynasty = "de Trastamara"
+					change_adm = 5
+					change_dip = 6
+					change_mil = 3
+					age = 23
+					female = yes
+				}
+				define_consort = {
+					name = "Ferran II"
+					dynasty = "de Trastamara"
+					change_adm = 4
+					change_dip = 6
+					change_mil = 5
+					age = 22
+				}
+				366 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAS }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+				}
+				4565 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAS }
+						}
+					}
+					cede_province = CAS
+					add_core = CAS
+				}
+			}
+			POR = {
+				334 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				367 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				368 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1096 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1751 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.7.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			set_country_flag = reconquista
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 219
+			add_country_modifier = {
+				name = warlordism
+				duration = 10000
+			}
+			declare_war_with_cb = {
+				who = GRA
+				casus_belli = cb_annex
+			}
+			country_event = { id = eh_spanish.8 days = 100 }
+		}
+		ARA = { set_country_flag = reconquista }
+		GRA = { set_country_flag = reconquista } 
+	}
+}
+
+# End of Muslim rule in Iberia
+country_event = {
+	id = eh_spanish.8
+	title = "eh_spanish.8.t"
+	desc = "eh_spanish.8.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_spanish.8.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			clr_country_flag = reconquista
+			inherit = GRA
+			upper_andalucia_area = {
+				limit = { owned_by = CAS }
+				change_religion = catholic
+				cede_province = CAS
+				add_core = CAS
+				remove_core = GRA
+			}
+			country_event = { id = eh_spanish.9 days = 100 }
+		}
+		ARA = { clr_country_flag = reconquista }
+		GRA = { clr_country_flag = reconquista }
+	}
+}
+
+# Discover Age
+country_event = {
+	id = eh_spanish.9
+	title = "eh_spanish.9.t"
+	desc = "eh_spanish.9.d"
+	picture = EXPLORERS_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.9.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			sargasso_sea_area = { discover_country = CAS }
+			north_atlantic_area = { discover_country = CAS }
+			caribbean_sea_area = { discover_country = CAS }
+			bahama_channel_area = { discover_country = CAS }
+			define_explorer = {
+				name = "Christopher Columbus"
+				fire = 2
+				shock = 2
+				manuever = 6
+				siege = 0
+			}
+			482 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+				}
+				cede_province = CAS
+				add_core = CAS
+				heavy_ship = CAS
+				heavy_ship = CAS
+				heavy_ship = CAS
+				transport = CAS
+				transport = CAS
+				transport = CAS
+				transport = CAS
+				transport = CAS
+				transport = CAS
+			}
+			483 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+				}
+				cede_province = CAS
+				add_core = CAS
+			}
+			493 = {
+				if = {
+					limit = {
+						NOT = { owned_by = CAS }
+					}
+				}
+				cede_province = CAS
+				add_core = CAS
+			}
+			224 = {
+				add_institution_embracement = {
+					which = new_world_i
+					value = 100
+				}
+			}
+		}
+		POR = {
+			define_explorer = {
+				name = "Vasco da Gama"
+				fire = 2
+				shock = 2
+				manuever = 6
+				siege = 0
+			}
+			define_general = {
+				name = "Francisco de Almeida"
+				fire = 3
+				shock = 3
+				manuever = 6
+				siege = 1
+			}
+			1097 = {
+				if = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+				}
+				cede_province = POR
+				add_core = POR
+			}
+			1306 = {
+				if = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+				}
+				cede_province = POR
+				add_core = POR
+			}
+			2258 = {
+				if = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+				}
+				cede_province = POR
+				add_core = POR
+			}
+			swahili_coast_sea_area = { discover_country = POR }
+			arabian_sea_area = { discover_country = POR }
+			cape_of_storms_area = { discover_country = POR }
+		}
+	}
+}
+
+# Habsburg Spain
+country_event = {
+	id = eh_spanish.10
+	title = "eh_spanish.10.t"
+	desc = "eh_spanish.10.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAS
+		is_year = 1516
+		NOT = { is_year = 1518 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CAS = {
+				change_tag = SPA
+				inherit = ARA
+				inherit = NAP
+				define_explorer = {
+					name = "Ferdinand Magellan"
+					fire = 2
+					shock = 2
+					manuever = 5
+					siege = 0
+				}
+				iberia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { area = alentejo_area }
+							NOT = { area = beieras_area }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = ARA
+				}
+				naples_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				calabria_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				apulia_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				sicily_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 126 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				corsica_sardinia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 1247 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				dominica_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				hispaniola_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				cuba_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				east_cuba_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				greater_antilles_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				panama_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 2664 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				335 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				337 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				498 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				499 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				1751 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.10.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			set_emperor = yes
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 217
+			change_primary_culture = castillian
+			change_religion = catholic
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Carlos I"
+				dynasty = "von Habsburg"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 5
+				age = 15
+			}
+			define_consort = {
+				name = "Isabella"
+				dynasty = "de Avis"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			carribeans_region = {
+				limit = {
+					owned_by = SPA
+				}
+				change_culture = iberian_caribbean
+				change_religion = catholic
+			}
+			217 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			country_event = { id = eh_dutch.2 days = 100 }
+		}
+		POR = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			change_religion = catholic
+			set_capital = 227
+		}
+	}
+}
+
+# Spanish conquest of the Aztec
+country_event = {
+	id = eh_spanish.11
+	title = "eh_spanish.11.t"
+	desc = "eh_spanish.11.d"
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				clr_country_flag = european_colonization_americas
+				inherit = AZT
+				mexico_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 4572 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				puebla_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				guerrero_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				eastern_mexico_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 2631 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				mixteca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 847 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				guanajuato_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 2615 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				huasteca_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				2642 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+			}
+			AZT = { clr_country_flag = european_colonization_americas }
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.11.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			484 = {
+				change_culture = iberian_caribbean
+				change_religion = catholic
+			}
+			852 = {
+				change_culture = mexican
+				change_religion = catholic
+				change_province_name = "Mexico"
+				rename_capital = "Mexico"
+			}
+			2647 = {
+				change_culture = mexican
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Spanish conquest of Peru
+country_event = {
+	id = eh_spanish.12
+	title = "eh_spanish.12.t"
+	desc = "eh_spanish.12.d"
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				clr_country_flag = european_colonization_americas
+				peru_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 3035 }
+							NOT = { province_id = 2944 }
+							NOT = { province_id = 2830 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = INC
+				}
+				upper_peru = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = INC
+				}
+				potosi_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = INC
+				}
+				tucuman_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 794 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = INC
+				}
+				822 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2843 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = INC
+				}
+				4605 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			INC = {
+				clr_country_flag = european_colonization_americas
+				define_ruler = {
+					name = "Manco Inca Yupanqui"
+					dynasty = "Hanan"
+					change_adm = 3
+					change_dip = 3
+					change_mil = 2
+					age = 17
+				}
+				define_consort = {
+					name = "Cura Ocllo"
+					dynasty = "Hanan"
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					age = 15
+					female = yes
+				}
+				define_heir = {
+					dynasty = "Hanan"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.12.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			809 = {
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+			820 = {
+				change_culture = iberian_colombian
+				change_religion = catholic
+			}
+		}
+		northern_chile_area = {
+			cede_province = ---
+			remove_core = INC
+		}
+		central_chile_area = {
+			limit = { owned_by = INC }
+			cede_province = ---
+			remove_core = INC
+		}
+		cuyo_area = {
+			limit = { owned_by = INC }
+			cede_province = ---
+			remove_core = INC
+		}
+	}
+}
+
+# Iberian Union
+country_event = {
+	id = eh_spanish.13
+	title = "eh_spanish.13.t"
+	desc = "eh_spanish.13.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1580
+		NOT = { is_year = 1585 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				create_alliance = POR
+				create_marriage = POR
+				durango_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				zacatecas_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				chihuahua_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 863 }
+							NOT = { province_id = 4644 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				northeast_mexico_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 2667 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				rio_grande_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				costa_rica_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				buenos_aires_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				beni_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				tucuman_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				cuyo_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				venezuela_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				maracaibo_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				central_llanos_area = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				eastern_llanos = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				western_llanos = {
+					limit = { 
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				775 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				784 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				785 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				790 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				866 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				927 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2873 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2871 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2872 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2810 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2539 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				1168 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.13.a"
+		ai_chance = { factor = 100 }
+		SPA = { create_union = POR }
+		POR = {
+			add_trust = {
+				who = SPA
+				value = 25
+				mutual = yes
+			}
+		}
+	}
+}
+
+# Armada invasion of England
+country_event = {
+	id = eh_spanish.14
+	title = "eh_spanish.14.t"
+	desc = "eh_spanish.14.d"
+	picture = BUCCANEERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1585
+		NOT = { is_year = 1590 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = { set_country_flag = anglo_spanish_war }
+			ENG = {
+				set_country_flag = anglo_spanish_war
+				375 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = DMS
+				}
+				375 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = MNS
+				}
+				4378 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = MCM
+				}
+			}
+			POR = {
+				763 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				764 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1187 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ZIM
+				}
+				1191 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ZIM
+				}
+				1202 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = MLI
+				}
+				2896 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2894 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2914 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.14.a"
+		ai_chance = { factor = 100 }
+		ENG = { country_event = { id = eh_britain.19 days = 300 } }
+	}
+}
+
+# Portugese Restoration
+country_event = {
+	id = eh_spanish.15
+	title = "eh_spanish.15.t"
+	desc = "eh_spanish.15.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1668
+		NOT = { is_year = 1670 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			POR = {
+				diamantina_area = {
+					limit = { 
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				765 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2934 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2930 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2935 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+			FRA = {
+				88 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = SPA
+				}
+				4769 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.15.a"
+		ai_chance = { factor = 100 }
+		SPA = { 
+			add_prestige = -10
+			break_union = POR
+		}
+		POR = {
+			change_government = monarchy
+			add_government_reform = portuguese_monarchy_reform
+			set_government_rank = 2
+			grant_independence = yes
+			define_ruler = {
+				dynasty = "de Braganca"
+			}
+			define_heir = {
+				dynasty = "de Braganca"
+			}
+		}
+	}
+}
+
+# War of the Spanish Succession
+country_event = {
+	id = eh_spanish.16
+	title = "eh_spanish.16.t"
+	desc = "eh_spanish.16.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1700
+		NOT = { is_year = 1705 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			HAB = {
+				inherit = BAV
+				upper_bavaria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 76 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BAV
+				}
+				lower_bavaria_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BAV
+				}
+				croatia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 1828 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				slavonia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				transylvania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 157 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				southern_transylvania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 156 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				1826 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				4173 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+			}
+			SPA = {
+				94 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = FRA
+				}
+				3004 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = FRA
+				}
+			}
+			VEN = {
+				136 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VEN }
+						}
+					}
+					cede_province = VEN
+					add_core = VEN
+					remove_core = TUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.16.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			define_ruler = {
+				dynasty = "de Bourbon"
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+			}
+		}
+	}
+}
+
+# End of the Spanish Succession
+country_event = {
+	id = eh_spanish.17
+	title = "eh_spanish.17.t"
+	desc = "eh_spanish.17.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1715
+		NOT = { is_year = 1720 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			HAB = {
+				inherit = TRA
+				inherit = WAL
+				flanders_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 4769 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				wallonia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				brabant_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				lombardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				po_valley_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				apulia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				calabria_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				naples_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				sicily_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 126 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				southern_transylvania_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				wallachia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = WAL
+				}
+				vojvodina_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				serbia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 3000 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				94 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+				157 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TRA
+				}
+				3004 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SPA
+				}
+			}
+			BAV = {
+				upper_bavaria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BAV }
+							NOT = { province_id = 76 }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = HAB
+				}
+				lower_bavaria_area = {
+					limit = {
+						NOT = { owned_by = BAV }
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = HAB
+				}
+				68 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = HAB
+				}
+				4709 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = HAB
+				}
+				4711 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = HAB
+				}
+			}
+			PRU = {
+				1858 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = SWE
+				}
+			}
+			DAN = {
+				holstein_area = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = SHL
+				}
+			}
+			SAV = {
+				change_tag = SPI
+				piedmont_area = {
+					limit = {
+						NOT = { owned_by = SPI }
+					}
+					cede_province = SPI
+					add_core = SPI
+				}
+				corsica_sardinia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPI }
+							NOT = { province_id = 1247 }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+				}
+				102 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+				}
+				205 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+				}
+			}
+			TUR = {
+				morea_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.17.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			inherit = ITZ
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			remove_accepted_culture = dutch
+			remove_accepted_culture = flemish
+			remove_accepted_culture = wallonian
+			guatemala_lowlands_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SPA }
+						NOT = { province_id = 843 }
+						NOT = { province_id = 4589 }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+				remove_core = ITZ
+			}
+			883 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+			}
+			887 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+			}
+			2666 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+			}
+			4588 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+				remove_core = ITZ
+			}
+			4627 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+			}
+		}
+		POR = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			2888 = {
+				if = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+				}
+				cede_province = POR
+				add_core = POR
+			}
+		}
+	}
+}
+
+# Peninsular War
+country_event = {
+	id = eh_spanish.18
+	title = "eh_spanish.18.t"
+	desc = "eh_spanish.18.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				define_ruler = {
+					dynasty = "Bonaparte"
+				}
+				define_heir = {
+					dynasty = "Bonaparte"
+				}
+			}
+			NED = {
+				define_ruler = {
+					dynasty = "Bonaparte"
+				}
+				define_heir = {
+					dynasty = "Bonaparte"
+				}
+			}
+			WES = {
+				define_ruler = {
+					dynasty = "Bonaparte"
+				}
+				define_heir = {
+					dynasty = "Bonaparte"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_spanish.18.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			create_subject = {
+				subject_type = client_vassal
+				subject = SPA
+			}
+		}
+		SPA = { add_liberty_desire = -100 }
+		POR = {
+			set_capital = 763
+			add_prestige = -10
+		}
+	}
+}
+
+# Restoration
+country_event = {
+	id = eh_spanish.19
+	title = "eh_spanish.19.t"
+	desc = "eh_spanish.19.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				catalonia_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = FR2
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.19.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			grant_independence = yes
+			define_ruler = {
+				dynasty = "de Bourbon"
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+			}
+			country_event = { id = eh_north_america.14 days = 100 }
+		}
+		POR = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+		}
+	}
+}
+
+# First Spanish Republic
+country_event = {
+	id = eh_spanish.20
+	title = "eh_spanish.20.t"
+	desc = "eh_spanish.20.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1870
+		NOT = { is_year = 1875 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.19.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Estanislao Figueras"
+			}
+			country_event = { id = eh_spanish.21 days = 300 }
+		}
+	}
+}
+
+# Surrender of Napoleon
+country_event = {
+	id = eh_spanish.21
+	title = "eh_spanish.21.t"
+	desc = "eh_spanish.21.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.21.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			define_ruler = {
+				dynasty = "de Bourbon"
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+			}
+			1235 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+			}
+			1995 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+				}
+				cede_province = SPA
+				add_core = SPA
+			}
+		}
+	}
+}
+
+# Spanish-American War
+country_event = {
+	id = eh_spanish.22
+	title = "eh_spanish.22.t"
+	desc = "eh_spanish.22.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.22.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			set_country_flag = spanish_american_war
+			declare_war_with_cb = {
+				who = USA
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_asia_PHI.3 days = 100 }
+		}
+		USA = { 
+			set_country_flag = spanish_american_war
+			country_event = { id = eh_USA.27 days = 1 }
+		}
+	}
+}
+
+# 1910 portugese Revolution
+country_event = {
+	id = eh_spanish.23
+	title = "eh_spanish.23.t"
+	desc = "eh_spanish.23.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POR
+		is_year = 1910
+		NOT = { is_year = 1912 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.23.a"
+		ai_chance = { factor = 100 }
+		POR = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Manuel de Arriaga"
+			}
+		}
+	}
+}
+
+# Second Spanish Republic
+country_event = {
+	id = eh_spanish.24
+	title = "eh_spanish.24.t"
+	desc = "eh_spanish.24.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1931
+		NOT = { is_year = 1933 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.24.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Niceto Alcala-Zamora"
+			}
+			define_advisor = {
+				type = artist
+				name = "Pablo Picasso"
+				culture = castillian
+				skill = 6
+				discount = yes
+			}
+		}
+		POR = {
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			set_government_rank = 2
+		}
+	}
+}
+
+# Spanish Civil War
+country_event = {
+	id = eh_spanish.25
+	title = "eh_spanish.25.t"
+	desc = "eh_spanish.25.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1935
+		NOT = { is_year = 1937 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_spanish.25.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			set_country_flag = uprising_eh
+			galicia_area = {
+				change_controller = REB
+				spawn_rebels = {
+					type = fascist_rebels
+					size = 1
+				}
+			}
+			asturias_area = {
+				change_controller = REB
+				spawn_rebels = {
+					type = fascist_rebels
+					size = 1
+				}
+			}
+			leon_area = {
+				change_controller = REB
+				spawn_rebels = {
+					type = fascist_rebels
+					size = 1
+				}
+			}
+			lower_andalucia_area = {
+				change_controller = REB
+				spawn_rebels = {
+					type = fascist_rebels
+					size = 1
+				}
+			}
+			upper_andalucia_area = {
+				change_controller = REB
+				spawn_rebels = {
+					type = fascist_rebels
+					size = 1
+				}
+			}
+			country_event = { id = eh_spanish.26 days = 300 }
+		}
+	}
+}
+
+# Dictatorship
+country_event = {
+	id = eh_spanish.26
+	title = "eh_spanish.26.t"
+	desc = "eh_spanish.26.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.26.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			set_country_flag = eh_fascist
+			clr_country_flag = uprising_eh
+			change_government = republic
+			add_government_reform = fascist_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Francisco Franco"
+				culture = castillian
+				change_adm = 0
+				change_dip = 1
+				change_mil = 5
+				age = 47
+			}
+			every_owned_province = {
+				kill_units = {
+					who = REB
+					type = infantry
+				}
+				kill_units = {
+					who = REB
+					type = cavalry
+				}
+				kill_units = {
+					who = REB
+					type = artillery
+				}
+			}
+		}
+	}
+}
+
+# Spanish transition
+country_event = {
+	id = eh_spanish.27
+	title = "eh_spanish.27.t"
+	desc = "eh_spanish.27.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1974
+		NOT = { is_year = 1976 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			AGL = {
+				cuando_cubango_area = {
+					limit = {
+						NOT = { owned_by = AGL }
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				southern_angola_area = {
+					limit = {
+						NOT = { owned_by = AGL }
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				} 
+				angola_namibia_area = {
+					limit = {
+						NOT = { owned_by = AGL }
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				matamba_area = {
+					limit = {
+						NOT = { owned_by = AGL }
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				kasai_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AGL }
+							NOT = { province_id = 4087 }
+							NOT = { province_id = 4092 }
+						}
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				kongo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AGL }
+							NOT = { province_id = 1169 }
+							NOT = { province_id = 3261 }
+						}
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				4094 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AGL }
+						}
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				4095 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AGL }
+						}
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				4080 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AGL }
+						}
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+				3237 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AGL }
+						}
+					}
+					cede_province = AGL
+					add_core = AGL
+					remove_core = POR
+				}
+			}
+			MZM = {
+				lower_zambezi_area = {
+					limit = {
+						NOT = { owned_by = MZM }
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				mozambique_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MZM }
+							NOT = { province_id = 4020 }
+						}
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				uticulo_makuana_area = {
+					limit = {
+						NOT = { owned_by = MZM }
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				} 
+				quelimane_area = {
+					limit = {
+						NOT = { owned_by = MZM }
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				1182 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MZM }
+						}
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				4037 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MZM }
+						}
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				4039 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MZM }
+						}
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				4036 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MZM }
+						}
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+				1800 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MZM }
+						}
+					}
+					cede_province = MZM
+					add_core = MZM
+					remove_core = POR
+				}
+			}
+			GBI = {
+				1114 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBI }
+						}
+					}
+					cede_province = GBI
+					add_core = GBI
+					remove_core = POR
+				}
+			}
+			CPV = {
+				1096 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CPV }
+						}
+					}
+					cede_province = CPV
+					add_core = CPV
+					remove_core = POR
+				}
+			}
+			STP = {
+				1306 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STP }
+						}
+					}
+					cede_province = STP
+					add_core = STP
+					remove_core = POR
+				}
+			}
+			CMO = {
+				4020 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CMO }
+						}
+					}
+					cede_province = CMO
+					add_core = CMO
+					remove_core = FR2
+				}
+			}
+			SEY = {
+				1100 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SEY }
+						}
+					}
+					cede_province = SEY
+					add_core = SEY
+					remove_core = GBR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_spanish.27.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			clr_country_flag = eh_fascist
+			change_government = monarchy
+			add_government_reform = parliamentary_reform
+			set_government_rank = 2
+			add_country_modifier = {
+				name = great_power
+				duration = 70000
+			}
+			define_ruler = {
+				name = "Juan Carlos I"
+				dynasty = "de Bourbon"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 37
+			}
+			define_consort = {
+				name = "Sophia"
+				dynasty = "von Glucksburg"
+				culture = greek
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+		POR = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			add_country_modifier = {
+				name = great_power
+				duration = 70000
+			}
+		}
+	}
+}
+
+# Decolonization
+country_event = {
+	id = eh_spanish.28
+	title = "eh_spanish.28.t"
+	desc = "eh_spanish.28.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1980
+		NOT = { is_year = 1983 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			MOR = {
+				southern_morocco_area = {
+					limit = {
+						NOT = { owned_by = MOR }
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = SPA
+				}
+			}
+			DAH = { change_tag = BEN }
+		}
+	}
+
+	option = {
+		name = "eh_spanish.28.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			remove_country_modifier = major_power
+			add_prestige = -10
+			castille_area = {
+				limit = { owned_by = SPA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			catalonia_area = {
+				limit = { owned_by = SPA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		POR = {
+			remove_country_modifier = major_power
+			add_prestige = -10
+		}
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Isabel I
+country_event = {
+	id = eh_spanish.29
+	title = "eh_spanish.29.t"
+	desc = "eh_spanish.29.d"
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = CAS
+		is_year = 1480
+		NOT = { is_year = 1500 }
+		NOT = { has_ruler = "Isabel I" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_spanish.29.a"
+		ai_chance = { factor = 100 }
+		CAS = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Isabel I"
+				dynasty = "de Trastamara"
+				change_adm = 5
+				change_dip = 6
+				change_mil = 3
+				female = yes
+				min_age = 30
+				max_age = 50
+			}
+			define_consort = {
+				name = "Ferran II"
+				dynasty = "de Trastamara"
+				change_adm = 4
+				change_dip = 6
+				change_mil = 5
+				female = no
+			}
+		}
+	}
+}
+
+# Carlos I
+country_event = {
+	id = eh_spanish.30
+	title = "eh_spanish.30.t"
+	desc = "eh_spanish.30.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		tag = SPA
+		is_year = 1520
+		NOT = { is_year = 1550 }
+		NOT = { has_ruler = "Carlos I" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_spanish.30.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Carlos I"
+				dynasty = "von Habsburg"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 5
+				min_age = 20
+				max_age = 50
+			}
+			define_consort = {
+				name = "Isabella"
+				dynasty = "de Avis"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# EH version

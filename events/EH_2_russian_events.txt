@@ -1,0 +1,6675 @@
+namespace = eh_russian
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Russian
+########################################################################
+
+# Kievan Rus
+country_event = {
+	id = eh_russian.1
+	title = "eh_russian.1.t"
+	desc = "eh_russian.1.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DRV = {
+				change_tag = KIE
+				change_government = tribal
+				add_government_reform = tribal_despotism
+				set_government_rank = 2
+				change_religion = orthodox
+				change_primary_culture = ruthenian
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_stability = 3
+				add_manpower = 30
+				add_sailors = 1000
+				add_legitimacy = 10
+				add_army_tradition = 10
+				add_army_professionalism = 0.1
+				add_prestige = 30
+				add_years_of_income = 3
+				add_war_exhaustion = -10
+				set_capital = 280
+				novgorod_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = ILM
+				}
+				tver_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = ILM
+				}
+				moscow_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = VYA
+				}
+				pskov_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = ILM
+				}
+				minsk_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = DRE
+				}
+				west_dniepr_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { province_id = 1944 }
+						}
+					}
+					change_culture = ruthenian
+					cede_province = KIE
+					add_core = KIE
+				}
+				white_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					change_culture = ruthenian
+					cede_province = KIE
+					add_core = KIE
+					remove_core = DRE
+				}
+				karelia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KIE }
+							NOT = { province_id = 30 }
+						}
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = KKS
+				}
+				podolia_volhynia_area = {
+					limit = {
+						NOT = { owned_by = KIE }
+					}
+					cede_province = KIE
+					add_core = KIE
+					remove_core = HU2
+				}
+			}
+			PEC = {
+				298 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEC }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+				4543 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEC }
+						}
+					}
+					cede_province = PEC
+					add_core = PEC
+					remove_core = KHZ
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.1.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_russian.1.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				BG2 = { was_player = yes }
+			}
+			switch_tag = KIE
+		}
+	}
+}
+
+# Russian city-states
+country_event = {
+	id = eh_russian.2
+	title = "eh_russian.2.t"
+	desc = "eh_russian.2.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KIE
+		is_year = 1060
+		NOT = { is_year = 1070 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NOV = {
+				novgorod_area = {
+					limit = {
+						NOT = { owned_by = NOV }
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+				tver_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOV }
+							NOT = { province_id = 4243 }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+				pskov_area = {
+					limit = {
+						NOT = { owned_by = NOV }
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+				33 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOV }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+				34 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOV }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+				1961 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOV }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+				4117 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOV }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = KIE
+				}
+			}
+			VLA = {
+				moscow_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VLA }
+							NOT = { province_id = 4251 }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+				vladimir_area = {
+					limit = {
+						NOT = { owned_by = VLA }
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+				suzdal_area = {
+					limit = {
+						NOT = { owned_by = VLA }
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+				308 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+				4250 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+				4251 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+				4261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+					remove_core = KIE
+				}
+			}
+			SMO = {
+				293 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SMO }
+						}
+					}
+					cede_province = SMO
+					add_core = SMO
+					remove_core = KIE
+				}
+				296 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SMO }
+						}
+					}
+					cede_province = SMO
+					add_core = SMO
+					remove_core = KIE
+				}
+				4243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SMO }
+						}
+					}
+					cede_province = SMO
+					add_core = SMO
+					remove_core = KIE
+				}
+				4245 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SMO }
+						}
+					}
+					cede_province = SMO
+					add_core = SMO
+					remove_core = KIE
+				}
+				4246 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SMO }
+						}
+					}
+					cede_province = SMO
+					add_core = SMO
+					remove_core = KIE
+				}
+			}
+			VOL = {
+				volhynia_area = {
+					limit = {
+						NOT = { owned_by = VOL }
+					}
+					cede_province = VOL
+					add_core = VOL
+					remove_core = KIE
+				}
+				red_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = VOL }
+					}
+					cede_province = VOL
+					add_core = VOL
+					remove_core = KIE
+				}
+				4924 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VOL }
+						}
+					}
+					cede_province = VOL
+					add_core = VOL
+					remove_core = KIE
+				}
+				277 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VOL }
+						}
+					}
+					cede_province = VOL
+					add_core = VOL
+					remove_core = KIE
+				}
+				281 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VOL }
+						}
+					}
+					cede_province = VOL
+					add_core = VOL
+					remove_core = KIE
+				}			
+				4538 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VOL }
+						}
+					}
+					cede_province = VOL
+					add_core = VOL
+					remove_core = KIE
+				}
+			}
+			PLT = {
+				white_ruthenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLT }
+							NOT = { province_id = 4246 }
+						}
+					}
+					cede_province = PLT
+					add_core = PLT
+					remove_core = KIE
+				}
+				minsk_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLT }
+							NOT = { province_id = 4115 }
+						}
+					}
+					cede_province = PLT
+					add_core = PLT
+					remove_core = KIE
+				}
+				770 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLT }
+						}
+					}
+					cede_province = PLT
+					add_core = PLT
+					remove_core = KIE
+				}
+				4536 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLT }
+						}
+					}
+					cede_province = PLT
+					add_core = PLT
+					remove_core = KIE
+				}
+			}
+			PEY = {
+				2407 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEY }
+						}
+					}
+					cede_province = PEY
+					add_core = PEY
+					remove_core = KIE
+				}
+				4542 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEY }
+						}
+					}
+					cede_province = PEY
+					add_core = PEY
+					remove_core = KIE
+				}
+			}
+			OKA = {
+				4116 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OKA }
+						}
+					}
+					cede_province = OKA
+					add_core = OKA
+					remove_core = KIE
+				}
+			}
+			CHR = {
+				chernigov_area = {
+					limit = {
+						NOT = { owned_by = CHR }
+					}
+					cede_province = CHR
+					add_core = CHR
+					remove_core = KIE
+				}
+				297 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHR }
+						}
+					}
+					cede_province = CHR
+					add_core = CHR
+					remove_core = KIE
+				}
+				298 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHR }
+						}
+					}
+					cede_province = CHR
+					add_core = CHR
+					remove_core = KIE
+				}
+				4244 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHR }
+						}
+					}
+					cede_province = CHR
+					add_core = CHR
+					remove_core = KIE
+				}
+			}
+			RYA = {
+				ryazan_area = {
+					limit = {
+						NOT = { owned_by = RYA }
+					}
+					cede_province = RYA
+					add_core = RYA
+					remove_core = KIE
+				}
+				300 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RYA }
+						}
+					}
+					cede_province = RYA
+					add_core = RYA
+					remove_core = KIE
+				}
+			}
+			KKS = {
+				309 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KKS }
+						}
+					}
+					cede_province = KKS
+					add_core = KKS
+					remove_core = KIE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.2.a"
+		ai_chance = { factor = 100 }
+		NOV = {
+			change_government = republic
+			add_government_reform = veche_republic
+			set_government_rank = 2
+		}
+	}
+	
+	option = {
+		name = "eh_russian.2.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				KIE = { was_player = yes }
+			}
+			switch_tag = NOV
+		}
+		NOV = {
+			change_government = republic
+			add_government_reform = veche_republic
+			set_government_rank = 2
+		}
+	}
+	
+	option = {
+		name = "eh_russian.2.c"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				KIE = { was_player = yes }
+			}
+			switch_tag = VLA
+		}
+		NOV = {
+			change_government = republic
+			add_government_reform = veche_republic
+			set_government_rank = 2
+			change_religion = orthodox
+		}
+	}
+}
+
+# Age of Tatar rule
+country_event = {
+	id = eh_russian.3
+	title = "eh_russian.3.t"
+	desc = "eh_russian.3.d"
+	picture = TRIBUTE_TO_TATARS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NOV
+		is_year = 1240
+		NOT = { is_year = 1245 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NOV = {
+				north_karelia = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOV }
+							NOT = { province_id = 1777 }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = SMI
+				}
+				karelia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOV }
+							NOT = { province_id = 30 }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+				}
+				pomor_area = {
+					limit = {
+						NOT = { owned_by = NOV }
+					}
+					cede_province = NOV
+					add_core = NOV
+				}
+				arkhangelsk_area = {
+					limit = {
+						NOT = { owned_by = NOV }
+					}
+					cede_province = NOV
+					add_core = NOV
+				}
+				vologda_area = {
+					limit = {
+						NOT = { owned_by = NOV }
+					}
+					cede_province = NOV
+					add_core = NOV
+				}
+				4259 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+				}
+			}
+			VLA = {
+				1083 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+				}
+				1753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+				}
+				1755 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+				}
+				1957 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VLA }
+						}
+					}
+					cede_province = VLA
+					add_core = VLA
+				}
+			}
+			YAR = {
+				308 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAR }
+						}
+					}
+					cede_province = YAR
+					add_core = YAR
+				}
+				4250 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAR }
+						}
+					}
+					cede_province = YAR
+					add_core = YAR
+				}
+			}
+			RSO = {
+				4147 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RSO }
+						}
+					}
+					cede_province = RSO
+					add_core = RSO
+				}
+			}
+			TVE = {
+				tver_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TVE }
+							NOT = { province_id = 1752 }
+							NOT = { province_id = 4243 }
+						}
+					}
+					cede_province = TVE
+					add_core = TVE
+					remove_core = NOV
+				}
+			}
+			SMO = {
+				tver_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SMO }
+							NOT = { owned_by = TVE }
+						}
+					}
+					cede_province = SMO
+					add_core = SMO
+					remove_core = NOV
+				}
+			}
+			BLO = {
+				312 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLO }
+						}
+					}
+					cede_province = BLO
+					add_core = BLO
+					remove_core = NOV
+				}
+				4261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLO }
+						}
+					}
+					cede_province = BLO
+					add_core = BLO
+					remove_core = NOV
+				}
+			}
+			LT2 = {
+				minsk_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LT2 }
+							NOT = { province_id = 4115 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = PLT
+				}
+				lithuania_area = {
+					limit = {
+						NOT = { owned_by = LT2 }
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = PLT
+				}
+			}
+			TRV = {
+				pripyat_area = {
+					limit = {
+						NOT = { owned_by = TRV }
+					}
+					cede_province = TRV
+					add_core = TRV
+					remove_core = KIE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.3.a"
+		ai_chance = { factor = 100 }
+		MGE = {
+			inherit = CUM
+			create_subject = {
+				subject_type = tributary_state
+				subject = VLA
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = SMO
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = CHR
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = RYA
+			}
+			create_subject = {
+				subject_type = tributary_state
+				subject = VOL
+			}
+			country_event = { id = eh_medieval_europe.21 days = 100 }
+		}
+	}
+}
+
+# Rise of the Moscow
+country_event = {
+	id = eh_russian.4
+	title = "eh_russian.4.t"
+	desc = "eh_russian.4.d"
+	picture = KREMLIN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NOV
+		is_year = 1280
+		NOT = { is_year = 1285 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			MOS = {
+				moscow_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				296 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+			}
+			BG2 = {
+				define_ruler = {
+					name = "Ivylo I"
+					change_adm = 0
+					change_dip = 1
+					change_mil = 5
+				}
+				define_consort = {
+					name = "Maria"
+					dynasty = "Palaiologina"
+					culture = greek
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					female = yes
+				}
+				define_heir = {
+					dynasty = "Asen"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.4.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_russian.4.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				NOV = { was_player = yes }
+			}
+			switch_tag = MOS
+		}
+	}
+}
+
+# Early Moscovite expansion
+country_event = {
+	id = eh_russian.5
+	title = "eh_russian.5.t"
+	desc = "eh_russian.5.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = PO2
+			tag = MOS
+		}
+		is_year = 1350
+		NOT = { is_year = 1360 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			MOS = {
+				1079 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = PRM
+				}
+				1083 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = PRM
+				}
+				1753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				1755 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = PRM
+				}
+			}
+			PO2 = {
+				inherit = VOL
+				red_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = VOL
+				}
+			}
+			LT2 = {
+				west_dniepr_area = {
+					limit = {
+						NOT = { owned_by = LT2 }
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = GLH
+				}
+				east_dniepr_area = {
+					limit = {
+						NOT = { owned_by = LT2 }
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = GLH
+				}
+				chernigov_area = {
+					limit = {
+						NOT = { owned_by = LT2 }
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = GLH
+				}
+				297 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = GLH
+				}
+				298 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = GLH
+				}
+				4244 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LT2 }
+						}
+					}
+					cede_province = LT2
+					add_core = LT2
+					remove_core = GLH
+				}
+			}
+			LIV = {
+				estonia_ingria_area = {
+					limit = {
+						NOT = { owned_by = LIV }
+					}
+					cede_province = LIV
+					add_core = LIV
+					remove_core = DAN
+				}
+			}
+			MOL = {
+				bessarabia_area = {
+					limit = {
+						NOT = { owned_by = MOL }
+					}
+					cede_province = MOL
+					add_core = MOL
+					remove_core = GLH
+				}
+				moldavia_area = {
+					limit = {
+						NOT = { owned_by = MOL }
+					}
+					cede_province = MOL
+					add_core = MOL
+					remove_core = GLH
+				}
+			}
+			A14 = {
+				change_culture = serbian
+				138 = {
+					if = {
+						limit = {
+							NOT = { owned_by = A14 }
+						}
+					}
+					cede_province = A14
+					add_core = A14
+					remove_core = RS2
+				}
+				4754 = {
+					if = {
+						limit = {
+							NOT = { owned_by = A14 }
+						}
+					}
+					cede_province = A14
+					add_core = A14
+					remove_core = RS2
+				}
+			}
+			OKA = {
+				4116 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OKA }
+						}
+					}
+					cede_province = OKA
+					add_core = OKA
+					remove_core = GLH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.5.a"
+		ai_chance = { factor = 100 }
+		MOS = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 10
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 10
+			add_war_exhaustion = -10
+			define_ruler = {
+				dynasty = "Rurikovich"
+			}
+			define_heir = {
+				dynasty = "Rurikovich"
+			}
+		}
+	}
+}
+
+# Fall of the Golden Horde 
+country_event = {
+	id = eh_russian.6
+	title = "eh_russian.6.t"
+	desc = "eh_russian.6.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOS
+		is_year = 1440
+		NOT = { is_year = 1445 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MOS = {
+				inherit = VLA
+				vladimir_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOS }
+							NOT = { province_id = 4147 }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				suzdal_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				vologda_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				galich_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				1753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = VLA
+				}
+				1778 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = RYA
+				}
+				2423 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = GOL
+				}
+			}
+			PRM = {
+				1077 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRM }
+						}
+					}
+					cede_province = PRM
+					add_core = PRM
+					remove_core = GOL
+				}
+				1962 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRM }
+						}
+					}
+					cede_province = PRM
+					add_core = PRM
+					remove_core = GOL
+				}
+			}
+			KAZ = {
+				kazan_area = {
+					limit = {
+						NOT = { owned_by = KAZ }
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				volga_area = {
+					limit = {
+						NOT = { owned_by = KAZ }
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				kama_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KAZ }
+							NOT = { province_id = 1962 }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				304 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAZ }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				473 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAZ }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				475 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAZ }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				1081 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAZ }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				2419 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAZ }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+				2444 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAZ }
+						}
+					}
+					cede_province = KAZ
+					add_core = KAZ
+					remove_core = GOL
+				}
+			}
+			CRI = {
+				azov_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CRI }
+							NOT = { province_id = 286 }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				284 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				291 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				1974 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				2411 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+				2412 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRI }
+						}
+					}
+					cede_province = CRI
+					add_core = CRI
+					remove_core = GOL
+				}
+			}
+			GAZ = {
+				dagestan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GAZ }
+							NOT = { province_id = 2208 }
+						}
+					}
+					cede_province = GAZ
+					add_core = GAZ
+					remove_core = GOL
+				}
+			}
+			PO2 = {
+				change_religion = catholic
+				create_union = LT2
+				vassalize = MAZ
+				add_country_modifier = {
+					name = warlordism
+					duration = 50000
+				}
+			}
+			LT2 = { add_liberty_desire = -100 }
+			MAZ = { add_liberty_desire = -100 }
+			MOL = { add_liberty_desire = -100 }
+			WAL = {
+				define_ruler = {
+					name = "Vlad III Tepes"
+					dynasty = "Draculesti"
+					change_adm = 1
+					change_dip = 0
+					change_mil = 6
+					age = 26
+				}
+				define_ruler_to_general = {	fire = 3	shock = 4	manuever = 4	siege = 0	}
+				define_consort = {
+					name = "Justina"
+					dynasty = "Szilagyi"
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					female = yes
+				}
+			}
+			GLH = {
+				change_tag = GOL
+				remove_country_modifier = nomadic_dynasty
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.6.a"
+		if = {
+			limit = {
+				GOL = { was_player = yes }
+			}
+			switch_tag = MOS
+		}
+	}
+	
+	option = {
+		name = "eh_russian.6.b"
+	}
+}
+
+# Fall of the Novgorod
+country_event = {
+	id = eh_russian.7
+	title = "eh_russian.7.t"
+	desc = "eh_russian.7.d"
+	picture = SIEGE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOS
+		is_year = 1478
+		NOT = { is_year = 1480 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MOS = {
+				inherit = NOV
+				inherit = RSO
+				inherit = YAR
+				arkhangelsk_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				north_karelia = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				karelia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MOS }
+							NOT = { province_id = 30 }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				novgorod_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				pomor_area = {
+					limit = {
+						NOT = { owned_by = MOS }
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				4117 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				4148 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+				4259 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOS }
+						}
+					}
+					cede_province = MOS
+					add_core = MOS
+					remove_core = NOV
+				}
+			}
+			PO2 = {
+				west_prussia_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = TEU
+				}
+				kuyavia_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = TEU
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.7.a"
+		ai_chance = { factor = 100 }
+		MOS = {
+			vassalize = BLO
+			vassalize = PSK
+			vassalize = OKA
+			vassalize = PRM
+			vassalize = TVE
+		}
+	}
+}
+	
+# Ivan III the Great
+country_event = {
+	id = eh_russian.8
+	title = "eh_russian.8.t"
+	desc = "eh_russian.8.d"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOS
+		is_year = 1500
+		NOT = { is_year = 1505 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MOS = {
+				change_tag = RUS
+				inherit = BLO
+				inherit = TVE
+				inherit = OKA
+				inherit = PRM
+				russia_region = {
+					limit = {
+						AND = {
+							NOT = { province_id = 30 }
+							NOT = { province_id = 274 }
+							NOT = { province_id = 293 }
+							NOT = { province_id = 1960 }
+							NOT = { province_id = 4243 }
+							NOT = { province_id = 4245 }
+							NOT = { area = ryazan_area }
+							NOT = { area = tambov_area }
+						}
+					}
+					change_religion = orthodox
+					cede_province = RUS
+					add_core = RUS
+				}
+				galich_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				1755 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				2425 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SMY
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.8.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			change_government = monarchy
+			add_government_reform = tsardom
+			set_government_rank = 3
+			set_capital = 295
+			change_primary_culture = russian
+			change_religion = orthodox
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Ivan III"
+				dynasty = "Rurikovich"
+				change_adm = 3
+				change_dip = 4
+				change_mil = 5
+				age = 60
+			}
+			define_consort = {
+				name = "Sophia"
+				dynasty = "Palaiologina"
+				culture = greek
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Ivan IV the Terrible
+country_event = {
+	id = eh_russian.9
+	title = "eh_russian.9.t"
+	desc = "eh_russian.9.d"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1570
+		NOT = { is_year = 1580 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				tambov_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				299 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				467 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				1842 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KUR
+				}
+				2413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+				2409 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+			}
+			PO2 = {
+				change_tag = PLC
+				inherit = LT2
+				poland_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLC }
+							NOT = { area = silesia_area }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = PO2
+				}
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLC }
+							NOT = { area = sloboda_ukraine_area }
+							NOT = { area = chernigov_area }
+							NOT = { province_id = 771 }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				west_prussia_area = {
+					limit = {
+						NOT = { owned_by = PLC }
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = PO2
+				}
+				lithuania_area = {
+					limit = {
+						NOT = { owned_by = PLC }
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				samogitia_area = {
+					limit = {
+						NOT = { owned_by = PLC }
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				37 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				1834 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				4241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+			}
+			SWE = {
+				36 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = KUR
+				}
+			}
+			HAB = {
+				1952 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TRV
+				}
+				1953 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TRV
+				}
+				4125 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TRV
+				}
+			}
+			TUR = {
+				create_subject = {
+					subject_type = eyalet
+					subject = HED
+				}
+				create_subject = {
+					subject_type = eyalet
+					subject = TUN
+				}
+				create_subject = {
+					subject_type = eyalet
+					subject = TRP
+				}
+				321 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+			LIV = { 
+				change_tag = KUR
+				change_religion = protestant
+			}
+			estonia_ingria_area = { change_religion = protestant }
+			livonia_area = { change_religion = protestant }
+			curonia_area = { change_religion = protestant }
+		}
+	}
+	
+	option = {
+		name = "eh_russian.9.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			define_ruler = {
+				name = "Ivan IV Grozny"
+				dynasty = "Rurikovich"
+				change_adm = 2
+				change_dip = 5
+				change_mil = 6
+				age = 37
+			}
+			define_consort = {
+				name = "Anastasia"
+				dynasty = "Romanovna"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Rurikovich"
+			}
+		}
+		PLC = {
+			change_government = monarchy
+			add_government_reform = polish_elective_monarchy
+			set_government_rank = 2
+		}
+	}
+}
+
+# Time of Troubles 
+country_event = {
+	id = eh_russian.10
+	title = "eh_russian.10.t"
+	desc = "eh_russian.10.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1595
+		NOT = { is_year = 1600 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				inherit = SIB
+				ural_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 1965 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				yrtesh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 2434 }
+							NOT = { province_id = 4687 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				ishim_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 2369 }
+							NOT = { province_id = 4692 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				ob_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 480 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				1069 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				1073 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				2441 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				4690 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+				4691 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SIB
+				}
+			}
+			PLC = {
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLC }
+							NOT = { area = sloboda_ukraine_area }
+							NOT = { area = chernigov_area }
+							NOT = { province_id = 771 }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+				37 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = LT2
+				}
+			}
+			SWE = {
+				36 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = DAN
+				}
+				1842 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = RUS
+				}
+			}
+			PLC = {
+				inherit = RIG
+				38 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = RIG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.10.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			kill_ruler = yes
+			remove_heir = { allow_new_heir = no }
+			country_event = { id = time_of_troubles.1 days = 100 }
+		}
+	}
+}
+
+# Accession of the Romanovs
+country_event = {
+	id = eh_russian.11
+	title = "eh_russian.11.t"
+	desc = "eh_russian.11.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1610
+		NOT = { is_year = 1615 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				central_siberia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				ob_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = OIR
+				}
+				yrtesh_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = OIR
+				}
+				1061 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				1063 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = TUV
+				}
+				1065 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = OIR
+				}
+				2431 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				2443 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+			}
+			SWE = {
+				18 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = SMI
+				}
+				32 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = RUS
+				}
+				33 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = RUS
+				}
+				34 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = RUS
+				}
+				4124 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = RUS
+				}
+			}
+			PLC = {
+				chernigov_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLC }
+							NOT = { province_id = 4543 }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = RUS
+				}
+				293 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = RUS
+				}
+				4243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = RUS
+				}
+				4245 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLC }
+						}
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = RUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.11.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			set_country_flag = rus_had_time_of_troubles
+			define_ruler = {
+				name = "Mikhail I"
+				dynasty = "Romanov"
+				change_adm = 4
+				change_dip = 2
+				change_mil = 3
+				age = 16
+			}
+			define_consort = {
+				name = "Eudoxia"
+				dynasty = "Streshneva"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Romanov"
+			}
+		}
+		SWE = {
+			define_ruler = {
+				name = "Gustav II Adolf"
+				dynasty = "Vasa"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 6
+				age = 17
+			}
+			define_consort = {
+				name = "Maria Eleonora"
+				dynasty = "von Brandenburg"
+				culture = saxon
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Vasa"
+			}
+		}
+	}
+}
+
+# Russian Colonization of the Siberia
+country_event = {
+	id = eh_russian.12
+	title = "eh_russian.12.t"
+	desc = "eh_russian.12.d"
+	picture = STRELTSY_MARCHING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1650
+		NOT = { is_year = 1660 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				inherit = NOG
+				astrakhan_area  = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 2417 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KLM
+				}
+				lower_yik_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = NOG
+				}
+				irkutsk_area  = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = BRT
+				}
+				sakha_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				okhotsk_area  = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				kolyma_area  = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				yakutia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 1782 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				1037 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				1059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				1080 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+			}
+			KLM = {
+				2417 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLM }
+						}
+					}
+					cede_province = KLM
+					add_core = KLM
+					remove_core = RUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.12.a"
+		ai_chance = { factor = 100 }
+		SWE = {
+			define_advisor = {
+				type = philosopher
+				name = "Rene Descartes"
+				culture = cosmopolitan_french
+				skill = 3
+				discount = yes
+			}
+		}
+		KLM = {
+			change_government = republic
+			add_government_reform = cossacks_reform
+			set_government_rank = 2
+		}
+	}
+}
+
+# Second Northern War
+country_event = {
+	id = eh_russian.13
+	title = "eh_russian.13.t"
+	desc = "eh_russian.13.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1660
+		NOT = { is_year = 1670 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				smolensk_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				chernigov_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				east_dniepr_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				280 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				291 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = ZAZ
+				}
+				771 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				4243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+			}
+			SWE = {
+				skaneland_area = {
+					limit = {
+						NOT = { owned_by = SWE }
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = DAN
+				}
+				vastra_gotaland_area = {
+					limit = {
+						NOT = { owned_by = SWE }
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = DAN
+				}
+				25 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = DAN
+				}
+				35 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = DAN
+				}
+			}
+			NED = {
+				957 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = SWE
+				}
+				962 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = SWE
+				}
+			}
+			DAN = {
+				493 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = SPA
+				}
+				1139 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = POR
+				}
+			}
+			SHL = {
+				holstein_area = {
+					limit = {
+						NOT = { owned_by = SHL }
+					}
+					cede_province = SHL
+					add_core = SHL
+					remove_core = DAN
+				}
+			}
+			KHI = {
+				transcaspia_area = {
+					limit = {
+						NOT = { owned_by = KHI }
+					}
+					cede_province = KHI
+					add_core = KHI
+					remove_core = KZH
+				}
+				2370 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KHI }
+						}
+					}
+					cede_province = KHI
+					add_core = KHI
+					remove_core = KZH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.13.a"
+		ai_chance = { factor = 100 }
+		BRA = { grant_independence = yes }
+	}
+}
+
+# Peter the Great
+country_event = {
+	id = eh_russian.14
+	title = "eh_russian.14.t"
+	desc = "eh_russian.14.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1682
+		NOT = { is_year = 1685 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_russian.14.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			change_government = monarchy
+			add_government_reform = russian_empire_reform
+			set_government_rank = 3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			define_ruler = {
+				name = "Pyotr I Veliky"
+				dynasty = "Romanov"
+				culture = russian 
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				age = 10
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+}
+
+# Russian Empire
+country_event = {
+	id = eh_russian.15
+	title = "eh_russian.15.t"
+	desc = "eh_russian.15.d"
+	picture = WESTERN_TZAR_AND_PETERSBURG_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1720
+		NOT = { is_year = 1725 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				karelia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+				estonia_ingria_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+				livonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 273 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+				32 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+				35 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+				4124 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.15.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			add_stability = 1
+			add_prestige = 10
+			set_capital = 33
+			change_technology_group = western
+			define_consort = {
+				name = "Yekaterina I"
+				dynasty = "Romanov"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 2
+				female = yes
+			}
+			add_country_modifier = {
+				name = major_power
+				duration = 150000
+			}
+			33 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# Catherine the Great
+country_event = {
+	id = eh_russian.16
+	title = "eh_russian.16.t"
+	desc = "eh_russian.16.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1762
+		NOT = { is_year = 1765 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				inherit = ZAZ
+				magadan_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				kamchatka_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				283 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = ZAZ
+				}
+				2406 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = ZAZ
+				}
+				2411 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = ZAZ
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.16.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			define_ruler = {
+				name = "Yekaterina II Velikaya"
+				dynasty = "Romanov"
+				culture = prussian 
+				change_adm = 6
+				change_dip = 5
+				change_mil = 5
+				age = 32
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Romanov"
+				culture = russian
+			}
+		}
+	}
+}
+
+# Partitions of Poland
+country_event = {
+	id = eh_russian.17
+	title = "eh_russian.17.t"
+	desc = "eh_russian.17.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PLC
+		is_year = 1770
+		NOT = { is_year = 1775 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				white_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				chukotka_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				2417 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KLM
+				}
+				4242 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				
+			}
+			HAB = {
+				red_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PLC
+				}
+				268 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = MOL
+				}
+				3061 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = MOL
+				}
+				2960 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PLC
+				}
+				2959 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PLC
+				}
+			}
+			PRU = {
+				west_prussia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { province_id = 43 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				1859 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				2963 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				4523 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+			}
+			OLD = {
+				55 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OLD }
+						}
+					}
+					cede_province = OLD
+					add_core = OLD
+					remove_core = DAN
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.17.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				PLC = { was_player = yes }
+			}
+			switch_tag = RUS
+		}
+	}
+	
+	option = {
+		name = "eh_russian.17.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				PLC = { was_player = yes }
+			}
+			switch_tag = HAB
+		}
+	}
+	
+	option = {
+		name = "eh_russian.17.c"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				PLC = { was_player = yes }
+			}
+			switch_tag = PRU
+		}
+	}
+}
+
+# Partitions of Poland
+country_event = {
+	id = eh_russian.18
+	title = "eh_russian.18.t"
+	desc = "eh_russian.18.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1790
+		NOT = { is_year = 1795 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				inherit = CUR
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 269 }
+						}
+					}
+					change_religion = orthodox
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				curonia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CUR
+				}
+				samogitia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				lithuania_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+				east_alaska_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				alaska_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+				4538 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PLC
+				}
+			}
+			PRU = {
+				mazovia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				kuyavia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				wielkopolska_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				central_poland_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { province_id = 4533 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				43 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				269 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+				4924 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PLC
+				}
+			}
+			HAB = {
+				malopolska_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PLC
+				}
+				sandomierz_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 4538 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PLC
+				}
+				4533 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PLC
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.18.a"
+		ai_chance = { factor = 100 }
+		RUS = { add_prestige = 10 }
+		PRU = { add_prestige = 10 }
+		HAB = { add_prestige = 10 }
+	}
+}
+
+# French invasion of Russia
+country_event = {
+	id = eh_russian.19
+	title = "eh_russian.19.t"
+	desc = "eh_russian.19.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				central_poland_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+				mazovia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+				sandomierz_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 2959 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+				malopolska_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 262 }
+							NOT = { province_id = 2960 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+				bessarabia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = MOL
+				}
+				shirvan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 424 }
+							NOT = { province_id = 4340 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SRV
+				}
+				kartli_kakheti_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = GEO
+				}
+				imereti_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = GEO
+				}
+				circassia_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CIR
+				}
+				255 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+				420 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = AM2
+				}
+				1930 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+				2196 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = GEO
+				}
+				2202 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = MLK
+				}
+				4524 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+				4528 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PO2
+				}
+			}
+			DAN = {
+				holstein_area = {
+					limit = {
+						NOT = { owned_by = DAN }
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = FR2
+				}
+				47 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = SWE
+				}
+				2994 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = SWE
+				}
+				4745 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = SWE
+				}
+			}
+			NOR = {
+				western_norway = {
+					limit = {
+						NOT = { owned_by = NOR }
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DAN
+				}
+				eastern_norway = {
+					limit = {
+						NOT = { owned_by = NOR }
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DAN
+				}
+				northern_norway = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NOR }
+							NOT = { province_id = 10 }
+						}
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DAN
+				}
+				315 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOR }
+						}
+					}
+					cede_province = NOR
+					add_core = NOR
+					remove_core = DAN
+				}
+			}
+			SWE = {
+				10 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+					remove_core = DAN
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.19.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			clr_country_flag = napoleonic_wars
+			set_government_rank = 2
+			white_peace = RUS
+			define_ruler = {
+				name = "Louis XVIII"
+				dynasty = "de Bourbon"
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+			}
+			country_event = { id = eh_russian.42 days = 1 }
+		}
+		RUS = { clr_country_flag = napoleonic_wars }
+		HAB = { country_event = { id = eh_german.18 days = 7 } }
+		SPI = { country_event = { id = eh_italian.6 days = 7 } }
+		SWE = { create_union = NOR }
+		NOR = { change_religion = protestant }
+		SPA = {
+			clr_country_flag = napoleonic_wars
+			country_event = { id = eh_spanish.19 days = 7 } 
+		}
+		IT2 = { clr_country_flag = napoleonic_wars }
+		PO2 = { clr_country_flag = napoleonic_wars }
+	}
+}
+
+# Decembrist Revolt
+country_event = {
+	id = eh_russian.20
+	title = "eh_russian.20.t"
+	desc = "eh_russian.20.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1825
+		NOT = { is_year = 1830 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				nogai_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				ishim_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				kazakhstan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 2358 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				2357 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				4690 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.20.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			33 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+					leader = "Decembrists"
+				}
+			}
+		}
+	}
+}
+
+# Crimean War
+country_event = {
+	id = eh_russian.21
+	title = "eh_russian.21.t"
+	desc = "eh_russian.21.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1853
+		NOT = { is_year = 1855 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				aqmola_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				balchasj_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = KZH
+				}
+				1810 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+			}
+			TUR = {
+				inherit = TRP
+				mashriq_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 364 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+				cyrenaica_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 1794 }
+							NOT = { province_id = 4172 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+				tabuk_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+				medina_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+				mecca_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+				tihama_al_yemen_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+				tripolitania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 2450 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = TRP
+				}
+				386 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = EG2
+				}
+			}
+			BUK = {
+				1967 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUK }
+						}
+					}
+					cede_province = BUK
+					add_core = BUK
+					remove_core = FRG
+				}
+			}
+			CYR = {
+				4172 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CYR }
+						}
+					}
+					cede_province = CYR
+					add_core = CYR
+				}
+			}
+			GBR = { create_guarantee = TUR }
+			FR2 = { create_guarantee = TUR }
+		}
+	}
+
+	option = {
+		name = "eh_russian.21.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			set_country_flag = crimean_war
+			declare_war_with_cb = {
+				who = TUR
+				casus_belli = cb_imperial
+			}
+		}
+		TUR = {
+			set_country_flag = crimean_war
+			country_event = { id = eh_asia_turkey.15 days = 700 }
+		}
+		GBR = { 
+			set_country_flag = crimean_war
+			join_all_defensive_wars_of = TUR
+		}
+		FR2 = { 
+			set_country_flag = crimean_war
+			join_all_defensive_wars_of = TUR
+		}
+	}
+}
+
+# Emancipation reform of 1861
+country_event = {
+	id = eh_russian.22
+	title = "eh_russian.22.t"
+	desc = "eh_russian.22.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1861
+		NOT = { is_year = 1865 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = {
+				arys_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = FRG
+				}
+				kyzylkum_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = BUK
+				}
+				454 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = BUK
+				}
+				458 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = FRG
+				}
+				1967 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = BUK
+				}
+			}
+			PER = {
+				2206 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MGR
+				}
+				2211 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = ARD
+				}
+			}
+			EG2 = {
+				2787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EG2 }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = MED
+				}
+				2766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EG2 }
+						}
+					}
+					cede_province = EG2
+					add_core = EG2
+					remove_core = MED
+				}
+			}
+			QTR = {
+				395 = {
+					if = {
+						limit = {
+							NOT = { owned_by = QTR }
+						}
+					}
+					cede_province = QTR
+					add_core = QTR
+					remove_core = BHR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.22.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			add_prestige = 10
+			define_ruler = {
+				name = "Aleksandr II"
+				dynasty = "Romanov"
+				change_adm = 6
+				change_dip = 4
+				change_mil = 3
+				age = 40
+			}
+			define_consort = {
+				name = "Maria"
+				dynasty = "Alexandrovna"
+				culture = hessian
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Romanov"
+			}
+		}
+	}
+}
+
+# 1905 Russian Revolution
+country_event = {
+	id = eh_russian.23
+	title = "eh_russian.23.t"
+	desc = "eh_russian.23.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_russian.23.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			add_stability = -1
+			add_prestige = -10
+			add_corruption = 10
+			define_ruler = {
+				name = "Nikolaj II"
+				dynasty = "Romanov"
+				change_adm = 0
+				change_dip = 1
+				change_mil = 0
+				age = 37
+			}
+			define_consort = {
+				name = "Alexandra"
+				dynasty = "Feodorovna"
+				culture = hessian
+				change_adm = 0
+				change_dip = 2
+				change_mil = 0
+				age = 33
+				female = yes
+			}
+			define_heir = {
+				name = "Alexei"
+				dynasty = "Romanov"
+			}
+			33 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+			295 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+		}
+		NOR = { break_union = SWE }
+	}
+}
+
+# Russian Revolution
+country_event = {
+	id = eh_russian.24
+	title = "eh_russian.24.t"
+	desc = "eh_russian.24.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 1917
+		NOT = { is_year = 1918 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			TUR = {
+				samtskhe_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = RUS
+				}
+			}
+			ARM = {
+				armenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ARM }
+							NOT = { province_id = 420 }
+							NOT = { province_id = 2202 }
+						}
+					}
+					change_culture = armenian
+					change_religion = coptic
+					cede_province = ARM
+					add_core = ARM
+					remove_core = RUS
+				}
+			}
+			GEO = {
+				imereti_area = {
+					limit = {
+						NOT = { owned_by = GEO }
+					}
+					cede_province = GEO
+					add_core = GEO
+					remove_core = RUS
+				}
+				kartli_kakheti_area = {
+					limit = {
+						NOT = { owned_by = GEO }
+					}
+					cede_province = GEO
+					add_core = GEO
+					remove_core = RUS
+				}
+			}
+			AZE = {
+				shirvan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AZE }
+							NOT = { province_id = 424 }
+						}
+					}
+					cede_province = AZE
+					add_core = AZE
+					remove_core = RUS
+				}
+				420 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZE }
+						}
+					}
+					cede_province = AZE
+					add_core = AZE
+					remove_core = RUS
+				}
+				2202 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZE }
+						}
+					}
+					cede_province = AZE
+					add_core = AZE
+					remove_core = RUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.24.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			clr_country_flag = ww1
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 3
+			set_capital = 295
+			change_primary_culture = russian
+			change_religion = secularism
+			white_peace = DE2
+			define_ruler = {
+				name = "Alexander Kerensky"
+				culture = russian
+				change_adm = 4
+				change_dip = 2
+				change_mil = 2
+			}
+			russia_region = {
+				limit = { owned_by = RUS }
+				kill_units = {
+					who = REB
+					type = infantry
+				}
+				kill_units = {
+					who = REB
+					type = cavalry
+				}
+				kill_units = {
+					who = REB
+					type = artillery
+				}
+			}
+			country_event = { id = eh_russian.53 days = 300 }
+		}
+	}
+}
+
+# Russian Civil War
+country_event = {
+	id = eh_russian.25
+	title = "eh_russian.25.t"
+	desc = "eh_russian.25.d"
+	picture = COMMUNISM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			RUS = {
+				every_owned_province = {
+					add_core = SOV
+					remove_core = RUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.25.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			add_manpower = 500
+			swap_free_idea_group = yes
+			inherit = RUS
+			add_treasury = 100000
+			add_years_of_income = 1
+			define_ruler = {
+				name = "Vladimir Lenin"
+				culture = russian
+				change_adm = 4
+				change_dip = 3
+				change_mil = 5
+				age = 48
+			}
+			tartary_superregion = {
+				limit = { owned_by = SOV }
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+			manchuria_region = {
+				limit = { owned_by = SOV }
+				spawn_rebels = {
+					type = particularist_rebels
+					size = 1
+				}
+			}
+			country_event = { id = eh_russian.50 days = 1 }
+		}
+	}
+}
+
+# Soviet Union
+country_event = {
+	id = eh_russian.26
+	title = "eh_russian.26.t"
+	desc = "eh_russian.26.d"
+	picture = COMMUNISM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		is_year = 1923
+		NOT = { is_year = 1924 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SOV = {
+				inherit = UKR
+				inherit = GEO
+				inherit = ARM
+				west_siberia_region = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+				}
+				east_siberia_region = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+				}
+				caucasia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { area = samtskhe_area }
+							NOT = { province_id = 424 }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = GEO
+				}
+				ruthenia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SOV }
+							NOT = { area = podlasie_area }
+							NOT = { area = volhynia_area }
+							NOT = { province_id = 278 }
+							NOT = { province_id = 4537 }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = BLR
+				}
+				crimea_region = {
+					limit = {
+						NOT = { owned_by = SOV }
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = UKR
+				}
+			}
+			POL = {
+				lithuania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POL }
+							NOT = { province_id = 4535 }
+						}
+					}
+					cede_province = POL
+					add_core = POL
+					remove_core = BLR
+				}
+				podlasie_area = {
+					limit = {
+						NOT = { owned_by = POL }
+					}
+					cede_province = POL
+					add_core = POL
+					remove_core = BLR
+				}
+				278 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POL }
+						}
+					}
+					cede_province = POL
+					add_core = POL
+					remove_core = BLR
+				}
+				4537 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POL }
+						}
+					}
+					cede_province = POL
+					add_core = POL
+					remove_core = BLR
+				}
+			}
+			RMN = {
+				transylvania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RMN }
+							NOT = { province_id = 1952 }
+						}
+					}
+					cede_province = RMN
+					add_core = RMN
+					remove_core = HUN
+				}
+				southern_transylvania_area = {
+					limit = {
+						NOT = { owned_by = RMN }
+					}
+					cede_province = RMN
+					add_core = RMN
+					remove_core = HUN
+				}
+			}
+			TTU = {
+				716 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TTU }
+						}
+					}
+					change_culture = tuvan
+					cede_province = TTU
+					add_core = TTU
+					remove_core = SOV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.26.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			clr_country_flag = uprising_eh
+			every_owned_province = {
+				kill_units = {
+					who = REB
+					type = infantry
+				}
+				kill_units = {
+					who = REB
+					type = cavalry
+				}
+				kill_units = {
+					who = REB
+					type = artillery
+				}
+			}
+		}
+	}
+}
+
+# Cultural Revolution and Collectivization
+country_event = {
+	id = eh_russian.27
+	title = "eh_russian.27.t"
+	desc = "eh_russian.27.d"
+	picture = COMMUNISM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		is_year = 1925
+		NOT = { is_year = 1930 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			LIT = {
+				inherit = MML
+				40 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LIT }
+						}
+					}
+					cede_province = LIT
+					add_core = LIT
+					remove_core = MML
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.27.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 3
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_stability = 1
+			add_manpower = 30
+			add_sailors = 1000
+			add_prestige = 10
+			add_years_of_income = 5
+			define_ruler = {
+				name = "Joseph Stalin"
+				change_adm = 1
+				change_dip = 2
+				change_mil = 6
+				age = 46
+			}
+		}
+	}
+}
+
+# Era of Stagnation
+country_event = {
+	id = eh_russian.28
+	title = "eh_russian.28.t"
+	desc = "eh_russian.28.d"
+	picture = OVEREXTENSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		is_year = 1985
+		NOT = { is_year = 1990 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		SOV = {
+			every_owned_province = {
+				limit = {
+					AND = {
+						NOT = { province_id = 33 }
+						NOT = { province_id = 295 }
+					}
+				}
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.28.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_prestige = -10
+			add_years_of_income = -3
+			define_ruler = {
+				name = "Mikhail Gorbachev"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 2
+				age = 54
+			}
+		}
+	}
+}
+
+# Chernobyl disaster
+country_event = {
+	id = eh_russian.29
+	title = "eh_russian.29.t"
+	desc = "eh_russian.29.d"
+	picture = NUCLEAR_ENERGY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		is_year = 1986
+		NOT = { is_year = 1988 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_russian.29.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			289 = { add_devastation = 50 }
+			1941 = { add_devastation = 50 }
+			4274 = { add_devastation = 50 }
+			4371 = { add_devastation = 50 }
+		}
+	}
+}
+
+# Annexation of Crimea by the Russian Federation
+country_event = {
+	id = eh_russian.30
+	title = "eh_russian.30.t"
+	desc = "eh_russian.30.d"
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 2014
+		NOT = { is_year = 2015 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			RUS = {
+				crimea_area = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.30.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			add_prestige = -10
+			add_years_of_income = -1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+		}
+	}
+}
+
+# 2022 Russian invasion of Ukraine
+country_event = {
+	id = eh_russian.31
+	title = "eh_russian.31.t"
+	desc = "eh_russian.31.d"
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		is_year = 2022
+		NOT = { is_year = 2023 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_russian.31.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			set_country_flag = russo_ukraine_war
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_republican_tradition = -10
+			add_manpower = 100
+			add_inflation = 3
+			add_corruption = 10
+			add_years_of_income = -3
+			declare_war_with_cb = {
+				who = UKR
+				casus_belli = cb_conquest
+			}
+			country_event = { id = eh_russian.32 days = 100 }
+		}
+		UKR = {
+			set_country_flag = russo_ukraine_war
+			add_manpower = 100
+			define_ruler = {
+				name = "Volodymyr Zelenskyy"
+				change_adm = 3
+				change_dip = 5
+				change_mil = 5
+				age = 44
+			}
+			280 = {
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				infantry = UKR
+				cavalry = UKR
+				cavalry = UKR
+				cavalry = UKR
+				cavalry = UKR
+				artillery = UKR
+				artillery = UKR
+				artillery = UKR
+				artillery = UKR
+				artillery = UKR
+				artillery = UKR
+			}
+		}
+	}
+}
+
+# 2022 Russian invasion of Ukraine
+country_event = {
+	id = eh_russian.32
+	title = "eh_russian.32.t"
+	desc = "eh_russian.32.d"
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_russian.32.a"
+		ai_chance = { factor = 0 }
+		RUS = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_republican_tradition = -10
+			add_manpower = 100
+			add_inflation = 3
+			add_corruption = 10
+			add_years_of_income = -3
+			crimea_region = {
+				limit = {
+					AND = {
+						owned_by = UKR
+						NOT = { owned_by = RUS }
+					}
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = UKR
+			}
+			291 = {
+				if = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = UKR
+			}
+			1756 = {
+				if = {
+					limit = {
+						NOT = { owned_by = RUS }
+					}
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = UKR
+			}
+		}
+		UKR = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_republican_tradition = -10
+			add_manpower = -10
+			add_inflation = 3
+			add_corruption = 10
+			add_years_of_income = -3
+		}
+	}
+	
+	option = {
+		name = "eh_russian.32.b"
+		ai_chance = { factor = 100 }
+		RUS = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_stability = -1
+			add_republican_tradition = -10
+			add_manpower = 100
+			add_inflation = 3
+			add_corruption = 10
+			add_years_of_income = -3
+		}
+		UKR = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_republican_tradition = 10
+			add_manpower = -10
+			add_inflation = -3
+			add_corruption = -10
+			add_years_of_income = 3
+			crimea_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = UKR }
+						NOT = { province_id = 2447 }
+					}
+				}
+				cede_province = UKR
+				add_core = UKR
+				remove_core = RUS
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Setting on the Treaty of Nerchiinsk
+country_event = {
+	id = eh_russian.33
+	title = "eh_russian.33.t"
+	desc = "eh_russian.33.d"
+	picture = REFORM_eventPicture
+	
+	trigger = {
+		tag = RUS
+		1850 = { controlled_by = QNG }
+		is_year = 1870
+		NOT = { is_year = 1915 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "eh_russian.33.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			east_heilongjiang_area = {
+				limit = {
+					NOT = { owned_by = RUS }
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+			ilan_hala_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = RUS }
+						NOT = { province_id = 1033 }
+					}
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+			central_ilin_hala_area = {
+				limit = {
+					NOT = { owned_by = RUS }
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+			central_jilin_area = {
+				limit = {
+					NOT = { owned_by = RUS }
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+			furdan_area = {
+				limit = {
+					NOT = { owned_by = RUS }
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+			jetysuu_area = {
+				limit = {
+					AND = {
+						owned_by = QNG
+						NOT = { owned_by = RUS }
+					}
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+			2446 = {
+				if = {
+					limit = { 
+						NOT = { owned_by = RUS }
+					}
+				}
+				cede_province = RUS
+				add_core = RUS
+				remove_core = QNG
+			}
+		}
+	}
+}
+
+# Setting on the Kalmyk khanate
+country_event = {
+	id = eh_russian.34
+	title = "eh_russian.34.t"
+	desc = "eh_russian.34.d"
+	picture = REFORM_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = RUS
+			tag = SOV
+		}
+		464 = { owned_by = KLM }
+		is_year = 1770
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "eh_russian.34.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			astrakhan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				cede_province = ROOT
+				add_core = ROOT
+				remove_core = KLM
+			}
+		}
+	}
+}
+
+# Peter I
+country_event = {
+	id = eh_russian.35
+	title = "eh_russian.35.t"
+	desc = "eh_russian.35.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = RUS
+		is_year = 1690
+		NOT = { is_year = 1720 }
+		NOT = { has_ruler = "Pyotr I Veliky" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_russian.35.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			change_government = monarchy
+			add_government_reform = russian_empire_reform
+			set_government_rank = 3
+			define_ruler = {
+				name = "Pyotr I Veliky"
+				dynasty = "Romanov"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				min_age = 15
+				max_age = 45
+			}
+			define_consort = {
+				name = "Yekaterina I"
+				dynasty = "Romanov"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Yekaterina II
+country_event = {
+	id = eh_russian.36
+	title = "eh_russian.36.t"
+	desc = "eh_russian.36.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		tag = RUS
+		is_year = 1770
+		NOT = { is_year = 1790 }
+		NOT = { has_ruler = "Yekaterina II Velikaya" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_russian.36.a"
+		ai_chance = { factor = 100 }
+		RUS = {
+			change_government = monarchy
+			add_government_reform = russian_empire_reform
+			set_government_rank = 3
+			define_ruler = {
+				name = "Yekaterina II Velikaya"
+				dynasty = "Romanova"
+				culture = prussian
+				change_adm = 6
+				change_dip = 5
+				change_mil = 5
+				female = yes
+				min_age = 40
+				max_age = 60
+			}
+			define_heir = {
+				dynasty = "Romanov"
+				culture = russian
+			}
+		}
+	}
+}
+
+# Vladimir Lenin
+country_event = {
+	id = eh_russian.37
+	title = "eh_russian.37.t"
+	desc = "eh_russian.37.d"
+	picture = COMMUNISM_eventPicture
+	
+	trigger = {
+		tag = SOV
+		is_year = 1920
+		NOT = { is_year = 1925 }
+		NOT = { has_ruler = "Vladimir Lenin" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_russian.37.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Vladimir Lenin"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 5
+				min_age = 50
+				max_age = 55
+			}
+		}
+	}
+}
+
+# Joseph Stalin
+country_event = {
+	id = eh_russian.38
+	title = "eh_russian.38.t"
+	desc = "eh_russian.38.d"
+	picture = COMMUNISM_eventPicture
+	
+	trigger = {
+		tag = SOV
+		is_year = 1925
+		NOT = { is_year = 1950 }
+		NOT = { has_ruler = "Joseph Stalin" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_russian.38.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Joseph Stalin"
+				change_adm = 1
+				change_dip = 2
+				change_mil = 6
+				culture = georgian
+				min_age = 50
+				max_age = 75
+			}
+		}
+	}
+}
+
+# Seven Years' War - Start for Russia
+country_event = {
+	id = eh_russian.39
+	title = "eh_russian.39.t"
+	desc = "eh_russian.39.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.39.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Seven Years' War - Finish for Russia
+country_event = {
+	id = eh_russian.40
+	title = "eh_russian.40.t"
+	desc = "eh_russian.40.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.40.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# French invasion of Russia - Start for Russia
+country_event = {
+	id = eh_russian.41
+	title = "eh_russian.41.t"
+	desc = "eh_russian.41.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.41.a"
+		ai_chance = { factor = 100 }
+		RUS = { country_event = { id = eh_russian.19 days = 300 } }
+	}
+}
+
+# French invasion of Russia - Finish for France
+country_event = {
+	id = eh_russian.42
+	title = "eh_russian.42.t"
+	desc = "eh_russian.42.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.42.a"
+		ai_chance = { factor = 100 }
+		FR2 = { country_event = { id = eh_french.28 days = 100 } }
+	}
+}
+
+# Hundred Days - Start for Russia
+country_event = {
+	id = eh_russian.43
+	title = "eh_russian.43.t"
+	desc = "eh_russian.43.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.43.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Surrender of Napoleon - Finish for Russia
+country_event = {
+	id = eh_russian.44
+	title = "eh_russian.44.t"
+	desc = "eh_russian.44.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.44.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boxer Rebellion - Start for Russia
+country_event = {
+	id = eh_russian.45
+	title = "eh_russian.45.t"
+	desc = "eh_russian.45.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.45.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boxer Protocol - Finish for Russia
+country_event = {
+	id = eh_russian.46
+	title = "eh_russian.46.t"
+	desc = "eh_russian.46.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.46.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Russo-Japanese War - Start for Russia
+country_event = {
+	id = eh_russian.47
+	title = "eh_russian.47.t"
+	desc = "eh_russian.47.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.47.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Treaty of Portsmouth - Finish for Russia
+country_event = {
+	id = eh_russian.48
+	title = "eh_russian.48.t"
+	desc = "eh_russian.48.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.48.a"
+		ai_chance = { factor = 100 }
+		RUS = { country_event = { id = eh_russian.23 days = 100 } }
+	}
+}
+
+# World War I - Start for Russia
+country_event = {
+	id = eh_russian.49
+	title = "eh_russian.49.t"
+	desc = "eh_russian.49.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.49.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Treaty of Versailles - Finish for Russia
+country_event = {
+	id = eh_russian.50
+	title = "eh_russian.50.t"
+	desc = "eh_russian.50.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.50.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# World War II - Start for Soviet
+country_event = {
+	id = eh_russian.51
+	title = "eh_russian.51.t"
+	desc = "eh_russian.51.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.51.a"
+		ai_chance = { factor = 100 }
+		SOV = { country_event = { id = eh_ww2.9 days = 300 } }
+	}
+}
+
+# Victory over Japan Day - Finish for Soviet
+country_event = {
+	id = eh_russian.52
+	title = "eh_russian.52.t"
+	desc = "eh_russian.52.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_russian.52.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Russian Civil War - Event for tag
+country_event = {
+	id = eh_russian.53
+	title = "eh_russian.53.t"
+	desc = "eh_russian.53.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			RUS = { country_event = { id = eh_russian.25 days = 3 } }
+			SOV = {
+				295 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOV }
+						}
+					}
+					cede_province = SOV
+					add_core = SOV
+					remove_core = RUS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_russian.53.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				RUS = { was_player = yes }
+			}
+			switch_tag = SOV
+		}
+	}
+}
+
+# Dissolution of the Soviet Union - Event for tag
+country_event = {
+	id = eh_russian.54
+	title = "eh_russian.54.t"
+	desc = "eh_russian.54.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			SOV = {
+				every_owned_province = {
+					add_core = RUS
+					remove_core = SOV
+				}
+			}
+			EST = {
+				estonia_ingria_area = {
+					limit = {
+						NOT = { owned_by = EST }
+					}
+					change_culture = estonian
+					cede_province = EST
+					add_core = EST
+					remove_core = SOV
+				}
+				35 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EST }
+						}
+					}
+					change_culture = estonian
+					cede_province = EST
+					add_core = EST
+					remove_core = SOV
+				}
+				37 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EST }
+						}
+					}
+					change_culture = estonian
+					cede_province = EST
+					add_core = EST
+					remove_core = SOV
+				}
+			}
+			LTV = {
+				livonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LTV }
+							NOT = { province_id = 37 }
+						}
+					}
+					change_culture = latvian
+					cede_province = LTV
+					add_core = LTV
+					remove_core = SOV
+				}
+				curonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LTV }
+							NOT = { province_id = 35 }
+						}
+					}
+					change_culture = latvian
+					cede_province = LTV
+					add_core = LTV
+					remove_core = SOV
+				}
+			}
+			LIT = {
+				samogitia_area = {
+					limit = {
+						NOT = { owned_by = LIT }
+					}
+					change_culture = lithuanian
+					cede_province = LIT
+					add_core = LIT
+					remove_core = SOV
+				}
+				lithuania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LIT }
+							NOT = { province_id = 770 }
+							NOT = { province_id = 4536 }
+						}
+					}
+					change_culture = lithuanian
+					cede_province = LIT
+					add_core = LIT
+					remove_core = SOV
+				}
+				40 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LIT }
+						}
+					}
+					change_culture = lithuanian
+					cede_province = LIT
+					add_core = LIT
+					remove_core = SOV
+				}
+			}
+			BLR = {
+				minsk_area = {
+					limit = {
+						NOT = { owned_by = BLR }
+					}
+					change_culture = byelorussian
+					cede_province = BLR
+					add_core = BLR
+					remove_core = SOV
+				}
+				pripyat_area = {
+					limit = {
+						NOT = { owned_by = BLR }
+					}
+					change_culture = byelorussian
+					cede_province = BLR
+					add_core = BLR
+					remove_core = SOV
+				}
+				white_ruthenia_area = {
+					limit = {
+						NOT = { owned_by = BLR }
+					}
+					change_culture = byelorussian
+					cede_province = BLR
+					add_core = BLR
+					remove_core = SOV
+				}
+				podlasie_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BLR }
+							NOT = { province_id = 269 }
+							NOT = { province_id = 4924 }
+						}
+					}
+					change_culture = byelorussian
+					cede_province = BLR
+					add_core = BLR
+					remove_core = SOV
+				}
+				770 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLR }
+						}
+					}
+					cede_province = BLR
+					add_core = BLR
+					remove_core = SOV
+				}
+				4536 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLR }
+						}
+					}
+					cede_province = BLR
+					add_core = BLR
+					remove_core = SOV
+				}
+			}
+			UKR = {
+				red_ruthenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UKR }
+							NOT = { province_id = 2424 }
+						}
+					}
+					change_culture = ruthenian
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				volhynia_area = {
+					limit = {
+						NOT = { owned_by = UKR }
+					}
+					change_culture = ruthenian
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				west_dniepr_area = {
+					limit = {
+						NOT = { owned_by = UKR }
+					}
+					change_culture = ruthenian
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				east_dniepr_area = {
+					limit = {
+						NOT = { owned_by = UKR }
+					}
+					change_culture = ruthenian
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				podolia_volhynia_area = {
+					limit = {
+						NOT = { owned_by = UKR }
+					}
+					change_culture = ruthenian
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				crimea_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UKR }
+							NOT = { province_id = 2447 }
+						}
+					}
+					change_culture = russian
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				chernigov_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UKR }
+							NOT = { province_id = 4543 }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				zaporizhia_area = {
+					limit = {
+						NOT = { owned_by = UKR }
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				yedisan_area = {
+					limit = {
+						NOT = { owned_by = UKR }
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				291 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UKR }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				1756 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UKR }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				1952 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UKR }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				3061 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UKR }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				2413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UKR }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+				2409 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UKR }
+						}
+					}
+					cede_province = UKR
+					add_core = UKR
+					remove_core = SOV
+				}
+			}
+			MDV = {
+				2405 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MDV }
+						}
+					}
+					change_culture = romanian
+					cede_province = MDV
+					add_core = MDV
+					remove_core = SOV
+				}
+				3249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MDV }
+						}
+					}
+					change_culture = romanian
+					cede_province = MDV
+					add_core = MDV
+					remove_core = SOV
+				}
+			}
+			ARM = {
+				armenia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ARM }
+							NOT = { province_id = 420 }
+							NOT = { province_id = 2202 }
+						}
+					}
+					change_culture = armenian
+					cede_province = ARM
+					add_core = ARM
+					remove_core = SOV
+				}
+			}
+			GEO = {
+				imereti_area = {
+					limit = {
+						NOT = { owned_by = GEO }
+					}
+					change_culture = georgian
+					cede_province = GEO
+					add_core = GEO
+					remove_core = SOV
+				}
+				kartli_kakheti_area = {
+					limit = {
+						NOT = { owned_by = GEO }
+					}
+					change_culture = georgian
+					cede_province = GEO
+					add_core = GEO
+					remove_core = SOV
+				}
+			}
+			AZE = {
+				shirvan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AZE }
+							NOT = { province_id = 424 }
+						}
+					}
+					change_culture = talysh
+					cede_province = AZE
+					add_core = AZE
+					remove_core = SOV
+				}
+				420 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZE }
+						}
+					}
+					change_culture = talysh
+					cede_province = AZE
+					add_core = AZE
+					remove_core = SOV
+				}
+				2202 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZE }
+						}
+					}
+					change_culture = talysh
+					cede_province = AZE
+					add_core = AZE
+					remove_core = SOV
+				}
+			}
+			KZK = {
+				kazakhstan_area = {
+					limit = {
+						NOT = { owned_by = KZK }
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				lower_yik_area = {
+					limit = {
+						NOT = { owned_by = KZK }
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				nogai_area = {
+					limit = {
+						NOT = { owned_by = KZK }
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				syr_darya_area = {
+					limit = {
+						NOT = { owned_by = KZK }
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				balchasj_area = {
+					limit = {
+						NOT = { owned_by = KZK }
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				aqmola_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KZK }
+							NOT = { province_id = 4690 }
+						}
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				jetysuu_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KZK }
+							NOT = { province_id = 2125 }
+							NOT = { province_id = 2126 }
+						}
+					}
+					change_culture = khazak
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				439 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				443 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				1970 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				2356 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				2118 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				2369 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				4684 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				4687 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+				4692 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZK }
+						}
+					}
+					cede_province = KZK
+					add_core = KZK
+					remove_core = SOV
+				}
+			}
+			UZB = {
+				transoxiana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UZB }
+							NOT = { province_id = 1968 }
+						}
+					}
+					change_culture = uzbehk
+					cede_province = UZB
+					add_core = UZB
+					remove_core = SOV
+				}
+				kyzylkum_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UZB }
+							NOT = { province_id = 1970 }
+						}
+					}
+					change_culture = uzbehk
+					cede_province = UZB
+					add_core = UZB
+					remove_core = SOV
+				}
+				khiva_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = UZB }
+							NOT = { province_id = 441 }
+							NOT = { province_id = 2362 }
+						}
+					}
+					change_culture = uzbehk
+					cede_province = UZB
+					add_core = UZB
+					remove_core = SOV
+				}
+				457 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UZB }
+						}
+					}
+					cede_province = UZB
+					add_core = UZB
+					remove_core = SOV
+				}
+				458 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UZB }
+						}
+					}
+					cede_province = UZB
+					add_core = UZB
+					remove_core = SOV
+				}
+			}
+			TRK = {
+				merv_area = {
+					limit = {
+						NOT = { owned_by = TRK }
+					}
+					change_culture = turkmeni
+					cede_province = TRK
+					add_core = TRK
+					remove_core = SOV
+				}
+				transcaspia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TRK }
+							NOT = { province_id = 439 }
+							NOT = { province_id = 443 }
+						}
+					}
+					change_culture = turkmeni
+					cede_province = TRK
+					add_core = TRK
+					remove_core = SOV
+				}
+				441 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRK }
+						}
+					}
+					change_culture = turkmeni
+					cede_province = TRK
+					add_core = TRK
+					remove_core = SOV
+				}
+				2362 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRK }
+						}
+					}
+					change_culture = turkmeni
+					cede_province = TRK
+					add_core = TRK
+					remove_core = SOV
+				}
+			}
+			KYR = {
+				2126 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KYR }
+						}
+					}
+					change_culture = kirgiz
+					cede_province = KYR
+					add_core = KYR
+					remove_core = SOV
+				}
+				460 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KYR }
+						}
+					}
+					change_culture = kirgiz
+					cede_province = KYR
+					add_core = KYR
+					remove_core = SOV
+				}
+				2364 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KYR }
+						}
+					}
+					change_culture = kirgiz
+					cede_province = KYR
+					add_core = KYR
+					remove_core = SOV
+				}
+				2125 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KYR }
+						}
+					}
+					change_culture = kirgiz
+					cede_province = KYR
+					add_core = KYR
+					remove_core = SOV
+				}
+			}
+			TJK = {
+				2127 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TJK }
+						}
+					}
+					change_culture = tajik
+					cede_province = TJK
+					add_core = TJK
+					remove_core = SOV
+				}
+				1967 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TJK }
+						}
+					}
+					change_culture = tajik
+					cede_province = TJK
+					add_core = TJK
+					remove_core = SOV
+				}
+				1968 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TJK }
+						}
+					}
+					change_culture = tajik
+					cede_province = TJK
+					add_core = TJK
+					remove_core = SOV
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_russian.54.a"
+		ai_chance = { factor = 100 }
+		SOV = { clr_country_flag = eh_communist }
+		RUS = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 3
+			set_capital = 295
+			change_primary_culture = russian
+			change_religion = secularism
+			add_prestige = -10
+			swap_free_idea_group = yes
+			inherit = SOV
+			add_treasury = 100000
+			add_years_of_income = 1
+			define_ruler = {
+				name = "Boris Yeltsin"
+				change_adm = 1
+				change_dip = 4
+				change_mil = 2
+				age = 60
+			}
+		}
+		EST = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { change_religion = protestant }
+		}
+		LTV = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { change_religion = protestant }
+		}
+		LIT = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { change_religion = catholic }
+		}
+		BLR = {
+			set_country_flag = eh_military_gov
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		UKR = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		MDV = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		ARM = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		GEO = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		AZE = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		KZK = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { 
+				change_religion = sunni
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+		}
+		UZB = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { 
+				change_religion = sunni
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+		}
+		TRK = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { 
+				change_religion = sunni
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+		}
+		TJK = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { 
+				change_religion = sunni
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+		}
+		KYR = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = { 
+				change_religion = sunni
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -1
+			}
+		}
+	}
+}
+
+# EH version

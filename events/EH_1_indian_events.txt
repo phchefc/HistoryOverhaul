@@ -1,0 +1,11028 @@
+namespace = eh_asia_indian
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the India
+########################################################################
+
+# Rise of the Kushan Empire
+country_event = {
+	id = eh_asia_indian.1
+	title = "eh_asia_indian.1.t"
+	desc = "eh_asia_indian.1.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KUS
+		is_year = 120
+		NOT = { is_year = 130 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			KUS = {
+				inherit = KHW
+				hindusthan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KUS }
+							NOT = { area = gird_area }
+							NOT = { area = bundelkhand_area }
+							NOT = { area = baghelkhand_area }
+							NOT = { area = kashmir_area }
+							NOT = { area = nepal_area }
+							NOT = { area = himalayan_hills_area }
+							NOT = { area = baisi_rajya_area }
+							NOT = { province_id = 4508 }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				kabulistan_area = {
+					limit = {
+						NOT = { owned_by = KUS }
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				ghor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KUS }
+							NOT = { province_id = 447 }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				558 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				4472 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				4487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				4488 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				4500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.1.a"
+		ai_chance = { factor = 100 }
+		KUS = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 578
+			add_country_modifier = {
+				name = major_power
+				duration = 40000
+			}
+			define_ruler = {
+				name = "Kanishka I"
+				dynasty = "Kushan"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 6
+				age = 20
+				claim = 95
+			}
+			578 = {
+				add_institution_embracement = {
+					which = legalism
+					value = 100
+				}
+			}
+		}
+		PRT = {
+			410 = {
+				add_institution_embracement = {
+					which = legalism
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Partition of Kushan
+country_event = {
+	id = eh_asia_indian.2
+	title = "eh_asia_indian.2.t"
+	desc = "eh_asia_indian.2.d"
+	picture = ACCUSATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KUS
+		is_year = 250
+		NOT = { is_year = 260 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			KUS = {
+				hindusthan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KUS }
+							NOT = { area = kashmir_area }
+							NOT = { area = nepal_area }
+							NOT = { area = baisi_rajya_area }
+							NOT = { area = himalayan_hills_area }
+							NOT = { area = gird_area }
+							NOT = { area = bundelkhand_area }
+							NOT = { area = kashmir_area }
+							NOT = { area = baghelkhand_area }
+							NOT = { province_id = 2047 }
+							NOT = { province_id = 4469 }
+							NOT = { province_id = 4489 }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				jaipur_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KUS }
+							NOT = { province_id = 519 }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				512 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				513 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+				4507 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUS }
+						}
+					}
+					cede_province = KUS
+					add_core = KUS
+				}
+			}
+			KSA = {
+				kabulistan_area = {
+					limit = {
+						NOT = { owned_by = KSA }
+					}
+					cede_province = KSA
+					add_core = KSA
+					remove_core = KUS
+				}
+				balkh_area = {
+					limit = {
+						NOT = { owned_by = KSA }
+					}
+					cede_province = KSA
+					add_core = KSA
+					remove_core = KUS
+				}
+				transoxiana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KSA }
+							NOT = { province_id = 442 }
+						}
+					}
+					cede_province = KSA
+					add_core = KSA
+					remove_core = KUS
+				}
+				ghor_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KSA }
+							NOT = { province_id = 447 }
+						}
+					}
+					cede_province = KSA
+					add_core = KSA
+					remove_core = KUS
+				}
+				444 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KSA }
+						}
+					}
+					cede_province = KSA
+					add_core = KSA
+					remove_core = KUS
+				}
+				2127 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KSA }
+						}
+					}
+					cede_province = KSA
+					add_core = KSA
+					remove_core = KUS
+				}
+			}
+			KHW = {
+				khiva_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KHW }
+							NOT = { province_id = 2370 }
+						}
+					}
+					cede_province = KHW
+					add_core = KHW
+					remove_core = KUS
+				}
+				442 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KHW }
+						}
+					}
+					cede_province = KHW
+					add_core = KHW
+					remove_core = KUS
+				}
+			}
+			STV = {
+				change_tag = VAK
+				swap_free_idea_group = yes
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = PUZ
+				}
+				4460 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = PUZ
+				}
+			}
+			SND = {
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = SND }
+					}
+					cede_province = SND
+					add_core = SND
+					remove_core = BAL
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = SND }
+					}
+					cede_province = SND
+					add_core = SND
+					remove_core = BAL
+				}
+			}
+			PUZ = {
+				532 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUZ }
+						}
+					}
+					cede_province = PUZ
+					add_core = PUZ
+					remove_core = VAK
+				}
+				541 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUZ }
+						}
+					}
+					cede_province = PUZ
+					add_core = PUZ
+					remove_core = VAK
+				}
+				4424 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUZ }
+						}
+					}
+					cede_province = PUZ
+					add_core = PUZ
+					remove_core = VAK
+				}
+				4428 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUZ }
+						}
+					}
+					cede_province = PUZ
+					add_core = PUZ
+					remove_core = VAK
+				}
+			}
+			CLS = {
+				north_carnatic_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CLS }
+							NOT = { province_id = 4419 }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = VAK
+				}
+				rayalaseema_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CLS }
+							NOT = { province_id = 541 }
+							NOT = { province_id = 4424 }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = VAK
+				}
+			}
+			YOR = {
+				andhra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YOR }
+							NOT = { province_id = 549 }
+							NOT = { province_id = 2080 }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+				golconda_area = {
+					limit = {
+						NOT = { owned_by = YOR }
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+				4419 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YOR }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+			}
+			ERS = {
+				sistan_area = {
+					limit = {
+						NOT = { owned_by = ERS }
+					}
+					cede_province = ERS
+					add_core = ERS
+					remove_core = BAL
+				}
+				445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERS }
+						}
+					}
+					cede_province = ERS
+					add_core = ERS
+					remove_core = KUS
+				}
+				447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERS }
+						}
+					}
+					cede_province = ERS
+					add_core = ERS
+					remove_core = BAL
+				}
+			}
+			HIM = {
+				asir_area = {
+					limit = {
+						NOT = { owned_by = HIM }
+					}
+					cede_province = HIM
+					add_core = HIM
+					remove_core = AKS
+				}
+				2346 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HIM }
+						}
+					}
+					cede_province = HIM
+					add_core = HIM
+					remove_core = AKS
+				}
+			}
+			XIO = {
+				change_tag = TIE
+				balchasj_area = {
+					limit = {
+						NOT = { owned_by = TIE }
+					}
+					cede_province = TIE
+					add_core = TIE
+				}
+				2361 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TIE }
+						}
+					}
+					cede_province = TIE
+					add_core = TIE
+				}
+			}
+			CBN = {
+				inherit = WUS
+				jetysuu_area = {
+					limit = {
+						NOT = { owned_by = CBN }
+					}
+					cede_province = CBN
+					add_core = CBN
+					remove_core = KGJ
+				}
+				zungaria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CBN }
+							NOT = { province_id = 714 }
+							NOT = { province_id = 715 }
+							NOT = { province_id = 4683 }
+						}
+					}
+					cede_province = CBN
+					add_core = CBN
+					remove_core = TIE
+				}
+				458 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CBN }
+						}
+					}
+					cede_province = CBN
+					add_core = CBN
+					remove_core = KGJ
+				}
+				2364 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CBN }
+						}
+					}
+					cede_province = CBN
+					add_core = CBN
+					remove_core = TIE
+				}
+			}
+			BAL = { inherit = IPA }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.2.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_asia_indian.2.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				KUS = { was_player = yes }
+			}
+			switch_tag = VAK
+		}
+	}
+}
+
+# Rise of the Gupta
+country_event = {
+	id = eh_asia_indian.3
+	title = "eh_asia_indian.3.t"
+	desc = "eh_asia_indian.3.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KUS
+		is_year = 320
+		NOT = { is_year = 330 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			KUS = { remove_country_modifier = major_power }
+			MGH = {
+				change_tag = GUP
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				set_government_rank = 3
+				swap_free_idea_group = yes
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				baghelkhand_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				mithila_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				jharkhand_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				gaur_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GUP }
+							NOT = { province_id = 4486 }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				west_bengal_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				west_bengal_area = {
+					limit = {
+						NOT = { owned_by = GUP }
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				2038 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GUP }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+				4486 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GUP }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+					remove_core = KUS
+				}
+			}
+			ABH = {
+				multan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ABH }
+							NOT = { province_id = 506 }
+							NOT = { province_id = 4508 }
+						}
+					}
+					cede_province = ABH
+					add_core = ABH
+					remove_core = KUS
+				}
+				513 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ABH }
+						}
+					}
+					cede_province = ABH
+					add_core = ABH
+					remove_core = KUS
+				}
+				2068 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ABH }
+						}
+					}
+					cede_province = ABH
+					add_core = ABH
+					remove_core = KUS
+				}
+			}
+			ARJ = {
+				upper_doab_area = {
+					limit = {
+						NOT = { owned_by = ARJ }
+					}
+					cede_province = ARJ
+					add_core = ARJ
+					remove_core = KUS
+				}
+				2061 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ARJ }
+						}
+					}
+					cede_province = ARJ
+					add_core = ARJ
+					remove_core = KUS
+				}
+				4498 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ARJ }
+						}
+					}
+					cede_province = ARJ
+					add_core = ARJ
+					remove_core = KUS
+				}
+			}
+			KGR = {
+				509 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KGR }
+						}
+					}
+					cede_province = KGR
+					add_core = KGR
+					remove_core = KUS
+				}
+				4493 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KGR }
+						}
+					}
+					cede_province = KGR
+					add_core = KGR
+					remove_core = KUS
+				}
+			}
+			KLA = {
+				malabar_area = {
+					limit = {
+						NOT = { owned_by = KLA }
+					}
+					cede_province = KLA
+					add_core = KLA
+					remove_core = CEA
+				}
+				kongu_area = {
+					limit = {
+						NOT = { owned_by = KLA }
+					}
+					cede_province = KLA
+					add_core = KLA
+					remove_core = KGU
+				}
+				tanjore_area = {
+					limit = {
+						NOT = { owned_by = KLA }
+					}
+					cede_province = KLA
+					add_core = KLA
+					remove_core = MAD
+				}
+				madura_area = {
+					limit = {
+						NOT = { owned_by = KLA }
+					}
+					cede_province = KLA
+					add_core = KLA
+					remove_core = MAD
+				}
+			}
+			KTU = {
+				4484 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KTU }
+						}
+					}
+					cede_province = KTU
+					add_core = KTU
+					remove_core = KUS
+				}
+			}
+			PDM = {
+				519 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PDM }
+						}
+					}
+					cede_province = PDM
+					add_core = PDM
+					remove_core = KUS
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PDM }
+						}
+					}
+					cede_province = PDM
+					add_core = PDM
+					remove_core = KUS
+				}
+				4500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PDM }
+						}
+					}
+					cede_province = PDM
+					add_core = PDM
+					remove_core = KUS
+				}
+			}
+			PNC = {
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = PNC }
+					}
+					cede_province = PNC
+					add_core = PNC
+					remove_core = KUS
+				}
+				4499 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PNC }
+						}
+					}
+					cede_province = PNC
+					add_core = PNC
+					remove_core = KUS
+				}
+			}
+			CEA = {
+				change_tag = ALV
+				531 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALV }
+						}
+					}
+					cede_province = ALV
+					add_core = ALV
+					remove_core = KLA
+				}
+				2029 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALV }
+						}
+					}
+					cede_province = ALV
+					add_core = ALV
+					remove_core = KLA
+				}
+			}
+			CLS = {
+				change_tag = PLL
+				mysore_area = {
+					limit = {
+						NOT = { owned_by = PLL }
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = KGU
+				}
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = PLL }
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = PUZ
+				}
+				rayalaseema_area = {
+					limit = {
+						NOT = { owned_by = PLL }
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = PUZ
+				}
+				540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLL }
+						}
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = PUZ
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLL }
+						}
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = PUZ
+				}
+				1947 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLL }
+						}
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = PUZ
+				}
+			}
+			VAK = {
+				golconda_area = {
+					limit = {
+						NOT = { owned_by = VAK }
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = YOR
+				}
+				konkan_area = {
+					limit = {
+						NOT = { owned_by = VAK }
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = ABH
+				}
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = YOR
+				}
+				547 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = YOR
+				}
+				4427 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = YOR
+				}
+				4445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = YOR
+				}
+			}
+			YAU = {
+				jangladesh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YAU }
+							NOT = { province_id = 2195 }
+							NOT = { province_id = 4502 }
+						}
+					}
+					cede_province = YAU
+					add_core = YAU
+					remove_core = KUS
+				}
+				jaipur_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YAU }
+							NOT = { province_id = 519 }
+							NOT = { province_id = 4500 }
+						}
+					}
+					cede_province = YAU
+					add_core = YAU
+					remove_core = KUS
+				}
+				4508 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YAU }
+						}
+					}
+					cede_province = YAU
+					add_core = YAU
+					remove_core = KUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.3.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				KUS = { was_player = yes }
+			}
+			switch_tag = GUP
+		}
+	}
+}
+
+# Chandragupta II
+country_event = {
+	id = eh_asia_indian.4
+	title = "eh_asia_indian.4.t"
+	desc = "eh_asia_indian.4.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GUP
+		is_year = 400
+		NOT = { is_year = 410 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			GUP = {
+				hindusthan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GUP }
+							NOT = { area = kashmir_area }
+							NOT = { area = himalayan_hills_area }
+							NOT = { area = baisi_rajya_area }
+							NOT = { area = nepal_area }
+							NOT = { area = bundelkhand_area }
+							NOT = { area = baghelkhand_area }
+							NOT = { province_id = 2078 }
+							NOT = { province_id = 2079 }
+							NOT = { province_id = 740 }
+							NOT = { province_id = 4484 }
+							NOT = { province_id = 4509 }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+				}
+				west_india_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GUP }
+							NOT = { area = northern_sindh_area }
+							NOT = { area = sindh_area }
+							NOT = { area = khandesh_area }
+							NOT = { area = tapti_area }
+							NOT = { province_id = 2057 }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+				}
+				bengal_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GUP }
+							NOT = { area = assam_area }
+							NOT = { area = western_assam_area }
+							NOT = { area = tripura_area }
+							NOT = { area = naga_hills_area }
+							NOT = { area = east_bengal_area }
+							NOT = { area = north_bengal_area }
+							NOT = { province_id = 4441 }
+							NOT = { province_id = 4448 }
+							NOT = { province_id = 4486 }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+				}
+				2098 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GUP }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+				}
+				4486 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GUP }
+						}
+					}
+					cede_province = GUP
+					add_core = GUP
+				}
+			}
+			VAK = {
+				2057 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VAK }
+						}
+					}
+					cede_province = VAK
+					add_core = VAK
+					remove_core = KNK
+				}
+			}
+			WSA = {
+				change_tag = KNK
+				tapti_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KNK }
+							NOT = { province_id = 2036 }
+						}
+					}
+					cede_province = KNK
+					add_core = KNK
+					remove_core = VAK
+				}
+				konkan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KNK }
+							NOT = { province_id = 530 }
+							NOT = { province_id = 4429 }
+						}
+					}
+					cede_province = KNK
+					add_core = KNK
+					remove_core = VAK
+				}
+			}
+			KAD = {
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = KAD }
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = PLL
+				}
+				rayalaseema_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KAD }
+							NOT = { province_id = 1949 }
+							NOT = { province_id = 2349 }
+							NOT = { province_id = 4423 }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = PLL
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = PLL
+				}
+				4426 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = PLL
+				}
+			}
+			MYS = {
+				mysore_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MYS }
+							NOT = { province_id = 4426 }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = PLL
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.4.a"
+		ai_chance = { factor = 100 }
+		GUP = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 558
+			add_country_modifier = {
+				name = major_power
+				duration = 40000
+			}
+			define_ruler = {
+				name = "Chandragupta II"
+				dynasty = "Gupta"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 6
+				age = 20
+				claim = 95
+			}
+			define_consort = {
+				name = "Dhruvadevi"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Gupta"
+			}
+		}
+	}
+}
+
+# Fall of the Gupta
+country_event = {
+	id = eh_asia_indian.5
+	title = "eh_asia_indian.5.t"
+	desc = "eh_asia_indian.5.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GUP
+		is_year = 500
+		NOT = { is_year = 510 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			KAP = {
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				multan_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				jangladesh_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				jaipur_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				marwar_area = {
+					limit = {
+						NOT = { owned_by = KAP }
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				2062 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAP }
+						}
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAP }
+						}
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				4464 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAP }
+						}
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+				4501 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAP }
+						}
+					}
+					cede_province = KAP
+					add_core = KAP
+					remove_core = GUP
+				}
+			}
+			MLW = {
+				malwa_area = {
+					limit = {
+						NOT = { owned_by = MLW }
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GUP
+				}
+			}
+			GUJ = {
+				patan_area = {
+					limit = {
+						NOT = { owned_by = GUJ }
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = GUP
+				}
+				ahmedabad_area = {
+					limit = {
+						NOT = { owned_by = GUJ }
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = GUP
+				}
+				saurashtra_area = {
+					limit = {
+						NOT = { owned_by = GUJ }
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = GUP
+				}
+			}
+			BAA = {
+				upper_mahanadi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BAA }
+							NOT = { province_id = 553 }
+							NOT = { province_id = 4452 }
+						}
+					}
+					cede_province = BAA
+					add_core = BAA
+					remove_core = GUP
+				}
+			}
+			BST = {
+				547 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BST }
+						}
+					}
+					cede_province = BST
+					add_core = BST
+					remove_core = GUP
+				}
+				4445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BST }
+						}
+					}
+					cede_province = BST
+					add_core = BST
+					remove_core = GUP
+				}
+			}
+			KLH = {
+				2048 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLH }
+						}
+					}
+					cede_province = KLH
+					add_core = KLH
+					remove_core = GUP
+				}
+				4446 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLH }
+						}
+					}
+					cede_province = KLH
+					add_core = KLH
+					remove_core = GUP
+				}
+			}
+			DAK = {
+				2098 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAK }
+						}
+					}
+					cede_province = DAK
+					add_core = DAK
+					remove_core = GUP
+				}
+				4452 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAK }
+						}
+					}
+					cede_province = DAK
+					add_core = DAK
+					remove_core = GUP
+				}
+			}
+			KAD = {
+				desh_area = {
+					limit = {
+						NOT = { owned_by = KAD }
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+				maidan_area = {
+					limit = {
+						NOT = { owned_by = KAD }
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+				konkan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KAD }
+							NOT = { province_id = 529 }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+				544 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+				4427 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+				4432 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = VAK
+				}
+			}
+			YOR = {			
+				golconda_area = {
+					limit = {
+						NOT = { owned_by = YOR }
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = YOR }
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YOR }
+							NOT = { province_id = 548 }
+							NOT = { province_id = 4442 }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+				2092 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YOR }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+				4460 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YOR }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = VAK
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.5.a"
+		ai_chance = { factor = 100 }
+		GUP = { remove_country_modifier = major_power }
+		VAK = {
+			change_tag = KLC
+			change_religion = jainism
+		}
+	}
+}
+
+# Rise of the Vardhana dynasty
+country_event = {
+	id = eh_asia_indian.6
+	title = "eh_asia_indian.6.t"
+	desc = "eh_asia_indian.6.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HRS
+		is_year = 620
+		NOT = { is_year = 630 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			HRS = {
+				hindusthan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HRS }
+							NOT = { area = kashmir_area }
+							NOT = { area = himalayan_hills_area }
+							NOT = { area = baisi_rajya_area }
+							NOT = { area = nepal_area }
+							NOT = { area = bundelkhand_area }
+							NOT = { area = sind_sagar_area }
+							NOT = { area = multan_area }
+							NOT = { area = lahore_area }
+							NOT = { province_id = 2098 }
+							NOT = { province_id = 740 }
+							NOT = { province_id = 4459 }
+						}
+					}
+					cede_province = HRS
+					add_core = HRS
+				}
+				west_india_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HRS }
+							NOT = { area = northern_sindh_area }
+							NOT = { area = sindh_area }
+							NOT = { area = khandesh_area }
+							NOT = { area = tapti_area }
+							NOT = { area = patan_area }
+							NOT = { area = ahmedabad_area }
+							NOT = { area = saurashtra_area }
+							NOT = { area = malwa_area }
+						}
+					}
+					cede_province = HRS
+					add_core = HRS
+				}
+				bengal_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HRS }
+							NOT = { area = assam_area }
+							NOT = { area = western_assam_area }
+							NOT = { area = tripura_area }
+							NOT = { area = naga_hills_area }
+							NOT = { area = orissa_area }
+							NOT = { area = garjat_area }
+							NOT = { area = upper_mahanadi_area }
+							NOT = { province_id = 4450 }
+						}
+					}
+					cede_province = HRS
+					add_core = HRS
+					remove_core = VGA
+				}
+				2075 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HRS }
+						}
+					}
+					cede_province = HRS
+					add_core = HRS
+				}
+			}
+			GUJ = {
+				malwa_area = {
+					limit = {
+						NOT = { owned_by = GUJ }
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = MLW
+				}
+				740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GUJ }
+						}
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = MLW
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GUJ }
+						}
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = MLW
+				}
+			}
+			DAK = {
+				upper_mahanadi_area = {
+					limit = {
+						NOT = { owned_by = DAK }
+					}
+					cede_province = DAK
+					add_core = DAK
+					remove_core = BST
+				}
+				garjat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAK }
+							NOT = { province_id = 4448 }
+						}
+					}
+					cede_province = DAK
+					add_core = DAK
+					remove_core = HRS
+				}
+			}
+			KLI = {
+				orissa_area = {
+					limit = {
+						NOT = { owned_by = KLI }
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = HRS
+				}
+				4448 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLI }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = HRS
+				}
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLI }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = HRS
+				}
+			}
+			KLC = {
+				change_tag = CLY
+				deccan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CLY }
+							NOT = { area = rayalaseema_area }
+							NOT = { area = mysore_area }
+							NOT = { area = malabar_area }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = KAD
+				}
+				tapti_area = {
+					limit = {
+						NOT = { owned_by = CLY }
+					}
+					cede_province = CLY
+					add_core = CLY
+				}
+				khandesh_area = {
+					limit = {
+						NOT = { owned_by = CLY }
+					}
+					cede_province = CLY
+					add_core = CLY
+				}
+				541 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLY }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = MAD
+				}
+				2090 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLY }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = KAD
+				}
+				2092 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLY }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = MAD
+				}
+				4424 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLY }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = MAD
+				}
+				4426 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLY }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = MAD
+				}
+				4460 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLY }
+						}
+					}
+					cede_province = CLY
+					add_core = CLY
+					remove_core = MAD
+				}
+			}
+			PLL = {
+				south_carnatic_area = {
+					limit = {
+						NOT = { owned_by = PLL }
+					}
+					cede_province = PLL
+					add_core = PLL
+					remove_core = MAD
+				}
+			}
+			TNJ = {
+				tanjore_area = {
+					limit = {
+						NOT = { owned_by = TNJ }
+					}
+					cede_province = TNJ
+					add_core = TNJ
+					remove_core = MAD
+				}
+			}
+			CEA = {
+				malabar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CEA }
+							NOT = { province_id = 537 }
+							NOT = { province_id = 4410 }
+						}
+					}
+					cede_province = CEA
+					add_core = CEA
+					remove_core = MAD
+				}
+				2029 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CEA }
+						}
+					}
+					cede_province = CEA
+					add_core = CEA
+					remove_core = ALV
+				}
+			}
+			KLA = { change_tag = MAD }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.6.a"
+		ai_chance = { factor = 100 }
+		HRS = {
+			add_country_modifier = {
+				name = major_power
+				duration = 4000
+			}
+			define_ruler = {
+				dynasty = "Vardhana"
+			}
+			define_heir = {
+				dynasty = "Vardhana"
+			}
+		}
+		CLY = {
+			define_ruler = {
+				dynasty = "Chalukya"
+			}
+			define_heir = {
+				dynasty = "Chalukya"
+			}
+		}
+	}
+}
+
+# Fall of the Vardhana
+country_event = {
+	id = eh_asia_indian.7
+	title = "eh_asia_indian.7.t"
+	desc = "eh_asia_indian.7.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HRS
+		is_year = 645
+		NOT = { is_year = 650 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			HRS = {
+				change_tag = GUP
+				swap_free_idea_group = yes
+			}
+			SND = {
+				kalat_area = {
+					limit = {
+						NOT = { owned_by = SND }
+					}
+					cede_province = SND
+					add_core = SND
+					remove_core = BAL
+				}
+				makran_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SND }
+							NOT = { province_id = 2233 }
+							NOT = { province_id = 434 }
+						}
+					}
+					cede_province = SND
+					add_core = SND
+					remove_core = BAL
+				}
+				2230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SND }
+						}
+					}
+					cede_province = SND
+					add_core = SND
+					remove_core = BAL
+				}
+			}
+			GRP = {
+				marwar_area = {
+					limit = {
+						NOT = { owned_by = GRP }
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+				jangladesh_area = {
+					limit = {
+						NOT = { owned_by = GRP }
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+				jaipur_area = {
+					limit = {
+						NOT = { owned_by = GRP }
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+				gird_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GRP }
+							NOT = { province_id = 740 }
+						}
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+				524 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRP }
+						}
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRP }
+						}
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+				4501 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRP }
+						}
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = GUP
+				}
+			}
+			MER = {
+				mewar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MER }
+							NOT = { province_id = 2087 }
+							NOT = { province_id = 4501 }
+						}
+					}
+					cede_province = MER
+					add_core = MER
+					remove_core = GUP
+				}
+			}
+			TAA = {
+				sirhind_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TAA }
+							NOT = { province_id = 2065 }
+						}
+					}
+					cede_province = TAA
+					add_core = TAA
+					remove_core = GUP
+				}
+				2075 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAA }
+						}
+					}
+					cede_province = TAA
+					add_core = TAA
+					remove_core = GUP
+				}
+			}
+			TOM = {
+				upper_doab_area = {
+					limit = {
+						NOT = { owned_by = TOM }
+					}
+					cede_province = TOM
+					add_core = TOM
+					remove_core = GUP
+				}
+				2065 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TOM }
+						}
+					}
+					cede_province = TOM
+					add_core = TOM
+					remove_core = GUP
+				}
+			}
+			KNN = {
+				katehar_area = {
+					limit = {
+						NOT = { owned_by = KNN }
+					}
+					cede_province = KNN
+					add_core = KNN
+					remove_core = GUP
+				}
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = KNN }
+					}
+					cede_province = KNN
+					add_core = KNN
+					remove_core = GUP
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = KNN }
+					}
+					cede_province = KNN
+					add_core = KNN
+					remove_core = GUP
+				}
+				lower_doab_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KNN }
+							NOT = { province_id = 524 }
+						}
+					}
+					cede_province = KNN
+					add_core = KNN
+					remove_core = GUP
+				}
+				baghelkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KNN }
+							NOT = { province_id = 2098 }
+						}
+					}
+					cede_province = KNN
+					add_core = KNN
+					remove_core = GUP
+				}
+				bundelkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KNN }
+							NOT = { province_id = 4459 }
+						}
+					}
+					cede_province = KNN
+					add_core = KNN
+					remove_core = GUP
+				}
+			}
+			TRT = {
+				mithila_area = {
+					limit = {
+						NOT = { owned_by = TRT }
+					}
+					cede_province = TRT
+					add_core = TRT
+					remove_core = GUP
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.7.a"
+		ai_chance = { factor = 100 }
+		GUP = {
+			remove_country_modifier = major_power
+			define_ruler = {
+				dynasty = "Gupta"
+			}
+			define_heir = {
+				dynasty = "Gupta"
+			}
+		}
+	}
+}
+
+# Medieval Kingdoms of India
+country_event = {
+	id = eh_asia_indian.8
+	title = "eh_asia_indian.8.t"
+	desc = "eh_asia_indian.8.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GUP
+		is_year = 770
+		NOT = { is_year = 780 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			GUP = {
+				change_tag = PAA
+				swap_free_idea_group = yes
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = PAA }
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = KNN
+				}
+				baghelkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAA }
+							NOT = { province_id = 2098 }
+						}
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = KNN
+				}
+				mithila_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAA }
+							NOT = { province_id = 4484 }
+						}
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = KNN
+				}
+				556 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAA }
+						}
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = KNN
+				}
+				4467 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAA }
+						}
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = KNN
+				}
+			}
+			MLW = {
+				malwa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MLW }
+							NOT = { province_id = 2057 }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GUJ
+				}
+			}
+			CLY = {
+				change_tag = RSH
+				740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RSH }
+						}
+					}
+					cede_province = RSH
+					add_core = RSH
+					remove_core = GUJ
+				}
+				2057 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RSH }
+						}
+					}
+					cede_province = RSH
+					add_core = RSH
+					remove_core = GUJ
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RSH }
+						}
+					}
+					cede_province = RSH
+					add_core = RSH
+					remove_core = GUJ
+				}
+			}
+			TAA = {
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = TAA }
+					}
+					cede_province = TAA
+					add_core = TAA
+					remove_core = KSH
+				}
+			}
+			TLG = {
+				golconda_area = {
+					limit = {
+						NOT = { owned_by = TLG }
+					}
+					cede_province = TLG
+					add_core = TLG
+					remove_core = RSH
+				}
+			}
+			HRK = {
+				east_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HRK }
+							NOT = { province_id = 4478 }
+						}
+					}
+					cede_province = HRK
+					add_core = HRK
+					remove_core = PAA
+				}
+			}
+			KLC = {
+				gondwana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KLC }
+							NOT = { province_id = 2092 }
+							NOT = { province_id = 4460 }
+						}
+					}
+					cede_province = KLC
+					add_core = KLC
+					remove_core = PAA
+				}
+				2098 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLC }
+						}
+					}
+					cede_province = KLC
+					add_core = KLC
+					remove_core = PAA
+				}
+				553 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLC }
+						}
+					}
+					cede_province = KLC
+					add_core = KLC
+					remove_core = PAA
+				}
+				4452 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLC }
+						}
+					}
+					cede_province = KLC
+					add_core = KLC
+					remove_core = PAA
+				}
+			}
+			KNK = {
+				konkan_area = {
+					limit = {
+						NOT = { owned_by = KNK }
+					}
+					cede_province = KNK
+					add_core = KNK
+					remove_core = RSH
+				}
+				517 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KNK }
+						}
+					}
+					cede_province = KNK
+					add_core = KNK
+					remove_core = RSH
+				}
+				4430 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KNK }
+						}
+					}
+					cede_province = KNK
+					add_core = KNK
+					remove_core = RSH
+				}
+			}
+			PRD = {
+				garjat_area = {
+					limit = {
+						NOT = { owned_by = PRD }
+					}
+					cede_province = PRD
+					add_core = PRD
+					remove_core = DAK
+				}
+				2049 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRD }
+						}
+					}
+					cede_province = PRD
+					add_core = PRD
+					remove_core = DAK
+				}
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRD }
+						}
+					}
+					cede_province = PRD
+					add_core = PRD
+					remove_core = DAK
+				}
+			}
+			CEA = {
+				malabar_area = {
+					limit = {
+						NOT = { owned_by = CEA }
+					}
+					cede_province = CEA
+					add_core = CEA
+					remove_core = MAD
+				}
+			}
+			YOR = {
+				2090 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YOR }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = DAK
+				}
+			}
+			TRG = { change_tag = KLU }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.8.a"
+		ai_chance = { factor = 100 }
+		PAA = {
+			define_ruler = {
+				dynasty = "Pala"
+			}
+			define_heir = {
+				dynasty = "Pala"
+			}
+		}
+	}
+}
+
+# Medieval Kingdoms of India
+country_event = {
+	id = eh_asia_indian.9
+	title = "eh_asia_indian.9.t"
+	desc = "eh_asia_indian.9.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			GRP = {
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = GRP }
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = KNN
+				}
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = GRP }
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = KNN
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRP }
+						}
+					}
+					cede_province = GRP
+					add_core = GRP
+					remove_core = KNN
+				}
+			}
+			BND = {
+				bundelkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BND }
+							NOT = { province_id = 2059 }
+							NOT = { province_id = 4459 }
+						}
+					}
+					cede_province = BND
+					add_core = BND
+					remove_core = GRP
+				}
+				2097 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BND }
+						}
+					}
+					cede_province = BND
+					add_core = BND
+					remove_core = GRP
+				}
+				4468 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BND }
+						}
+					}
+					cede_province = BND
+					add_core = BND
+					remove_core = GRP
+				}
+			}
+			TOM = {
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = TOM }
+					}
+					cede_province = TOM
+					add_core = TOM
+					remove_core = TAA
+				}
+			}
+			SHH = {
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = SHH }
+					}
+					cede_province = SHH
+					add_core = SHH
+					remove_core = TAA
+				}
+			}
+			MLW = {
+				malwa_area = {
+					limit = {
+						NOT = { owned_by = MLW }
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GRP
+				}
+				740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLW }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GRP
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLW }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GRP
+				}
+			}
+			MYS = {
+				541 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = RSH
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = RSH
+				}
+				4426 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = RSH
+				}
+			}
+			KLC = {
+				4452 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLC }
+						}
+					}
+					cede_province = KLC
+					add_core = KLC
+					remove_core = PAA
+				}
+			}
+			DAK = {
+				change_tag = PTT
+				553 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PTT }
+						}
+					}
+					cede_province = PTT
+					add_core = PTT
+					remove_core = PAA
+				}
+			}
+			PLL = {
+				change_tag = CLS
+				tanjore_area = {
+					limit = {
+						NOT = { owned_by = CLS }
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = MAD
+				}
+				2085 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLS }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = MAD
+				}
+				2090 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLS }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = KAD
+				}
+				4424 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLS }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = RSH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.9.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Rise of the Ghaznavid dynasty
+country_event = {
+	id = eh_asia_indian.10
+	title = "eh_asia_indian.10.t"
+	desc = "eh_asia_indian.10.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PAA
+		is_year = 1000
+		NOT = { is_year = 1010 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			GHZ = {
+				khorasan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHZ }
+							NOT = { area = makran_area }
+							NOT = { province_id = 452 }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = SAM
+				}
+				khiva_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHZ }
+							NOT = { province_id = 2370 }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = SAM
+				}
+				transcaspia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHZ }
+							NOT = { province_id = 439 }
+							NOT = { province_id = 443 }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = SAM
+				}
+				transoxiana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHZ }
+							NOT = { province_id = 454 }
+							NOT = { province_id = 1968 }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = SAM
+				}
+				multan_area = {
+					limit = {
+						NOT = { owned_by = GHZ }
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = GHZ }
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = GHZ }
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = GHZ }
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = GHZ }
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = SND
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = GHZ }
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = SND
+				}
+				512 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHZ }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHZ }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				2064 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHZ }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+				2224 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHZ }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = KRT
+				}
+				4507 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHZ }
+						}
+					}
+					cede_province = GHZ
+					add_core = GHZ
+					remove_core = GRP
+				}
+			}
+			KKH = {
+				inherit = HOT
+				kashgaria_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KKH }
+							NOT = { province_id = 4209 }
+						}
+					}
+					cede_province = KKH
+					add_core = KKH
+					remove_core = HOT
+				}
+				454 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KKH }
+						}
+					}
+					cede_province = KKH
+					add_core = KKH
+					remove_core = SAM
+				}
+				710 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KKH }
+						}
+					}
+					cede_province = KKH
+					add_core = KKH
+					remove_core = HOT
+				}
+			}
+			MAW = {
+				marwar_area = {
+					limit = {
+						NOT = { owned_by = MAW }
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = GRP
+				}
+			}
+			CCH = {
+				jangladesh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CCH }
+							NOT = { province_id = 512 }
+							NOT = { province_id = 4507 }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+				mewar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CCH }
+							NOT = { province_id = 518 }
+							NOT = { province_id = 2058 }
+							NOT = { province_id = 4462 }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+			}
+			KLC = {
+				gondwana_area = {
+					limit = {
+						NOT = { owned_by = KLC }
+					}
+					cede_province = KLC
+					add_core = KLC
+					remove_core = CLY
+				}
+			}
+			KLI = {
+				upper_mahanadi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KLI }
+							NOT = { province_id = 2082 }
+							NOT = { province_id = 4452 }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = PTT
+				}
+				2048 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLI }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = PTT
+				}
+				2049 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLI }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = PTT
+				}
+				4448 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLI }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = PTT
+				}
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLI }
+						}
+					}
+					cede_province = KLI
+					add_core = KLI
+					remove_core = PTT
+				}
+			}
+			RTT = {
+				2048 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTT }
+						}
+					}
+					cede_province = RTT
+					add_core = RTT
+					remove_core = KLC
+				}
+				4448 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RTT }
+						}
+					}
+					cede_province = RTT
+					add_core = RTT
+					remove_core = KLC
+				}
+			}
+			CLS = {
+				inherit = MYS
+				rayalaseema_area = {
+					limit = {
+						NOT = { owned_by = CLS }
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = MYS
+				}
+				mysore_area = {
+					limit = {
+						NOT = { owned_by = CLS }
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = MYS
+				}
+				kongu_area = {
+					limit = {
+						NOT = { owned_by = CLS }
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = MAD
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLS }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = MYS
+				}
+			}
+			RSH = { change_tag = CLY }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.10.a"
+		ai_chance = { factor = 100 }
+		GHZ = {
+			define_ruler = {
+				dynasty = "Ghaznavid"
+			}
+			define_heir = {
+				dynasty = "Ghaznavid"
+			}
+		}
+		KKH = { change_religion = sunni }
+	}
+}
+
+# Islamic infiltration to India
+country_event = {
+	id = eh_asia_indian.11
+	title = "eh_asia_indian.11.t"
+	desc = "eh_asia_indian.11.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GHZ
+		is_year = 1100
+		NOT = { is_year = 1110 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PAA = {
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = PAA }
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = HRK
+				}
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAA }
+							NOT = { province_id = 562 }
+						}
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = HRK
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAA }
+						}
+					}
+					cede_province = PAA
+					add_core = PAA
+					remove_core = HRK
+				}
+			}
+			GRP = {
+				change_tag = GAH
+				katehar_area = {
+					limit = {
+						NOT = { owned_by = GAH }
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = TOM
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = GAH }
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = TOM
+				}
+				556 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAH }
+						}
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = PAA
+				}
+				4487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAH }
+						}
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = PAA
+				}
+			}
+			CCH = {
+				gird_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CCH }
+							NOT = { province_id = 740 }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+				519 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCH }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+				524 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCH }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+				2063 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCH }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+				4500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCH }
+						}
+					}
+					cede_province = CCH
+					add_core = CCH
+					remove_core = GRP
+				}
+			}
+			BND = {
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BND }
+						}
+					}
+					cede_province = BND
+					add_core = BND
+					remove_core = GRP
+				}
+			}
+			GRJ = {
+				garjat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GRJ }
+							NOT = { province_id = 2048 }
+							NOT = { province_id = 4448 }
+						}
+					}
+					cede_province = GRJ
+					add_core = GRJ
+					remove_core = KLI
+				}
+			}
+			PTT = {
+				upper_mahanadi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PTT }
+							NOT = { province_id = 2082 }
+							NOT = { province_id = 4452 }
+						}
+					}
+					cede_province = PTT
+					add_core = PTT
+					remove_core = ORI
+				}
+			}
+			HOY = {
+				rayalaseema_area = {
+					limit = {
+						NOT = { owned_by = HOY }
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				mysore_area = {
+					limit = {
+						NOT = { owned_by = HOY }
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				2083 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				4418 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+			}
+			TRT = {
+				2047 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRT }
+						}
+					}
+					cede_province = TRT
+					add_core = TRT
+					remove_core = PAA
+				}
+				4488 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRT }
+						}
+					}
+					cede_province = TRT
+					add_core = TRT
+					remove_core = PAA
+				}
+				4489 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRT }
+						}
+					}
+					cede_province = TRT
+					add_core = TRT
+					remove_core = PAA
+				}
+			}
+			KOC = {
+				535 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KOC }
+						}
+					}
+					cede_province = KOC
+					add_core = KOC
+					remove_core = CEA
+				}
+			}
+			MAB = {
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAB }
+						}
+					}
+					cede_province = MAB
+					add_core = MAB
+					remove_core = CEA
+				}
+			}
+			KAC = {
+				570 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAC }
+						}
+					}
+					cede_province = KAC
+					add_core = KAC
+					remove_core = ASS
+				}
+				573 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAC }
+						}
+					}
+					cede_province = KAC
+					add_core = KAC
+					remove_core = ASS
+				}
+			}
+			ARK = {
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ARK }
+						}
+					}
+					cede_province = ARK
+					add_core = ARK
+					remove_core = HRK
+				}
+			}
+			CUM = {
+				moldavia_area = {
+					limit = {
+						NOT = { owned_by = CUM }
+					}
+					cede_province = CUM
+					add_core = CUM
+					remove_core = PEC
+				}
+				bessarabia_area = {
+					limit = {
+						NOT = { owned_by = CUM }
+					}
+					cede_province = CUM
+					add_core = CUM
+					remove_core = PEC
+				}
+				wallachia_area = {
+					limit = {
+						NOT = { owned_by = CUM }
+					}
+					cede_province = CUM
+					add_core = CUM
+					remove_core = PEC
+				}
+				282 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CUM }
+						}
+					}
+					cede_province = CUM
+					add_core = CUM
+					remove_core = PEC
+				}
+				1943 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CUM }
+						}
+					}
+					cede_province = CUM
+					add_core = CUM
+					remove_core = PEC
+				}
+				4540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CUM }
+						}
+					}
+					cede_province = CUM
+					add_core = CUM
+					remove_core = PEC
+				}
+			}
+			KLI = { change_tag = ORI }
+			CEA = { change_tag = VND }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.11.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Rise of the Ghurid dynasty
+country_event = {
+	id = eh_asia_indian.12
+	title = "eh_asia_indian.12.t"
+	desc = "eh_asia_indian.12.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GHZ
+		is_year = 1180
+		NOT = { is_year = 1185 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			GHU = {
+				change_religion = sunni
+				kalat_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				multan_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				kabulistan_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				ghor_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = GHZ
+				}
+				jaipur_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = CCH
+				}
+				jangladesh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHU }
+							NOT = { province_id = 2066 }
+							NOT = { province_id = 4502 }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = CCH
+				}
+				balkh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHU }
+							NOT = { province_id = 452 }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = SEL
+				}
+				herat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHU }
+							NOT = { province_id = 4325 }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = SEL
+				}
+				makran_area = {
+					limit = {
+						NOT = { owned_by = GHU }
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = BAL
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHU }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = CCH
+				}
+				2224 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHU }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = SEL
+				}
+				4501 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHU }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = CCH
+				}
+				2230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHU }
+						}
+					}
+					cede_province = GHU
+					add_core = GHU
+					remove_core = CCH
+				}
+				define_ruler = {
+					dynasty = "Ghurid"
+				}
+				define_heir = {
+					dynasty = "Ghurid"
+				}
+			}
+			GAH = {
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = GAH }
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = GHU
+				}
+				upper_doab_area = {
+					limit = {
+						NOT = { owned_by = GAH }
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = GHU
+				}
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = GAH }
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = GHU
+				}
+				baghelkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GAH }
+							NOT = { province_id = 2098 }
+						}
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = SEN
+				}
+				bihar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GAH }
+							NOT = { province_id = 4489 }
+						}
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = SEN
+				}
+				2075 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAH }
+						}
+					}
+					cede_province = GAH
+					add_core = GAH
+					remove_core = GHU
+				}
+			}
+			MLW = {
+				gird_area = {
+					limit = {
+						NOT = { owned_by = MLW }
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GHU
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLW }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GHU
+				}
+			}
+			MAW = {
+				2066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = GHU
+				}
+				4502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = GHU
+				}
+			}
+			JSL = {
+				513 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JSL }
+						}
+					}
+					cede_province = JSL
+					add_core = JSL
+					remove_core = GHU
+				}
+			}
+			JLV = {
+				2098 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JLV }
+						}
+					}
+					cede_province = JLV
+					add_core = JLV
+					remove_core = SEN
+				}
+				560 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JLV }
+						}
+					}
+					cede_province = JLV
+					add_core = JLV
+					remove_core = SEN
+				}
+				4470 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JLV }
+						}
+					}
+					cede_province = JLV
+					add_core = JLV
+					remove_core = SEN
+				}
+			}
+			TLG = {
+				garjat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLG }
+							NOT = { province_id = 4607 }
+						}
+					}
+					cede_province = TLG
+					add_core = TLG
+					remove_core = GRJ
+				}
+				2028 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TLG }
+						}
+					}
+					cede_province = TLG
+					add_core = TLG
+					remove_core = YAD
+				}
+				2050 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TLG }
+						}
+					}
+					cede_province = TLG
+					add_core = TLG
+					remove_core = YAD
+				}
+				4444 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TLG }
+						}
+					}
+					cede_province = TLG
+					add_core = TLG
+					remove_core = YAD
+				}
+			}
+			HOY = {
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = HOY }
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = YAD
+				}
+				538 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				2027 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				4414 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+				4420 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HOY }
+						}
+					}
+					cede_province = HOY
+					add_core = HOY
+					remove_core = CLS
+				}
+			}
+			CLS = {
+				4418 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CLS }
+						}
+					}
+					cede_province = CLS
+					add_core = CLS
+					remove_core = HOY
+				}
+			}
+			KMT = {
+				562 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KMT }
+						}
+					}
+					cede_province = KMT
+					add_core = KMT
+					remove_core = ASS
+				}
+				2042 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KMT }
+						}
+					}
+					cede_province = KMT
+					add_core = KMT
+					remove_core = ASS
+				}
+			}
+			KAD = {
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = YAD
+				}
+				4427 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAD }
+						}
+					}
+					cede_province = KAD
+					add_core = KAD
+					remove_core = YAD
+				}
+			}
+			ALV = {
+				531 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALV }
+						}
+					}
+					cede_province = ALV
+					add_core = ALV
+					remove_core = YAD
+				}
+				2029 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALV }
+						}
+					}
+					cede_province = ALV
+					add_core = ALV
+					remove_core = YAD
+				}
+			}
+			SDY = {
+				2040 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SDY }
+						}
+					}
+					cede_province = SDY
+					add_core = SDY
+					remove_core = ASS
+				}
+			}
+			CLY = {
+				change_tag = YAD
+				change_religion = hinduism
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.12.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				GHU = { was_player = yes }
+			}
+			switch_tag = GAH
+		}
+	}
+}
+
+# Expansion of the Delhi Sultanate
+country_event = {
+	id = eh_asia_indian.13
+	title = "eh_asia_indian.13.t"
+	desc = "eh_asia_indian.13.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DLH
+		is_year = 1320
+		NOT = { is_year = 1330 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			DLH = {
+				inherit = YAD
+				inherit = MLW
+				ahmedabad_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DLH }
+							NOT = { province_id = 2051 }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = GUJ
+				}
+				patan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DLH }
+							NOT = { province_id = 503 }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = GUJ
+				}
+				malwa_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = MLW
+				}
+				khandesh_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				tapti_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = KNK
+				}
+				west_bengal_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = NIZ
+				}
+				desh_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				maidan_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				berar_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				ahmednagar_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				konkan_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = KNK
+				}
+				gaur_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DLH }
+							NOT = { province_id = 4479 }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = NIZ
+				}
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				2066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = MAW
+				}
+				740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = MLW
+				}
+				2096 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = NIZ
+				}
+				4429 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = YAD
+				}
+				4486 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = NIZ
+				}
+				4502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DLH }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = MAW
+				}
+			}
+			MBL = {
+				4471 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MBL }
+						}
+					}
+					cede_province = MBL
+					add_core = MBL
+					remove_core = NIZ
+				}
+			}
+			YOR = {
+				north_carnatic_area = {
+					limit = {
+						NOT = { owned_by = YOR }
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = TLC
+				}
+				rayalaseema_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YOR }
+							NOT = { province_id = 541 }
+							NOT = { province_id = 4424 }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = TLG
+				}
+				andhra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = YOR }
+							NOT = { province_id = 2080 }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = TLG
+				}
+				2027 = {
+					if = {
+						limit = {
+							NOT = { owned_by = YOR }
+						}
+					}
+					cede_province = YOR
+					add_core = YOR
+					remove_core = TLG
+				}
+			}
+			DHU = {
+				519 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DHU }
+						}
+					}
+					cede_province = DHU
+					add_core = DHU
+					remove_core = DLH
+				}
+				2064 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DHU }
+						}
+					}
+					cede_province = DHU
+					add_core = DHU
+					remove_core = DLH
+				}
+			}
+			JAN = {
+				512 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAN }
+						}
+					}
+					cede_province = JAN
+					add_core = JAN
+					remove_core = DLH
+				}
+				4507 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAN }
+						}
+					}
+					cede_province = JAN
+					add_core = JAN
+					remove_core = DLH
+				}
+			}
+			GRJ = { change_tag = BST }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.13.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Rise of the Vijayanagara and Bahmani Empires
+country_event = {
+	id = eh_asia_indian.14
+	title = "eh_asia_indian.14.t"
+	desc = "eh_asia_indian.14.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DLH
+		is_year = 1345
+		NOT = { is_year = 1355 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BAH = {
+				konkan_area = {
+					limit = {
+						NOT = { owned_by = BAH }
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = DLH
+				}
+				ahmednagar_area = {
+					limit = {
+						NOT = { owned_by = BAH }
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = DLH
+				}
+				desh_area = {
+					limit = {
+						NOT = { owned_by = BAH }
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = DLH
+				}
+				maidan_area = {
+					limit = {
+						NOT = { owned_by = BAH }
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = DLH
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = BAH }
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = DLH
+				}
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BAH }
+							NOT = { province_id = 2050 }
+						}
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = DLH
+				}
+			}
+			HOY = {
+				change_tag = VIJ
+				rayalaseema_area = {
+					limit = {
+						NOT = { owned_by = VIJ }
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = DLH
+				}
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = VIJ }
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = DLH
+				}
+				kanara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VIJ }
+							NOT = { province_id = 2029 }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = DLH
+				}
+				538 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VIJ }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = MAD
+				}
+				2027 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VIJ }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = MAD
+				}
+				4414 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VIJ }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = MAD
+				}
+				4420 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VIJ }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = MAD
+				}
+			}
+			NIZ = {
+				change_tag = BNG
+				swap_free_idea_group = yes
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BNG }
+							NOT = { province_id = 562 }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = BNG }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				west_bengal_area = {
+					limit = {
+						NOT = { owned_by = BNG }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				gaur_area = {
+					limit = {
+						NOT = { owned_by = BNG }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = ARK
+				}
+				2096 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+			}
+			SND = {
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = SND }
+					}
+					change_culture = sindhi
+					cede_province = SND
+					add_core = SND
+					remove_core = DLH
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = SND }
+					}
+					change_culture = sindhi
+					cede_province = SND
+					add_core = SND
+					remove_core = DLH
+				}
+			}
+			CHD = {
+				2050 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHD }
+						}
+					}
+					cede_province = CHD
+					add_core = CHD
+					remove_core = DLH
+				}
+			}
+			GWA = {
+				525 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWA }
+						}
+					}
+					cede_province = GWA
+					add_core = GWA
+					remove_core = DLH
+				}
+				4465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWA }
+						}
+					}
+					cede_province = GWA
+					add_core = GWA
+					remove_core = DLH
+				}
+			}
+			HAD = {
+				528 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = HAD
+					add_core = HAD
+					remove_core = DLH
+				}
+				4464 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = HAD
+					add_core = HAD
+					remove_core = DLH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.14.a"
+	}
+	
+	option = {
+		name = "eh_asia_indian.14.b"
+		if = {
+			limit = {
+				DLH = { was_player = yes }
+			}
+			switch_tag = VIJ
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.14.c"
+		if = {
+			limit = {
+				DLH = { was_player = yes }
+			}
+			switch_tag = BAH
+		}
+	}
+}
+
+# Fall of the Delhi Sultanate
+country_event = {
+	id = eh_asia_indian.15
+	title = "eh_asia_indian.15.t"
+	desc = "eh_asia_indian.15.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DLH
+		is_year = 1410
+		NOT = { is_year = 1420 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BAH = {
+				532 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAH }
+						}
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = VIJ
+				}
+				2037 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAH }
+						}
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = TLG
+				}
+				542 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAH }
+						}
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = TLG
+				}
+				4428 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAH }
+						}
+					}
+					cede_province = BAH
+					add_core = BAH
+					remove_core = VIJ
+				}
+			}
+			VIJ = {
+				konkan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VIJ }
+							NOT = { province_id = 529 }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = BAH
+				}
+				south_carnatic_area = {
+					limit = {
+						NOT = { owned_by = VIJ }
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = CLS
+				}
+				tanjore_area = {
+					limit = {
+						NOT = { owned_by = VIJ }
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = CLS
+				}
+				kongu_area = {
+					limit = {
+						NOT = { owned_by = VIJ }
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = CLS
+				}
+				madura_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VIJ }
+							NOT = { province_id = 2101 }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = MAD
+				}
+			}
+			GUJ = {
+				ahmedabad_area = {
+					limit = {
+						NOT = { owned_by = GUJ }
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = DLH
+				}
+				patan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GUJ }
+							NOT = { province_id = 4480 }
+						}
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = DLH
+				}
+				tapti_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GUJ }
+							NOT = { province_id = 2036 }
+						}
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = DLH
+				}
+			}
+			JNP = {
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = JNP }
+					}
+					cede_province = JNP
+					add_core = JNP
+					remove_core = DLH
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = JNP }
+					}
+					cede_province = JNP
+					add_core = JNP
+					remove_core = DLH
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = JNP }
+					}
+					cede_province = JNP
+					add_core = JNP
+					remove_core = DLH
+				}
+				lower_doab_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = JNP }
+							NOT = { province_id = 524 }
+						}
+					}
+					cede_province = JNP
+					add_core = JNP
+					remove_core = DLH
+				}
+				4487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JNP }
+						}
+					}
+					cede_province = JNP
+					add_core = JNP
+					remove_core = DLH
+				}
+			}
+			MLW = {
+				malwa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MLW }
+							NOT = { province_id = 2056 }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = DLH
+				}
+				740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLW }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = DLH
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MLW }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = DLH
+				}
+			}
+			KHD = {
+				khandesh_area = {
+					limit = {
+						NOT = { owned_by = KHD }
+					}
+					cede_province = KHD
+					add_core = KHD
+					remove_core = DLH
+				}
+			}
+			MEW = {
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = DLH
+				}
+				4500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = DLH
+				}
+			}
+			MER = {
+				mewar_area = {
+					limit = {
+						NOT = { owned_by = MER }
+					}
+					cede_province = MER
+					add_core = MER
+					remove_core = DLH
+				}
+				4480 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MER }
+						}
+					}
+					cede_province = MER
+					add_core = MER
+					remove_core = DLH
+				}
+			}
+			MUL = {
+				multan_area = {
+					limit = {
+						NOT = { owned_by = MUL }
+					}
+					cede_province = MUL
+					add_core = MUL
+					remove_core = DLH
+				}
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = MUL }
+					}
+					cede_province = MUL
+					add_core = MUL
+					remove_core = DLH
+				}
+			}
+			NGA = {
+				2066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NGA }
+						}
+					}
+					cede_province = NGA
+					add_core = NGA
+					remove_core = DLH
+				}
+				4502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NGA }
+						}
+					}
+					cede_province = NGA
+					add_core = NGA
+					remove_core = DLH
+				}
+			}
+			BGA = {
+				2036 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGA }
+						}
+					}
+					cede_province = BGA
+					add_core = BGA
+					remove_core = DLH
+				}
+			}
+			BGL = {
+				2097 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGL }
+						}
+					}
+					cede_province = BGL
+					add_core = BGL
+					remove_core = DLH
+				}
+				4468 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGL }
+						}
+					}
+					cede_province = BGL
+					add_core = BGL
+					remove_core = DLH
+				}
+			}
+			CMP = {
+				2056 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CMP }
+						}
+					}
+					cede_province = CMP
+					add_core = CMP
+					remove_core = DLH
+				}
+			}
+			MBL = {
+				4471 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MBL }
+						}
+					}
+					cede_province = MBL
+					add_core = MBL
+					remove_core = DLH
+				}
+			}
+			KJH = {
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KJH }
+						}
+					}
+					cede_province = KJH
+					add_core = KJH
+					remove_core = DLH
+				}
+			}
+			BST = {
+				547 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BST }
+						}
+					}
+					cede_province = BST
+					add_core = BST
+					remove_core = TLG
+				}
+				4445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BST }
+						}
+					}
+					cede_province = BST
+					add_core = BST
+					remove_core = TLG
+				}
+			}
+			MYS = {
+				533 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = VIJ
+				}
+				4421 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = VIJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.15.a"
+		if = {
+			limit = {
+				DLH = { was_player = yes }
+			}
+			switch_tag = TIM
+		}
+	}
+}
+
+# Partition of the Bahmani
+country_event = {
+	id = eh_asia_indian.16
+	title = "eh_asia_indian.16.t"
+	desc = "eh_asia_indian.16.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BAH
+		is_year = 1480
+		NOT = { is_year = 1490 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			DLH = {
+				inherit = JNP
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = JNP
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = JNP
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = JNP
+				}
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = DLH }
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = JNP
+				}
+				sind_sagar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DLH }
+							NOT = { province_id = 2078 }
+						}
+					}
+					cede_province = DLH
+					add_core = DLH
+					remove_core = MUL
+				}
+			}
+			VIJ = {
+				north_carnatic_area = {
+					limit = {
+						NOT = { owned_by = VIJ }
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = AND
+				}
+				raichur_doab_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VIJ }
+							NOT = { province_id = 2033 }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = BAH
+				}
+			}
+			BIJ = {
+				maidan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 1948 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = BAH
+				}
+				desh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 2034 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = BAH
+				}
+				konkan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 529 }
+							NOT = { province_id = 2089 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = BAH
+				}
+				kanara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 2032 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = VIJ
+				}
+				2033 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = VIJ
+				}
+				4431 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = BAH
+				}
+				4427 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = BAH
+				}
+			}
+			AHM = {
+				ahmednagar_area = {
+					limit = {
+						NOT = { owned_by = AHM }
+					}
+					cede_province = AHM
+					add_core = AHM
+					remove_core = BAH
+				}
+				529 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AHM }
+						}
+					}
+					cede_province = AHM
+					add_core = AHM
+					remove_core = BAH
+				}
+				2034 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AHM }
+						}
+					}
+					cede_province = AHM
+					add_core = AHM
+					remove_core = BAH
+				}
+				2089 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AHM }
+						}
+					}
+					cede_province = AHM
+					add_core = AHM
+					remove_core = BAH
+				}
+			}
+			BRR = {
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BRR }
+							NOT = { province_id = 2050 }
+						}
+					}
+					cede_province = BRR
+					add_core = BRR
+					remove_core = BAH
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = BRR }
+					}
+					cede_province = BRR
+					add_core = BRR
+					remove_core = BAH
+				}
+			}
+			TLG = {
+				change_tag = GOC
+				golconda_area = {
+					limit = {
+						NOT = { owned_by = GOC }
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = BAH
+				}
+			}
+			MLW = {
+				gondwana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MLW }
+							NOT = { province_id = 550 }
+							NOT = { province_id = 551 }
+						}
+					}
+					cede_province = MLW
+					add_core = MLW
+					remove_core = GDW
+				}
+			}
+			ORI = {
+				orissa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ORI }
+							NOT = { province_id = 2049 }
+						}
+					}
+					cede_province = ORI
+					add_core = ORI
+					remove_core = AND
+				}
+				andhra_area = {
+					limit = {
+						NOT = { owned_by = ORI }
+					}
+					cede_province = ORI
+					add_core = ORI
+					remove_core = AND
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.16.a"
+		if = {
+			limit = {
+				BAH = { was_player = yes }
+			}
+			switch_tag = TIM
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.16.b"
+		if = {
+			limit = {
+				BAH = { was_player = yes }
+			}
+			switch_tag = VIJ
+		}
+	}
+}
+
+# Rise of the Mughul Empire
+country_event = {
+	id = eh_asia_indian.17
+	title = "eh_asia_indian.17.t"
+	desc = "eh_asia_indian.17.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TIM
+		is_year = 1526
+		NOT = { is_year = 1528 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			TIM = {
+				change_tag = MUG
+				set_government_rank = 3
+				set_capital = 522
+				inherit = DLH
+				inherit = MUL
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MUL
+				}
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				upper_doab_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				katehar_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				jaipur_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				506 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MUL
+				}
+				525 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GWA
+				}
+				555 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				2066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = NGA
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MAW
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = KLP
+				}
+				2055 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = DLH
+				}
+				4465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GWA
+				}
+				4502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MEW
+				}
+				4509 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MUL
+				}
+			}
+			BNG = {
+				mithila_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BNG }
+							NOT = { province_id = 4484 }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = TRT
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = BNG }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				2095 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				4490 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+			}
+			BIJ = {
+				1948 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = BAH
+				}
+			}
+			VIJ = {
+				andhra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VIJ }
+							NOT = { province_id = 549 }
+							NOT = { province_id = 2080 }
+						}
+					}
+					cede_province = VIJ
+					add_core = VIJ
+					remove_core = ORI
+				}
+			}
+			SND = {
+				multan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SND }
+							NOT = { province_id = 506 }
+							NOT = { province_id = 4509 }
+						}
+					}
+					cede_province = SND
+					add_core = SND
+					remove_core = MUL
+				}
+			}
+			PER = {
+				445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = BUK
+				}
+			}
+			KHI = {
+				khiva_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KHI }
+							NOT = { province_id = 2370 }
+						}
+					}
+					cede_province = KHI
+					add_core = KHI
+					remove_core = BUK
+				}
+				transcaspia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KHI }
+							NOT = { province_id = 439 }
+							NOT = { province_id = 443 }
+						}
+					}
+					cede_province = KHI
+					add_core = KHI
+					remove_core = BUK
+				}
+				merv_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KHI }
+							NOT = { province_id = 445 }
+						}
+					}
+					cede_province = KHI
+					add_core = KHI
+					remove_core = BUK
+				}
+			}
+			KZH = {
+				kyzylkum_area = {
+					limit = {
+						NOT = { owned_by = KZH }
+					}
+					cede_province = KZH
+					add_core = KZH
+					remove_core = BUK
+				}
+				nogai_area = {
+					limit = {
+						NOT = { owned_by = KZH }
+					}
+					cede_province = KZH
+					add_core = KZH
+					remove_core = NOG
+				}
+				439 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZH }
+						}
+					}
+					cede_province = KZH
+					add_core = KZH
+					remove_core = NOG
+				}
+				443 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZH }
+						}
+					}
+					cede_province = KZH
+					add_core = KZH
+					remove_core = NOG
+				}
+				2370 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZH }
+						}
+					}
+					cede_province = KZH
+					add_core = KZH
+					remove_core = NOG
+				}
+				2420 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KZH }
+						}
+					}
+					cede_province = KZH
+					add_core = KZH
+					remove_core = NOG
+				}
+			}
+			POR = {
+				396 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = ALH
+				}
+				4413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = KLT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.17.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			add_country_modifier = {
+				name = major_power
+				duration = 100000
+			}
+		}
+	}
+}
+
+# Rise of the Bengal Sultanate
+country_event = {
+	id = eh_asia_indian.18
+	title = "eh_asia_indian.18.t"
+	desc = "eh_asia_indian.18.d"
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1540
+		NOT = { is_year = 1550 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			BNG = {
+				hindusthan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BNG }
+							NOT = { area = kashmir_area }
+							NOT = { area = nepal_area }
+							NOT = { area = himalayan_hills_area }
+							NOT = { area = baisi_rajya_area }
+							NOT = { area = multan_area }
+							NOT = { area = baghelkhand_area }
+							NOT = { area = bundelkhand_area }
+							NOT = { area = gird_area }
+							NOT = { area = jaipur_area }
+							NOT = { area = sind_sagar_area }
+							NOT = { area = himalayan_hills_area }
+							NOT = { province_id = 740 }
+							NOT = { province_id = 4484 }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+				4511 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = DLH
+				}
+			}
+			MUG = {
+				447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = SIS
+				}
+				577 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = SIS
+				}
+				2229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = SIS
+				}
+			}
+			PER = {
+				435 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = SIS
+				}
+				4328 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = SIS
+				}
+			}
+			MAW = {
+				2066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = DLH
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = DLH
+				}
+				4502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = DLH
+				}
+			}
+			DHU = {
+				jaipur_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DHU }
+							NOT = { province_id = 520 }
+						}
+					}
+					cede_province = DHU
+					add_core = DHU
+					remove_core = DLH
+				}
+			}
+			GWA = {
+				525 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWA }
+						}
+					}
+					cede_province = GWA
+					add_core = GWA
+					remove_core = DLH
+				}
+				4465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWA }
+						}
+					}
+					cede_province = GWA
+					add_core = GWA
+					remove_core = DLH
+				}
+			}
+			HAD = {
+				528 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = HAD
+					add_core = HAD
+					remove_core = DLH
+				}
+				4464 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = HAD
+					add_core = HAD
+					remove_core = DLH
+				}
+			}
+			POR = {
+				517 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = AHM
+				}
+				4430 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = AHM
+				}
+				4455 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+					remove_core = GUJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.18.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			set_capital = 451
+			define_ruler = {
+				name = "Humayun"
+				dynasty = "Timurid"
+				change_adm = 5
+				change_dip = 2
+				change_mil = 3
+				claim = 95
+				age = 32
+			}
+			define_consort = {
+				name = "Hamida Banu Begum"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Akbar"
+				dynasty = "Timurid"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				claim = 95
+				age = 1
+			}
+		}
+	}
+}
+
+# Fall of the Bengal Sultanate
+country_event = {
+	id = eh_asia_indian.19
+	title = "eh_asia_indian.19.t"
+	desc = "eh_asia_indian.19.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1555
+		NOT = { is_year = 1560 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				upper_doab_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				katehar_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				506 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				525 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				555 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				2055 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				4487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				4488 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				4509 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+			}
+			PER = {
+				447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+				577 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+				2229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+			}
+			HAD = {
+				528 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = HAD
+					add_core = HAD
+					remove_core = BNG
+				}
+				4464 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = HAD
+					add_core = HAD
+					remove_core = BNG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.19.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			set_country_flag = mughul_conquests_india
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 3
+			add_manpower = 30
+			add_prestige = 30
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_years_of_income = 3
+			set_capital = 522
+			define_heir = {
+				name = "Akbar"
+				dynasty = "Timurid"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				claim = 95
+				age = 15
+			}
+			define_ruler_to_general = {	fire = 4	shock = 4	manuever = 2	siege = 2	}
+			define_consort = {
+				name = "Mariam-uz-Zamani"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+		BNG = { set_country_flag = mughul_conquests_india }
+		MLW = { set_country_flag = mughul_conquests_india }
+	}
+}
+
+# Akbar the Great
+country_event = {
+	id = eh_asia_indian.20
+	title = "eh_asia_indian.20.t"
+	desc = "eh_asia_indian.20.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1580
+		NOT = { is_year = 1590 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				inherit = BNG
+				multan_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = SND
+				}
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = SND
+				}
+				malwa_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MLW
+				}
+				ahmedabad_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				tapti_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 4430 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				gondwana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 2092 }
+							NOT = { province_id = 4458 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GDW
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				mithila_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 4484 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				gaur_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				west_bengal_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 562 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				521 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MER
+				}
+				2067 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				2053 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				740 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MLW
+				}
+				4454 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MLW
+				}
+				4465 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GWA
+				}
+				4471 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAD }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BNG
+				}
+			}
+			ORI = {
+				orissa_area = {
+					limit = {
+						NOT = { owned_by = ORI }
+					}
+					cede_province = ORI
+					add_core = ORI
+					remove_core = BNG
+				}
+			}
+			CHD = {
+				546 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHD }
+						}
+					}
+					cede_province = CHD
+					add_core = CHD
+					remove_core = BRR
+				}
+			}
+			AHM = {
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AHM }
+							NOT = { province_id = 546 }
+						}
+					}
+					cede_province = AHM
+					add_core = AHM
+					remove_core = BRR
+				}
+			}
+			GOC = {
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = GOC }
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = BRR
+				}
+				andhra_area = {
+					limit = {
+						NOT = { owned_by = GOC }
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = ORI
+				}
+				2090 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GOC }
+						}
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = ORI
+				}
+			}
+			BIJ = {
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = BIJ }
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = VIJ
+				}
+			}
+			MYS = {
+				538 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = VIJ
+				}
+				4414 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = VIJ
+				}
+			}
+			MAD = {
+				madura_area = {
+					limit = {
+						NOT = { owned_by = MAD }
+					}
+					cede_province = MAD
+					add_core = MAD
+					remove_core = VIJ
+				}
+				2085 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAD }
+						}
+					}
+					cede_province = MAD
+					add_core = MAD
+					remove_core = VIJ
+				}
+			}
+			TNJ = {
+				tanjore_area = {
+					limit = {
+						NOT = { owned_by = TNJ }
+					}
+					cede_province = TNJ
+					add_core = TNJ
+					remove_core = VIJ
+				}
+			}
+			GNG = {
+				540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GNG }
+						}
+					}
+					cede_province = GNG
+					add_core = GNG
+					remove_core = VIJ
+				}
+				1947 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GNG }
+						}
+					}
+					cede_province = GNG
+					add_core = GNG
+					remove_core = VIJ
+				}
+			}
+			KLN = {
+				2029 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLN }
+						}
+					}
+					cede_province = KLN
+					add_core = KLN
+					remove_core = VIJ
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLN }
+						}
+					}
+					cede_province = KLN
+					add_core = KLN
+					remove_core = VIJ
+				}
+				4426 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLN }
+						}
+					}
+					cede_province = KLN
+					add_core = KLN
+					remove_core = VIJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.20.a"
+		ai_chance = { factor = 100 }
+		MUG = { 
+			clr_country_flag = mughul_conquests_india
+			522 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		BNG = { clr_country_flag = mughul_conquests_india }
+		MLW = { clr_country_flag = mughul_conquests_india }
+	}
+}
+
+# Mughul expansion
+country_event = {
+	id = eh_asia_indian.21
+	title = "eh_asia_indian.21.t"
+	desc = "eh_asia_indian.21.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1600
+		NOT = { is_year = 1610 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				kalat_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BAL
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = SND
+				}
+				patan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 4480 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				saurashtra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 515 }
+							NOT = { province_id = 4455 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				ahmedabad_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GUJ
+				}
+				ahmednagar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 544 }
+							NOT = { province_id = 4432 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = AHM
+				}
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MUG }
+							NOT = { province_id = 546 }
+							NOT = { province_id = 2050 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = AHM
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GOC
+				}
+				orissa_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = ORI
+				}
+				447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = PER
+				}
+				2049 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BAL
+				}
+				2229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = PER
+				}
+				2231 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BAL
+				}
+			}
+			JAJ = {
+				4429 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAJ }
+						}
+					}
+					cede_province = JAJ
+					add_core = JAJ
+					remove_core = AHM
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.21.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				VIJ = { was_player = yes }
+			}
+			switch_tag = MUG
+		}
+	}
+}
+
+# Shah Jahan
+country_event = {
+	id = eh_asia_indian.22
+	title = "eh_asia_indian.22.t"
+	desc = "eh_asia_indian.22.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1625
+		NOT = { is_year = 1630 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				509 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = KGR
+				}
+			}
+			PER = {
+				pirate_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PER }
+							NOT = { province_id = 398 }
+						}
+					}
+					change_religion = sunni
+					cede_province = PER
+					add_core = PER
+					remove_core = POR
+				}
+				395 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					change_religion = sunni
+					cede_province = PER
+					add_core = PER
+					remove_core = POR
+				}
+				396 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					change_religion = sunni
+					cede_province = PER
+					add_core = PER
+					remove_core = POR
+				}
+				2999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					change_religion = sunni
+					cede_province = PER
+					add_core = PER
+					remove_core = POR
+				}
+			}
+			OM2 = {
+				change_religion = ibadi
+				oman_area = {
+					limit = {
+						NOT = { owned_by = OM2 }
+					}
+					change_religion = ibadi
+					cede_province = OM2
+					add_core = OM2
+					remove_core = POR
+				}
+				mascat_area = {
+					limit = {
+						NOT = { owned_by = OM2 }
+					}
+					change_religion = ibadi
+					cede_province = OM2
+					add_core = OM2
+					remove_core = POR
+				}
+				dhofar_area = {
+					limit = {
+						NOT = { owned_by = OM2 }
+					}
+					change_religion = ibadi
+					cede_province = OM2
+					add_core = OM2
+					remove_core = POR
+				}
+				398 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OM2 }
+						}
+					}
+					change_religion = ibadi
+					cede_province = OM2
+					add_core = OM2
+					remove_core = POR
+				}
+			}
+			RAS = {
+				asir_area = {
+					limit = {
+						NOT = { owned_by = RAS }
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+				upper_yemen_area = {
+					limit = {
+						NOT = { owned_by = RAS }
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+				2346 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RAS }
+						}
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = TUR
+				}
+			}
+			DAN = {
+				4416 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = TNJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.22.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			define_ruler = {
+				name = "Shah Jahan"
+				dynasty = "Timurid"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 1
+				claim = 95
+				age = 35
+			}
+			define_consort = {
+				name = "Mumtaz Mahal"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+}
+
+# Aurangzeb
+country_event = {
+	id = eh_asia_indian.23
+	title = "eh_asia_indian.23.t"
+	desc = "eh_asia_indian.23.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1655
+		NOT = { is_year = 1665 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			BIJ = {
+				inherit = KLN
+				kanara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 2030 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = KLN
+				}
+				kongu_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BIJ }
+							NOT = { province_id = 2085 }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = MYS
+				}
+				540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = GNG
+				}
+				1947 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = GNG
+				}
+			}
+			GOC = {
+				inherit = VIJ
+				north_carnatic_area = {
+					limit = {
+						NOT = { owned_by = GOC }
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = VIJ
+				}
+				1949 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GOC }
+						}
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = VIJ
+				}
+				2027 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GOC }
+						}
+					}
+					cede_province = GOC
+					add_core = GOC
+					remove_core = VIJ
+				}
+			}
+			MAR = {
+				desh_area = {
+					limit = {
+						NOT = { owned_by = MAR }
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = BIJ
+				}
+				530 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = BIJ
+				}
+				4429 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = BIJ
+				}
+			}
+			PER = {
+				447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+				449 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+				577 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+				2229 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = MUG
+				}
+			}
+			RAS = {
+				hadramut_area = {
+					limit = {
+						NOT = { owned_by = RAS }
+					}
+					cede_province = RAS
+					add_core = RAS
+					remove_core = HDR
+				}
+			}
+			NED = {
+				lanka_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = CEY
+				}
+				south_lanka_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 2099 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = KND
+				}
+				1248 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = DGL
+				}
+				2673 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = ATJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.23.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			define_ruler = {
+				name = "Aurangzeb Alamgir"
+				dynasty = "Timurid"
+				change_adm = 3
+				change_dip = 5
+				change_mil = 6
+				claim = 95
+				age = 40
+			}
+			define_consort = {
+				name = "Nawab Bai"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Timurid"
+			}
+		}
+	}
+}
+
+# Maratha Empire
+country_event = {
+	id = eh_asia_indian.24
+	title = "eh_asia_indian.24.t"
+	desc = "eh_asia_indian.24.d"
+	picture = ANGAY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1675
+		NOT = { is_year = 1680 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				inherit = NGP
+				vassalize = BIJ
+				vassalize = GOC
+				jangladesh_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MAW
+				}
+				jharkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BAL }
+							NOT = { province_id = 4471 }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = NGP
+				}
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = ARK
+				}
+			}
+			MAR = {
+				2036 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = MUG
+				}
+				4432 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = MUG
+				}
+				4433 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = MUG
+				}
+			}
+			BIJ = {
+				inherit = MYS
+				mysore_area = {
+					limit = {
+						NOT = { owned_by = BIJ }
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = MYS
+				}
+				2085 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = TNJ
+				}
+				2026 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BIJ }
+						}
+					}
+					cede_province = BIJ
+					add_core = BIJ
+					remove_core = TNJ
+				}
+			}
+			BAL = {
+				makran_area = {
+					limit = {
+						NOT = { owned_by = BAL }
+					}
+					cede_province = BAL
+					add_core = BAL
+					remove_core = PER
+				}
+				kalat_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BAL }
+							NOT = { province_id = 2068 }
+						}
+					}
+					cede_province = BAL
+					add_core = BAL
+					remove_core = PER
+				}
+				2230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAL }
+						}
+					}
+					cede_province = BAL
+					add_core = BAL
+					remove_core = PER
+				}
+			}
+			GDW = {
+				546 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GDW }
+						}
+					}
+					cede_province = GDW
+					add_core = GDW
+					remove_core = CHD
+				}
+			}
+			EIC = {
+				529 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = POR
+				}
+			}
+			FRA = {
+				540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = BIJ
+				}
+			}
+			NED = {
+				malabar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 534 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = VND
+				}
+				sulawesi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 4845 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				south_sulawesi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 2716 }
+							NOT = { province_id = 4796 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				ceram_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				648 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				4415 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = TNJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.24.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Mughul expansion
+country_event = {
+	id = eh_asia_indian.25
+	title = "eh_asia_indian.25.t"
+	desc = "eh_asia_indian.25.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1690
+		NOT = { is_year = 1700 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				orissa_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GOC
+				}
+				andhra_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GOC
+				}
+				north_carnatic_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GOC
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = GOC
+				}
+				rayalaseema_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				maidan_area = {
+					limit = {
+						NOT = { owned_by = MUG }
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				514 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MAW
+				}
+				2085 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				2026 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				1947 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				2027 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = BIJ
+				}
+				4506 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MAW
+				}
+			}
+			MYS = {
+				mysore_area = {
+					limit = {
+						NOT = { owned_by = MYS }
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = BIJ
+				}
+				kongu_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MYS }
+							NOT = { province_id = 2085 }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = BIJ
+				}
+			}
+			KLN = {
+				kanara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KLN }
+							NOT = { province_id = 2030 }
+							NOT = { province_id = 2033 }
+						}
+					}
+					cede_province = KLN
+					add_core = KLN
+					remove_core = BIJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.25.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Death of Aurangzeb
+country_event = {
+	id = eh_asia_indian.26
+	title = "eh_asia_indian.26.t"
+	desc = "eh_asia_indian.26.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1705
+		NOT = { is_year = 1710 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MUG = {
+				kanara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = KLN }
+							NOT = { province_id = 2030 }
+						}
+					}
+					cede_province = KLN
+					add_core = KLN
+					remove_core = BIJ
+				}
+				4506 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MUG }
+						}
+					}
+					cede_province = MUG
+					add_core = MUG
+					remove_core = MAW
+				}
+			}
+			BNG = {
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = KLN }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BNG }
+							NOT = { province_id = 562 }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				gaur_area = {
+					limit = {
+						NOT = { owned_by = KLN }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				jharkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BNG }
+							NOT = { province_id = 4450 }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = KLN }
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				orissa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BNG }
+							NOT = { province_id = 2049 }
+							NOT = { province_id = 4441 }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				2047 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				2081 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+				4488 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BNG }
+						}
+					}
+					cede_province = BNG
+					add_core = BNG
+					remove_core = MUG
+				}
+			}
+			MAW = {
+				marwar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MAW }
+							NOT = { province_id = 513 }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = MUG
+				}
+				2066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = MUG
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = MUG
+				}
+				4502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAW }
+						}
+					}
+					cede_province = MAW
+					add_core = MAW
+					remove_core = MUG
+				}
+			}
+			KRK = {
+				north_carnatic_area = {
+					limit = {
+						NOT = { owned_by = KRK }
+					}
+					cede_province = KRK
+					add_core = KRK
+					remove_core = MUG
+				}
+				2085 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KRK }
+						}
+					}
+					cede_province = KRK
+					add_core = KRK
+					remove_core = MUG
+				}
+				2026 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KRK }
+						}
+					}
+					cede_province = KRK
+					add_core = KRK
+					remove_core = MUG
+				}
+				1947 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KRK }
+						}
+					}
+					cede_province = KRK
+					add_core = KRK
+					remove_core = MUG
+				}
+				2027 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KRK }
+						}
+					}
+					cede_province = KRK
+					add_core = KRK
+					remove_core = MUG
+				}
+			}
+			GDW = {
+				550 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GDW }
+						}
+					}
+					cede_province = GDW
+					add_core = GDW
+					remove_core = MUG
+				}
+			}
+			ASS = {
+				2042 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ASS }
+						}
+					}
+					cede_province = ASS
+					add_core = ASS
+					remove_core = MUG
+				}
+			}
+			KGR = {
+				509 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KGR }
+						}
+					}
+					cede_province = KGR
+					add_core = KGR
+					remove_core = MUG
+				}
+			}
+			EIC = {
+				west_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 2081 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MUG
+				}
+			}
+			TUN = { grant_independence = yes }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.26.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			add_prestige = -10
+			define_ruler = {
+				dynasty = "Timurid"
+			}
+			define_heir = {
+				dynasty = "Timurid"
+			}
+		}
+	}
+}
+
+# Decline of the Mughul Empire
+country_event = {
+	id = eh_asia_indian.27
+	title = "eh_asia_indian.27.t"
+	desc = "eh_asia_indian.27.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1720
+		NOT = { is_year = 1730 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MAR = {
+				517 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = MUG
+				}
+			}
+			ODH = {
+				oudh_area = {
+					limit = {
+						NOT = { owned_by = ODH }
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = MUG
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = ODH }
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = MUG
+				}
+				lower_doab_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ODH }
+							NOT = { province_id = 524 }
+						}
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = MUG
+				}
+				4487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ODH }
+						}
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = MUG
+				}
+			}
+			BDA = {
+				patan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BDA }
+							NOT = { province_id = 4480 }
+						}
+					}
+					cede_province = BDA
+					add_core = BDA
+					remove_core = MUG
+				}
+				saurashtra_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BDA }
+							NOT = { province_id = 4455 }
+						}
+					}
+					cede_province = BDA
+					add_core = BDA
+					remove_core = MUG
+				}
+			}
+			JAN = {
+				512 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAN }
+						}
+					}
+					cede_province = JAN
+					add_core = JAN
+					remove_core = MUG
+				}
+				4507 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAN }
+						}
+					}
+					cede_province = JAN
+					add_core = JAN
+					remove_core = MUG
+				}
+			}
+			GUJ = {
+				ahmedabad_area = {
+					limit = {
+						NOT = { owned_by = GUJ }
+					}
+					cede_province = GUJ
+					add_core = GUJ
+					remove_core = MUG
+				}
+			}
+			DEC = {
+				andhra_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				maidan_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				telingana_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				golconda_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				khandesh_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				rayalaseema_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				raichur_doab_area = {
+					limit = {
+						NOT = { owned_by = DEC }
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				ahmednagar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DEC }
+							NOT = { province_id = 4432 }
+							NOT = { province_id = 4433 }
+						}
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DEC }
+							NOT = { province_id = 546 }
+							NOT = { province_id = 2050 }
+						}
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+				4441 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEC }
+						}
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MUG
+				}
+			}
+			NAG = {
+				gondwana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NAG }
+							NOT = { province_id = 4460 }
+						}
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = MUG
+				}
+				546 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAG }
+						}
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = MUG
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAG }
+						}
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = MUG
+				}
+			}
+			GRJ = {
+				2049 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRJ }
+						}
+					}
+					cede_province = GRJ
+					add_core = GRJ
+					remove_core = MUG
+				}
+			}
+			KJH = {
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KJH }
+						}
+					}
+					cede_province = KJH
+					add_core = KJH
+					remove_core = MUG
+				}
+			}
+			MEW = {
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = MUG
+				}
+				524 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = MUG
+				}
+				4500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = MUG
+				}
+			}
+			RMP = {
+				katehar_area = {
+					limit = {
+						NOT = { owned_by = RMP }
+					}
+					cede_province = RMP
+					add_core = RMP
+					remove_core = MUG
+				}
+			}
+			VND = {
+				537 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VND }
+						}
+					}
+					cede_province = VND
+					add_core = VND
+					remove_core = NED
+				}
+				4410 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VND }
+						}
+					}
+					cede_province = VND
+					add_core = VND
+					remove_core = NED
+				}
+			}
+			PDM = {
+				change_culture = vindhyan
+				4466 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PDM }
+						}
+					}
+					cede_province = PDM
+					add_core = PDM
+					remove_core = MUG
+				}
+				4467 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PDM }
+						}
+					}
+					cede_province = PDM
+					add_core = PDM
+					remove_core = MUG
+				}
+			}
+			GEO = {
+				kartli_kakheti_area = {
+					limit = {
+						NOT = { owned_by = GEO }
+					}
+					cede_province = GEO
+					add_core = GEO
+					remove_core = PER
+				}
+			}
+			GAZ = {
+				shirvan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GAZ }
+							NOT = { province_id = 424 }
+							NOT = { province_id = 4340 }
+						}
+					}
+					cede_province = GAZ
+					add_core = GAZ
+					remove_core = PER
+				}
+				425 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAZ }
+						}
+					}
+					cede_province = GAZ
+					add_core = GAZ
+					remove_core = PER
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.27.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			remove_country_modifier = major_power
+			add_stability = -1
+			add_prestige = -10
+		}
+		PDM = { change_tag = PAN }
+	}
+}
+
+# Maratha expansion
+country_event = {
+	id = eh_asia_indian.28
+	title = "eh_asia_indian.28.t"
+	desc = "eh_asia_indian.28.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1755
+		NOT = { is_year = 1760 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MAR = {
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MAR }
+							NOT = { province_id = 546 }
+							NOT = { province_id = 2050 }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = DEC
+				}
+				ahmednagar_area = {
+					limit = {
+						NOT = { owned_by = MAR }
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = DEC
+				}
+				khandesh_area = {
+					limit = {
+						NOT = { owned_by = MAR }
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = DEC
+				}
+				569 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = DEC
+				}
+				2033 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = DEC
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = MYS
+				}
+				4426 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = MYS
+				}
+				4435 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAR }
+						}
+					}
+					cede_province = MAR
+					add_core = MAR
+					remove_core = DEC
+				}
+			}
+			NAG = {
+				upper_mahanadi_area = {
+					limit = {
+						NOT = { owned_by = NAG }
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = DEC
+				}
+				garjat_area = {
+					limit = {
+						NOT = { owned_by = NAG }
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = DEC
+				}
+				orissa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NAG }
+							NOT = { province_id = 2038 }
+							NOT = { province_id = 4441 }
+						}
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = DEC
+				}
+				baghelkhand_area = {
+					limit = {
+						NOT = { owned_by = NAG }
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = BGL
+				}
+				546 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAG }
+						}
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = DEC
+				}
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAG }
+						}
+					}
+					cede_province = NAG
+					add_core = NAG
+					remove_core = BGL
+				}
+			}
+			MYS = {
+				madura_area = {
+					limit = {
+						NOT = { owned_by = MYS }
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = KRK
+				}
+			}
+			GWA = {
+				lower_doab_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GWA }
+							NOT = { province_id = 524 }
+						}
+					}
+					cede_province = GWA
+					add_core = GWA
+					remove_core = MUG
+				}
+			}
+			JAN = {
+				2065 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAN }
+						}
+					}
+					cede_province = JAN
+					add_core = JAN
+					remove_core = MUG
+				}
+				4463 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JAN }
+						}
+					}
+					cede_province = JAN
+					add_core = JAN
+					remove_core = MUG
+				}
+			}
+			BDA = {
+				ahmedabad_area = {
+					limit = {
+						NOT = { owned_by = BDA }
+					}
+					cede_province = BDA
+					add_core = BDA
+					remove_core = GUJ
+				}
+			}
+			EIC = {
+				west_bengal_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				jharkhand_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 4450 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				2038 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				4478 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+			}
+			FRA = {
+				andhra_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = DEC
+				}
+				4441 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = DEC
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.28.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				MUG = { was_player = yes }
+			}
+			switch_tag = EIC
+		}
+	}
+}
+
+# British East Indian Company
+country_event = {
+	id = eh_asia_indian.29
+	title = "eh_asia_indian.29.t"
+	desc = "eh_asia_indian.29.d"
+	picture = 16_Trade_Company_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GBR
+			tag = EIC
+		}
+		is_year = 1765
+		NOT = { is_year = 1770 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			EIC = {
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 562 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				gaur_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				andhra_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				bihar_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				2029 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				2047 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				4441 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+				4488 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BNG
+				}
+			}
+			MYS = {
+				534 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = KLN
+				}
+				541 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = MAR
+				}
+				2032 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = MAR
+				}
+				4413 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = KLN
+				}
+				4426 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MYS }
+						}
+					}
+					cede_province = MYS
+					add_core = MYS
+					remove_core = MAR
+				}
+			}
+			ODH = {
+				inherit = JNP
+				2095 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ODH }
+						}
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = JNP
+				}
+				4487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ODH }
+						}
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = JNP
+				}
+				4490 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ODH }
+						}
+					}
+					cede_province = ODH
+					add_core = ODH
+					remove_core = JNP
+				}
+			}
+			PUN = {
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = PUN }
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				sirhind_area = {
+					limit = {
+						NOT = { owned_by = PUN }
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				506 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				2062 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				4511 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+			}
+			TUR = {
+				2334 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+				}
+				3211 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+				}
+			}
+			HED = {
+				tabuk_area = {
+					limit = {
+						NOT = { owned_by = HED }
+					}
+					cede_province = HED
+					add_core = HED
+					remove_core = TUR
+				}
+			}
+			KUW = {
+				2340 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KUW }
+						}
+					}
+					cede_province = KUW
+					add_core = KUW
+					remove_core = TUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.29.a"
+		ai_chance = { factor = 100 }
+		PUN = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+			set_capital = 507
+			change_religion = sikhism 
+		}
+	}
+}
+
+# British Colonization of India
+country_event = {
+	id = eh_asia_indian.30
+	title = "eh_asia_indian.30.t"
+	desc = "eh_asia_indian.30.d"
+	picture = 17_Trade_Company_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GBR
+			tag = EIC
+		}
+		is_year = 1805
+		NOT = { is_year = 1810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			EIC = {
+				north_carnatic_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = KRK
+				}
+				south_carnatic_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 540 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = KRK
+				}
+				tanjore_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 4416 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = KRK
+				}
+				kongu_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = KRK
+				}
+				lanka_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NED
+				}
+				south_lanka_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NED
+				}
+				purvanchal_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = ODH
+				}
+				lower_doab_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = ODH
+				}
+				upper_doab_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 522 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = GWA
+				}
+				katehar_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = GWA
+				}
+				517 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				552 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				2065 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				2043 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				2059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = GWA
+				}
+				4463 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = GWA
+				}
+			}
+			DEC = {
+				berar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DEC }
+							NOT = { province_id = 546 }
+							NOT = { province_id = 2050 }
+						}
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MAR
+				}
+				545 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEC }
+						}
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MAR
+				}
+				4437 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEC }
+						}
+					}
+					cede_province = DEC
+					add_core = DEC
+					remove_core = MAR
+				}
+			}
+			BGL = {
+				2097 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGL }
+						}
+					}
+					cede_province = BGL
+					add_core = BGL
+					remove_core = NAG
+				}
+				4468 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGL }
+						}
+					}
+					cede_province = BGL
+					add_core = BGL
+					remove_core = NAG
+				}
+			}
+			MEW = {
+				520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = GWA
+				}
+				4500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEW }
+						}
+					}
+					cede_province = MEW
+					add_core = MEW
+					remove_core = GWA
+				}
+			}
+			PTA = {
+				510 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PTA }
+						}
+					}
+					cede_province = PTA
+					add_core = PTA
+					remove_core = PUN
+				}
+				4411 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PTA }
+						}
+					}
+					cede_province = PTA
+					add_core = PTA
+					remove_core = PUN
+				}
+			}
+			NPL = {
+				511 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NPL }
+						}
+					}
+					cede_province = NPL
+					add_core = NPL
+					remove_core = SRM
+				}
+				4493 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NPL }
+						}
+					}
+					cede_province = NPL
+					add_core = NPL
+					remove_core = GHR
+				}
+			}
+			DGL = {
+				1248 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DGL }
+						}
+					}
+					cede_province = DGL
+					add_core = DGL
+					remove_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.30.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# British Colonization of India
+country_event = {
+	id = eh_asia_indian.31
+	title = "eh_asia_indian.31.t"
+	desc = "eh_asia_indian.31.d"
+	picture = 17_Trade_Company_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GBR
+			tag = EIC
+		}
+		is_year = 1815
+		NOT = { is_year = 1820 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			EIC = {
+				upper_mahanadi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 553 }
+							NOT = { province_id = 2082 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				himalayan_hills_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 509 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NPL
+				}
+				khandesh_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				ahmedabad_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 2051 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BDA
+				}
+				ahmednagar_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 545 }
+							NOT = { province_id = 4437 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				desh_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 4431 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				malwa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 2093 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				gondwana_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				503 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BDA
+				}
+				574 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BDA
+				}
+				2087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MER
+				}
+				2036 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				2033 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				4446 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				4448 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				4459 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = GWA
+				}
+				4480 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MER
+				}
+			}
+			PUN = {
+				multan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PUN }
+							NOT = { province_id = 2079 }
+							NOT = { province_id = 4509 }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				508 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = KSH
+				}
+				2077 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				4449 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = KSH
+				}
+			}
+			BND = {
+				559 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BND }
+						}
+					}
+					cede_province = BND
+					add_core = BND
+					remove_core = GWA
+				}
+			}
+			SRG = {
+				2098 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SRG }
+						}
+					}
+					cede_province = SRG
+					add_core = SRG
+					remove_core = NAG
+				}
+			}
+			SBP = {
+				553 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SBP }
+						}
+					}
+					cede_province = SBP
+					add_core = SBP
+					remove_core = NAG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.31.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Sepoy Rebellion of 1857
+country_event = {
+	id = eh_asia_indian.32
+	title = "eh_asia_indian.32.t"
+	desc = "eh_asia_indian.32.d"
+	picture = ANGAY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		is_year = 1857
+		NOT = { is_year = 1860 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_asia_indian.32.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			set_country_flag = sepoy_rebellion
+			declare_war_with_cb = {
+				who = EIC
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_asia_indian.33 days = 100 }
+		}
+		EIC = { 
+			set_country_flag = sepoy_rebellion
+			oudh_area = {
+				limit = {
+					NOT = { owned_by = EIC }
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = ODH
+			}
+			purvanchal_area = {
+				limit = {
+					NOT = { owned_by = EIC }
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = ODH
+			}
+			upper_doab_area = {
+				change_controller = REB
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 10
+					friend = MUG
+				}
+			}
+			country_event = { id = eh_britain.45 days = 1 }
+		}
+	}
+}
+
+# British Raj
+country_event = {
+	id = eh_asia_indian.33
+	title = "eh_asia_indian.33.t"
+	desc = "eh_asia_indian.33.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			EIC = {
+				522 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MUG
+				}
+				547 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				550 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				1241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+				}
+				1991 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+				}
+				1999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+				}
+				2050 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				2049 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				2082 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				4445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				4450 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				4452 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NAG
+				}
+				country_event = { id = eh_britain.45 days = 1 }
+			}
+			FR2 = {
+				350 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+				}
+				351 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+				}
+				1111 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+				}
+				1986 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+				}
+				2456 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+				}
+			}
+			NED = {
+				molluca_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				kutai_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				kalimantan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 640 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				banjar_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			POR = {
+				kongo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { province_id = 1169 }
+							NOT = { province_id = 3261 }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2948 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+			BR2 = {
+				2936 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BR2 }
+						}
+					}
+					cede_province = BR2
+					add_core = BR2
+				}
+			}
+			ADE = {
+				hadramut_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ADE }
+							NOT = { province_id = 2343 }
+						}
+					}
+					cede_province = ADE
+					add_core = ADE
+					remove_core = HDR
+				}
+			}
+			JPR = {
+				2048 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JPR }
+						}
+					}
+					cede_province = JPR
+					add_core = JPR
+					remove_core = NAG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.33.a"
+		ai_chance = { factor = 100 }
+		EIC = {
+			clr_country_flag = sepoy_rebellion
+			country_event = { id = eh_britain.62 days = 7 }
+		}
+		MUG = { clr_country_flag = sepoy_rebellion }
+	}
+}
+
+# Independence of India
+country_event = {
+	id = eh_asia_indian.34
+	title = "eh_asia_indian.34.t"
+	desc = "eh_asia_indian.34.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = GBR
+			tag = BRJ
+		}
+		is_year = 1947
+		NOT = { is_year = 1949 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			GBR = { country_event = { id = eh_asia_MNM.13 days = 100 } }
+			BRJ = {
+				change_tag = INI
+				change_government = republic
+				add_government_reform = democracy_reform
+				set_government_rank = 2
+				set_capital = 522
+				change_primary_culture = kanauji
+				change_religion = secularism
+				grant_independence = yes
+				add_country_modifier = {
+					name = major_power
+					duration = 100000
+				}
+				hindusthan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INI }
+							NOT = { area = lahore_area }
+							NOT = { area = multan_area }
+							NOT = { area = sind_sagar_area }
+							NOT = { area = nepal_area }
+							NOT = { area = baisi_rajya_area }
+							NOT = { province_id = 2073 }
+							NOT = { province_id = 4484 }
+							NOT = { province_id = 4521 }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+				bengal_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INI }
+							NOT = { area = east_bengal_area }
+							NOT = { province_id = 567 }
+							NOT = { province_id = 2045 }
+							NOT = { province_id = 2046 }
+							NOT = { province_id = 4479 }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+				west_india_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INI }
+							NOT = { area = sindh_area }
+							NOT = { area = northern_sindh_area }
+							NOT = { province_id = 4430 }
+							NOT = { province_id = 4336 }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+				deccan_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INI }
+							NOT = { province_id = 2030 }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+				coromandel_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INI }
+							NOT = { area = lanka_area }
+							NOT = { area = south_lanka_area }
+							NOT = { province_id = 540 }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+				574 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+				2075 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = GBR
+				}
+			}
+			PAK = {
+				change_government = republic
+				add_government_reform = ceremonial_president
+				set_government_rank = 2
+				set_capital = 2180
+				change_primary_culture = panjabi
+				change_religion = sunni
+				kalat_area = {
+					limit = {
+						NOT = { owned_by = PAK }
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				makran_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAK }
+							NOT = { province_id = 434 }
+							NOT = { province_id = 2233 }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = PAK }
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = PAK }
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				lahore_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAK }
+							NOT = { province_id = 2075 }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				multan_area = {
+					limit = {
+						NOT = { owned_by = PAK }
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = PAK }
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = PAK }
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PAK }
+							NOT = { province_id = 562 }
+							NOT = { province_id = 4486 }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				578 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				2073 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				2230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				4521 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+				4479 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PAK }
+						}
+					}
+					cede_province = PAK
+					add_core = PAK
+					remove_core = GBR
+				}
+			}
+			CEY = {
+				change_government = republic
+				add_government_reform = ceremonial_president
+				set_government_rank = 2
+				set_capital = 572
+				change_primary_culture = sinhala
+				change_religion = buddhism
+				lanka_area = {
+					limit = {
+						NOT = { owned_by = CEY }
+					}
+					cede_province = CEY
+					add_core = CEY
+					remove_core = GBR
+				}
+				south_lanka_area = {
+					limit = {
+						NOT = { owned_by = CEY }
+					}
+					cede_province = CEY
+					add_core = CEY
+					remove_core = GBR
+				}
+			}
+			BRM = {
+				burma_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BRM }
+							NOT = { province_id = 568 }
+						}
+					}
+					cede_province = BRM
+					add_core = BRM
+					remove_core = BRJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.34.a"
+		ai_chance = { factor = 100 }
+		INI = {
+			add_treasury = -10000
+			add_years_of_income = 3
+			every_owned_province = { change_religion = hinduism }
+		}
+		PAK = {
+			add_treasury = 10000
+			add_years_of_income = 1
+			every_owned_province = { change_religion = sunni }
+		}
+		CEY = {
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.34.b"
+		ai_chance = { factor = 0 }
+		INI = {
+			add_treasury = 100000
+			every_owned_province = { change_religion = hinduism }
+		}
+		PAK = {
+			every_owned_province = { change_religion = sunni }
+		}
+		CEY = {
+			every_owned_province = { change_religion = buddhism }
+		}
+	}
+}
+
+# Annexation of Goa
+country_event = {
+	id = eh_asia_indian.35
+	title = "eh_asia_indian.35.t"
+	desc = "eh_asia_indian.35.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = INI
+		is_year = 1961
+		NOT = { is_year = 1963 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			INI = {
+				2030 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = POR
+				}
+				540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = FR2
+				}
+				4430 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = POR
+				}
+				4455 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.35.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Independence of Bangladesh and Sri Lanka
+country_event = {
+	id = eh_asia_indian.36
+	title = "eh_asia_indian.36.t"
+	desc = "eh_asia_indian.36.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = INI
+		is_year = 1970
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			INI = {
+				inherit = SKK
+				4482 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INI }
+						}
+					}
+					cede_province = INI
+					add_core = INI
+					remove_core = SKK
+				}
+			}
+			BGD = {
+				change_government = republic
+				add_government_reform = democracy_reform
+				set_government_rank = 2
+				set_capital = 564
+				change_primary_culture = bengali
+				change_religion = sunni
+				east_bengal_area = {
+					limit = {
+						NOT = { owned_by = BGD }
+					}
+					cede_province = BGD
+					add_core = BGD
+					remove_core = PAK
+				}
+				north_bengal_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BGD }
+							NOT = { province_id = 562 }
+							NOT = { province_id = 4486 }
+						}
+					}
+					cede_province = BGD
+					add_core = BGD
+					remove_core = PAK
+				}
+				567 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGD }
+						}
+					}
+					cede_province = BGD
+					add_core = BGD
+					remove_core = PAK
+				}
+				568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGD }
+						}
+					}
+					cede_province = BGD
+					add_core = BGD
+					remove_core = PAK
+				}
+				4479 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BGD }
+						}
+					}
+					cede_province = BGD
+					add_core = BGD
+					remove_core = PAK
+				}
+			}
+			DGL = {
+				1248 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DGL }
+						}
+					}
+					cede_province = DGL
+					add_core = DGL
+					remove_core = GBR
+				}
+			}
+			CEY = { change_tag = SRL }
+		}
+	}
+	
+	option = {
+		name = "eh_asia_indian.36.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Akbar the Great
+country_event = {
+	id = eh_asia_indian.37
+	title = "eh_asia_indian.37.t"
+	desc = "eh_asia_indian.37.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = MUG
+		is_year = 1560
+		NOT = { is_year = 1600 }
+		NOT = { has_ruler = "Akbar" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_asia_indian.37.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 3
+			define_ruler = {
+				name = "Akbar"
+				dynasty = "Timurid"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				claim = 95
+				min_age = 18
+				max_age = 58
+			}
+			define_ruler_to_general = {	fire = 4	shock = 4	manuever = 2	siege = 2	}
+			define_consort = {
+				name = "Mariam-uz-Zamani"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Aurangzeb
+country_event = {
+	id = eh_asia_indian.38
+	title = "eh_asia_indian.38.t"
+	desc = "eh_asia_indian.38.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = MUG
+		is_year = 1665
+		NOT = { is_year = 1700 }
+		NOT = { has_ruler = "Aurangzeb Alamgir" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_asia_indian.38.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 3
+			define_ruler = {
+				name = "Aurangzeb Alamgir"
+				dynasty = "Timurid"
+				change_adm = 3
+				change_dip = 5
+				change_mil = 6
+				claim = 95
+				min_age = 45
+				max_age = 80
+			}
+			define_consort = {
+				name = "Nawab Bai"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# EH version

@@ -1,0 +1,3689 @@
+namespace = eh_north_america
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the North America
+########################################################################
+
+# Toltec civilization
+country_event = {
+	id = eh_north_america.1
+	title = "eh_north_america.1.t"
+	desc = "eh_north_america.1.d"
+	picture = NATIVES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TTH
+		is_year = 800
+		NOT = { is_year = 810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TTH = {
+				change_tag = TLT
+				mexico_area = {
+					limit = {
+						NOT = { owned_by = TLT }
+					}
+					cede_province = TLT
+					add_core = TLT
+				}
+				zacatecas_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLT }
+							NOT = { province_id = 2617 }
+						}
+					}
+					cede_province = TLT
+					add_core = TLT
+				}
+				gran_chichimeca_area = {
+					limit = {
+						NOT = { owned_by = TLT }
+					}
+					cede_province = TLT
+					add_core = TLT
+				}
+				guanajuato_area = {
+					limit = {
+						NOT = { owned_by = TLT }
+					}
+					cede_province = TLT
+					add_core = TLT
+					remove_core = CCM
+				}
+				michoacan_area = {
+					limit = {
+						NOT = { owned_by = TLT }
+					}
+					cede_province = TLT
+					add_core = TLT
+					remove_core = CCM
+				}
+				4575 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TLT }
+						}
+					}
+					cede_province = TLT
+					add_core = TLT
+					remove_core = CCM
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.1.a"
+		ai_chance = { factor = 100 }
+		TLT = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 4718
+		}
+	}
+}
+
+# Postclassical Maya
+country_event = {
+	id = eh_north_america.2
+	title = "eh_north_america.2.t"
+	desc = "eh_north_america.2.d"
+	picture = NATIVES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = XIU
+		is_year = 1000
+		NOT = { is_year = 1010 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			XIU = {
+				change_tag = MAY
+				yucatan_area = {
+					limit = {
+						NOT = { owned_by = MAY }
+					}
+					cede_province = MAY
+					add_core = MAY
+				}
+				east_yucatan_area = {
+					limit = {
+						NOT = { owned_by = MAY }
+					}
+					cede_province = MAY
+					add_core = MAY
+					remove_core = ITZ
+				}
+				guatemala_lowlands_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MAY }
+							NOT = { province_id = 2636 }
+						}
+					}
+					cede_province = MAY
+					add_core = MAY
+					remove_core = TIK
+				}
+				campeche_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MAY }
+							NOT = { province_id = 2632 }
+						}
+					}
+					cede_province = MAY
+					add_core = MAY
+				}
+			}
+			TLT = {
+				puebla_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLT }
+							NOT = { province_id = 4582 }
+						}
+					}
+					cede_province = TLT
+					add_core = TLT
+					remove_core = XIC
+				}
+				huasteca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLT }
+							NOT = { province_id = 2641 }
+						}
+					}
+					cede_province = TLT
+					add_core = TLT
+					remove_core = TOT
+				}
+				2647 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TLT }
+						}
+					}
+					cede_province = TLT
+					add_core = TLT
+					remove_core = TOT
+				}
+			}
+			TAR = {
+				851 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TLT
+				}
+				2624 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TLT
+				}
+				4574 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TLT
+				}
+				4575 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TLT
+				}
+			}
+			COP = { change_tag = CHT }
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.2.a"
+		ai_chance = { factor = 100 }
+		MAY = {
+			change_government = monarchy
+			add_government_reform = maya_confederation_reform
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 2637
+		}
+	}
+}
+
+# Fall of the Toltec civilization
+country_event = {
+	id = eh_north_america.3
+	title = "eh_north_america.3.t"
+	desc = "eh_north_america.3.d"
+	picture = NATIVES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TLT
+		is_year = 1180
+		NOT = { is_year = 1190 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			CCM = {
+				gran_chichimeca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CCM }
+							NOT = { province_id = 2642 }
+						}
+					}
+					cede_province = CCM
+					add_core = CCM
+					remove_core = TLT
+				}
+				856 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCM }
+						}
+					}
+					cede_province = CCM
+					add_core = CCM
+					remove_core = TLT
+				}
+			}
+			GAM = {
+				zacatecas_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GAM }
+							NOT = { province_id = 2617 }
+						}
+					}
+					cede_province = GAM
+					add_core = GAM
+					remove_core = TLT
+				}
+				2615 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GAM }
+						}
+					}
+					cede_province = GAM
+					add_core = GAM
+					remove_core = TLT
+				}
+			}
+			OTO = {
+				2642 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OTO }
+						}
+					}
+					cede_province = OTO
+					add_core = OTO
+					remove_core = TLT
+				}
+				4573 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OTO }
+						}
+					}
+					cede_province = OTO
+					add_core = OTO
+					remove_core = TLT
+				}
+				4641 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OTO }
+						}
+					}
+					cede_province = OTO
+					add_core = OTO
+					remove_core = TLT
+				}
+			}
+			TAR = {
+				2622 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TLT
+				}
+				2624 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TLT
+				}
+			}
+			MAT = {
+				2623 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAT }
+						}
+					}
+					cede_province = MAT
+					add_core = MAT
+					remove_core = TLT
+				}
+				2626 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAT }
+						}
+					}
+					cede_province = MAT
+					add_core = MAT
+					remove_core = TLT
+				}
+				4572 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAT }
+						}
+					}
+					cede_province = MAT
+					add_core = MAT
+					remove_core = TLT
+				}
+			}
+			TOT = {
+				huasteca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TOT }
+							NOT = { province_id = 2641 }
+						}
+					}
+					cede_province = TOT
+					add_core = TOT
+					remove_core = TLT
+				}
+				2647 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TOT }
+						}
+					}
+					cede_province = TOT
+					add_core = TOT
+					remove_core = TLT
+				}
+			}
+			TEO = {
+				4582 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TEO }
+						}
+					}
+					cede_province = TEO
+					add_core = TEO
+					remove_core = TLT
+				}
+			}
+			ITZ = {
+				842 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITZ }
+						}
+					}
+					cede_province = ITZ
+					add_core = ITZ
+					remove_core = MAY
+				}
+				4594 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITZ }
+						}
+					}
+					cede_province = ITZ
+					add_core = ITZ
+					remove_core = MAY
+				}
+			}
+			CTM = {
+				843 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CTM }
+						}
+					}
+					cede_province = CTM
+					add_core = CTM
+					remove_core = MAY
+				}
+				4589 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CTM }
+						}
+					}
+					cede_province = CTM
+					add_core = CTM
+					remove_core = MAY
+				}
+			}
+			KAQ = {
+				2653 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAQ }
+						}
+					}
+					cede_province = KAQ
+					add_core = KAQ
+					remove_core = CHT
+				}
+				2636 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KAQ }
+						}
+					}
+					cede_province = KAQ
+					add_core = KAQ
+					remove_core = CHT
+				}
+			}
+			KNJ = { change_tag = KIC }
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.3.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Rise of the Aztec
+country_event = {
+	id = eh_north_america.4
+	title = "eh_north_america.4.t"
+	desc = "eh_north_america.4.d"
+	picture = AZTEC_PYRAMID_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TLT
+		is_year = 1250
+		NOT = { is_year = 1260 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TLX = {
+				puebla_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLX }
+							NOT = { province_id = 2660 }
+							NOT = { province_id = 4582 }
+						}
+					}
+					cede_province = TLX
+					add_core = TLX
+					remove_core = AZT
+				}
+			}
+			TEO = {
+				2646 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TEO }
+						}
+					}
+					cede_province = TEO
+					add_core = TEO
+					remove_core = AZT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.4.a"
+		ai_chance = { factor = 100 }
+		TLT = { change_tag = AZT }
+	}
+}
+
+# Moctezuma I
+country_event = {
+	id = eh_north_america.5
+	title = "eh_north_america.5.t"
+	desc = "eh_north_america.5.d"
+	picture = GREAT_MAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AZT
+		is_year = 1440
+		NOT = { is_year = 1450 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			AZT = {
+				inherit = COI
+				inherit = TOT
+				huasteca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AZT }
+							NOT = { province_id = 2641 }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TOT
+				}
+				2647 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TOT
+				}
+				2645 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TLA
+				}
+			}
+			TAR = {
+				2621 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TON
+				}
+			}
+			ITZ = {
+				4588 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITZ }
+						}
+					}
+					cede_province = ITZ
+					add_core = ITZ
+					remove_core = XIU
+				}
+				4589 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITZ }
+						}
+					}
+					cede_province = ITZ
+					add_core = ITZ
+					remove_core = CTM
+				}
+				4594 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ITZ }
+						}
+					}
+					cede_province = ITZ
+					add_core = ITZ
+					remove_core = XIU
+				}
+			}
+			CTM = {
+				2634 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CTM }
+						}
+					}
+					cede_province = CTM
+					add_core = CTM
+					remove_core = XIU
+				}
+			}
+			COC = {
+				846 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COC }
+						}
+					}
+					cede_province = COC
+					add_core = COC
+					remove_core = XIU
+				}
+				2652 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COC }
+						}
+					}
+					cede_province = COC
+					add_core = COC
+					remove_core = XIU
+				}
+				4591 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COC }
+						}
+					}
+					cede_province = COC
+					add_core = COC
+					remove_core = XIU
+				}
+			}
+			CNP = {
+				845 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CNP }
+						}
+					}
+					cede_province = CNP
+					add_core = CNP
+					remove_core = XIU
+				}
+				2650 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CNP }
+						}
+					}
+					cede_province = CNP
+					add_core = CNP
+					remove_core = XIU
+				}
+			}
+			MAY = { change_tag = XIU }
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.5.a"
+		ai_chance = { factor = 100 }
+		AZT = {
+			change_government = monarchy
+			add_government_reform = aztec_empire_reform
+			set_government_rank = 3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 852
+			define_ruler = {
+				name = "Moctezuma I Ilhuicamina"
+				dynasty = "Acamapichtli"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 6
+				age = 41
+			}
+			define_consort = {
+				name = "Chichimecacihuatzin"
+				dynasty = "Tenochtitlan"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Acamapichtli"
+				male = yes
+			}
+		}
+	}
+}
+
+# Moctezuma II
+country_event = {
+	id = eh_north_america.6
+	title = "eh_north_america.6.t"
+	desc = "eh_north_america.6.d"
+	picture = GREAT_MAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AZT
+		is_year = 1490
+		NOT = { is_year = 1500 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			AZT = {
+				mexico_area = {
+					limit = {
+						NOT = { owned_by = AZT }
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = MAT
+				}
+				huasteca_area = {
+					limit = {
+						NOT = { owned_by = AZT }
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TOT
+				}
+				eastern_mexico_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLX }
+							NOT = { province_id = 2631 }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TOT
+				}
+				guerrero_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TLX }
+							NOT = { province_id = 2648 }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TLA
+				}
+				oaxaca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = AZT }
+							NOT = { province_id = 4584 }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = ZAP
+				}
+				2638 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = ZAP
+				}
+				2649 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = ZAP
+				}
+				2646 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = MIX
+				}
+				2628 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TEO
+				}
+				4581 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AZT }
+						}
+					}
+					cede_province = AZT
+					add_core = AZT
+					remove_core = TLA
+				}
+			}
+			TAR = {
+				851 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = CLM
+				}
+				2621 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = CLM
+				}
+				4573 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = TON
+				}
+				4579 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TAR }
+						}
+					}
+					cede_province = TAR
+					add_core = TAR
+					remove_core = CLM
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.6.a"
+		ai_chance = { factor = 100 }
+		AZT = {
+			define_ruler = {
+				name = "Moctezuma II Xocoytzin"
+				dynasty = "Acamapichtli"
+				change_adm = 1
+				change_dip = 2
+				change_mil = 0
+				age = 36
+			}
+			define_consort = {
+				name = "Tlapalizquixochtzin"
+				dynasty = "Tenochtitlan"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Cuauhtemoc"
+				dynasty = "Acamapichtli"
+				change_adm = 2
+				change_dip = 4
+				change_mil = 6
+				age = 1
+			}
+		}
+	}
+}
+
+# Spanish conquest of the Aztec
+country_event = {
+	id = eh_north_america.7
+	title = "eh_north_america.7.t"
+	desc = "eh_north_america.7.d"
+	picture = CONQUISTADORS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1521
+		NOT = { is_year = 1523 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SPA = {
+				set_country_flag = european_colonization_americas
+				inherit = TLX
+				define_conquistador = {
+					name = "Hernan Cortes"
+					shock = 5
+					fire = 5
+					manuever = 6
+					siege = 1
+				}
+				kill_leader = {
+					type = "Ferdinand Magellan"
+				}
+				mexico_region = { discover_country = SPA }
+				850 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = TLX
+				}
+				2647 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					cavalry = SPA
+					cavalry = SPA
+					artillery = SPA
+					artillery = SPA
+					artillery = SPA
+					artillery = SPA
+					change_culture = mexican
+					change_religion = catholic
+					cede_province = SPA
+					add_core = SPA
+					remove_core = TLX
+				}
+				2644 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = TLX
+				}
+				2702 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4583 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = TLX
+				}
+				country_event = { id = eh_spanish.11 days = 300 }
+			}
+			AZT = {
+				set_country_flag = european_colonization_americas
+				add_stability = -1
+				add_corruption = 10
+				add_prestige = -10
+				add_legitimacy = -10
+				add_manpower = -10
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				add_inflation = 1
+				define_ruler = {
+					name = "Cuauhtemoc"
+					dynasty = "Acamapichtli"
+					change_adm = 2
+					change_dip = 4
+					change_mil = 6
+					age = 18
+				}
+				remove_heir = { allow_new_heir = no }
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.7.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AZT = { was_player = yes }
+			}
+			switch_tag = SPA
+		}
+		SPA = {
+			declare_war_with_cb = {
+				who = AZT
+				casus_belli = cb_conquest
+				war_goal_province = 852
+			}
+		}
+	}
+}
+
+# Spanish colonization of Mexico
+country_event = {
+	id = eh_north_america.8
+	title = "eh_north_america.8.t"
+	desc = "eh_north_america.8.d"
+	picture = CONQUISTADORS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1525
+		NOT = { is_year = 1535 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				mexico_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { area = durango_area }
+							NOT = { province_id = 856 }
+							NOT = { province_id = 857 }
+							NOT = { province_id = 2615 }
+							NOT = { province_id = 4642 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = TAR
+				}
+				honduras_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				nicaragua_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 838 }
+							NOT = { province_id = 2661 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				guatemala_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = KIC
+				}
+				chiapas_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = AZT
+				}
+				coquivacoa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 4601 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				popayan_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				741 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				778 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2632 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2817 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2805 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4615 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.8.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			add_country_modifier = {
+				name = major_power
+				duration = 200000
+			}
+			778 = {
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+		}
+		POR = {
+			add_country_modifier = {
+				name = major_power
+				duration = 200000
+			}
+		}
+	}
+}
+
+# European colonization of North America in 1600s
+country_event = {
+	id = eh_north_america.9
+	title = "eh_north_america.9.t"
+	desc = "eh_north_america.9.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1610
+		NOT = { is_year = 1620 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				chihuahua_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				new_mexico_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				gran_chichimeca_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				929 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4625 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4626 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			ENG = {
+				950 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				984 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+			}
+			FRA = {
+				981 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				994 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2566 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2573 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			NED = {
+				539 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = VIJ
+				}
+				633 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = POR
+				}
+				646 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = TER
+				}
+				635 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = POR
+				}
+				4417 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = VIJ
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.9.a"
+		ai_chance = { factor = 100 }
+		SPA = { country_event = { id = eh_south_america.8 days = 100 } }
+	}
+}
+
+# European colonization of North America in 1650s
+country_event = {
+	id = eh_north_america.10
+	title = "eh_north_america.10.t"
+	desc = "eh_north_america.10.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1650
+		NOT = { is_year = 1660 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ENG = {
+				massachusetts_bay_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				connecticut_valley_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				chesapeake_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ENG }
+							NOT = { province_id = 2549 }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				953 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				956 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				970 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				2013 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				2554 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				2566 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = FRA
+				}
+			}
+			FRA = {
+				lower_acadia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 2568 }
+							NOT = { province_id = 4891 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				notre_dame_mountains_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 986 }
+							NOT = { province_id = 2582 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				trois_rivieres_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 2012 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				993 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				995 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				1103 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2570 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2572 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2579 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				4029 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = SPA
+				}
+			}
+			SPA = {
+				923 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				928 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2664 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2533 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4649 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4650 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			NED = {
+				491 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = SPA
+				}
+				494 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = SPA
+				}
+				596 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = POR
+				}
+				1102 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				1177 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			SWE = {
+				957 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+				962 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+			}
+			DAN = {
+				55 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = OLD
+				}
+				1139 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.10.a"
+		ai_chance = { factor = 100 }
+		SPA = { country_event = { id = eh_south_america.9 days = 100 } }
+	}
+}
+
+# European colonization of North America in 1700s
+country_event = {
+	id = eh_north_america.11
+	title = "eh_north_america.11.t"
+	desc = "eh_north_america.11.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1705
+		NOT = { is_year = 1715 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				495 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FRA
+				}
+			}
+			FRA = {
+				hispaniola_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = SPA
+				}
+				893 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				916 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				917 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				922 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				944 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				996 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2518 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				4898 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2530 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			SPA = {
+				862 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				865 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4628 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2665 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.11.a"
+		ai_chance = { factor = 100 }
+		SPA = { country_event = { id = eh_south_america.10 days = 100 } }
+	}
+}
+
+# European colonization of North America in 1750s
+country_event = {
+	id = eh_north_america.12
+	title = "eh_north_america.12.t"
+	desc = "eh_north_america.12.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		is_year = 1750
+		NOT = { is_year = 1760 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			FRA = {
+				897 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				902 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				946 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				947 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				954 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				1010 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				1100 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				1011 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2555 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			GBR = {
+				949 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2011 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2565 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2023 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2544 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2552 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2556 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2557 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			NED = {
+				623 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				627 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = BLM
+				}
+				2692 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = BLM
+				}
+				2708 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			SPA = {
+				2668 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2499 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.12.a"
+		ai_chance = { factor = 100 }
+		SPA = { country_event = { id = eh_south_america.11 days = 100 } }
+		GBR = {
+			define_advisor = {
+				type = treasurer
+				name = "Adam Smith"
+				culture = scottish
+				skill = 6
+				discount = yes
+			}
+		}
+	}
+}
+
+# European colonization of North America in 1800s
+country_event = {
+	id = eh_north_america.13
+	title = "eh_north_america.13.t"
+	desc = "eh_north_america.13.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1800
+		NOT = { is_year = 1810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				athabasca_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				972 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SPA
+				}
+				1118 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2016 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2571 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2596 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2604 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3272 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			HAT = {
+				hispaniola_area = {
+					limit = {
+						NOT = { owned_by = HAT }
+					}
+					change_culture = french_caribbean
+					change_religion = catholic
+					cede_province = HAT
+					add_core = HAT
+					remove_core = FRA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.13.a"
+		ai_chance = { factor = 100 }
+		GBR = { country_event = { id = eh_south_america.12 days = 100 } }
+	}
+}
+
+# Mexican War of Independence
+country_event = {
+	id = eh_north_america.14
+	title = "eh_north_america.14.t"
+	desc = "eh_north_america.14.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			MEX = {
+				mexico_region = {
+					limit = {
+						NOT = { owned_by = MEX }
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				central_america_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MEX }
+							NOT = { province_id = 838 }
+							NOT = { province_id = 843 }
+							NOT = { province_id = 4589 }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				rio_grande_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MEX }
+							NOT = { area = llano_estacado_area }
+							NOT = { area = coastal_prarie_area }
+							NOT = { province_id = 2669 }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				new_mexico_area = {
+					limit = {
+						NOT = { owned_by = MEX }
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				arizona_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MEX }
+							NOT = { province_id = 2491 }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				sonora_area = {
+					limit = {
+						NOT = { owned_by = MEX }
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				baja_california_area = {
+					limit = {
+						NOT = { owned_by = MEX }
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				california_area = {
+					limit = {
+						NOT = { owned_by = MEX }
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				883 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEX }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				2492 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEX }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+				4627 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEX }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+					remove_core = SPA
+				}
+			}
+			GBR = {
+				interior_plateau_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 1814 }
+							NOT = { province_id = 2606 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				columbia_river_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2488 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				cape_of_good_hope_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = NED
+				}
+				1100 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FR2
+				}
+				1101 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FR2
+				}
+				1102 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FR2
+				}
+				2482 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2586 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3118 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.14.a"
+		ai_chance = { factor = 100 }
+		MEX = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = {
+				change_culture = mexican
+				change_religion = catholic
+			}
+		}
+		SPA = { country_event = { id = eh_south_america.13 days = 7 } }
+	}
+}
+
+# United Provinces of Central America
+country_event = {
+	id = eh_north_america.15
+	title = "eh_north_america.15.t"
+	desc = "eh_north_america.15.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		is_year = 1820
+		NOT = { is_year = 1825 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CAM = {
+				costa_rica_area = {
+					limit = {
+						NOT = { owned_by = CAM }
+					}
+					cede_province = CAM
+					add_core = CAM
+					remove_core = MEX
+				}
+				nicaragua_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CAM }
+							NOT = { province_id = 838 }
+						}
+					}
+					cede_province = CAM
+					add_core = CAM
+					remove_core = MEX
+				}
+				honduras_area = {
+					limit = {
+						NOT = { owned_by = CAM }
+					}
+					cede_province = CAM
+					add_core = CAM
+					remove_core = MEX
+				}
+				guatemala_area = {
+					limit = {
+						NOT = { owned_by = CAM }
+					}
+					cede_province = CAM
+					add_core = CAM
+					remove_core = MEX
+				}
+				guatemala_lowlands_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CAM }
+							NOT = { province_id = 843 }
+							NOT = { province_id = 4589 }
+						}
+					}
+					cede_province = CAM
+					add_core = CAM
+					remove_core = MEX
+				}
+			}
+			MEX = {
+				2021 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEX }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+				}
+				2479 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEX }
+						}
+					}
+					cede_province = MEX
+					add_core = MEX
+				}
+			}
+			HAT = {
+				dominica_area = {
+					limit = {
+						NOT = { owned_by = HAT }
+					}
+					cede_province = HAT
+					add_core = HAT
+					remove_core = SPA
+				}
+			}
+			VNZ = {
+				venezuela_area = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = COL
+				}
+				central_llanos_area = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = COL
+				}
+				eastern_llanos = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = COL
+				}
+				maracaibo_area = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = COL
+				}
+				upper_guyana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VNZ }
+							NOT = { province_id = 2931 }
+						}
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = COL
+				}
+				2803 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VNZ }
+						}
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = COL
+				}
+			}
+			ECU = {
+				quito_area = {
+					limit = {
+						NOT = { owned_by = ECU }
+					}
+					change_culture = iberian_peruvian
+					change_religion = catholic
+					cede_province = ECU
+					add_core = ECU
+					remove_core = COL
+				}
+				2002 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ECU }
+						}
+					}
+					change_culture = iberian_peruvian
+					change_religion = catholic
+					cede_province = ECU
+					add_core = ECU
+					remove_core = COL
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.15.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_north_america.15.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				SPA = { was_player = yes }
+			}
+			switch_tag = MEX
+		}
+	}
+}
+
+# Dissolution of the Central America Union
+country_event = {
+	id = eh_north_america.16
+	title = "eh_north_america.16.t"
+	desc = "eh_north_america.16.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		is_year = 1840
+		NOT = { is_year = 1845 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CAM = { change_tag = GTM }
+			COS = {
+				costa_rica_area = {
+					limit = {
+						NOT = { owned_by = COS }
+					}
+					cede_province = COS
+					add_core = COS
+					remove_core = CAM
+				}
+			}
+			ELS = {
+				839 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ELS }
+						}
+					}
+					cede_province = ELS
+					add_core = ELS
+					remove_core = COL
+				}
+			}
+			HON = {
+				honduras_area = {
+					limit = {
+						NOT = { owned_by = HON }
+					}
+					cede_province = HON
+					add_core = HON
+					remove_core = CAM
+				}
+			}
+			NCR = {
+				nicaragua_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NCR }
+							NOT = { province_id = 838 }
+						}
+					}
+					cede_province = NCR
+					add_core = NCR
+					remove_core = CAM
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.16.a"
+		ai_chance = { factor = 100 }
+		COS = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		DOM = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		ELS = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		HON = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		NCR = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		GTM = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+	}
+}
+
+# Mexican-American War
+country_event = {
+	id = eh_north_america.17
+	title = "eh_north_america.17.t"
+	desc = "eh_north_america.17.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			BR2 = {
+				amazon_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BR2 }
+							NOT = { area = suriname_area }
+						}
+					}
+					cede_province = BR2
+					add_core = BR2
+				}
+			}
+			DOM = {
+				dominica_area = {
+					limit = {
+						NOT = { owned_by = DOM }
+					}
+					cede_province = DOM
+					add_core = DOM
+					remove_core = HAT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.17.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			clr_country_flag = texas
+			add_treasury = 10000
+			add_stability = 1
+			add_prestige = 10
+		}
+		MEX = { 
+			clr_country_flag = texas
+			add_treasury = -10000
+			add_stability = -1
+			add_prestige = -10
+			white_peace = USA
+		}
+		TEX = { clr_country_flag = texas }
+	}
+}
+
+# Independence of the Canadian Confederation
+country_event = {
+	id = eh_north_america.18
+	title = "eh_north_america.18.t"
+	desc = "eh_north_america.18.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1867
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CAN = {
+				lower_canada_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				upper_canada_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				huronia_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				upper_ontario_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				lower_acadia_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				upper_acadia_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				cote_nord_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				notre_dame_mountains_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				laurentian_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CAN }
+							NOT = { province_id = 1805 }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				ottawa_valley_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				trois_rivieres_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				st_john_valley_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+			}
+			GBR = {
+				inherit = BHR
+				te_ika_a_maui_waho_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				northern_australia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2730 }
+							NOT = { province_id = 2731 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				396 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = BHR
+				}
+				2727 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2728 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1093 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4850 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3050 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3051 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2289 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = BJ2
+				}
+				2290 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = BJ2
+				}
+				2733 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}			
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.18.a"
+		ai_chance = { factor = 100 }
+		CAN = {
+			add_treasury = 10000
+			every_owned_province = {
+				limit = {
+					AND = {
+						NOT = { area = cote_nord_area }
+						NOT = { area = lower_canada_area }
+						NOT = { area = laurentian_area }
+						NOT = { area = notre_dame_mountains_area }
+					}
+				}
+				change_culture = british_canadian
+				change_religion = protestant
+			}
+		}
+	}
+}
+
+# Newfoundland joined the Canadian Confederation
+country_event = {
+	id = eh_north_america.19
+	title = "eh_north_america.19.t"
+	desc = "eh_north_america.19.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		is_year = 1948
+		NOT = { is_year = 1950 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CAN = {
+				inherit = NFL
+				labrador_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = NFL
+				}
+				newfoundland_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = NFL
+				}
+				nunavut_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.20.a"
+		ai_chance = { factor = 100 }
+		CAN = {
+			add_prestige = 10
+			hudson_bay_region = {
+				limit = { owned_by = CAN }
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -5
+			}
+			newfoundland_area = {
+				limit = { owned_by = CAN }
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -5
+			}
+		}
+	}
+}
+
+# Cuban Revolution
+country_event = {
+	id = eh_north_america.20
+	title = "eh_north_america.20.t"
+	desc = "eh_north_america.20.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1959
+		NOT = { is_year = 1961 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_north_america.20.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			define_ruler = {
+				name = "John F. Kennedy"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 2
+				age = 44
+			}
+			country_event = { id = eh_north_america.20 days = 300 }
+		}
+		SOV = {
+			define_ruler = {
+				name = "Nikita Khrushchev"
+				change_adm = 2
+				change_dip = 3
+				change_mil = 4
+			}
+		}
+		CUB = {
+			set_country_flag = eh_communist
+			change_government = republic
+			add_government_reform = communist_government
+			set_government_rank = 2
+			define_ruler = {
+				name = "Fidel Castro"
+				change_adm = 2
+				change_dip = 3
+				change_mil = 5
+			}
+			every_owned_province = {
+				change_culture = iberian_caribbean
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Cuban Missile Crisis
+country_event = {
+	id = eh_north_america.21
+	title = "eh_north_america.21.t"
+	desc = "eh_north_america.21.d"
+	picture = NUCLEAR_ENERGY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_north_america.21.a"
+		ai_chance = { factor = 100 }
+		USA = { add_prestige = -10 }
+		SOV = {
+			add_trust = {
+				who = CUB
+				value = 50
+				mutual = yes
+			}
+		}
+	}
+}
+
+# Independence of the West Indies
+country_event = {
+	id = eh_north_america.22
+	title = "eh_north_america.22.t"
+	desc = "eh_north_america.22.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1970
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ANB = {
+				496 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ANB }
+						}
+					}
+					cede_province = ANB
+					add_core = ANB
+					remove_core = GBR
+				}
+			}
+			BBD = {
+				501 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BBD }
+						}
+					}
+					cede_province = BBD
+					add_core = BBD
+					remove_core = GBR
+				}
+			}
+			BHM = {
+				482 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BHM }
+						}
+					}
+					cede_province = BHM
+					add_core = BHM
+					remove_core = GBR
+				}
+			}
+			DMN = {
+				498 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DMN }
+						}
+					}
+					cede_province = DMN
+					add_core = DMN
+					remove_core = GBR
+				}
+			}
+			GRN = {
+				1881 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GRN }
+						}
+					}
+					cede_province = GRN
+					add_core = GRN
+					remove_core = GBR
+				}
+			}
+			SLU = {
+				500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SLU }
+						}
+					}
+					cede_province = SLU
+					add_core = SLU
+					remove_core = GBR
+				}
+			}
+			SKN = {
+				495 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SKN }
+						}
+					}
+					cede_province = SKN
+					add_core = SKN
+					remove_core = GBR
+				}
+			}
+			SVG = {
+				3057 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SVG }
+						}
+					}
+					cede_province = SVG
+					add_core = SVG
+					remove_core = GBR
+				}
+			}
+			JMC = {
+				487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = JMC }
+						}
+					}
+					cede_province = JMC
+					add_core = JMC
+					remove_core = GBR
+				}
+			}
+			TRN = {
+				502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TRN }
+						}
+					}
+					cede_province = TRN
+					add_core = TRN
+					remove_core = GBR
+				}
+			}
+			GYA = {
+				743 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GYA }
+						}
+					}
+					cede_province = GYA
+					add_core = GYA
+					remove_core = GBR
+				}
+				744 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GYA }
+						}
+					}
+					cede_province = GYA
+					add_core = GYA
+					remove_core = GBR
+				}
+				2931 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GYA }
+						}
+					}
+					cede_province = GYA
+					add_core = GYA
+					remove_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_north_america.22.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# United States invasion of Grenada
+
+# Modern Central America
+
+# EH version

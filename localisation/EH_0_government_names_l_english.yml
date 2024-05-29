@@ -1,0 +1,76 @@
+﻿l_english:
+ #### China ####
+ GONG:0 "Gong"
+ WANG:0 "Wang"
+ DAWANG:0 "Dawang"
+ HUANGDI:0 "Huangdi"
+ TAIFEI:0 "Taifei"
+ TAIHOU:0 "Taihou"
+ HUANGTAIHOU:0 "Huangtaihou"
+ FEI:0 "Fei"
+ WANGHOU:0 "Wanghou"
+ HUANGHOU:0 "Huanghou"
+ FEI:0 "Fei"
+ GONGZI:0 "Gongzi"
+ SHIZI:0 "Shizi"
+ TAIZI:0 "Taizi"
+ WENGZHU:0 "Wengzhu"
+ GONGZHU:0 "Gongzhu"
+ CISHI:0 "Cishi"
+ FUREN:0 "Furen"
+ BEIZI:0 "Beizi"
+ QINWANG:0 "Qinwang"
+ TIANWANG:0 "Tianwang"
+ TUSI:0 "Tusi"
+ 
+ #### Japan ####
+ KIMI:0 "Kimi"
+ OKIMI:0 "Okimi"
+ TENNO:0 "Tenno"
+ OUKO:0 "Ouko"
+ KOGO:0 "Kogo"
+ SESSHO:0 "Sessho"
+ KOTAIGO:0 "Kotaigo"
+ OUJI:0 "Ouji"
+ TAISHI:0 "Taishi"
+ KAMPAKU:0 "Kampaku"
+ TAIKUN:0 "Taikun"
+ FUGUN:0 "Fugun"
+ HIME:0 "Hime"
+ MANDOKORO:0 "Mandokoro"
+ MIDAIDOKORO:0 "Midaidokoro"
+ 
+ #### Korea ####
+ DAEWANG:0 "Daewang"
+ HWANGJE:0 "Hwangje"
+ BUIN:0 "Buin"
+ DAEBI:0 "Daebi"
+ TAEHU:0 "Taehu"
+ HWANGTAEHU:0 "Hwangtaehu"
+ BI:0 "Bi"
+ WANGHU:0 "Wanghu"
+ HWANGHU:0 "Hwanghu"
+ GONGJA:0 "Gongja"
+ SEJA:0 "Seja"
+ TAEJA:0 "Taeja"
+ ONGJU:0 "Ongju"
+ GONGJU:0 "Gongju"
+ SEONGJU:0 "Seongju"
+ SINJI:0 "Sinji"
+ 
+ #### Tibet ####
+ TSENPO:0 "Tsenpo"
+ LAMA:0 "Lama"
+ DALAI_LAMA:0 "Dalai Lama"
+ 
+ #### Chiefdom ####
+ CHIEFDOM:0 "Chiefdom"
+ GREAT_KING:0 "Great King"
+ CROWN_PRINCE:0 "Crown Prince"
+ CROWN_PRINCESS:0 "Crown Princess"
+ 
+ #### Rome ####
+ AUGUSTI:0 "Augusti"
+ CAESARES:0 "Caesares"
+ 
+ # EH version

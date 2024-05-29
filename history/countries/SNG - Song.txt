@@ -1,0 +1,695 @@
+government = monarchy
+add_government_reform = celestial_empire
+government_rank = 3
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+culture_group_union = east_asian
+historical_rival = LIO
+historical_rival = CJN
+capital = 688	# Kaifeng
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Northern Song Dynasty
+
+960.2.4 = {
+	monarch = {
+		name = "Kuangyin" #Taizu
+		dynasty = "Zhao"
+		birth_date = 927.3.21
+		adm = 5
+		dip = 5
+		mil = 6
+		leader = {	name = "Zhao Kuangyin"     	type = general	fire = 4	shock = 4	manuever = 0	siege = 1  death_date = 976.11.14 }
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Xiaoming"
+		dynasty = "Wang"
+		birth_date = 942.1.1
+		death_date = 964.12.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+960.2.4 = {
+	heir = {
+		name = "Kuangyi"
+		monarch_name = "Taizong"
+		dynasty = "Zhao"
+		birth_date = 939.11.20
+		death_date = 997.5.8
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 5
+		leader = {	name = "Zhao Kuangyi"     	type = general	fire = 1	shock = 2	manuever = 2	siege = 0  death_date = 997.5.8 }
+	}
+}
+
+968.2.1 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Xiaozhang"
+		dynasty = "Song"
+		birth_date = 952.1.1
+		death_date = 995.4.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+976.11.14 = {
+	monarch = {
+		name = "Kuangyi" #Taizong
+		dynasty = "Zhao"
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}
+
+976.11.14 = {
+	heir = {
+		name = "Heng"
+		monarch_name = "Zhenzong"
+		dynasty = "Zhao"
+		birth_date = 968.12.23
+		death_date = 1022.3.23
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}
+
+984.12.1 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Mingde"
+		dynasty = "Li"
+		birth_date = 960.1.1
+		death_date = 1004.3.15
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+997.5.8 = {
+	monarch = {
+		name = "Heng" #Zhenzong
+		dynasty = "Zhao"
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Zhangmu"
+		dynasty = "Guo"
+		birth_date = 975.1.1
+		death_date = 1007.7.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.4.14 = {
+	heir = {
+		name = "Zhen"
+		monarch_name = "Renzong"
+		dynasty = "Zhao"
+		birth_date = 1010.4.14
+		death_date = 1063.4.30
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1022.3.23 = {
+	monarch = {
+		name = "Zhen" #Renzong
+		dynasty = "Zhao"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+1024.1.1 = {
+	queen = {
+		country_of_origin = SNG
+		dynasty = "Guo"
+		birth_date = 1012.1.1
+		death_date = 1035.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1032.2.16 = {
+	heir = {
+		name = "Shu"
+		monarch_name = "Yingzong"
+		dynasty = "Zhao"
+		birth_date = 1032.2.16
+		death_date = 1067.1.25
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1034.1.1 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Guangxiang"
+		dynasty = "Cao"
+		birth_date = 1016.1.1
+		death_date = 1079.11.16
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1063.4.30 = {
+	monarch = {
+		name = "Shu" #Yingzong
+		dynasty = "Zhao"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1063.4.30 = {
+	heir = {
+		name = "Xu"
+		monarch_name = "Shenzong"
+		dynasty = "Zhao"
+		birth_date = 1048.5.25
+		death_date = 1085.4.1
+		claim = 95
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+1065.1.1 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Xuanren"
+		dynasty = "Gao"
+		birth_date = 1032.1.1
+		death_date = 1093.9.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1067.1.25 = {
+	monarch = {
+		name = "Xu" #Shenzong
+		dynasty = "Zhao"
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Qinsheng"
+		dynasty = "Xiang"
+		birth_date = 1046.1.1
+		death_date = 1101.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1076.1.4 = {
+	heir = {
+		name = "Xu"
+		monarch_name = "Zhezong"
+		dynasty = "Zhao"
+		birth_date = 1076.1.4
+		death_date = 1100.2.23
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1085.4.1 = {
+	monarch = {
+		name = "Xu" #Zhezong
+		dynasty = "Zhao"
+		birth_date = 1077.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1085.4.1 = {
+	heir = {
+		name = "Ji"
+		monarch_name = "Huizong"
+		dynasty = "Zhao"
+		birth_date = 1082.11.2
+		death_date = 1135.6.4
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1092.6.23 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Zhaoche"
+		dynasty = "Xiang"
+		birth_date = 1037.1.1
+		death_date = 1131.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1100.1.1 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Zhaohuai"
+		dynasty = "Liu"
+		birth_date = 1079.1.1
+		death_date = 1113.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1100.2.23 = {
+	monarch = {
+		name = "Ji" #Huizong
+		dynasty = "Zhao"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Xiangong"
+		dynasty = "Wang"
+		birth_date = 1084.1.1
+		death_date = 1108.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1100.5.23 = {
+	heir = {
+		name = "Huan"
+		monarch_name = "Qinzong"
+		dynasty = "Zhao"
+		birth_date = 1100.5.23
+		death_date = 1161.6.14
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+}
+
+1110.3.20 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Xiansu"
+		dynasty = "Zheng"
+		birth_date = 1079.1.1
+		death_date = 1130.10.8
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1122.1.1 = { leader = {	name = "Yue Fei"     	type = general	fire = 2	shock = 3	manuever = 2	siege = 1  death_date = 1142.1.27 } }
+
+1126.1.18 = {
+	monarch = {
+		name = "Huan" #Qinzong
+		dynasty = "Zhao"
+		adm = 2
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Renhuai"
+		dynasty = "Zhu"
+		birth_date = 1102.1.1
+		death_date = 1128.8.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Southern Song Dynasty
+
+1127.1.9 = {
+	capital = 1821
+	monarch = {
+		name = "Gou" #Gaozong
+		dynasty = "Zhao"
+		birth_date = 1107.6.12
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}
+
+1127.11.27 = {
+	heir = {
+		name = "Shen"
+		monarch_name = "Xiaozong"
+		dynasty = "Zhao"
+		birth_date = 1127.11.27
+		death_date = 1194.6.28
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1130.1.1 = { 
+	primary_culture = wu
+	capital = 684
+} #Lin'an
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1143.5.18 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Xiansheng"
+		dynasty = "Wu"
+		birth_date = 1115.9.11
+		death_date = 1197.12.12
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1162.7.24 = {
+	monarch = {
+		name = "Shen" #Xiaozong
+		dynasty = "Zhao"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1162.7.24 = {
+	heir = {
+		name = "Dun"
+		monarch_name = "Guangzong"
+		dynasty = "Zhao"
+		birth_date = 1147.9.30
+		death_date = 1200.9.17
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+1163.11.16 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Shenfu"
+		dynasty = "Xia"
+		birth_date = 1136.1.1
+		death_date = 1167.12.14
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1176.9.12 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Chengsu"
+		dynasty = "Xie"
+		birth_date = 1135.1.1
+		death_date = 1207.6.13
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	} 
+}
+
+1189.2.18 = {
+	monarch = {
+		name = "Dun" #Guangzong
+		dynasty = "Zhao"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Fengniang"
+		dynasty = "Li"
+		birth_date = 1144.1.1
+		death_date = 1200.7.16
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kuo"
+		monarch_name = "Ningzong"
+		dynasty = "Zhao"
+		birth_date = 1168.11.19
+		death_date = 1224.9.17
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+1194.7.24 = {
+	monarch = {
+		name = "Kuo" #Ningzong
+		dynasty = "Zhao"
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Gongshu"
+		dynasty = "Han"
+		birth_date = 1165.1.1
+		death_date = 1200.12.14
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1202.12.29 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Gongsheng"
+		dynasty = "Yang"
+		birth_date = 1162.6.30
+		death_date = 1233.1.18
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1205.1.26 = {
+	heir = {
+		name = "Yun"
+		monarch_name = "Lizong"
+		dynasty = "Zhao"
+		birth_date = 1205.1.26
+		death_date = 1264.11.16
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1224.9.17 = {
+	monarch = {
+		name = "Yun" #Lizong
+		dynasty = "Zhao"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SNG
+		name = "Daoqing"
+		dynasty = "Xie"
+		birth_date = 1210.1.1
+		death_date = 1283.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1240.5.2 = {
+	heir = {
+		name = "Qi"
+		monarch_name = "Duzong"
+		dynasty = "Zhao"
+		birth_date = 1240.5.2
+		death_date = 1274.8.12
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1264.11.16 = {
+	monarch = {
+		name = "Qi" #Duzong
+		dynasty = "Zhao"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1267.2.10 = {
+	queen = {
+		country_of_origin = SNG
+		name = "Jiu"
+		dynasty = "Quan"
+		birth_date = 1241.1.1
+		death_date = 1309.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1271.11.2 = {
+	heir = {
+		name = "Xian"
+		monarch_name = "Gong"
+		dynasty = "Zhao"
+		birth_date = 1271.11.2
+		death_date = 1323.5.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1274.8.12 = {
+	monarch = {
+		name = "Xian" #Gong
+		dynasty = "Zhao"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1275.1.1 = { leader = {	name = "Wen Tianxiang"     	type = general	fire = 2	shock = 3	manuever = 2	siege = 0  death_date = 1283.1.9 } }
+
+1276.3.1 = { capital = 2150 }
+
+1276.6.14 = {
+	monarch = {
+		name = "Shi" #Duanzong
+		dynasty = "Zhao"
+		birth_date = 1269.7.10
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1278.3.1 = { capital = 668 } #Aishan
+
+1278.5.10 = {
+	monarch = {
+		name = "Bing"
+		dynasty = "Zhao"
+		birth_date = 1272.2.12
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}

@@ -1,0 +1,634 @@
+government = tribal
+add_government_reform = steppe_horde
+religion = tengri_pagan_reformed
+technology_group = eastern_nomad_group
+primary_culture = khitan
+culture_group_union = mongolic
+capital = 2115
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Yuwen clan
+
+260.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Mohuai"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+293.1.1 = {
+	monarch = {
+		name = "Puhui"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+295.1.1 = {
+	monarch = {
+		name = "Qiubuqin"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+299.1.1 = {
+	monarch = {
+		name = "Mogui"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+302.1.1 = {
+	monarch = {
+		name = "Xunniyan"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+307.1.1 = { government_rank = 2 }
+
+310.1.1 = {
+	monarch = {
+		name = "Qidegui"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+333.1.1 = {
+	monarch = {
+		name = "Yidougui"
+		dynasty = "Yuwen"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+345.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# Dahe clan
+
+619.1.1 = {
+	monarch = {
+		name = "Duoluo"
+		dynasty = "Dahe"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+619.1.1 = {
+	heir = {
+		name = "Mahui"
+		monarch_name = "Mahui"
+		dynasty = "Dahe"
+		birth_date = 588.1.1
+		death_date = 649.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+628.1.1 = {
+	monarch = {
+		name = "Mahui"
+		dynasty = "Dahe"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+628.1.1 = {
+	heir = {
+		name = "Kuge"
+		monarch_name = "Kuge"
+		dynasty = "Dahe"
+		birth_date = 590.1.1
+		death_date = 656.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+649.1.1 = {
+	monarch = {
+		name = "Kuge"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+649.1.1 = {
+	heir = {
+		name = "E-bugu"
+		monarch_name = "E-bugu"
+		dynasty = "Dahe"
+		birth_date = 620.1.1
+		death_date = 660.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+656.1.1 = {
+	monarch = {
+		name = "E-bugu"
+		dynasty = "Dahe"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+656.1.1 = {
+	heir = {
+		name = "Jinzhong"
+		monarch_name = "Jinzhong"
+		dynasty = "Li"
+		birth_date = 630.1.1
+		death_date = 696.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+660.1.1 = {
+	monarch = {
+		name = "Jinzhong"
+		dynasty = "Li"
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Li Jinzhong"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 696.1.1 } # Not an actual death date
+	}
+}
+
+660.1.1 = {
+	heir = {
+		name = "Wanrong"
+		monarch_name = "Wanrong"
+		dynasty = "Sun"
+		birth_date = 640.1.1
+		death_date = 697.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+695.5.1 = { government_rank = 3 }
+
+696.1.1 = {
+	monarch = {
+		name = "Wanrong"
+		dynasty = "Sun"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+696.1.1 = {
+	heir = {
+		name = "Shihuo"
+		monarch_name = "Shihuo"
+		dynasty = "Li"
+		birth_date = 640.1.1
+		death_date = 718.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+697.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Shihuo"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+697.1.1 = {
+	heir = {
+		name = "Suogu"
+		monarch_name = "Suogu"
+		dynasty = "Li"
+		birth_date = 650.1.1
+		death_date = 720.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+718.1.1 = {
+	monarch = {
+		name = "Suogu"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+718.1.1 = {
+	heir = {
+		name = "Yugan"
+		monarch_name = "Yugan"
+		dynasty = "Li"
+		birth_date = 660.1.1
+		death_date = 723.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+720.1.1 = {
+	monarch = {
+		name = "Yugan"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+720.1.1 = {
+	heir = {
+		name = "Duogan"
+		monarch_name = "Duogan"
+		dynasty = "Li"
+		birth_date = 670.1.1
+		death_date = 725.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+723.1.1 = {
+	monarch = {
+		name = "Duogan"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+723.1.1 = {
+	heir = {
+		name = "Shaogu"
+		monarch_name = "Shaogu"
+		dynasty = "Li"
+		birth_date = 675.1.1
+		death_date = 730.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+725.1.1 = {
+	monarch = {
+		name = "Shaogu"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+725.1.1 = {
+	heir = {
+		name = "Qulie"
+		monarch_name = "Qulie"
+		dynasty = "Li"
+		birth_date = 680.1.1
+		death_date = 734.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+730.1.1 = {
+	monarch = {
+		name = "Qulie"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+734.1.1 = {
+	monarch = {
+		name = "Guozhe"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+735.1.1 = {
+	monarch = {
+		name = "Huaixiu"
+		dynasty = "Li"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+735.1.1 = {
+	heir = {
+		name = "Kailuo"
+		monarch_name = "Kailuo"
+		dynasty = "Yaonian"
+		birth_date = 720.1.1
+		death_date = 755.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Yaonian clan
+
+746.1.1 = {
+	monarch = {
+		name = "Kailuo"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+746.1.1 = {
+	heir = {
+		name = "Su"
+		monarch_name = "Su"
+		dynasty = "Yaonian"
+		birth_date = 730.1.1
+		death_date = 800.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+755.1.1 = {
+	monarch = {
+		name = "Su"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+790.1.1 = {
+	heir = {
+		name = "Xianzhi"
+		monarch_name = "Xianzhi"
+		dynasty = "Yaonian"
+		birth_date = 790.1.1
+		death_date = 830.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+800.1.1 = {
+	monarch = {
+		name = "Xianzhi"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+810.1.1 = {
+	heir = {
+		name = "Zhaogu"
+		monarch_name = "Zhaogu"
+		dynasty = "Yaonian"
+		birth_date = 810.1.1
+		death_date = 840.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+830.1.1 = {
+	monarch = {
+		name = "Zhaogu"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+830.1.1 = {
+	heir = {
+		name = "Quxu"
+		monarch_name = "Quxu"
+		dynasty = "Yaonian"
+		birth_date = 815.1.1
+		death_date = 860.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+840.1.1 = {
+	monarch = {
+		name = "Quxu"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+840.1.1 = {
+	heir = {
+		name = "Xierzhi"
+		monarch_name = "Xierzhi"
+		dynasty = "Yaonian"
+		birth_date = 830.1.1
+		death_date = 880.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+860.1.1 = {
+	monarch = {
+		name = "Xierzhi"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+860.1.1 = {
+	heir = {
+		name = "Qinde"
+		monarch_name = "Qinde"
+		dynasty = "Yaonian"
+		birth_date = 850.1.1
+		death_date = 907.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+880.1.1 = {
+	monarch = {
+		name = "Qinde"
+		dynasty = "Yaonian"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Yelu clan
+
+907.1.1 = {
+	government_rank = 3
+	monarch = {
+		name = "Abaoji" #Taizu
+		dynasty = "Yelu"
+		birth_date = 872.1.1
+		adm = 4
+		dip = 4
+		mil = 6
+		leader = {	name = "Yelu Abaoji"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 2  death_date = 927.12.11 }
+	}
+	queen = {
+		country_of_origin = KHT
+		name = "Ping"
+		dynasty = "Shulu"
+		birth_date = 879.10.19
+		death_date = 953.8.1
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	name = "Shulu Ping"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 947.5.16 } # Exiled
+	}
+	heir = {
+		name = "Deguang"
+		monarch_name = "Taizong"
+		dynasty = "Yelu"
+		birth_date = 902.12.25
+		death_date = 947.5.16
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+# Elevation to Liao
+
+916.1.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	technology_group = chinese
+	add_accepted_culture = chihan
+	add_accepted_culture = jin
+	add_accepted_culture = manchu
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

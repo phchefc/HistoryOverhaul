@@ -1,0 +1,117 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = hubei
+capital = 696
+
+# End of the Western Han dynasty (Ji)
+
+23.10.5 = {
+	monarch = {
+		name = "Lang"
+		dynasty = "Wang"
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Ji)
+
+189.9.28 = {
+	capital = 2137
+	monarch = {
+		name = "Shao"
+		dynasty = "Yuan"
+		birth_date = 160.1.1
+		adm = 2
+		dip = 1
+		mil = 4
+		leader = {	name = "Yuan Shao"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 202.8.1 }
+	}
+	heir = {
+		name = "Tan"
+		monarch_name = "Tan"
+		dynasty = "Yuan"
+		birth_date = 185.1.1
+		death_date = 205.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+191.1.1 = { historical_rival = WEI }
+
+192.1.1 = {
+	queen = {
+		country_of_origin = JI0
+		dynasty = "Liu"
+		birth_date = 170.1.1
+		death_date = 220.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+200.1.1 = { leader = {	name = "Yan Liang"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 200.5.1 } } # Not an actual death date
+
+202.1.1 = {
+	monarch = {
+		name = "Tan"
+		dynasty = "Yuan"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+204.1.1 = { capital = 704 }
+
+# Coup
+
+205.1.1 = {
+	monarch = {
+		name = "Shang"
+		dynasty = "Yuan"
+		birth_date = 180.1.1
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Jin dynasty (Hejian)
+
+291.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Yong" # Prince of Hejian
+		dynasty = "Sima"
+		birth_date = 260.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+		leader = {	name = "Sima Yong"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 307.1.1 } # Not an actual death date
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

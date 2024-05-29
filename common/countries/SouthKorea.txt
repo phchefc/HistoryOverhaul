@@ -1,0 +1,100 @@
+#Country name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 0  52  120 }
+
+historical_idea_groups = {
+	early_adm_ideas
+	early_mil_ideas
+	early_religious_ideas
+	early_trade_ideas
+	defensive_ideas
+	offensive_ideas
+	administrative_ideas
+	economic_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	spy_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Hyeon #0" = 40
+	"Minjun #0" = 40
+	"Hyeonwoo #0" = 40
+	"Donghyeon #0" = 20
+	"Junhyeok #1" = 20
+	"Minjae #0" = 20
+	"Dohyeon #0" = 20
+	"Jihun #0" = 20
+	"Junyeong #0" = 20
+	"Hyeonjun #0" = 20
+	"Seungmin #0" = 20	
+	"Syng-man #0" = 20
+	"Bo-seon #0" = 20
+	"Chung-hee #0" = 20
+	"Kyu-hah #0" = 20
+	"Doo-hwan #1" = 20
+	"Tae-woo #0" = 20
+	"Young-sam #0" = 20
+	"Dae-jung #1" = 20
+	"Moo-hyun #0" = 10
+	"Myung-bak #0" = 10
+	"Jae-in #0" = 10
+	"Hyeyoung #0" = -5
+	"Seoyeon #0" = -5
+	"Seoyun #0" = -5
+	"Jiwoo #0" = -5
+	"Seohyeon #0" = -5
+	"Minseo #0" = -5
+	"Yunseo #0" = -5
+	"Chaewon #0" = -5
+	"Hayun #0" = -5
+	"Jia #0" = -5
+	"Eunseo #0" = -5
+	"Geunhye #0" = -5
+}
+
+leader_names = {
+	Kim Yi Pak Choe Jeong Gang Jo Yun Jang Im Han O Seo Shin 
+	Gwon Hwang An Song Jeon Hong Yu Go Mun Yang Son Bae Baek Heo 
+	Nam Shim Noh Ha Gwak Seong Cha Ju U Gu Min Jin Na Ji
+}
+
+ship_names = {
+	Baekdu Baekje 
+	Changbai
+	Duman Daedeok Dongmyeongseong
+	Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon"
+	Jirisan Jeongjong
+	Kumgangsan
+	Nakdong
+	Sincheon Silla Sobaek
+	Taebaek Taejo 
+	Hanseong Haemosu Habaek Hwaeomsa
+	Worak
+	Yuhwa Yeong 
+	"Jeong Do-jeon" "Yi Seong-gye"
+}
+
+army_names = {
+	"ROK Army"
+}
+
+fleet_names = {
+	"ROK Navy" "ROK Marine Corps"
+}
+
+# EH version

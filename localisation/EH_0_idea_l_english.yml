@@ -1,0 +1,152 @@
+﻿l_english:
+ #### Chinese ideas ####
+ JN2_ideas:0 "Jin Ideas"
+ JN2_ideas_start:0 "Jin Traditions"
+ JN2_ideas_bonus:0 "Jin Ambitions"
+ ROC_ideas:0 "Chinese Nationalist Ideas"
+ ROC_ideas_start:0 "Chinese Nationalist Traditions"
+ ROC_ideas_bonus:0 "Chinese Nationalist Ambitions"
+ three_principles_of_the_people:0 "Three Principles of the People"
+ three_principles_of_the_people_desc:0 "The Three Principles of the People is a political philosophy developed by Sun Yat-sen. The three principles are often translated into and summarized as nationalism, democracy, and the livelihood of the people."
+ kuomintang:0 "Kuomintang"
+ kuomintang_desc:0 "Kuomintang is a major political party in the Republic of China. The guiding ideology is the Three Principles of the People, advocated by Sun Yat-sen."
+ sun_yat_sen:0 "Sun Yat-sen"
+ sun_yat_sen_desc:0 "Sun Yat-sen was a Chinese physician, writer, philosopher, calligrapher and revolutionary, the first president and founding father of the Republic of China. As the foremost pioneer and first leader of a Republican China, Sun is referred to as the "Father of the Nation" in the FRM and the "forerunner of democratic revolution" in the CHN."
+ chiang_kai_shek:0 "Chiang Kai-shek"
+ chiang_kai_shek_desc:0 "Chiang Kai-shek was a political and military leader who served as the leader of the Republic of China between 1928 and 1975. Chiang was socially conservative, promoting traditional Chinese culture in the New Life Movement and rejecting both western democracy and Sun's nationalist democratic socialism in favour of an authoritarian government."
+ retreat_to_taiwan:0 "Retreat to Taiwan"
+ retreat_to_taiwan_desc:0 "Chiang and the Kuomintang forces were forced to flee mainland China by the Communists near the end of the Chinese Civil War. The KMT-led national government that fled to Taiwan declared Taipei to be the provisional capital of a continuing Republic of China."
+ taiwan_miracle:0 "Taiwan Miracle"
+ taiwan_miracle_desc:0 "We experiences rapid industrialization and economic growth of Taiwan during the latter half of the twentieth century." 
+ taiwan_independence:0 "Taiwan independence"
+ taiwan_independence_desc:0 "The Taiwan independence movement is a political movement to make Taiwan an independent state."
+ 
+ #### Japanese ideas ####
+ JP2_ideas:0 "Japanese Ideas"
+ JP2_ideas_start:0 "Japanese Traditions"
+ JP2_ideas_bonus:0 "Japanese Ambitions"
+
+ #### Korean ideas ####
+ NKR_ideas:0 "North Korean Ideas"
+ NKR_ideas_start:0 "North Korean Traditions"
+ NKR_ideas_bonus:0 "North Korean Ambitions"
+ SKR_ideas:0 "South Korean Ideas"
+ SKR_ideas_start:0 "South Korean Traditions"
+ SKR_ideas_bonus:0 "South Korean Ambitions"
+ miracle_on_the_han_river:0 "Miracle on the Han River"
+ miracle_on_the_han_river_desc:0 "Miracle on the Han River refers to the period of rapid economic growth in South Korea."
+ export_led_growth_korea:0 "Export-led Growth"
+ export_led_growth_korea_desc:0 "Through the model of export-led industrialization, the South Korean government incentivized corporations to develop new technology and upgrade productive efficiency in order to compete in the highly-competitive, global market."
+ korean_democracy_movements:0 "Democracy Movements"
+ korean_democracy_movements_desc:0 "There are numerous protests against authoritarian regimes and fight for the South Korean democracy."
+ high_tech_industries_korea:0 "High-tech Industries"
+ high_tech_industries_korea_desc:0 "In 1990, South Korean manufacturers planned a significant shift in future production plans toward high-technology industries. South Korea relies largely upon exports to fuel the growth of its economy, with finished products such as electronics, textiles, ships, automobiles, and steel being some of its most important exports."
+ korean_wave:0 "Korean Wave"
+ korean_wave_desc:0 "Since the turn of the 21st century, South Korea has emerged as a major exporter of popular culture and tourism, aspects which have become a significant part of its burgeoning economy."
+ internet_korea:0 "Internet"
+ internet_korea_desc:0 "We are the world leader in Internet connectivity, having the world's fastest average internet connection speed. About 92.4% of the population are Internet users, this shows how the nation has a substantial relationship with their digital space." 
+ unified_korea:0 "Unified Korea"
+ unified_korea_desc:0 "There is only one legitimate Korean nation, but in order to keep Korea truly unified, we must defeat those who hold up false ideologies."
+ 
+ #### World's ideas ####
+ AHU_ideas:0 "Austro-Hungarian Ideas"
+ AHU_ideas_start:0 "Austro-Hungarian Traditions"
+ AHU_ideas_bonus:0 "Austro-Hungarian Ambitions"
+ 
+ AM2_ideas:0 "Armenian Ideas"
+ AM2_ideas_start:0 "Armenian Traditions"
+ AM2_ideas_bonus:0 "Armenian Ambitions"
+ 
+ BG2_ideas:0 "Bulgarian Ideas"
+ BG2_ideas_start:0 "Bulgarian Traditions"
+ BG2_ideas_bonus:0 "Bulgarian Ambitions"
+ 
+ BR2_ideas:0 "Brazilian Ideas"
+ BR2_ideas_start:0 "Brazilian Traditions"
+ BR2_ideas_bonus:0 "Brazilian Ambitions"
+ 
+ BJ2_ideas:0 "Beninese Ideas"
+ BJ2_ideas_start:0 "Beninese Traditions"
+ BJ2_ideas_bonus:0 "Beninese Ambitions"
+ 
+ CY2_ideas:0 "Cypriot Ideas"
+ CY2_ideas_start:0 "Cypriot Traditions"
+ CY2_ideas_bonus:0 "Cypriot Ambitions"
+ 
+ DE2_ideas:0 "German Ideas"
+ DE2_ideas_start:0 "German Traditions"
+ DE2_ideas_bonus:0 "German Ambitions"
+ 
+ DEF_ideas:0 "Nazi Ideas"
+ DEF_ideas_start:0 "Nazi Traditions"
+ DEF_ideas_bonus:0 "Nazi Ambitions"
+ 
+ EE2_ideas:0 "Estonian Ideas"
+ EE2_ideas_start:0 "Estonian Traditions"
+ EE2_ideas_bonus:0 "Estonian Ambitions"
+ 
+ EG2_ideas:0 "Egyptian Ideas"
+ EG2_ideas_start:0 "Egyptian Traditions"
+ EG2_ideas_bonus:0 "Egyptian Ambitions"
+ 
+ ES2_ideas:0 "Spanish Ideas"
+ ES2_ideas_start:0 "Spanish Traditions"
+ ES2_ideas_bonus:0 "Spanish Ambitions"
+ 
+ ET2_ideas:0 "Ethiopian Ideas"
+ ET2_ideas_start:0 "Ethiopian Traditions"
+ ET2_ideas_bonus:0 "Ethiopian Ambitions"
+ 
+ HU2_ideas:0 "Hungarian Ideas"
+ HU2_ideas_start:0 "Hungarian Traditions"
+ HU2_ideas_bonus:0 "Hungarian Ambitions"
+ 
+ IE2_ideas:0 "Irish Ideas"
+ IE2_ideas_start:0 "Irish Traditions"
+ IE2_ideas_bonus:0 "Irish Ambitions"
+ 
+ IS2_ideas:0 "Icelandic Ideas"
+ IS2_ideas_start:0 "Icelandic Traditions"
+ IS2_ideas_bonus:0 "Icelandic Ambitions"
+ 
+ IT2_ideas:0 "Italian Ideas"
+ IT2_ideas_start:0 "Italian Traditions"
+ IT2_ideas_bonus:0 "Italian Ambitions"
+ 
+ IQ2_ideas:0 "Iraqi Ideas"
+ IQ2_ideas_start:0 "Iraqi Traditions"
+ IQ2_ideas_bonus:0 "Iraqi Ambitions"
+ 
+ LU2_ideas:0 "Luxembourg Ideas"
+ LU2_ideas_start:0 "Luxembourg Traditions"
+ LU2_ideas_bonus:0 "Luxembourg Ambitions"
+ 
+ LT2_ideas:0 "Lithuanian Ideas"
+ LT2_ideas_start:0 "Lithuanian Traditions"
+ LT2_ideas_bonus:0 "Lithuanian Ambitions"
+ 
+ OM2_ideas:0 "Omani Ideas"
+ OM2_ideas_start:0 "Omani Traditions"
+ OM2_ideas_bonus:0 "Omani Ambitions"
+ 
+ RS2_ideas:0 "Serbian Ideas"
+ RS2_ideas_start:0 "Serbian Traditions"
+ RS2_ideas_bonus:0 "Serbian Ambitions"
+ 
+ SY2_ideas:0 "Syrian Ideas"
+ SY2_ideas_start:0 "Syrian Traditions"
+ SY2_ideas_bonus:0 "Syrian Ambitions"
+ 
+ PO2_ideas:0 "Polish Ideas"
+ PO2_ideas_start:0 "Polish Traditions"
+ PO2_ideas_bonus:0 "Polish Ambitions"
+ 
+ PT2_ideas:0 "Portuguese Ideas"
+ PT2_ideas_start:0 "Portuguese Traditions"
+ PT2_ideas_bonus:0 "Portuguese Ambitions"
+ 
+ ZA2_ideas:0 "South African Ideas"
+ ZA2_ideas_start:0 "South African Traditions"
+ ZA2_ideas_bonus:0 "South African Ambitions"
+ 
+ # EH version

@@ -1,0 +1,283 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xiang
+capital = 2172 # Jiangling
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# End of the Eastern Jin dynasty (Chu)
+
+289.1.1 = {
+	government_rank = 2
+	capital = 4211
+	monarch = {
+		name = "Wei" # Prince of Chu
+		dynasty = "Sima"
+		birth_date = 271.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+		leader = {	name = "Sima Wei"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 291.1.1 } # Not an actual death date
+	}
+}
+
+# End of the Eastern Jin dynasty (Huan Chu)
+
+403.12.20 = {
+	government_rank = 3
+	primary_culture = wu
+	monarch = {
+		name = "Xuan"
+		dynasty = "Huan"
+		birth_date = 369.1.1
+		death_date = 404.6.19
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+404.6.19 = {
+	monarch = {
+		name = "Qian"
+		dynasty = "Huan"
+		birth_date = 385.1.1
+		death_date = 404.6.25
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# End of the Sui dynasty (Lin Chu)
+
+617.1.22 = {
+	primary_culture = xiang
+	capital = 683
+	monarch = {
+		name = "Shihong"
+		dynasty = "Lin"
+		birth_date = 580.1.1
+		death_date = 622.1.1
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Ma Chu
+
+896.1.1 = {
+	government_rank = 1
+	capital = 671 # Changsha
+	monarch = {
+		name = "Yin" #Wumu
+		dynasty = "Ma"
+		birth_date = 853.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	name = "Ma Yin"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 0  death_date = 930.12.19 }
+	}
+}
+
+899.1.1 = {
+	heir = {
+		name = "Xisheng"
+		monarch_name = "Xisheng"
+		dynasty = "Ma"
+		birth_date = 899.1.1
+		death_date = 932.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+907.6.8 = { government_rank = 2 }
+
+930.12.19 = {
+	monarch = {
+		name = "Xisheng"
+		dynasty = "Ma"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = CHC
+		dynasty = "Yang"
+		birth_date = 900.1.1
+		death_date = 960.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Xifan"
+		monarch_name = "Wenzhao"
+		dynasty = "Ma"
+		birth_date = 899.1.1
+		death_date = 947.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+932.9.14 = {
+	monarch = {
+		name = "Xifan" #Wenzhao
+		dynasty = "Ma"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CHC
+		dynasty = "Peng"
+		birth_date = 900.1.1
+		death_date = 938.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Xiguang"
+		monarch_name = "Xiguang"
+		dynasty = "Ma"
+		birth_date = 910.1.1
+		death_date = 950.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+947.6.2 = {
+	monarch = {
+		name = "Xiguang"
+		dynasty = "Ma"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+# Coup
+
+951.1.24 = {
+	monarch = {
+		name = "Xi'e" #Gongxiao
+		dynasty = "Ma"
+		birth_date = 920.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CHC
+		dynasty = "Yuan"
+		birth_date = 920.1.1
+		death_date = 949.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	} 
+}
+
+# Coup
+
+951.10.22 = {
+	monarch = {
+		name = "Xichong" 
+		dynasty = "Ma"
+		birth_date = 912.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# End of the Tang dynasty (Wuping)
+
+951.11.16 = {
+	government_rank = 1
+	capital = 672
+	monarch = {
+		name = "Yan" 
+		dynasty = "Liu"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+953.1.1 = {
+	monarch = {
+		name = "Kui"
+		dynasty = "Wang"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+956.1.1 = {
+	monarch = {
+		name = "Xingfeng"
+		dynasty = "Zhou"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+962.9.1 = {
+	monarch = {
+		name = "Baoquan"
+		dynasty = "Zhou"
+		birth_date = 952.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+# End of the Song dynasty (Zhang Chu)
+
+1127.3.7 = {
+	government_rank = 3
+	primary_culture = zhongyuan
+	capital = 688
+	monarch = {
+		name = "Bangchang" 
+		dynasty = "Zhang"
+		birth_date = 1081.1.1
+		adm = 3
+		dip = 4
+		mil = 0
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

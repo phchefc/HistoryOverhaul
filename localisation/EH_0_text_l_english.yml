@@ -1,0 +1,54 @@
+﻿l_english:
+ #### Event modifiers #### 
+ great_power:0 "Great power"
+ desc_great_power:0 "A developed country s a sovereign state that has a high quality of life, developed economy and advanced technological infrastructure relative to other less industrialized nations."
+ major_power:0 "Major power"
+ desc_major_power:0 "Several empires in human history have been contenders for the largest of all time, depending on definition and mode of measurement. Possible ways of measuring size include area, population, economy, and power."
+ minor_power:0 "Minor power"
+ desc_minor_power:0 "A number of polities have declared independence and sought diplomatic recognition from the international community as sovereign states, but have not been universally recognised as such. These entities often have de facto control of their territory."
+ uncivilized_nation:0 "Uncivilized nations"
+ desc_uncivilized_nation:0 "Uncivilized nations are nations that have not modernized."
+
+ historical_mandate:0 "Mandate of Heaven"
+ desc_historical_mandate:0 "The Mandate of Heaven is a Chinese political and religious teaching used since ancient times to justify the rule of the King or Emperor of China. It was used throughout the history of China to legitimize the successful overthrow and installation of new emperors, including by non-Han Chinese monarchs such as the Qing."
+ warlordism:0 "Warlordism"
+ desc_warlordism:0 "Although warlords were present historically in either pre-modern states or "weak state" societies, and in countries designated "fragile states" or "failed states" in modern times."
+ nomadic_dynasty:0 "Conquest dynasty"
+ desc_nomadic_dynasty:0 "A conquest dynasty in the history of imperial China refers to a dynasty established by non-Han peoples that ruled parts or all of the China proper, most notably the Mongol-founded Yuan dynasty and the Manchu-founded Qing dynasty."
+ 
+ eh_city_developments_2:0 "City developments"
+ desc_eh_city_developments_2:0 "This event adjust the city developments for historic orders."
+ eh_city_developments_1700:0 "City developments"
+ desc_eh_city_developments_1700:0 "This event adjust the city developments for historic orders."
+ eh_city_developments_1900:0 "City developments"
+ desc_eh_city_developments_1900:0 "This event adjust the city developments for historic orders."
+ eh_city_developments_1980:0 "City developments"
+ desc_eh_city_developments_1980:0 "This event adjust the city developments for historic orders."
+ 
+ #### Factions ####
+ korea_seoin:0 "Seoin"
+ korea_seoin_faction_desc:0 "Seoin Faction is a new faction that went into politics after King Seonjo's reign. They who come from local influential scholar families, was often invited to the court by kings" intention to control Hungu Faction. They have strong enthusiasm to actualize Confucian society."
+ korea_dongin:0 "Dongin"
+ korea_dongin_faction_desc:0 "Dongin Faction is a new faction that went into politics after King Seonjo's reign. They who come from local influential scholar families, was often invited to the court by kings" intention to control Hungu Faction. They have strong enthusiasm to actualize Confucian society."
+ seoin_tradition:0 "Seoin's Tradition"
+ desc_seoin_tradition:0 "Seoin Faction is richer, stronger, and more time-honored than Dongin Faction."
+ korea_seoin_influence:0 "Seoin Tradition"
+ korea_seoin_influence_desc:0 "Seoin Faction is richer, stronger, and more time-honored than Dongin Faction."
+ dongin_tradition:0 "Dongin's Tradition"
+ desc_dongin_tradition:0 "Dongin Faction is moral, innovative, and more youthful than Seoin Faction."
+ korea_dongin_influence:0 "Dongin Tradition"
+ korea_dongin_influence_desc:0 "Dongin Faction is richer, stronger, and more youthful than Seoin Faction."
+ 
+ #### Subjects ####
+ sphere_member:0 "Sphere"
+ sphere_member_title:0 "Sphere"
+ sphere_member_title_plural:0 "Spheres"
+ sphere_member_is_our:0 "$NAME|Y$ is part of our Sphere of Influence."
+ sphere_member_long_desc:0 "Spheres are sovereign nations influenced by and under the protection of a Great Power."
+ autonomous_state:0 "Autonomous State"
+ autonomous_state_title:0 "Autonomous State"
+ autonomous_state_title_plural:0 "Autonomous States"
+ autonomous_state_is_our:0 "$NAME|Y$ is an autonomous region of our country."
+ autonomous_state_long_desc:0 "A de-facto independent nation that lacks recognition in the wider world."
+
+ # EH version

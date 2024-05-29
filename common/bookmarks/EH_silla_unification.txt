@@ -1,0 +1,15 @@
+
+bookmark =
+{
+	name = "SILLA_UNIFICATION_NAME"
+	desc = "SILLA_UNIFICATION_DESC"
+	date = 660.7.1
+	
+	country = SLL
+	country = TNG
+	country = GOG
+	country = BKJ
+	country = YAM
+}
+
+# EH version

@@ -1,0 +1,267 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+religion = confucianism
+primary_culture = chihan
+capital = 726
+
+# End of the Western Han dynasty (You)
+
+23.10.5 = {
+	add_accepted_culture = buyeo
+	capital = 1845
+	monarch = {
+		name = "Diao"
+		dynasty = "Wang"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Ping)
+
+189.9.28 = {
+	capital = 726
+	monarch = {
+		name = "Du"
+		dynasty = "Gongsun"
+		birth_date = 150.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+		leader = {	name = "Gongsun Du"     	type = general	fire = 1	shock = 1	manuever = 3	siege = 0  death_date = 204.1.1 } # Not an actual death date
+	}
+}
+
+189.9.28 = {
+	heir = {
+		name = "Kang"
+		monarch_name = "Kang"
+		dynasty = "Gongsun"
+		birth_date = 170.1.1
+		death_date = 215.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+204.1.1 = {
+	monarch = {
+		name = "Kang"
+		dynasty = "Gongsun"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+204.1.1 = {
+	heir = {
+		name = "Gong"
+		monarch_name = "Gong"
+		dynasty = "Gongsun"
+		birth_date = 175.1.1
+		death_date = 230.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+215.1.1 = {
+	monarch = {
+		name = "Gong"
+		dynasty = "Gongsun"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+215.1.1 = {
+	heir = {
+		name = "Yuan"
+		monarch_name = "Yuan"
+		dynasty = "Gongsun"
+		birth_date = 195.1.1
+		death_date = 238.9.1
+		claim = 95
+		adm = 2
+		dip = 0
+		mil = 2
+	}
+}
+
+228.1.1 = {
+	monarch = {
+		name = "Yuan"
+		dynasty = "Gongsun"
+		adm = 2
+		dip = 0
+		mil = 2
+		leader = {	name = "Gongsun Yuan"     	type = general	fire = 1	shock = 1	manuever = 0	siege = 0  death_date = 238.1.1 }
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+238.9.29 = { remove_accepted_culture = buyeo }
+
+# Elevation to Yan
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Eastern Liao
+
+1213.1.1 = {
+	government_rank = 3
+	religion = tengri_pagan_reformed
+	secondary_religion = mahayana
+	primary_culture = khitan
+	monarch = {
+		name = "Liuge" #Yuantong
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1220.1.1 = {
+	monarch = {
+		name = "Yaoli"
+		dynasty = "Yelu"
+		adm = 2
+		dip = 2
+		mil = 1
+		female = yes
+	}
+}
+
+1226.1.1 = {
+	monarch = {
+		name = "Xuedu"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1238.1.1 = {
+	monarch = {
+		name = "Shouguonu"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1259.1.1 = {
+	monarch = {
+		name = "Gunai"
+		dynasty = "Yelu"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Yuan dynasty (Shen)
+
+1308.7.30 = {
+	government_rank = 2
+	religion = confucianism
+	primary_culture = mongol
+	add_accepted_culture = korean
+	monarch = {
+		name = "Jang"
+		dynasty = "Wang"
+		birth_date = 1275.10.20
+		culture = korean
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+	queen = {
+		country_of_origin = YUA
+		name = "Budashiri"
+		dynasty = "Borjigin"
+		birth_date = 1285.1.1
+		death_date = 1315.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1316.3.1 = {
+	monarch = {
+		name = "Oljeyitu"
+		dynasty = "Wang"
+		birth_date = 1280.1.1
+		culture = korean
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1345.7.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1354.1.1 = {
+	monarch = {
+		name = "Toghtua Bukha"
+		dynasty = "Wang"
+		birth_date = 1320.1.1
+		culture = korean
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+# End of the Yuan dynasty (Liaoyang)
+
+1362.1.1 = {
+	government_rank = 1
+	religion = tengri_pagan_reformed
+	secondary_religion = mahayana
+	primary_culture = mongol
+	add_accepted_culture = manchu
+	remove_accepted_culture = korean
+	capital = 730
+	monarch = {
+		name = "Naghachu"
+		dynasty = "Jalaid"
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}

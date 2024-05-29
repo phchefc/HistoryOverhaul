@@ -1,0 +1,144 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = cantonese
+add_accepted_culture = zhuang
+capital = 667 # Guangzhou
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+896.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Yin" #Liezu
+		dynasty = "Liu"
+		birth_date = 874.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+		leader = {	name = "Liu Yin"     	type = general	fire = 2	shock = 2	manuever = 1	siege = 1  death_date = 911.4.4 }
+	}
+	queen = {
+		country_of_origin = HNX
+		dynasty = "Yan"
+		birth_date = 880.1.1
+		death_date = 940.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yan"
+		monarch_name = "Yan"
+		dynasty = "Liu"
+		birth_date = 889.1.1
+		death_date = 942.6.10
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+909.1.1 = { government_rank = 2 }
+
+911.4.4 = {
+	monarch = {
+		name = "Yan" #Gaozu
+		dynasty = "Liu"
+		birth_date = 889.1.1
+		adm = 5
+		dip = 4
+		mil = 3
+		leader = {	name = "Liu Yan"     	type = general	fire = 3	shock = 2	manuever = 0	siege = 0  death_date = 942.6.10 }
+	}
+	queen = {
+		country_of_origin = HNX
+		dynasty = "Ma"
+		birth_date = 890.1.1
+		death_date = 935.1.22
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+917.9.5 = { government_rank = 3 }
+
+920.1.1 = {
+	heir = {
+		name = "Bin"
+		monarch_name = "Bin"
+		dynasty = "Liu"
+		birth_date = 920.1.1
+		death_date = 943.4.15
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+942.6.10 = {
+	monarch = {
+		name = "Bin"
+		dynasty = "Liu"
+		birth_date = 920.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+# Coup
+
+943.4.15 = {
+	monarch = {
+		name = "Sheng"
+		dynasty = "Liu"
+		birth_date = 920.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+943.4.15 = {
+	heir = {
+		name = "Chang"
+		monarch_name = "Chang"
+		dynasty = "Liu"
+		birth_date = 942.1.1
+		death_date = 980.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+958.9.18 = {
+	monarch = {
+		name = "Chang"
+		dynasty = "Liu"
+		birth_date = 942.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

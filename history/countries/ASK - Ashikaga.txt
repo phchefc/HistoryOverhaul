@@ -1,0 +1,724 @@
+government = monarchy
+add_government_reform = daimyo
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = KMK
+capital = 4191
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1150.1.1 = {
+	monarch = {
+		name = "Yoshiyasu"
+		dynasty = "Ashikaga"
+		birth_date = 1127.1.1
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = FUJ
+		dynasty = "Fujiwara"
+		birth_date = 1130.1.1
+		death_date = 1190.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1154.1.1 = {
+	heir = {
+		name = "Yoshikane"
+		monarch_name = "Yoshikane"
+		dynasty = "Ashikaga"
+		birth_date = 1154.1.1
+		death_date = 1199.4.5
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+
+1157.7.7 = {
+	monarch = {
+		name = "Yoshikane"
+		dynasty = "Ashikaga"
+		birth_date = 1154.1.1
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+
+1189.1.1 = {
+	queen = {
+		country_of_origin = HJO
+		name = "Tokiko"
+		dynasty = "Hojo"
+		birth_date = 1155.1.1
+		death_date = 1200.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshiuji"
+		monarch_name = "Yoshiuji"
+		dynasty = "Ashikaga"
+		birth_date = 1189.1.1
+		death_date = 1255.1.1
+		claim = 95
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}
+
+1199.4.5 = {
+	monarch = {
+		name = "Yoshiuji"
+		dynasty = "Ashikaga"
+		birth_date = 1189.1.1
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}
+
+1216.1.1 = {
+	heir = {
+		name = "Yasuuji"
+		monarch_name = "Yasuuji"
+		dynasty = "Ashikaga"
+		birth_date = 1216.1.1
+		death_date = 1270.5.31
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1247.3.2 = {
+	monarch = {
+		name = "Yasuuji"
+		dynasty = "Ashikaga"
+		birth_date = 1216.1.1
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1247.3.2 = {
+	heir = {
+		name = "Yoriuji"
+		monarch_name = "Yoriuji"
+		dynasty = "Ashikaga"
+		birth_date = 1240.1.1
+		death_date = 1262.5.13
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 3
+	}
+}
+
+1251.12.2 = {
+	monarch = {
+		name = "Yoriuji"
+		dynasty = "Ashikaga"
+		birth_date = 1240.1.1
+		adm = 4
+		dip = 1
+		mil = 3
+	}
+}
+
+1260.1.1 = {
+	heir = {
+		name = "Ietoki"
+		monarch_name = "Ietoki"
+		dynasty = "Ashikaga"
+		birth_date = 1260.1.1
+		death_date = 1284.8.7
+		claim = 95
+		adm = 1
+		dip = 4
+		mil = 4
+	}
+}
+
+1262.5.13 = {
+	monarch = {
+		name = "Ietoki"
+		dynasty = "Ashikaga"
+		birth_date = 1260.1.1
+		adm = 1
+		dip = 4
+		mil = 4
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1273.1.1 = {
+	heir = {
+		name = "Sadauji"
+		monarch_name = "Sadauji"
+		dynasty = "Ashikaga"
+		birth_date = 1273.1.1
+		death_date = 1331.10.7
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1284.8.7 = {
+	monarch = {
+		name = "Sadauji"
+		dynasty = "Ashikaga"
+		birth_date = 1273.1.1
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+	queen = {
+		country_of_origin = UES
+		name = "Kiyoko"
+		dynasty = "Uesugi"
+		birth_date = 1270.1.1
+		death_date = 1343.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1325.1.1 = {
+	monarch = {
+		name = "Takauji"
+		dynasty = "Ashikaga"
+#		birth_date = 1305.8.18
+#		death_date = 1358.5.7
+		adm = 4
+		dip = 5
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = charismatic_negotiator_personality
+	add_ruler_personality = inspiring_leader_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Toshi"
+		dynasty = "Akahashi"
+		birth_date = 1306.1.1
+		death_date = 1365.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1330.7.4 = {
+	heir = {
+		name = "Yoshiakira"
+		monarch_name = "Yoshiakira"
+		dynasty = "Ashikaga"
+		birth_date = 1330.7.4
+		death_date = 1367.12.18
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1338.2.23 = { 
+	government = monarchy
+	add_government_reform = shogunate
+	capital = 1020
+	historical_rival = YAM
+}
+
+#1338.2.23 = {
+#	add_country_flag = marionett_master
+#}
+
+1358.5.7 = {
+	monarch = {
+		name = "Yoshiakira"
+		dynasty = "Ashikaga"
+#		birth_date = 1330.7.4
+#		death_date = 1367.12.18
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1358.9.25 = {
+	queen = {
+		country_of_origin = ASK
+		name = "Yoshiko"
+		dynasty = "Kino"
+		birth_date = 1336.1.1
+		death_date = 1413.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshimitsu"
+		monarch_name = "Yoshimitsu"
+		dynasty = "Ashikaga"
+		birth_date = 1358.9.25
+		death_date = 1408.5.31
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1367.12.18 = {
+	monarch = {
+		name = "Yoshimitsu"
+		dynasty = "Ashikaga"
+#		birth_date = 1358.9.25
+#		death_date = 1408.5.31
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = silver_tongue_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Nariko"
+		dynasty = "Hino"
+		birth_date = 1358.1.1
+		death_date = 1399.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1386.3.12 = {
+	queen = {
+		country_of_origin = ASK
+		name = "Yoshiko"
+		dynasty = "Fujiwara"
+		birth_date = 1358.1.1
+		death_date = 1399.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshimochi"
+		monarch_name = "Yoshimochi"
+		dynasty = "Ashikaga"
+		birth_date = 1386.3.12
+		death_date = 1428.2.3
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1392.8.11 = { remove_historical_rival = YAM }
+
+1408.5.31 = {
+	monarch = {
+		name = "Yoshimochi"
+		dynasty = "Ashikaga"
+#		birth_date = 1386.3.12
+#		death_date = 1428.2.3
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Eiko"
+		dynasty = "Hino"
+		birth_date = 1390.1.1
+		death_date = 1431.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshikazu"
+		monarch_name = "Yoshikazu"
+		dynasty = "Ashikaga"
+		birth_date = 1407.8.27
+		death_date = 1425.3.17
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1425.3.17 = {
+	monarch = {
+		name = "Yoshikazu"
+		dynasty = "Ashikaga"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Yoshinori"
+		monarch_name = "Yoshinori"
+		dynasty = "Ashikaga"
+		birth_date = 1394.6.14
+		death_date = 1441.7.12
+		claim = 60
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1428.2.3 = {
+	monarch = {
+		name = "Yoshinori"
+		dynasty = "Ashikaga"
+#		birth_date = 1394.6.14
+#		death_date = 1441.7.12
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = cruel_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Shigeko"
+		dynasty = "Hino"
+		birth_date = 1411.1.1
+		death_date = 1463.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1434.3.19 = {
+	heir = {
+		name = "Yoshikatsu"
+		monarch_name = "Yoshikatsu"
+		dynasty = "Ashikaga"
+		birth_date = 1434.3.19
+		death_date = 1443.8.16
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1441.7.12 = {
+	monarch = {
+		name = "Yoshikatsu"
+		dynasty = "Ashikaga"
+#		birth_date = 1434.3.19
+#		death_date = 1443.8.16
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+}
+
+1443.8.16 = {
+	monarch = {
+		name = "Yoshimasa"
+		dynasty = "Ashikaga"
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = obsessive_perfectionist_personality
+}
+
+1455.1.1 = {
+	queen = {
+		country_of_origin = ASK
+		name = "Shigeko"
+		dynasty = "Hino"
+		birth_date = 1440.1.1
+		death_date = 1496.6.30
+		female = yes
+		adm = 0
+		dip = 4
+		mil = 3
+	}
+}
+
+1464.1.1 = {
+	heir = {
+		name = "Yoshimi"
+		monarch_name = "Yoshimi"
+		dynasty = "Ashikaga"
+		birth_date = 1439.3.3
+		death_date = 1491.2.15
+		claim = 80
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1465.12.11 = {
+	heir = {
+		name = "Yoshihisa"
+		monarch_name = "Yoshihisa"
+		dynasty = "Ashikaga"
+		birth_date = 1465.12.11
+		death_date = 1489.4.26
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1473.1.1 = {
+	monarch = {
+		name = "Yoshihisa"
+		dynasty = "Ashikaga"
+#		birth_date = 1465.12.11
+#		death_date = 1489.4.26
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = drunkard_personality
+	queen = {
+		country_of_origin = ASK
+		dynasty = "Hino"
+		birth_date = 1470.1.1
+		death_date = 1530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1490.1.1 = {
+	monarch = {
+		name = "Yoshitane" #Yoshitane 1st reign
+		dynasty = "Ashikaga"
+#		birth_date = 1466.9.9
+#		death_date = 1523.5.23
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	queen = {
+		country_of_origin = HSK
+		name = "Seiyun'in"
+		dynasty = "Hosokawa"
+		birth_date = 1470.1.1
+		death_date = 1530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+#1493.2.1 = {
+#	clr_country_flag = marionett_master
+#}
+	
+1495.1.23 = {
+	monarch = {
+		name = "Yoshizumi"
+		dynasty = "Ashikaga"
+#		birth_date = 1481.1.15
+#		death_date = 1511.9.6
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = craven_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Akiko"
+		dynasty = "Hino"
+		birth_date = 1485.1.1
+		death_date = 1540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1508.7.1 = {
+	monarch = {
+		name = "Yoshitane"  #Yoshitane 2nd reign
+		dynasty = "Ashikaga"
+#		birth_date = 1466.9.9
+#		death_date = 1523.5.23
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	queen = {
+		country_of_origin = HSK
+		name = "Seiyun'in"
+		dynasty = "Hosokawa"
+		birth_date = 1470.1.1
+		death_date = 1530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1521.12.25 = {
+	monarch = {
+		name = "Yoshiharu"
+		dynasty = "Ashikaga"
+#		birth_date = 1511.4.2
+#		death_date = 1550.5.20
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = charismatic_negotiator_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Keijuin"
+		dynasty = "Konoe"
+		birth_date = 1515.1.1
+		death_date = 1565.6.17
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1536.3.31 = {
+	heir = {
+		name = "Yoshiteru"
+		monarch_name = "Yoshiteru"
+		dynasty = "Ashikaga"
+		birth_date = 1536.3.31
+		death_date = 1565.6.17
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+1546.12.1 = {
+	monarch = {
+		name = "Yoshiteru"
+		dynasty = "Ashikaga"
+#		birth_date = 1536.3.31
+#		death_date = 1565.6.17
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = martial_educator_personality
+	queen = {
+		country_of_origin = ASK
+		dynasty = "Konoe"
+		birth_date = 1540.1.1
+		death_date = 1565.6.17
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1565.6.17 = {
+	monarch = {
+		name = "Yoshihide"
+		dynasty = "Ashikaga"
+#		birth_date = 1538.1.1
+#		death_date = 1568.10.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = malevolent_personality
+	queen = {
+		country_of_origin = ASK
+		name = "Yukino"
+		dynasty = "Tsubone"
+		birth_date = 1540.1.1
+		death_date = 1570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1568.9.1 = {
+	monarch = {
+		name = "Yoshiaki"
+		dynasty = "Ashikaga"
+#		birth_date = 1537.12.5
+#		death_date = 1597.10.19
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = silver_tongue_personality
+}
+
+# EH version

@@ -1,0 +1,50 @@
+government = monarchy
+add_government_reform = chinese_warlord
+religion = tengri_pagan_reformed
+secondary_religion = mahayana
+primary_culture = khitan
+add_accepted_culture = manchu
+technology_group = early_chinese
+historical_friend = LIO
+capital = 2107
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+926.1.14 = {
+	government_rank = 1
+	monarch = {
+		name = "Bei"
+		dynasty = "Yelu"
+		birth_date = 899.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+926.4.4 = { government_rank = 2 }
+928.1.1 = { capital = 726 }
+
+930.1.1 = {
+	monarch = {
+		name = "Danshun"
+		dynasty = "Xiao"
+		birth_date = 900.1.1
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

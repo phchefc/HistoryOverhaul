@@ -1,0 +1,456 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = TKD
+historical_friend = KMK
+capital = 4193 # Oshima
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1000.1.1 = {
+	set_country_flag = daimyo
+}
+	
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1590.8.10 = {
+	monarch = {
+		name = "Yoshihiro"
+		dynasty = "Matsumae"
+		birth_date = 1548.10.4
+		death_date = 1616.11.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		dynasty = "Murakami"
+		birth_date = 1550.1.1
+		death_date = 1610.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1598.1.1 = {
+	heir = {
+		name = "Kinhiro"
+		monarch_name = "Kinhiro"
+		dynasty = "Matsumae"
+		birth_date = 1598.1.1
+		death_date = 1641.8.14
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1616.11.20 = {
+	monarch = {
+		name = "Kinhiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1622.1.1 = {
+	heir = {
+		name = "Ujihiro"
+		monarch_name = "Ujihiro"
+		dynasty = "Matsumae"
+		birth_date = 1622.1.1
+		death_date = 1648.10.11
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1641.8.14 = {
+	monarch = {
+		name = "Ujihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1643.1.1 = {
+	heir = {
+		name = "Takahiro"
+		monarch_name = "Takahiro"
+		dynasty = "Matsumae"
+		birth_date = 1643.1.1
+		death_date = 1665.8.15
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1648.10.11 = {
+	monarch = {
+		name = "Takahiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		dynasty = "Kakizaki"
+		birth_date = 1625.1.1
+		death_date = 1685.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1660.1.6 = {
+	heir = {
+		name = "Norihiro"
+		monarch_name = "Norihiro"
+		dynasty = "Matsumae"
+		birth_date = 1660.1.6
+		death_date = 1721.1.18
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1665.8.15 = {
+	monarch = {
+		name = "Norihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		dynasty = "Karahashi"
+		birth_date = 1660.1.1
+		death_date = 1720.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1705.1.1 = {
+	heir = {
+		name = "Kunihiro"
+		monarch_name = "Kunihiro"
+		dynasty = "Matsumae"
+		birth_date = 1705.1.1
+		death_date = 1743.5.31
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1721.1.18 = {
+	monarch = {
+		name = "Kunihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		name = "Fusako"
+		dynasty = "Takano"
+		birth_date = 1710.1.1
+		death_date = 1770.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1726.10.24 = {
+	heir = {
+		name = "Sukehiro"
+		monarch_name = "Sukehiro"
+		dynasty = "Matsumae"
+		birth_date = 1726.10.24
+		death_date = 1765.5.8
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1743.5.31 = {
+	monarch = {
+		name = "Sukehiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		name = "Benko"
+		dynasty = "Hachijo"
+		birth_date = 1730.1.1
+		death_date = 1790.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1754.2.8 = {
+	heir = {
+		name = "Michihiro"
+		monarch_name = "Michihiro"
+		dynasty = "Matsumae"
+		birth_date = 1754.2.8
+		death_date = 1832.7.17
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1765.5.8 = {
+	monarch = {
+		name = "Michihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		name = "Tomoko"
+		dynasty = "Kazan'in"
+		birth_date = 1760.1.1
+		death_date = 1820.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1775.8.25 = {
+	heir = {
+		name = "Akihiro"
+		monarch_name = "Akihiro"
+		dynasty = "Matsumae"
+		birth_date = 1775.8.25
+		death_date = 1833.9.8
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1792.10.28 = {
+	monarch = {
+		name = "Akihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		dynasty = "Kasahara"
+		birth_date = 1780.1.1
+		death_date = 1840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1823.7.1 = {
+	heir = {
+		name = "Yoshihiro"
+		monarch_name = "Yoshihiro"
+		dynasty = "Matsumae"
+		birth_date = 1823.7.1
+		death_date = 1839.10.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1833.9.8 = {
+	monarch = {
+		name = "Yoshihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Ogasawara"
+		birth_date = 1825.1.1
+		death_date = 1885.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Masahiro"
+		monarch_name = "Masahiro"
+		dynasty = "Matsumae"
+		birth_date = 1825.10.9
+		death_date = 1853.9.10
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1839.10.1 = {
+	monarch = {
+		name = "Masahiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		name = "Namiko"
+		dynasty = "Honda"
+		birth_date = 1830.1.1
+		death_date = 1890.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Takahiro"
+		monarch_name = "Takahiro"
+		dynasty = "Matsumae"
+		birth_date = 1829.12.10
+		death_date = 1866.6.9
+		claim = 95
+		adm = 4
+		dip = 5
+		mil = 2
+	}
+}
+
+1849.6.9 = {
+	monarch = {
+		name = "Takahiro"
+		dynasty = "Matsumae"
+		adm = 4
+		dip = 5
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		name = "Yukiko"
+		dynasty = "Soma"
+		birth_date = 1830.1.1
+		death_date = 1890.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Norihiro"
+		monarch_name = "Norihiro"
+		dynasty = "Matsumae"
+		birth_date = 1844.5.1
+		death_date = 1869.1.11
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1866.6.9 = {
+	monarch = {
+		name = "Norihiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MTS
+		name = "Hisako"
+		dynasty = "Naito"
+		birth_date = 1845.1.1
+		death_date = 1905.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagahiro"
+		monarch_name = "Nagahiro"
+		dynasty = "Matsumae"
+		birth_date = 1865.11.2
+		death_date = 1905.3.26
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1868.10.1 = {
+	monarch = {
+		name = "Nagahiro"
+		dynasty = "Matsumae"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

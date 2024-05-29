@@ -1,0 +1,41 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = miao
+religion = animism
+technology_group = early_chinese
+capital = 673
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+214.1.1 = {
+	monarch = {
+		name = "Shamoke"
+		birth_date = 190.1.1
+		death_date = 222.9.1
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}
+
+222.10.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

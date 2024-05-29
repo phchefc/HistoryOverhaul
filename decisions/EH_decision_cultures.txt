@@ -1,0 +1,1796 @@
+########################################################################
+# Cultures
+########################################################################
+
+country_decisions = {
+
+	french_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = FRK
+				tag = FRW
+				tag = AUT
+				tag = NEU
+				tag = FRA
+				tag = FR2
+				tag = BUR
+				tag = PRO
+				tag = BRI
+			}
+			is_year = 500
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 172
+				owns_core_province = 183
+				owns_core_province = 192
+				owns_core_province = 201
+			}
+		}
+		effect = {
+			add_prestige = 10
+			ile_de_france_area = { change_culture = cosmopolitan_french }
+			orleans_area = { change_culture = cosmopolitan_french }
+			loire_area = { change_culture = cosmopolitan_french }
+			champagne_area = { change_culture = cosmopolitan_french }
+			lorraine_area = { change_culture = cosmopolitan_french }
+			poitou_area = { change_culture = cosmopolitan_french }
+			picardy_area = { change_culture = cosmopolitan_french }
+			wallonia_area = { change_culture = wallonian }
+			bourgogne_area = { change_culture = burgundian }
+			west_burgundy_area = { change_culture = burgundian }
+			brittany_area = { change_culture = breton }
+			normandy_area = { change_culture = normand }
+			guyenne_area = { change_culture = occitain }
+			provence_area = { change_culture = occitain }
+			languedoc_area = { change_culture = occitain }
+			massif_central_area = { change_culture = occitain }
+			savoy_dauphine_area = { change_culture = arpitan }
+			pyrenees_area = { change_culture = gascon }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	english_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = ENG
+				tag = GBR
+				tag = WSX
+			}
+			is_year = 950
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 236
+		}
+		effect = {
+			add_prestige = 10
+			east_midlands_area = { change_culture = english }
+			west_midlands_area = { change_culture = english }
+			yorkshire_area = { change_culture = english }
+			wessex_area = { change_culture = english }
+			home_counties_area = { change_culture = english }
+			east_anglia_area = { change_culture = english }
+			246 = { change_culture = english }
+			247 = { change_culture = english }
+			4361 = { change_culture = scottish }
+			4362 = { change_culture = scottish }
+			lowlands_area = { change_culture = scottish }
+			highlands_area = { change_culture = highland_scottish }
+			kingdom_of_the_isles_area = { change_culture = highland_scottish }
+			wales_area = { change_culture = welsh }
+			munster_area = { change_culture = irish }
+			connacht_area = { change_culture = irish }
+			leinster_area = { change_culture = irish }
+			ulster_area = { change_culture = irish }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	german_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = FRK
+				tag = FRE
+				tag = AUT
+				tag = NEU
+				tag = BRA
+				tag = PRU
+				tag = GER
+				tag = WGE
+				tag = EGE
+				tag = DE2
+				tag = DEF
+				tag = HAB
+				tag = AHU
+				tag = BAV
+				tag = SAX
+				tag = SWI
+				tag = BUR
+				tag = HOL
+				tag = NED
+			}
+			is_year = 500
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 44
+				owns_core_province = 50
+				owns_core_province = 61
+				owns_core_province = 65
+				owns_core_province = 97
+				owns_core_province = 134
+				owns_core_province = 165
+				owns_core_province = 1758
+				owns_core_province = 1876
+				owns_core_province = 1878
+			}
+		}
+		effect = {
+			add_prestige = 10
+			set_country_flag = formed_hsa_flag
+			south_saxony_area = { change_culture = saxon }
+			thuringia_area = { change_culture = saxon }
+			neumark_area = {
+				limit = {
+					NOT = { owned_by = PO2 }
+				}
+				change_culture = prussian
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { owned_by = PO2 }
+				}
+				change_culture = pommeranian
+			}
+			northern_saxony_area = { change_culture = prussian }
+			mittelmark_area = { change_culture = prussian }
+			mecklenburg_area = { change_culture = pommeranian }
+			hinter_pommern_area = { change_culture = pommeranian }
+			westphalia_area = { change_culture = hannoverian }
+			north_westphalia_area = { change_culture = hannoverian }
+			hesse_area = { change_culture = hessian }
+			north_rhine_area = { change_culture = hessian }
+			lower_rhineland_area = { change_culture = hessian }
+			palatinate_area = { change_culture = hessian }
+			lower_saxony_area = { change_culture = lower_saxon }
+			weser_area = { change_culture = lower_saxon }
+			holstein_area = { change_culture = lower_saxon }
+			braunschweig_area = { change_culture = lower_saxon }
+			lower_bavaria_area = { change_culture = bavarian }
+			upper_bavaria_area = { change_culture = bavarian }
+			upper_swabia_area = { change_culture = bavarian }
+			franconia_area = { change_culture = franconian }
+			upper_franconia_area = { change_culture = franconian }
+			upper_rhineland_area = { change_culture = swabian }
+			lower_swabia_area = { change_culture = swabian }
+			alsace_area = { change_culture = swabian }
+			frisia_area = { change_culture = frisian }
+			holland_area = { change_culture = dutch }
+			north_brabant_area = { change_culture = dutch }
+			brabant_area = { change_culture = flemish }
+			flanders_area = { change_culture = flemish }
+			tirol_area = { change_culture = austrian }
+			austria_proper_area = { change_culture = austrian }
+			inner_austria_area = { change_culture = austrian }
+			east_bavaria_area = { change_culture = austrian }
+			switzerland_area = { change_culture = swiss }
+			romandie_area = { change_culture = swiss }
+			bohemia_area = { change_culture = czech }
+			moravia_area = { change_culture = czech }
+			erzgebirge_area = { change_culture = czech }
+			carinthia_area = { change_culture = slovene }
+			lusatia_area = {
+				limit = {
+					NOT = { owned_by = PO2 }
+				}
+				change_culture = schlesian 
+			}
+			silesia_area = {
+				limit = {
+					NOT = { owned_by = PO2 }
+				}
+				change_culture = schlesian 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	italian_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = ITA
+				tag = IT2
+				tag = ITF
+				tag = PAP
+				tag = BYZ
+				tag = LAN
+				tag = TUS
+				tag = MLO
+				tag = SAV
+				tag = SPI
+				tag = VEN
+				tag = GEN
+				tag = NAP
+				tag = HAB
+				tag = AHU
+			}
+			is_year = 500
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 101
+				owns_core_province = 103
+				owns_core_province = 112
+				owns_core_province = 116
+				owns_core_province = 118
+				owns_core_province = 121
+				owns_core_province = 151
+			}
+		}
+		effect = {
+			add_prestige = 10
+			central_italy_area = { change_culture = umbrian }
+			lazio_area = { change_culture = umbrian }
+			emilia_romagna_area = { change_culture = romagnan }
+			venetia_area = { change_culture = venetian }
+			lombardy_area = { change_culture = lombard }
+			po_valley_area = { change_culture = lombard }
+			piedmont_area = { change_culture = piedmontese }
+			tuscany_area = { change_culture = tuscan }
+			liguria_area = { change_culture = ligurian }
+			corsica_sardinia_area = { change_culture = sardinian }
+			sicily_area = { change_culture = sicilian }
+			western_sicily_area = { change_culture = sicilian }
+			naples_area = { change_culture = neapolitan }
+			calabria_area = { change_culture = neapolitan }
+			apulia_area = { change_culture = neapolitan }
+		}
+	}
+	
+	spanish_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = CAS
+				tag = ARA
+				tag = A10
+				tag = CAT
+				tag = SPA
+				tag = POR
+				tag = ASU
+				tag = LON
+				tag = GVI
+				tag = UMA
+				tag = CRD
+				tag = GRA
+				tag = MOR
+			}
+			is_year = 700
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 206
+				owns_core_province = 213
+				owns_core_province = 215
+				owns_core_province = 223
+				owns_core_province = 224
+				owns_core_province = 227
+			}
+		}
+		effect = {
+			add_prestige = 10
+			aragon_area = { change_culture = aragonese }
+			catalonia_area = { change_culture = catalan }
+			valencia_area = { change_culture = catalan }
+			baleares_area = { change_culture = catalan }		
+			castille_area = { change_culture = castillian }
+			toledo_area = { change_culture = castillian }
+			asturias_area = { change_culture = castillian }
+			leon_area = { change_culture = leonese }
+			extremadura_area = { change_culture = leonese }
+			basque_country = { change_culture = basque }
+			lower_andalucia_area = { change_culture = andalucian }
+			upper_andalucia_area = { change_culture = andalucian }
+			galicia_area = { change_culture = galician }
+			alentejo_area = { change_culture = portugese }
+			beieras_area = { change_culture = portugese }
+		}
+	}
+	
+	russian_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = VYA
+				tag = KIE
+				tag = NOV
+				tag = VLA
+				tag = MOS
+				tag = RUS
+				tag = SOV
+				tag = UKR
+			}
+			is_year = 800
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 33
+				owns_core_province = 295
+				owns_core_province = 280
+				owns_core_province = 307
+			}
+		}
+		effect = {
+			add_prestige = 10
+			moscow_area = { change_culture = russian }
+			suzdal_area = { change_culture = russian }
+			smolensk_area = { change_culture = russian }
+			pomor_area = { change_culture = novgorodian }
+			ryazan_area = { change_culture = russian }
+			tambov_area = { change_culture = russian }
+			tver_area = { change_culture = russian }
+			yaroslavl_area = { change_culture = russian }
+			vladimir_area = { change_culture = russian }
+			oka_area = { change_culture = russian }
+			sloboda_ukraine_area = { change_culture = russian }
+			novgorod_area = { change_culture = novgorodian }
+			pskov_area = { change_culture = novgorodian }
+			beloozero_area = { change_culture = novgorodian }
+			north_karelia = { change_culture = novgorodian }
+			arkhangelsk_area = { change_culture = novgorodian }
+			vologda_area = { change_culture = novgorodian }
+			karelia_area = { change_culture = novgorodian }
+			west_dniepr_area = { change_culture = ruthenian }
+			east_dniepr_area = { change_culture = ruthenian }
+			podolia_volhynia_area = { change_culture = ruthenian }
+			volhynia_area = { change_culture = ruthenian }
+			chernigov_area = { change_culture = ruthenian }
+			zaporizhia_area = { change_culture = ruthenian }
+			yedisan_area = { change_culture = ruthenian }
+			white_ruthenia_area = { change_culture = byelorussian }
+			pripyat_area = { change_culture = byelorussian }
+			minsk_area = { change_culture = byelorussian }
+		}
+	}
+	
+	expulsion_of_germans = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = SOV
+				tag = POL
+				tag = WGE
+				tag = EGE
+			}
+			is_year = 1945
+			NOT = { is_year = 1950 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 43
+			owns_core_province = 257
+		}
+		effect = {
+			add_prestige = 10
+			poland_region = {
+				limit = {
+					NOT = { area = red_ruthenia_area }
+				}
+				change_culture = polish
+			}
+			hinter_pommern_area = { change_culture = polish }
+			neumark_area = { change_culture = polish }
+			west_prussia_area = { change_culture = polish }
+			3098 = { change_culture = polish }
+			3099 = { change_culture = polish }
+			red_ruthenia_area = { change_culture = ruthenian }
+			podolia_volhynia_area = { change_culture = ruthenian }
+			west_dniepr_area = { change_culture = ruthenian }
+			pripyat_area = { change_culture = byelorussian }
+			podlasie_area = { change_culture = byelorussian }
+			277 = { change_culture = byelorussian }
+			1937 = { change_culture = byelorussian }
+			4536 = { change_culture = byelorussian }
+			770 = { change_culture = byelorussian }
+			41 = { change_culture = russian }
+			767 = { change_culture = russian }
+		}
+	}
+	
+	european_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = BYZ
+				tag = FRK
+				tag = AUT
+				tag = NEU
+				tag = FRD
+				tag = FRE
+				tag = FRW
+				tag = FRA
+				tag = ENG
+				tag = GBR
+				tag = FR2
+				tag = BRA
+				tag = PRU
+				tag = GER
+				tag = WGE
+				tag = DE2
+				tag = HAB
+				tag = AHU
+				tag = SWI
+				tag = NED
+				tag = BEL
+				tag = ITA
+				tag = IT2
+				tag = CAS
+				tag = SPA
+				tag = DAN
+				tag = SWE
+				tag = NOR
+				tag = NO2
+				tag = FIN
+				tag = FI2
+				tag = RUS
+				tag = SOV
+				tag = UKR
+				tag = POL
+				tag = PO2
+				tag = HUN
+				tag = HU2
+				tag = BUL
+				tag = BG2
+				tag = MVA
+				tag = BOH
+				tag = CZS
+				tag = CZE
+				tag = GRE
+				tag = GR2
+			}
+			is_year = 500
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 1
+				owns_core_province = 12
+				owns_core_province = 17
+				owns_core_province = 28
+				owns_core_province = 50
+				owns_core_province = 134
+				owns_core_province = 146
+				owns_core_province = 151
+				owns_core_province = 153
+				owns_core_province = 257
+				owns_core_province = 266
+				owns_core_province = 295
+				owns_core_province = 1765
+				owns_core_province = 1878
+			}
+		}
+		effect = {
+			add_prestige = 10
+			estonia_ingria_area = { change_culture = estonian }
+			lithuania_area = { change_culture = lithuanian }
+			samogitia_area = { change_culture = lithuanian }
+			livonia_area = { change_culture = latvian }
+			curonia_area = { change_culture = latvian }
+			west_prussia_area = { change_culture = prussian }
+			east_prussia_area = { change_culture = prussian }
+			wielkopolska_area = { change_culture = polish }
+			malopolska_area = { change_culture = polish }
+			red_ruthenia_area = { change_culture = polish }
+			mazovia_area = { change_culture = polish }
+			central_poland_area = { change_culture = polish }
+			sandomierz_area = { change_culture = polish }
+			kuyavia_area = { change_culture = polish }
+			croatia_area = { change_culture = croatian }
+			slavonia_area = { change_culture = croatian }
+			east_adriatic_coast_area = { change_culture = croatian }
+			bosnia_area = { change_culture = bosnian }
+			serbia_area = { change_culture = serbian }
+			rascia_area = { change_culture = serbian }
+			vojvodina_area = { change_culture = serbian }
+			bulgaria_area = { change_culture = bulgarian }
+			silistria_area = { change_culture = bulgarian }
+			albania_area = { change_culture = albanian }
+			northern_greece_area = { change_culture = greek }
+			morea_area = { change_culture = greek }
+			aegean_archipelago_area = { change_culture = greek }
+			central_greece_area = { change_culture = greek }
+			macedonia_area = { change_culture = greek }
+			transdanubia_area = { change_culture = hungarian }
+			alfold_area = { change_culture = hungarian }
+			slovakia_area = { change_culture = slovak }
+			transylvania_area = { change_culture = romanian }
+			southern_transylvania_area = { change_culture = romanian }
+			wallachia_area = { change_culture = romanian }
+			moldavia_area = { change_culture = romanian }
+			bessarabia_area = { change_culture = romanian }
+			svealand_area = { change_culture = swedish }
+			norrland_area = { change_culture = swedish }
+			gotaland_area = { change_culture = swedish }
+			skaneland_area = { change_culture = swedish }
+			vastra_gotaland_area = { change_culture = swedish }
+			ostra_svealand_area = { change_culture = swedish }
+			jutland_area = { change_culture = danish }
+			denmark_area = { change_culture = danish }
+			northern_norway = { change_culture = norwegian }
+			eastern_norway = { change_culture = norwegian }
+			western_norway = { change_culture = norwegian }
+			finland_area = { change_culture = finnish }
+			bothnia_area = { change_culture = finnish }
+			subarctic_islands_area = { change_culture = norwegian }
+			iceland_area = { change_culture = icelandic }
+			laponia_area = { change_culture = sapmi }
+			3001 = { change_culture = macedonian }
+			4780 = { change_culture = macedonian }
+		}
+	}
+	
+	siberian_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = RUS
+				tag = SOV
+				tag = KZH
+				tag = KZK
+				tag = BUK
+				tag = UZB
+			}
+			is_year = 1850
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 33
+			owns_core_province = 295
+		}
+		effect = {
+			add_prestige = 10
+			ural_area = { change_culture = russian }
+			perm_area = { change_culture = russian }
+			kazan_area = { change_culture = russian }
+			galich_area = { change_culture = russian }
+			saratov_area = { change_culture = russian }
+			bashkiria_area = { change_culture = russian }
+			samara_area = { change_culture = russian }
+			crimea_area = { change_culture = russian }
+			lower_don_area = { change_culture = russian }
+			astrakhan_area = { change_culture = russian }
+			dagestan_area = { change_culture = dagestani }
+			azov_area = { change_culture = russian }
+			central_siberia_area = { change_culture = siberian }
+			yrtesh_area = { change_culture = russian }
+			ob_area = { change_culture = russian }
+			irkutsk_area = { change_culture = russian }
+			aqmola_area = { change_culture = khazak }
+			ishim_area = { change_culture = khazak }
+			nogai_area = { change_culture = khazak }
+			kazakhstan_area = { change_culture = khazak }
+			balchasj_area = { change_culture = khazak }
+			lower_yik_area = { change_culture = khazak }
+			syr_darya_area = { change_culture = khazak }
+			north_zungaria = { change_culture = khazak }
+			merv_area = { change_culture = turkmeni }
+			transoxiana_area = { change_culture = uzbehk }
+			khiva_area = { change_culture = uzbehk }
+			buryatia_area = { change_culture = russian }
+			tannu_uriankhai_area = { change_culture = tuvan }
+			east_heilongjiang_area = { change_culture = russian }
+			ilan_hala_area = { change_culture = russian }
+			central_ilin_hala_area = { change_culture = russian }
+			central_jilin_area = { change_culture = russian }
+			furdan_area = { change_culture = russian }
+			1064 = { change_culture = russian }
+			2432 = { change_culture = russian }
+			2417 = { change_culture = oirats }
+		}
+	}
+	
+	arabic_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = QUR
+				tag = RSD
+				tag = UMA
+				tag = ABA
+				tag = EGY
+				tag = EGP
+				tag = EG2
+				tag = FAT
+				tag = MAM
+				tag = NAJ
+				tag = SAU
+				tag = TUR
+				tag = TKY
+				tag = SEL
+				tag = ERS
+				tag = PER
+				tag = IRA
+				tag = KHW
+				tag = ILK
+				tag = JAL
+				tag = TIM
+				tag = MOR
+				tag = ALG
+				tag = TUN
+			}
+			is_year = 600
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 151
+				owns_core_province = 337
+				owns_core_province = 341
+				owns_core_province = 358
+				owns_core_province = 361
+				owns_core_province = 382
+				owns_core_province = 385
+				owns_core_province = 410
+				owns_core_province = 429
+				owns_core_province = 454
+				owns_core_province = 2469
+			}
+		}
+		effect = {
+			add_prestige = 10
+			syria_area = { change_culture = al_suryah_arabic }
+			al_jazira_area = {
+				limit = {
+					AND = {	
+						NOT = { province_id = 411 }
+						NOT = { province_id = 2309 }
+					}
+				}
+				change_culture = al_suryah_arabic
+			}
+			iraq_arabi_area = { change_culture = al_iraqiya_arabic }
+			basra_area = { change_culture = al_iraqiya_arabic }
+			aleppo_area = { change_culture = al_suryah_arabic }
+			palestine_area = { change_culture = palestinian }
+			trans_jordan_area = { change_culture = palestinian }
+			north_kurdistan_area = { change_culture = kurdish }
+			shahrizor_area = { change_culture = kurdish }
+			bahrain_area = { change_culture = gulf_arabic }
+			pirate_coast_area = { change_culture = gulf_arabic }
+			oman_area = { change_culture = omani_culture }
+			mascat_area = { change_culture = omani_culture }
+			gulf_of_arabia_area = { change_culture = al_misr_arabic }
+			delta_area = { change_culture = al_misr_arabic }
+			bahari_area = { change_culture = al_misr_arabic }
+			vostani_area = { change_culture = al_misr_arabic }
+			tunisia_area = { change_culture = tunisian }
+			djerba_area = { change_culture = tunisian }
+			tripolitania_area = { change_culture = tunisian }
+			kabylia_area = { change_culture = algerian }
+			algiers_area = { change_culture = algerian }
+			hautes_plaines_area = { change_culture = algerian }
+			barbary_coast_area = { change_culture = algerian }
+			northern_morocco_area = { change_culture = moroccan }
+			western_morocco_area = { change_culture = moroccan }
+			tafilalt_area = { change_culture = moroccan }
+			marrekesh_area = { change_culture = moroccan }
+			fez_area = { change_culture = moroccan }
+			sindh_area = { change_culture = sindhi }
+			northern_sindh_area = { change_culture = sindhi }
+			multan_area = { change_culture = panjabi }
+			kalat_area = { change_culture = panjabi }
+			makran_area = { change_culture = baluchi }
+			406 = { change_culture = al_iraqiya_arabic }
+			411 = { change_culture = kurdish }
+			4293 = { change_culture = kurdish }
+			2519 = { change_culture = al_misr_arabic }
+			4323 = { change_culture = al_misr_arabic }
+			2547 = { change_culture = al_suryah_arabic }
+		}
+	}
+	
+	turkish_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = TUR
+				tag = TKY
+				tag = SEL
+				tag = KHW
+				tag = MGE
+				tag = PER
+				tag = IRA
+				tag = WHH
+				tag = GLH
+				tag = GOL
+				tag = ILK
+				tag = JAL
+				tag = CHG
+				tag = TIM
+				tag = UIG
+				tag = XIY
+				tag = ZUN
+				tag = CUM
+				tag = RUM
+				tag = KKH
+				tag = KKT
+				tag = KZH
+				tag = KZK
+				tag = SHY
+				tag = BUK
+				tag = UZB
+				tag = KHI
+				tag = TRK
+				tag = RUS
+				tag = SOV
+			}
+			is_year = 1000
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 151
+				owns_core_province = 302
+				owns_core_province = 316
+				owns_core_province = 326
+				owns_core_province = 429
+				owns_core_province = 441
+				owns_core_province = 442
+				owns_core_province = 454
+				owns_core_province = 461
+				owns_core_province = 466
+				owns_core_province = 476
+				owns_core_province = 4207
+			}
+		}
+		effect = {
+			add_prestige = 10
+			karaman_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			rum_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			kastamonu_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			erzurum_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			dulkadir_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			cukurova_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			ankara_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			germiyan_area = {
+				limit = { 
+					NOT = { owned_by = BYZ }
+				}
+				change_culture = turkish
+			}
+			aqmola_area = { change_culture = khazak }
+			ishim_area = { change_culture = khazak }
+			nogai_area = { change_culture = khazak }
+			kazakhstan_area = { change_culture = khazak }
+			balchasj_area = { change_culture = khazak }
+			lower_yik_area = { change_culture = khazak }
+			syr_darya_area = { change_culture = khazak }
+			north_zungaria = { change_culture = khazak }
+			shirvan_area = { change_culture = azerbaijani }
+			transcaspia_area = { change_culture = turkmeni }
+			merv_area = { change_culture = turkmeni }
+			transoxiana_area = { change_culture = uzbehk }
+			khiva_area = { change_culture = uzbehk }
+			arys_area = { change_culture = kirgiz }
+			ferghana_area = { change_culture = kirgiz }
+			shanshan_area = { change_culture = uyghur }
+			tarim_basin_area = { change_culture = uyghur }
+			kashgaria_area = { change_culture = uyghur }
+			zungaria_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 714 }
+						NOT = { province_id = 4683 }
+					}
+				}
+				change_culture = uyghur
+			}
+			321 = { change_culture = greek }
+		}
+	}
+
+	anglo_american_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = ENG
+				tag = GBR
+				tag = FRA
+				tag = FR2
+				tag = USA
+				tag = CAN
+			}
+			is_year = 1650
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 236
+				owns_core_province = 183
+				owns_core_province = 953
+				owns_core_province = 965
+				owns_core_province = 2670
+				owns_core_province = 4892
+			}
+		}
+		effect = {
+			add_prestige = 10
+			canada_region = {
+				limit = {
+					AND = {
+						NOT = { area = greenland_area }
+						NOT = { area = huronia_area }
+						NOT = { area = ottawa_valley_area }
+						NOT = { area = newfoundland_area }
+						NOT = { area = lower_acadia_area }
+						NOT = { area = upper_canada_area }
+						NOT = { area = upper_ontario_area }
+						NOT = { area = labrador_area }
+						NOT = { area = upper_acadia_area }
+						country_or_subject_holds = ROOT
+					}
+				}
+				change_culture = french_canadian
+				change_religion = catholic
+			}
+			newfoundland_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = british_canadian
+				change_religion = protestant
+			}
+			upper_canada_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = british_canadian
+				change_religion = protestant
+			}
+			upper_ontario_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = british_canadian
+				change_religion = protestant
+			}
+			labrador_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = british_canadian
+				change_religion = protestant
+			}
+			upper_acadia_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = british_canadian
+				change_religion = protestant
+			}
+			lower_acadia_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = gaelic_canadian
+				change_religion = protestant
+			}
+			great_lakes_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = american
+				change_religion = protestant
+			}
+			mississippi_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = american
+				change_religion = protestant
+			}
+			northeast_america_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = american
+				change_religion = protestant
+			}
+			southeast_america_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = british_louisianan
+				change_religion = protestant
+			}
+		}
+	}
+	
+	latin_american_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = SPA
+				tag = POR
+				tag = MEX
+				tag = CUB
+				tag = BRZ
+				tag = BR2
+				tag = LAP
+				tag = COL
+				tag = PEU
+			}
+			is_year = 1530
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 217
+				owns_core_province = 226
+				owns_core_province = 227
+				owns_core_province = 484
+				owns_core_province = 763
+				owns_core_province = 778
+				owns_core_province = 809
+				owns_core_province = 825
+				owns_core_province = 852
+			}
+		}
+		effect = {
+			add_prestige = 10
+			mexico_region = {
+				change_culture = mexican
+				change_religion = catholic
+			}
+			rio_grande_region = {
+				limit = {
+					AND = {
+						NOT = { owned_by = USA }
+						country_or_subject_holds = ROOT
+					}
+				}
+				change_culture = mexican
+				change_religion = catholic
+			}
+			central_america_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = mexican
+				change_religion = catholic
+			}
+			carribeans_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_caribbean
+				change_religion = catholic
+			}
+			la_plata_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+			tucuman_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+			chaco_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+			paraguay_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+			northern_chile_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+			colombia_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_colombian
+				change_religion = catholic
+			}
+			peru_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+			upper_peru = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+			beni_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+			potosi_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+			moxos_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+			brazil_region = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = brazilian
+				change_religion = catholic
+			}
+		}
+	}
+
+	modern_american_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = USA
+				tag = GBR
+				tag = AUS
+				tag = NZL
+				tag = NED
+			}
+			is_year = 1850
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 236
+				owns_core_province = 953
+				owns_core_province = 1090
+				owns_core_province = 1107
+				owns_core_province = 1177
+			}
+		}
+		effect = {
+			add_prestige = 10
+			california_region = {
+				limit = { owned_by = USA }
+				change_culture = british_californian
+			}
+			rio_grande_region = {
+				limit = { owned_by = USA }
+				change_culture = british_louisianan
+			}
+			eastern_australia_area = {
+				change_culture = british_australian
+				change_religion = protestant
+			}
+			southern_australia_area = {
+				change_culture = british_australian
+				change_religion = protestant
+			}
+			murray_river_area = {
+				change_culture = british_australian
+				change_religion = protestant
+			}
+			te_ika_a_maui_hauauru_area = {
+				change_culture = british_oceanian
+				change_religion = protestant
+			}
+			te_ika_a_maui_waho_area = {
+				change_culture = british_oceanian
+				change_religion = protestant
+			}
+			te_waipounamu_area = {
+				change_culture = british_oceanian
+				change_religion = protestant
+			}
+			cape_of_good_hope_area = {
+				change_culture = dutch
+				change_religion = reformed
+			}
+			transvaal_area = {
+				change_culture = dutch
+				change_religion = reformed
+			}
+		}
+	}
+	
+	han_chinese_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				AND = {
+					is_emperor_of_china = yes
+					NOT = { 
+						tag = QNG 
+					}
+				}
+				tag = ROC
+				tag = FRM
+				tag = CHN
+			}
+			is_year = 2
+			NOT = { is_year = 1950 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 667
+				owns_core_province = 679
+				owns_core_province = 684
+				owns_core_province = 688
+				owns_core_province = 700
+				owns_core_province = 1816
+				owns_core_province = 1821
+				owns_core_province = 1822
+				owns_core_province = 1836
+				owns_core_province = 2154
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_accepted_culture = mongol
+			add_accepted_culture = vietnamese
+			add_accepted_culture = bai
+			add_accepted_culture = yi
+			add_accepted_culture = zhuang
+			hebei_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 703 }
+						NOT = { province_id = 1816 }
+					}
+				}
+				change_culture = chihan
+			}
+			south_hebei_area = { change_culture = hubei }
+			henan_area = { change_culture = zhongyuan }
+			north_henan_area = { change_culture = zhongyuan }
+			zhejiang_area = { change_culture = wu }
+			anhui_area = { change_culture = jianghuai }
+			south_anhui_area = {
+				limit = {
+					NOT = { province_id = 686 }
+				}
+				change_culture = wu
+			}
+			south_jiangsu_area = {
+				limit = {
+					NOT = { province_id = 1821 }
+				}
+				change_culture = wu
+			}
+			jiangsu_area = { change_culture = jianghuai }
+			686 = { change_culture = jianghuai }
+			1821 = { change_culture = jianghuai }
+			shandong_area = { change_culture = shandong_culture }
+			west_shandong_area = { change_culture = shandong_culture }
+			shaanxi_area = {
+				limit = {
+					NOT = { province_id = 2179 }
+				}
+				change_culture = zhongyuan
+			}
+			shanxi_area = { change_culture = jin }
+			2179 = { change_culture = jin }
+			gansu_area = { change_culture = xibei }
+			west_gansu_area = { change_culture = xibei }
+			huguang_area = { change_culture = zhongyuan }
+			hunan_area = { change_culture = xiang }
+			fujian_area = { change_culture = chimin }
+			jiangxi_area = { change_culture = gan }
+			guangzhou_area = { change_culture = cantonese }
+			west_guangdong_area = { change_culture = cantonese }
+			guangdong_area = { change_culture = hakka }
+			sichuan_area = { change_culture = sichuanese }
+			chuannan_area = { change_culture = sichuanese }
+			chuannan_area = { change_culture = sichuanese }
+			guangxi_area = { change_culture = zhuang }
+			yun_gui_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 673 }
+						NOT = { province_id = 4199 }
+					}
+				}
+				change_culture = yi
+			}
+			yun_gui_borderland_area = { change_culture = bai }
+			673 = { change_culture = miao }
+			4199 = { change_culture = miao }
+			vietnam_area = { change_culture = vietnamese }
+			red_river_delta_area = { change_culture = vietnamese }
+			liaoning_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = chihan
+			}
+		}
+	}
+	
+	han_chinese_culture_qng = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			tag = QNG
+			is_year = 1645
+			NOT = { is_year = 1910 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 667
+				owns_core_province = 679
+				owns_core_province = 684
+				owns_core_province = 688
+				owns_core_province = 700
+				owns_core_province = 1816
+				owns_core_province = 1821
+				owns_core_province = 1822
+				owns_core_province = 1836
+				owns_core_province = 2154
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_accepted_culture = mongol
+			add_accepted_culture = bai
+			add_accepted_culture = yi
+			add_accepted_culture = zhuang
+			hebei_area = { change_culture = manchu_new }
+			south_hebei_area = { change_culture = hubei }
+			henan_area = { change_culture = zhongyuan }
+			north_henan_area = { change_culture = zhongyuan }
+			zhejiang_area = { change_culture = wu }
+			anhui_area = { change_culture = jianghuai }
+			south_anhui_area = {
+				limit = {
+					NOT = { province_id = 686 }
+				}
+				change_culture = wu
+			}
+			south_jiangsu_area = {
+				limit = {
+					NOT = { province_id = 1821 }
+				}
+				change_culture = wu
+			}
+			jiangsu_area = { change_culture = jianghuai }
+			686 = { change_culture = jianghuai }
+			1821 = { change_culture = jianghuai }
+			shandong_area = { change_culture = shandong_culture }
+			west_shandong_area = { change_culture = shandong_culture }
+			shaanxi_area = {
+				limit = {
+					NOT = { province_id = 2179 }
+				}
+				change_culture = zhongyuan
+			}
+			shanxi_area = { change_culture = jin }
+			2179 = { change_culture = jin }
+			gansu_area = { change_culture = xibei }
+			west_gansu_area = { change_culture = xibei }
+			huguang_area = { change_culture = zhongyuan }
+			hunan_area = { change_culture = xiang }
+			fujian_area = { change_culture = chimin }
+			jiangxi_area = { change_culture = gan }
+			guangzhou_area = { change_culture = cantonese }
+			west_guangdong_area = { change_culture = cantonese }
+			guangdong_area = { change_culture = hakka }
+			sichuan_area = { change_culture = sichuanese }
+			chuannan_area = { change_culture = sichuanese }
+			chuannan_area = { change_culture = sichuanese }
+			guangxi_area = { change_culture = zhuang }
+			yun_gui_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 673 }
+						NOT = { province_id = 4199 }
+					}
+				}
+				change_culture = yi
+			}
+			yun_gui_borderland_area = { change_culture = bai }
+			673 = { change_culture = miao }
+			4199 = { change_culture = miao }
+			jilin_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 2108 }
+						NOT = { province_id = 4653 }
+					}
+				}
+				change_culture = manchu_new
+			}
+			heilongjiang_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 4665 }
+						NOT = { province_id = 4666 }
+					}
+				}
+				change_culture = manchu_new
+			}
+			central_heilongjiang_area = { change_culture = manchu_new }
+			liaoning_area = { change_culture = manchu_new }
+			ningguta_area = { change_culture = manchu_new }
+			2108 = { change_culture = korean }
+			4653 = { change_culture = korean }
+		}
+	}
+	
+	modern_chinese_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = CHN
+				tag = FRM
+				tag = HKG
+				tag = MCU
+			}
+			is_year = 1950
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 668
+				owns_core_province = 1816
+				owns_core_province = 2154
+				owns_core_province = 3005
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_accepted_culture = bai
+			add_accepted_culture = yi
+			add_accepted_culture = zhuang
+			hebei_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 703 }
+						NOT = { province_id = 1816 }
+					}
+				}
+				change_culture = chihan
+			}
+			south_hebei_area = { change_culture = hubei }
+			henan_area = { change_culture = zhongyuan }
+			north_henan_area = { change_culture = zhongyuan }
+			zhejiang_area = { change_culture = wu }
+			anhui_area = { change_culture = jianghuai }
+			south_anhui_area = {
+				limit = {
+					NOT = { province_id = 686 }
+				}
+				change_culture = wu
+			}
+			south_jiangsu_area = {
+				limit = {
+					NOT = { province_id = 1821 }
+				}
+				change_culture = wu
+			}
+			jiangsu_area = { change_culture = jianghuai }
+			686 = { change_culture = jianghuai }
+			1821 = { change_culture = jianghuai }
+			shandong_area = { change_culture = shandong_culture }
+			west_shandong_area = { change_culture = shandong_culture }
+			shaanxi_area = {
+				limit = {
+					NOT = { province_id = 2179 }
+				}
+				change_culture = zhongyuan
+			}
+			shanxi_area = { change_culture = jin }
+			2179 = { change_culture = jin }
+			gansu_area = { change_culture = xibei }
+			west_gansu_area = { change_culture = xibei }
+			huguang_area = { change_culture = zhongyuan }
+			hunan_area = { change_culture = xiang }
+			fujian_area = { change_culture = chimin }
+			jiangxi_area = { change_culture = gan }
+			guangzhou_area = { change_culture = cantonese }
+			west_guangdong_area = { change_culture = cantonese }
+			guangdong_area = { change_culture = hakka }
+			sichuan_area = { change_culture = sichuanese }
+			chuannan_area = { change_culture = sichuanese }
+			chuannan_area = { change_culture = sichuanese }
+			guangxi_area = { change_culture = zhuang }
+			yun_gui_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 673 }
+						NOT = { province_id = 4199 }
+					}
+				}
+				change_culture = yi
+			}
+			yun_gui_borderland_area = { change_culture = bai }
+			673 = { change_culture = miao }
+			4199 = { change_culture = miao }
+			jilin_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 2108 }
+						NOT = { province_id = 4653 }
+					}
+				}
+				change_culture = manchu_new
+			}
+			heilongjiang_area = {
+				limit = {
+					AND = {
+						NOT = { province_id = 4665 }
+						NOT = { province_id = 4666 }
+					}
+				}
+				change_culture = manchu_new
+			}
+			central_heilongjiang_area = { change_culture = manchu_new }
+			liaoning_area = { change_culture = manchu_new }
+			ningguta_area = { change_culture = manchu_new }
+			2108 = { change_culture = korean_new }
+			4653 = { change_culture = korean_new }
+			xilin_gol_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = altaic_new
+			}
+			inner_mongolia_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = altaic_new
+			}
+			chahar_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = altaic_new
+			}
+			cicigar_area = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = altaic_new
+			}
+			eastern_mongolia = {
+				limit = { country_or_subject_holds = ROOT }
+				change_culture = altaic_new
+			}
+		}
+	}
+	
+	mongolian_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = XIO
+				tag = XIB
+				tag = ROU
+				tag = GOK
+				tag = XUE
+				tag = UIG
+				tag = KHT
+				tag = LIO
+				tag = KKT
+				tag = CJN
+				tag = KMO
+				tag = KHA
+				tag = MGE
+				tag = YUA
+				tag = CHG
+				tag = TIM
+				tag = XIY
+				tag = TIB
+				tag = YRL
+				tag = UTS
+			}
+			is_year = 2
+			NOT = { is_year = 1300 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 454
+				owns_core_province = 677
+				owns_core_province = 717
+				owns_core_province = 1816
+				owns_core_province = 2115
+				owns_core_province = 4203
+				owns_core_province = 4207
+				owns_core_province = 4678
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_accepted_culture = mongol
+			add_accepted_culture = oirats
+			add_accepted_culture = buryat
+			add_accepted_culture = khitan
+			add_accepted_culture = turkish
+			mongolia_region = {
+				limit = {
+					AND = {
+						NOT = { area = altai_sayan_area }
+						NOT = { area = buryatia_area }
+						NOT = { area = chahar_area }
+						NOT = { area = eastern_mongolia }
+						NOT = { area = tannu_uriankhai_area }
+					}
+				}
+				change_culture = mongol
+			}
+			altai_sayan_area = { change_culture = oirats }
+			buryatia_area = { change_culture = buryat }
+			chahar_area = { change_culture = khitan }
+			cicigar_area = { change_culture = khitan }
+			eastern_mongolia = { change_culture = khitan }
+			tannu_uriankhai_area = { change_culture = tuvan }
+			703 = { change_culture = khitan }
+			utsang_area = { change_culture = tibetan }
+			tsang_area = { change_culture = tibetan }
+			changtang_area = { change_culture = tibetan }
+			ngari_area = { change_culture = tibetan }
+			amdo_area = { change_culture = tangut }
+			kham_area = { change_culture = khams }
+			bhutan_area = { change_culture = kochi } 
+			2074 = { change_culture = ladakhi }
+		}
+	}
+
+	modern_mongolian_culture = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			AND = {
+				ai = no
+				was_player = yes
+			}
+			OR = {
+				tag = YUA
+				tag = KHA
+				tag = CHH
+				tag = OIR
+				tag = ZUN
+				tag = MCH
+				tag = QNG
+				tag = ROC
+				tag = CHN
+				tag = FRM
+			}
+			is_year = 1300
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+				owns_core_province = 717
+				owns_core_province = 726
+				owns_core_province = 1816
+				owns_core_province = 2115
+				owns_core_province = 4203
+				owns_core_province = 4678
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_accepted_culture = mongol
+			add_accepted_culture = oirats
+			add_accepted_culture = chahar
+			mongolia_region = {
+				limit = {
+					AND = {
+						NOT = { area = altai_sayan_area }
+						NOT = { area = chahar_area }
+						NOT = { area = eastern_mongolia }
+						NOT = { area = tannu_uriankhai_area }
+					}
+				}
+				change_culture = mongol
+			}
+			altai_sayan_area = { change_culture = oirats }
+			chahar_area = {
+				limit = {
+					NOT = { owned_by = CHN }
+				}
+				change_culture = chahar 
+			}
+			cicigar_area = {
+				limit = {
+					NOT = { owned_by = CHN }
+				}
+				change_culture = chahar 
+			}
+			eastern_mongolia = {
+				limit = {
+					NOT = { owned_by = CHN }
+				}
+				change_culture = chahar 
+			}
+			tannu_uriankhai_area = { change_culture = tuvan }
+			utsang_area = { change_culture = tibetan }
+			tsang_area = { change_culture = tibetan }
+			changtang_area = { change_culture = tibetan }
+			ngari_area = { change_culture = tibetan }
+			bhutan_area = { change_culture = kochi }
+			2074 = { change_culture = ladakhi }
+		}
+	}
+	
+
+}
+
+########################################################################
+# Sports events
+########################################################################
+	
+country_decisions = {
+
+	held_ancient_sports = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			ai = no
+			was_player = yes
+			capital_scope = { continent = europe }
+			is_year = 2
+			NOT = { is_year = 700 }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			country_event = { id = eh_leisure.1 days = 1 }
+		}
+	}
+	
+	held_modern_sports = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			ai = no
+			was_player = yes
+			is_year = 1930
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			country_event = { id = eh_leisure.5 days = 1 }
+		}
+	}
+	
+}
+
+# EH version

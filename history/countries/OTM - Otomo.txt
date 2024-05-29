@@ -1,0 +1,655 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = FUJ
+capital = 1014	# Bungo
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1185.6.19 = {
+	monarch = {
+		name = "Yoshinao"
+		dynasty = "Otomo"
+		birth_date = 1172.1.29
+		adm = 1
+		dip = 5
+		mil = 1
+	}
+	queen = {
+		country_of_origin = HTK
+		name = "Shinmyo"
+		dynasty = "Hatakeyama"
+		birth_date = 1175.1.1
+		death_date = 1235.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1195.1.1 = {
+	heir = {
+		name = "Chikahide"
+		monarch_name = "Chikahide"
+		dynasty = "Otomo"
+		birth_date = 1195.1.1
+		death_date = 1248.11.10
+		claim = 95
+		adm = 5
+		dip = 0
+		mil = 2
+	}
+}
+
+1223.12.20 = {
+	monarch = {
+		name = "Chikahide"
+		dynasty = "Otomo"
+		birth_date = 1195.1.1
+		adm = 5
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Sawara"
+		birth_date = 1200.1.1
+		death_date = 1260.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoriyasu"
+		monarch_name = "Yoriyasu"
+		dynasty = "Otomo"
+		birth_date = 1222.1.1
+		death_date = 1300.10.30
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
+1248.11.10 = {
+	monarch = {
+		name = "Yoriyasu"
+		dynasty = "Otomo"
+		birth_date = 1222.1.1
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Furusho"
+		birth_date = 1240.1.1
+		death_date = 1300.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chikatoki"
+		monarch_name = "Chikatoki"
+		dynasty = "Otomo"
+		birth_date = 1236.1.1
+		death_date = 1295.7.5
+		claim = 95
+		adm = 0
+		dip = 4
+		mil = 3
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1290.1.1 = {
+	monarch = {
+		name = "Chikatoki"
+		dynasty = "Otomo"
+		birth_date = 1236.1.1
+		adm = 0
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Totsugi"
+		birth_date = 1240.1.1
+		death_date = 1300.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1295.7.5 = {
+	monarch = {
+		name = "Sadachika" # ? - 1311.9.2
+		dynasty = "Otomo"
+		birth_date = 1246.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1311.9.2 = {
+	monarch = {
+		name = "Sadamune" # ? - 1334.1.9
+		dynasty = "Otomo"
+		birth_date = 1290.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SHN
+		dynasty = "Shoni"
+		birth_date = 1300.1.1
+		death_date = 1360.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1321.1.1 = {
+	heir = {
+		name = "Ujiyasu"
+		monarch_name = "Ujiyasu"
+		dynasty = "Otomo"
+		birth_date = 1321.1.1
+		death_date = 1362.11.19
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1334.1.9 = {
+	monarch = {
+		name = "Ujiyasu"
+		dynasty = "Otomo"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1362.11.19 = {
+	monarch = {
+		name = "Ujitoki"
+		dynasty = "Otomo"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1368.4.8 = {
+	monarch = {
+		name = "Chikayo" # ? - 1418.4.1 
+		dynasty = "Otomo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1386.1.1 = {
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Totsugi"
+		birth_date = 1370.1.1
+		death_date = 1430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chikaaki"
+		monarch_name = "Chikaaki"
+		dynasty = "Otomo"
+		birth_date = 1385.1.1
+		death_date = 1423.1.1
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1401.1.1 = {
+	monarch = {
+		name = "Chikaaki"
+		dynasty = "Otomo"
+		birth_date = 1385.1.1
+#		death_date = 1423.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = CBA
+		dynasty = "Chiba"
+		birth_date = 1390.1.1
+		death_date = 1450.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Mochinao"
+		monarch_name = "Mochinao"
+		dynasty = "Otomo"
+		birth_date = 1401.1.1
+		death_date = 1445.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1423.1.1 = { 
+	monarch = {
+		name = "Mochinao"
+		dynasty = "Otomo"
+		birth_date = 1401.1.1
+#		death_date = 1445.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1432.11.27 = {
+	heir = {
+		name = "Chikatsuna"
+		monarch_name = "Chikatsuna"
+		dynasty = "Otomo"
+		birth_date = 1430.1.1
+		death_date = 1459.1.1
+		claim = 40
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+	
+1445.1.1 = {
+	monarch = {
+		name = "Chikatsuna"
+		dynasty = "Otomo"
+		birth_date = 1430.1.1
+#		death_date = 1459.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+	
+1450.1.1 = {
+	heir = {
+		name = "Chikataka"
+		monarch_name = "Chikataka"
+		dynasty = "Shimazu"
+		birth_date = 1430.1.1
+		death_date = 1565.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1453.1.1 = { 
+	monarch = {
+		name = "Chikataka"
+		dynasty = "Otomo"
+		birth_date = 1430.1.1
+#		death_date = 1565.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1453.1.1 = {
+	heir = {
+		name = "Chikashige"
+		monarch_name = "Chikashige"
+		dynasty = "Otomo"
+		birth_date = 1411.1.1
+		death_date = 1493.1.1
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1461.1.1 = {
+	monarch = {
+		name = "Chikashige"
+		dynasty = "Otomo"
+		birth_date = 1411.1.1
+#		death_date = 1493.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Otomo"
+		birth_date = 1390.1.1
+		death_date = 1450.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Masachika"
+		monarch_name = "Masachika"
+		dynasty = "Otomo"
+		birth_date = 1444.1.1
+		death_date = 1496.7.20
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1473.1.1 = { 
+	monarch = {
+		name = "Masachika"
+		dynasty = "Otomo"
+		birth_date = 1444.1.1
+#		death_date = 1496.7.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OUC
+		dynasty = "Ouchi"
+		birth_date = 1450.1.1
+		death_date = 1510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1484.1.1 = {
+	heir = {
+		name = "Yoshisuke"
+		monarch_name = "Yoshisuke"
+		dynasty = "Otomo"
+		birth_date = 1484.1.1
+		death_date = 1496.5.27
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+	
+1489.1.1 = { 
+	monarch = {
+		name = "Yoshisuke"
+		dynasty = "Otomo"
+		birth_date = 1484.1.1
+#		death_date = 1496.5.27
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = OUC
+		dynasty = "Ouchi"
+		birth_date = 1485.1.1
+		death_date = 1545.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+##1496.7.7 = { innovative_narrowminded = 2 }
+	
+1496.7.7 = { 
+	monarch = {
+		name = "Chikaharu"
+		dynasty = "Otomo"
+		birth_date = 1461.1.1
+#		death_date = 1524.2.23
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Kino"
+		birth_date = 1465.1.1
+		death_date = 1525.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshinaga"
+		monarch_name = "Yoshinaga"
+		dynasty = "Otomo"
+		birth_date = 1478.1.1
+		death_date = 1518.1.1
+		claim = 80
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+##1498.1.1 = { centralization_decentralization = 3 }
+
+##1501.1.1 = { innovative_narrowminded = 1 }
+
+1501.1.1 = { 
+	monarch = {
+		name = "Yoshinaga"
+		dynasty = "Otomo"
+		birth_date = 1478.1.1
+#		death_date = 1518.1.1
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = OTM
+		dynasty = "Aso"
+		birth_date = 1480.1.1
+		death_date = 1540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1502.1.1 = {
+	heir = {
+		name = "Yoshiaki"
+		monarch_name = "Yoshiaki"
+		dynasty = "Otomo"
+		birth_date = 1502.1.1
+		death_date = 1550.2.28
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+##1513.1.1 = { centralization_decentralization = 2 }
+
+1518.1.1 = { 
+	monarch = {
+		name = "Yoshiaki"
+		dynasty = "Otomo"
+		birth_date = 1502.1.1
+#		death_date = 1550.2.28
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = OUC
+		dynasty = "Ouchi"
+		birth_date = 1505.1.1
+		death_date = 1565.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1530.1.31 = {
+	heir = {
+		name = "Yoshishige"
+		monarch_name = "Sorin"
+		dynasty = "Otomo"
+		birth_date = 1530.1.31
+		death_date = 1587.6.11
+		claim = 90
+		adm = 1
+		dip = 4
+		mil = 4
+	}
+}
+
+1550.2.28 = {
+	monarch = {
+		name = "Yoshishige"
+		dynasty = "Otomo"
+		birth_date = 1530.1.31
+#		death_date = 1587.6.11
+		adm = 1
+		dip = 4
+		mil = 4
+		religion = catholic
+	}
+	queen = {
+		country_of_origin = OTM
+		name = "Nata"
+		dynasty = "Otomo"
+		birth_date = 1528.1.1
+		death_date = 1587.2.15
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = shinto
+	}
+}
+
+1558.1.1 = {
+	heir = {
+		name = "Yoshimune"
+		monarch_name = "Yoshimune"
+		dynasty = "Otomo"
+		birth_date = 1558.1.1
+		death_date = 1610.9.2
+		claim = 90
+		adm = 2
+		dip = 1
+		mil = 1
+		religion = catholic
+	}
+}
+
+1578.7.1 = { religion = catholic }
+	
+1578.7.1 = {
+	queen = {
+		country_of_origin = OTM
+		name = "Julia"
+		dynasty = "Hayashi"
+		birth_date = 1540.1.1
+		death_date = 1610.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = catholic
+	}
+}
+
+1582.6.21 = {
+	government = monarchy
+	add_government_reform = indep_daimyo	#Honnoji
+	government_rank = 1
+}
+1587.1.1 = {
+	government = monarchy
+	add_government_reform = daimyo		#submit to Toyotomi
+	government_rank = 1
+}
+
+1587.6.11 = { religion = shinto }
+
+1587.6.11 = {
+	monarch = {
+		name = "Yoshimune"
+		dynasty = "Otomo"
+		birth_date = 1558.1.1
+#		death_date = 1610.9.2
+		adm = 2
+		dip = 1
+		mil = 1
+		religion = catholic
+	}
+	queen = {
+		country_of_origin = ISK
+		name = "Kikuhime"
+		dynasty = "Otomo"
+		birth_date = 1560.1.1
+		death_date = 1595.12.4
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = catholic
+	}
+}
+	
+# EH version

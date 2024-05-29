@@ -1,0 +1,190 @@
+government = tribal
+add_government_reform = steppe_horde
+technology_group = western_nomad_group
+religion = vajrayana
+primary_culture = mongol
+add_accepted_culture = al_iraqiya_arabic
+add_accepted_culture = persian
+add_accepted_culture = khorasani
+add_accepted_culture = baluchi
+add_accepted_culture = kurdish
+capital = 2281 # Maragha
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1256.1.1 = {
+	monarch = {
+		name = "Hulagu"
+		dynasty = "Borjigin"
+		birth_date = 1218.10.15
+		adm = 4
+		dip = 4
+		mil = 6
+	}
+	queen = {
+		country_of_origin = ILK
+		name = "Yesuncin"
+		birth_date = 1210.1.1
+		death_date = 1260.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abaqa"
+		monarch_name = "Abaqa"
+		dynasty = "Borjigin"
+		birth_date = 1234.1.1
+		death_date = 1282.5.6
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+1265.2.8 = {
+	capital = 416 # Tabriz
+	monarch = {
+		name = "Abaqa"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+	queen = {
+		country_of_origin = ILK
+		name = "Qutui"
+		dynasty = "Khongirad"
+		birth_date = 1240.1.1
+		death_date = 1300.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tekuder"
+		monarch_name = "Tekuder"
+		dynasty = "Borjigin"
+		birth_date = 1246.1.1
+		death_date = 1284.8.10
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1282.5.6 = {
+	monarch = {
+		name = "Tekuder"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+1284.8.10 = {
+	monarch = {
+		name = "Arghun"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 2
+		mil = 5
+	}
+}
+
+1291.1.1 = {
+	monarch = {
+		name = "Gaukhatu"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 5
+		mil = 5
+	}
+}
+
+1295.1.1 = {
+	monarch = {
+		name = "Baydu"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1295.6.1 = {
+	monarch = {
+		name = "Ghazan"
+		dynasty = "Borjigin"
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+1296.1.1 = { religion = shiite religious_school = jafari_school }
+
+1304.5.11 = {
+	monarch = {
+		name = "Oljaitu"
+		dynasty = "Borjigin"
+		birth_date = 1282.3.24
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+	queen = {
+		country_of_origin = ILK
+		name = "Hajji"
+		dynasty = "Chichak"
+		birth_date = 1285.1.1
+		death_date = 1330.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1305.6.2 = {
+	heir = {
+		name = "Abu Sa'id Bahadur"
+		monarch_name = "Abu Sa'id Bahadur"
+		dynasty = "Borjigin"
+		birth_date = 1305.6.2
+		death_date = 1335.12.1
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1306.1.1 = { capital = 2212 } # Soltaniyeh
+
+1316.12.16 = {
+	monarch = {
+		name = "Abu Sa'id Bahadur"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}

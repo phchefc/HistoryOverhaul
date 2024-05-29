@@ -1,0 +1,313 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = chimin
+capital = 1829	#Quanzhou
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Min)
+
+896.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Shenzhi" #Taizu
+		dynasty = "Wang"
+		birth_date = 862.1.1
+		adm = 4
+		dip = 5
+		mil = 3
+		leader = {	name = "Wang Shenzhi"     	type = general	fire = 2	shock = 2	manuever = 3	siege = 0  death_date = 925.12.30 }
+	}
+	queen = {
+		country_of_origin = MIN
+		name = "Neiming"
+		dynasty = "Ren"
+		birth_date = 865.1.1
+		death_date = 918.7.2
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yanhan"
+		monarch_name = "Yanhan"
+		dynasty = "Wang"
+		birth_date = 880.1.1
+		death_date = 927.1.14
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+907.4.27 = { government_rank = 2 }
+
+925.12.30 = {
+	monarch = {
+		name = "Yanhan"
+		dynasty = "Wang"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = MIN
+		name = "Lianshi"
+		dynasty = "Cui"
+		birth_date = 885.1.1
+		death_date = 927.1.14
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+927.1.14 = {
+	monarch = {
+		name = "Yanjun" #Taizong
+		dynasty = "Wang"
+		birth_date = 882.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = HNX
+		name = "Hua"
+		dynasty = "Liu"
+		birth_date = 896.1.1
+		death_date = 930.5.31
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jipeng"
+		monarch_name = "Kangzong"
+		dynasty = "Wang"
+		birth_date = 900.1.1
+		death_date = 939.8.29
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}
+
+930.5.31 = {
+	queen = {
+		country_of_origin = MIN
+		dynasty = "Jin"
+		birth_date = 890.1.1
+		death_date = 950.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+933.1.1 = { government_rank = 3 }
+
+935.1.1 = {
+	queen = {
+		country_of_origin = MIN
+		name = "Jinfeng"
+		dynasty = "Chen"
+		birth_date = 893.1.1
+		death_date = 935.11.17
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+935.11.17 = {
+	monarch = {
+		name = "Jipeng" #Kangzong
+		dynasty = "Wang"
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MIN
+		dynasty = "Li"
+		birth_date = 890.1.1
+		death_date = 950.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+937.1.1 = {
+	government_rank = 2
+	queen = {
+		country_of_origin = MIN
+		name = "Chunyan"
+		dynasty = "Li"
+		birth_date = 890.1.1
+		death_date = 939.8.29
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+939.8.29 = {
+	monarch = {
+		name = "Yanxi" #Jingzong
+		dynasty = "Wang"
+		birth_date = 885.1.1
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = MIN
+		dynasty = "Li"
+		birth_date = 890.1.1
+		death_date = 944.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+941.1.1 = { government_rank = 3 }
+
+# Coup
+
+944.4.8 = {
+	monarch = {
+		name = "Wenjin"
+		dynasty = "Zhu"
+		birth_date = 900.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+# Coup
+
+945.2.14 = {
+	monarch = {
+		name = "Yanzheng" #Tiande
+		dynasty = "Wang"
+		birth_date = 890.1.1
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+	queen = {
+		country_of_origin = MIN
+		dynasty = "Zhang"
+		birth_date = 895.1.1
+		death_date = 950.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# End of the Tang dynasty (Qingyuan)
+
+945.10.2 = {
+	government_rank = 2
+	monarch = {
+		name = "Congxiao"
+		dynasty = "Liu"
+		birth_date = 906.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+962.1.1 = {
+	monarch = {
+		name = "Shaozi"
+		dynasty = "Liu"
+		birth_date = 930.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+962.6.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Hansi"
+		dynasty = "Zhang"
+		birth_date = 930.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+963.4.1 = {
+	monarch = {
+		name = "Hongjin"
+		dynasty = "Chen"
+		birth_date = 930.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Yuan dynasty (Fang)
+
+1348.1.1 = {
+	monarch = {
+		name = "Guozhen"
+		dynasty = "Fang"
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}
+
+# End of the Ming dynasty (Fuzhen)
+
+1649.11.27 = {
+	monarch = {
+		name = "Jingzhong"
+		dynasty = "Geng"
+		death_date = 1682.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}

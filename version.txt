@@ -1,0 +1,244 @@
+History Overhaul version v1.37
+based on Extended Timeline
+for EU IV version v1.37.0
+
+------------------------------------------------------------------------------
+
+# Area
+
+- 680 713 714 731 2108 2109 2119 2170 2188 4653 4661 4663 4666 (China)
+- 2102 2103 4656 4679 4681 (Manchuria)
+- 591 594 611 614 2371 2380 2404 4838 (Indochina)
+
+- 1777 4124 1931 (Europe)
+- 2003 2476 2499 2666 (America)
+
+---------------------------------------
+
+# Region
+
+- turpan_kumul_area (Central Asia)
+
+---------------------------------------
+
+# Position
+
+- 700 726 735 1821 1845
+- 1130 2247 2259 2260 2448 4569
+
+------------------------------------------------------------------------------
+
+# New events 
+
+- East Asia
+* Chinese (266) = HAN (10) SANGUO (22) JIN (6) NANBEICHAO (16) SUI (8) TNG (26) WUDAI (12) SNG (18) YUA (8) MNG (30) QNG (36) CHN (8) ROC (14) PRC (22) COM (30)
+* Japanese (134) = YAM (10) HEI (10) KMK (6) ASK (6) SENGOKU (14) TKG (22) JP2 (58) COM (8)
+* Korean (208) = SAMGUK (36) NAMBUKGUK (12) HUSAMGUK (8) GOR (30) JOS (56) KOR (10[+1]) NKR (10) SKR (26) COM (18)]
+* Mongolian (98) = MON (60) MCH (20) CXJ (14) TIB (6)
+* Indochinaese (132) = CMB (12) IDN (14) MNM (18) MLA (11) LAO (8) PHI (9) THL (26) VTN (34)
+
+- Total = (838)
+
+---------------------------------------
+
+# Rest of World
+
+- Asian (140)
+* Middle East (44)
+* Turkish (28)
+* Central Asia (30)
+* Indian (38)
+
+- European (392)
+* Roman (24)
+** Ancient (6)
+* Mediaval (36)
+* Modern (16)
+* British (72)
+* French (66)
+* Germans (58)
+** Dutch (10)
+* Spainish (30)
+* Italian (20)
+* Russian (54)
+
+- World (100+6)
+* Africas (18)
+* North American (24+2)
+** United States (34)
+* South American (18+4)
+* Oceanian (6)
+
+- Modern (34+4)
+* WW1 (8)
+* WW2 (18)
+* Cold War (8+4)
+
+- Total = (664+10)
+
+---------------------------------------
+
+# New events (Common)
+
+- Setting (6)
+
+- Economy (30)
+* Economy (14)
+* Science and Technology (16)
+
+- Human life (68)
+* Cultural history (16)
+* Humanities (12)
+* Living (16)
+* Leisure (24)
+
+- Politics (108)
+* Diplomacy (16)
+* Dynastic (48)
+* Geography (16)
+* Tag (34)
+
+- Disasters (38)
+* Epidemics (14)
+* Famine (12)
+* Disasters (12)
+
+- Total = (250)
+
+- Total = (1752+10)
+
+------------------------------------------------------------------------------
+
+# New countries
+
+- East Asia
+
+* Chinese (33/54) = CAH CFT CGM CGX CGZ CNF CSI CXJ CXM CYN CZL DND HBN HJZ HKG HLI HQN HYA HYI HYO LI2 LNX MCU QI2 QNL QNW ROC TPG TWA WEE WEW XIE ZHE
+* Japanese (8/62) = ASN JP2 KDA KUM MTS SHG TOD YMU
+* Korean (4/18) = SMJ SPS SSA SSB
+* Mongolian (6/59) = ETK MKO MSS MTM MZS KRS
+* Indochinaese (2/7) = DV2 VTC
+
+- Total = (56)
+
+- Rest of World
+* (AUH) DEF ITF BRJ
+* AF2 IQ2 OM2 SY2 / DE2 FI2 IE2 IS2 IT2 LU2 NO2 / AM2 BG2 CY2 EE2 GR2 HU2 LT2 PO2 RS2 / BJ2 EG2 ET2 ML2 RSA / BR2
+
+- Total = (30)
+
+- Ancient and Fixed
+* A01(WR, E) A02(WR2, E) A03(ER, E) A04(ER2, E) A05(MAC) A06(SPA) A07(CAR) A08(MAU)
+* A09(ALM) A10(CAT) A11(GUI) A12(JIN) A13(MIN) A14(MON) A15(KEY) A16(PHI)
+
+- Total = (16)
+
+- Total = (94+8)
+
+---------------------------------------
+
+# Changed flags
+
+- Africans (4) = ALG GZI MOR TUN
+- Americas (6) = MEX HAT LAP QUE USA VNZ
+- Asian (28) = BEI BHU CHN DON FRM GAY GYI JAP JHN JOE KHA KIY LSO NLI SIA SLL TIB TKG VTN WEI WLI WUU XIN / AFG DGL KUW MLK YEM
+- European (18) = ALB CRO ENG GBR GEO ITA JAI NED PAP POR RMN SCO SPA SWE SWI UKR WLS
+- Oceanian (4) = AUS NZL UHW VIT
+
+- Total = (60)
+
+------------------------------------------------------------------------------
+
+# New / Edited contents
+
+- Bookmarks (12/8)
+- Gov_names (1/4)
+- Prov_names (0/36)
+- Idea (2/0)
+- Decisions (3/52)
+- Wars (0/5)
+
+------------------------------------------------------------------------------
+
+# Restrictions
+
+- Annexed vassal and union
+- Create Chater company
+- Dispatching Colonist
+- Purchasing province
+- Feudal events
+
+------------------------------------------------------------------------------
+
+# List of Colonies
+
+- C00 Hispaniola (SPA)
+- C01 Mozambique (POR)
+- C02 New Spain (SPA)
+- C03 New Granada (SPA)
+- C04 Peru (SPA)
+- C05 La Plata (SPA)
+- C06 Brazil (POR)
+- C07 Florida (SPA)
+- C08 New Netherland (NED)
+- C09 Thirteen Colonies (ENG)
+- C10 Canada (FRA)
+- C11 Antilles (FRA)
+- C12 Rio da Prata (POR)
+- C13 West Indies (ENG)
+- C14 New Foundland (ENG)
+- C15 Louissiana (FRA)
+- C16 Somaliland (OMA)
+- C17 East Africa (OMA)
+- C18 Floride (FRA)
+- C19 Louissiana (SPA)
+- C20 Louissiana (GBR)
+- C21 California (SPA)
+- C22 Alyska (RUS)
+- C23 Columbia (GBR)
+- C24 Australia (GBR)
+- C25 Pacific (GBR)
+- C26 Cape Colony (GBR)
+- C27 Angola (POR)
+- C28 Ethiopia (GBR)
+- C29 Sudan (GBR)
+- C30 Equatorial Africa (FR2)
+- C31 Ivory Coast (FR2)
+- C32 Mali (FR2)
+- C33 West Africa (FR2)
+- C34 Congo (BEL)
+- C35 Pacific (DE2)
+- C36 South-West Africa (DE2)
+- C37 East Africa (DE2)
+- C38 Central Africa (DE2)
+- C39 Somaliland (ITA)
+- C40 Rhodesia (GBR)
+- C41 East Africa (GBR)
+- C42 Niger Coast (GBR)
+- C43 Gold Coast (GBR)
+- C44 Madagascar (FR2)
+- C45 Niger (FR2)
+
+------------------------------------------------------------------------------
+
+# Mixed Mods
+
+- 10 Great Powers
+
+------------------------------------------------------------------------------
+
+# DLCs
+
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+------------------------------------------------------------------------------
+
+# EH version

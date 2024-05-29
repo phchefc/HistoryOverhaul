@@ -1,0 +1,29 @@
+668 = "Macau"
+682 = "Wuhan"
+688 = "Zhengzhou"
+695 = "Tianjin"
+700 = "Xi'an"
+704 = "Jinzhou"
+707 = "Dunhuang"
+708 = "Zhangye"
+711 = "Cherchen"				#Qarqan
+1816 = "Beijing"
+1821 = "Nanjing"				#Nanjing				|incomplete
+1822 = "Shanghai"				#Shanghai
+2477 = "Chángting"				#Tingzhou			 	|incomplete
+690 = "Zibo"
+2110 = "Changchun"
+2111 = "Huanren"
+2112 = "Dandong"
+2139 = "Yantai"
+2140 = "Jining"
+2188 = "Harbin"
+3005 = "Hong Kong"
+4195 = "Shijiazhuang"
+4197 = "Huanggang"
+4201 = "Tonghua"
+
+# Korea
+735 = "Shou'er"
+
+# EH version

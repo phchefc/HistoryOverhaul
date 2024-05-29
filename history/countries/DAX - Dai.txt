@@ -1,0 +1,222 @@
+government = tribal
+add_government_reform = steppe_horde
+technology_group = early_chinese
+religion = tengri_pagan_reformed
+secondary_religion = confucianism
+primary_culture = khitan #Xianbei
+capital = 4670
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Jin dynasty (Dai)
+
+295.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Yilu"
+		dynasty = "Tuoba"
+		birth_date = 280.1.1
+		adm = 5
+		dip = 1
+		mil = 3
+	}
+	queen = {
+		country_of_origin = DAX
+		name = "Houzhuizunwei"
+		dynasty = "Chiluo"
+		birth_date = 285.1.1
+		death_date = 345.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+295.1.1 = {
+	heir = {
+		name = "Pugen"
+		monarch_name = "Pugen"
+		dynasty = "Tuoba"
+		birth_date = 286.1.1
+		death_date = 316.8.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 4
+	}
+}
+
+315.2.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 2
+}
+
+316.4.1 = {
+	monarch = {
+		name = "Pugen"
+		dynasty = "Tuoba"
+		birth_date = 286.1.1
+		adm = 0
+		dip = 1
+		mil = 4
+	}
+}
+
+316.4.1 = {
+	heir = {
+		name = "Yulu"
+		monarch_name = "Yulu"
+		dynasty = "Tuoba"
+		birth_date = 286.1.1
+		death_date = 321.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+316.8.1 = {
+	monarch = {
+		name = "Yulu" #Taizu
+		dynasty = "Tuoba"
+		birth_date = 286.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+316.8.1 = {
+	heir = {
+		name = "Heru"
+		monarch_name = "Heru"
+		dynasty = "Tuoba"
+		birth_date = 291.1.1
+		death_date = 325.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+321.1.1 = {
+	monarch = {
+		name = "Heru"
+		dynasty = "Tuoba"
+		birth_date = 291.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+321.1.1 = {
+	heir = {
+		name = "Hena"
+		monarch_name = "Hena"
+		dynasty = "Tuoba"
+		birth_date = 295.1.1
+		death_date = 337.1.1
+		claim = 95
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+325.1.1 = {
+	monarch = {
+		name = "Hena" #1st reign
+		dynasty = "Tuoba"
+		birth_date = 295.1.1
+		adm = 2
+		dip = 0
+		mil = 3
+	}
+}
+
+329.1.1 = {
+	monarch = {
+		name = "Yihuai" #1st reign
+		dynasty = "Tuoba"
+		birth_date = 299.1.1
+		adm = 0
+		dip = 1
+		mil = 3
+	}
+}
+
+335.1.1 = {
+	monarch = {
+		name = "Hena" #2nd reign
+		dynasty = "Tuoba"
+		birth_date = 295.1.1
+		adm = 2
+		dip = 0
+		mil = 3
+	}
+}
+
+337.1.1 = {
+	monarch = {
+		name = "Yihuai" #2nd reign
+		dynasty = "Tuoba"
+		birth_date = 299.1.1
+		adm = 0
+		dip = 1
+		mil = 3
+	}
+}
+
+337.1.1 = {
+	heir = {
+		name = "Shiyijian"
+		monarch_name = "Shiyijian"
+		dynasty = "Tuoba"
+		birth_date = 320.1.1
+		death_date = 376.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 3
+	}
+}
+
+338.1.1 = {
+	monarch = {
+		name = "Shiyijian" #Gaozu
+		dynasty = "Tuoba"
+		birth_date = 320.1.1
+		adm = 1
+		dip = 0
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Murong"
+		birth_date = 320.1.1
+		death_date = 341.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Elevation to the Northern Wei
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

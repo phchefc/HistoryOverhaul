@@ -1,0 +1,461 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+technology_group = eastern_nomad_group
+primary_culture = manchu
+religion = tengri_pagan_reformed
+capital = 4660
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+618.6.18 = {
+	monarch = {
+		name = "Egulang"
+		dynasty = "Heishui"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+620.1.1 = {
+	monarch = {
+		name = "(unknown)"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+720.1.1 = {
+	monarch = {
+		name = "Nishuliji"
+		dynasty = "Heishui"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+724.1.1 = {
+	monarch = {
+		name = "Wuzouge"
+		dynasty = "Heishui"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+725.1.1 = {
+	monarch = {
+		name = "Wusukemeng"
+		dynasty = "Heishui"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+730.1.1 = {
+	monarch = {
+		name = "(unknown)"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+750.1.1 = { technology_group = nomad_group }
+
+910.1.1 = {
+	monarch = {
+		name = "Ziluo"
+		dynasty = "Gao"
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}
+
+921.2.1 = {
+	monarch = {
+		name = "Agulang"
+		dynasty = "Heishui"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+925.1.1 = {
+	monarch = {
+		name = "(unknown)"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Wanggiya clan
+
+941.1.1 = {
+	capital = 2557
+	monarch = {
+		name = "Hanpu"
+		dynasty = "Wanggiya"
+		birth_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Mingyi"
+		dynasty = "Jietugudan"
+		birth_date = 900.1.1
+		death_date = 960.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wulu"
+		monarch_name = "De"
+		dynasty = "Wanggiya"
+		birth_date = 940.1.1
+		death_date = 962.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+960.1.1 = {
+	monarch = {
+		name = "Wulu"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Si"
+		birth_date = 940.1.1
+		death_date = 1000.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bahai"
+		monarch_name = "An"
+		dynasty = "Wanggiya"
+		birth_date = 955.1.1
+		death_date = 983.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+962.1.1 = {
+	monarch = {
+		name = "Bahai"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+970.1.1 = {
+	queen = {
+		country_of_origin = HSM
+		name = "Jie"
+		birth_date = 955.1.1
+		death_date = 1010.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Suike"
+		monarch_name = "Xianzu"
+		dynasty = "Wanggiya"
+		birth_date = 970.1.1
+		death_date = 1005.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+983.1.1 = {
+	monarch = {
+		name = "Suike"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Gongjing"
+		birth_date = 970.1.1
+		death_date = 1020.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shilu"
+		monarch_name = "Zhaozu"
+		dynasty = "Wanggiya"
+		birth_date = 983.1.1
+		death_date = 1040.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1005.1.1 = {
+	monarch = {
+		name = "Shilu"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Weishun"
+		dynasty = "Tushan"
+		birth_date = 985.1.1
+		death_date = 1040.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1021.1.1 = {
+	heir = {
+		name = "Wugunai"
+		monarch_name = "Jingzu"
+		dynasty = "Wanggiya"
+		birth_date = 1021.1.1
+		death_date = 1074.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1039.1.1 = {
+	monarch = {
+		name = "Wugunai"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Zhaosu"
+		dynasty = "Tangkuo"
+		birth_date = 1020.1.1
+		death_date = 1080.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Helibo"
+		monarch_name = "Shizu"
+		dynasty = "Wanggiya"
+		birth_date = 1039.1.1
+		death_date = 1092.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1074.1.1 = {
+	monarch = {
+		name = "Helibo"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Yijian"
+		dynasty = "Nalan"
+		birth_date = 1040.1.1
+		death_date = 1100.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Pocishu"
+		monarch_name = "Suzong"
+		dynasty = "Wanggiya"
+		birth_date = 1042.1.1
+		death_date = 1094.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1092.1.1 = {
+	monarch = {
+		name = "Pocishu"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yingge"
+		monarch_name = "Muzong"
+		dynasty = "Wanggiya"
+		birth_date = 1053.1.1
+		death_date = 1104.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1094.1.1 = {
+	monarch = {
+		name = "Yingge"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Zhenxiao"
+		dynasty = "Wugulun"
+		birth_date = 1040.1.1
+		death_date = 1100.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wuyashu"
+		monarch_name = "Kangzong"
+		dynasty = "Wanggiya"
+		birth_date = 1061.1.1
+		death_date = 1113.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1104.1.1 = {
+	monarch = {
+		name = "Wuyashu"
+		dynasty = "Wanggiya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Jingxi"
+		dynasty = "Tangkuo"
+		birth_date = 1060.1.1
+		death_date = 1120.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Aguda"
+		monarch_name = "Taizu"
+		dynasty = "Wanggiya"
+		birth_date = 1068.8.1
+		death_date = 1123.9.19
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 6
+		leader = {	name = "Wanggiya Aguda"     	type = general	fire = 4	shock = 4	manuever = 3	siege = 2  death_date = 1123.9.19 }
+	}
+}
+
+1113.1.1 = {
+	monarch = {
+		name = "Aguda" #Taizu
+		dynasty = "Wanggiya"
+		adm = 3
+		dip = 4
+		mil = 6
+		leader = {	name = "Wanggiya Aguda"     	type = general	fire = 4	shock = 4	manuever = 3	siege = 2  death_date = 1123.9.19 }
+	}
+	queen = {
+		country_of_origin = HSM
+		name = "Qinxian"
+		dynasty = "Heshilie"
+		birth_date = 1075.1.1
+		death_date = 1136.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wuqimai"
+		monarch_name = "Taizong"
+		dynasty = "Wanggiya"
+		birth_date = 1075.11.25
+		death_date = 1135.2.9
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Wanggiya Wuqimai"     	type = general	fire = 2	shock = 4	manuever = 0	siege = 1  death_date = 1135.2.9 }
+	}
+}
+
+1113.1.1 = { leader = {	name = "Xiemaoali"     	type = general	fire = 4	shock = 3	manuever = 0	siege = 0  death_date = 1150.1.1 } } # Not an actual death date
+
+# Elevation to Jin

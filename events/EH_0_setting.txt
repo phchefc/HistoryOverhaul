@@ -1,0 +1,1356 @@
+﻿namespace = eh_setting
+namespace = eh_tag_nations
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for Setting
+########################################################################
+
+# Setting
+country_event = {
+	id = eh_setting.1
+	title = "eh_setting.1.t"
+	desc = "eh_setting.1.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_setting.1.a"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			set_global_flag = eh_historic
+			clr_global_flag = eh_alternative
+		}
+	}
+	
+	option = {
+		name = "eh_setting.1.b"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			set_global_flag = eh_alternative
+			clr_global_flag = eh_historic
+		}
+	}
+	
+	option = {
+		name = "eh_setting.1.c"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			country_event = { id = eh_setting.3 days = 1 }
+		}
+	}
+}
+
+# Setting
+country_event = {
+	id = eh_setting.2
+	title = "eh_setting.2.t"
+	desc = "eh_setting.2.d"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		was_player = yes
+		NOT = { has_global_flag = eh_historic }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_setting.2.a"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			set_global_flag = eh_historic
+			clr_global_flag = eh_alternative
+		}
+	}
+	
+	option = {
+		name = "eh_setting.2.b"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			set_global_flag = eh_alternative
+			clr_global_flag = eh_historic
+		}
+	}
+}
+
+# Cheat
+country_event = {
+	id = eh_setting.3
+	title = "eh_setting.3.t"
+	desc = "eh_setting.3.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_setting.3.a"
+		ai_chance = { factor = 0 }
+		ROOT = { 
+			country_event = { id = eh_setting.4 days = 1 }
+		}
+	}
+	
+	option = {
+		name = "eh_setting.3.b"
+		ai_chance = { factor = 0 }
+		ROOT = { 
+			country_event = { id = eh_setting.5 days = 1 }
+		}
+	}
+	
+	option = {
+		name = "eh_setting.3.c"
+		ai_chance = { factor = 0 }
+		ROOT = { 
+			country_event = { id = eh_setting.6 days = 1 }
+		}
+	}
+	
+}
+
+# Cheat
+country_event = {
+	id = eh_setting.4
+	title = "eh_setting.4.t"
+	desc = "eh_setting.4.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_setting.4.a"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			add_treasury = 5000
+			add_adm_power = 1000
+			add_dip_power = 1000
+			add_mil_power = 1000
+			capital_scope = { add_next_institution_embracement = 80 }
+		}
+	}
+	
+	option = {
+		name = "eh_setting.4.b"
+		ai_chance = { factor = 0 }
+		ROOT = { change_government = monarchy }
+	}
+	
+	option = {
+		name = "eh_setting.4.c"
+		ai_chance = { factor = 0 }
+		ROOT = { change_government = republic }
+	}
+}
+
+# Cheat
+country_event = {
+	id = eh_setting.5
+	title = "eh_setting.5.t"
+	desc = "eh_setting.5.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_setting.5.a"
+		ai_chance = { factor = 0 }
+		ROOT = { 
+			country_event = { id = et.28 days = 1 }
+		}
+	}
+}
+
+# Cheat
+country_event = {
+	id = eh_setting.6
+	title = "eh_setting.6.t"
+	desc = "eh_setting.6.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_setting.6.a"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			add_country_modifier = {
+				name = warlordism
+				duration = 50000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_setting.6.b"
+		ai_chance = { factor = 0 }
+		ROOT = {
+			add_country_modifier = {
+				name = great_power
+				duration = 50000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_setting.6.c"
+		ai_chance = { factor = 0 }
+		every_country = {
+			limit = {
+				NOT = { has_country_flag = eh_override_name }
+			}
+			restore_country_name = yes
+		}
+		ROOT = { capital_scope = { add_next_institution_embracement = 80 } }
+	}
+}
+
+########################################################################
+# Changing tag Events
+########################################################################
+
+# Armenia
+country_event = {
+	id = eh_tag_nations.1
+	title = "eh_tag_nations.1.t"
+	desc = "eh_tag_nations.1.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ARM
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.1.a"
+		ai_chance = { factor = 100 }
+		ARM = {
+			set_country_flag = change_tags
+			change_tag = AM2 
+		}
+	}
+}
+
+# Austria-Hungary
+country_event = {
+	id = eh_tag_nations.2
+	title = "eh_tag_nations.2.t"
+	desc = "eh_tag_nations.2.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = HAB
+		NOT = { exists = AUH }
+		is_year = 1865
+		NOT = { is_year = 1918 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.2.a"
+		ai_chance = { factor = 100 }
+		HAB = {
+			set_country_flag = change_tags
+			change_tag = AUH 
+		}
+	}
+}
+
+# Brazil
+country_event = {
+	id = eh_tag_nations.3
+	title = "eh_tag_nations.3.t"
+	desc = "eh_tag_nations.3.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BRZ
+		is_year = 1800
+		NOT = { is_year = 1884 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.3.a"
+		ai_chance = { factor = 100 }
+		BRZ = { 
+			set_country_flag = change_tags
+			change_tag = BR2 
+		}
+	}
+}
+
+# Benin
+country_event = {
+	id = eh_tag_nations.4
+	title = "eh_tag_nations.4.t"
+	desc = "eh_tag_nations.4.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BEN
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.4.a"
+		ai_chance = { factor = 100 }
+		BEN = { 
+			set_country_flag = change_tags
+			change_tag = BJ2 
+		}
+	}
+}
+
+# Bulgaria
+country_event = {
+	id = eh_tag_nations.5
+	title = "eh_tag_nations.5.t"
+	desc = "eh_tag_nations.5.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BUL
+		is_year = 2
+		NOT = { is_year = 1800 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.5.a"
+		ai_chance = { factor = 100 }
+		BUL = { 
+			set_country_flag = change_tags
+			change_tag = BG2 
+		}
+	}
+}
+
+# Northern Wei, China
+country_event = {
+	id = eh_tag_nations.6
+	title = "eh_tag_nations.6.t"
+	desc = "eh_tag_nations.6.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = WEI
+		NOT = { exists = WEE }
+		is_year = 385
+		NOT = { is_year = 535 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.6.a"
+		ai_chance = { factor = 100 }
+		WEI = { 
+			set_country_flag = change_tags
+			change_tag = WEE 
+		}
+	}
+}
+
+# Revolutionary China
+country_event = {
+	id = eh_tag_nations.7
+	title = "eh_tag_nations.7.t"
+	desc = "eh_tag_nations.7.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHN
+		NOT = { exists = ROC }
+		is_year = 1912
+		NOT = { is_year = 1925 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.7.a"
+		ai_chance = { factor = 100 }
+		CHN = {
+			set_global_flag = eh_alternative
+			set_country_flag = change_tags
+			change_tag = ROC
+		}
+	}
+}
+
+# Nationalist China
+country_event = {
+	id = eh_tag_nations.8
+	title = "eh_tag_nations.8.t"
+	desc = "eh_tag_nations.8.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHN
+		NOT = { exists = FRM }
+		is_year = 1925
+		NOT = { is_year = 1948 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.8.a"
+		ai_chance = { factor = 100 }
+		CHN = {
+			set_global_flag = eh_alternative
+			set_country_flag = change_tags
+			change_tag = FRM
+			override_country_name = "Nationalist China"
+		}
+	}
+}
+
+# Cyprus
+country_event = {
+	id = eh_tag_nations.9
+	title = "eh_tag_nations.9.t"
+	desc = "eh_tag_nations.9.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CYP
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.9.a"
+		ai_chance = { factor = 100 }
+		CYP = { 
+			set_country_flag = change_tags
+			change_tag = CY2
+		}
+	}
+}
+
+# Egypt
+country_event = {
+	id = eh_tag_nations.10
+	title = "eh_tag_nations.10.t"
+	desc = "eh_tag_nations.10.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		is_year = 800
+		NOT = { is_year = 1957 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.10.a"
+		ai_chance = { factor = 100 }
+		EGY = { 
+			set_country_flag = change_tags
+			change_tag = EG2
+		}
+	}
+}
+
+# Estonia
+country_event = {
+	id = eh_tag_nations.11
+	title = "eh_tag_nations.11.t"
+	desc = "eh_tag_nations.11.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EST
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.11.a"
+		ai_chance = { factor = 100 }
+		EST = { 
+			set_country_flag = change_tags
+			change_tag = EE2
+		}
+	}
+}
+
+# Ethiopia
+country_event = {
+	id = eh_tag_nations.12
+	title = "eh_tag_nations.12.t"
+	desc = "eh_tag_nations.12.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		is_year = 2
+		NOT = { is_year = 1990 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.12.a"
+		ai_chance = { factor = 100 }
+		ETH = { 
+			set_country_flag = change_tags
+			change_tag = ET2
+		}
+	}
+}
+
+# Finland
+country_event = {
+	id = eh_tag_nations.13
+	title = "eh_tag_nations.13.t"
+	desc = "eh_tag_nations.13.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FIN
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.13.a"
+		ai_chance = { factor = 100 }
+		FIN = { 
+			set_country_flag = change_tags
+			change_tag = FI2
+		}
+	}
+}
+
+# Revolutionary France
+country_event = {
+	id = eh_tag_nations.14
+	title = "eh_tag_nations.14.t"
+	desc = "eh_tag_nations.14.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { exists = FR2 }
+		is_year = 1795
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.14.a"
+		ai_chance = { factor = 100 }
+		FRA = {
+			set_country_flag = change_tags
+			change_tag = FR2
+		}
+	}
+}
+
+# German Empire
+country_event = {
+	id = eh_tag_nations.15
+	title = "eh_tag_nations.15.t"
+	desc = "eh_tag_nations.15.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		is_year = 1800
+		NOT = { is_year = 1918 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.15.a"
+		ai_chance = { factor = 100 }
+		GER = { 
+			set_country_flag = change_tags
+			change_tag = DE2
+		}
+	}
+}
+
+# German Reich
+country_event = {
+	id = eh_tag_nations.16
+	title = "eh_tag_nations.16.t"
+	desc = "eh_tag_nations.16.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		NOT = { exists = DEF }
+		AND = {
+			is_year = 1934
+			NOT = { is_year = 1945 }
+			has_global_flag = eh_historic
+			NOT = { has_country_flag = change_tags }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.16.a"
+		ai_chance = { factor = 100 }
+		GER = {
+			set_country_flag = change_tags
+			change_tag = DEF
+		}
+	}
+}
+
+# Greece
+country_event = {
+	id = eh_tag_nations.17
+	title = "eh_tag_nations.17.t"
+	desc = "eh_tag_nations.17.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GRE
+		is_year = 2
+		NOT = { is_year = 1969 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.17.a"
+		ai_chance = { factor = 100 }
+		GRE = { 
+			set_country_flag = change_tags
+			change_tag = GR2
+		}
+	}
+}
+
+# Hungary
+country_event = {
+	id = eh_tag_nations.18
+	title = "eh_tag_nations.18.t"
+	desc = "eh_tag_nations.18.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HUN
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.18.a"
+		ai_chance = { factor = 100 }
+		HUN = { 
+			set_country_flag = change_tags
+			change_tag = HU2
+		}
+	}
+}
+
+# Iceland
+country_event = {
+	id = eh_tag_nations.19
+	title = "eh_tag_nations.19.t"
+	desc = "eh_tag_nations.19.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ICE
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.19.a"
+		ai_chance = { factor = 100 }
+		ICE = { 
+			set_country_flag = change_tags
+			change_tag = IS2
+		}
+	}
+}
+
+# East India Company, India
+country_event = {
+	id = eh_tag_nations.20
+	title = "eh_tag_nations.20.t"
+	desc = "eh_tag_nations.20.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+		NOT = { exists = EIC }
+		is_year = 1600
+		NOT = { is_year = 1856 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "eh_tag_nations.20.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			create_subject = {
+				subject_type = private_enterprise
+				subject = EIC
+			}
+		}
+		GBR = {
+			create_subject = {
+				subject_type = private_enterprise
+				subject = EIC
+			}
+		}
+		EIC = {
+			set_country_flag = change_tags
+			india_superregion = {
+				limit = {
+					AND = {
+						owned_by = ROOT
+						NOT = { owned_by = EIC }
+					}
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = PREV
+			}
+			khorasan_region = {
+				limit = {
+					AND = {
+						owned_by = ROOT
+						NOT = { owned_by = EIC }
+					}
+				}
+				cede_province = EIC
+				add_core = EIC
+				remove_core = PREV
+			}
+		}
+	}
+}
+
+# British Raj, India
+country_event = {
+	id = eh_tag_nations.21
+	title = "eh_tag_nations.21.t"
+	desc = "eh_tag_nations.21.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = GBR
+		NOT = { exists = BRJ }
+		is_year = 1859
+		NOT = { is_year = 1946 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.21.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			create_subject = {
+				subject_type = crown_colony
+				subject = BRJ
+			}
+		}
+		BRJ = {
+			set_country_flag = change_tags
+			inherit = EIC
+			india_superregion = {
+				limit = {
+					AND = {
+						owned_by = GBR
+						NOT = { owned_by = BRJ }
+					}
+				}
+				cede_province = BRJ
+				add_core = BRJ
+				remove_core = GBR
+			}
+			khorasan_region = {
+				limit = {
+					AND = {
+						owned_by = GBR
+						NOT = { owned_by = BRJ }
+					}
+				}
+				cede_province = BRJ
+				add_core = BRJ
+				remove_core = GBR
+			}
+			burma_region = {
+				limit = {
+					AND = {
+						owned_by = GBR
+						NOT = { owned_by = BRJ }
+					}
+				}
+				cede_province = BRJ
+				add_core = BRJ
+				remove_core = GBR
+			}
+		}
+	}
+}
+
+# Iraq
+country_event = {
+	id = eh_tag_nations.22
+	title = "eh_tag_nations.22.t"
+	desc = "eh_tag_nations.22.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRQ
+		is_year = 2
+		NOT = { is_year = 1969 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.22.a"
+		ai_chance = { factor = 100 }
+		IRQ = { 
+			set_country_flag = change_tags
+			change_tag = IQ2
+		}
+	}
+}
+
+# Ireland
+country_event = {
+	id = eh_tag_nations.23
+	title = "eh_tag_nations.23.t"
+	desc = "eh_tag_nations.23.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.23.a"
+		ai_chance = { factor = 100 }
+		IRE = { 
+			set_country_flag = change_tags
+			change_tag = IE2
+		}
+	}
+}
+
+# Italy
+country_event = {
+	id = eh_tag_nations.24
+	title = "eh_tag_nations.24.t"
+	desc = "eh_tag_nations.24.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITA
+		is_year = 2
+		NOT = { is_year = 1850 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.24.a"
+		ai_chance = { factor = 100 }
+		ITA = { 
+			set_country_flag = change_tags
+			change_tag = IT2
+		}
+	}
+}
+
+# Fascist Italy
+country_event = {
+	id = eh_tag_nations.25
+	title = "eh_tag_nations.25.t"
+	desc = "eh_tag_nations.25.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITA
+		NOT = { exists = ITF }
+		is_year = 1940
+		NOT = { is_year = 1942 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.25.a"
+		ai_chance = { factor = 100 }
+		ITA = { 
+			set_country_flag = change_tags
+			change_tag = ITF
+		}
+	}
+}
+
+# Lithuania
+country_event = {
+	id = eh_tag_nations.26
+	title = "eh_tag_nations.26.t"
+	desc = "eh_tag_nations.26.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LIT
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.26.a"
+		ai_chance = { factor = 100 }
+		LIT = { 
+			set_country_flag = change_tags
+			change_tag = LT2
+		}
+	}
+}
+
+# Luxembourg
+country_event = {
+	id = eh_tag_nations.27
+	title = "eh_tag_nations.27.t"
+	desc = "eh_tag_nations.27.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LUX
+		is_year = 2
+		NOT = { is_year = 1869 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.27.a"
+		ai_chance = { factor = 100 }
+		LUX = { 
+			set_country_flag = change_tags
+			change_tag = LU2
+		}
+	}
+}
+
+# Mali
+country_event = {
+	id = eh_tag_nations.28
+	title = "eh_tag_nations.28.t"
+	desc = "eh_tag_nations.28.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MAL
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.28.a"
+		ai_chance = { factor = 100 }
+		MAL = { 
+			set_country_flag = change_tags
+			change_tag = ML2
+		}
+	}
+}
+
+# Norway
+country_event = {
+	id = eh_tag_nations.29
+	title = "eh_tag_nations.29.t"
+	desc = "eh_tag_nations.29.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NOR
+		is_year = 2
+		NOT = { is_year = 1800 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.29.a"
+		ai_chance = { factor = 100 }
+		NOR = { 
+			set_country_flag = change_tags
+			change_tag = NO2
+		}
+	}
+}
+
+# Oman
+country_event = {
+	id = eh_tag_nations.30
+	title = "eh_tag_nations.30.t"
+	desc = "eh_tag_nations.30.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = OMA
+		is_year = 2
+		NOT = { is_year = 1969 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.30.a"
+		ai_chance = { factor = 100 }
+		OMA = { 
+			set_country_flag = change_tags
+			change_tag = OM2
+		}
+	}
+}
+
+# Poland
+country_event = {
+	id = eh_tag_nations.31
+	title = "eh_tag_nations.31.t"
+	desc = "eh_tag_nations.31.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POL
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.31.a"
+		ai_chance = { factor = 100 }
+		POL = { 
+			set_country_flag = change_tags
+			change_tag = PO2
+		}
+	}
+}
+
+# Serbia
+country_event = {
+	id = eh_tag_nations.32
+	title = "eh_tag_nations.32.t"
+	desc = "eh_tag_nations.32.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SER
+		is_year = 2
+		NOT = { is_year = 1800 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.32.a"
+		ai_chance = { factor = 100 }
+		SER = { 
+			set_country_flag = change_tags
+			change_tag = RS2
+		}
+	}
+}
+
+# South Africa
+country_event = {
+	id = eh_tag_nations.33
+	title = "eh_tag_nations.33.t"
+	desc = "eh_tag_nations.33.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RSA
+		is_year = 1850
+		NOT = { is_year = 1989 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.33.a"
+		ai_chance = { factor = 100 }
+		RSA = { 
+			set_country_flag = change_tags
+			change_tag = ZA2
+		}
+	}
+}
+
+# Syria
+country_event = {
+	id = eh_tag_nations.34
+	title = "eh_tag_nations.34.t"
+	desc = "eh_tag_nations.34.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SYR
+		is_year = 2
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = change_tags }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_tag_nations.34.a"
+		ai_chance = { factor = 100 }
+		SYR = { 
+			set_country_flag = change_tags
+			change_tag = SY2
+		}
+	}
+}
+
+# EH version

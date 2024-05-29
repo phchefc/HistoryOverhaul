@@ -1,0 +1,60 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = gan
+capital = 686
+
+# End of the Western Han dynasty (Yang)
+
+23.10.5 = {
+	monarch = {
+		name = "Xian"
+		dynasty = "Li"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Yang)
+
+189.9.28 = {
+	capital = 683
+	monarch = {
+		name = "Yao"
+		dynasty = "Liu"
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Jiangxi)
+
+885.1.1 = {
+	capital = 683
+	monarch = {
+		name = "(Jiangxi Circuit)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

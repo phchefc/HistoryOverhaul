@@ -1,0 +1,523 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = FUJ
+capital = 1819	# Tosa
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1000.1.1 = {
+	set_country_flag = daimyo
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1600.10.21 = {
+	monarch = {
+		name = "Kazutoyo"
+		dynasty = "Yamauchi"
+		birth_date = 1545.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Chiyo"
+		dynasty = "Yamauchi"
+		birth_date = 1557.1.1
+		death_date = 1617.12.31
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tadayoshi"
+		monarch_name = "Tadayoshi"
+		dynasty = "Yamauchi"
+		birth_date = 1592.1.1
+		death_date = 1665.1.10
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1605.11.1 = {
+	monarch = {
+		name = "Tadayoshi"
+		monarch_name = "Tadayoshi"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Kumahime"
+		dynasty = "Kushige"
+		birth_date = 1595.1.1
+		death_date = 1632.4.12
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1609.11.25 = {
+	heir = {
+		name = "Tadatoyo"
+		monarch_name = "Tadatoyo"
+		dynasty = "Yamauchi"
+		birth_date = 1609.11.25
+		death_date = 1669.8.31
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1656.7.3 = {
+	monarch = {
+		name = "Tadatoyo"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Nagahime"
+		dynasty = "Ikeda"
+		birth_date = 1610.1.1
+		death_date = 1670.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Toyomasa"
+		monarch_name = "Toyomasa"
+		dynasty = "Yamauchi"
+		birth_date = 1641.10.3
+		death_date = 1700.10.25
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1669.6.15 = {
+	monarch = {
+		name = "Toyomasa"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Senjuin"
+		dynasty = "Matsudaira"
+		birth_date = 1645.1.1
+		death_date = 1705.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1672.3.1 = {
+	heir = {
+		name = "Toyofusa"
+		monarch_name = "Toyofusa"
+		dynasty = "Yamauchi"
+		birth_date = 1672.3.1
+		death_date = 1706.7.16
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1700.9.14 = {
+	monarch = {
+		name = "Toyofusa"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Senjuin"
+		dynasty = "Yamauchi"
+		birth_date = 1645.1.1
+		death_date = 1705.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Toyotaka"
+		monarch_name = "Toyotaka"
+		dynasty = "Yamauchi"
+		birth_date = 1673.12.23
+		death_date = 1720.5.20
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1706.6.7 = {
+	monarch = {
+		name = "Toyotaka"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1711.9.14 = {
+	heir = {
+		name = "Toyotsune"
+		monarch_name = "Toyotsune"
+		dynasty = "Yamauchi"
+		birth_date = 1711.9.14
+		death_date = 1725.10.7
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1720.4.14 = {
+	monarch = {
+		name = "Toyotsune"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Ikuhime"
+		dynasty = "Matsudaira"
+		birth_date = 1715.1.1
+		death_date = 1775.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Toyonobu"
+		monarch_name = "Toyonobu"
+		dynasty = "Yamauchi"
+		birth_date = 1712.7.11
+		death_date = 1768.1.8
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1725.9.2 = {
+	monarch = {
+		name = "Toyonobu"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Nagahime"
+		dynasty = "Yamauchi"
+		birth_date = 1715.1.1
+		death_date = 1775.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1750.2.12 = {
+	heir = {
+		name = "Toyochika"
+		monarch_name = "Toyochika"
+		dynasty = "Yamauchi"
+		birth_date = 1750.2.12
+		death_date = 1789.10.12
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1767.11.19 = {
+	monarch = {
+		name = "Toyochika"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MRI
+		name = "Tomoko"
+		dynasty = "Mori"
+		birth_date = 1749.1.1
+		death_date = 1780.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1773.6.5 = {
+	heir = {
+		name = "Toyokazu"
+		monarch_name = "Toyokazu"
+		dynasty = "Yamauchi"
+		birth_date = 1773.6.5
+		death_date = 1825.9.15
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1789.8.24 = {
+	monarch = {
+		name = "Toyokazu"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		name = "Jun"
+		dynasty = "Todo"
+		birth_date = 1775.1.1
+		death_date = 1835.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1793.6.24 = {
+	heir = {
+		name = "Toyo'oki"
+		monarch_name = "Toyo'oki"
+		dynasty = "Yamauchi"
+		birth_date = 1793.6.24
+		death_date = 1809.5.3
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1808.2.5 = {
+	monarch = {
+		name = "Toyo'oki"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1808.2.5 = {
+	heir = {
+		name = "Toyosuke"
+		monarch_name = "Toyosuke"
+		dynasty = "Yamauchi"
+		birth_date = 1794.11.9
+		death_date = 1872.2.12
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1809.3.19 = {
+	monarch = {
+		name = "Toyosuke"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Yusenin"
+		dynasty = "Ikeda"
+		birth_date = 1795.1.1
+		death_date = 1855.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1815.4.8 = {
+	heir = {
+		name = "Toyoteru"
+		monarch_name = "Toyoteru"
+		dynasty = "Yamauchi"
+		birth_date = 1815.4.8
+		death_date = 1848.8.8
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1843.3.7 = {
+	monarch = {
+		name = "Toyoteru"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SMZ
+		name = "Kohime"
+		dynasty = "Shimazu"
+		birth_date = 1815.10.16
+		death_date = 1880.11.16
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Toyoatsu"
+		monarch_name = "Toyoatsu"
+		dynasty = "Yamauchi"
+		birth_date = 1824.7.2
+		death_date = 1848.10.14
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1848.7.10 = {
+	monarch = {
+		name = "Toyoatsu"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1848.7.10 = {
+	heir = {
+		name = "Toyoshige"
+		monarch_name = "Toyoshige"
+		dynasty = "Yamauchi"
+		birth_date = 1827.11.27
+		death_date = 1872.7.26
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1848.10.14 = {
+	monarch = {
+		name = "Toyoshige"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Masako"
+		dynasty = "Sanjo"
+		birth_date = 1830.1.1
+		death_date = 1890.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Toyonori"
+		monarch_name = "Toyonori"
+		dynasty = "Yamauchi"
+		birth_date = 1846.5.12
+		death_date = 1886.7.13
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1859.2.26 = {
+	monarch = {
+		name = "Toyonori"
+		dynasty = "Yamauchi"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MRI
+		dynasty = "Mori"
+		birth_date = 1850.1.1
+		death_date = 1910.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

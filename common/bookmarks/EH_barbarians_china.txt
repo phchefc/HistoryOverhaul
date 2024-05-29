@@ -1,0 +1,16 @@
+
+bookmark =
+{
+	name = "BARBARIAN_CHINA_NAME"
+	desc = "BARBARIAN_CHINA_DESC"
+	date = 330.1.1
+	
+	country = JIN
+	country = ZAO
+	country = YAN
+	country = DAX
+	country = ROU
+	country = GOG
+}
+
+# EH version

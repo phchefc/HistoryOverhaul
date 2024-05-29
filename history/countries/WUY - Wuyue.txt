@@ -1,0 +1,200 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = wu
+capital = 684	# Qiantang
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+896.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Liu" #Wusu
+		dynasty = "Qian"
+		birth_date = 852.3.10
+		adm = 4
+		dip = 4
+		mil = 3
+		leader = {	name = "Qian Liu"     	type = general	fire = 1	shock = 2	manuever = 1	siege = 1  death_date = 932.5.6 }
+	}
+	queen = {
+		country_of_origin = WUY
+		name = "Zhuangmu"
+		dynasty = "Wu"
+		birth_date = 858.1.1
+		death_date = 919.12.18
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yuanguan"
+		monarch_name = "Wenmu"
+		dynasty = "Qian"
+		birth_date = 887.11.30
+		death_date = 941.9.17
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+907.6.16 = { government_rank = 2 }
+
+932.5.6 = {
+	monarch = {
+		name = "Yuanguan" #Wenmu
+		dynasty = "Qian"
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+932.5.6 = {
+	heir = {
+		name = "Hongzuo"
+		monarch_name = "Zhongxian"
+		dynasty = "Qian"
+		birth_date = 928.8.14
+		death_date = 947.6.22
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+937.1.1 = {
+	queen = {
+		country_of_origin = WUY
+		name = "Gongmu"
+		dynasty = "Ma"
+		birth_date = 890.1.1
+		death_date = 939.11.28
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+939.11.28 = {
+	queen = {
+		country_of_origin = WUY
+		name = "Xinyue"
+		dynasty = "Xu"
+		birth_date = 902.1.1
+		death_date = 946.8.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+941.9.17 = {
+	monarch = {
+		name = "Hongzuo" #Zhongxian 
+		dynasty = "Qian"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WUY
+		dynasty = "Du"
+		birth_date = 925.1.1
+		death_date = 943.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hongzong"
+		monarch_name = "Zhongxun"
+		dynasty = "Qian"
+		birth_date = 929.1.1
+		death_date = 971.1.1
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+943.1.1 = {
+	queen = {
+		country_of_origin = WUY
+		dynasty = "Yang"
+		birth_date = 930.1.1
+		death_date = 947.6.22
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+947.6.22 = {
+	monarch = {
+		name = "Hongzong" #Zhongxun
+		dynasty = "Qian"
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+# Coup
+
+947.8.1 = {
+	monarch = {
+		name = "Chu" #Zhongyi
+		dynasty = "Qian"
+		birth_date = 929.9.29
+		adm = 4
+		dip = 4
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WUY
+		name = "Taizhen"
+		dynasty = "Sun"
+		birth_date = 930.1.1
+		death_date = 976.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+976.1.1 = {
+	queen = {
+		country_of_origin = WUY
+		dynasty = "Yu"
+		birth_date = 930.1.1
+		death_date = 990.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,2906 @@
+namespace = eh_south_america
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the South America
+########################################################################
+
+# Huari culture
+country_event = {
+	id = eh_south_america.1
+	title = "eh_south_america.1.t"
+	desc = "eh_south_america.1.d"
+	picture = NATIVES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOC
+		is_year = 500
+		NOT = { is_year = 510 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			MOC = {
+				change_tag = HRI
+				inherit = NAZ
+				cajamarca_area = {
+					limit = {
+						NOT = { owned_by = HRI }
+					}
+					cede_province = HRI
+					add_core = HRI
+				}
+				huanuco_area = {
+					limit = {
+						NOT = { owned_by = HRI }
+					}
+					cede_province = HRI
+					add_core = HRI
+				}
+				peruan_coast = {
+					limit = {
+						NOT = { owned_by = HRI }
+					}
+					cede_province = HRI
+					add_core = HRI
+					remove_core = NAZ
+				}
+				807 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HRI }
+						}
+					}
+					cede_province = HRI
+					add_core = HRI
+				}
+				808 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HRI }
+						}
+					}
+					cede_province = HRI
+					add_core = HRI
+				}
+				2824 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HRI }
+						}
+					}
+					cede_province = HRI
+					add_core = HRI
+				}
+			}
+			TWN = {
+				antisuyu_area = {
+					limit = {
+						NOT = { owned_by = TWN }
+					}
+					cede_province = TWN
+					add_core = TWN
+				}
+				potosi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TWN }
+							NOT = { province_id = 795 }
+						}
+					}
+					cede_province = TWN
+					add_core = TWN
+				}
+				796 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TWN }
+						}
+					}
+					cede_province = TWN
+					add_core = TWN
+				}
+				2942 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TWN }
+						}
+					}
+					cede_province = TWN
+					add_core = TWN
+				}
+				2829 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TWN }
+						}
+					}
+					cede_province = TWN
+					add_core = TWN
+				}
+				793 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TWN }
+						}
+					}
+					cede_province = TWN
+					add_core = TWN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Chimu culture
+country_event = {
+	id = eh_south_america.2
+	title = "eh_south_america.2.t"
+	desc = "eh_south_america.2.d"
+	picture = NATIVES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HRI
+		is_year = 900
+		NOT = { is_year = 910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			CHM = {
+				chimor_area = {
+					limit = {
+						NOT = { owned_by = CHM }
+					}
+					cede_province = CHM
+					add_core = CHM
+					remove_core = HRI
+				}
+			}
+			QTO = {
+				quito_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = QTO }
+							NOT = { province_id = 818 }
+						}
+					}
+					cede_province = QTO
+					add_core = QTO
+				}
+			}
+			CJA = {
+				813 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CJA }
+						}
+					}
+					cede_province = CJA
+					add_core = CJA
+					remove_core = HRI
+				}
+				2824 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CJA }
+						}
+					}
+					cede_province = CJA
+					add_core = CJA
+					remove_core = HRI
+				}
+			}
+			CYA = {
+				2943 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CYA }
+						}
+					}
+					cede_province = CYA
+					add_core = CYA
+					remove_core = HRI
+				}
+				2823 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CYA }
+						}
+					}
+					cede_province = CYA
+					add_core = CYA
+					remove_core = HRI
+				}
+				2825 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CYA }
+						}
+					}
+					cede_province = CYA
+					add_core = CYA
+					remove_core = HRI
+				}
+			}
+			ICM = {
+				809 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ICM }
+						}
+					}
+					cede_province = ICM
+					add_core = ICM
+					remove_core = HRI
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.2.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Fall of the Huari
+country_event = {
+	id = eh_south_america.3
+	title = "eh_south_america.3.t"
+	desc = "eh_south_america.3.d"
+	picture = NATIVES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HRI
+		is_year = 1200
+		NOT = { is_year = 1210 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			HRI = { change_tag = CSU }
+			TWN = { change_tag = CLA }
+			HJA = {
+				814 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HJA }
+						}
+					}
+					cede_province = HJA
+					add_core = HJA
+					remove_core = CSU
+				}
+				2825 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HJA }
+						}
+					}
+					cede_province = HJA
+					add_core = HJA
+					remove_core = CYA
+				}
+				2827 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HJA }
+						}
+					}
+					cede_province = HJA
+					add_core = HJA
+					remove_core = CSU
+				}
+			}
+			WKA = {
+				810 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WKA }
+						}
+					}
+					cede_province = WKA
+					add_core = WKA
+					remove_core = CSU
+				}
+				811 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WKA }
+						}
+					}
+					cede_province = WKA
+					add_core = WKA
+					remove_core = CSU
+				}
+			}
+			NAZ = {
+				peruan_coast = {
+					limit = {
+						NOT = { owned_by = NAZ }
+					}
+					cede_province = NAZ
+					add_core = NAZ
+					remove_core = CSU
+				}
+				
+			}
+			CRA = {
+				potosi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CRA }
+							NOT = { province_id = 795 }
+						}
+					}
+					cede_province = CRA
+					add_core = CRA
+					remove_core = CLA
+				}
+				797 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRA }
+						}
+					}
+					cede_province = CRA
+					add_core = CRA
+					remove_core = CLA
+				}
+				2942 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRA }
+						}
+					}
+					cede_province = CRA
+					add_core = CRA
+					remove_core = CLA
+				}
+			}
+			CCQ = {
+				794 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCQ }
+						}
+					}
+					cede_province = CCQ
+					add_core = CCQ
+				}
+				2838 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCQ }
+						}
+					}
+					cede_province = CCQ
+					add_core = CCQ
+				}
+				2837 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CCQ }
+						}
+					}
+					cede_province = CCQ
+					add_core = CCQ
+				}
+			}
+			796 = {
+				cede_province = ---
+				remove_core = CLA
+			}
+			793 = {
+				cede_province = ---
+				remove_core = CLA
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.3.a"
+		ai_chance = { factor = 100 }
+		CSU = {
+			define_ruler = {
+				dynasty = "Hanan"
+			}
+			define_heir = {
+				dynasty = "Hanan"
+			}
+		}
+	}
+}
+
+# Rise of the Cusco
+country_event = {
+	id = eh_south_america.4
+	title = "eh_south_america.4.t"
+	desc = "eh_south_america.4.d"
+	picture = INCA_CITY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CSU
+		is_year = 1465
+		NOT = { is_year = 1470 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			CSU = {
+				change_tag = INC
+				inherit = NAZ
+				inherit = CJA
+				inherit = ICM
+				inherit = HJA
+				inherit = WKA
+				kuntisuyu_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+				}
+				peruan_coast = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = NAZ
+				}
+				huanuco_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = WKA
+				}
+				cajamarca_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INC }
+							NOT = { province_id = 2943 }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CJA
+				}
+				804 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INC }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CLA
+				}
+			}
+			CRA = {
+				2838 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CRA }
+						}
+					}
+					cede_province = CRA
+					add_core = CRA
+				}
+			}
+			PCJ = {
+				potosi_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PCJ }
+							NOT = { province_id = 2738 }
+						}
+					}
+					cede_province = PCJ
+					add_core = PCJ
+					remove_core = CRA
+				}
+				795 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PCJ }
+						}
+					}
+					cede_province = PCJ
+					add_core = PCJ
+					remove_core = CLA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.4.a"
+		ai_chance = { factor = 100 }
+		INC = {
+			change_government = monarchy
+			add_government_reform = andean_empire_reform
+			set_government_rank = 3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			set_capital = 808
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Pachacuti Inca"
+				dynasty = "Hanan"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 6
+				age = 52
+			}
+			define_consort = {
+				name = "Mama"
+				dynasty = "Anawarkhi"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Tupac Inca Yupanqui"
+				dynasty = "Hanan"
+				change_adm = 6
+				change_dip = 4
+				change_mil = 5
+				age = 25
+			}
+		}
+	}
+}
+
+# Expansion of the Inca Empire
+country_event = {
+	id = eh_south_america.5
+	title = "eh_south_america.5.t"
+	desc = "eh_south_america.5.d"
+	picture = GREAT_BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = INC
+		is_year = 1470
+		NOT = { is_year = 1480 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			INC = {
+				inherit = CHM
+				inherit = QTO
+				inherit = CYA
+				inherit = CLA
+				inherit = CRA
+				inherit = PCJ
+				cajamarca_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CYA
+				}
+				quito_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = QTO
+				}
+				chimor_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CHM
+				}
+				antisuyu_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CLA
+				}
+				upper_peru = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CRA
+				}
+				potosi_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = PCJ
+				}
+				northern_chile_area = {
+					limit = {
+						NOT = { owned_by = INC }
+					}
+					cede_province = INC
+					add_core = INC
+				}
+				tucuman_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = INC }
+							NOT = { province_id = 794 }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CCQ
+				}
+				787 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INC }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+				}
+				2823 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INC }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+					remove_core = CYA
+				}
+				2862 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INC }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+				}
+				2843 = {
+					if = {
+						limit = {
+							NOT = { owned_by = INC }
+						}
+					}
+					cede_province = INC
+					add_core = INC
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.5.a"
+		ai_chance = { factor = 100 }
+		INC = {
+			define_ruler = {
+				name = "Tupac Inca Yupanqui"
+				dynasty = "Hanan"
+				change_adm = 6
+				change_dip = 4
+				change_mil = 5
+				age = 35
+			}
+			define_consort = {
+				name = "Mama"
+				dynasty = "Ocllo"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Hanan"
+			}
+		}
+	}
+}
+
+# Spanish conquest of Peru
+country_event = {
+	id = eh_south_america.6
+	title = "eh_south_america.6.t"
+	desc = "eh_south_america.6.d"
+	picture = CONQUISTADORS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = INC
+		is_year = 1533
+		NOT = { is_year = 1535 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				set_country_flag = european_colonization_americas
+				peru_region = { discover_country = SPA }
+				2944 = {
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					infantry = SPA
+					cavalry = SPA
+					cavalry = SPA
+					artillery = SPA
+					artillery = SPA
+					artillery = SPA
+					artillery = SPA
+				}
+				define_conquistador = {
+					name = "Francisco Pizarro"
+					shock = 3
+					fire = 3
+					manuever = 3
+					siege = 1
+				}
+				define_conquistador = {
+					name = "Diego de Almagro"
+					shock = 3
+					fire = 3
+					manuever = 6
+					siege = 0
+				}
+				kill_leader = {
+					type = "Hernan Cortes"
+				}
+				country_event = { id = eh_spanish.12 days = 300 }
+			}
+			INC = {
+				set_country_flag = european_colonization_americas
+				add_stability = -1
+				add_corruption = 10
+				add_prestige = -10
+				add_legitimacy = -10
+				add_manpower = -10
+				add_army_tradition = -10
+				add_army_professionalism = -0.1
+				add_inflation = 1
+				define_ruler = {
+					name = "Atahuallpa"
+					dynasty = "Hanan"
+					change_adm = 3
+					change_dip = 4
+					change_mil = 0
+					age = 33
+				}
+				define_consort = {
+					name = "Coya"
+					dynasty = "Asarpay"
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					female = yes
+				}
+				define_heir = {
+					dynasty = "Hanan"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.6.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				INC = { was_player = yes }
+			}
+			switch_tag = SPA
+		}
+		SPA = {
+			declare_war_with_cb = {
+				who = INC
+				casus_belli = cb_conquest
+				war_goal_province = 808
+			}
+		}
+	}
+}
+
+# Viceroyalty of Peru
+country_event = {
+	id = eh_south_america.7
+	title = "eh_south_america.7.t"
+	desc = "eh_south_america.7.d"
+	picture = CONQUISTADORS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1545
+		NOT = { is_year = 1555 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				northern_chile_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				central_chile_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 784 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				coquivacoa_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				bogota_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				cordillera_occidental_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				tucuman_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 794 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				campeche_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = XIU
+				}
+				yucatan_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = XIU
+				}
+				east_yucatan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 4588 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = MAY
+				}
+				misiones_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 2855 }
+							NOT = { province_id = 2859 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				491 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				777 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				856 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = CCM
+				}
+				858 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = CCM
+				}
+				2002 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2663 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2615 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = GUA
+				}
+				2830 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = INC
+				}
+				2808 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4609 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4612 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				pernambuco_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				bahia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { province_id = 2914 }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				633 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				635 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2695 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				761 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				766 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.7.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# European colonization of South America in 1600s
+country_event = {
+	id = eh_south_america.8
+	title = "eh_south_america.8.t"
+	desc = "eh_south_america.8.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				794 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = CCQ
+				}
+				2803 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				742 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			ENG = {
+				500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				501 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+			}
+			FRA = {
+				746 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			NED = {
+				guyana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 2803 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				suriname_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 746 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			POR = {
+				grao_para_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { province_id = 2929 }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				749 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2100 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2897 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2885 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2913 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2915 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				754 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2886 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.8.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# European colonization of South America in 1650s
+country_event = {
+	id = eh_south_america.9
+	title = "eh_south_america.9.t"
+	desc = "eh_south_america.9.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				742 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2939 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			ENG = {
+				487 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SPA
+				}
+				496 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SPA
+				}
+				843 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SPA
+				}
+				4589 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SPA
+				}
+				3254 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SPA
+				}
+			}
+			FRA = {
+				495 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				497 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				499 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				500 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				1881 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			POR = {
+				sao_francisco_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { province_id = 2918 }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				ceara_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				piaui_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = POR }
+							NOT = { province_id = 2925 }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				sao_paolo_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				west_sao_paolo_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				747 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				749 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				762 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2887 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2899 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2927 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2929 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2890 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2938 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.9.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# European colonization of South America in 1700s
+country_event = {
+	id = eh_south_america.10
+	title = "eh_south_america.10.t"
+	desc = "eh_south_america.10.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				upper_guyana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 2931 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				pontal_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				758 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2909 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2919 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2918 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.10.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# European colonization of South America in 1750s
+country_event = {
+	id = eh_south_america.11
+	title = "eh_south_america.11.t"
+	desc = "eh_south_america.11.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPA = {
+				ucayali_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				779 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				3034 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2811 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2816 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2855 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2859 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2879 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				guapore_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2884 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2924 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2933 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.11.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# European colonization of South America in 1800s
+country_event = {
+	id = eh_south_america.12
+	title = "eh_south_america.12.t"
+	desc = "eh_south_america.12.d"
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				502 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SPA
+				}
+				743 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = NED
+				}
+				744 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = NED
+				}
+				2931 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.12.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# South American wars of Independence
+country_event = {
+	id = eh_south_america.13
+	title = "eh_south_america.13.t"
+	desc = "eh_south_america.13.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			COL = {
+				coquivacoa_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				cordillera_occidental_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				colombian_amazonas_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				western_llanos = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				bogota_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				popayan_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				panama_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				817 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COL }
+						}
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				818 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COL }
+						}
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+			}
+			VNZ = {
+				venezuela_area = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = SPA
+				}
+				central_llanos_area = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = SPA
+				}
+				eastern_llanos = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = SPA
+				}
+				maracaibo_area = {
+					limit = {
+						NOT = { owned_by = VNZ }
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = SPA
+				}
+				upper_guyana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = VNZ }
+							NOT = { province_id = 2931 }
+						}
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = SPA
+				}
+				2803 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VNZ }
+						}
+					}
+					cede_province = VNZ
+					add_core = VNZ
+					remove_core = SPA
+				}
+			}
+			CHL = {
+				central_chile_area = {
+					limit = {
+						NOT = { owned_by = CHL }
+					}
+					cede_province = CHL
+					add_core = CHL
+					remove_core = SPA
+				}
+				southern_chile_area = {
+					limit = {
+						NOT = { owned_by = CHL }
+					}
+					cede_province = CHL
+					add_core = CHL
+					remove_core = SPA
+				}
+				792 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHL }
+						}
+					}
+					cede_province = CHL
+					add_core = CHL
+					remove_core = SPA
+				}
+			}
+			PRG = {
+				paraguay_area = {
+					limit = {
+						NOT = { owned_by = PRG }
+					}
+					cede_province = PRG
+					add_core = PRG
+					remove_core = SPA
+				}
+				2858 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRG }
+						}
+					}
+					cede_province = PRG
+					add_core = PRG
+					remove_core = SPA
+				}
+				2859 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRG }
+						}
+					}
+					cede_province = PRG
+					add_core = PRG
+					remove_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.13.a"
+		ai_chance = { factor = 100 }
+		COL = {
+			every_owned_province = {
+				change_culture = iberian_colombian
+				change_religion = catholic
+			}
+		}
+		VNZ = {
+			every_owned_province = {
+				change_culture = iberian_colombian
+				change_religion = catholic
+			}
+		}
+		CHL = {
+			every_owned_province = {
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Gran Colombia and Rio de la Plata
+country_event = {
+	id = eh_south_america.14
+	title = "eh_south_america.14.t"
+	desc = "eh_south_america.14.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1816
+		NOT = { is_year = 1818 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			COL = {
+				inherit = VNZ
+				venezuela_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = VNZ
+				}
+				central_llanos_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = VNZ
+				}
+				eastern_llanos = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = VNZ
+				}
+				maracaibo_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = VNZ
+				}
+				upper_guyana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = COL }
+							NOT = { province_id = 2931 }
+						}
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = VNZ
+				}
+				quito_area = {
+					limit = {
+						NOT = { owned_by = COL }
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = SPA
+				}
+				2803 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COL }
+						}
+					}
+					cede_province = COL
+					add_core = COL
+					remove_core = VNZ
+				}
+			}
+			LAP = {
+				add_treasury = 10000
+				buenos_aires_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				tucuman_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				chaco_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				cuyo_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				southern_pampas_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				bahia_blanca_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				misiones_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LAP }
+							NOT = { province_id = 2858 }
+							NOT = { province_id = 2859 }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				785 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LAP }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				781 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LAP }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				2871 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LAP }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+				2872 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LAP }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.14.a"
+		ai_chance = { factor = 100 }
+		COL = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			define_ruler = {
+				name = "Simon Bolivar"
+				change_adm = 4
+				change_dip = 6
+				change_mil = 5
+				age = 36
+			}
+		}
+		LAP = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			every_owned_province = {
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+		}
+		CHL = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+		PRG = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+		}
+	}
+}
+
+# Empire of Brazil
+country_event = {
+	id = eh_south_america.15
+	title = "eh_south_america.15.t"
+	desc = "eh_south_america.15.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POR
+		is_year = 1822
+		NOT = { is_year = 1824 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			BR2 = {
+				brazil_region = {
+					limit = {
+						NOT = { owned_by = BR2 }
+					}
+					cede_province = BR2
+					add_core = BR2
+					remove_core = POR
+				}
+				amazon_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BR2 }
+							NOT = { area = guyana_area }
+							NOT = { area = suriname_area }
+							NOT = { province_id = 1802 }
+							NOT = { province_id = 1803 }
+							NOT = { province_id = 2936 }
+							NOT = { province_id = 3077 }
+							NOT = { province_id = 3078 }
+							NOT = { province_id = 3079 }
+						}
+					}
+					cede_province = BR2
+					add_core = BR2
+					remove_core = POR
+				}
+			}
+			URU = {
+				banda_oriental_area = {
+					limit = {
+						NOT = { owned_by = URU }
+					}
+					cede_province = URU
+					add_core = URU
+					remove_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.15.a"
+		ai_chance = { factor = 100 }
+		BR2 = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 3
+			add_treasury = 10000
+			every_owned_province = {
+				change_culture = brazilian
+				change_religion = catholic
+			}
+		}
+		URU = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = {
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+		}
+		PRG = {
+			every_owned_province = {
+				change_culture = iberian_la_platan
+				change_religion = catholic
+			}
+		}
+		HAT = {
+			change_government = republic
+			add_government_reform = democracy_reform
+		}
+		SPA = { country_event = { id = eh_south_america.16 days = 300 } }
+	}
+}
+
+# Peruvian War of Independence
+country_event = {
+	id = eh_south_america.16
+	title = "eh_south_america.16.t"
+	desc = "eh_south_america.16.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			PEU = {
+				peru_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PEU }
+							NOT = { area = quito_area }
+							NOT = { province_id = 802 }
+							NOT = { province_id = 3035 }
+							NOT = { province_id = 2831 }
+						}
+					}
+					cede_province = PEU
+					add_core = PEU
+					remove_core = SPA
+				}
+				796 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEU }
+						}
+					}
+					cede_province = PEU
+					add_core = PEU
+					remove_core = SPA
+				}
+				793 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PEU }
+						}
+					}
+					cede_province = PEU
+					add_core = PEU
+					remove_core = SPA
+				}
+			}
+			BOL = {
+				moxos_area = {
+					limit = {
+						NOT = { owned_by = BOL }
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				beni_area = {
+					limit = {
+						NOT = { owned_by = BOL }
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				upper_peru = {
+					limit = {
+						NOT = { owned_by = BOL }
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				potosi_area = {
+					limit = {
+						NOT = { owned_by = BOL }
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				2841 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOL }
+						}
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				802 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOL }
+						}
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				3035 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOL }
+						}
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				2831 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOL }
+						}
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+				2840 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOL }
+						}
+					}
+					cede_province = BOL
+					add_core = BOL
+					remove_core = SPA
+				}
+			}
+			LAP = {
+				1095 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LAP }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+					remove_core = SPA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.16.a"
+		ai_chance = { factor = 100 }
+		PEU = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = {
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+		}
+		BOL = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = { change_religion = catholic }
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.16.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				SPA = { was_player = yes }
+			}
+			switch_tag = BR2
+		}
+		PEU = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = {
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+		}
+		BOL = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = { change_religion = catholic }
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.16.c"
+		if = {
+			limit = {
+				SPA = { was_player = yes }
+			}
+			switch_tag = LAP
+		}
+		PEU = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = {
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+		}
+		BOL = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			every_owned_province = { change_religion = catholic }
+		}
+	}
+}
+
+# War of the Pacific
+country_event = {
+	id = eh_south_america.17
+	title = "eh_south_america.17.t"
+	desc = "eh_south_america.17.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHL
+		is_year = 1880
+		NOT = { is_year = 1885 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			CHL = {
+				northern_chile_area = {
+					limit = {
+						NOT = { owned_by = CHL }
+					}
+					cede_province = CHL
+					add_core = CHL
+					remove_core = PEU
+				}
+				782 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHL }
+						}
+					}
+					cede_province = CHL
+					add_core = CHL
+				}
+				1988 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CHL }
+						}
+					}
+					cede_province = CHL
+					add_core = CHL
+				}
+			}
+			LAP = {
+				nehuenken_area = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+				}
+				patagonian_andes = {
+					limit = {
+						NOT = { owned_by = LAP }
+					}
+					cede_province = LAP
+					add_core = LAP
+				}
+				patagonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LAP }
+							NOT = { province_id = 782 }
+						}
+					}
+					cede_province = LAP
+					add_core = LAP
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.17.a"
+		ai_chance = { factor = 100 }
+		PEU = {
+			every_owned_province = {
+				change_culture = iberian_peruvian
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Separation of Panama from Colombia
+country_event = {
+	id = eh_south_america.18
+	title = "eh_south_america.18.t"
+	desc = "eh_south_america.18.d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = COL
+		is_year = 1900
+		NOT = { is_year = 1905 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			PNM = {
+				panama_area = {
+					limit = {
+						NOT = { owned_by = PNM }
+					}
+					cede_province = PNM
+					add_core = PNM
+					remove_core = COL
+				}
+			}
+			NCR = {
+				838 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NCR }
+						}
+					}
+					cede_province = NCR
+					add_core = NCR
+					remove_core = GBR
+				}
+			}
+			BRZ = {
+				3035 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRZ }
+						}
+					}
+					cede_province = BRZ
+					add_core = BRZ
+					remove_core = BOL
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_south_america.18.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				AND = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+			}
+			change_government = republic
+		}
+	}
+}
+
+# War of the Triple Alliance 1865
+
+# War of the Triple Alliance 1865
+
+# Argentine great depression
+
+# Brazilian Economic miracle
+
+# EH version

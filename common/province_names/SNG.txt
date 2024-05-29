@@ -1,0 +1,23 @@
+671 = "Tangzhou"
+680 = "Gongzhou"
+2172 = "Jingzhou"							#Jiangling
+682 = "Ezhou" 
+684 = "Lin'an"
+2175 = "Chaizhou"
+688 = "Jingji"				#Kaifeng				|incomplete
+689 = "Xingyuan"
+700 = "Jingzhao"			#Xi'an
+704 = "Pingzhou"
+1816 = "Youzhou"
+1821 = "Jiangning"				#Nanjing				|incomplete
+1833 = "Jizhou"
+1838 = "Shouzhou"
+2164 = "Yongzhou"
+2171 = "Xiangzhou"
+681 = "Kuizhou"
+1836 = "Henan"
+2176 = "Yingtian"
+2181 = "Weizhou"
+2180 = "Qinzhou"
+
+# EH version

@@ -1,0 +1,250 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = uzbehk
+add_accepted_culture = uyghur
+religion = tengri_pagan_reformed
+technology_group = eastern_nomad_group
+capital = 2126 #Balasagun
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+# Kara-Khanid Khanate
+
+840.1.1 = {
+	monarch = {
+		name = "Bilge Kul Qadir"
+		dynasty = "Kara-Khanid"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+893.1.1 = {
+	monarch = {
+		name = "Bazil Arslan"
+		dynasty = "Kara-Khanid"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+
+920.1.1 = {
+	monarch = {
+		name = "Satuk Bughra"
+		dynasty = "Kara-Khanid"
+		adm = 4
+		dip = 2
+		mil = 6
+	}
+}
+
+932.1.1 = { religion = sunni religious_school = hanafi_school }
+
+955.1.1 = {
+	monarch = {
+		name = "Musa Bughra"
+		dynasty = "Kara-Khanid"
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}
+
+958.1.1 = {
+	monarch = {
+		name = "Suleyman Arslan"
+		dynasty = "Kara-Khanid"
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+970.1.1 = {
+	monarch = {
+		name = "Ali Arslan"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+998.1.1 = {
+	monarch = {
+		name = "Ahmad Arslan"
+		dynasty = "Kara-Khanid"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1017.1.1 = {
+	monarch = {
+		name = "Mansur Arslan"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1024.1.1 = {
+	monarch = {
+		name = "Muhammad Toghan"
+		dynasty = "Kara-Khanid"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1026.1.1 = {
+	monarch = {
+		name = "Yusuf Qadir"
+		dynasty = "Kara-Khanid"
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+1032.1.1 = {
+	monarch = {
+		name = "Ali Tigin Bughra"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+# Eastern Kara-Khanid Khanate
+
+1034.1.1 = {
+	monarch = {
+		name = "Ebu Shuca Sulayman"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1056.1.1 = {
+	monarch = {
+		name = "Muhammad bin Yusuph"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1057.1.1 = {
+	monarch = {
+		name = "Ibrahim bin Muhammad"
+		dynasty = "Kara-Khanid"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1059.1.1 = {
+	monarch = {
+		name = "Mahmud"
+		dynasty = "Kara-Khanid"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+1075.1.1 = {
+	monarch = {
+		name = "Umar"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1075.6.1 = {
+	monarch = {
+		name = "Ebu Ali el-Hasan"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1102.1.1 = {
+	monarch = {
+		name = "Ahmad"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}
+
+1128.1.1 = {
+	monarch = {
+		name = "Ibrahim bin Ahmad"
+		dynasty = "Kara-Khanid"
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1158.1.1 = {
+	monarch = {
+		name = "Muhammad bin Ibrahim"
+		dynasty = "Kara-Khanid"
+		adm = 5
+		dip = 4
+		mil = 2
+	}
+}
+
+1180.1.1 = {
+	monarch = {
+		name = "Yusuph bin Muhammad"
+		dynasty = "Kara-Khanid"
+		adm = 1
+		dip = 4
+		mil = 4
+	}
+}
+
+1205.1.1 = {
+	monarch = {
+		name = "Ebul Feth Muhammad"
+		dynasty = "Kara-Khanid"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

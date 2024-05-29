@@ -1,0 +1,487 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = jeju
+religion = muism
+technology_group = early_chinese
+capital = 2741
+
+2.1.1 = {
+	monarch = {
+		name = "Dumyeong"
+		dynasty = "Go"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+2.1.1 = {
+	heir = {
+		name = "Seonju"
+		monarch_name = "Seonju"
+		dynasty = "Go"
+		birth_date = 2.1.1
+		death_date = 93.1.1
+		claim = 95
+		adm = 0
+		dip = 4
+		mil = 1
+	}
+}
+
+43.1.1 = {
+	monarch = {
+		name = "Seonju"
+		dynasty = "Go"
+		birth_date = 2.1.1
+		adm = 0
+		dip = 4
+		mil = 1
+	}
+}
+
+43.1.1 = {
+	heir = {
+		name = "Jinam"
+		monarch_name = "Jinam"
+		dynasty = "Go"
+		birth_date = 43.1.1
+		death_date = 144.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+93.1.1 = {
+	monarch = {
+		name = "Jinam"
+		dynasty = "Go"
+		birth_date = 43.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+93.1.1 = {
+	heir = {
+		name = "Seongbang"
+		monarch_name = "Seongbang"
+		dynasty = "Go"
+		birth_date = 93.1.1
+		death_date = 195.1.1
+		claim = 95
+		adm = 0
+		dip = 3
+		mil = 0
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+144.1.1 = {
+	monarch = {
+		name = "Seongbang"
+		dynasty = "Go"
+		birth_date = 93.1.1
+		adm = 0
+		dip = 3
+		mil = 0
+	}
+}
+
+144.1.1 = {
+	heir = {
+		name = "Munseong"
+		monarch_name = "Munseong"
+		dynasty = "Go"
+		birth_date = 144.1.1
+		death_date = 243.1.1
+		claim = 95
+		adm = 0
+		dip = 3
+		mil = 2
+	}
+}
+
+195.1.1 = {
+	monarch = {
+		name = "Munseong"
+		dynasty = "Go"
+		birth_date = 144.1.1
+		adm = 0
+		dip = 3
+		mil = 2
+	}
+}
+
+195.1.1 = {
+	heir = {
+		name = "Ik"
+		monarch_name = "Ik"
+		dynasty = "Go"
+		birth_date = 195.1.1
+		death_date = 293.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+243.1.1 = {
+	monarch = {
+		name = "Ik"
+		dynasty = "Go"
+		birth_date = 243.1.1
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+243.1.1 = {
+	heir = {
+		name = "Jihyo"
+		monarch_name = "Jihyo"
+		dynasty = "Go"
+		birth_date = 243.1.1
+		death_date = 343.1.1
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+293.1.1 = {
+	monarch = {
+		name = "Jihyo"
+		dynasty = "Go"
+		birth_date = 243.1.1
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}
+
+293.1.1 = {
+	heir = {
+		name = "Suk"
+		monarch_name = "Suk"
+		dynasty = "Go"
+		birth_date = 293.1.1
+		death_date = 393.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+343.1.1 = {
+	monarch = {
+		name = "Suk"
+		dynasty = "Go"
+		birth_date = 293.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+343.1.1 = {
+	heir = {
+		name = "Hyeonbang"
+		monarch_name = "Hyeonbang"
+		dynasty = "Go"
+		birth_date = 343.1.1
+		death_date = 423.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+393.1.1 = {
+	monarch = {
+		name = "Hyeonbang"
+		dynasty = "Go"
+		birth_date = 343.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+423.1.1 = {
+	monarch = {
+		name = "Gi"
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+453.1.1 = {
+	monarch = {
+		name = "Dam"
+		dynasty = "Go"
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+483.1.1 = {
+	monarch = {
+		name = "Jiun"
+		dynasty = "Go"
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+498.1.1 = {
+	government = monarchy
+	add_government_reform = warlord_state
+}
+
+508.1.1 = {
+	monarch = {
+		name = "Seo"
+		dynasty = "Go"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+533.1.1 = {
+	monarch = {
+		name = "Damyeong"
+		dynasty = "Go"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+558.1.1 = {
+	monarch = {
+		name = "Dam"
+		dynasty = "Go"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+583.1.1 = {
+	monarch = {
+		name = "Chesam"
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+608.1.1 = {
+	monarch = {
+		name = "Seongjin"
+		dynasty = "Go"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+633.1.1 = {
+	monarch = {
+		name = "Hong"
+		dynasty = "Go"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+658.1.1 = {
+	monarch = {
+		name = "Cheoryang"
+		dynasty = "Go"
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+676.11.1 = { primary_culture = korean }
+
+683.1.1 = {
+	monarch = {
+		name = "Won"
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+708.1.1 = {
+	monarch = {
+		name = "Pyoryun"
+		dynasty = "Go"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+733.1.1 = {
+	monarch = {
+		name = "Hyeong"
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+758.1.1 = {
+	monarch = {
+		name = "Chido"
+		dynasty = "Go"
+		adm = 2
+		dip = 0
+		mil = 4
+	}
+}
+
+783.1.1 = {
+	monarch = {
+		name = "Uk"
+		dynasty = "Go"
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}
+
+808.1.1 = {
+	monarch = {
+		name = "Cheonwon"
+		dynasty = "Go"
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+}
+
+833.1.1 = {
+	monarch = {
+		name = "Hogong"
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+858.1.1 = {
+	monarch = {
+		name = "So"
+		dynasty = "Go"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+883.1.1 = {
+	monarch = {
+		name = "Gyeongjik"
+		dynasty = "Go"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+908.1.1 = {
+	monarch = {
+		name = "Min"
+		dynasty = "Go"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+933.1.1 = {
+	monarch = {
+		name = "Jagyeon"
+		dynasty = "Go"
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+938.1.1 = {
+	government_rank = 1
+	religion = mahayana
+	monarch = {
+		name = "Malo"
+		dynasty = "Go"
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1030.1.1 = {
+	monarch = {
+		name = "Yu"
+		dynasty = "Go"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1100.1.1 = {
+	monarch = {
+		name = "Jogi"
+		dynasty = "Go"
+		adm = 4
+		dip = 4
+		mil = 0
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

@@ -1,0 +1,46 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = western
+religion = arianism
+primary_culture = roman
+culture_group_union = latin
+capital = 114 # Ravenna
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+500.1.1 = { primary_culture = lombard religion = chalcedonism capital = 118 } # Roma
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+
+867.1.1 = { religion = catholic }
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1910.1.1 = { religion = secularism }
+
+1925.12.24 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = fascist_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = fascist_dictatorship 
+	government_rank = 3
+}
+
+1925.12.24 = {
+	monarch = {
+		name = "Benito Mussolini"
+		adm = 1
+		dip = 3
+		mil = 2
+		religion = catholic
+	}
+}
+
+1943.7.25 = { capital = 107 } # Salo

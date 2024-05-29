@@ -1,0 +1,1664 @@
+namespace = eh_epidemics
+namespace = eh_famines
+namespace = eh_natural_disasters
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for Epidemics
+########################################################################
+
+# Antonine Plague
+country_event = {
+	id = eh_epidemics.1
+	title = "eh_epidemics.1.t"
+	desc = "eh_epidemics.1.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		is_year = 165
+		NOT = { is_year = 180 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_epidemics.1.a"
+		ai_chance = { factor = 100 }
+		ROM = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			italy_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Plague of Justinian
+country_event = {
+	id = eh_epidemics.2
+	title = "eh_epidemics.2.t"
+	desc = "eh_epidemics.2.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			tag = BYZ
+			tag = ERS
+		}
+		is_year = 540
+		NOT = { is_year = 545 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_epidemics.2.a"
+		ai_chance = { factor = 100 }
+		BYZ = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			balkan_region = { add_devastation = 10 }
+		}
+		ERS = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			persia_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Japanese smallpox epidemic
+country_event = {
+	id = eh_epidemics.3
+	title = "eh_epidemics.3.t"
+	desc = "eh_epidemics.3.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = YAM
+		is_year = 735
+		NOT = { is_year = 740 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_epidemics.3.a"
+		ai_chance = { factor = 100 }
+		YAM = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			japan_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Black Death
+country_event = {
+	id = eh_epidemics.4
+	title = "eh_epidemics.4.t"
+	desc = "eh_epidemics.4.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		capital_scope = { continent = europe }
+		is_year = 1345
+		NOT = { is_year = 1350 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_epidemics.4.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				capital_scope = { continent = europe }
+			}
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+		}
+	}
+}
+
+# North American Smallpox
+country_event = {
+	id = eh_epidemics.5
+	title = "eh_epidemics.5.t"
+	desc = "eh_epidemics.5.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+		is_year = 1515
+		NOT = { is_year = 1525 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_epidemics.5.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+				}
+			}
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+		}
+	}
+}
+
+# 17th century Great Plagues
+country_event = {
+	id = eh_epidemics.6
+	title = "eh_epidemics.6.t"
+	desc = "eh_epidemics.6.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		capital_scope = { continent = europe }
+		is_year = 1650
+		NOT = { is_year = 1660 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_epidemics.6.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				capital_scope = { continent = europe }
+			}
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+		}
+	}
+}
+
+# 18th century Great Plagues
+country_event = {
+	id = eh_epidemics.7
+	title = "eh_epidemics.7.t"
+	desc = "eh_epidemics.7.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		capital_scope = { continent = europe }
+		is_year = 1720
+		NOT = { is_year = 1730 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_epidemics.7.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				capital_scope = { continent = europe }
+			}
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+		}
+	}
+}
+
+# The Sixth Cholera pandemic
+country_event = {
+	id = eh_epidemics.8
+	title = "eh_epidemics.8.t"
+	desc = "eh_epidemics.8.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			capital_scope = { continent = europe }
+			capital_scope = { superregion = india_superregion }
+			capital_scope = { superregion = near_east_superregion }
+			capital_scope = { superregion = persia_superregion }
+		}
+		is_year = 1890
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_epidemics.8.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { continent = europe }
+					capital_scope = { superregion = india_superregion }
+					capital_scope = { superregion = near_east_superregion }
+					capital_scope = { superregion = persia_superregion }
+				}
+			}
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+	}
+}
+
+# The Third Plague
+country_event = {
+	id = eh_epidemics.9
+	title = "eh_epidemics.9.t"
+	desc = "eh_epidemics.9.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			capital_scope = { continent = europe }
+			capital_scope = { continent = asia }
+			capital_scope = { continent = africa }
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+		is_year = 1880
+		NOT = { is_year = 1890 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_epidemics.9.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { continent = europe }
+					capital_scope = { superregion = india_superregion }
+					capital_scope = { superregion = near_east_superregion }
+					capital_scope = { superregion = persia_superregion }
+				}
+			}
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Spanish flu
+country_event = {
+	id = eh_epidemics.10
+	title = "eh_epidemics.10.t"
+	desc = "eh_epidemics.10.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			capital_scope = { continent = europe }
+			capital_scope = { continent = asia }
+			capital_scope = { continent = africa }
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+			capital_scope = { continent = oceania }
+		}
+		is_year = 1918
+		NOT = { is_year = 1921 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_epidemics.10.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { continent = europe }
+					capital_scope = { continent = asia }
+					capital_scope = { continent = africa }
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+				}
+			}
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Asian flu
+country_event = {
+	id = eh_epidemics.11
+	title = "eh_epidemics.11.t"
+	desc = "eh_epidemics.11.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHN
+		is_year = 1955
+		NOT = { is_year = 1960 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_epidemics.11.a"
+		ai_chance = { factor = 100 }
+		CHN = {
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+		USA = {
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+		MSA = {
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Hong Kong flu
+country_event = {
+	id = eh_epidemics.12
+	title = "eh_epidemics.12.t"
+	desc = "eh_epidemics.12.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHN
+		is_year = 1965
+		NOT = { is_year = 1970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_epidemics.12.a"
+		ai_chance = { factor = 100 }
+		CHN = {
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+		USA = {
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_years_of_income = -1
+		}
+	}
+}
+
+# Swine flu
+country_event = {
+	id = eh_epidemics.13
+	title = "eh_epidemics.13.t"
+	desc = "eh_epidemics.13.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			capital_scope = { continent = europe }
+			capital_scope = { continent = asia }
+			capital_scope = { continent = africa }
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+			capital_scope = { continent = oceania }
+		}
+		is_year = 2008
+		NOT = { is_year = 2010 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_epidemics.13.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { continent = europe }
+					capital_scope = { continent = asia }
+					capital_scope = { continent = africa }
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = oceania }
+				}
+			}
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+		}
+	}
+}
+
+# COVID-19 pandemic
+country_event = {
+	id = eh_epidemics.14
+	title = "eh_epidemics.14.t"
+	desc = "eh_epidemics.14.d"
+	picture = PLAGUE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_epidemics.14.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_prestige = -10
+		add_manpower = -10
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		add_years_of_income = -1
+	}
+}
+
+########################################################################
+# Events for Famines
+########################################################################
+
+# Great European Famine
+country_event = {
+	id = eh_famines.1
+	title = "eh_famines.1.t"
+	desc = "eh_famines.1.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		OR = {
+			capital_scope = { region = france_region }
+			capital_scope = { region = scandinavia_region }
+			capital_scope = { region = low_countries_region }
+			capital_scope = { region = british_isles_region }
+			capital_scope = { region = poland_region }
+			capital_scope = { region = baltic_region }
+		}
+		is_year = 1315
+		NOT = { is_year = 1320 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.1.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { region = france_region }
+					capital_scope = { region = scandinavia_region }
+					capital_scope = { region = low_countries_region }
+					capital_scope = { region = british_isles_region }
+					capital_scope = { region = poland_region }
+					capital_scope = { region = baltic_region }
+				}
+			}
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			every_owned_province = { add_devastation = 10 }
+		}
+	}
+}
+
+# Deccan Famine of 1630-32
+country_event = {
+	id = eh_famines.2
+	title = "eh_famines.2.t"
+	desc = "eh_famines.2.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = MUG
+		is_year = 1630
+		NOT = { is_year = 1635 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.2.a"
+		ai_chance = { factor = 100 }
+		MUG = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			deccan_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Great Gyeongsin famine
+country_event = {
+	id = eh_famines.3
+	title = "eh_famines.3.t"
+	desc = "eh_famines.3.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = KOR
+		is_year = 1670
+		NOT = { is_year = 1680 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_famines.3.a"
+		ai_chance = { factor = 100 }
+		KOR = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			korea_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Great Bengal famine
+country_event = {
+	id = eh_famines.4
+	title = "eh_famines.4.t"
+	desc = "eh_famines.4.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = EIC
+		is_year = 1770
+		NOT = { is_year = 1775 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.4.a"
+		ai_chance = { factor = 100 }
+		EIC = {
+			add_prestige = -10
+			add_manpower = -10
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			bengal_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Chalisa famine
+country_event = {
+	id = eh_famines.5
+	title = "eh_famines.5.t"
+	desc = "eh_famines.5.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = ODH
+		is_year = 1785
+		NOT = { is_year = 1790 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.5.a"
+		ai_chance = { factor = 100 }
+		ODH = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			every_owned_province = { add_devastation = 10 }
+		}
+	}
+}
+
+# Skull famine
+country_event = {
+	id = eh_famines.6
+	title = "eh_famines.6.t"
+	desc = "eh_famines.6.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		capital_scope = { region = deccan_region }
+		is_year = 1785
+		NOT = { is_year = 1790 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.6.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				capital_scope = { region = deccan_region }
+			}
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			every_owned_province = { add_devastation = 10 }
+		}
+	}
+}
+
+# Great Tenmei famine
+country_event = {
+	id = eh_famines.7
+	title = "eh_famines.7.t"
+	desc = "eh_famines.7.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = TKG
+		is_year = 1780
+		NOT = { is_year = 1790 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_famines.7.a"
+		ai_chance = { factor = 100 }
+		TKG = {
+			add_legitimacy = -10
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			japan_region = { add_devastation = 10 }
+			random_owned_province = {
+				spawn_rebels = {
+					type = ikko_ikki_rebels
+					size = 1
+				}
+			}
+			random_owned_province = {
+				spawn_rebels = {
+					type = ikko_ikki_rebels
+					size = 1
+				}
+			}
+			random_owned_province = {
+				spawn_rebels = {
+					type = ikko_ikki_rebels
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+# Northern Chinese Famine
+country_event = {
+	id = eh_famines.8
+	title = "eh_famines.8.t"
+	desc = "eh_famines.8.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = QNG
+		is_year = 1875
+		NOT = { is_year = 1880 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.8.a"
+		ai_chance = { factor = 100 }
+		QNG = {
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			hebei_area = { add_devastation = 10 }
+			south_hebei_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# Indian Great Famine of 1876-78
+country_event = {
+	id = eh_famines.9
+	title = "eh_famines.9.t"
+	desc = "eh_famines.9.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = BRJ
+		is_year = 1875
+		NOT = { is_year = 1880 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.9.a"
+		ai_chance = { factor = 100 }
+		india_superregion = {
+			limit = {
+				AND = {
+					NOT = { province_id = 519 }
+					NOT = { province_id = 522 }
+					NOT = { province_id = 524 }
+					NOT = { province_id = 529 }
+					NOT = { province_id = 540 }
+					NOT = { province_id = 542 }
+					NOT = { province_id = 561 }
+					NOT = { province_id = 2030 }
+					NOT = { province_id = 2031 }
+					NOT = { province_id = 2034 }
+					NOT = { province_id = 2054 }
+				}
+			}
+			add_devastation = 30
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -1
+		}
+		kalat_area = {
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -1
+		}
+		makran_area = {
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -1
+		}
+		bhutan_area = {
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -5
+		}
+	}
+}
+
+# Russian famine of 1921
+country_event = {
+	id = eh_famines.10
+	title = "eh_famines.10.t"
+	desc = "eh_famines.10.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = SOV
+		is_year = 1920
+		NOT = { is_year = 1925 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.10.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			crimea_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Soviet famine of 1932-1933
+country_event = {
+	id = eh_famines.11
+	title = "eh_famines.11.t"
+	desc = "eh_famines.11.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = SOV
+		is_year = 1930
+		NOT = { is_year = 1935 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_famines.11.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			crimea_region = { add_devastation = 10 }
+		}
+	}
+}
+
+# Chinese famine in 1930s and 1940s
+country_event = {
+	id = eh_famines.12
+	title = "eh_famines.12.t"
+	desc = "eh_famines.12.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = FRM
+		is_year = 1935
+		NOT = { is_year = 1945 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_famines.12.a"
+		ai_chance = { factor = 100 }
+		FRM = {
+			add_army_tradition = -10
+			add_stability = -1
+			add_prestige = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			gansu_area = { add_devastation = 10 }
+			west_gansu_area = { add_devastation = 10 }
+			sichuan_area = { add_devastation = 10 }
+			chuanbei_area = { add_devastation = 10 }
+			chuannan_area = { add_devastation = 10 }
+			henan_area = { add_devastation = 10 }
+		}
+	}
+}
+
+########################################################################
+# Events for Natural disasters
+########################################################################
+
+# 526 Antioch earthquake
+country_event = {
+	id = eh_natural_disasters.1
+	title = "eh_natural_disasters.1.t"
+	desc = "eh_natural_disasters.1.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BYZ
+		is_year = 525
+		NOT = { is_year = 530 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.1.a"
+		ai_chance = { factor = 100 }
+		BYZ = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			aleppo_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 1556 Shaanxi earthquake
+country_event = {
+	id = eh_natural_disasters.2
+	title = "eh_natural_disasters.2.t"
+	desc = "eh_natural_disasters.2.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MNG
+		is_year = 1555
+		NOT = { is_year = 1560 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.2.a"
+		ai_chance = { factor = 100 }
+		MNG = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			shanxi_area = { add_devastation = 10 }
+			shaanxi_area = { add_devastation = 10 }
+			hebei_area = { add_devastation = 10 }
+			north_henan_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 1881 Haiphong typhoon
+country_event = {
+	id = eh_natural_disasters.3
+	title = "eh_natural_disasters.3.t"
+	desc = "eh_natural_disasters.3.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ANN
+		is_year = 1880
+		NOT = { is_year = 1885 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.3.a"
+		ai_chance = { factor = 100 }
+		ANN = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			red_river_delta_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 1887 Yellow River flood
+country_event = {
+	id = eh_natural_disasters.4
+	title = "eh_natural_disasters.4.t"
+	desc = "eh_natural_disasters.4.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = QNG
+		is_year = 1885
+		NOT = { is_year = 1890 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.4.a"
+		ai_chance = { factor = 100 }
+		QNG = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			north_henan_area = { add_devastation = 10 }
+			west_shandong_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 1920 Haiyuan earthquake
+country_event = {
+	id = eh_natural_disasters.5
+	title = "eh_natural_disasters.5.t"
+	desc = "eh_natural_disasters.5.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CXM
+		is_year = 1920
+		NOT = { is_year = 1925 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.5.a"
+		ai_chance = { factor = 100 }
+		CXM = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			gansu_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# Great Kanto earthquake
+country_event = {
+	id = eh_natural_disasters.6
+	title = "eh_natural_disasters.6.t"
+	desc = "eh_natural_disasters.6.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		is_year = 1920
+		NOT = { is_year = 1925 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.6.a"
+		ai_chance = { factor = 100 }
+		JAP = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			kanto_area = { add_devastation = 10 }
+			eastern_kanto_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 1931 China floods
+country_event = {
+	id = eh_natural_disasters.7
+	title = "eh_natural_disasters.7.t"
+	desc = "eh_natural_disasters.7.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRM
+		is_year = 1930
+		NOT = { is_year = 1935 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.7.a"
+		ai_chance = { factor = 100 }
+		FRM = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			north_henan_area = { add_devastation = 10 }
+			west_shandong_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 1970 Bhola cyclone
+country_event = {
+	id = eh_natural_disasters.8
+	title = "eh_natural_disasters.8.t"
+	desc = "eh_natural_disasters.8.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = INI
+		is_year = 1970
+		NOT = { is_year = 1975 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.8.a"
+		ai_chance = { factor = 100 }
+		INI = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			gaur_area = { add_devastation = 10 }
+		}
+		PAK = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			north_bengal_area = { add_devastation = 10 }
+			east_bengal_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# Tangshan earthquake
+country_event = {
+	id = eh_natural_disasters.9
+	title = "eh_natural_disasters.9.t"
+	desc = "eh_natural_disasters.9.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHN
+		is_year = 1975
+		NOT = { is_year = 1977 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_natural_disasters.9.a"
+		ai_chance = { factor = 100 }
+		CHN = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			4194 = { add_devastation = 30 }
+		}
+	}
+}
+
+# Typhoon Nina
+country_event = {
+	id = eh_natural_disasters.10
+	title = "eh_natural_disasters.10.t"
+	desc = "eh_natural_disasters.10.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHN
+		is_year = 1975
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.10.a"
+		ai_chance = { factor = 100 }
+		CHN = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			fujian_area = { add_devastation = 10 }
+			hunan_area = { add_devastation = 10 }
+			jiangxi_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# 2004 Indian Ocean earthquake and tsunami
+country_event = {
+	id = eh_natural_disasters.11
+	title = "eh_natural_disasters.11.t"
+	desc = "eh_natural_disasters.11.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			capital_scope = { region = moluccas_region }
+			capital_scope = { region = malaya_region }
+		}
+		is_year = 2000
+		NOT = { is_year = 2005 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.11.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { region = moluccas_region }
+					capital_scope = { region = malaya_region }
+				}
+			}
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			every_owned_province = { add_devastation = 10 }
+		}
+	}
+}
+
+# 2010 Haiti earthquake
+country_event = {
+	id = eh_natural_disasters.12
+	title = "eh_natural_disasters.12.t"
+	desc = "eh_natural_disasters.12.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAT
+		is_year = 2010
+		NOT = { is_year = 2015 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_natural_disasters.12.a"
+		ai_chance = { factor = 100 }
+		HAT = {
+			add_stability = -1
+			add_prestige = -10
+			add_manpower = -10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			hispaniola_area = { add_devastation = 10 }
+		}
+	}
+}
+
+# EH version

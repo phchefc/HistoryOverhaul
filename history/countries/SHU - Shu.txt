@@ -1,0 +1,267 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = sichuanese
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+historical_rival = WEI
+capital = 679
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# Shu Han
+
+189.9.28 = {
+	government_rank = 1
+	primary_culture = hubei
+	capital = 2172
+	monarch = {
+		name = "Bei" #Zhaolie
+		dynasty = "Liu"
+		birth_date = 161.7.9
+		adm = 4
+		dip = 3
+		mil = 3
+		leader = {	name = "Liu Bei"     	type = general	fire = 2	shock = 2	manuever = 1	siege = 0  death_date = 223.6.10 }
+	}
+}
+
+189.9.28 = { leader = {	name = "Guan Yu"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 219.12.1 } } # Not an actual death date
+189.9.28 = { leader = {	name = "Zhang Fei"     	type = general	fire = 4	shock = 2	manuever = 0	siege = 0  death_date = 221.6.1 } } # Not an actual death date
+
+194.2.1 = {
+	queen = {
+		country_of_origin = SHU
+		dynasty = "Gan"
+		birth_date = 175.1.1
+		death_date = 209.6.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+194.2.1 = { leader = {	name = "Zhao Yun"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 229.11.1 } } # Not an actual death date
+
+207.1.1 = {
+	heir = {
+		name = "Shan"
+		monarch_name = "Shan"
+		dynasty = "Liu"
+		birth_date = 207.1.1
+		death_date = 271.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+209.6.1 = {
+	queen = {
+		country_of_origin = WUU
+		name = "Shangxiang"
+		dynasty = "Sun"
+		birth_date = 185.1.1
+		death_date = 222.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 6
+	}
+}
+
+214.1.1 = { 
+	primary_culture = sichuanese
+	capital = 679
+}
+
+218.1.1 = {	government_rank = 2 }
+
+221.5.15 = { 
+	government_rank = 3
+	queen = {
+		country_of_origin = SHU
+		name = "Mu"
+		dynasty = "Wu"
+		birth_date = 175.1.1
+		death_date = 245.9.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+223.6.10 = {
+	monarch = {
+		name = "Shan"
+		dynasty = "Liu"
+		birth_date = 207.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SHU
+		name = "Jing'ai"
+		dynasty = "Zhang"
+		birth_date = 205.1.1
+		death_date = 237.7.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+225.3.1 = { leader = {	name = "Zhuge Liang"     	type = general	fire = 4	shock = 4	manuever = 6	siege = 0  death_date = 234.8.23 } }
+
+238.2.1 = {
+	queen = {
+		country_of_origin = SHU
+		dynasty = "Zhang"
+		birth_date = 210.1.1
+		death_date = 263.12.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# End of the Eastern Jin dynasty (Western Shu)
+
+405.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Zong"
+		dynasty = "Qiao"
+		birth_date = 380.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# Former Shu
+
+891.9.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Jian" #Gaozu
+		dynasty = "Wang"
+		birth_date = 847.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+		leader = {	name = "Wang Jian"     	type = general	fire = 2	shock = 3	manuever = 0	siege = 0  death_date = 918.7.12 }
+	}
+	queen = {
+		country_of_origin = SHU
+		name = "Zhaosheng"
+		dynasty = "Zhou"
+		birth_date = 850.1.1
+		death_date = 918.10.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+903.1.1 = { government_rank = 2 }
+907.11.3 = { government_rank = 3 }
+
+918.7.12 = {
+	monarch = {
+		name = "Zongyan"
+		dynasty = "Wang"
+		birth_date = 899.1.1
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SHU
+		name = "Feishan"
+		dynasty = "Jin"
+		birth_date = 900.1.1
+		death_date = 926.5.18
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Later Shu
+
+934.3.16 = {
+	monarch = {
+		name = "Zhixiang" #Gaozu
+		dynasty = "Meng"
+		birth_date = 874.5.10
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Li"
+		birth_date = 900.1.1
+		death_date = 965.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chang"
+		monarch_name = "Chang"
+		dynasty = "Meng"
+		birth_date = 919.1.1
+		death_date = 965.7.12
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+934.9.7 = {
+	monarch = {
+		name = "Chang"
+		dynasty = "Meng"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SHU
+		name = "Huarui"
+		dynasty = "Xu"
+		birth_date = 920.1.1
+		death_date = 976.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

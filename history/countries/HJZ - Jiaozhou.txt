@@ -1,0 +1,100 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = cantonese
+add_accepted_culture = zhuang
+add_accepted_culture = vietnamese
+capital = 667
+
+# End of the Western Han dynasty (Jiao)
+
+23.10.5 = {
+	monarch = {
+		name = "Rang"
+		dynasty = "Deng"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Jiao)
+
+189.9.28 = {
+	monarch = {
+		name = "Xie"
+		dynasty = "Shi"
+		birth_date = 137.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+189.9.28 = {
+	heir = {
+		name = "Hui"
+		monarch_name = "Hui"
+		dynasty = "Shi"
+		birth_date = 165.1.1
+		death_date = 227.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+226.1.1 = {
+	monarch = {
+		name = "Hui"
+		dynasty = "Shi"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# End of the Eastern Jin dynasty (Huan Chu)
+
+405.1.1 = {
+	monarch = {
+		name = "Xun"
+		dynasty = "Lu"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Ningyuan)
+
+885.1.1 = {
+	capital = 2159
+	monarch = {
+		name = "Changlu"
+		dynasty = "Liu"
+		birth_date = 850.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,2732 @@
+namespace = eh_USA
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the United States
+########################################################################
+
+# United States Declaration of Independence
+country_event = {
+	id = eh_USA.1
+	title = "eh_USA.1.t"
+	desc = "eh_USA.1.d"
+	picture = TEA_PARTY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1776
+		NOT = { is_year = 1778 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				northeast_america_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { area = iroquoisia_area }
+							NOT = { province_id = 2567 }
+						}
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				southeast_america_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { area = florida_area }
+							NOT = { area = north_florida_area }
+							NOT = { area = upper_american_georgia_area }
+							NOT = { area = american_georgia_area }
+						}
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				kentucky_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				western_kentucky_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				appalachia_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				929 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				2540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_USA.1.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			change_government = republic
+			add_government_reform = american_republic
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_manpower = 50
+			add_sailors = 1000
+			add_republican_tradition = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_years_of_income = 3
+			change_religion = protestant
+			change_primary_culture = american
+			every_owned_province = { add_unrest = -0.1 }
+		}
+	}
+}
+
+# American Revolutionary War
+country_event = {
+	id = eh_USA.2
+	title = "eh_USA.2.t"
+	desc = "eh_USA.2.d"
+	picture = GREAT_FIRE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1783
+		NOT = { is_year = 1785 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_country_flag = american_revolutionary_war
+				set_capital = 965
+				965 = {
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					infantry = USA
+					cavalry = USA
+					cavalry = USA
+					cavalry = USA
+					cavalry = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+					artillery = USA
+				}
+				define_ruler = {
+					name = "George Washington"
+					change_adm = 5
+					change_dip = 5
+					change_mil = 6
+					age = 43
+				}
+				define_ruler_to_general = {	fire = 3	shock = 3	manuever = 6	siege = 0	}
+				country_event = { id = eh_USA.3 days = 100 }
+			}
+			GBR = {
+				set_country_flag = american_revolutionary_war
+				add_prestige = -10
+				declare_war_with_cb = {
+					who = USA
+					casus_belli = cb_independence_war
+				}
+			}
+			FRA = { country_event = { id = eh_french.18 days = 7 } }
+		}
+	}
+	
+	option = {
+		name = "eh_USA.2.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				GBR = { was_player = yes }
+			}
+			switch_tag = USA
+		}
+	}
+	
+	option = {
+		name = "eh_USA.2.b"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Peace of Paris
+country_event = {
+	id = eh_USA.3
+	title = "eh_USA.3.t"
+	desc = "eh_USA.3.d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				northeast_america_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { area = iroquoisia_area }
+							NOT = { province_id = 2567 }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				southeast_america_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { area = florida_area }
+							NOT = { area = north_florida_area }
+							NOT = { area = upper_american_georgia_area }
+							NOT = { area = american_georgia_area }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				kentucky_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				western_kentucky_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				appalachia_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				916 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				929 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				2520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				2540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				4904 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+			}
+			GBR = {
+				1813 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2574 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2595 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2599 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4896 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			FRA = {
+				1101 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			RUS = {
+				crimea_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 282 }
+							NOT = { province_id = 2447 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = CRI
+				}
+			}
+			SPA = {
+				california_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				southern_chile_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				bahia_blanca_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				southern_pampas_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				781 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				776 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				2889 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2879 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2893 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2881 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2903 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.3.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			clr_country_flag = american_revolutionary_war
+			set_capital = 956
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_prestige = 30
+			add_manpower = 30
+			add_sailors = 1000
+			add_republican_tradition = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			grant_independence = yes
+			add_country_modifier = {
+				name = major_power
+				duration = 1000000
+			}
+			define_ruler = {
+				name = "George Washington"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 6
+				age = 51
+			}
+			define_ruler_to_general = {	fire = 2	shock = 2	manuever = 6	siege = 0	}
+		}
+		GBR = {
+			clr_country_flag = american_revolutionary_war
+			add_prestige = -10
+			white_peace = USA
+		}
+	}
+}
+
+# United States territorial acquisitions (1)
+country_event = {
+	id = eh_USA.4
+	title = "eh_USA.4.t"
+	desc = "eh_USA.4.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1810
+		NOT = { is_year = 1820 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				set_capital = 953 
+				great_lakes_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { area = minnessota_area }
+						}
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+				}
+				mississippi_region = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+				}
+				southeast_america_region = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+				}
+				red_river_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { province_id = 1007 }
+							NOT = { province_id = 2593 }
+						}
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+				}
+				905 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.4.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_stability = 1
+			add_prestige = 10
+			define_ruler = {
+				name = "James Madison"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 3
+				age = 58
+			}
+		}
+	}
+}
+
+# United States territorial acquisitions (2)
+country_event = {
+	id = eh_USA.5
+	title = "eh_USA.5.t"
+	desc = "eh_USA.5.d"
+	picture = INDIAN_WARS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1840
+		NOT = { is_year = 1845 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				california_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { area = baja_california_area }
+							NOT = { area = sonora_area }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				great_plains_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { owned_by = TEX }
+						}
+					}
+					change_culture = american
+					change_religion = protestant
+					cede_province = USA
+					add_core = USA
+				}
+				minnessota_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				oregon_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				new_mexico_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = MEX
+				}
+				4940 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+			}
+			TEX = {
+				texas_area = {
+					limit = {
+						NOT = { owned_by = TEX }
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = TEX
+					add_core = TEX
+				}
+				coastal_prarie_area = {
+					limit = {
+						NOT = { owned_by = TEX }
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = TEX
+					add_core = TEX
+				}
+				llano_estacado_area = {
+					limit = {
+						NOT = { owned_by = TEX }
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = TEX
+					add_core = TEX
+				}
+				texas_plains_area = {
+					limit = {
+						NOT = { owned_by = TEX }
+					}
+					change_culture = british_louisianan
+					change_religion = protestant
+					cede_province = TEX
+					add_core = TEX
+				}
+				pecos_area = {
+					limit = {
+						NOT = { owned_by = TEX }
+					}
+					cede_province = TEX
+					add_core = TEX
+				}
+			}
+			LBR = {
+				1119 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LBR }
+						}
+					}
+					cede_province = LBR
+					add_core = LBR
+				}
+				2242 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LBR }
+						}
+					}
+					cede_province = LBR
+					add_core = LBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.5.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			set_country_flag = texas
+			add_stability = 1
+			add_prestige = 10
+			create_guarantee = TEX
+			add_trust = {
+				who = TEX
+				value = 50
+				mutual = yes
+			}
+			add_opinion = {
+				who = TEX
+				modifier = sided_with_us
+			}
+			country_event = { id = eh_USA.6 days = 300 }
+		}
+		TEX = {
+			set_country_flag = texas
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			change_religion = protestant
+			change_primary_culture = american
+			add_opinion = {
+				who = USA
+				modifier = sided_with_us
+			}
+		}
+		MEX = {
+			set_country_flag = texas
+			add_stability = -1
+			add_prestige = -10
+			add_trust = {
+				who = USA
+				value = -25
+				mutual = yes
+			}
+			add_opinion = {
+				who = USA
+				modifier = sided_against_us
+			}
+			declare_war_with_cb = {
+				who = TEX
+				casus_belli = cb_imperial
+			}
+		}
+	}
+}
+
+# United States territorial acquisitions (3)
+country_event = {
+	id = eh_USA.6
+	title = "eh_USA.6.t"
+	desc = "eh_USA.6.d"
+	picture = INDIAN_WARS_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				inherit = TEX
+				salish_sea_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				columbia_river_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = GBR
+				}
+				texas_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				coastal_prarie_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				llano_estacado_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				new_mexico_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				pecos_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				texas_plains_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				874 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				2484 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				2485 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+				2511 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = TEX
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.6.a"
+		ai_chance = { factor = 100 }
+		MEX = {
+			declare_war_with_cb = {
+				who = USA
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_north_america.17 days = 300 }
+		}
+	}
+}
+
+# American Civil War (1)
+country_event = {
+	id = eh_USA.7
+	title = "eh_USA.7.t"
+	desc = "eh_USA.7.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1861
+		NOT = { is_year = 1863 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				add_prestige = -10
+				define_ruler = {
+					name = "Abraham Lincoln"
+					change_adm = 6
+					change_dip = 6
+					change_mil = 5
+					age = 52
+				}
+				define_general = {
+					name = "Ulysses Grant"
+					shock = 5
+					fire = 5
+					manuever = 2
+					siege = 2
+				}
+				define_general = {
+					name = "William Sherman"
+					shock = 3
+					fire = 2
+					manuever = 1
+					siege = 3
+				}
+				snake_river_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				country_event = { id = eh_USA.8 days = 100 }
+			}
+			CSA = {
+				change_government = republic
+				add_government_reform = democracy_reform
+				set_capital = 924
+				define_general = {
+					name = "Robert Lee"
+					shock = 6
+					fire = 5
+					manuever = 4
+					siege = 2
+				}
+				llano_estacado_area = {
+					limit = {
+						AND = {
+							owned_by = USA
+							NOT = { owned_by = CSA }
+							NOT = { province_id = 882 }
+							NOT = { province_id = 2496 }
+							NOT = { province_id = 4630 }
+						}
+					}
+					cede_province = CSA
+					add_core = CSA
+				}
+				southeast_america_region = {
+					limit = {
+						AND = {
+							owned_by = USA
+							NOT = { owned_by = CSA }
+						}
+					}
+					cede_province = CSA
+					add_core = CSA
+				}
+				mississippi_region = {
+					limit = {
+						AND = {
+							owned_by = USA
+							NOT = { owned_by = CSA }
+							NOT = { area = upper_louisiana_area }
+							NOT = { area = appalachia_area }
+							NOT = { area = kentucky_area }
+							NOT = { area = western_kentucky_area }
+							NOT = { province_id = 899 }
+							NOT = { province_id = 2509 }
+						}
+					}
+					cede_province = CSA
+					add_core = CSA
+				}
+				rio_grande_region = {
+					limit = {
+						AND = {
+							owned_by = USA
+							NOT = { owned_by = CSA }
+							NOT = { area = llano_estacado_area }
+							NOT = { area = new_mexico_area }
+						}
+					}
+					cede_province = CSA
+					add_core = CSA
+				}
+				924 = {
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					infantry = CSA
+					cavalry = CSA
+					cavalry = CSA
+					cavalry = CSA
+					cavalry = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+					artillery = CSA
+				}
+			}
+			GBR = {
+				assiniboia_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				manitoba_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				prairies_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				straits_of_georgia_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.7.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			northeast_america_region = {
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+		CSA = {
+			set_capital = 924
+			add_manpower = 30
+			add_sailors = 1000
+			define_ruler = {
+				name = "Jefferson Davis"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 4
+				age = 53
+			}
+			every_owned_province = {
+				change_culture = british_louisianan
+				change_religion = protestant
+			}
+			southeast_america_region = {
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Emancipation Proclamation
+country_event = {
+	id = eh_USA.8
+	title = "eh_USA.8.t"
+	desc = "eh_USA.8.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.8.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			set_country_flag = american_civil_war
+			add_stability = 1
+			add_prestige = 10
+			add_manpower = 30
+			add_sailors = 1000
+			country_event = { id = eh_USA.9 days = 300 }
+		}
+		CSA = {
+			set_country_flag = american_civil_war
+			declare_war_with_cb = {
+				who = USA
+				casus_belli = cb_annex
+			}
+		}
+	}
+}
+
+# Conclusion of the American Civil War
+country_event = {
+	id = eh_USA.9
+	title = "eh_USA.9.t"
+	desc = "eh_USA.9.d"
+	picture = GREAT_FIRE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				every_owned_province = {
+					limit = { 
+						AND = {
+							NOT = { region = southeast_america_region }
+							NOT = { region = california_region }
+							NOT = { region = cascadia_region }
+						}
+					}
+					change_culture = american
+					change_religion = protestant
+				}
+				california_region = {
+					limit = { owned_by = USA }
+					change_culture = british_californian
+					change_religion = protestant
+				}
+				cascadia_region = {
+					limit = { owned_by = USA }
+					change_culture = british_californian
+					change_religion = protestant
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.9.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			clr_country_flag = american_civil_war
+			add_accepted_culture = british_louisianan
+			add_accepted_culture = british_californian
+			add_stability = 1
+			add_prestige = 10
+			add_manpower = 30
+			inherit = CSA
+		}
+		CSA = { clr_country_flag = american_civil_war }
+	}
+}
+
+# United States territorial acquisitions (4)
+country_event = {
+	id = eh_USA.10
+	title = "eh_USA.10.t"
+	desc = "eh_USA.10.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1865
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				alaska_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = british_californian
+					cede_province = USA
+					add_core = USA
+					remove_core = RUS
+				}
+				east_alaska_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = british_californian
+					cede_province = USA
+					add_core = USA
+					remove_core = RUS
+				}
+				northern_alaska_area = {
+					limit = {
+						NOT = { owned_by = USA }
+					}
+					change_culture = british_californian
+					cede_province = USA
+					add_core = USA
+					remove_core = RUS
+				}
+				yukon_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = USA }
+							NOT = { province_id = 3041 }
+							NOT = { province_id = 3107 }
+						}
+					}
+					change_culture = british_californian
+					cede_province = USA
+					add_core = USA
+					remove_core = RUS
+				}
+				1997 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				1241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				3112 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.10.a"
+		ai_chance = { factor = 100 }
+		USA = { 
+			add_treasury = -70000
+			define_ruler = {
+				name = "Ulysses Grant"
+				change_adm = 0
+				change_dip = 2
+				change_mil = 6
+				age = 47
+			}
+		}
+		RUS = { add_treasury = 70000 }
+	}
+}
+
+# Industrial Revolution
+country_event = {
+	id = eh_USA.11
+	title = "eh_USA.11.t"
+	desc = "eh_USA.11.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1880
+		NOT = { is_year = 1890 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			USA = {
+				great_plains_region = {
+					limit = {
+						NOT = { owned_by = CSA }
+					}
+					cede_province = USA
+					add_core = USA
+					remove_core = SIO
+				}
+				3217 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+			}
+			CAN = {
+				2004 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+				2022 = {
+					if = {
+						limit = {
+							NOT = { owned_by = USA }
+						}
+					}
+					cede_province = USA
+					add_core = USA
+				}
+				2598 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+				2602 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+				3099 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.11.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			create_subject = {
+				subject_type = protectorate
+				subject = UHW
+			}
+			define_advisor = {
+				type = treasurer
+				name = "Andrew Carnegie"
+				culture = scottish
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = trader
+				name = "John Rockefeller"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Thomas Edison"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Alexander Graham Bell"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+			every_owned_province = {
+				limit = { 
+					AND = {
+						NOT = { area = hudson_valley_area }
+						NOT = { area = massachusetts_bay_area }
+						NOT = { area = upper_missouri_area }
+						NOT = { area = columbia_river_area }
+						NOT = { area = snake_river_area }
+						NOT = { area = oregon_area }
+						NOT = { area = great_basin_area }
+						NOT = { area = yukon_area }
+						NOT = { area = northern_alaska_area }
+						NOT = { province_id = 868 }
+						NOT = { province_id = 4903 }
+						NOT = { province_id = 944 }
+						NOT = { province_id = 953 }
+						NOT = { province_id = 965 }
+						NOT = { province_id = 4637 }
+					}
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			hudson_valley_area = {
+				limit = {
+					AND = {
+						owned_by = USA
+						NOT = { province_id = 965 }
+					}
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+				add_institution_embracement = {
+					which = electrification
+					value = 100
+				}
+			}
+			massachusetts_bay_area = {
+				limit = { owned_by = USA }
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			868 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			4903 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			944 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			953 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			965 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_base_tax = 30
+				add_base_production = 30
+				add_base_manpower = 30
+			}
+			4637 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+		}
+		CAN = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			upper_canada_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			lower_canada_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			huronia_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			ottawa_valley_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			straits_of_georgia_area = { change_culture = british_canadian }
+			prairies_area = { change_culture = british_canadian }
+			assiniboia_area = { change_culture = british_canadian }
+			manitoba_area = { change_culture = british_canadian }
+			upper_ontario_area = { change_culture = british_canadian }
+			1007 = { change_culture = british_canadian }
+			2593 = { change_culture = british_canadian }
+		}
+	}
+}
+
+# Post-war economic growth
+country_event = {
+	id = eh_USA.12
+	title = "eh_USA.12.t"
+	desc = "eh_USA.12.d"
+	picture = NY_SKYLINE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1950
+		NOT = { is_year = 1960 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_USA.12.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			define_advisor = {
+				type = natural_scientist
+				name = "John von Neumann"
+				culture = hungarian
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = fortification_expert
+				name = "Wernher von Braun"
+				culture = prussian
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = artist
+				name = "Frank Sinatra"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			northeast_america_region = {
+				limit = {
+					AND = {
+						owned_by = USA
+						NOT = { province_id = 953 }
+						NOT = { province_id = 965 }
+					}
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 100
+				}
+			}
+			868 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+				add_institution_embracement = {
+					which = globalization
+					value = 100
+				}
+			}
+			4903 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+				add_institution_embracement = {
+					which = globalization
+					value = 100
+				}
+			}
+			944 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			953 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			965 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			4637 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+		}
+	}
+}
+
+# Civil Rights Movement
+country_event = {
+	id = eh_USA.13
+	title = "eh_USA.13.t"
+	desc = "eh_USA.13.d"
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1960
+		NOT = { is_year = 1970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_USA.13.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_stability = 1
+			add_prestige = 10
+			add_republican_tradition = 10
+			add_manpower = 100
+		}
+	}
+}
+
+# Pax Americana
+country_event = {
+	id = eh_USA.14
+	title = "eh_USA.14.t"
+	desc = "eh_USA.14.d"
+	picture = NY_SKYLINE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1985
+		NOT = { is_year = 1990 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_USA.14.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			define_advisor = {
+				type = trader
+				name = "Bill Gates"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = trader
+				name = "Steve Jobs"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			every_owned_province = {
+				limit = { 
+					AND = {
+						continent = north_america
+						NOT = { area = hudson_valley_area }
+						NOT = { area = massachusetts_bay_area }
+						NOT = { province_id = 868 }
+						NOT = { province_id = 4903 }
+						NOT = { province_id = 944 }
+						NOT = { province_id = 953 }
+						NOT = { province_id = 965 }
+						NOT = { province_id = 4637 }
+					}
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			hudson_valley_area = {
+				limit = {
+					AND = {
+						owned_by = USA
+						NOT = { province_id = 965 }
+					}
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			massachusetts_bay_area = {
+				limit = { owned_by = USA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			868 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			4903 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			944 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			953 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			965 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+			}
+			4637 = {
+				if = {
+					limit = { owned_by = USA }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+		}
+	}
+}
+
+# Gulf War
+country_event = {
+	id = eh_USA.15
+	title = "eh_USA.15.t"
+	desc = "eh_USA.15.d"
+	picture = MODERN_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1990
+		NOT = { is_year = 1991 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				create_guarantee = KUW
+				form_coalition_against = IRQ
+			}
+			GBR = {
+				create_guarantee = KUW
+				form_coalition_against = IRQ
+			}
+			PLS = {
+				379 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PLS }
+						}
+					}
+					cede_province = PLS
+					add_core = PLS
+					remove_core = ISR
+				}
+			}
+			YEM = {
+				inherit = ADE
+				mahra_area = {
+					limit = {
+						NOT = { owned_by = YEM }
+					}
+					cede_province = YEM
+					add_core = YEM
+					remove_core = ADE
+				}
+				hadramut_area = {
+					limit = {
+						NOT = { owned_by = YEM }
+					}
+					cede_province = YEM
+					add_core = YEM
+					remove_core = ADE
+				}
+				yemen_area = {
+					limit = {
+						NOT = { owned_by = YEM }
+					}
+					cede_province = YEM
+					add_core = YEM
+					remove_core = ADE
+				}
+			}
+			ADE = {
+				clr_country_flag = eh_override_name
+				restore_country_name = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_USA.15.a"
+		ai_chance = { factor = 100 }
+		KUW = { set_country_flag = gulf_war }
+		IRQ = {
+			set_country_flag = gulf_war
+			declare_war_with_cb = {
+				who = KUW
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_asia_middle_east.32 days = 100 }
+		}
+		USA = { 
+			set_country_flag = gulf_war
+			join_all_defensive_wars_of = KUW
+		}
+		GBR = { 
+			set_country_flag = gulf_war
+			join_all_defensive_wars_of = KUW
+		}
+		YEM = {
+			every_owned_province = {
+				add_base_tax = -10
+				add_base_production = -10
+				add_base_manpower = -1
+			}
+		}
+	}
+}
+
+# September 11 attacks
+country_event = {
+	id = eh_USA.16
+	title = "eh_USA.16.t"
+	desc = "eh_USA.16.d"
+	picture = NY_SKYLINE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 2001
+		NOT = { is_year = 2002 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_USA.16.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			set_country_flag = war_on_terror
+			add_prestige = -10
+			define_ruler = {
+				name = "George W. Bush"
+				change_adm = 1
+				change_dip = 2
+				change_mil = 6
+				age = 55
+			}
+			every_owned_province = {
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+			447 = {
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				infantry = USA
+				cavalry = USA
+				cavalry = USA
+				cavalry = USA
+				cavalry = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+				artillery = USA
+			}
+			declare_war_with_cb = {
+				who = AF2
+				casus_belli = cb_super_badboy
+			}
+			country_event = { id = eh_asia_central_asian.28 days = 30 }
+		}
+		AF2 = { set_country_flag = war_on_terror }
+	}
+}
+
+# 2003 invasion of Iraq
+country_event = {
+	id = eh_USA.17
+	title = "eh_USA.17.t"
+	desc = "eh_USA.17.d"
+	picture = MODERN_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 2003
+		NOT = { is_year = 2004 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_USA.17.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			declare_war_with_cb = {
+				who = IRQ
+				casus_belli = cb_super_badboy
+			}
+			country_event = { id = eh_asia_middle_east.33 days = 300 }
+		}
+		IRQ = { set_country_flag = war_on_terror }
+		YUG = { change_tag = SER }
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# The name of the provinces
+country_event = {
+	id = eh_USA.18
+	title = "eh_USA.18.t"
+	desc = "eh_USA.18.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		is_year = 1860
+		NOT = { is_year = 1870 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_USA.18.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			868 = {
+				change_province_name = "Los Angeles"
+				rename_capital = "Los Angeles"
+			}
+			874 = {
+				change_province_name = "Seattle"
+				rename_capital = "Seattle"
+			}
+			876 = {
+				change_province_name = "Pheonix"
+				rename_capital = "Pheonix"
+			}
+			4627 = {
+				change_province_name = "Austin"
+				rename_capital = "Austin"
+			}
+			4903 = {
+				change_province_name = "Chicago"
+				rename_capital = "Chicago"
+			}
+			953 = {
+				change_province_name = "Washington DC"
+				rename_capital = "Washington DC"
+			}
+			965 = {
+				change_province_name = "New York"
+				rename_capital = "New York"
+			}
+			2476 = {
+				change_province_name = "San Diego"
+				rename_capital = "San Diego"
+			}
+			886 = {
+				change_province_name = "Dallas"
+				rename_capital = "Dallas"
+			}
+			4637 = {
+				change_province_name = "San Francisco"
+				rename_capital = "San Francisco"
+			}
+		}
+		CAN = {
+			973 = {
+				change_province_name = "Vancouver"
+				rename_capital = "Vancouver"
+			}
+			993 = {
+				change_province_name = "Montreal"
+				rename_capital = "Montreal"
+			}
+			2670 = {
+				change_province_name = "Toronto"
+				rename_capital = "Toronto"
+			}
+			4829 = {
+				change_province_name = "Ottawa"
+				rename_capital = "Ottawa"
+			}
+		}
+	}
+}
+
+# George Washington
+country_event = {
+	id = eh_USA.19
+	title = "eh_USA.19.t"
+	desc = "eh_USA.19.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = USA
+		is_year = 1789
+		NOT = { is_year = 1797 }
+		NOT = { has_ruler = "George Washington" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_USA.19.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			change_government = republic
+			add_government_reform = american_republic
+			set_government_rank = 2
+			define_ruler = {
+				name = "George Washington"
+				change_adm = 5
+				change_dip = 5
+				change_mil = 6
+				min_age = 60
+				max_age = 65
+			}
+			define_ruler_to_general = {	fire = 2	shock = 2	manuever = 6	siege = 0	}
+		}
+	}
+}
+
+# Abraham Lincoln
+country_event = {
+	id = eh_USA.20
+	title = "eh_USA.20.t"
+	desc = "eh_USA.20.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	trigger = {
+		tag = USA
+		is_year = 1860
+		NOT = { is_year = 1865 }
+		NOT = { has_ruler = "Abraham Lincoln" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_USA.20.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			change_government = republic
+			add_government_reform = american_republic
+			set_government_rank = 2
+			define_ruler = {
+				name = "Abraham Lincoln"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 5
+				min_age = 50
+				max_age = 55
+			}
+		}
+	}
+}
+
+# Franklin Roosevelt
+country_event = {
+	id = eh_USA.21
+	title = "eh_USA.21.t"
+	desc = "eh_USA.21.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		tag = USA
+		is_year = 1933
+		NOT = { is_year = 1944 }
+		NOT = { has_ruler = "Franklin D. Roosevelt" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_USA.21.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			change_government = republic
+			add_government_reform = federal_republic
+			set_government_rank = 3
+			define_ruler = {
+				name = "Franklin D. Roosevelt"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				min_age = 50
+				max_age = 62
+			}
+		}
+	}
+}
+
+# Ronald Reagan
+country_event = {
+	id = eh_USA.22
+	title = "eh_USA.22.t"
+	desc = "eh_USA.22.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	trigger = {
+		tag = USA
+		is_year = 1981
+		NOT = { is_year = 1988 }
+		NOT = { has_ruler = "Ronald Reagan" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_USA.22.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			change_government = republic
+			add_government_reform = federal_republic
+			set_government_rank = 3
+			define_ruler = {
+				name = "Ronald Reagan"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 6
+				min_age = 70
+				max_age = 78
+			}
+		}
+	}
+}
+
+# United States expedition - Start for US
+country_event = {
+	id = eh_USA.23
+	title = "eh_USA.23.t"
+	desc = "eh_USA.23.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.23.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# United States withdrawal - Finish for US
+country_event = {
+	id = eh_USA.24
+	title = "eh_USA.24.t"
+	desc = "eh_USA.24.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.24.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boxer Rebellion - Start for US
+country_event = {
+	id = eh_USA.25
+	title = "eh_USA.25.t"
+	desc = "eh_USA.25.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.25.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boxer Protocol - Finish for US
+country_event = {
+	id = eh_USA.26
+	title = "eh_USA.26.t"
+	desc = "eh_USA.26.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.26.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Spanish-American War - Start for US
+country_event = {
+	id = eh_USA.27
+	title = "eh_USA.27.t"
+	desc = "eh_USA.27.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.27.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Spanish-American War - Finish for US
+country_event = {
+	id = eh_USA.28
+	title = "eh_USA.28.t"
+	desc = "eh_USA.28.d"
+	picture = WW_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.28.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Pacific War - Start for US
+country_event = {
+	id = eh_USA.29
+	title = "eh_USA.29.t"
+	desc = "eh_USA.29.d"
+	picture = CONSTITUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.29.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Victory over Japan Day - Finish for US
+country_event = {
+	id = eh_USA.30
+	title = "eh_USA.30.t"
+	desc = "eh_USA.30.d"
+	picture = WW_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.30.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Korean War - Start for US
+country_event = {
+	id = eh_USA.31
+	title = "eh_USA.31.t"
+	desc = "eh_USA.31.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.31.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Korean War - Finish for US
+country_event = {
+	id = eh_USA.32
+	title = "eh_USA.32.t"
+	desc = "eh_USA.32.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.32.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Vietnam War - Start for US
+country_event = {
+	id = eh_USA.33
+	title = "eh_USA.33.t"
+	desc = "eh_USA.33.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.33.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Vietnam War - Finish for US
+country_event = {
+	id = eh_USA.34
+	title = "eh_USA.34.t"
+	desc = "eh_USA.34.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_USA.34.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# EH version

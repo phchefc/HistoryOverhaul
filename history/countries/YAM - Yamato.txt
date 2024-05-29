@@ -1,0 +1,1290 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_rival = KIB
+historical_friend = FUJ
+capital = 1832	# Yamato
+
+# Legendary
+
+2.1.1 = {
+	monarch = {
+		name = "Suinin"
+		dynasty = "Yamato"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Hibasuhime"
+		dynasty = "Yamato"
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+71.1.1 = {
+	monarch = {
+		name = "Keiko"
+		dynasty = "Yamato"
+		death_date = 130.1.1
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Yasakairihime"
+		dynasty = "Yamato"
+		birth_date = 2.1.1
+		death_date = 130.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+131.1.1 = {
+	monarch = {
+		name = "Seimu"
+		dynasty = "Yamato"
+		birth_date = 84.1.1
+		death_date = 190.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Oho-takara"
+		dynasty = "Yamato"
+		birth_date = 90.1.1
+		death_date = 190.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+192.1.1 = {
+	monarch = {
+		name = "Chuai"
+		dynasty = "Yamato"
+		birth_date = 149.1.1
+		death_date = 200.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Jingu"
+		dynasty = "Yamato"
+		birth_date = 169.1.1
+		death_date = 269.1.1
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+201.1.1 = {
+	monarch = {
+		name = "Jingu"
+		dynasty = "Yamato"
+		birth_date = 169.1.1
+		death_date = 269.1.1
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Kofun (Semi-legendary)
+
+270.1.1 = {
+	monarch = {
+		name = "Ojin"
+		dynasty = "Yamato"
+		birth_date = 201.1.1
+		death_date = 310.1.1
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Nakatsuhime"
+		dynasty = "Yamato"
+		birth_date = 200.1.1
+		death_date = 300.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+311.1.1 = {
+	monarch = {
+		name = "Nintoku"
+		dynasty = "Yamato"
+		birth_date = 257.1.1
+		death_date = 399.2.7
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Iwanohime"
+		dynasty = "Yamato"
+		birth_date = 260.1.1
+		death_date = 400.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+369.9.1 = {
+	historical_rival = SLL
+	historical_friend = BKJ
+}
+
+399.2.7 = {
+	monarch = {
+		name = "Richu"
+		dynasty = "Yamato"
+		birth_date = 336.1.1
+		death_date = 405.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Kurohime"
+		dynasty = "Yamato"
+		birth_date = 340.1.1
+		death_date = 400.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+406.1.1 = {
+	monarch = {
+		name = "Hanzei"
+		dynasty = "Yamato"
+		birth_date = 336.1.1
+		death_date = 410.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Tsunohime"
+		dynasty = "Yamato"
+		birth_date = 340.1.1
+		death_date = 400.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+411.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Ingyo"
+		dynasty = "Yamato"
+		birth_date = 376.1.1
+		death_date = 453.2.8
+		adm = 2
+		dip = 4
+		mil = 4
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Onakatsuhime"
+		dynasty = "Yamato"
+		birth_date = 380.1.1
+		death_date = 440.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+453.2.8 = {
+	monarch = {
+		name = "Anko"
+		dynasty = "Yamato"
+		birth_date = 401.1.1
+		death_date = 456.9.24
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Nakashi"
+		dynasty = "Yamato"
+		birth_date = 400.1.1
+		death_date = 460.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+456.9.24 = {
+	monarch = {
+		name = "Yuryaku"
+		dynasty = "Yamato"
+		birth_date = 418.10.1
+		death_date = 479.9.8
+		adm = 0
+		dip = 1
+		mil = 4
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Hatabihime"
+		dynasty = "Yamato"
+		birth_date = 420.1.1
+		death_date = 480.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+479.9.8 = {
+	monarch = {
+		name = "Seinei"
+		dynasty = "Yamato"
+		birth_date = 444.1.1
+		death_date = 484.2.27
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+484.2.27 = {
+	monarch = {
+		name = "Kenzo"
+		dynasty = "Yamato"
+		birth_date = 450.1.1
+		death_date = 487.6.2
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Ono"
+		dynasty = "Yamato"
+		birth_date = 450.1.1
+		death_date = 510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+487.6.2 = {
+	monarch = {
+		name = "Ninken"
+		dynasty = "Yamato"
+		birth_date = 449.1.1
+		death_date = 498.8.8
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Oiratsume"
+		dynasty = "Yamato"
+		birth_date = 450.1.1
+		death_date = 510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+498.8.8 = {
+	monarch = {
+		name = "Buretsu"
+		dynasty = "Yamato"
+		birth_date = 489.1.1
+		death_date = 507.3.3
+		adm = 0
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Iratsume"
+		dynasty = "Yamato"
+		birth_date = 490.1.1
+		death_date = 550.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+507.3.3 = {
+	monarch = {
+		name = "Keitai"
+		dynasty = "Yamato"
+		birth_date = 458.1.1
+		death_date = 531.3.10
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Tashiraka"
+		dynasty = "Yamato"
+		birth_date = 460.1.1
+		death_date = 520.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+531.3.10 = {
+	monarch = {
+		name = "Ankan"
+		dynasty = "Yamato"
+		birth_date = 466.1.1
+		death_date = 536.1.25
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Tashiraka"
+		dynasty = "Yamato"
+		birth_date = 470.1.1
+		death_date = 530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+536.1.25 = {
+	monarch = {
+		name = "Senka"
+		dynasty = "Yamato"
+		birth_date = 466.1.1
+		death_date = 539.3.15
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Nakatsu"
+		dynasty = "Yamato"
+		birth_date = 470.1.1
+		death_date = 530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Asuka
+
+539.12.5 = {
+	government = monarchy
+	add_government_reform = feudalism_reform
+	monarch = {
+		name = "Kimmei"
+		dynasty = "Yamato"
+		birth_date = 509.1.1
+		death_date = 571.4.15
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Ishihime"
+		dynasty = "Yamato"
+		birth_date = 510.1.1
+		death_date = 570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bidatsu"
+		monarch_name = "Bidatsu"
+		dynasty = "Yamato"
+		birth_date = 538.1.1
+		death_date = 585.9.14
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+571.5.24 = {
+	monarch = {
+		name = "Bidatsu"
+		dynasty = "Yamato"
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Hirohime"
+		dynasty = "Yamato"
+		birth_date = 540.1.1
+		death_date = 575.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yomei"
+		monarch_name = "Yomei"
+		dynasty = "Yamato"
+		birth_date = 550.1.1
+		death_date = 587.5.21
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+575.1.1 = {
+	queen = {
+		country_of_origin = YAM
+		name = "Suiko"
+		dynasty = "Yamato"
+		birth_date = 552.12.3
+		death_date = 628.4.15
+		female = yes
+		adm = 6
+		dip = 4
+		mil = 4
+	}
+}
+
+585.9.14 = {
+	monarch = {
+		name = "Yomei"
+		dynasty = "Yamato"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Hashihito"
+		dynasty = "Yamato"
+		birth_date = 560.1.1
+		death_date = 620.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sushun"
+		monarch_name = "Sushun"
+		dynasty = "Yamato"
+		birth_date = 533.1.1
+		death_date = 592.12.12
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+}
+
+587.5.21 = {
+	monarch = {
+		name = "Sushun"
+		dynasty = "Yamato"
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Koteko"
+		dynasty = "Yamato"
+		birth_date = 540.1.1
+		death_date = 600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Suiko"
+		monarch_name = "Suiko"
+		dynasty = "Yamato"
+		birth_date = 552.12.3
+		death_date = 628.4.15
+		female = yes
+		claim = 90
+		adm = 6
+		dip = 4
+		mil = 4
+	}
+}
+
+592.12.12 = {
+	monarch = {
+		name = "Suiko"
+		dynasty = "Yamato"
+		female = yes
+		adm = 6
+		dip = 4
+		mil = 4
+	}
+}
+
+607.1.1 = { religion = mahayana }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+629.1.1 = {
+	monarch = {
+		name = "Jomei"
+		dynasty = "Yamato"
+		birth_date = 593.4.17
+		death_date = 641.11.17
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Kogyoku"
+		dynasty = "Yamato"
+		birth_date = 594.8.7
+		death_date = 661.7.24
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+642.1.25 = {
+	monarch = {
+		name = "Kogyoku" # 1st reign
+		dynasty = "Yamato"
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Kotoku"
+		monarch_name = "Kotoku"
+		dynasty = "Yamato"
+		birth_date = 596.1.1
+		death_date = 654.11.24
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 6
+	}
+}
+
+645.6.14 = {
+	monarch = {
+		name = "Kotoku"
+		dynasty = "Yamato"
+		adm = 3
+		dip = 4
+		mil = 6
+	}
+	heir = {
+		name = "Saimei"
+		monarch_name = "Saimei"
+		dynasty = "Yamato"
+		birth_date = 594.8.7
+		death_date = 661.7.24
+		female = yes
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+654.11.24 = {
+	monarch = {
+		name = "Saimei" # 2nd reign
+		dynasty = "Yamato"
+		adm = 4
+		dip = 3
+		mil = 5
+		female = yes
+	}
+	heir = {
+		name = "Tenji"
+		monarch_name = "Tenji"
+		dynasty = "Yamato"
+		birth_date = 626.1.1
+		death_date = 672.1.7
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+661.7.24 = {
+	monarch = {
+		name = "Tenji"
+		dynasty = "Yamato"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Okimi"
+		dynasty = "Yamato"
+		birth_date = 630.1.1
+		death_date = 690.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kobun"
+		monarch_name = "Kobun"
+		dynasty = "Yamato"
+		birth_date = 648.1.1
+		death_date = 672.8.21
+		claim = 90
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+672.1.7 = {
+	monarch = {
+		name = "Kobun"
+		dynasty = "Yamato"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Tochi"
+		dynasty = "Yamato"
+		birth_date = 653.1.1
+		death_date = 678.5.3
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+672.8.21 = {
+	government_rank = 3
+	monarch = {
+		name = "Temmu"
+		dynasty = "Yamato"
+		birth_date = 631.1.1
+		adm = 6
+		dip = 5
+		mil = 3
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Jito"
+		dynasty = "Yamato"
+		birth_date = 645.1.1
+		death_date = 703.1.13
+		female = yes
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}
+
+686.10.1 = {
+	monarch = {
+		name = "Jito"
+		dynasty = "Yamato"
+		female = yes
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+	heir = {
+		name = "Mommu"
+		monarch_name = "Mommu"
+		dynasty = "Yamato"
+		birth_date = 681.10.13
+		death_date = 707.7.18
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+697.9.23 = {
+	monarch = {
+		name = "Mommu"
+		dynasty = "Yamato"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = FUJ
+		name = "Miyako"
+		dynasty = "Fujiwara"
+		birth_date = 685.1.1
+		death_date = 745.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+698.6.1 = { historical_friend = BLH }
+
+707.7.18 = {
+	monarch = {
+		name = "Gemmei"
+		dynasty = "Yamato"
+		birth_date = 661.1.1
+		death_date = 715.10.3
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+	heir = {
+		name = "Gensho"
+		monarch_name = "Gensho"
+		dynasty = "Yamato"
+		birth_date = 680.1.1
+		death_date = 748.5.22
+		female = yes
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+# Nara
+
+712.1.1 = { religion = shinto }
+
+715.10.3 = {
+	monarch = {
+		name = "Gensho"
+		dynasty = "Yamato"
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+	heir = {
+		name = "Shomu"
+		monarch_name = "Shomu"
+		dynasty = "Yamato"
+		birth_date = 701.1.1
+		death_date = 756.6.4
+		claim = 90
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}
+
+724.3.3 = {
+	monarch = {
+		name = "Shomu"
+		dynasty = "Yamato"
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+	heir = {
+		name = "Koken"
+		monarch_name = "Koken"
+		dynasty = "Yamato"
+		birth_date = 718.1.1
+		death_date = 770.8.28
+		female = yes
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+730.1.1 = {
+	queen = {
+		country_of_origin = FUJ
+		name = "Asukabehime"
+		dynasty = "Fujiwara"
+		birth_date = 701.1.1
+		death_date = 760.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+749.8.19 = {
+	monarch = {
+		name = "Koken" # 1st reign
+		dynasty = "Yamato"
+		female = yes
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	heir = {
+		name = "Junnin"
+		monarch_name = "Junnin"
+		dynasty = "Yamato"
+		birth_date = 733.1.1
+		death_date = 765.11.10
+		claim = 90
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+758.12.7 = {
+	monarch = {
+		name = "Junnin"
+		dynasty = "Yamato"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Morone"
+		dynasty = "Awata"
+		birth_date = 735.1.1
+		death_date = 795.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+765.1.26 = {
+	monarch = {
+		name = "Shotoku" # 2nd reign
+		dynasty = "Yamato"
+		female = yes
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	heir = {
+		name = "Konin"
+		monarch_name = "Konin"
+		dynasty = "Yamato"
+		birth_date = 709.11.18
+		death_date = 782.1.11
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+770.10.23 = {
+	monarch = {
+		name = "Konin"
+		dynasty = "Yamato"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YAM
+		name = "Inoe"
+		dynasty = "Yamato"
+		birth_date = 717.1.1
+		death_date = 775.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kammu"
+		monarch_name = "Kammu"
+		dynasty = "Yamato"
+		birth_date = 736.2.4
+		death_date = 809.4.9
+		claim = 90
+		adm = 6
+		dip = 5
+		mil = 2
+	}
+}
+
+775.1.1 = {
+	queen = {
+		country_of_origin = YAM
+		name = "Niigasa"
+		dynasty = "Takano"
+		birth_date = 730.1.1
+		death_date = 790.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+781.4.30 = {
+	monarch = {
+		name = "Kammu"
+		dynasty = "Yamato"
+		adm = 6
+		dip = 5
+		mil = 2
+	}
+	queen = {
+		country_of_origin = FUJ
+		name = "Otomuro"
+		dynasty = "Fujiwara"
+		birth_date = 760.1.1
+		death_date = 790.4.28
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+794.10.22 = { capital = 1020 }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Later Kamakura Shoguns
+
+1252.4.1 = {
+	government = monarchy
+	add_government_reform = shogunate
+	government_rank = 2
+	monarch = {
+		name = "Munetaka"
+		dynasty = "Yamato"
+		birth_date = 1242.12.15
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = KMK
+		name = "Saiko"
+		dynasty = "Konoe"
+		birth_date = 1241.1.1
+		death_date = 1300.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1264.5.26 = {
+	heir = {
+		name = "Koreyasu"
+		monarch_name = "Koreyasu"
+		dynasty = "Yamato"
+		birth_date = 1264.5.26
+		death_date = 1326.11.25
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1266.1.1 = {
+	monarch = {
+		name = "Koreyasu"
+		dynasty = "Yamato"
+		birth_date = 1264.5.26
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1276.10.19 = {
+	heir = {
+		name = "Hisaaki"
+		monarch_name = "Hisaaki"
+		dynasty = "Yamato"
+		birth_date = 1276.10.19
+		death_date = 1328.11.16
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1289.1.1 = {
+	monarch = {
+		name = "Hisaaki"
+		dynasty = "Yamato"
+		birth_date = 1276.10.19
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = KMK
+		dynasty = "Yamato"
+		birth_date = 1280.1.1
+		death_date = 1306.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1301.6.19 = {
+	heir = {
+		name = "Morikuni"
+		monarch_name = "Morikuni"
+		dynasty = "Yamato"
+		birth_date = 1301.6.19
+		death_date = 1333.9.25
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1308.8.1 = {
+	monarch = {
+		name = "Morikuni"
+		dynasty = "Yamato"
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+# Southern Court of Japan
+
+1338.2.23 = {
+	government = monarchy
+	add_government_reform = feudalism_reform
+	government_rank = 3
+	capital = 1832
+	monarch = {
+		name = "Go-Daigo"
+		dynasty = "Yamato"
+		birth_date = 1288.11.26
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+	queen = {
+		country_of_origin = JAP
+		name = "Kishi"
+		dynasty = "Saionji"
+		birth_date = 1295.1.1
+		death_date = 1333.11.19
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Go-Murakami"
+		monarch_name = "Go-Murakami"
+		dynasty = "Yamato"
+		birth_date = 1328.1.1
+		death_date = 1368.3.29
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1338.2.23 = {
+	historical_rival = ASK
+	historical_rival = JAP
+}
+
+1339.9.18 = {
+	monarch = {
+		name = "Go-Murakami"
+		dynasty = "Yamato"
+		birth_date = 1328.1.1
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1343.1.1 = {
+	queen = {
+		country_of_origin = YAM
+		name = "Kaki Mon'in"
+		dynasty = "Ano"
+		birth_date = 1325.1.1
+		death_date = 1380.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chokei"
+		monarch_name = "Chokei"
+		dynasty = "Yamato"
+		birth_date = 1343.1.1
+		death_date = 1394.8.27
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+}
+
+1368.3.29 = {
+	monarch = {
+		name = "Chokei"
+		dynasty = "Yamato"
+		birth_date = 1343.1.1
+		adm = 1
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAM
+		dynasty = "Saionji"
+		birth_date = 1345.1.1
+		death_date = 1405.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Go-Kameyama"
+		monarch_name = "Go-Kameyama"
+		dynasty = "Yamato"
+		birth_date = 1347.1.1
+		death_date = 1424.5.10
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+}
+
+1383.1.1 = {
+	monarch = {
+		name = "Go-Kameyama"
+		dynasty = "Yamato"
+		birth_date = 1347.1.1
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = KTB
+		name = "Nobuko"
+		dynasty = "Kitabatake"
+		birth_date = 1350.1.1
+		death_date = 1410.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

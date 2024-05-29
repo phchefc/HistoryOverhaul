@@ -1,0 +1,31 @@
+
+bookmark =
+{
+	name = "WAR_ON_TERROR_NAME"
+	desc = "WAR_ON_TERROR_DESC"
+	date = 2001.9.11
+	
+	country = USA
+	country = JAP
+	country = GER
+	country = GBR
+	country = FR2
+	country = CHN
+	country = ITA
+	country = MEX
+	country = CAN
+	country = SPA
+	country = BRZ
+	country = SKO
+	country = INI
+	country = NED
+	country = AUS
+	country = RUS
+	country = IRA
+	country = LAP
+	country = FRM
+	country = SWI
+
+}
+
+# EH version

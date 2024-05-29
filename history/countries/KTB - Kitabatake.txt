@@ -1,0 +1,256 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = chinese
+historical_friend = KMK
+capital = 4359 # Ise
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1322.1.1 = {
+	monarch = {
+		name = "Chikafusa"
+		dynasty = "Kitabatake"
+		birth_date = 1293.1.1
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+1333.5.18 = { leader = {	name = "Kitabatake Akiie"     	type = general		fire = 2	shock = 2	manuever = 2	siege = 0 death_date = 1338.6.10 } }
+
+1338.2.23 = { capital = 4360 }
+
+1354.5.10 = {
+	monarch = {
+		name = "Akiyoshi"
+		dynasty = "Kitabatake"
+		birth_date = 1326.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1383.7.1 = {
+	monarch = {
+		name = "Akiyasu"
+		dynasty = "Kitabatake"
+		birth_date = 1361.1.1
+		adm = 1
+		dip = 5
+		mil = 2
+	}
+}
+
+1383.7.1 = {
+	heir = {
+		name = "Mitsumasa"
+		monarch_name = "Mitsumasa"
+		dynasty = "Kitabatake"
+		birth_date = 1380.1.1
+		death_date = 1429.1.25
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 4
+	}
+}
+
+1414.1.1 = {
+	monarch = {
+		name = "Mitsumasa"
+		dynasty = "Kitabatake"
+		birth_date = 1380.1.1
+		adm = 1
+		dip = 0
+		mil = 4
+	}
+}
+
+1423.1.1 = {
+	heir = {
+		name = "Noritomo"
+		monarch_name = "Noritomo"
+		dynasty = "Kitabatake"
+		birth_date = 1423.1.1
+		death_date = 1471.4.13
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1429.1.25 = {
+	monarch = {
+		name = "Noritomo"
+		dynasty = "Kitabatake"
+		birth_date = 1423.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = tactical_genius_personality
+}
+
+1448.1.1 = {
+	heir = {
+		name = "Masasato"
+		monarch_name = "Masasato"
+		dynasty = "Kitabatake"
+		birth_date = 1448.1.1
+		death_date = 1508.12.4
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1471.4.13 = {
+	monarch = {
+		name = "Masasato"
+		dynasty = "Kitabatake"
+		birth_date = 1448.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1471.4.13 = {
+	heir = {
+		name = "Kichika"
+		monarch_name = "Kichika"
+		dynasty = "Kitabatake"
+		birth_date = 1358.1.1
+		death_date = 1427.1.1
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1508.12.4 = {
+	monarch = {
+		name = "Kichika"
+		dynasty = "Kitabatake"
+		birth_date = 1358.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+
+1508.12.4 = {
+	heir = {
+		name = "Harutomo"
+		monarch_name = "Harutomo"
+		dynasty = "Kitabatake"
+		birth_date = 1503.1.1
+		death_date = 1563.10.4
+		claim = 70
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+	
+1517.1.1 = { 
+	monarch = {
+		name = "Harutomo"
+		dynasty = "Harutomo"
+		birth_date = 1503.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = HSK
+		dynasty = "Hosokawa"
+		birth_date = 1505.1.1
+		death_date = 1570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1528.1.1 = {
+	heir = {
+		name = "Tomonori"
+		monarch_name = "Tomonori"
+		dynasty = "Kitabatake"
+		birth_date = 1528.1.1
+		death_date = 1576.12.15
+		claim = 70
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+	
+1563.10.4 = { 
+	monarch = {
+		name = "Tomonori"
+		dynasty = "Kitabatake"
+		birth_date = 1528.1.1
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = KTB
+		dynasty = "Rokkaku"
+		birth_date = 1530.1.1
+		death_date = 1600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1563.10.4 = {
+	heir = {
+		name = "Tomofusa"
+		monarch_name = "Tomofusa"
+		dynasty = "Kitabatake"
+		birth_date = 1547.1.1
+		death_date = 1580.1.21
+		claim = 70
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+	
+1576.12.15 = {
+	monarch = {
+		name = "Tomofusa"
+		dynasty = "Kitabatake"
+		birth_date = 1547.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+# EH version

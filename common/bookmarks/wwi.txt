@@ -1,0 +1,17 @@
+
+bookmark =
+{
+	name = "WWI_NAME"
+	desc = "WWI_DESC"
+	date = 1914.7.28
+	
+	country = USA
+	country = GBR
+	country = FR2
+	country = RUS
+	country = GER
+	country = HAB
+	country = TUR
+}
+
+# EH version

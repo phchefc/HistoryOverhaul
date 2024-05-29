@@ -1,0 +1,786 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = TKD
+historical_friend = KMK
+capital = 1820	# Shinano
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+# Hiki clan
+
+1185.6.19 = {
+	monarch = {
+		name = "Yoshikazu"
+		dynasty = "Hiki"
+		birth_date = 1160.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Ogasawara clan, replaced Hiki clan
+
+1203.9.2 = {
+	capital = 1820 # Awa
+	monarch = {
+		name = "Nagakiyo"
+		dynasty = "Ogasawara"
+		birth_date = 1162.4.20
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Kazusa"
+		birth_date = 1170.1.1
+		death_date = 1130.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagatsune"
+		monarch_name = "Nagatsune"
+		dynasty = "Ogasawara"
+		birth_date = 1179.6.23
+		death_date = 1247.12.3
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1242.8.12 = {
+	monarch = {
+		name = "Nagatsune"
+		dynasty = "Ogasawara"
+		birth_date = 1179.6.23
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TIA
+		dynasty = "Taira"
+		birth_date = 1180.1.1
+		death_date = 1140.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagatada"
+		monarch_name = "Nagatada"
+		dynasty = "Ogasawara"
+		birth_date = 1202.5.19
+		death_date = 1264.11.23
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+}
+
+1247.12.3 = {
+	monarch = {
+		name = "Nagatada"
+		dynasty = "Ogasawara"
+		birth_date = 1202.5.19
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+}
+
+1247.12.3 = {
+	heir = {
+		name = "Nagamasa"
+		monarch_name = "Nagamasa"
+		dynasty = "Ogasawara"
+		birth_date = 1234.1.1
+		death_date = 1290.1.1
+		claim = 95
+		adm = 4
+		dip = 0
+		mil = 4
+	}
+}
+
+1264.11.23 = {
+	monarch = {
+		name = "Nagamasa"
+		dynasty = "Ogasawara"
+		birth_date = 1234.1.1
+		adm = 4
+		dip = 0
+		mil = 4
+	}
+}
+
+1264.11.23 = {
+	heir = {
+		name = "Nagauji"
+		monarch_name = "Nagauji"
+		dynasty = "Ogasawara"
+		birth_date = 1260.1.1
+		death_date = 1310.1.1
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1290.1.1 = {
+	monarch = {
+		name = "Nagauji"
+		dynasty = "Ogasawara"
+		birth_date = 1260.1.1
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+}
+
+1290.1.1 = {
+	heir = {
+		name = "Munenaga"
+		monarch_name = "Munenaga"
+		dynasty = "Ogasawara"
+		birth_date = 1280.1.1
+		death_date = 1330.1.1
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}
+
+1310.1.1 = {
+	monarch = {
+		name = "Munenaga"
+		dynasty = "Ogasawara"
+		birth_date = 1280.1.1
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}
+
+1310.1.1 = {
+	heir = {
+		name = "Sadamune"
+		monarch_name = "Sadamune"
+		dynasty = "Ogasawara"
+		birth_date = 1292.4.30
+		death_date = 1347.7.5
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+}
+
+1330.1.1 = {
+	monarch = {
+		name = "Sadamune"
+		dynasty = "Ogasawara"
+		birth_date = 1292.4.30
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Akazawa"
+		birth_date = 1300.1.1
+		death_date = 1360.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Masanaga"
+		monarch_name = "Masanaga"
+		dynasty = "Ogasawara"
+		birth_date = 1319.7.28
+		death_date = 1365.4.12
+		claim = 95
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+1333.5.18 = { capital = 4188 } # Shinano
+
+1347.7.5 = {
+	monarch = {
+		name = "Masanaga"
+		dynasty = "Ogasawara"
+		birth_date = 1319.7.28
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Kiso"
+		birth_date = 1320.1.1
+		death_date = 1380.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagamoto"
+		monarch_name = "Nagamoto"
+		dynasty = "Ogasawara"
+		birth_date = 1347.3.9
+		death_date = 1407.11.5
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+}
+
+1365.4.12 = {
+	monarch = {
+		name = "Nagamoto"
+		dynasty = "Ogasawara"
+		birth_date = 1347.3.9
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+}
+
+1369.1.1 = {
+	heir = {
+		name = "Nagamasa"
+		monarch_name = "Nagamasa"
+		dynasty = "Ogasawara"
+		birth_date = 1369.1.1
+		death_date = 1399.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1399.1.1 = {
+	monarch = {
+		name = "Nagamasa"
+		dynasty = "Ogasawara"
+		birth_date = 1369.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = HTK
+		dynasty = "Hatakeyama"
+		birth_date = 1370.1.1
+		death_date = 1430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagahide"
+		monarch_name = "Nagahide"
+		dynasty = "Ogasawara"
+		birth_date = 1366.10.22
+		death_date = 1424.4.14
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 0
+	}
+}
+
+1399.1.1 = {
+	monarch = {
+		name = "Nagahide"
+		dynasty = "Ogasawara"
+		birth_date = 1366.10.22
+		adm = 5
+		dip = 4
+		mil = 0
+	}
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Mochinaga"
+		monarch_name = "Mochinaga"
+		dynasty = "Ogasawara"
+		birth_date = 1396.7.27
+		death_date = 1462.7.21
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1424.4.14 = {
+	monarch = {
+		name = "Mochinaga"
+		dynasty = "Ogasawara"
+		birth_date = 1396.7.27
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Akazawa"
+		birth_date = 1370.1.1
+		death_date = 1430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kiyomune"
+		monarch_name = "Kiyomune"
+		dynasty = "Ogasawara"
+		birth_date = 1417.2.2
+		death_date = 1478.3.22
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1462.7.21 = {
+	monarch = {
+		name = "Kiyomune" 
+		dynasty = "Ogasawara"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = TKD
+		dynasty = "Takeda"
+		birth_date = 1420.1.1
+		death_date = 1480.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagatomo"
+		monarch_name = "Nagatomo"
+		dynasty = "Ogasawara"
+		birth_date = 1440.1.1
+		death_date = 1500.1.1
+		claim = 90
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1480.1.1 = {
+	monarch = {
+		name = "Nagatomo"
+		dynasty = "Ogasawara"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1480.1.1 = {
+	heir = {
+		name = "Sadatomo"
+		monarch_name = "Sadatomo"
+		dynasty = "Ogasawara"
+		birth_date = 1461.10.21
+		death_date = 1515.7.14
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+	
+1500.1.1 = { 
+	monarch = {
+		name = "Sadatomo"
+		dynasty = "Ogasawara"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Takashi"
+		birth_date = 1470.1.1
+		death_date = 1530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagamune"
+		monarch_name = "Nagamune"
+		dynasty = "Ogasawara"
+		birth_date = 1492.4.15
+		death_date = 1542.10.28
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1515.7.14 = { 
+	monarch = {
+		name = "Nagamune"
+		dynasty = "Ogasawara"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Hiroshi"
+		birth_date = 1495.1.1
+		death_date = 1555.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagatoki"
+		monarch_name = "Nagatoki"
+		dynasty = "Ogasawara"
+		birth_date = 1514.11.9
+		death_date = 1583.4.17
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1542.10.28 = { 
+	monarch = {
+		name = "Nagatoki"
+		dynasty = "Ogasawara"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Nishina"
+		birth_date = 1520.1.1
+		death_date = 1580.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1546.9.6 = {
+	heir = {
+		name = "Sadayoshi"
+		monarch_name = "Sadayoshi"
+		dynasty = "Ogasawara"
+		birth_date = 1546.9.6
+		death_date = 1595.6.17
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1583.4.17 = { 
+	monarch = {
+		name = "Sadayoshi"
+		dynasty = "Ogasawara"
+		birth_date = 1546.9.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Hino"
+		birth_date = 1550.1.1
+		death_date = 1600.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1595.6.17 = { 
+	monarch = {
+		name = "Hidemasa"
+		dynasty = "Ogasawara"
+		birth_date = 1569.4.7
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Tokuhime"
+		dynasty = "Matsudaira"
+		birth_date = 1576.1.1
+		death_date = 1607.12.7
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1615.6.3 = { 
+	monarch = {
+		name = "Tadazane"
+		dynasty = "Ogasawara"
+		birth_date = 1596.5.26
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		name = "Enshoin"
+		dynasty = "Honda"
+		birth_date = 1597.1.1
+		death_date = 1643.11.29
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1667.12.3 = { 
+	monarch = {
+		name = "Tadao"
+		dynasty = "Ogasawara"
+		birth_date = 1647.6.22
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Hisahime"
+		dynasty = "Asano"
+		birth_date = 1650.1.1
+		death_date = 1710.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1725.8.6 = { 
+	monarch = {
+		name = "Tadamoto"
+		dynasty = "Ogasawara"
+		birth_date = 1682.8.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Umehime"
+		dynasty = "Asano"
+		birth_date = 1650.1.1
+		death_date = 1710.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1752.3.20 = { 
+	monarch = {
+		name = "Tadaso"
+		dynasty = "Ogasawara"
+		birth_date = 1727.10.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ASN
+		name = "Nohime"
+		dynasty = "Asano"
+		birth_date = 1730.1.1
+		death_date = 1790.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1790.12.13 = { 
+	monarch = {
+		name = "Tadamae"
+		dynasty = "Ogasawara"
+		birth_date = 1746.11.7
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Seihime"
+		dynasty = "Yamauchi"
+		birth_date = 1750.1.1
+		death_date = 1810.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1804.7.20 = { 
+	monarch = {
+		name = "Tadayoshi"
+		dynasty = "Ogasawara"
+		birth_date = 1770.10.22
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		name = "Tomihime"
+		dynasty = "Ogasawara"
+		birth_date = 1770.1.1
+		death_date = 1830.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1843.6.9 = { 
+	monarch = {
+		name = "Tadaaki"
+		dynasty = "Ogasawara"
+		birth_date = 1808.11.29
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MAE
+		name = "Hirohime"
+		dynasty = "Maeda"
+		birth_date = 1810.1.1
+		death_date = 1870.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1856.6.14 = { 
+	monarch = {
+		name = "Tadayoshi"
+		dynasty = "Ogasawara"
+		birth_date = 1839.4.12
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1860.8.11 = { 
+	monarch = {
+		name = "Tadayuki"
+		dynasty = "Ogasawara"
+		birth_date = 1827.11.3
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		dynasty = "Ogasawara"
+		birth_date = 1830.1.1
+		death_date = 1890.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1865.10.25 = { 
+	monarch = {
+		name = "Tadanobu"
+		dynasty = "Ogasawara"
+		birth_date = 1862.3.8
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = UES
+		dynasty = "Uesugi"
+		birth_date = 1865.1.1
+		death_date = 1925.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

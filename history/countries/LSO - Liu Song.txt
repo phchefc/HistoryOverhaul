@@ -1,0 +1,337 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = wu
+add_accepted_culture = yi
+add_accepted_culture = zhuang
+add_accepted_culture = vietnamese
+capital = 1821	# Jiankang
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# Liu Song dynasty
+
+420.7.10 = {
+	government = monarchy
+	add_government_reform = celestial_empire
+	government_rank = 3
+	monarch = {
+		name = "Yu" #Wu
+		dynasty = "Liu"
+		birth_date = 363.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = {	name = "Liu Yu"     	type = general	fire = 3	shock = 3	manuever = 2	siege = 1  death_date = 422.6.26 }
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Que"
+		dynasty = "Zhang"
+		birth_date = 365.1.1
+		death_date = 425.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yifu"
+		monarch_name = "Shao"
+		dynasty = "Liu"
+		birth_date = 406.1.1
+		death_date = 424.8.4
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+422.6.26 = {
+	monarch = {
+		name = "Yifu" #Shao
+		dynasty = "Liu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Maoying"
+		dynasty = "Sima"
+		birth_date = 393.1.1
+		death_date = 439.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+424.9.17 = {
+	monarch = {
+		name = "Yilong" #Wen
+		dynasty = "Liu"
+		birth_date = 407.1.1
+		adm = 5
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Qigui"
+		dynasty = "Yuan"
+		birth_date = 405.1.1
+		death_date = 440.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Shao"
+		monarch_name = "Shao"
+		dynasty = "Liu"
+		birth_date = 424.1.1
+		death_date = 453.5.27
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+453.3.16 = {
+	monarch = {
+		name = "Shao"
+		dynasty = "Liu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Yuying"
+		dynasty = "Yin"
+		birth_date = 425.1.1
+		death_date = 453.5.27
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+453.5.27 = {
+	monarch = {
+		name = "Jun" #Xiaowu
+		dynasty = "Liu"
+		birth_date = 430.1.1
+		adm = 4
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Xianyuan"
+		dynasty = "Wang"
+		birth_date = 427.1.1
+		death_date = 464.10.9
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ziye"
+		monarch_name = "Ziye"
+		dynasty = "Liu"
+		birth_date = 449.1.1
+		death_date = 465.6.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+464.7.12 = {
+	monarch = {
+		name = "Ziye"
+		dynasty = "Liu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LSO
+		dynasty = "Lu"
+		birth_date = 450.1.1
+		death_date = 466.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+466.1.1 = {
+	monarch = {
+		name = "Yu" #Ming
+		dynasty = "Liu"
+		birth_date = 439.12.9
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Zhenfeng"
+		dynasty = "Wang"
+		birth_date = 436.1.1
+		death_date = 479.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yu"
+		monarch_name = "Yu"
+		dynasty = "Liu"
+		birth_date = 463.1.1
+		death_date = 477.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+472.5.10 = {
+	monarch = {
+		name = "Yu"
+		dynasty = "Liu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Jiangui"
+		dynasty = "Jiang"
+		birth_date = 461.1.1
+		death_date = 477.8.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+477.8.1 = {
+	monarch = {
+		name = "Zhun" #Shun
+		dynasty = "Liu"
+		birth_date = 467.1.1
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = LSO
+		name = "Fanjing"
+		dynasty = "Xie"
+		birth_date = 470.1.1
+		death_date = 530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+480.1.1 = {
+	remove_accepted_culture = yi
+	remove_accepted_culture = zhuang
+	remove_accepted_culture = vietnamese
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+# End of the Sui dynasty (Song)
+
+623.8.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	monarch = {
+		name = "Gongshi"
+		dynasty = "Fu"
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Yuan dynasty (Song)
+
+1351.5.1 = {
+	government_rank = 1
+	capital = 2176
+	monarch = {
+		name = "Shantong"
+		dynasty = "Han"
+		birth_date = 1310.1.1
+		death_date = 1351.12.1
+		adm = 1
+		dip = 1
+		mil = 3
+		leader = {	name = "Han Shantong"     	type = general	fire = 2	shock = 1	manuever = 1	siege = 0  death_date = 1355.1.1 } # Not an actual death date
+	}
+}
+
+1351.12.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1355.3.16 = {
+	government_rank = 3
+	monarch = {
+		name = "Lin'er"
+		dynasty = "Han"
+		birth_date = 1340.2.28
+		death_date = 1366.12.15
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1360.1.1 = { capital = 1838 }

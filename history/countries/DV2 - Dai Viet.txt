@@ -1,0 +1,242 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = vietnamese
+religion = confucianism
+add_harmonized_religion = mahayana
+technology_group = early_chinese
+capital = 613	# Hanoi
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Mac Dynasty
+
+1527.7.13 = {
+	government_rank = 3
+	monarch = {
+		name = "Dang Dung"
+		dynasty = "Mac"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1527.7.13 = {
+	heir = {
+		name = "Dang Doanh"
+		monarch_name = "Dang Doanh"
+		dynasty = "Mac"
+		birth_date = 1500.1.1
+		death_date = 1540.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1529.2.1 = {
+	monarch = {
+		name = "Dang Doanh"
+		dynasty = "Mac"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1531.1.1 = {
+	heir = {
+		name = "Phuc Hai"
+		monarch_name = "Phuc Hai"
+		dynasty = "Mac"
+		birth_date = 1531.1.1
+		death_date = 1545.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1541.1.1 = {
+	monarch = {
+		name = "Phuc Hai"
+		dynasty = "Mac"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1541.1.1 = {
+	heir = {
+		name = "Phuc Nguyen"
+		monarch_name = "Phuc Nguyen"
+		dynasty = "Mac"
+		birth_date = 1535.1.1
+		death_date = 1561.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1545.1.1 = {
+	monarch = {
+		name = "Phuc Nguyen"
+		dynasty = "Mac"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1558.1.1 = {
+	heir = {
+		name = "Mau Hop"
+		monarch_name = "Mau Hop"
+		dynasty = "Mac"
+		birth_date = 1558.1.1
+		death_date = 1592.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1561.1.1 = {
+	monarch = {
+		name = "Mau Hop"
+		dynasty = "Mac"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1592.1.1 = {
+	capital = 616	# Cao Bang
+	monarch = {
+		name = "Kinh Chi"
+		dynasty = "Mac"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1593.1.1 = {
+	monarch = {
+		name = "Kinh Cung"
+		dynasty = "Mac"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1625.1.1 = {
+	monarch = {
+		name = "Kinh Khoan"
+		dynasty = "Mac"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1638.1.1 = {
+	monarch = {
+		name = "Kinh Vu"
+		dynasty = "Mac"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1677.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Kinh He"
+		dynasty = "Mac"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1681.1.1 = {
+	monarch = {
+		name = "Kinh Thieu"
+		dynasty = "Mac"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1683.1.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# Tai Son dynasty (Quy Nhon)
+
+1776.1.1 = {
+	government_rank = 2
+	capital = 607
+	monarch = {
+		name = "Van Nhac"
+		dynasty = "Nguyen"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+1776.1.1 = {
+	heir = {
+		name = "Van Bao"
+		monarch_name = "Van Bao"
+		dynasty = "Nguyen"
+		birth_Date = 1753.1.1
+		death_date = 1792.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1778.1.1 = { government_rank = 3 }
+
+1793.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Van Bao"
+		dynasty = "Nguyen"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}

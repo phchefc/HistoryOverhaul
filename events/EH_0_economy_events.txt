@@ -1,0 +1,3022 @@
+namespace = eh_economy
+namespace = eh_technology
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for Economy
+########################################################################
+
+# Silk Roads
+country_event = {
+	id = eh_economy.1
+	title = "eh_economy.1.t"
+	desc = "eh_economy.1.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = BYZ
+			tag = TNG
+		}
+		is_year = 620
+		NOT = { is_year = 630 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_economy.1.a"
+		ai_chance = { factor = 100 }
+		BYZ = {
+			persia_region = { discover_country = BYZ }
+			khorasan_region = { discover_country = BYZ }
+			central_asia_region = { discover_country = BYZ }
+			gansu_area = { discover_country = BYZ }
+			west_gansu_area = { discover_country = BYZ }
+			shaanxi_area = { discover_country = BYZ }
+		}
+		TNG = {
+			persia_region = { discover_country = TNG }
+			khorasan_region = { discover_country = TNG }
+			central_asia_region = { discover_country = TNG }
+			anatolia_region = { discover_country = TNG }
+			thrace_area = { discover_country = TNG }
+		}
+		ERS = {
+			central_asia_region = { discover_country = ERS }
+			gansu_area = { discover_country = ERS }
+			west_gansu_area = { discover_country = ERS }
+			shaanxi_area = { discover_country = ERS }
+		}
+	}
+}
+
+# Maritime Trades
+country_event = {
+	id = eh_economy.2
+	title = "eh_economy.2.t"
+	desc = "eh_economy.2.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = BYZ
+			tag = SNG
+		}
+		is_year = 990
+		NOT = { is_year = 1000 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_economy.2.a"
+		ai_chance = { factor = 100 }
+		BYZ = {
+			arabian_sea_area = { discover_country = BYZ }
+			persian_gulf_area = { discover_country = BYZ }
+			bay_of_bengal_area = { discover_country = BYZ }
+			andaman_sea_area = { discover_country = BYZ }
+			south_china_sea_area = { discover_country = BYZ }
+		}
+		SNG = {
+			arabian_sea_area = { discover_country = SNG }
+			persian_gulf_area = { discover_country = SNG }
+		}
+	}
+}
+
+# Mercantilism
+country_event = {
+	id = eh_economy.3
+	title = "eh_economy.3.t"
+	desc = "eh_economy.3.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		capital_scope = { continent = europe }
+		is_year = 1700
+		NOT = { is_year = 1710 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_economy.3.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				capital_scope = { continent = europe }
+			}
+			add_mercantilism = 10
+		}
+	}
+}
+
+# British Textile industry
+country_event = {
+	id = eh_economy.4
+	title = "eh_economy.4.t"
+	desc = "eh_economy.4.d"
+	picture = INVENTION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GBR
+		is_year = 1710
+		NOT = { is_year = 1720 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_economy.4.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			east_midlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			west_midlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			yorkshire_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			scottish_marches_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			wessex_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			home_counties_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			lowlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			373 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+
+# Industrial Revolution in Britain
+country_event = {
+	id = eh_economy.5
+	title = "eh_economy.5.t"
+	desc = "eh_economy.5.d"
+	picture = TRAIN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GBR
+		is_year = 1800
+		NOT = { is_year = 1810 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_economy.5.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			east_midlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			west_midlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = industrialization
+					value = 100
+				}
+			}
+			yorkshire_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = industrialization
+					value = 100
+				}
+			}
+			scottish_marches_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = industrialization
+					value = 100
+				}
+			}
+			wessex_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			home_counties_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = industrialization
+					value = 100
+				}
+			}
+			lowlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			373 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+
+# Industrialisation of Europe
+country_event = {
+	id = eh_economy.6
+	title = "eh_economy.6.t"
+	desc = "eh_economy.6.d"
+	picture = TRAIN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = DE2
+		is_year = 1870
+		NOT = { is_year = 1880 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_economy.6.a"
+		ai_chance = { factor = 100 }
+		DE2 = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			north_rhine_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			westphalia_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			thuringia_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			mittelmark_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			lower_rhineland_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			upper_rhineland_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			silesia_area = {
+				limit = { owned_by = DE2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+		FR2 = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			ile_de_france_area = {
+				limit = { owned_by = FR2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+		NED = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			holland_area = {
+				limit = { owned_by = BEL }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+		BEL = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			wallonia_area = {
+				limit = { owned_by = BEL }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+			brabant_area = {
+				limit = { owned_by = BEL }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+		ITA = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_stability = 1
+			add_prestige = 10
+			add_years_of_income = 5
+			lombardy_area = {
+				limit = { owned_by = ITA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = nationalism_institution
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Great Depression
+country_event = {
+	id = eh_economy.7
+	title = "eh_economy.7.t"
+	desc = "eh_economy.7.d"
+	picture = BANKRUPTCY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		is_year = 1930
+		NOT = { is_year = 1935 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_economy.7.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+			define_ruler = {
+				name = "Herbert Hoover"
+				change_adm = 1
+				change_dip = 2
+				change_mil = 4
+				age = 55
+			}
+		}
+		CAN = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		GBR = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		FR2 = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		SOV = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		DE2 = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		ITA = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		JAP = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+	}
+}
+
+# New Deal
+country_event = {
+	id = eh_economy.8
+	title = "eh_economy.8.t"
+	desc = "eh_economy.8.d"
+	picture = ECONOMY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		is_year = 1935
+		NOT = { is_year = 1940 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_economy.8.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			change_government = republic
+			add_government_reform = federal_republic
+			set_government_rank = 3
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			define_ruler = {
+				name = "Franklin D. Roosevelt"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				age = 50
+			}
+			define_advisor = {
+				type = statesman
+				name = "Eleanor Roosevelt"
+				culture = american
+				skill = 3
+				discount = yes
+				female = yes
+			}
+		}
+	}
+}
+
+# Post-war economic growth of World
+country_event = {
+	id = eh_economy.9
+	title = "eh_economy.9.t"
+	desc = "eh_economy.9.d"
+	picture = ECONOMY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = WGE
+		is_year = 1965
+		NOT = { is_year = 1970 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_economy.9.a"
+		ai_chance = { factor = 100 }
+		WGE = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			define_ruler = {
+				name = "Willy Brandt"
+				change_adm = 5
+				change_dip = 6
+				change_mil = 4
+				age = 55
+			}
+			north_german_region = {
+				limit = { 
+					AND = {
+						owned_by = WGE
+						NOT = { area = north_rhine_area }
+						NOT = { area = westphalia_area }
+						NOT = { area = lower_rhineland_area }
+						NOT = { area = hesse_area }
+						NOT = { area = weser_area }
+						NOT = { area = lower_saxony_area }
+					}
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			south_german_region = {
+				limit = { 
+					AND = {
+						owned_by = WGE
+						NOT = { area = upper_bavaria_area }
+					}
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			north_rhine_area = {
+				limit = { owned_by = WGE }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			westphalia_area = {
+				limit = { owned_by = WGE }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			hesse_area = {
+				limit = { owned_by = WGE }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			weser_area = {
+				limit = { owned_by = WGE }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			lower_saxony_area = {
+				limit = { owned_by = WGE }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			upper_bavaria_area = {
+				limit = { owned_by = WGE }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		GBR = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			british_isles_region = {
+				limit = { 
+					AND = {
+						owned_by = GBR
+						NOT = { area = home_counties_area }
+						NOT = { area = west_midlands_area }
+						NOT = { area = highlands_area }
+						NOT = { area = kingdom_of_the_isles_area }
+						NOT = { area = east_midlands_area }
+					}
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			home_counties_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			west_midlands_area = {
+				limit = { owned_by = GBR }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		FR2 = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			france_region = {
+				limit = { 
+					AND = {
+						owned_by = FR2
+						NOT = { area = ile_de_france_area }
+						NOT = { area = lorraine_area }
+						NOT = { area = alsace_area }
+					}
+				}
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			ile_de_france_area = {
+				limit = { owned_by = FR2 }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			lorraine_area = {
+				limit = { owned_by = FR2 }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			alsace_area = {
+				limit = { owned_by = FR2 }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		ITA = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			lombardy_area = {
+				limit = { owned_by = ITA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			tuscany_area = {
+				limit = { owned_by = ITA }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			lazio_area = {
+				limit = { owned_by = ITA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			po_valley_area = {
+				limit = { owned_by = ITA }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		NED = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			every_owned_province = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			holland_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+			north_brabant_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		BEL = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			every_owned_province = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		SWI = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			every_owned_province = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		HAB = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			every_owned_province = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		GR2 = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			every_owned_province = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		SWE = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			define_ruler = {
+				name = "Carl XVI Gustaf"
+				dynasty = "Bernadotte"
+				change_adm = 3
+				change_dip = 2
+				change_mil = 3
+				age = 25
+			}
+			ostra_svealand_area = {
+				limit = { owned_by = SWE }
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		NOR = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			eastern_norway = {
+				limit = { owned_by = NOR }
+				add_prosperity = 20
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 5
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		DAN = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			define_ruler = {
+				name = "Margrethe II"
+				dynasty = "von Gluksburg"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 2
+				female = yes
+				age = 30
+			}
+			denmark_area = {
+				limit = { owned_by = DAN }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		FIN = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			finland_area = {
+				limit = { owned_by = FIN }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_institution_embracement = {
+					which = globalization
+					value = 50
+				}
+			}
+		}
+		TKY = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_prestige = 10
+			add_years_of_income = 2
+			add_inflation = -2
+			151 = {
+				if = {
+					limit = { owned_by = TKY }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+		}
+		CAN = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			upper_canada_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			lower_canada_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			973 = {
+				if = {
+					limit = { owned_by = CAN }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+		}
+		AUS = {
+			1090 = {
+				if = {
+					limit = { owned_by = AUS }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+		}
+		EGE = {
+			every_owned_province = {
+				add_base_tax = -1
+				add_base_production = -1
+			}
+		}
+		POL = {
+			every_owned_province = {
+				add_base_tax = -1
+				add_base_production = -1
+			}
+		}
+		YUG = {
+			every_owned_province = {
+				add_base_tax = -1
+				add_base_production = -1
+			}
+		}
+		RMN = {
+			every_owned_province = {
+				add_base_tax = -1
+				add_base_production = -1
+			}
+		}
+	}
+}
+
+# Oil crisis
+country_event = {
+	id = eh_economy.10
+	title = "eh_economy.10.t"
+	desc = "eh_economy.10.d"
+	picture = BANKRUPTCY_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_economy.10.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		GBR = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		WGE = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		FR2 = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		ITA = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		CAN = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		JAP = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		SKO = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		SOV = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+		CHN = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_prestige = -10
+			add_years_of_income = -1
+			add_inflation = 1
+		}
+	}
+}
+
+# Computer Technology
+country_event = {
+	id = eh_economy.11
+	title = "eh_economy.11.t"
+	desc = "eh_economy.11.d"
+	picture = INVENTION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		is_year = 1995
+		NOT = { is_year = 2000 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = { continent = asia }
+						capital_scope = { continent = europe }
+						capital_scope = { continent = north_america }
+						capital_scope = { continent = oceania }
+					}
+				}
+				add_treasury = 100000
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_economy.11.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = 10
+			add_years_of_income = 3
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			california_area = {
+				limit = { owned_by = USA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			arizona_area = {
+				limit = { owned_by = USA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			define_ruler = {
+				name = "Bill Clinton"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 3
+				age = 47
+			}
+		}
+		CAN = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			upper_canada_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+			lower_canada_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+			huronia_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			ottawa_valley_area = {
+				limit = { owned_by = CAN }
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			973 = {
+				if = {
+					limit = { owned_by = CAN }
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+		}
+		GBR = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			home_counties_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		GER = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			mittelmark_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		FR2 = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			ile_de_france_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		ITA = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			lombardy_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			define_ruler = {
+				name = "Silvio Berlusconi"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 58
+			}
+		}
+		SPA = {
+			catalonia_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		NED = {
+			holland_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		BEL = {
+			brabant_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		SWI = {
+			romandie_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		HAB = {
+			austria_proper_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		SWE = {
+			ostra_svealand_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		NOR = {
+			eastern_norway = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			define_ruler = {
+				name = "Harald V"
+				dynasty = "von Glucksburg"
+				change_adm = 4
+				change_dip = 5
+				change_mil = 2
+				age = 54
+			}
+		}
+		DAN = {
+			denmark_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		FIN = {
+			27 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			28 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		JAP = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			every_owned_province = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+			kanto_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 1
+			}
+		}
+		SKO = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			every_owned_province = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			western_korea_area = {
+				limit = { owned_by = SKO }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+		}
+		AUS = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			eastern_australia_area = {
+				limit = { owned_by = AUS }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 1
+			}
+			southern_australia_area = {
+				limit = { owned_by = AUS }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 1
+			}
+			murray_river_area = {
+				limit = { owned_by = AUS }
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 1
+			}
+		}
+		NZL = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			te_ika_a_maui_waho_area = {
+				limit = { owned_by = NZL }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# Great Recession
+country_event = {
+	id = eh_economy.12
+	title = "eh_economy.12.t"
+	desc = "eh_economy.12.d"
+	picture = BANKRUPTCY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		is_year = 2005
+		NOT = { is_year = 2010 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_economy.12.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					capital_scope = { continent = europe }
+					capital_scope = { continent = north_america }
+				}
+			}
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		JAP = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		GER = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_prestige = 5
+			add_years_of_income = 1
+			add_inflation = -1
+			define_ruler = {
+				name = "Angela Merkel"
+				change_adm = 6
+				change_dip = 5
+				change_mil = 2
+				age = 51
+			}
+		}
+		CHN = {
+			every_owned_province = {
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+			china_superregion = {
+				limit = { owned_by = CHN }
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			manchuria_region = {
+				limit = { owned_by = CHN }
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		RUS = {
+			change_government = republic
+			add_government_reform = powerful_head_of_state
+			define_ruler = {
+				name = "Vladimir Putin"
+				change_adm = 3
+				change_dip = 2
+				change_mil = 5
+				age = 48
+			}
+			russia_region = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+			33 = {
+				if = {
+					limit = { owned_by = RUS }
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			295 = {
+				if = {
+					limit = { owned_by = RUS }
+				}
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		BRZ = {
+			brazil_region = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+			rio_de_janeiro_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			rio_grande_do_sol_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			sao_paolo_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		INI = {
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+			upper_doab_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			tapti_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			2054 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			519 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			522 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			529 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			540 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			561 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			2034 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			2031 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			542 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		TKY = {
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		MEX = {
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+# European debt crisis
+country_event = {
+	id = eh_economy.13
+	title = "eh_economy.13.t"
+	desc = "eh_economy.13.d"
+	picture = BANKRUPTCY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		is_year = 2010
+		NOT = { is_year = 2015 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_economy.13.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				capital_scope = { continent = europe }
+			}
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_prestige = -10
+			add_years_of_income = -3
+			add_inflation = 3
+		}
+		USA = {
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			arizona_area = {
+				limit = { owned_by = USA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			florida_area = {
+				limit = { owned_by = USA }
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			define_ruler = {
+				name = "Barack Obama"
+				change_adm = 2
+				change_dip = 4
+				change_mil = 2
+				age = 48
+			}
+		}
+		MEX = {
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			852 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+		}
+		BRZ = {
+			brazil_region = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			rio_de_janeiro_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			rio_grande_do_sol_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			sao_paolo_area = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			763 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			764 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			766 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			2934 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		INI = {
+			every_owned_province = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			upper_doab_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			tapti_area = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			2054 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			517 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			519 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			522 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			529 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			540 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			561 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			2034 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			2031 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			542 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		GBR = {
+			236 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+		FR2 = {
+			183 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			define_ruler = {
+				name = "Francois Hollande"
+				change_adm = 3
+				change_dip = 3
+				change_mil = 2
+				age = 58
+			}
+		}
+		RUS = {
+			russia_region = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			33 = {
+				if = {
+					limit = { owned_by = RUS }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			295 = {
+				if = {
+					limit = { owned_by = RUS }
+				}
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+		}
+		SKO = {
+			every_owned_province = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			735 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+			4230 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+			}
+		}
+		AUS = {
+			every_owned_province = {
+				limit = {
+					AND = {
+						NOT = { area = eastern_outback_area }
+						NOT = { area = central_australia_area }
+						NOT = { area = pilbara_area }
+						NOT = { area = top_end_area }
+					}
+				}
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			1087 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+			1090 = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
+		}
+		TKY = {
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		IDN = {
+			every_owned_province = {
+				add_prosperity = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# China-United States trade war
+country_event = {
+	id = eh_economy.14
+	title = "eh_economy.14.t"
+	desc = "eh_economy.14.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		is_year = 2018
+		NOT = { is_year = 2020 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			USA = {
+				add_prestige = -10
+				add_inflation = 1
+				add_mercantilism = 1
+				add_years_of_income = 1
+				every_owned_province = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				hudson_valley_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+				california_area = {
+					limit = { owned_by = USA }
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 5
+				}
+			}
+			CHN = {
+				every_owned_province = {
+					limit = {
+						AND = {
+							NOT = { superregion = china_superregion }
+							NOT = { region = manchuria_region }
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				china_superregion = {
+					limit = { owned_by = CHN }
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+				manchuria_region = {
+					limit = { owned_by = CHN }
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+				hebei_area = {
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 5
+				}
+				shandong_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+				west_shandong_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+				jiangsu_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+				south_jiangsu_area = {
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 10
+				}
+				zhejiang_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+				fujian_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+				guangzhou_area = {
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 10
+				}
+				west_guangdong_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+				guangdong_area = {
+					add_prosperity = 5
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+				1822 = {
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 10
+				}
+				667 = {
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 10
+				}
+				3005 = {
+					add_prosperity = 10
+					add_base_tax = 10
+					add_base_production = 10
+					add_base_manpower = 5
+				}
+			}
+			INI = {
+				every_owned_province = {
+					add_prosperity = 1
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				upper_doab_area = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 5
+				}
+				tapti_area = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 5
+				}
+				2054 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				517 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				519 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				522 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				529 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 5
+				}
+				540 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				561  = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				2034 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				2031 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				542 = {
+					add_prosperity = 3
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_economy.14.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			define_ruler = {
+				name = "Donald Trump"
+				change_adm = 2
+				change_dip = 1
+				change_mil = 4
+				age = 71
+			}
+		}
+		CHN = { country_event = { id = eh_china_PRC.20 days = 100 } }
+	}
+}
+
+########################################################################
+# Events for Science and Technology
+########################################################################
+
+# History of Science and Technology - Ancient
+country_event = {
+	id = eh_technology.1
+	title = "eh_technology.1.t"
+	desc = "eh_technology.1.d"
+	picture = ROMAN_ACQUEDUCT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		NOT = { is_year = 500 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.1.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			capital_scope = { add_next_institution_embracement = 30 }
+		}
+	}
+}
+
+# History of Science and Technology - Medieval
+country_event = {
+	id = eh_technology.2
+	title = "eh_technology.2.t"
+	desc = "eh_technology.2.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 500
+		NOT = { is_year = 1500 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.2.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			capital_scope = { add_next_institution_embracement = 30 }
+		}
+	}
+}
+
+# History of Science and Technology - Modern
+country_event = {
+	id = eh_technology.3
+	title = "eh_technology.3.t"
+	desc = "eh_technology.3.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1500
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			capital_scope = { add_next_institution_embracement = 30 }
+		}
+	}
+}
+
+# History of Science and Technology - Contemporary
+country_event = {
+	id = eh_technology.4
+	title = "eh_technology.4.t"
+	desc = "eh_technology.4.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1500
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.4.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			capital_scope = { add_next_institution_embracement = 30 }
+		}
+	}
+}
+
+# Metallurgy
+country_event = {
+	id = eh_technology.5
+	title = "eh_technology.5.t"
+	desc = "eh_technology.5.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		OR = {
+			any_owned_province = { trade_goods = gold }
+			any_owned_province = { trade_goods = iron }
+			any_owned_province = { trade_goods = copper }
+			any_owned_province = { trade_goods = wood }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.5.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_years_of_income = 1
+			capital_scope = { add_next_institution_embracement = 10 }
+		}
+	}
+}
+
+# Chemical industry
+country_event = {
+	id = eh_technology.6
+	title = "eh_technology.6.t"
+	desc = "eh_technology.6.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1920
+		OR = {
+			any_owned_province = { trade_goods = coal }
+			any_owned_province = { trade_goods = oil }
+			any_owned_province = { trade_goods = aluminum }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.6.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_years_of_income = 1
+			capital_scope = { add_next_institution_embracement = 10 }
+		}
+	}
+}
+
+# Weaving
+country_event = {
+	id = eh_technology.7
+	title = "eh_technology.7.t"
+	desc = "eh_technology.7.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 100
+		OR = {
+			any_owned_province = { trade_goods = cloth }
+			any_owned_province = { trade_goods = cotton }
+			any_owned_province = { trade_goods = fur }
+			any_owned_province = { trade_goods = silk }
+			any_owned_province = { trade_goods = wool }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.7.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_years_of_income = 1
+			capital_scope = { add_next_institution_embracement = 10 }
+		}
+	}
+}
+
+# Agriculture
+country_event = {
+	id = eh_technology.8
+	title = "eh_technology.8.t"
+	desc = "eh_technology.8.d"
+	picture = FARMING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		OR = {
+			any_owned_province = { trade_goods = grain }
+			any_owned_province = { trade_goods = fish }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.8.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_manpower = 10
+			add_years_of_income = 1
+		}
+	}
+}
+
+# History of Medicine
+country_event = {
+	id = eh_technology.9
+	title = "eh_technology.9.t"
+	desc = "eh_technology.9.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		NOT = { is_year = 1900 }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "eh_technology.9.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_manpower = 10
+			capital_scope = { add_next_institution_embracement = 10 }
+		}
+	}
+}
+
+# Biotechnology
+country_event = {
+	id = eh_technology.10
+	title = "eh_technology.10.t"
+	desc = "eh_technology.10.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1900
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.10.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_manpower = 10
+			add_years_of_income = 1
+			capital_scope = { add_next_institution_embracement = 10 }
+		}
+	}
+}
+
+# Telecommunications
+country_event = {
+	id = eh_technology.11
+	title = "eh_technology.11.t"
+	desc = "eh_technology.11.d"
+	picture = TELEGRAPH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1850
+		NOT = { is_year = 2000 }
+		any_owned_province = { trade_goods = electronics }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.11.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+			capital_scope = { add_next_institution_embracement = 10 }
+		}
+	}
+}
+
+# Internet
+country_event = {
+	id = eh_technology.12
+	title = "eh_technology.12.t"
+	desc = "eh_technology.12.d"
+	picture = COMPUTER_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2000
+		any_owned_province = { trade_goods = electronics }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.12.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+			capital_scope = {
+				add_institution_embracement = {
+					which = internet
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Electronic engineering
+country_event = {
+	id = eh_technology.13
+	title = "eh_technology.13.t"
+	desc = "eh_technology.13.d"
+	picture = INVENTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1920
+		any_owned_province = { trade_goods = electronics }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.13.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+			capital_scope = {
+				add_institution_embracement = {
+					which = electrification
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+# Nuclear technology
+country_event = {
+	id = eh_technology.14
+	title = "eh_technology.14.t"
+	desc = "eh_technology.14.d"
+	picture = NUCLEAR_ENERGY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1950
+		any_owned_province = { trade_goods = uranium }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.14.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Transport
+country_event = {
+	id = eh_technology.15
+	title = "eh_technology.15.t"
+	desc = "eh_technology.15.d"
+	picture = TRAIN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1950
+		any_owned_province = { trade_goods = cars }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.15.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = 1
+		}
+	}
+}
+
+# Luxury goods and Local products
+country_event = {
+	id = eh_technology.16
+	title = "eh_technology.16.t"
+	desc = "eh_technology.16.d"
+	picture = ECONOMY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 2
+		OR = {
+			any_owned_province = { trade_goods = dyes }
+			any_owned_province = { trade_goods = germs }
+			any_owned_province = { trade_goods = glass }
+			any_owned_province = { trade_goods = ivory }
+			any_owned_province = { trade_goods = chinaware }
+			any_owned_province = { trade_goods = tobacco }
+			any_owned_province = { trade_goods = cocoa }
+			any_owned_province = { trade_goods = paper }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "eh_technology.16.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_prestige = 5
+			add_years_of_income = -1
+		}
+	}
+}
+
+# EH version

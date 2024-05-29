@@ -1,0 +1,849 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = KMK
+capital = 1027	# Hitachi
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1106.1.1 = {
+	monarch = {
+		name = "Masayoshi"
+		dynasty = "Satake"
+		birth_date = 1081.1.1
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Kaikan"
+		birth_date = 1085.1.1
+		death_date = 1145.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1118.1.1 = {
+	heir = {
+		name = "Takayoshi"
+		monarch_name = "Takayoshi"
+		dynasty = "Satake"
+		birth_date = 1118.1.1
+		death_date = 1183.6.11
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1147.1.1 = {
+	monarch = {
+		name = "Takayoshi"
+		dynasty = "Satake"
+		birth_date = 1118.1.1
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Tomura"
+		birth_date = 1120.1.1
+		death_date = 1180.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1151.1.1 = {
+	heir = {
+		name = "Hideyoshi"
+		monarch_name = "Hideyoshi"
+		dynasty = "Satake"
+		birth_date = 1151.1.1
+		death_date = 1226.1.17
+		claim = 95
+		adm = 1
+		dip = 5
+		mil = 1
+	}
+}
+
+1183.6.11 = {
+	monarch = {
+		name = "Hideyoshi"
+		dynasty = "Satake"
+		birth_date = 1151.1.1
+		adm = 1
+		dip = 5
+		mil = 1
+	}
+	queen = {
+		country_of_origin = UTS
+		dynasty = "Utsunomiya"
+		birth_date = 1155.1.1
+		death_date = 1215.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1186.1.1 = {
+	heir = {
+		name = "Yoshishige"
+		monarch_name = "Yoshishige"
+		dynasty = "Satake"
+		birth_date = 1186.1.1
+		death_date = 1252.4.5
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1226.1.17 = {
+	monarch = {
+		name = "Yoshishige"
+		dynasty = "Satake"
+		birth_date = 1186.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Kawai"
+		birth_date = 1190.1.1
+		death_date = 1250.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nagayoshi"
+		monarch_name = "Nagayoshi"
+		dynasty = "Satake"
+		birth_date = 1207.1.1
+		death_date = 1272.8.21
+		claim = 95
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+}
+
+1252.4.5 = {
+	monarch = {
+		name = "Nagayoshi"
+		dynasty = "Satake"
+		birth_date = 1207.1.1
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Kawai"
+		birth_date = 1210.1.1
+		death_date = 1270.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshitane"
+		monarch_name = "Yoshitane"
+		dynasty = "Satake"
+		birth_date = 1227.1.1
+		death_date = 1278.5.15
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 0
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1272.8.21 = {
+	monarch = {
+		name = "Yoshitane"
+		dynasty = "Satake"
+		birth_date = 1227.1.1
+		adm = 5
+		dip = 5
+		mil = 0
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Shishido"
+		birth_date = 1230.1.1
+		death_date = 1290.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yukiyoshi"
+		monarch_name = "Yukiyoshi"
+		dynasty = "Satake"
+		birth_date = 1248.1.1
+		death_date = 1328.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+1278.5.15 = {
+	monarch = {
+		name = "Yukiyoshi"
+		dynasty = "Satake"
+		birth_date = 1248.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+1287.1.1 = {
+	heir = {
+		name = "Sadayoshi"
+		monarch_name = "Sadayoshi"
+		dynasty = "Satake"
+		birth_date = 1287.1.1
+		death_date = 1352.10.18
+		claim = 95
+		adm = 5
+		dip = 1
+		mil = 1
+	}
+}
+
+1328.1.1 = {
+	monarch = {
+		name = "Sadayoshi" # 1287 - 1352.10.18 
+		dynasty = "Satake"
+		birth_date = 1287.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Kaijo"
+		birth_date = 1290.1.1
+		death_date = 1350.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshiatsu"
+		monarch_name = "Yoshiatsu"
+		dynasty = "Satake"
+		birth_date = 1311.1.1
+		death_date = 1362.2.7
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1352.10.18 = {
+	monarch = {
+		name = "Yoshiatsu" # 1311 - 1362.2.7
+		dynasty = "Satake"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ODA
+		dynasty = "Oda"
+		birth_date = 1315.1.1
+		death_date = 1375.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshinobu"
+		monarch_name = "Yoshiatsu"
+		dynasty = "Satake"
+		birth_date = 1346.1.1
+		death_date = 1389.8.5
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1362.2.7 = {
+	monarch = {
+		name = "Yoshinobu" # 1346 - 1389.8.5
+		dynasty = "Satake"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Satake"
+		birth_date = 1350.1.1
+		death_date = 1410.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1365.1.1 = {
+	heir = {
+		name = "Yoshimori"
+		monarch_name = "Yoshiatsu"
+		dynasty = "Satake"
+		birth_date = 1365.1.1
+		death_date = 1407.10.22
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1389.8.5 = {
+	monarch = {
+		name = "Yoshimori" # 1365 - 1407 
+		dynasty = "Satake"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Edo"
+		birth_date = 1370.1.1
+		death_date = 1430.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1407.10.22 = { 
+	monarch = {
+		name = "Yoshihito"
+		dynasty = "Satake"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1420.1.1 = {
+	queen = {
+		country_of_origin = STK
+		name = "Genhime"
+		dynasty = "Satake"
+		birth_date = 1400.1.1
+		death_date = 1460.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshitoshi"
+		monarch_name = "Yoshitoshi"
+		dynasty = "Satake"
+		birth_date = 1420.1.1
+		death_date = 1477.12.29
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+	
+1437.1.1 = {
+	monarch = {
+		name = "Yoshitoshi"
+		dynasty = "Satake"
+		birth_date = 1420.1.1
+#		death_date = 1477.12.29
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Oyama"
+		birth_date = 1420.1.1
+		death_date = 1480.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1443.1.1 = {
+	heir = {
+		name = "Yoshiharu"
+		monarch_name = "Yoshiharu"
+		dynasty = "Satake"
+		birth_date = 1443.1.1
+		death_date = 1490.5.14
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+	
+1477.12.29 = { 
+	monarch = {
+		name = "Yoshiharu"
+		dynasty = "Satake"
+		birth_date = 1443.1.1
+#		death_date = 1490.5.14
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Oyama"
+		birth_date = 1450.1.1
+		death_date = 1510.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshikiyo"
+		monarch_name = "Yoshikiyo"
+		dynasty = "Satake"
+		birth_date = 1470.1.1
+		death_date = 1517.4.3
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+	
+1490.5.14 = { 
+	monarch = {
+		name = "Yoshikiyo"
+		dynasty = "Satake"
+		birth_date = 1470.1.1
+#		death_date = 1517.4.3
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Iwaki"
+		birth_date = 1470.1.1
+		death_date = 1530.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1507.8.10 = {
+	heir = {
+		name = "Yoshiatsu"
+		monarch_name = "Yoshiatsu"
+		dynasty = "Satake"
+		birth_date = 1507.8.10
+		death_date = 1545.5.19
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+	
+1517.4.3 = { 
+	monarch = {
+		name = "Yoshiatsu"
+		dynasty = "Satake"
+		birth_date = 1507.8.10
+#		death_date = 1545.5.19
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1531.10.5 = {
+	queen = {
+		country_of_origin = ODA
+		dynasty = "Oda"
+		birth_date = 1510.1.1
+		death_date = 1570.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yoshiaki"
+		monarch_name = "Yoshiaki"
+		dynasty = "Satake"
+		birth_date = 1531.10.5
+		death_date = 1565.11.25
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+	
+1545.5.19 = { 
+	monarch = {
+		name = "Yoshiaki"
+		dynasty = "Satake"
+		birth_date = 1531.10.5
+#		death_date = 1565.11.25
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = STK
+		dynasty = "Iwaki"
+		birth_date = 1535.1.1
+		death_date = 1595.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1547.3.7 = {
+	heir = {
+		name = "Yoshishige"
+		monarch_name = "Yoshishige"
+		dynasty = "Satake"
+		birth_date = 1547.3.7
+		death_date = 1612.5.19
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1565.11.25 = { 
+	monarch = {
+		name = "Yoshishige"
+		dynasty = "Satake"
+		birth_date = 1547.3.7
+#		death_date = 1612.5.19
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	queen = {
+		country_of_origin = DTE
+		name = "Hojuin"
+		dynasty = "Date"
+		birth_date = 1550.1.1
+		death_date = 1610.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1570.8.17 = {
+	heir = {
+		name = "Yoshinobu"
+		monarch_name = "Yoshinobu"
+		dynasty = "Satake"
+		birth_date = 1570.8.17
+		death_date = 1633.3.5
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1582.6.21 = {
+	government = monarchy
+	add_government_reform = indep_daimyo	#Honnoji
+	government_rank = 1
+}
+
+1586.1.1 = { 
+	monarch = {
+		name = "Yoshinobu"
+		dynasty = "Satake"
+		birth_date = 1570.8.17
+#		death_date = 1633.3.5
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = STK
+		name = "Shodoin"
+		dynasty = "Nasu"
+		birth_date = 1575.1.1
+		death_date = 1635.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1590.1.1 = {
+	government = monarchy
+	add_government_reform = daimyo		#Odawara Campaign
+	government_rank = 1
+}
+
+1602.5.17 = { capital = 4192 }
+
+1633.3.5 = { 
+	monarch = {
+		name = "Yoshitaka"
+		dynasty = "Satake"
+#		birth_date = 1609.2.18
+#		death_date = 1672.1.4
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		name = "Kojuin"
+		dynasty = "Satake"
+		birth_date = 1620.1.1
+		death_date = 1684.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1672.1.4 = { 
+	monarch = {
+		name = "Yoshizumi"
+		dynasty = "Satake"
+#		birth_date = 1637.10.9
+#		death_date = 1703.8.5
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Tsuruhime"
+		dynasty = "Matsudaira"
+		birth_date = 1640.1.1
+		death_date = 1700.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1703.8.5 = { 
+	monarch = {
+		name = "Yoshitada"
+		dynasty = "Satake"
+#		birth_date = 1695.1.25
+#		death_date = 1715.8.17
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1715.8.17 = { 
+	monarch = {
+		name = "Yoshimine"
+		dynasty = "Satake"
+#		birth_date = 1690.9.13
+#		death_date = 1749.9.21
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = KDA
+		name = "Togihime"
+		dynasty = "Kuroda"
+		birth_date = 1690.1.1
+		death_date = 1750.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1749.9.21 = { 
+	monarch = {
+		name = "Yoshimasa"
+		dynasty = "Satake"
+#		birth_date = 1728.8.4
+#		death_date = 1753.9.17
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MAE
+		name = "Gohime"
+		dynasty = "Maeda"
+		birth_date = 1730.1.1
+		death_date = 1790.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1753.9.17 = { 
+	monarch = {
+		name = "Yoshiharu"
+		dynasty = "Satake"
+#		birth_date = 1723.12.2
+#		death_date = 1758.4.25
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		name = "Nao"
+		dynasty = "Satake"
+		birth_date = 1725.1.1
+		death_date = 1785.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1758.4.25 = { 
+	monarch = {
+		name = "Yoshiatsu"
+		dynasty = "Satake"
+#		birth_date = 1748.11.24
+#		death_date = 1785.7.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YMU
+		name = "Kaya"
+		dynasty = "Yamauchi"
+		birth_date = 1725.1.1
+		death_date = 1785.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1785.7.6 = { 
+	monarch = {
+		name = "Yoshimasa"
+		dynasty = "Satake"
+#		birth_date = 1775.1.31
+#		death_date = 1815.8.12
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		name = "Wataru"
+		dynasty = "Hotta"
+		birth_date = 1775.1.1
+		death_date = 1835.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1815.8.12 = {
+	monarch = {
+		name = "Yoshihiro"
+		dynasty = "Satake"
+#		birth_date = 1812.8.23
+#		death_date = 1846.10.27
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1846.10.27 = { 
+	monarch = {
+		name = "Yoshichika"
+		dynasty = "Satake"
+#		birth_date = 1839.7.2
+#		death_date = 1857.8.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1857.8.20 = { 
+	monarch = {
+		name = "Yoshitaka"
+		dynasty = "Satake"
+#		birth_date = 1825.9.9
+#		death_date = 1884.10.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = STK
+		name = "Taki"
+		dynasty = "Satake"
+		birth_date = 1830.1.1
+		death_date = 1900.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version
+	

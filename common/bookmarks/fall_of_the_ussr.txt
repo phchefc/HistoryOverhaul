@@ -1,0 +1,30 @@
+
+bookmark =
+{
+	name = "FALLUSSR_NAME"
+	desc = "FALLUSSR_DESC"
+	date = 1991.12.25
+	
+	country = USA
+	country = JAP
+	country = GER
+	country = FR2
+	country = ITA
+	country = GBR
+	country = CAN
+	country = SPA
+	country = BRZ
+	country = CHN
+	country = MEX
+	country = SKO
+	country = AUS
+	country = NED
+	country = IRA
+	country = INI
+	country = SWE
+	country = SWI
+	country = TKY
+	country = BEL
+}
+
+# EH version

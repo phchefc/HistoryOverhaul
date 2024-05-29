@@ -1,0 +1,144 @@
+#Country name: Please see filename.
+
+graphical_culture = westerngfx
+
+random_nation_chance = 0
+
+color = { 129  177  125 }
+
+historical_idea_groups = {
+	early_religious_ideas
+	early_mil_ideas
+	early_trade_ideas
+	early_adm_ideas
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	diplomatic_ideas
+	maritime_ideas
+	spy_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Afonso #0" = # EH version
+	"Pedro #0" = # EH version
+	"Jo? #0" = 15
+	"Miguel #0" = 10
+	"Ab?io #0" = 0
+	"Ant?io #0" = 0
+	"Artur #0" = 0
+	"Augusto #0" = 0
+	"Aur?io #0" = 0
+	"Bento #0" = 0
+	"Carlos #0" = 0
+	"Deodoro #0" = 0
+	"Emilio #0" = 0
+	"Ernesto #0" = 0
+	"Fernando #0" = 0
+	"Floriano #0" = 0
+	"Francisco #0" = 0
+	"Francisco Jos?#0" = 0
+	"Gaspar #0" = 0
+	"Herm?io #0" = 0
+	"Rodrigo #0" = 0
+	"Hermes #0" = 0
+	"In?io #0" = 0
+	"Isa?s #0" = 0
+	"Joaquim #0" = 0
+	"Jo? Baptista #0" = 0
+	"Jos?#0" = 0
+	"Lu? #0" = 0
+	"Manuel #0" = 0
+	"M?cio #0" = 0
+	"Nereu #0" = 0
+	"Nilo #0" = 0
+	"Paschoal #0" = 0
+	"Paulino #0" = 0
+	"Prudente #0" = 0
+	"Venceslau #0" = 0
+	"Zeferino #0" = 0
+	
+	"Isabel #0" = -15
+	"Maria #0" = -10
+	"Silvia #0" = -1
+}
+
+leader_names = {
+	Álvares "Ayres Gomes"
+	"Borges do Canto"
+	"da Costa" "da Silva" "de Amorim" "de Melo"
+	"de Mendon?" "dos Reis" "dos Santos"
+	"Freire de Andrade"
+	Gonzaga
+	Lopes
+	Maciel Melo
+	Nascimento "Nunes Viana"
+	Peixoto
+	Rolim
+	"Santos Pedroso"
+	Tavares Torres
+	Veiga Vieira
+	Xavier
+}
+
+ship_names = {
+	Anunciada
+	B?rio "Boa Viagem" "Bom Jesus" "Bom Jesus do Carmo"
+	"Bom Jesus de Marzag?" "Bom Jesus da Vidigueira" Bret?
+	Cambaia Chagas "Correio d'Ásia"
+	El-Rei Enxobregas "Esp?ito Santo" Estrela
+	"Flor do Mar"
+	Gar?
+	"Imaculada Conceição"
+	J?a
+	"Monte Carvalho"
+	"Nazar? "Nossa Senhora" "N. Sra. da Aparecida"
+	"N. Sra. da Atalaia" "N. Sra. da Batalha" "N. Sra. da Boa Hora"
+	"N. Sra. da Boa Mem?ia" "N. Sra. da Boa Viagem" "N. Sra. da Candalaria"
+	"N. Sra. da Caridade" "N.Sra. da Conceição" "N. Sra. da Consolação"
+	"N. Sra. da Esperan?" "N. Sra. da Gl?ia" "N. Sra. da Gra?" "N. Sra. da Guia"
+	"N. Sra. d'Ajuda Lusitana" "N. Sra. da Luz" "N. Sra. da Nazar?"
+	"N. Sra. da Oliveira" "N. Sra. da Palma" "N. Sra. da Penha de Fran?"
+	"N. Sra. da Quietação" "N. Sra. da Salvação" "N. Sra. da Sa?e"
+	"N. Sra. da Visitação" "N. Sra. da Vit?ia" "N. Sra. das Ondas"
+	"N. Sra. das Portas do C?" "N. Sra. das Rel?uias" "N. Sra. de Bel?"
+	"N. Sra. de Guadalupe" "N. Sra. do Castelo" "N. Sra. do Livramento"
+	"N. Sra. do Loreto" "N. Sra do Para?o" "N. Sra. do Pilar" "N. Sra. do Ros?io"
+	"N. Sra. dos Prazeres" "N. Sra. dos Ramos"
+	"Princesa do C?"
+	Ra?ha "Reis Magos"
+	"Sacramento" "Santa Ana" "Santa Catarina" "Santa Cruz" "Santa F?"
+	"Santa Helena" "Santa Joana" "Santa Madre de Deus" "S. Maria de Sab?a"
+	"Santo Milagre" "Santiago Maior" "Sant?sima Trindade" "Sant?simo Sacramento"
+	"Santo Alberto" "Santo Ant?io" "Santo Esp?ito" "Santo In?io" "S? Bartolomeu"
+	"S? Bento" "S? Bernardo" "S? Carlos" "S? Cristov?" "S? Domingos"
+	"S? Filipe" "S? Francisco" "S? Francisco de Borja" "S? Gabriel" "S? Gon?lo"
+	"S? Jo?" "S? Jo? de Deus" "S? Jorge" "S. Jos?" "S? Juli?" "S? Louren?"
+	"S? Lucas" "S? Lu?" "S? Mateus" "S? Paulo" "S? Pedro" "S? Rafael"
+	"S? Roque" "S? Salvador" "S? Tom? "S? Valentim" "S. Ant?io de Lisboa"
+	"S. Catarina de Ribamar" "S. Francisco de Assis" "S. Francisco Xavier"
+	"S. Jo? Baptista" "S. Jo? Evangelista" "S. Pedro de Rates" "S. Pedro da Ribeira"
+	"S. Salvador do Mundo" "S. Teresa de Jesus" "S. Tom?da Cantu?ia"
+	Taforeia Trindade
+	Visitação
+}
+
+# EH version

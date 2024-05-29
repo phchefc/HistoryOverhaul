@@ -1,0 +1,101 @@
+#Country name: Please see filename.
+
+graphical_culture = africangfx
+
+color = { 255 100 0 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	quality_ideas
+	religious_ideas
+	economic_ideas
+}
+
+historical_units = {
+	african_spearmen
+	african_abyssinian_light_cavalry
+	niger_kongolese_tribal_warfare
+	niger_kongolese_forest_warfare
+	niger_kongolese_gunpowder_warfare
+	westernized_niger_kongolese
+	niger_kongolese_guerilla_warfare
+}
+
+monarch_names = {
+	"Orobiru #0" = # EH version
+	"Uwaifiokun #0" = # EH version
+	"Ewuare #0" = # EH version
+	"Ezoti #0" = # EH version
+	"Olua #0" = # EH version
+	"Ozolua #0" = # EH version
+	"Esigie #0" = # EH version
+	"Orhogbua #0" = # EH version
+	"Ehengbuda #0" = # EH version
+	"Ohuan #0" = # EH version
+	"Ahenzae #0" = # EH version
+	"Akengboi #0" = # EH version
+	"Akenkpaye #0" = # EH version
+	"Akengbedo #0" = # EH version
+	"Oreoghene #0" = # EH version
+	"Ewuakpe #0" = # EH version
+	"Ozuere #0" = # EH version
+	"Akenzua #0" = # EH version
+	"Eresonyen #0" = # EH version
+	"Akengbuda #0" = # EH version
+	"Obanosa #0" = # EH version
+	"Ogbebo #0" = # EH version
+	"Osemwede #0" = # EH version
+	"Alagbariye #0" = 0
+	"Okapara #0" = 0
+	"Asimini #0" = 0
+	"Edimi #0" = 0
+	"Kamba #0" = 0
+	"Kamalu #0" = 0
+	"Dappa #0" = 0
+	"Amakiri #0" = 0
+	"Appinya #0" = 0
+	"Warri #0" = 0
+	"Awusa #0" = 0
+	"Egbani #0" = 0
+	"Ogbodo #0" = 0
+	"Owagi #0" = 0
+	"Ogio #0" = 0
+	"Peresuo #0" = 0
+	"Basuo #0" = 0
+	"Mingi #0" = 0
+	"Glele #0" = 0
+	
+	"Akugbe #0" = -1
+	"iEsosa #0" = -1
+	"Sehdong Hongbe #0" = -1
+	"Nawi #0" = -1
+	"Afyavi #0" = -1
+	"Ahwlikponuwa #0" = -1
+	"Asiba #0" = -1
+	"Ayàbà #0" = -1
+}
+
+leader_names = {
+	Ahomadegbe
+	Apithy
+	Dangbo
+	Kerekou
+	Kouandete
+	Kuetey
+	Maga
+	Soglo
+	Trudo
+	Zinsou
+}
+
+ship_names = {
+	Xevioso Sogbo "Nana Buluku" "Mawu-Lisa"
+	Dan Gbadu Da Gu Ayaba Loko Sakpata Gleti
+	Zinsu Zinsi
+}
+
+# EH version

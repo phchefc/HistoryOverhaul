@@ -1,0 +1,85 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+primary_culture = roman
+add_accepted_culture = greek
+add_accepted_culture = old_egyptian
+add_accepted_culture = aramaic
+add_accepted_culture = illyrian
+add_accepted_culture = thracian
+add_accepted_culture = dacian
+religion = hellenism
+technology_group = roman_group
+historical_friend = A03
+capital = 151 # Constantinople
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Dioceses of Moesia, Macedonia, Thrace, Pontus and Asia
+
+293.3.1 = {
+	monarch = {
+		name = "Galerius"
+		culture = dacian
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+311.8.1 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+364.3.28 = {
+	monarch = {
+		name = "Valens"
+		dynasty = "Valentinian"
+		culture = dalmatian
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = arianism
+	}
+}
+
+379.1.19 = {
+	monarch = {
+		name = "Theodosius I"
+		dynasty = "Theodosian"
+		culture = dacian
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = zealot_personality
+}
+
+392.3.15 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,630 @@
+government = tribal
+add_government_reform = tribal_kingdom
+technology_group = early_chinese
+religion = mahayana
+primary_culture = saka
+capital = 710 #Khotan
+
+2.1.1 = {
+	monarch = {
+		name = "Lin"
+		dynasty = "Yu"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+57.1.1 = {
+	monarch = {
+		name = "De"
+		dynasty = "Jun"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+60.1.1 = {
+	monarch = {
+		name = "Moba"
+		dynasty = "Xiu"
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+60.6.1 = {
+	monarch = {
+		name = "De"
+		dynasty = "Guang"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+110.1.1 = {
+	monarch = {
+		name = "Qian"
+		dynasty = "Fang"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+110.1.1 = {
+	heir = {
+		name = "Jian"
+		monarch_name = "Jian"
+		dynasty = "Fang"
+		birth_date = 110.1.1
+		death_date = 152.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+132.1.1 = {
+	monarch = {
+		name = "Jian"
+		dynasty = "Fang"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+152.1.1 = {
+	monarch = {
+		name = "Guo"
+		dynasty = "An"
+		death_date = 200.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+200.1.1 = {
+	monarch = {
+		name = "(unknown)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+400.1.1 = { government = monarchy add_government_reform = autocracy_reform }
+
+446.1.1 = {
+	monarch = {
+		name = "Ren"
+		dynasty = "Qiu"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+446.1.1 = {
+	heir = {
+		name = "Polo"
+		monarch_name = "Polo"
+		dynasty = "Qiu"
+		birth_date = 440.1.1
+		death_date = 477.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+471.1.1 = {
+	monarch = {
+		name = "Polo"
+		dynasty = "Qiu"
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+471.1.1 = {
+	heir = {
+		name = "Sanjuluomo"
+		monarch_name = "Sanjuluomo"
+		dynasty = "Qiu"
+		birth_date = 445.1.1
+		death_date = 500.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+477.1.1 = {
+	monarch = {
+		name = "Sanjuluomo"
+		dynasty = "Qiu"
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+500.1.1 = {
+	monarch = {
+		name = "Duluo"
+		dynasty = "She"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+# Visa clan
+
+530.1.1 = {
+	monarch = {
+		name = "Hotan"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+590.1.1 = {
+	monarch = {
+		name = "Shilian"
+		dynasty = "Bei"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+620.1.1 = {
+	monarch = {
+		name = "Wumi"
+		dynasty = "Visa"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+# Fudu clan
+
+642.1.1 = {
+	monarch = {
+		name = "Xin"
+		dynasty = "Fudu"
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+}
+
+642.1.1 = {
+	heir = {
+		name = "Xiong"
+		monarch_name = "Xiong"
+		dynasty = "Fudu"
+		birth_date = 640.1.1
+		death_date = 691.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+665.1.1 = {
+	monarch = {
+		name = "Xiong"
+		dynasty = "Fudu"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+# Visa restoration
+
+691.1.1 = {
+	monarch = {
+		name = "Jing"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+691.1.1 = {
+	heir = {
+		name = "Tiao"
+		monarch_name = "Tiao"
+		dynasty = "Visa"
+		birth_date = 690.1.1
+		death_date = 725.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+724.1.1 = {
+	monarch = {
+		name = "Tiao"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+# Fudu restoration
+
+725.1.1 = {
+	monarch = {
+		name = "Shizhan"
+		dynasty = "Fudu"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+725.1.1 = {
+	heir = {
+		name = "Da"
+		monarch_name = "Da"
+		dynasty = "Fudu"
+		birth_date = 710.1.1
+		death_date = 740.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+736.1.1 = {
+	monarch = {
+		name = "Da"
+		dynasty = "Fudu"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+# Visa restoration
+
+740.1.1 = {
+	monarch = {
+		name = "Gui"
+		dynasty = "Visa"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+740.1.1 = {
+	heir = {
+		name = "Sheng"
+		monarch_name = "Sheng"
+		dynasty = "Visa"
+		birth_date = 730.1.1
+		death_date = 764.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+745.1.1 = {
+	monarch = {
+		name = "Sheng"
+		dynasty = "Visa"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+745.1.1 = {
+	heir = {
+		name = "Vaham"
+		monarch_name = "Vaham"
+		dynasty = "Visa"
+		birth_date = 745.1.1
+		death_date = 791.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+764.1.1 = {
+	monarch = {
+		name = "Vaham"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+764.1.1 = {
+	heir = {
+		name = "Jie"
+		monarch_name = "Jie"
+		dynasty = "Visa"
+		birth_date = 764.1.1
+		death_date = 829.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+791.1.1 = {
+	monarch = {
+		name = "Jie"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+791.1.1 = {
+	heir = {
+		name = "Chiye"
+		monarch_name = "Chiye"
+		dynasty = "Visa"
+		birth_date = 791.1.1
+		death_date = 844.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+829.1.1 = {
+	monarch = {
+		name = "Chiye"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+829.1.1 = {
+	heir = {
+		name = "Nanta"
+		monarch_name = "Nanta"
+		dynasty = "Visa"
+		birth_date = 820.1.1
+		death_date = 859.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+844.1.1 = {
+	monarch = {
+		name = "Nanta"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+844.1.1 = {
+	heir = {
+		name = "Wana"
+		monarch_name = "Wana"
+		dynasty = "Visa"
+		birth_date = 844.1.1
+		death_date = 888.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+859.1.1 = {
+	monarch = {
+		name = "Wana"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+859.1.1 = {
+	heir = {
+		name = "Piqiluomo"
+		monarch_name = "Piqiluomo"
+		dynasty = "Visa"
+		birth_date = 859.1.1
+		death_date = 912.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+888.1.1 = {
+	monarch = {
+		name = "Piqiluomo"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+888.1.1 = {
+	heir = {
+		name = "Sambhava"
+		monarch_name = "Sambhava"
+		dynasty = "Visa"
+		birth_date = 888.1.1
+		death_date = 967.1.1
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+912.1.1 = {
+	monarch = {
+		name = "Sambhava"
+		dynasty = "Visa"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+912.1.1 = {
+	heir = {
+		name = "Sura"
+		monarch_name = "Sura"
+		dynasty = "Visa"
+		birth_date = 912.1.1
+		death_date = 978.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+967.1.1 = {
+	monarch = {
+		name = "Sura"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+967.1.1 = {
+	heir = {
+		name = "Dharma"
+		monarch_name = "Dharma"
+		dynasty = "Visa"
+		birth_date = 957.1.1
+		death_date = 986.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+978.1.1 = {
+	monarch = {
+		name = "Dharma"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+978.1.1 = {
+	heir = {
+		name = "Sangrama"
+		monarch_name = "Sangrama"
+		dynasty = "Visa"
+		birth_date = 958.1.1
+		death_date = 999.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+986.1.1 = {
+	monarch = {
+		name = "Sangrama"
+		dynasty = "Visa"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+986.1.1 = {
+	heir = {
+		name = "Sagemayi"
+		monarch_name = "Sagemayi"
+		dynasty = "Visa"
+		birth_date = 976.1.1
+		death_date = 1006.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+999.1.1 = {
+	monarch = {
+		name = "Sagemayi"
+		dynasty = "Visa"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1006.1.1 = { primary_culture = uyghur }
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

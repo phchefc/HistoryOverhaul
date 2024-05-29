@@ -1,0 +1,1666 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = jinhan
+religion = muism
+technology_group = early_chinese
+capital = 2745
+
+# Park dynasty
+
+2.1.1 = {
+	monarch = {
+		name = "Hyeokgeose"
+		dynasty = "Park"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+2.1.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Alyeong"
+		birth_date = -50.1.1
+		death_date = 4.5.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+2.1.1 = {
+	heir = {
+		name = "Namhae"
+		monarch_name = "Namhae"
+		dynasty = "Park"
+		birth_date = -30.1.1
+		death_date = 24.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+4.5.1 = {
+	monarch = {
+		name = "Namhae"
+		dynasty = "Park"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Unje"
+		birth_date = -30.1.1
+		death_date = 30.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yuri"
+		monarch_name = "Yuri"
+		dynasty = "Park"
+		birth_date = -10.1.1
+		death_date = 57.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+24.9.1 = {
+	monarch = {
+		name = "Yuri"
+		dynasty = "Park"
+		birth_date = 2.1.1
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Park"
+		birth_date = -5.1.1
+		death_date = 60.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Seok dynasty
+
+57.10.1 = {
+	monarch = {
+		name = "Talhae"
+		dynasty = "Seok"
+		birth_date = 2.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Ahyo"
+		dynasty = "Park"
+		birth_date = 2.1.1
+		death_date = 70.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Park dynasty
+
+80.4.1 = {
+	monarch = {
+		name = "Pasa"
+		dynasty = "Park"
+		birth_date = 50.1.1
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Saseong"
+		dynasty = "Kim"
+		birth_date = 50.1.1
+		death_date = 100.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+90.1.1 = {
+	heir = {
+		name = "Jima"
+		monarch_name = "Jima"
+		dynasty = "Park"
+		birth_date = 90.1.1
+		death_date = 134.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+112.10.1 = {
+	monarch = {
+		name = "Jima"
+		dynasty = "Park"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Aerye"
+		dynasty = "Park"
+		birth_date = 90.1.1
+		death_date = 140.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+134.8.1 = {
+	monarch = {
+		name = "Ilseong"
+		dynasty = "Park"
+		birth_date = 44.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Jisorye"
+		dynasty = "Park"
+		birth_date = 60.1.1
+		death_date = 150.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Adalla"
+		monarch_name = "Adalla"
+		dynasty = "Park"
+		birth_date = 120.1.1
+		death_date = 184.1.1
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+}
+
+154.2.1 = {
+	monarch = {
+		name = "Adalla"
+		dynasty = "Park"
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Naerye"
+		dynasty = "Park"
+		birth_date = 120.1.1
+		death_date = 180.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Seok dynasty
+
+184.3.1 = {
+	monarch = {
+		name = "Beolhyu"
+		dynasty = "Seok"
+		birth_date = 140.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Naehae"
+		monarch_name = "Naehae"
+		dynasty = "Seok"
+		birth_date = 184.1.1
+		death_date = 230.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+196.1.1 = {
+	monarch = {
+		name = "Naehae"
+		dynasty = "Seok"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Seok"
+		birth_date = 120.1.1
+		death_date = 180.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jobun"
+		monarch_name = "Jobun"
+		dynasty = "Seok"
+		birth_date = 196.1.1
+		death_date = 247.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+230.3.1 = {
+	monarch = {
+		name = "Jobun"
+		dynasty = "Seok"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Aihye"
+		dynasty = "Seok"
+		birth_date = 200.1.1
+		death_date = 250.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Cheomhae"
+		monarch_name = "Cheomhae"
+		dynasty = "Seok"
+		birth_date = 200.1.1
+		death_date = 262.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+230.3.1 = { leader = {	name = "Seok Uro"     type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 253.6.1 } }
+
+247.8.1 = {
+	monarch = {
+		name = "Cheomhae"
+		dynasty = "Seok"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+# Kim dynasty
+
+262.12.29 = {
+	monarch = {
+		name = "Michu"
+		dynasty = "Kim"
+		birth_date = 230.1.1
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Gwangmyeong"
+		dynasty = "Seok"
+		birth_date = 230.1.1
+		death_date = 290.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Seok dynasty
+
+284.10.1 = {
+	monarch = {
+		name = "Yurye"
+		dynasty = "Seok"
+		birth_date = 260.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Girim"
+		monarch_name = "Girim"
+		dynasty = "Seok"
+		birth_date = 284.1.1
+		death_date = 310.6.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+298.1.1 = {
+	monarch = {
+		name = "Girim"
+		dynasty = "Seok"
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+	heir = {
+		name = "Heulhae"
+		monarch_name = "Heulhae"
+		dynasty = "Seok"
+		birth_date = 298.1.1
+		death_date = 356.4.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+310.6.1 = {
+	monarch = {
+		name = "Heulhae"
+		dynasty = "Seok"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+# Kim dynasty
+
+356.4.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	monarch = {
+		name = "Naemul"
+		dynasty = "Kim"
+		birth_date = 330.1.1
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Boban"
+		dynasty = "Kim"
+		birth_date = 330.1.1
+		death_date = 400.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+402.1.1 = {
+	monarch = {
+		name = "Silseong"
+		dynasty = "Kim"
+		birth_date = 370.1.1
+		adm = 0
+		dip = 4
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Aryu"
+		dynasty = "Kim"
+		birth_date = 370.1.1
+		death_date = 430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+417.5.1 = {
+	monarch = {
+		name = "Nulji"
+		dynasty = "Kim"
+		birth_date = 380.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Charo"
+		dynasty = "Kim"
+		birth_date = 380.1.1
+		death_date = 450.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+425.1.1 = {
+	heir = {
+		name = "Jabi"
+		monarch_name = "Jabi"
+		dynasty = "Kim"
+		birth_date = 425.1.1
+		death_date = 479.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+455.10.1 = {
+	historical_rival = YAM
+	historical_friend = BKJ
+}
+
+458.1.1 = {
+	monarch = {
+		name = "Jabi"
+		dynasty = "Kim"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Kim"
+		birth_date = 430.1.1
+		death_date = 480.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Soji"
+		monarch_name = "Soji"
+		dynasty = "Kim"
+		birth_date = 458.1.1
+		death_date = 500.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+479.2.3 = {
+	monarch = {
+		name = "Soji"
+		dynasty = "Kim"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Seonhye"
+		dynasty = "Kim"
+		birth_date = 460.1.1
+		death_date = 520.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+500.9.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Byeokhwa"
+		dynasty = "Park"
+		birth_date = 484.1.1
+		death_date = 530.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+500.11.1 = {
+	monarch = {
+		name = "Jidaero" # Jijeung
+		dynasty = "Kim"
+		birth_date = 437.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Yeonje"
+		dynasty = "Park"
+		birth_date = 460.1.1
+		death_date = 520.1.1
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Wonjong"
+		monarch_name = "Beopheung"
+		dynasty = "Kim"
+		birth_date = 487.1.1
+		death_date = 540.7.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+505.1.1 = { leader = {	name = "Isabu"     type = general	fire = 2	shock = 2	manuever = 2	siege = 1  death_date = 550.1.1 } } # Not an actual death date
+
+514.1.1 = {
+	monarch = {
+		name = "Wonjong" # Beopheung
+		dynasty = "Kim"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Bodo"
+		dynasty = "Kim"
+		birth_date = 490.1.1
+		death_date = 540.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+527.1.1 = { religion = mahayana }
+
+534.1.1 = {
+	heir = {
+		name = "Sammaekjong"
+		monarch_name = "Jinheung"
+		dynasty = "Kim"
+		birth_date = 534.1.1
+		death_date = 576.1.1
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}
+
+540.7.1 = {
+	monarch = {
+		name = "Sammaekjong" # Jinheung
+		dynasty = "Kim"
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Sado"
+		dynasty = "Park"
+		birth_date = 530.1.1
+		death_date = 614.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+550.1.1 = {
+	heir = {
+		name = "Saryun"
+		monarch_name = "Jinji"
+		dynasty = "Kim"
+		birth_date = 550.1.1
+		death_date = 579.8.24
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+554.7.1 = {
+	historical_rival = GOG
+	historical_rival = BKJ
+	remove_historical_friend = BKJ
+	add_accepted_culture = buyeo
+	leader = {	name = "Kim Mu-ryeok"     type = general	fire = 2	shock = 2	manuever = 2	siege = 1  death_date = 579.10.16 }
+}
+
+576.8.1 = {
+	monarch = {
+		name = "Saryun" # Jinji
+		dynasty = "Kim"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Jido"
+		dynasty = "Park"
+		birth_date = 550.1.1
+		death_date = 620.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+579.1.1 = {
+	monarch = {
+		name = "Baekjeong" # Jinpyeong
+		dynasty = "Kim"
+		birth_date = 567.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+580.1.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Maya"
+		dynasty = "Kim"
+		birth_date = 570.1.1
+		death_date = 640.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Deokman"
+		monarch_name = "Seondeok"
+		dynasty = "Kim"
+		birth_date = 580.1.1
+		death_date = 647.1.1
+		female = yes
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+629.10.1 = { leader = {	name = "Kim Yu-shin"		type = general	fire = 4	shock = 4	manuever = 2	siege = 2	death_date = 668.10.31 } } # Discharge
+
+632.1.1 = {
+	monarch = {
+		name = "Deokman" # Seondeok
+		dynasty = "Kim"
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+	heir = {
+		name = "Seungman"
+		monarch_name = "Jindeok"
+		dynasty = "Kim"
+		birth_date = 600.1.1
+		death_date = 654.1.1
+		female = yes
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+647.2.17 = {
+	monarch = {
+		name = "Seungman" # Jindeok
+		dynasty = "Kim"
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+654.3.1 = {
+	monarch = {
+		name = "Chunchu" # Muyeol
+		dynasty = "Kim"
+		birth_date = 603.1.1
+		adm = 4
+		dip = 6
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Munhui"
+		dynasty = "Kim"
+		birth_date = 605.1.1
+		death_date = 670.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Beopmin"
+		monarch_name = "Munmu"
+		dynasty = "Kim"
+		birth_date = 626.1.1
+		death_date = 681.7.21
+		claim = 95
+		adm = 5
+		dip = 6
+		mil = 5
+	}
+}
+
+661.1.1 = {
+	monarch = {
+		name = "Beopmin" # Munmu
+		dynasty = "Kim"
+		adm = 5
+		dip = 6
+		mil = 5
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Jaui"
+		dynasty = "Kim"
+		birth_date = 630.1.1
+		death_date = 690.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jeongmyeong"
+		monarch_name = "Sinmun"
+		dynasty = "Kim"
+		birth_date = 650.1.1
+		death_date = 692.7.2
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+676.11.1 = { primary_culture = korean }
+
+681.7.21 = {
+	monarch = {
+		name = "Jeongmyeong" # Sinmun
+		dynasty = "Kim"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Kim"
+		birth_date = 650.1.1
+		death_date = 690.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+683.10.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Sinmok"
+		dynasty = "Kim"
+		birth_date = 655.1.1
+		death_date = 700.6.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}	
+
+687.1.1 = {	
+	heir = {
+		name = "I-gong"
+		monarch_name = "Hyoso"
+		dynasty = "Kim"
+		birth_date = 687.1.1
+		death_date = 702.8.24
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+692.7.2 = {
+	monarch = {
+		name = "I-gong" # Hyoso
+		dynasty = "Kim"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Heunggwang"
+		monarch_name = "Seongdeok"
+		dynasty = "Kim"
+		birth_date = 689.1.1
+		death_date = 737.1.1
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+698.6.1 = { historical_rival = BLH }
+
+702.8.24 = {
+	monarch = {
+		name = "Heunggwang" # Seongdeok
+		dynasty = "Kim"
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Seongjeong"
+		dynasty = "Kim"
+		birth_date = 690.1.1
+		death_date = 760.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+706.1.1 = {
+	heir = {
+		name = "Seunggyeong"
+		monarch_name = "Hyoseong"
+		dynasty = "Kim"
+		birth_date = 706.1.1
+		death_date = 742.1.1
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+720.3.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Sodeok"
+		dynasty = "Kim"
+		birth_date = 700.1.1
+		death_date = 724.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+737.2.1 = {
+	monarch = {
+		name = "Seunggyeong" # Hyoseong
+		dynasty = "Kim"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Park"
+		birth_date = 710.1.1
+		death_date = 770.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Heonyeong"
+		monarch_name = "Gyeongdeok"
+		dynasty = "Kim"
+		birth_date = 723.1.1
+		death_date = 765.1.1
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+}
+
+739.1.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Hyemyeong"
+		dynasty = "Kim"
+		birth_date = 710.1.1
+		death_date = 770.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+742.5.1 = {
+	monarch = {
+		name = "Heonyeong" # Gyeongdeok
+		dynasty = "Kim"
+		birth_date = 720.1.1
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Sammo"
+		dynasty = "Kim"
+		birth_date = 725.1.1
+		death_date = 780.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+765.1.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Manwol"
+		dynasty = "Kim"
+		birth_date = 725.1.1
+		death_date = 780.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+758.8.31 = {
+	heir = {
+		name = "Geonun"
+		monarch_name = "Hyegong"
+		dynasty = "Kim"
+		birth_date = 758.8.31
+		death_date = 780.4.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+765.6.1 = {
+	monarch = {
+		name = "Geonun" # Hyegong
+		dynasty = "Kim"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Sinbo"
+		dynasty = "Kim"
+		birth_date = 760.1.1
+		death_date = 780.4.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+780.4.1 = {
+	monarch = {
+		name = "Yangsang" # Seondeok
+		dynasty = "Kim"
+		birth_date = 728.1.1
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Gujok"
+		dynasty = "Kim"
+		birth_date = 730.1.1
+		death_date = 790.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+785.1.14 = {
+	monarch = {
+		name = "Gyeongsin" # Wonseong
+		dynasty = "Kim"
+		birth_date = 740.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Sukjeong"
+		dynasty = "Kim"
+		birth_date = 740.1.1
+		death_date = 800.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Junong"
+		monarch_name = "Soseong"
+		dynasty = "Kim"
+		birth_date = 770.1.1
+		death_date = 800.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+798.12.29 = {
+	monarch = {
+		name = "Junong" # Soseong
+		dynasty = "Kim"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Gyehwa"
+		dynasty = "Kim"
+		birth_date = 770.1.1
+		death_date = 809.7.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Junghui"
+		monarch_name = "Aejang"
+		dynasty = "Kim"
+		birth_date = 788.1.1
+		death_date = 809.7.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+800.1.1 = {
+	monarch = {
+		name = "Junghui" # Aejang
+		dynasty = "Kim"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Park"
+		birth_date = 790.1.1
+		death_date = 809.7.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+809.7.1 = {
+	monarch = {
+		name = "Eonseoung" # Heondeok
+		dynasty = "Kim"
+		birth_date = 775.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Gwiseung"
+		dynasty = "Kim"
+		birth_date = 780.1.1
+		death_date = 830.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sujong"
+		monarch_name = "Heungdeok"
+		dynasty = "Kim"
+		birth_date = 777.1.1
+		death_date = 836.12.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+826.10.1 = {
+	monarch = {
+		name = "Sujong" # Heungdeok
+		dynasty = "Kim"
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Jeongmok"
+		dynasty = "Kim"
+		birth_date = 780.1.1
+		death_date = 840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+828.1.1 = { leader = {	name = "Jang Bogo"		type = general	fire = 3	shock = 3	manuever = 4	siege = 0	death_date = 846.3.1 } }
+
+836.12.1 = {
+	monarch = {
+		name = "Jeryung" # Huigang
+		dynasty = "Kim"
+		birth_date = 790.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Munmok"
+		dynasty = "Kim"
+		birth_date = 790.1.1
+		death_date = 840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+838.1.1 = {
+	monarch = {
+		name = "Myeong" # Minae
+		dynasty = "Kim"
+		birth_date = 817.1.1
+		adm = 0
+		dip = 2
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Yunyong"
+		dynasty = "Kim"
+		birth_date = 820.1.1
+		death_date = 840.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+839.1.23 = {
+	monarch = {
+		name = "U-jing" # Sinmu
+		dynasty = "Kim"
+		birth_date = 807.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Jeonggye"
+		dynasty = "Kim"
+		birth_date = 810.1.1
+		death_date = 860.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Gyeong-eung"
+		monarch_name = "Munseong"
+		dynasty = "Kim"
+		birth_date = 825.1.1
+		death_date = 857.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+839.7.23 = {
+	monarch = {
+		name = "Gyeong-eung" # Munseong
+		dynasty = "Kim"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Somyeong"
+		dynasty = "Kim"
+		birth_date = 830.1.1
+		death_date = 870.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Uijeong"
+		monarch_name = "Heonan"
+		dynasty = "Kim"
+		birth_date = 810.1.1
+		death_date = 861.1.29
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+857.1.1 = {
+	monarch = {
+		name = "Uijeong" # Heonan
+		dynasty = "Kim"
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+	heir = {
+		name = "Eungnyeom"
+		monarch_name = "Gyeongmun"
+		dynasty = "Kim"
+		birth_date = 846.1.1
+		death_date = 875.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+861.1.29 = {
+	monarch = {
+		name = "Eungnyeom" # Gyeongmun
+		dynasty = "Kim"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Yeonghwa"
+		dynasty = "Kim"
+		birth_date = 841.1.1
+		death_date = 870.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jeong"
+		monarch_name = "Heongang"
+		dynasty = "Kim"
+		birth_date = 860.1.1
+		death_date = 886.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+870.1.1 = {
+	queen = {
+		country_of_origin = SLL
+		name = "Munui"
+		dynasty = "Kim"
+		birth_date = 842.1.1
+		death_date = 900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+875.7.9 = {
+	monarch = {
+		name = "Jeong" # Heongang
+		dynasty = "Kim"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Uimyeong"
+		dynasty = "Kim"
+		birth_date = 860.1.1
+		death_date = 900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hwang"
+		monarch_name = "Jeonggang"
+		dynasty = "Kim"
+		birth_date = 861.1.1
+		death_date = 887.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+886.7.6 = {
+	monarch = {
+		name = "Hwang" # Jeonggang
+		dynasty = "Kim"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	heir = {
+		name = "Man"
+		monarch_name = "Jinseong"
+		dynasty = "Kim"
+		birth_date = 865.1.1
+		death_date = 897.12.31
+		female = yes
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+887.7.6 = {
+	monarch = {
+		name = "Man" # Jinseong
+		dynasty = "Kim"
+		female = yes
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Wihong"
+		dynasty = "Kim"
+		birth_date = 850.1.1
+		death_date = 888.1.1
+		female = no
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yo"
+		monarch_name = "Hyogong"
+		dynasty = "Kim"
+		birth_date = 883.1.1
+		death_date = 912.4.25
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+889.1.1 = { remove_accepted_culture = buyeo }
+
+897.7.4 = {
+	monarch = {
+		name = "Yo" # Hyogong
+		dynasty = "Kim"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Park"
+		birth_date = 885.1.1
+		death_date = 927.11.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Park dynasty
+
+912.4.25 = {
+	monarch = {
+		name = "Gyeonghwi" # Sindeok
+		dynasty = "Park"
+		birth_date = 875.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = SLL
+		name = "Uiseong"
+		dynasty = "Kim"
+		birth_date = 885.1.1
+		death_date = 927.11.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Seungyeong"
+		monarch_name = "Gyeongmyeong"
+		dynasty = "Park"
+		birth_date = 890.1.1
+		death_date = 917.1.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+917.1.1 = {
+	monarch = {
+		name = "Seungyeong" # Gyeongmyeong
+		dynasty = "Park"
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Kim"
+		birth_date = 890.1.1
+		death_date = 927.11.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wi-eung"
+		monarch_name = "Gyeongae"
+		dynasty = "Park"
+		birth_date = 892.1.1
+		death_date = 924.11.1
+		claim = 95
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+918.6.15 = { historical_friend = GOR }
+
+924.8.1 = {
+	monarch = {
+		name = "Wi-eung" # Gyeongae
+		dynasty = "Park"
+		adm = 0
+		dip = 3
+		mil = 0
+	}
+	queen = {
+		country_of_origin = SLL
+		dynasty = "Kim"
+		birth_date = 895.1.1
+		death_date = 927.11.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Kim dynasty
+
+927.11.1 = {
+	monarch = {
+		name = "Bu" # Gyeongsun
+		dynasty = "Kim"
+		birth_date = 885.1.1
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Maui"
+		dynasty = "Kim"
+		birth_date = 905.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# EH version

@@ -1,0 +1,356 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = korean
+religion = confucianism
+technology_group = early_chinese
+historical_rival = NOK
+historical_rival = SOV
+historical_rival = JP2
+historical_friend = USA
+capital = 735	# Seoul
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Provisional government of the Republic of Korea
+
+1919.4.13 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = constitutional_republic
+	religion = secularism
+	technology_group = asian
+	monarch = {
+		name = "(Provisional government)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+1945.9.8 = {
+	monarch = {
+		name = "(U.S. Military government)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# First Republic of Korea
+
+1948.8.15 = { changed_tag_from = KOR }
+
+1948.8.15 = {
+	monarch = {
+		name = "Rhee Syng-man"
+		birth_date = 1875.4.18
+		adm = 2
+		dip = 5
+		mil = 1
+		religion = protestant
+	}
+}
+
+1948.12.25 = { leader = {	name = "Paik Sun-yup"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 1960.5.31 } } # Discharge
+
+1950.9.28 = { capital = 736 } # Busan
+1950.10.19 = { historical_rival = CHN }
+1951.4.15 = { leader = {	name = "Park Chung-hee"     type = general	fire = 2	shock = 2	manuever = 3	siege = 3  death_date = 1962.3.24 } } # Discharge
+1953.10.27 = { capital = 735 } # Seoul
+
+# Second Republic of Korea
+
+1960.4.27 = {
+	monarch = {
+		name = "Heo Jeong" # Acting President.
+		birth_date = 1896.4.8
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = irreligious
+	}
+}
+
+1960.6.16 = {
+	monarch = {
+		name = "Gwak Sang-hun" # Acting President.
+		birth_date = 1896.10.21
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = irreligious
+	}
+}
+
+1960.6.23 = {
+	monarch = {
+		name = "Heo Jeong" # Acting President.
+		birth_date = 1896.4.8
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = irreligious
+	}
+}
+
+1960.8.8 = {
+	monarch = {
+		name = "Baek Nak-jun" # Acting President.
+		birth_date = 1895.3.9
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = irreligious
+	}
+}
+
+1960.8.12 = {
+	monarch = {
+		name = "Yun Bo-seon"
+		birth_date = 1897.8.26
+		adm = 2
+		dip = 2
+		mil = 0
+		religion = irreligious
+	}
+}
+
+# Supreme Council for National Reconstruction
+
+1962.3.24 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = military_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = military_junta
+	monarch = {
+		name = "Park Chung-hee"
+		birth_date = 1917.11.14
+		adm = 5
+		dip = 3
+		mil = 5
+		religion = irreligious
+	}
+}
+
+# Third Republic of Korea
+
+1963.12.17 = { 
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = constitutional_republic
+}
+
+1965.6.22 = { remove_historical_rival = JP2 }
+
+# Fourth Republic of Korea
+
+1972.10.17 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = military_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = presidential_despot_reform
+}
+
+1979.3.5 = { leader = {	name = "Chun Doo-hwan"     type = general	fire = 2	shock = 2	manuever = 3	siege = 3  death_date = 1980.8.26 } } # Discharge
+
+1979.10.26 = {
+	monarch = {
+		name = "Choi Kyu-hah"
+		birth_date = 1919.7.16
+		adm = 2
+		dip = 2
+		mil = 0
+		religion = irreligious
+	}
+}
+
+1980.8.16 = {
+	monarch = {
+		name = "Pak Choong-hoon" # Acting President.
+		birth_date = 1919.1.19
+		adm = 1
+		dip = 1
+		mil = 0
+		religion = irreligious
+	}
+}
+
+# Fifth Republic of Korea
+
+1980.9.1 = {
+	monarch = {
+		name = "Chun Doo-hwan"
+		birth_date = 1931.1.18
+		adm = 5
+		dip = 4
+		mil = 4
+		religion = catholic
+	}
+}
+
+# Sixth Republic of Korea
+
+1988.2.25 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = universal_suffrage_reform
+	add_government_reform = reinforce_republican_values_reform
+	add_government_reform = multi_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = ceremonial_president
+	set_legacy_government = constitutional_republic
+	technology_group = western
+	monarch = {
+		name = "Roh Tae-woo"
+		birth_date = 1933.12.4
+		adm = 3
+		dip = 5
+		mil = 2
+		religion = mahayana
+	}
+}
+
+1990.9.30 = { remove_historical_rival = SOV }
+1992.8.24 = { remove_historical_rival = CHN }
+
+1993.2.25 = {
+	monarch = {
+		name = "Kim Young-sam"
+		birth_date = 1927.12.20
+		adm = 3
+		dip = 4
+		mil = 3
+		religion = protestant
+	}
+}
+
+1998.2.25 = {
+	monarch = {
+		name = "Kim Dae-jung"
+		birth_date = 1924.1.6
+		adm = 4
+		dip = 4
+		mil = 1
+		religion = catholic
+	}
+}
+
+2003.2.25 = {
+	monarch = {
+		name = "Roh Moo-hyun"
+		birth_date = 1946.9.1
+		adm = 2
+		dip = 3
+		mil = 4
+		religion = catholic
+	}
+}
+
+2004.3.12 = {
+	monarch = {
+		name = "Goh Kun" # Acting President.
+		birth_date = 1938.1.2
+		adm = 2
+		dip = 2
+		mil = 2
+		religion = protestant
+	}
+}
+
+2004.5.14 = {
+	monarch = {
+		name = "Roh Moo-hyun"
+		birth_date = 1946.9.1
+		adm = 2
+		dip = 3
+		mil = 4
+		religion = catholic
+	}
+}
+
+2008.2.25 = {
+	monarch = {
+		name = "Lee Myung-bak"
+		birth_date = 1941.12.19
+		adm = 5
+		dip = 5
+		mil = 3
+		religion = protestant
+	}
+}
+
+2013.2.25 = {
+	monarch = {
+		name = "Park Geun-hye"
+		birth_date = 1952.2.2
+		adm = 0
+		dip = 1
+		mil = 1
+		religion = irreligious
+		female = yes
+	}
+}
+
+2016.12.9 = {
+	monarch = {
+		name = "Hwang Kyo-ahn" # Acting President.
+		birth_date = 1957.4.15
+		adm = 0
+		dip = 0
+		mil = 0
+		religion = protestant
+	}
+}
+
+2017.5.10 = {
+	monarch = {
+		name = "Moon Jae-in"
+		birth_date = 1953.1.24
+		adm = 0
+		dip = 0
+		mil = 0
+		religion = catholic
+	}
+}
+
+2022.5.10 = {
+	monarch = {
+		name = "Yoon Suk-yeol"
+		birth_date = 1960.12.18
+		adm = 1
+		dip = 1
+		mil = 1
+		religion = irreligious
+	}
+}
+
+# EH version

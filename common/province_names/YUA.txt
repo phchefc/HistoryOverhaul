@@ -1,0 +1,25 @@
+681 = "De'an"
+688 = "Bianliang"			#Kaifeng
+2139 = "Ninghai"
+700 = "Fengyuan"			#Xi'an
+708 = "Suzhou"
+1816 = "Dadu"
+1821 = "Jiqing"				#Nanjing				|incomplete
+1838 = "Anfeng"
+2169 = "Guangyuan"
+690 = "Yidu"
+2180 = "Qinzhou"
+
+#Korea
+732 = "Shuangcheng"				#Hamgyong
+1845 = "Dongning"
+2741 = "Danluo"				#Jeju
+
+#Manchuria
+726 = "Liaoyang"
+2106 = "Yongming"
+3010 = "Lyushun"
+2115 = "Xanadu"
+2110 = "Kaiyuan"
+
+# EH version

@@ -1,0 +1,580 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = chihan
+capital = 1816
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Han dynasty (Gongsun Yan)
+
+237.1.1 = {
+	government_rank = 2
+	capital = 726
+	monarch = {
+		name = "Yuan"
+		dynasty = "Gongsun"
+		birth_date = 195.1.1
+		death_date = 238.9.1
+		adm = 2
+		dip = 0
+		mil = 2
+		leader = {	name = "Gongsun Yuan"     	type = general	fire = 1	shock = 1	manuever = 0	siege = 0  death_date = 238.9.29 }
+	}
+	heir = {
+		name = "Xiu"
+		monarch_name = "Xiu"
+		dynasty = "Gongsun"
+		birth_date = 215.1.1
+		death_date = 238.9.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+# Former Yan
+
+285.1.1 = {
+	government = tribal
+	add_government_reform = steppe_horde
+	government_rank = 1
+	religion = tengri_pagan_reformed
+	technology_group = eastern_nomad_group
+	capital = 704
+	monarch = {
+		name = "Hui"
+		dynasty = "Murong"
+		birth_date = 269.1.1
+		culture = khitan
+		adm = 2
+		dip = 4
+		mil = 4
+		leader = {	name = "Murong Hui"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 337.11.23 }
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Duan"
+		birth_date = 275.1.1
+		death_date = 335.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+307.1.1 = { government_rank = 2 }
+
+337.11.23 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 3
+	religion = confucianism
+	technology_group = early_chinese
+	monarch = {
+		name = "Huang" #Wenming
+		dynasty = "Murong"
+		birth_date = 297.1.1
+		culture = khitan
+		adm = 4
+		dip = 3
+		mil = 5
+		leader = {	name = "Murong Huang"     	type = general	fire = 3	shock = 3	manuever = 1	siege = 1  death_date = 348.10.25 }
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Duan"
+		birth_date = 300.1.1
+		death_date = 350.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jun"
+		monarch_name = "Jun"
+		dynasty = "Murong"
+		birth_date = 319.1.1
+		death_date = 360.2.17
+		culture = khitan
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+348.10.25 = {
+	monarch = {
+		name = "Jun" #Jingzhao
+		dynasty = "Murong"
+		birth_date = 319.1.1
+		culture = khitan
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+350.1.1 = { capital = 1816 }
+
+353.1.1 = {
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Kezuhun"
+		birth_date = 320.1.1
+		death_date = 380.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Wei"
+		monarch_name = "Wei"
+		dynasty = "Murong"
+		birth_date = 350.1.1
+		death_date = 385.1.1
+		culture = khitan
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+357.1.1 = { capital = 2137 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+360.2.17 = {
+	monarch = {
+		name = "Wei"
+		dynasty = "Murong"
+		birth_date = 350.1.1
+		culture = khitan
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+369.1.1 = {
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Kezuhun"
+		birth_date = 355.1.1
+		death_date = 385.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Later Yan
+
+384.2.9 = {
+	capital = 696
+	monarch = {
+		name = "Chui" #Wucheng
+		dynasty = "Murong"
+		birth_date = 326.1.1
+		culture = khitan
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+384.1.1 = {
+	heir = {
+		name = "Bao"
+		monarch_name = "Huimin"
+		dynasty = "Murong"
+		birth_date = 355.1.1
+		death_date = 398.1.1
+		culture = khitan
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+388.1.1 = {
+	queen = {
+		country_of_origin = YAN
+		name = "Cheng'ai"
+		dynasty = "Duan"
+		birth_date = 370.1.1
+		death_date = 396.6.2
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+396.6.2 = {
+	monarch = {
+		name = "Bao" #Huimin
+		dynasty = "Murong"
+		culture = khitan
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAN
+		name = "Huide"
+		dynasty = "Duan"
+		birth_date = 370.1.1
+		death_date = 400.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sheng"
+		monarch_name = "Zhaowu"
+		dynasty = "Murong"
+		birth_date = 373.1.1
+		death_date = 401.1.1
+		culture = khitan
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+397.1.1 = { capital = 704 }
+
+398.5.27 = {
+	monarch = {
+		name = "Han"
+		dynasty = "Lan"
+		adm = 0
+		dip = 0
+		mil = 4
+	}
+}
+
+398.8.15 = {
+	monarch = {
+		name = "Sheng" #Zhaowu
+		dynasty = "Murong"
+		culture = khitan
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Lan"
+		birth_date = 375.1.1
+		death_date = 407.4.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+401.1.1 = {
+	monarch = {
+		name = "Xi" #Zhaowen
+		dynasty = "Murong"
+		birth_date = 385.1.1
+		culture = khitan
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = YAN
+		name = "Xunying"
+		dynasty = "Fu"
+		birth_date = 385.1.1
+		death_date = 407.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Northern Yan
+
+407.4.1 = {
+	monarch = {
+		name = "Un" #Huiyi
+		dynasty = "Go"
+		culture = buyeo
+		adm = 3
+		dip = 4
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Li"
+		birth_date = 380.1.1
+		death_date = 409.12.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+409.12.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Ba" #Wencheng
+		dynasty = "Feng"
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Sun"
+		birth_date = 380.1.1
+		death_date = 430.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hong"
+		monarch_name = "Zhaocheng"
+		dynasty = "Feng"
+		birth_date = 390.1.1
+		death_date = 439.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+430.1.1 = {
+	monarch = {
+		name = "Hong" #Zhaocheng
+		dynasty = "Feng"
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Murong"
+		birth_date = 390.1.1
+		death_date = 439.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# End of the Sui dynasty (Yan)
+
+618.6.18 = {
+	government_rank = 1
+	capital = 1816
+	monarch = {
+		name = "Kaidao"
+		dynasty = "Gao"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+# End of the Tang dynasty (An-Shi)
+
+755.12.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Lushan"
+		dynasty = "An"
+		birth_date = 703.1.1
+		culture = turkish
+		adm = 0
+		dip = 0
+		mil = 4
+		leader = {	name = "An Lushan"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 1  death_date = 757.1.25 }
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Kang"
+		birth_date = 705.1.1
+		death_date = 756.2.5
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qingxu"
+		monarch_name = "Qingxu"
+		dynasty = "An"
+		birth_date = 730.1.1
+		death_date = 759.4.10
+		culture = turkish
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+756.2.5 = {
+	government_rank = 3
+	capital = 1836
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Duan"
+		birth_date = 710.1.1
+		death_date = 757.1.25
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+757.1.25 = {
+	capital = 2137
+	monarch = {
+		name = "Qingxu"
+		dynasty = "An"
+		culture = turkish
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+759.4.10 = {
+	monarch = {
+		name = "(vacant)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+759.5.9 = {
+	monarch = {
+		name = "Siming"
+		dynasty = "Shi"
+		birth_date = 703.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+		leader = {	name = "Shi Siming"     	type = general	fire = 2	shock = 3	manuever = 2	siege = 0  death_date = 761.4.18 }
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Xin"
+		birth_date = 710.1.1
+		death_date = 763.2.17
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chaoyi"
+		monarch_name = "Chaoyi"
+		dynasty = "Feng"
+		birth_date = 730.1.1
+		death_date = 763.2.17
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+761.4.18 = {
+	monarch = {
+		name = "Chaoyi"
+		dynasty = "Shi"
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Yan)
+
+895.6.1 = {
+	government_rank = 1
+	capital = 1816
+	monarch = {
+		name = "Rengong"
+		dynasty = "Liu"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+895.6.1 = {
+	heir = {
+		name = "Shouguang"
+		monarch_name = "Shouguang"
+		dynasty = "Liu"
+		birth_date = 870.1.1
+		death_date = 914.2.12
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+907.6.1 = {
+	monarch = {
+		name = "Shouguang"
+		dynasty = "Liu"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Li"
+		birth_date = 875.1.1
+		death_date = 914.2.12
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+911.9.8 = {	government_rank = 3 }
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

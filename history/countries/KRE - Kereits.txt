@@ -1,0 +1,171 @@
+government = tribal
+add_government_reform = steppe_horde
+technology_group = eastern_nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = nestorian
+primary_culture = mongol
+capital = 4221
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+
+1020.1.1 = {
+	monarch = {
+		name = "Saryk"
+		dynasty = "Kereit"	   
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+1080.1.1 = {
+	monarch = {
+		name = "Markus Buyruk"
+		dynasty = "Kereit"
+		birth_date = 1060.1.1
+		death_date = 1100.1.1
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+
+1095.1.1 = {
+	heir = {
+		name = "Kurchakus Buyruk"
+		monarch_name = "Kurchakus Buyruk"
+		dynasty = "Kereit"
+		birth_date = 1090.1.1
+		death_date = 1165.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1100.1.1 = {
+	monarch = {
+		name = "Kurchakus Buyruk"
+		dynasty = "Kereit"
+		adm = 1
+		dip = 5
+		mil = 3
+	}
+}
+
+1130.1.1 = {
+	heir = {
+		name = "Toghrul"
+		monarch_name = "Wang"
+		dynasty = "Kereit"
+		birth_date = 1130.1.1
+		death_date = 1203.1.1
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+
+1165.1.1 = {
+	monarch = {
+		name = "Toghrul" #Wang 1st reign
+		dynasty = "Kereit"
+		adm = 2
+		dip = 4
+		mil = 2
+		leader = {	name = "Wang Khan"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 1203.1.1 } # Not an actual death date
+	}
+}
+
+# Coup
+
+1168.1.1 = {
+	monarch = {
+		name = "Irke Qara" #1st reign
+		dynasty = "Kereit"
+		birth_date = 1132.1.1
+		adm = 1
+		dip = 4
+		mil = 3
+	}
+}
+
+# Restoration
+
+1170.1.1 = {
+	monarch = {
+		name = "Toghrul" #Wang 2nd reign
+		dynasty = "Kereit"
+		birth_date = 1130.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+# Coup
+
+1172.1.1 = {
+	monarch = {
+		name = "Kur Khan"
+		dynasty = "Kereit"
+		birth_date = 1095.1.1
+		adm = 0
+		dip = 0
+		mil = 4
+	}
+}
+
+# Restoration
+
+1175.1.1 = {
+	monarch = {
+		name = "Toghrul" #Wang 3rd reign
+		dynasty = "Kereit"
+		birth_date = 1130.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+# Coup
+
+1177.1.1 = {
+	monarch = {
+		name = "Irke Qara" #2nd reign
+		dynasty = "Kereit"
+		birth_date = 1132.1.1
+		adm = 1
+		dip = 4
+		mil = 3
+	}
+}
+
+# Restoration
+
+1180.1.1 = {
+	monarch = {
+		name = "Toghrul" #Wang 4th reign
+		dynasty = "Kereit"
+		birth_date = 1130.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

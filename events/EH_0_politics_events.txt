@@ -1,0 +1,4635 @@
+namespace = eh_diplomacy
+namespace = eh_dynastic
+namespace = eh_geography
+normal_or_historical_nations = yes
+
+########################################################################
+# Diplomacy Events
+########################################################################
+
+# Bestow Imperial Grace - Chinese empires
+country_event = {
+	id = eh_diplomacy.1
+	title = "eh_diplomacy.1.t"
+	desc = "eh_diplomacy.1.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+
+	trigger = {
+		ROOT = { is_emperor_of_china = yes }
+		is_year = 2
+		NOT = { is_year = 1870 }
+		NOT = { is_at_war = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_diplomacy.1.a"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_treasury = -1000
+			add_adm_power = -10
+			add_dip_power = -10
+			add_mil_power = -10
+			add_mandate = 1
+			add_meritocracy = 1
+		}
+		every_subject_country = {
+			limit = {
+				is_subject_of_type_with_overlord = { who = ROOT type = tributary_state }
+			}
+			country_event = { id = eh_diplomacy.2 days = 7 }
+		}
+	}
+	
+	option = {
+		name = "eh_diplomacy.1.b"
+		ai_chance = { factor = 50 }
+		ROOT = {
+			add_mandate = -1
+			add_meritocracy = -1
+		}
+		every_subject_country = {
+			limit = {
+				is_subject_of = ROOT
+			}
+			add_liberty_desire = 1
+		}
+	}
+}
+
+# Bestow Imperial Grace - Tributaries
+country_event = {
+	id = eh_diplomacy.2
+	title = "eh_diplomacy.2.t"
+	desc = "eh_diplomacy.2.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "eh_diplomacy.2.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_treasury = 100
+			add_legitimacy = 3
+			add_prestige = 3
+			add_adm_power = 3
+			add_dip_power = 3
+			add_mil_power = 3
+			add_liberty_desire = -1
+			add_opinion = {
+				who = PREV
+				modifier = sided_with_us
+			}
+		}
+	}
+}
+
+# End of the tributary relations
+country_event = {
+	id = eh_diplomacy.3
+	title = "eh_diplomacy.3.t"
+	desc = "eh_diplomacy.3.d"
+	picture = REFORM_eventPicture
+	
+	trigger = {
+		ROOT = { is_subject_of_type = tributary_state }
+		is_year = 1895
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_diplomacy.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = { grant_independence = yes }
+	}
+}
+
+# Historical conflicts
+country_event = {
+	id = eh_diplomacy.4
+	title = "eh_diplomacy.4.t"
+	desc = "eh_diplomacy.4.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		ROOT = {
+			AND = {
+				ai = yes
+				was_player = no
+				is_at_war = yes
+			}
+			has_global_flag = eh_historic
+			NOT = {	is_year = 1946 }
+			NOT = {
+				OR = {
+					has_country_flag = lulin_campaign
+					has_country_flag = sanguo_china
+					has_country_flag = battle_of_guandu
+					has_country_flag = battle_of_chibi
+					has_country_flag = northern_expeditions_shu
+					has_country_flag = northern_superiority_china
+					has_country_flag = battle_of_feishui
+					has_country_flag = transition_from_sui_to_tang
+					has_country_flag = anxi_protectorate_tang
+					has_country_flag = anshi_rebellion
+					has_country_flag = huang_chao_rebellion
+					has_country_flag = song_unification
+					has_country_flag = red_turban
+					has_country_flag = northern_expeditions_ming
+					has_country_flag = tumu_crisis
+					has_country_flag = li_zicheng_rebellion
+					has_country_flag = dzungar_qing_war
+					has_country_flag = ten_great_campaigns
+					has_country_flag = opium_war
+					has_country_flag = taiping_rebellion
+					has_country_flag = sino_french_war
+					has_country_flag = first_sino_japanese_war
+					has_country_flag = boxer_rebellion
+					has_country_flag = xinhai_revolution
+					has_country_flag = northern_expedition_china
+					has_country_flag = chinese_civil_war
+					has_country_flag = second_sino_japanese_war
+					has_country_flag = heian_period
+					has_country_flag = nanbokucho_period
+					has_country_flag = sengoku_jidai
+					has_country_flag = tokugawa_shogunate
+					has_country_flag = perry_expedition
+					has_country_flag = black_ship
+					has_country_flag = boshin_war
+					has_country_flag = russo_japanese_war
+					has_country_flag = mukden_incident
+					has_country_flag = samguk_korea
+					has_country_flag = goguryeo_sui_war
+					has_country_flag = goguryeo_tang_war
+					has_country_flag = baekje_conquest
+					has_country_flag = silla_tang_war
+					has_country_flag = balhae_conquest
+					has_country_flag = goryeo_unification
+					has_country_flag = jurchen_expedition_korea
+					has_country_flag = tsushima_expedition
+					has_country_flag = imjin_war
+					has_country_flag = khitan_invasion_korea
+					has_country_flag = jurchen_invasion_china
+					has_country_flag = genghis_khan
+					has_country_flag = mongol_invasion_china
+					has_country_flag = mongol_invasion_korea
+					has_country_flag = mongol_invasion_world
+					has_country_flag = mongol_invasion_japan
+					has_country_flag = mongol_invasion_vietnam
+					has_country_flag = manchu_unification
+					has_country_flag = manchu_invasion_china
+					has_country_flag = manchu_invasion_korea
+					has_country_flag = russo_manchu_conflict
+					has_country_flag = sui_ly_war
+					has_country_flag = ming_ho_war
+					has_country_flag = taungoo_empire
+				}
+				OR = {
+					has_country_flag = germanic_wars
+					has_country_flag = roman_civil_wars
+					has_country_flag = roman_persian_wars
+					has_country_flag = barbarian_invasions
+					has_country_flag = islamic_expansion
+					has_country_flag = crusade
+					has_country_flag = hundred_years_war
+					has_country_flag = byzantium_turkish_wars
+					has_country_flag = reconquista
+					has_country_flag = italian_wars
+					has_country_flag = european_colonization_americas
+					has_country_flag = turkish_persian_wars
+					has_country_flag = mughul_conquests_india
+					has_country_flag = eighty_years_war
+					has_country_flag = anglo_spanish_war
+					has_country_flag = thirty_years_war
+					has_country_flag = great_turkish_war
+					has_country_flag = great_northern_war
+					has_country_flag = war_of_spanish_succession
+					has_country_flag = war_of_austrian_succession
+					has_country_flag = seven_years_war
+					has_country_flag = american_revolutionary_war
+					has_country_flag = napoleonic_wars
+					has_country_flag = texas
+					has_country_flag = crimean_war
+					has_country_flag = sepoy_rebellion
+					has_country_flag = american_civil_war
+					has_country_flag = resorgimento
+					has_country_flag = austro_prussian_war
+					has_country_flag = franco_prussian_war
+					has_country_flag = spanish_american_war
+					has_country_flag = ww1
+					has_country_flag = russian_civil_war
+					has_country_flag = ww2
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_diplomacy.4.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					war_with = ROOT
+					has_global_flag = eh_historic
+				}
+			}
+			add_prestige = 20
+			white_peace = ROOT
+		}
+		ROOT = {
+			add_prestige = 20
+			white_peace = FROM
+		}
+	}
+}
+
+# Modern conflicts
+country_event = {
+	id = eh_diplomacy.5
+	title = "eh_diplomacy.5.t"
+	desc = "eh_diplomacy.5.d"
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		ROOT = {
+			AND = {
+				ai = yes
+				was_player = no
+				is_at_war = yes
+			}
+			is_year = 1946
+			has_global_flag = eh_historic
+			NOT = { has_global_flag = eh_alternative }
+			NOT = { has_country_flag = sino_vietnamese_war }
+			NOT = { has_country_flag = korean_war }
+			NOT = { has_country_flag = first_indochina_war }
+			NOT = { has_country_flag = vietnam_war }
+			NOT = { has_country_flag = arab_israeli_conflict }
+			NOT = { has_country_flag = gulf_war }
+			NOT = { has_country_flag = war_on_terror }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_diplomacy.5.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				AND = {
+					war_with = ROOT
+					has_global_flag = eh_historic
+				}
+			}
+			add_prestige = 20
+			white_peace = ROOT
+		}
+	}
+}
+
+# Historical conflicts
+country_event = {
+	id = eh_diplomacy.6
+	title = "eh_diplomacy.6.t"
+	desc = "eh_diplomacy.6.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		ROOT = {
+			AND = {
+				is_at_war = yes
+				has_global_flag = eh_historic
+			}
+			NOT = {
+				OR = {
+					has_country_flag = lulin_campaign
+					has_country_flag = sanguo_china
+					has_country_flag = battle_of_guandu
+					has_country_flag = battle_of_chibi
+					has_country_flag = northern_expeditions_shu
+					has_country_flag = northern_superiority_china
+					has_country_flag = battle_of_feishui
+					has_country_flag = transition_from_sui_to_tang
+					has_country_flag = anxi_protectorate_tang
+					has_country_flag = anshi_rebellion
+					has_country_flag = huang_chao_rebellion
+					has_country_flag = song_unification
+					has_country_flag = red_turban
+					has_country_flag = northern_expeditions_ming
+					has_country_flag = tumu_crisis
+					has_country_flag = li_zicheng_rebellion
+					has_country_flag = dzungar_qing_war
+					has_country_flag = ten_great_campaigns
+					has_country_flag = opium_war
+					has_country_flag = taiping_rebellion
+					has_country_flag = sino_french_war
+					has_country_flag = first_sino_japanese_war
+					has_country_flag = boxer_rebellion
+					has_country_flag = xinhai_revolution
+					has_country_flag = northern_expedition_china
+					has_country_flag = chinese_civil_war
+					has_country_flag = second_sino_japanese_war
+					has_country_flag = heian_period
+					has_country_flag = nanbokucho_period
+					has_country_flag = sengoku_jidai
+					has_country_flag = tokugawa_shogunate
+					has_country_flag = perry_expedition
+					has_country_flag = black_ship
+					has_country_flag = boshin_war
+					has_country_flag = russo_japanese_war
+					has_country_flag = mukden_incident
+					has_country_flag = samguk_korea
+					has_country_flag = goguryeo_sui_war
+					has_country_flag = goguryeo_tang_war
+					has_country_flag = baekje_conquest
+					has_country_flag = silla_tang_war
+					has_country_flag = balhae_conquest
+					has_country_flag = goryeo_unification
+					has_country_flag = jurchen_expedition_korea
+					has_country_flag = tsushima_expedition
+					has_country_flag = imjin_war
+					has_country_flag = khitan_invasion_korea
+					has_country_flag = jurchen_invasion_china
+					has_country_flag = genghis_khan
+					has_country_flag = mongol_invasion_china
+					has_country_flag = mongol_invasion_korea
+					has_country_flag = mongol_invasion_world
+					has_country_flag = mongol_invasion_japan
+					has_country_flag = mongol_invasion_vietnam
+					has_country_flag = manchu_unification
+					has_country_flag = manchu_invasion_mongol
+					has_country_flag = manchu_invasion_china
+					has_country_flag = manchu_invasion_korea
+					has_country_flag = russo_manchu_conflict
+					has_country_flag = sui_ly_war
+					has_country_flag = ming_ho_war
+					has_country_flag = taungoo_empire
+				}
+				OR = {
+					has_country_flag = germanic_wars
+					has_country_flag = roman_civil_wars
+					has_country_flag = roman_persian_wars
+					has_country_flag = barbarian_invasions
+					has_country_flag = islamic_expansion
+					has_country_flag = crusade
+					has_country_flag = hundred_years_war
+					has_country_flag = byzantium_turkish_wars
+					has_country_flag = reconquista
+					has_country_flag = italian_wars
+					has_country_flag = european_colonization_americas
+					has_country_flag = turkish_persian_wars
+					has_country_flag = mughul_conquests_india
+					has_country_flag = eighty_years_war
+					has_country_flag = anglo_spanish_war
+					has_country_flag = thirty_years_war
+					has_country_flag = great_turkish_war
+					has_country_flag = great_northern_war
+					has_country_flag = war_of_spanish_succession
+					has_country_flag = war_of_austrian_succession
+					has_country_flag = seven_years_war
+					has_country_flag = american_revolutionary_war
+					has_country_flag = napoleonic_wars
+					has_country_flag = texas
+					has_country_flag = crimean_war
+					has_country_flag = sepoy_rebellion
+					has_country_flag = american_civil_war
+					has_country_flag = resorgimento
+					has_country_flag = austro_prussian_war
+					has_country_flag = franco_prussian_war
+					has_country_flag = spanish_american_war
+					has_country_flag = ww1
+					has_country_flag = russian_civil_war
+					has_country_flag = turkish_war_of_independence
+					has_country_flag = ww2
+					has_country_flag = sino_vietnamese_war
+					has_country_flag = korean_war
+					has_country_flag = first_indochina_war
+					has_country_flag = vietnam_war
+					has_country_flag = arab_israeli_conflict
+					has_country_flag = gulf_war
+					has_country_flag = war_on_terror
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_diplomacy.6.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			every_country = {
+				limit = {
+					OR = {
+						war_with = ROOT
+						has_global_flag = eh_historic
+					}
+				}
+				set_global_flag = eh_historic
+				white_peace = FROM
+			}
+		}
+	}
+}
+
+# Five Eyes
+country_event = {
+	id = eh_diplomacy.7
+	title = "eh_diplomacy.7.t"
+	desc = "eh_diplomacy.7.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = USA
+		ai = yes
+		OR = {
+			NOT = { alliance_with = GBR }
+			NOT = { alliance_with = CAN }
+			NOT = { alliance_with = AUS }
+			NOT = { alliance_with = NZL }
+		}
+		is_year = 1940
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.7.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			create_alliance = GBR
+			create_alliance = CAN
+			create_alliance = AUS
+			create_alliance = NZL
+		}
+		GBR = {
+			create_alliance = CAN
+			create_alliance = AUS
+			create_alliance = NZL
+		}
+		CAN = {
+			create_alliance = AUS
+			create_alliance = NZL
+		}
+		AUS = { create_alliance = NZL }
+	}
+}
+
+# NATO
+country_event = {
+	id = eh_diplomacy.8
+	title = "eh_diplomacy.8.t"
+	desc = "eh_diplomacy.8.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = USA
+		ai = yes
+		OR = {
+			NOT = { alliance_with = GBR }
+			NOT = { alliance_with = CAN }
+			NOT = { alliance_with = FR2 }
+			NOT = { alliance_with = WGE }
+			NOT = { alliance_with = ITA }
+			NOT = { alliance_with = NED }
+			NOT = { alliance_with = BEL }
+			NOT = { alliance_with = LUX }
+			NOT = { alliance_with = DAN }
+			NOT = { alliance_with = NOR }
+			NOT = { alliance_with = ICE }
+			NOT = { alliance_with = POR }
+			OR = {
+				NOT = { alliance_with = GRE }
+				NOT = { alliance_with = GR2 }
+			}
+			NOT = { alliance_with = TKY }
+		}
+		is_year = 1955
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.8.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			create_alliance = GBR
+			create_alliance = CAN
+			create_alliance = FR2
+			create_alliance = WGE
+			create_alliance = ITA
+			create_alliance = NED
+			create_alliance = BEL
+			create_alliance = LUX
+			create_alliance = DAN
+			create_alliance = NOR
+			create_alliance = ICE
+			create_alliance = POR
+			create_alliance = GRE
+			create_alliance = GR2
+			create_alliance = TKY
+		}
+	}
+}
+
+# NATO
+country_event = {
+	id = eh_diplomacy.9
+	title = "eh_diplomacy.9.t"
+	desc = "eh_diplomacy.9.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = USA
+		ai = yes
+		OR = {
+			NOT = { alliance_with = GBR }
+			NOT = { alliance_with = CAN }
+			NOT = { alliance_with = FR2 }
+			OR = {
+				NOT = { alliance_with = WGE }
+				NOT = { alliance_with = GER }
+			}
+			NOT = { alliance_with = ITA }
+			NOT = { alliance_with = NED }
+			NOT = { alliance_with = BEL }
+			NOT = { alliance_with = LUX }
+			NOT = { alliance_with = DAN }
+			NOT = { alliance_with = NOR }
+			NOT = { alliance_with = ICE }
+			NOT = { alliance_with = SPA }
+			NOT = { alliance_with = POR }
+			NOT = { alliance_with = GRE }
+			NOT = { alliance_with = TKY }
+		}
+		is_year = 1980
+		NOT = { is_year = 2000 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.9.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			create_alliance = GBR
+			create_alliance = CAN
+			create_alliance = FR2
+			create_alliance = WGE
+			create_alliance = GER
+			create_alliance = ITA
+			create_alliance = NED
+			create_alliance = BEL
+			create_alliance = LUX
+			create_alliance = DAN
+			create_alliance = NOR
+			create_alliance = ICE
+			create_alliance = SPA
+			create_alliance = POR
+			create_alliance = GRE
+			create_alliance = TKY
+		}
+	}
+}
+
+# NATO
+country_event = {
+	id = eh_diplomacy.10
+	title = "eh_diplomacy.10.t"
+	desc = "eh_diplomacy.10.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = USA
+		ai = yes
+		OR = {
+			NOT = { alliance_with = GBR }
+			NOT = { alliance_with = CAN }
+			NOT = { alliance_with = FR2 }
+			NOT = { alliance_with = GER }
+			NOT = { alliance_with = ITA }
+			NOT = { alliance_with = NED }
+			NOT = { alliance_with = BEL }
+			NOT = { alliance_with = LUX }
+			NOT = { alliance_with = DAN }
+			NOT = { alliance_with = NOR }
+			NOT = { alliance_with = ICE }
+			NOT = { alliance_with = SPA }
+			NOT = { alliance_with = POR }
+			NOT = { alliance_with = GRE }
+			NOT = { alliance_with = TKY }
+			NOT = { alliance_with = ALB }
+			NOT = { alliance_with = BUL }
+			NOT = { alliance_with = CRO }
+			NOT = { alliance_with = CZE }
+			NOT = { alliance_with = SVK }
+			NOT = { alliance_with = SVN }
+			NOT = { alliance_with = EST }
+			NOT = { alliance_with = LTV }
+			NOT = { alliance_with = LIT }
+			NOT = { alliance_with = A14 }
+			NOT = { alliance_with = RMN }
+			NOT = { alliance_with = POL }
+			NOT = { alliance_with = HUN }
+			NOT = { alliance_with = MAC }
+		}
+		is_year = 2000
+		NOT = { is_year = 2050 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.10.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			create_alliance = GBR
+			create_alliance = CAN
+			create_alliance = FR2
+			create_alliance = GER
+			create_alliance = ITA
+			create_alliance = NED
+			create_alliance = BEL
+			create_alliance = LUX
+			create_alliance = DAN
+			create_alliance = NOR
+			create_alliance = ICE
+			create_alliance = SPA
+			create_alliance = POR
+			create_alliance = GRE
+			create_alliance = TKY
+			create_alliance = ALB
+			create_alliance = BUL
+			create_alliance = CRO
+			create_alliance = CZE
+			create_alliance = SVK
+			create_alliance = SVN
+			create_alliance = EST
+			create_alliance = LTV
+			create_alliance = LIT
+			create_alliance = A14
+			create_alliance = RMN
+			create_alliance = POL
+			create_alliance = HUN
+			create_alliance = MAC
+		}
+	}
+}
+
+# U.S. Mutual Defense Treaty
+country_event = {
+	id = eh_diplomacy.11
+	title = "eh_diplomacy.11.t"
+	desc = "eh_diplomacy.11.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = USA
+		ai = yes
+		OR = {
+			NOT = { alliance_with = JAP }
+			NOT = { alliance_with = SKO }
+			NOT = { alliance_with = FRM }
+			NOT = { alliance_with = ISR }
+			NOT = { alliance_with = INI }
+		}
+		is_year = 1955
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.11.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			create_alliance = JAP
+			create_alliance = SKO
+			create_alliance = FRM
+			create_alliance = ISR
+			create_alliance = INI
+		}
+	}
+}
+
+# Modern European Friendship
+country_event = {
+	id = eh_diplomacy.12
+	title = "eh_diplomacy.12.t"
+	desc = "eh_diplomacy.12.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = GBR
+		ai = yes
+		OR = {
+			NOT = { alliance_with = FR2 }
+			NOT = { alliance_with = GER }
+		}
+		is_year = 1990
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.12.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			create_alliance = FR2
+			create_alliance = ISR
+		}
+		RUS = {
+			create_alliance = CHN
+			create_alliance = BLR
+		}
+		FR2 = { create_alliance = GER }
+		TKY = { create_alliance = AZE }
+		EST = {
+			create_alliance = LTV
+			create_alliance = LIT
+		}
+		LTV = { create_alliance = LIT }
+	}
+}
+
+# China-DPRK Treaty on Friendship
+country_event = {
+	id = eh_diplomacy.13
+	title = "eh_diplomacy.13.t"
+	desc = "eh_diplomacy.13.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = CHN
+		ai = yes
+		NOK = {
+			NOT = { is_subject_of = CHN }
+		}
+		is_year = 1955
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.13.a"
+		ai_chance = { factor = 100 }
+		CHN = { create_alliance = NOK }
+	}
+}
+
+# Warsaw Pact
+country_event = {
+	id = eh_diplomacy.14
+	title = "eh_diplomacy.14.t"
+	desc = "eh_diplomacy.14.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = SOV
+		ai = yes
+		OR = {
+			EGE = {
+				NOT = { is_subject_of = SOV }
+			}
+			POL = {
+				NOT = { is_subject_of = SOV }
+			}
+			CZS = {
+				NOT = { is_subject_of = SOV }
+			}
+			HUN = {
+				NOT = { is_subject_of = SOV }
+			}
+			RMN = {
+				NOT = { is_subject_of = SOV }
+			}
+			BUL = {
+				NOT = { is_subject_of = SOV }
+			}
+		}
+		is_year = 1955
+		NOT = { is_year = 1985 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.14.a"
+		ai_chance = { factor = 100 }
+		SOV = {
+			create_subject = {
+				subject_type = sphere_member
+				subject = EGE
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = POL
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = CZS
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = HUN
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = RMN
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = BUL
+			}
+			create_subject = {
+				subject_type = sphere_member
+				subject = ALB
+			}
+		}
+	}
+}
+
+# Pax Britannica
+country_event = {
+	id = eh_diplomacy.15
+	title = "eh_diplomacy.15.t"
+	desc = "eh_diplomacy.15.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		ai = yes
+		is_hegemon = yes
+		is_year = 1760
+		NOT = { is_year = 1960 }
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = eh_hegemon }
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.15.a"
+		ai_chance = { factor = 100 }
+		GBR = { set_country_flag = eh_hegemon }
+		every_country = {
+			limit = {
+				AND = {
+					NOT = { has_reform = fascist_government }
+					NOT = { has_reform = communist_government }
+					OR = {
+						capital_scope = { superregion = europe_superregion }
+						capital_scope = { superregion = far_east_superregion }
+						capital_scope = { superregion = oceania_superregion }
+					}
+				}
+			}
+			add_opinion = {
+				who = GBR
+				modifier = friendly_government
+			}
+		}
+	}
+}
+
+# Pax Americana
+country_event = {
+	id = eh_diplomacy.16
+	title = "eh_diplomacy.16.t"
+	desc = "eh_diplomacy.16.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		ai = yes
+		is_hegemon = yes
+		is_year = 1920
+		has_global_flag = eh_historic
+		NOT = { has_country_flag = eh_hegemon }
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "eh_diplomacy.16.a"
+		ai_chance = { factor = 100 }
+		USA = { set_country_flag = eh_hegemon }
+		every_country = {
+			limit = {
+				AND = {
+					NOT = { has_reform = fascist_government }
+					NOT = { has_reform = communist_government }
+					OR = {
+						capital_scope = { superregion = europe_superregion }
+						capital_scope = { superregion = far_east_superregion }
+						capital_scope = { superregion = oceania_superregion }
+						capital_scope = { region = poland_region }
+						capital_scope = { region = baltic_region }
+						capital_scope = { region = carpathia_region }
+						capital_scope = { region = balkan_region }
+						capital_scope = { region = anatolia_region }
+						capital_scope = { region = arabia_region }
+					}
+				}
+			}
+			add_opinion = {
+				who = USA
+				modifier = friendly_government
+			}
+		}
+	}
+}
+
+########################################################################
+# Dynastic Events
+########################################################################
+
+# The Sons of [Root.Monarch.GetTitle]
+country_event = {
+	id = eh_dynastic.1
+	title = "eh_dynastic.1.t"
+	desc = "eh_dynastic.1.d"
+	picture = 3_SONS_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				government = monarchy
+				has_reform = steppe_horde
+			}
+			OR = {
+				culture_group = east_asian
+				culture_group = evenks
+				culture_group = mongolic
+				culture_group = japanese_g
+				culture_group = korean_g
+				culture_group = southeastasian_group
+				culture_group = altaic
+			}
+			ruler_age = 20
+			has_heir = no
+			has_regency = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_dynastic.1.a"
+		ROOT = {
+			define_heir = {
+				dynasty = ROOT
+				change_adm = 3
+				male = yes
+				age = 1
+			}
+		}
+	}
+	option = {
+		name = "eh_dynastic.1.b"
+		ROOT = {
+			define_heir = {
+				dynasty = ROOT
+				change_dip = 3
+				male = yes
+				age = 1
+			}
+		}
+	}
+	option = {
+		name = "eh_dynastic.1.c"
+		ROOT = {
+			define_heir = {
+				dynasty = ROOT
+				change_mil = 3
+				male = yes
+				age = 1
+			}
+		}
+	}
+}
+
+# The Consort of [Root.Monarch.GetTitle]
+country_event = {
+	id = eh_dynastic.2
+	title = "eh_dynastic.2.t"
+	desc = "eh_dynastic.2.d"
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				government = monarchy
+				has_reform = steppe_horde
+			}
+			OR = {
+				culture_group = east_asian
+				culture_group = evenks
+				culture_group = mongolic
+				culture_group = japanese_g
+				culture_group = korean_g
+				culture_group = southeastasian_group
+				culture_group = altaic
+			}
+			ruler_age = 18
+			is_female = no
+			has_consort = no
+			has_regency = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_dynastic.2.a"
+		ROOT = {
+			define_consort = {
+				change_adm = 3
+				age = 18
+				female = yes
+			}
+		}
+	}
+	option = {
+		name = "eh_dynastic.2.b"
+		ROOT = {
+			define_consort = {
+				change_dip = 3
+				age = 18
+				female = yes
+			}
+		}
+	}
+	option = {
+		name = "eh_dynastic.2.c"
+		ROOT = {
+			define_consort = {
+				change_mil = 3
+				age = 18
+				female = yes
+			}
+		}
+	}
+}
+
+# Temple name
+country_event = {
+	id = eh_dynastic.3
+	title = "eh_dynastic.3.t"
+	desc = "eh_dynastic.3.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	trigger = {
+		ROOT = {
+			government = monarchy
+			NOT = { has_ruler_flag = temple_name }
+			OR = {
+				AND = {
+					culture_group = east_asian
+					government_rank = 3
+				}
+				AND = {
+					primary_culture = korean
+					government_rank = 2
+				}
+				AND = {
+					culture_group = mongolic
+					government_rank = 3
+				}
+				AND = {
+					primary_culture = manchu
+					government_rank = 3
+				}
+				AND = {
+					primary_culture = vietnamese
+					government_rank = 3
+				}
+			}
+			has_global_flag = eh_historic
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.3.a" # Jo
+		ai_chance = { factor = 50 }
+		ROOT = {
+			set_ruler_flag = temple_name
+			add_legitimacy = 10
+			add_mandate = 10
+			country_event = { id = eh_dynastic.4 days = 1 }
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.3.b" # Jong
+		ai_chance = { factor = 50 }
+		ROOT = {
+			set_ruler_flag = temple_name
+			add_stability = 1
+			add_corruption = -10
+			country_event = { id = eh_dynastic.4 days = 1 }
+		}
+	}
+}
+
+# Temple name
+country_event = {
+	id = eh_dynastic.4
+	title = "eh_dynastic.4.t"
+	desc = "eh_dynastic.4.d"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_dynastic.4.a" # Tae
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 10
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.4.b" # Se
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 10
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.4.c" # Go
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 10
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.4.e" # Mun
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 10
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.4.f" # Seong
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 10
+		}
+	}
+	
+	option = {
+		name = "eh_dynastic.4.g" # Hui
+		ai_chance = { factor = 10 }
+		ROOT = {
+			add_prestige = 10
+		}
+	}
+}
+
+# Notable dynasty - House of Habsburg
+country_event = {
+	id = eh_dynastic.5
+	title = "eh_dynastic.5.t"
+	desc = "eh_dynastic.5.d"
+	picture = HABSBURG_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = HAB
+			tag = AUH
+		}
+		OR = {
+			government = monarchy
+			has_reform = austrian_archduchy_reform
+			has_reform = austrian_dual_monarchy
+		}
+		is_year = 1280
+		NOT = { is_year = 1920 }
+		NOT = { dynasty = "von Habsburg" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.5.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Habsburg"
+			}
+			define_heir = {
+				dynasty = "von Habsburg"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Habsburg
+country_event = {
+	id = eh_dynastic.6
+	title = "eh_dynastic.6.t"
+	desc = "eh_dynastic.6.d"
+	picture = HABSBURG_eventPicture
+	
+	trigger = {
+		tag = SPA
+		government = monarchy
+		is_year = 1515
+		NOT = { is_year = 1700 }
+		NOT = { dynasty = "von Habsburg" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.6.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Habsburg"
+			}
+			define_heir = {
+				dynasty = "von Habsburg"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Valois
+country_event = {
+	id = eh_dynastic.7
+	title = "eh_dynastic.7.t"
+	desc = "eh_dynastic.7.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = FRA
+		government = monarchy
+		is_year = 1285
+		NOT = { is_year = 1580 }
+		OR = {
+			NOT = { dynasty = "de Valois" }
+			is_female = yes
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.7.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "de Valois"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "de Valois"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Bourbon
+country_event = {
+	id = eh_dynastic.8
+	title = "eh_dynastic.8.t"
+	desc = "eh_dynastic.8.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = FRA
+				tag = FR2
+				tag = BOU
+			}
+		}
+		government = monarchy
+		is_year = 1590
+		NOT = { is_year = 1845 }
+		OR = {
+			AND = {
+				NOT = { dynasty = "de Bourbon" }
+				NOT = { dynasty = "Bonaparte" }
+			}
+			is_female = yes
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.8.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "de Bourbon"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Bourbon
+country_event = {
+	id = eh_dynastic.9
+	title = "eh_dynastic.9.t"
+	desc = "eh_dynastic.9.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = SPA
+		government = monarchy
+		is_year = 1700
+		AND = {
+			NOT = { dynasty = "de Bourbon" }
+			NOT = { dynasty = "Bonaparte" }
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.9.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "de Bourbon"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "de Bourbon"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Trastamara
+country_event = {
+	id = eh_dynastic.10
+	title = "eh_dynastic.10.t"
+	desc = "eh_dynastic.10.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = CAS
+				tag = ARA
+				tag = SPA
+			}
+		}
+		government = monarchy
+		is_year = 1300
+		NOT = { is_year = 1510 }
+		NOT = { dynasty = "de Trastamara" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.10.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "de Trastamara"
+			}
+			define_heir = {
+				dynasty = "de Trastamara"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Hohenzollern
+country_event = {
+	id = eh_dynastic.11
+	title = "eh_dynastic.11.t"
+	desc = "eh_dynastic.11.d"
+	picture = PRUSSIA_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = BRA
+				tag = PRU
+				tag = GER
+				tag = RMN
+			}
+		}
+		OR = {
+			government = monarchy
+			has_reform = prussian_monarchy
+		}
+		is_year = 1410
+		NOT = { is_year = 1920 }
+		NOT = { dynasty = "von Hohenzollern" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.11.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Hohenzollern"
+			}
+			define_heir = {
+				dynasty = "von Hohenzollern"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Rurikovich
+country_event = {
+	id = eh_dynastic.12
+	title = "eh_dynastic.12.t"
+	desc = "eh_dynastic.12.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = MOS
+		OR = {
+			government = monarchy
+			has_reform = tsardom
+		}
+		is_year = 1200
+		NOT = { is_year = 1595 }
+		NOT = { dynasty = "Rurikovich" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.12.a"
+		ai_chance = { factor = 100 }
+		MOS = {
+			define_ruler = {
+				dynasty = "Rurikovich"
+			}
+			define_heir = {
+				dynasty = "Rurikovich"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Romanov
+country_event = {
+	id = eh_dynastic.13
+	title = "eh_dynastic.13.t"
+	desc = "eh_dynastic.13.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = RUS
+		OR = {
+			government = monarchy
+			has_reform = tsardom
+			has_reform = russian_empire_reform
+		}
+		is_year = 1615
+		NOT = { is_year = 1920 }
+		NOT = { dynasty = "Romanov" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.13.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Romanov"
+			}
+			define_heir = {
+				dynasty = "Romanov"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Wittelsbach
+country_event = {
+	id = eh_dynastic.14
+	title = "eh_dynastic.14.t"
+	desc = "eh_dynastic.14.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BAV
+		government = monarchy
+		is_year = 1180
+		NOT = { is_year = 1870 }
+		NOT = { dynasty = "von Wittelsbach" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.14.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Wittelsbach"
+			}
+			define_heir = {
+				dynasty = "von Wittelsbach"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Savoia
+country_event = {
+	id = eh_dynastic.15
+	title = "eh_dynastic.15.t"
+	desc = "eh_dynastic.15.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = SAV
+				tag = SPI
+				tag = ITA
+			}
+		}
+		government = monarchy
+		is_year = 1000
+		NOT = { is_year = 1920 }
+		AND = {
+			NOT = { dynasty = "di Savoia" }
+			NOT = { dynasty = "Bonaparte" }
+		}
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.15.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "di Savoia"
+			}
+			define_heir = {
+				dynasty = "di Savoia"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Braganca 
+country_event = {
+	id = eh_dynastic.16
+	title = "eh_dynastic.16.t"
+	desc = "eh_dynastic.16.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = POR
+				tag = BR2
+			}
+		}
+		government = monarchy
+		is_year = 1640
+		NOT = { is_year = 1910 }
+		NOT = { dynasty = "de Braganca" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.16.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "de Braganca"
+			}
+			define_heir = {
+				dynasty = "de Braganca"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Oldenburg 
+country_event = {
+	id = eh_dynastic.17
+	title = "eh_dynastic.17.t"
+	desc = "eh_dynastic.17.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = DAN
+		government = monarchy
+		is_year = 1440
+		NOT = { is_year = 1865 }
+		NOT = { dynasty = "von Oldenburg" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.17.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Oldenburg"
+			}
+			define_heir = {
+				dynasty = "von Oldenburg"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Oranje 
+country_event = {
+	id = eh_dynastic.18
+	title = "eh_dynastic.18.t"
+	desc = "eh_dynastic.18.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = NED
+		government = monarchy
+		is_year = 1580
+		NOT = { dynasty = "van Oranje" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.18.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "van Oranje"
+			}
+			define_heir = {
+				dynasty = "van Oranje"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Plantagenet
+country_event = {
+	id = eh_dynastic.19
+	title = "eh_dynastic.19.t"
+	desc = "eh_dynastic.19.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ENG
+		OR = {
+			government = monarchy
+			has_reform = english_monarchy
+		}
+		is_year = 1150
+		NOT = { is_year = 1400 }
+		NOT = { dynasty = "Plantagenet" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.19.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Plantagenet"
+			}
+			define_heir = {
+				dynasty = "Plantagenet"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Tudor
+country_event = {
+	id = eh_dynastic.20
+	title = "eh_dynastic.20.t"
+	desc = "eh_dynastic.20.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ENG
+		OR = {
+			government = monarchy
+			has_reform = english_monarchy
+		}
+		is_year = 1485
+		NOT = { is_year = 1600 }
+		NOT = { dynasty = "Tudor" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.20.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Tudor"
+			}
+			define_heir = {
+				dynasty = "Tudor"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Stewart
+country_event = {
+	id = eh_dynastic.21
+	title = "eh_dynastic.21.t"
+	desc = "eh_dynastic.21.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ENG
+		OR = {
+			government = monarchy
+			has_reform = english_monarchy
+		}
+		is_year = 1605
+		NOT = { is_year = 1685 }
+		NOT = { dynasty = "Stuart" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.21.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			create_union = SCO
+			define_ruler = {
+				dynasty = "Stuart"
+			}
+			define_heir = {
+				dynasty = "Stuart"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Hannover
+country_event = {
+	id = eh_dynastic.22
+	title = "eh_dynastic.22.t"
+	desc = "eh_dynastic.22.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = GBR
+		OR = {
+			government = monarchy
+			has_reform = british_monarchy
+		}
+		is_year = 1715
+		NOT = { is_year = 1900 }
+		NOT = { dynasty = "von Hannover" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.22.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Hannover"
+			}
+			define_heir = {
+				dynasty = "von Hannover"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Windsor
+country_event = {
+	id = eh_dynastic.23
+	title = "eh_dynastic.23.t"
+	desc = "eh_dynastic.23.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = GBR
+		OR = {
+			government = monarchy
+			has_reform = british_monarchy
+		}
+		is_year = 1910
+		NOT = { dynasty = "of Windsor" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.23.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "of Windsor"
+			}
+			define_heir = {
+				dynasty = "of Windsor"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Glucksburg
+country_event = {
+	id = eh_dynastic.24
+	title = "eh_dynastic.24.t"
+	desc = "eh_dynastic.24.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = DAN
+				tag = NOR
+				tag = GR2
+			}
+		}
+		government = monarchy
+		is_year = 1865
+		NOT = { dynasty = "von Glucksburg" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.24.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Glucksburg"
+			}
+			define_heir = {
+				dynasty = "von Glucksburg"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Bernadotte
+country_event = {
+	id = eh_dynastic.25
+	title = "eh_dynastic.25.t"
+	desc = "eh_dynastic.25.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = SWE
+		government = monarchy
+		is_year = 1810
+		NOT = { dynasty = "Bernadotte" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.25.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Bernadotte"
+			}
+			define_heir = {
+				dynasty = "Bernadotte"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Saxe-Coburg
+country_event = {
+	id = eh_dynastic.26
+	title = "eh_dynastic.26.t"
+	desc = "eh_dynastic.26.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BEL
+		government = monarchy
+		is_year = 1830
+		NOT = { dynasty = "von Saxe-Coburg" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.26.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "von Saxe-Coburg"
+			}
+			define_heir = {
+				dynasty = "von Saxe-Coburg"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Sasanids
+country_event = {
+	id = eh_dynastic.27
+	title = "eh_dynastic.27.t"
+	desc = "eh_dynastic.27.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ERS
+		government = monarchy
+		is_year = 240
+		NOT = { is_year = 640 }
+		NOT = { dynasty = "Sasanid" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.27.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Sasanid"
+			}
+			define_heir = {
+				dynasty = "Sasanid"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Abbasid
+country_event = {
+	id = eh_dynastic.28
+	title = "eh_dynastic.28.t"
+	desc = "eh_dynastic.28.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ABA
+		OR = {
+			government = monarchy
+			has_reform = caliphate_reform
+		}
+		is_year = 750
+		NOT = { is_year = 1260 }
+		NOT = { dynasty = "Abbasid" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.28.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Abbasid"
+			}
+			define_heir = {
+				dynasty = "Abbasid"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Osmanoglu
+country_event = {
+	id = eh_dynastic.29
+	title = "eh_dynastic.29.t"
+	desc = "eh_dynastic.29.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = TUR
+		OR = {
+			government = monarchy
+			has_reform = ottoman_government
+		}
+		is_year = 1300
+		NOT = { is_year = 1925 }
+		NOT = { dynasty = "Osmanoglu" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.29.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Osmanoglu"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Osmanoglu"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Timurid
+country_event = {
+	id = eh_dynastic.30
+	title = "eh_dynastic.30.t"
+	desc = "eh_dynastic.30.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = TIM
+				tag = MUG
+			}
+		}
+		OR = {
+			government = tribal
+			government = monarchy
+		}
+		is_year = 1350
+		NOT = { is_year = 1850 }
+		NOT = { dynasty = "Timurid" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.30.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Timurid"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Timurid"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Saud
+country_event = {
+	id = eh_dynastic.31
+	title = "eh_dynastic.31.t"
+	desc = "eh_dynastic.31.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = NAJ
+				tag = SAU
+			}
+		}
+		OR = {
+			government = tribal
+			government = monarchy
+		}
+		is_year = 1380
+		NOT = { dynasty = "Sa'ud" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.31.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Sa'ud"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Sa'ud"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Alaouite
+country_event = {
+	id = eh_dynastic.32
+	title = "eh_dynastic.32.t"
+	desc = "eh_dynastic.32.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = MOR
+		government = monarchy
+		is_year = 1630
+		NOT = { dynasty = "Alaouite" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.32.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Alaouite"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Alaouite"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Solomonid
+country_event = {
+	id = eh_dynastic.33
+	title = "eh_dynastic.33.t"
+	desc = "eh_dynastic.33.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ET2
+		government = monarchy
+		is_year = 1270
+		NOT = { is_year = 1975 }
+		NOT = { dynasty = "Solomonid" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.33.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Solomonid"
+			}
+			define_heir = {
+				dynasty = "Solomonid"
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Chakri
+country_event = {
+	id = eh_dynastic.34
+	title = "eh_dynastic.34.t"
+	desc = "eh_dynastic.34.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		ROOT = {
+			OR = {
+				tag = RTN
+				tag = SIA
+			}
+		}
+		OR = {
+			government = monarchy
+			has_reform = siamese_absolutism
+		}
+		is_year = 1780
+		NOT = { dynasty = "Chakri" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.34.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Chakri"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Chakri"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Julio-Claudian
+country_event = {
+	id = eh_dynastic.35
+	title = "eh_dynastic.35.t"
+	desc = "eh_dynastic.35.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ROM
+		government = monarchy
+		is_year = 2
+		NOT = { is_year = 55 }
+		NOT = { dynasty = "Julio-Claudian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.35.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Julio-Claudian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Julio-Claudian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Flavian
+country_event = {
+	id = eh_dynastic.36
+	title = "eh_dynastic.36.t"
+	desc = "eh_dynastic.36.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ROM
+		government = monarchy
+		is_year = 70
+		NOT = { is_year = 95 }
+		NOT = { dynasty = "Flavian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.36.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Flavian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Flavian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Nerva-Antonine
+country_event = {
+	id = eh_dynastic.37
+	title = "eh_dynastic.37.t"
+	desc = "eh_dynastic.37.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ROM
+		government = monarchy
+		is_year = 95
+		NOT = { is_year = 195 }
+		NOT = { dynasty = "Nerva-Antonine" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.37.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Nerva-Antonine"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Nerva-Antonine"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Constantinian
+country_event = {
+	id = eh_dynastic.38
+	title = "eh_dynastic.38.t"
+	desc = "eh_dynastic.38.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = ROM
+		government = monarchy
+		is_year = 305
+		NOT = { is_year = 365 }
+		NOT = { dynasty = "Constantinian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.38.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Constantinian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Constantinian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Theodosian
+country_event = {
+	id = eh_dynastic.39
+	title = "eh_dynastic.39.t"
+	desc = "eh_dynastic.39.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = ROM
+			tag = A01
+			tag = BYZ
+		}
+		government = monarchy
+		is_year = 380
+		NOT = { is_year = 455 }
+		NOT = { dynasty = "Theodosian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.39.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Theodosian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Theodosian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Justinian
+country_event = {
+	id = eh_dynastic.40
+	title = "eh_dynastic.40.t"
+	desc = "eh_dynastic.40.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		government = monarchy
+		is_year = 520
+		NOT = { is_year = 605 }
+		NOT = { dynasty = "Justinian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.40.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Justinian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Justinian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Heraclian
+country_event = {
+	id = eh_dynastic.41
+	title = "eh_dynastic.41.t"
+	desc = "eh_dynastic.41.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		government = monarchy
+		is_year = 610
+		NOT = { is_year = 710 }
+		NOT = { dynasty = "Heraclian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.41.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Heraclian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Heraclian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Macedonian
+country_event = {
+	id = eh_dynastic.42
+	title = "eh_dynastic.42.t"
+	desc = "eh_dynastic.42.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		government = monarchy
+		is_year = 865
+		NOT = { is_year = 1055 }
+		NOT = { dynasty = "Macedonian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.42.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Macedonian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Macedonian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Komnenos
+country_event = {
+	id = eh_dynastic.43
+	title = "eh_dynastic.43.t"
+	desc = "eh_dynastic.43.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		government = monarchy
+		is_year = 1080
+		NOT = { is_year = 1185 }
+		NOT = { dynasty = "Komnenos" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.43.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Komnenos"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Komnenos"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Palaiologos
+country_event = {
+	id = eh_dynastic.44
+	title = "eh_dynastic.44.t"
+	desc = "eh_dynastic.44.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		government = monarchy
+		is_year = 1260
+		NOT = { is_year = 1455 }
+		NOT = { dynasty = "Palaiologos" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.44.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Palaiologos"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Palaiologos"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Merovingian
+country_event = {
+	id = eh_dynastic.45
+	title = "eh_dynastic.45.t"
+	desc = "eh_dynastic.45.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = FRK
+		government = monarchy
+		is_year = 520
+		NOT = { is_year = 750 }
+		NOT = { dynasty = "Merovingian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.45.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Merovingian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Merovingian"
+				male = yes
+			}
+		}
+	}
+}
+
+# Notable dynasty - House of Carolingian
+country_event = {
+	id = eh_dynastic.46
+	title = "eh_dynastic.46.t"
+	desc = "eh_dynastic.46.d"
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = FRK
+		government = monarchy
+		is_year = 755
+		NOT = { is_year = 840 }
+		NOT = { dynasty = "Carolingian" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.46.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				dynasty = "Carolingian"
+				male = yes
+			}
+			define_heir = {
+				dynasty = "Carolingian"
+				male = yes
+			}
+		}
+	}
+}
+
+
+# Modern Monarchy
+country_event = {
+	id = eh_dynastic.47
+	title = "eh_dynastic.47.t"
+	desc = "eh_dynastic.47.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = GBR
+				is_year = 1950
+			}
+			AND = {
+				tag = JAP
+				is_year = 1970
+			}
+		}
+		NOT = { has_country_flag = modern_monarchy }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.47.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		SPA = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = eh_fascist }
+				}
+			}
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		NED = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		BEL = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		LUX = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		DAN = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		SWE = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		NOR = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		JAP = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = eh_fascist }
+				}
+			}
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		SIA = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		MLA = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		KHM = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		SAU = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		JOR = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		OMA = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		UAE = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		QTR = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		BHR = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		KUW = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+		MOR = {
+			set_country_flag = modern_monarchy
+			change_government = monarchy
+		}
+	}
+}
+
+# Modern Republic
+country_event = {
+	id = eh_dynastic.48
+	title = "eh_dynastic.48.t"
+	desc = "eh_dynastic.48.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ROOT = {
+			NOT = { has_country_flag = modern_monarchy }
+		}
+		is_year = 1950
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_dynastic.48.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				NOT = { has_country_flag = modern_monarchy }
+			}
+			change_government = republic
+		}
+	}
+}
+
+########################################################################
+# Geographical Events
+########################################################################
+
+# Development of Cartography - East
+country_event = {
+	id = eh_geography.1
+	title = "eh_geography.1.t"
+	desc = "eh_geography.1.d"
+	picture = EXPLORERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		is_year = 2
+		NOT = { is_year = 50 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_geography.1.a"
+		ai_chance = { factor = 100 }
+		HND = {
+			china_superregion = { discover_country = HND }
+			central_asia_region = {
+				limit = {
+					AND = {
+						NOT = { area = nogai_area }
+						NOT = { area = transcaspia_area }
+						NOT = { area = kazakhstan_area }
+						NOT = { area = khiva_area }
+						NOT = { area = lower_yik_area }
+					}
+				}
+				discover_country = HND
+			}
+			mongolia_region = { discover_country = HND }
+			korea_region = { discover_country = HND }
+			northern_kyushu = { discover_country = HND }
+			jilin_area = { discover_country = HND }
+			liaoning_area = { discover_country = HND }
+			amdo_area = { discover_country = HND }
+			kham_area = { discover_country = HND }
+			east_china_sea_region = {
+				limit = {
+					NOT = { area = sea_of_japan_area }
+				}
+				discover_country = HND
+			}
+			410 = { discover_country = HND }
+			1370 = { discover_country = HND }
+			1371 = { discover_country = HND }
+		}
+		XIN = {
+			china_superregion = { discover_country = XIN }
+			central_asia_region = {
+				limit = {
+					AND = {
+						NOT = { area = nogai_area }
+						NOT = { area = transcaspia_area }
+						NOT = { area = kazakhstan_area }
+						NOT = { area = khiva_area }
+						NOT = { area = lower_yik_area }
+					}
+				}
+				discover_country = XIN
+			}
+			mongolia_region = { discover_country = XIN }
+			korea_region = { discover_country = XIN }
+			northern_kyushu = { discover_country = XIN }
+			jilin_area = { discover_country = XIN }
+			liaoning_area = { discover_country = XIN }
+			amdo_area = { discover_country = XIN }
+			kham_area = { discover_country = XIN }
+			east_china_sea_region = {
+				limit = {
+					NOT = { area = sea_of_japan_area }
+				}
+				discover_country = XIN
+			}
+			410 = { discover_country = XIN }
+			1370 = { discover_country = XIN }
+			1371 = { discover_country = XIN }
+		}
+		XIO = {
+			mongolia_region = { discover_country = XIO }
+			central_asia_region = { discover_country = XIO }
+			north_china_region = { discover_country = XIO }
+			jilin_area = { discover_country = XIO }
+			liaoning_area = { discover_country = XIO }
+			furdan_area = { discover_country = XIO }
+			ningguta_area = { discover_country = XIO }
+		}
+		YAM = {
+			east_china_sea_region = { discover_country = YAM }
+			coast_of_japan_area = { discover_country = YAM }
+			japan_region = {
+				limit = {
+					AND = {
+						NOT = { area = thohoku_area }
+						NOT = { area = hokkaido_area }
+					}
+				}
+				discover_country = YAM
+			}
+			korea_region = { discover_country = YAM }
+			jilin_area = { discover_country = YAM }
+			liaoning_area = { discover_country = YAM }
+			1836 = { discover_country = YAM }
+		}
+		GOG = {
+			east_china_sea_region = { discover_country = GOG }
+			korea_region = { discover_country = GOG }
+			japan_region = {
+				limit = {
+					AND = {
+						NOT = { area = thohoku_area }
+						NOT = { area = hokkaido_area }
+					}
+				}
+				discover_country = GOG
+			}
+			north_china_region = {
+				limit = {
+					AND = {
+						NOT = { area = gansu_area } 
+						NOT = { area = west_gansu_area }
+					}
+				}
+				discover_country = GOG
+			}
+			jilin_area = { discover_country = GOG }
+			liaoning_area = { discover_country = GOG }
+			furdan_area = { discover_country = GOG }
+			ningguta_area = { discover_country = GOG }
+			chahar_area = { discover_country = GOG }
+			eastern_mongolia = { discover_country = GOG }
+		}
+		BKJ = {
+			east_china_sea_region = { discover_country = BKJ }
+			coast_of_japan_area = { discover_country = BKJ }
+			korea_region = { discover_country = BKJ }
+			japan_region = {
+				limit = {
+					AND = {
+						NOT = { area = thohoku_area }
+						NOT = { area = hokkaido_area }
+					}
+				}
+				discover_country = BKJ
+			}
+			north_china_region = {
+				limit = {
+					AND = {
+						NOT = { area = gansu_area } 
+						NOT = { area = west_gansu_area }
+					}
+				}
+				discover_country = BKJ
+			}
+			jilin_area = { discover_country = BKJ }
+			liaoning_area = { discover_country = BKJ }
+			chahar_area = { discover_country = BKJ }
+			eastern_mongolia = { discover_country = BKJ }
+		}
+		SLL = {
+			east_china_sea_region = { discover_country = SLL }
+			coast_of_japan_area = { discover_country = SLL }
+			korea_region = { discover_country = SLL }
+			japan_region = {
+				limit = {
+					AND = {
+						NOT = { area = thohoku_area }
+						NOT = { area = hokkaido_area }
+					}
+				}
+				discover_country = SLL
+			}
+			north_china_region = {
+				limit = {
+					AND = {
+						NOT = { area = gansu_area } 
+						NOT = { area = west_gansu_area }
+					}
+				}
+				discover_country = SLL
+			}
+			jilin_area = { discover_country = SLL }
+			liaoning_area = { discover_country = SLL }
+			chahar_area = { discover_country = SLL }
+			eastern_mongolia = { discover_country = SLL }
+		}
+		FUN = {
+			south_china_sea_region = {
+				limit = {
+					AND = {
+						NOT = { area = arafura_sea_area }
+						NOT = { province_id = 1370 }
+						NOT = { province_id = 1371 }
+					}
+				}
+				discover_country = FUN
+			}
+			angkor_area = { discover_country = FUN }
+			central_thai_area = { discover_country = FUN }
+		}
+	}
+}
+
+# Development of Cartography - West
+country_event = {
+	id = eh_geography.2
+	title = "eh_geography.2.t"
+	desc = "eh_geography.2.d"
+	picture = EXPLORERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		is_year = 2
+		NOT = { is_year = 50 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_geography.2.a"
+		ai_chance = { factor = 100 }
+		ROM = {
+			north_atlantic_region = { 
+				limit = {
+					AND = {
+						NOT = { area = north_atlantic_area }
+						NOT = { area = denmark_strait_area }
+						NOT = { area = white_sea_area }
+					}
+				}
+				discover_country = ROM
+			}
+			mediterrenean_region = { discover_country = ROM }
+			arabian_sea_region = { discover_country = ROM }
+			europe = {
+				limit = {
+					AND = {
+						NOT = { region = scandinavia_region }
+						NOT = { region = russia_region }
+						NOT = { region = ural_region }
+						NOT = { region = baltic_region }
+						NOT = { region = ruthenia_region }
+					}
+				}
+				discover_country = ROM
+			}
+			near_east_superregion = { discover_country = ROM }
+			persia_superregion = { discover_country = ROM }
+			maghreb_region = { discover_country = ROM }
+			west_india_region = { discover_country = ROM }
+		}
+		PRT = {
+			mediterrenean_region = { discover_country = PRT }
+			arabian_sea_region = { discover_country = PRT }
+			italy_region = { discover_country = PRT }
+			balkan_region = { discover_country = PRT }
+			near_east_superregion = { discover_country = PRT }
+			persia_superregion = { discover_country = PRT }
+			maghreb_region = { discover_country = PRT }
+			hindusthan_region = { discover_country = PRT }
+			west_india_region = { discover_country = PRT }
+			central_asia_region = { discover_country = PRT }
+		}
+		KUS = {
+			mediterrenean_region = { discover_country = KUS }
+			arabian_sea_region = { discover_country = KUS }
+			italy_region = { discover_country = KUS }
+			balkan_region = { discover_country = KUS }
+			near_east_superregion = { discover_country = KUS }
+			persia_superregion = { discover_country = KUS }
+			india_superregion = { discover_country = KUS }
+			central_asia_region = { discover_country = KUS }
+		}
+		SCB = {
+			north_atlantic_region = { 
+				limit = {
+					AND = {
+						NOT = { area = north_atlantic_area }
+						NOT = { area = denmark_strait_area }
+						NOT = { area = white_sea_area }
+					}
+				}
+				discover_country = SCB
+			}
+			baltic_sea_region = { discover_country = SCB }
+			europe = {
+				limit = {
+					AND = {
+						NOT = { region = iberia_region }
+						NOT = { region = ural_region }
+						NOT = { region = caucasia_region }
+					}
+				}
+				discover_country = SCB
+			}
+		}
+	}
+}
+
+# Development of Cartography - Modern
+country_event = {
+	id = eh_geography.3
+	title = "eh_geography.3.t"
+	desc = "eh_geography.3.d"
+	picture = EXPLORERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ai = yes
+		is_year = 1870
+		NOT = { has_country_flag = development_of_cartography }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_geography.3.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			set_country_flag = development_of_cartography
+			every_province = { discover_country = ROOT }
+			west_american_sea_superregion = { discover_country = ROOT }
+			east_american_sea_superregion = { discover_country = ROOT }
+			north_european_sea_superregion = { discover_country = ROOT }
+			south_european_sea_superregion = { discover_country = ROOT }
+			west_african_sea_superregion = { discover_country = ROOT }
+			east_african_sea_superregion = { discover_country = ROOT }
+			indian_pacific_sea_superregion = { discover_country = ROOT }
+			north_pacific_sea_superregion = { discover_country = ROOT }
+		}
+	}
+}
+
+# Destruction of Colonies
+province_event = {
+	id = eh_geography.4
+	title = "eh_geography.4.t"
+	desc = "eh_geography.4.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	trigger = {
+		is_year = 2
+		NOT = { is_year = 2000 }
+		is_colony = yes
+		colonysize = 10
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "eh_geography.4.a"
+		ai_chance = { factor = 100 }
+		add_colonysize = -1000
+	}
+}
+
+# Remove Core and Claim
+country_event = {
+	id = eh_geography.5
+	title = "eh_geography.5.t"
+	desc = "eh_geography.5.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	trigger = {
+		ROOT = { ai = yes }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	option = {
+		name = "eh_geography.5.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			every_province = {
+				limit = {
+					OR = {
+						AND = {
+							is_core = ROOT
+							NOT = { owned_by = ROOT }
+						}
+						AND = {
+							is_claim = ROOT
+							NOT = { owned_by = ROOT }
+						}
+					}
+				}
+				remove_core = ROOT
+				remove_claim = ROOT
+			}
+		}
+	}
+}
+
+# Compensation for Independence
+country_event = {
+	id = eh_geography.6
+	title = "eh_geography.6.t"
+	desc = "eh_geography.6.d"
+	picture = ECONOMY_eventPicture
+
+	trigger = {
+		ROOT = { 
+			ai = yes
+			NOT = { has_country_flag = eh_compensation }
+		}
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_geography.6.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			set_country_flag = eh_compensation
+			add_treasury = 1000
+			add_manpower = 10
+		}
+	}
+}
+
+# Surpress rebels
+country_event = {
+	id = eh_geography.7
+	title = "eh_geography.7.t"
+	desc = "eh_geography.7.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	trigger = {
+		ROOT = {
+			ai = yes
+			OR = {
+				has_spawned_rebels = nationalist_rebels
+				has_spawned_rebels = independence_rebels
+			}
+			NOT = {
+				OR = {
+					has_country_flag = uprising_eh
+					has_country_flag = lulin_campaign
+					has_country_flag = anshi_rebellion
+					has_country_flag = huang_chao_rebellion
+					has_country_flag = red_turban
+					has_country_flag = li_zicheng_rebellion
+					has_country_flag = taiping_rebellion
+					has_country_flag = xinhai_revolution
+					has_country_flag = wokou
+					has_country_flag = imjin_war
+					has_country_flag = sepoy_rebellion
+				}
+			}
+		}
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_geography.7.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			add_adm_power = -50
+			every_owned_province = {
+				limit = { controlled_by = REB }
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+				add_unrest = -0.5
+				add_core = ROOT
+				change_controller = ROOT
+				kill_units = {
+					who = REB
+					type = infantry
+				}
+				kill_units = {
+					who = REB
+					type = cavalry
+				}
+				kill_units = {
+					who = REB
+					type = artillery
+				}
+			}
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.8
+	title = "eh_geography.8.t"
+	desc = "eh_geography.8.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			AND = {
+				development = 8
+				NOT = { development = 24 }
+				OR = {
+					base_tax = 5
+					base_production = 5
+					base_manpower = 5
+				}
+			}
+			NOT = { area = north_henan_area }
+			NOT = { area = henan_area }
+			NOT = { area = hebei_area }
+			NOT = { area = south_hebei_area }
+			NOT = { area = west_shandong_area }
+			NOT = { area = huguang_area }
+			NOT = { area = south_jiangsu_area }
+			NOT = { area = zhejiang_area }
+			NOT = { area = guangzhou_area }
+			NOT = { area = holland_area }
+			NOT = { province_id = 1 }
+			NOT = { province_id = 12 }
+			NOT = { province_id = 38 }
+			NOT = { province_id = 43 }
+			NOT = { province_id = 44 }
+			NOT = { province_id = 50 }
+			NOT = { province_id = 65 }
+			NOT = { province_id = 81 }
+			NOT = { province_id = 85 }
+			NOT = { province_id = 101 }
+			NOT = { province_id = 104 }
+			NOT = { province_id = 112 }
+			NOT = { province_id = 116 }
+			NOT = { province_id = 118 }
+			NOT = { province_id = 121 }
+			NOT = { province_id = 125 }
+			NOT = { province_id = 134 }
+			NOT = { province_id = 146 }
+			NOT = { province_id = 149 }
+			NOT = { province_id = 151 }
+			NOT = { province_id = 174 }
+			NOT = { province_id = 183 }
+			NOT = { province_id = 186 }
+			NOT = { province_id = 201 }
+			NOT = { province_id = 213 }
+			NOT = { province_id = 217 }
+			NOT = { province_id = 227 }
+			NOT = { province_id = 236 }
+			NOT = { province_id = 257 }
+			NOT = { province_id = 266 }
+			NOT = { province_id = 295 }
+			NOT = { province_id = 1876 }
+			NOT = { province_id = 316 }
+			NOT = { province_id = 341 }
+			NOT = { province_id = 358 }
+			NOT = { province_id = 361 }
+			NOT = { province_id = 379 }
+			NOT = { province_id = 382 }
+			NOT = { province_id = 385 }
+			NOT = { province_id = 410 }
+			NOT = { province_id = 429 }
+			NOT = { province_id = 454 }
+			NOT = { province_id = 507 }
+			NOT = { province_id = 522 }
+			NOT = { province_id = 524 }
+			NOT = { province_id = 529 }
+			NOT = { province_id = 544 }
+			NOT = { province_id = 545 }
+			NOT = { province_id = 558 }
+			NOT = { province_id = 665 }
+			NOT = { province_id = 669 }
+			NOT = { province_id = 671 }
+			NOT = { province_id = 679 }
+			NOT = { province_id = 680 }
+			NOT = { province_id = 683 }
+			NOT = { province_id = 690 }
+			NOT = { province_id = 700 }
+			NOT = { province_id = 726 }
+			NOT = { province_id = 1838 }
+			NOT = { province_id = 2157 }
+			NOT = { province_id = 735 }
+			NOT = { province_id = 736 }
+			NOT = { province_id = 737 }
+			NOT = { province_id = 1013 }
+			NOT = { province_id = 1845 }
+			NOT = { province_id = 2745 }
+			NOT = { province_id = 4227 }
+			NOT = { province_id = 4230 }
+			NOT = { province_id = 4231 }
+			NOT = { province_id = 1019 }
+			NOT = { province_id = 1020 }
+			NOT = { province_id = 1021 }
+			NOT = { province_id = 1028 }
+			NOT = { province_id = 1030 }
+			NOT = { province_id = 1818 }
+			NOT = { province_id = 1825 }
+			NOT = { province_id = 1832 }
+			NOT = { province_id = 4189 }
+			NOT = { province_id = 4360 }
+			NOT = { province_id = 596 }
+			NOT = { province_id = 613 }
+			NOT = { province_id = 4831 }
+			NOT = { province_id = 852 }
+		}
+		is_year = 2
+		NOT = { is_year = 1700 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						has_terrain = artic
+						has_terrain = desert
+						has_terrain = drylands
+						has_terrain = forest
+						has_terrain = grasslands
+						has_terrain = glacier
+						has_terrain = marsh
+						has_terrain = mountain
+						has_terrain = hills
+						has_terrain = highlands
+						has_terrain = jungle
+						has_terrain = savannah
+						has_terrain = steppe
+						province_id = 20
+						province_id = 1029
+						province_id = 1808
+						province_id = 2071
+						province_id = 2743
+						province_id = 3054
+						province_id = 4055
+						province_id = 4719
+					}
+				}
+				add_province_modifier = {
+					name = eh_city_developments_2
+					duration = 650000
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_geography.8.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					AND = {
+						development = 8
+						NOT = { development = 24 }
+						OR = {
+							base_tax = 5
+							base_production = 5
+							base_manpower = 5
+						}
+					}
+					OR = {
+						NOT = { area = north_henan_area }
+						NOT = { area = henan_area }
+						NOT = { area = hebei_area }
+						NOT = { area = south_hebei_area }
+						NOT = { area = west_shandong_area }
+						NOT = { area = huguang_area }
+						NOT = { area = south_jiangsu_area }
+						NOT = { area = zhejiang_area }
+						NOT = { area = guangzhou_area }
+						NOT = { area = holland_area }
+						NOT = { province_id = 1 }
+						NOT = { province_id = 12 }
+						NOT = { province_id = 38 }
+						NOT = { province_id = 43 }
+						NOT = { province_id = 44 }
+						NOT = { province_id = 50 }
+						NOT = { province_id = 65 }
+						NOT = { province_id = 81 }
+						NOT = { province_id = 85 }
+						NOT = { province_id = 101 }
+						NOT = { province_id = 104 }
+						NOT = { province_id = 112 }
+						NOT = { province_id = 116 }
+						NOT = { province_id = 118 }
+						NOT = { province_id = 121 }
+						NOT = { province_id = 125 }
+						NOT = { province_id = 134 }
+						NOT = { province_id = 146 }
+						NOT = { province_id = 149 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 174 }
+						NOT = { province_id = 183 }
+						NOT = { province_id = 186 }
+						NOT = { province_id = 201 }
+						NOT = { province_id = 213 }
+						NOT = { province_id = 217 }
+						NOT = { province_id = 227 }
+						NOT = { province_id = 236 }
+						NOT = { province_id = 257 }
+						NOT = { province_id = 266 }
+						NOT = { province_id = 295 }
+						NOT = { province_id = 1876 }
+						NOT = { province_id = 316 }
+						NOT = { province_id = 341 }
+						NOT = { province_id = 358 }
+						NOT = { province_id = 361 }
+						NOT = { province_id = 379 }
+						NOT = { province_id = 382 }
+						NOT = { province_id = 385 }
+						NOT = { province_id = 410 }
+						NOT = { province_id = 429 }
+						NOT = { province_id = 454 }
+						NOT = { province_id = 507 }
+						NOT = { province_id = 522 }
+						NOT = { province_id = 524 }
+						NOT = { province_id = 529 }
+						NOT = { province_id = 544 }
+						NOT = { province_id = 545 }
+						NOT = { province_id = 558 }
+						NOT = { province_id = 665 }
+						NOT = { province_id = 669 }
+						NOT = { province_id = 671 }
+						NOT = { province_id = 679 }
+						NOT = { province_id = 680 }
+						NOT = { province_id = 683 }
+						NOT = { province_id = 690 }
+						NOT = { province_id = 700 }
+						NOT = { province_id = 726 }
+						NOT = { province_id = 1838 }
+						NOT = { province_id = 2157 }
+						NOT = { province_id = 735 }
+						NOT = { province_id = 736 }
+						NOT = { province_id = 737 }
+						NOT = { province_id = 1013 }
+						NOT = { province_id = 1845 }
+						NOT = { province_id = 2745 }
+						NOT = { province_id = 4227 }
+						NOT = { province_id = 4230 }
+						NOT = { province_id = 4231 }
+						NOT = { province_id = 1019 }
+						NOT = { province_id = 1020 }
+						NOT = { province_id = 1021 }
+						NOT = { province_id = 1028 }
+						NOT = { province_id = 1030 }
+						NOT = { province_id = 1818 }
+						NOT = { province_id = 1825 }
+						NOT = { province_id = 1832 }
+						NOT = { province_id = 4189 }
+						NOT = { province_id = 4360 }
+						NOT = { province_id = 596 }
+						NOT = { province_id = 613 }
+						NOT = { province_id = 4831 }
+						NOT = { province_id = 852 }
+					}
+				}
+			}
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -5
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.9
+	title = "eh_geography.9.t"
+	desc = "eh_geography.9.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			development = 24
+			NOT = { development = 40 }
+			NOT = { area = south_jiangsu_area }
+			NOT = { province_id = 97 }
+			NOT = { province_id = 104 }
+			NOT = { province_id = 118 }
+			NOT = { province_id = 121 }
+			NOT = { province_id = 134 }
+			NOT = { province_id = 151 }
+			NOT = { province_id = 183 }
+			NOT = { province_id = 236 }
+			NOT = { province_id = 410 }
+			NOT = { province_id = 522 }
+			NOT = { province_id = 684 }
+			NOT = { province_id = 688 }
+			NOT = { province_id = 700 }
+			NOT = { province_id = 1816 }
+			NOT = { province_id = 1836 }
+			NOT = { province_id = 1021 }
+		}
+		is_year = 2
+		NOT = { is_year = 1700 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_geography.9.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					development = 21
+					NOT = { development = 40 }
+					OR = {
+						NOT = { area = south_jiangsu_area }
+						NOT = { province_id = 97 }
+						NOT = { province_id = 104 }
+						NOT = { province_id = 118 }
+						NOT = { province_id = 121 }
+						NOT = { province_id = 134 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 183 }
+						NOT = { province_id = 236 }
+						NOT = { province_id = 410 }
+						NOT = { province_id = 522 }
+						NOT = { province_id = 684 }
+						NOT = { province_id = 688 }
+						NOT = { province_id = 700 }
+						NOT = { province_id = 1816 }
+						NOT = { province_id = 1836 }
+						NOT = { province_id = 1021 }
+					}
+				}
+			}
+			add_base_tax = -8
+			add_base_production = -8
+			add_base_manpower = -8
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.10
+	title = "eh_geography.10.t"
+	desc = "eh_geography.10.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		development = 41
+		is_year = 2
+		NOT = { is_year = 1700 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_geography.10.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { development = 41 }
+			add_base_tax = -10
+			add_base_production = -10
+			add_base_manpower = -10
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.11
+	title = "eh_geography.11.t"
+	desc = "eh_geography.11.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			AND = {
+				development = 20
+				NOT = { development = 44 }
+				OR = {
+					base_tax = 9
+					base_production = 9
+					base_manpower = 9
+				}
+			}
+			NOT = { region = british_isles_region }
+			NOT = { province_id = 50 }
+			NOT = { province_id = 65 }
+			NOT = { province_id = 85 }
+			NOT = { province_id = 97 }
+			NOT = { province_id = 104 }
+			NOT = { province_id = 118 }
+			NOT = { province_id = 121 }
+			NOT = { province_id = 134 }
+			NOT = { province_id = 151 }
+			NOT = { province_id = 183 }
+			NOT = { province_id = 295 }
+			NOT = { province_id = 361 }
+			NOT = { province_id = 522 }
+			NOT = { province_id = 630 }
+			NOT = { province_id = 667 }
+			NOT = { province_id = 1816 }
+			NOT = { province_id = 1822 }
+			NOT = { province_id = 1020 }
+			NOT = { province_id = 1021 }
+			NOT = { province_id = 1028 }
+			NOT = { province_id = 763 }
+			NOT = { province_id = 852 }
+			NOT = { province_id = 868 }
+			NOT = { province_id = 4903 }
+			NOT = { province_id = 944 }
+			NOT = { province_id = 953 }
+			NOT = { province_id = 956 }
+			NOT = { province_id = 965 }
+			NOT = { province_id = 968 }
+			NOT = { province_id = 4637 }
+		}
+		is_year = 1700
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						has_terrain = artic
+						has_terrain = desert
+						has_terrain = drylands
+						has_terrain = forest
+						has_terrain = grasslands
+						has_terrain = glacier
+						has_terrain = marsh
+						has_terrain = mountain
+						has_terrain = hills
+						has_terrain = highlands
+						has_terrain = jungle
+						has_terrain = savannah
+						has_terrain = steppe
+						province_id = 20
+						province_id = 1029
+						province_id = 1808
+						province_id = 2071
+						province_id = 2743
+						province_id = 3054
+						province_id = 4055
+						province_id = 4719
+					}
+				}
+				add_province_modifier = {
+					name = eh_city_developments_1700
+					duration = 75000
+				}
+				remove_province_modifier = eh_city_developments_2
+			}
+		}
+	}
+
+	option = {
+		name = "eh_geography.11.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					AND = {
+						development = 20
+						NOT = { development = 44 }
+						OR = {
+							base_tax = 9
+							base_production = 9
+							base_manpower = 9
+						}
+					}
+					OR = {
+						NOT = { region = british_isles_region }
+						NOT = { province_id = 50 }
+						NOT = { province_id = 65 }
+						NOT = { province_id = 85 }
+						NOT = { province_id = 97 }
+						NOT = { province_id = 104 }
+						NOT = { province_id = 118 }
+						NOT = { province_id = 121 }
+						NOT = { province_id = 134 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 183 }
+						NOT = { province_id = 295 }
+						NOT = { province_id = 361 }
+						NOT = { province_id = 522 }
+						NOT = { province_id = 630 }
+						NOT = { province_id = 667 }
+						NOT = { province_id = 1816 }
+						NOT = { province_id = 1822 }
+						NOT = { province_id = 1020 }
+						NOT = { province_id = 1021 }
+						NOT = { province_id = 1028 }
+						NOT = { province_id = 763 }
+						NOT = { province_id = 852 }
+						NOT = { province_id = 868 }
+						NOT = { province_id = 4903 }
+						NOT = { province_id = 944 }
+						NOT = { province_id = 953 }
+						NOT = { province_id = 956 }
+						NOT = { province_id = 965 }
+						NOT = { province_id = 968 }
+						NOT = { province_id = 4637 }
+					}
+				}
+			}
+			add_base_tax = -10
+			add_base_production = -10
+			add_base_manpower = -10
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.12
+	title = "eh_geography.12.t"
+	desc = "eh_geography.12.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			development = 51
+			OR = {
+				NOT = { province_id = 33 }
+				NOT = { province_id = 50 }
+				NOT = { province_id = 97 }
+				NOT = { province_id = 121 }
+				NOT = { province_id = 134 }
+				NOT = { province_id = 151 }
+				NOT = { province_id = 183 }
+				NOT = { province_id = 236 }
+				NOT = { province_id = 295 }
+				NOT = { province_id = 361 }
+				NOT = { province_id = 522 }
+				NOT = { province_id = 529 }
+				NOT = { province_id = 561 }
+				NOT = { province_id = 667 }
+				NOT = { province_id = 956 }
+				NOT = { province_id = 965 }
+				NOT = { province_id = 968 }
+				NOT = { province_id = 1020 }
+				NOT = { province_id = 1021 }
+				NOT = { province_id = 1028 }
+				NOT = { province_id = 1816 }
+				NOT = { province_id = 1821 }
+				NOT = { province_id = 1822 }
+				NOT = { province_id = 4372 }
+				NOT = { province_id = 4375 }
+				NOT = { province_id = 4903 }
+			}
+		}
+		is_year = 1700
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_geography.12.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					development = 51
+					OR = {
+						NOT = { province_id = 33 }
+						NOT = { province_id = 50 }
+						NOT = { province_id = 97 }
+						NOT = { province_id = 121 }
+						NOT = { province_id = 134 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 183 }
+						NOT = { province_id = 236 }
+						NOT = { province_id = 295 }
+						NOT = { province_id = 361 }
+						NOT = { province_id = 522 }
+						NOT = { province_id = 529 }
+						NOT = { province_id = 561 }
+						NOT = { province_id = 667 }
+						NOT = { province_id = 956 }
+						NOT = { province_id = 965 }
+						NOT = { province_id = 968 }
+						NOT = { province_id = 1020 }
+						NOT = { province_id = 1021 }
+						NOT = { province_id = 1028 }
+						NOT = { province_id = 1816 }
+						NOT = { province_id = 1821 }
+						NOT = { province_id = 1822 }
+						NOT = { province_id = 4372 }
+						NOT = { province_id = 4375 }
+						NOT = { province_id = 4903 }
+					}
+				}
+			}
+			add_base_tax = -15
+			add_base_production = -15
+			add_base_manpower = -15
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.13
+	title = "eh_geography.13.t"
+	desc = "eh_geography.13.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			AND = {
+				development = 20
+				NOT = { development = 74 }
+				OR = {
+					base_tax = 16
+					base_production = 16
+					base_manpower = 16
+				}
+			}
+			NOT = { region = northeast_america_region }
+			NOT = { region = british_isles_region }
+			NOT = { region = low_countries_region }
+			NOT = { region = north_german_region }
+			NOT = { region = south_german_region }
+			NOT = { region = france_region }
+			NOT = { region = italy_region }
+			NOT = { region = japan_region }
+			NOT = { area = ostra_svealand_area }
+			NOT = { area = eastern_norway }
+			NOT = { area = denmark_area }
+			NOT = { area = finland_area }
+			NOT = { area = california_area }
+			NOT = { area = upper_canada_area }
+			NOT = { area = lower_canada_area }
+			NOT = { area = bahrain_area }
+			NOT = { area = pirate_coast_area }
+			NOT = { province_id = 146 }
+			NOT = { province_id = 151 }
+			NOT = { province_id = 257 }
+			NOT = { province_id = 295 }
+			NOT = { province_id = 522 }
+			NOT = { province_id = 504 }
+			NOT = { province_id = 564 }
+			NOT = { province_id = 667 }
+			NOT = { province_id = 778 }
+			NOT = { province_id = 944 }
+			NOT = { province_id = 953 }
+			NOT = { province_id = 973 }
+			NOT = { province_id = 1090 }
+			NOT = { province_id = 1177 }
+			NOT = { province_id = 1822 }
+			NOT = { province_id = 2154 }
+			NOT = { province_id = 3005 }
+			NOT = { province_id = 4815 }
+			NOT = { province_id = 4903 }
+		}
+		is_year = 1900
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						has_terrain = artic
+						has_terrain = desert
+						has_terrain = drylands
+						has_terrain = forest
+						has_terrain = grasslands
+						has_terrain = glacier
+						has_terrain = marsh
+						has_terrain = mountain
+						has_terrain = hills
+						has_terrain = highlands
+						has_terrain = jungle
+						has_terrain = savannah
+						has_terrain = steppe
+						province_id = 20
+						province_id = 1029
+						province_id = 1808
+						province_id = 2071
+						province_id = 2743
+						province_id = 3054
+						province_id = 4055
+						province_id = 4719
+					}
+				}
+				add_province_modifier = {
+					name = eh_city_developments_1900
+					duration = 30000
+				}
+				remove_province_modifier = eh_city_developments_1700
+			}
+		}
+	}
+
+	option = {
+		name = "eh_geography.13.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					AND = {
+						development = 20
+						NOT = { development = 74 }
+						OR = {
+							base_tax = 16
+							base_production = 16
+							base_manpower = 16
+						}
+					}
+					OR = {
+						NOT = { region = northeast_america_region }
+						NOT = { region = british_isles_region }
+						NOT = { region = low_countries_region }
+						NOT = { region = north_german_region }
+						NOT = { region = south_german_region }
+						NOT = { region = france_region }
+						NOT = { region = italy_region }
+						NOT = { region = japan_region }
+						NOT = { area = ostra_svealand_area }
+						NOT = { area = eastern_norway }
+						NOT = { area = denmark_area }
+						NOT = { area = finland_area }
+						NOT = { area = california_area }
+						NOT = { area = upper_canada_area }
+						NOT = { area = lower_canada_area }
+						NOT = { area = bahrain_area }
+						NOT = { area = pirate_coast_area }
+						NOT = { province_id = 146 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 257 }
+						NOT = { province_id = 295 }
+						NOT = { province_id = 522 }
+						NOT = { province_id = 504 }
+						NOT = { province_id = 564 }
+						NOT = { province_id = 667 }
+						NOT = { province_id = 778 }
+						NOT = { province_id = 944 }
+						NOT = { province_id = 953 }
+						NOT = { province_id = 973 }
+						NOT = { province_id = 1090 }
+						NOT = { province_id = 1177 }
+						NOT = { province_id = 1822 }
+						NOT = { province_id = 2154 }
+						NOT = { province_id = 3005 }
+						NOT = { province_id = 4815 }
+						NOT = { province_id = 4903 }
+					}
+				}
+			}
+			add_base_tax = -15
+			add_base_production = -15
+			add_base_manpower = -15
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.14
+	title = "eh_geography.14.t"
+	desc = "eh_geography.14.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			development = 81
+			OR = {
+				NOT = { province_id = 50 }
+				NOT = { province_id = 85 }
+				NOT = { province_id = 183 }
+				NOT = { province_id = 236 }
+				NOT = { province_id = 295 }
+				NOT = { province_id = 868 }
+				NOT = { province_id = 886 }
+				NOT = { province_id = 888 }
+				NOT = { province_id = 953 }
+				NOT = { province_id = 965 }
+				NOT = { province_id = 968 }
+				NOT = { province_id = 1020 }
+				NOT = { province_id = 1028 }
+				NOT = { province_id = 4637 }
+				NOT = { province_id = 4903 }
+				
+			}
+		}
+		is_year = 1900
+		NOT = { is_year = 1980 }
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_geography.14.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					development = 81
+					OR = {
+						NOT = { province_id = 50 }
+						NOT = { province_id = 85 }
+						NOT = { province_id = 183 }
+						NOT = { province_id = 236 }
+						NOT = { province_id = 295 }
+						NOT = { province_id = 868 }
+						NOT = { province_id = 886 }
+						NOT = { province_id = 888 }
+						NOT = { province_id = 953 }
+						NOT = { province_id = 965 }
+						NOT = { province_id = 968 }
+						NOT = { province_id = 1020 }
+						NOT = { province_id = 1028 }
+						NOT = { province_id = 4637 }
+						NOT = { province_id = 4903 }
+						
+					}
+				}
+			}
+			add_base_tax = -20
+			add_base_production = -20
+			add_base_manpower = -20
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.15
+	title = "eh_geography.15.t"
+	desc = "eh_geography.15.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			AND = {
+				development = 20
+				NOT = { development = 94 }
+				OR = {
+					base_tax = 20
+					base_production = 20
+					base_manpower = 20
+				}
+			}
+			NOT = { region = british_isles_region }
+			NOT = { region = france_region }
+			NOT = { region = north_german_region }
+			NOT = { region = south_german_region }
+			NOT = { region = italy_region }
+			NOT = { region = iberia_region }
+			NOT = { region = low_countries_region }
+			NOT = { region = russia_region }
+			NOT = { area = svealand_area }
+			NOT = { area = gotaland_area }
+			NOT = { area = skaneland_area }
+			NOT = { area = denmark_area }
+			NOT = { area = jutland_area }
+			NOT = { area = eastern_norway }
+			NOT = { area = western_norway }
+			NOT = { area = finland_area }
+			NOT = { area = iceland_area }
+			NOT = { superregion = north_america_superregion }
+			NOT = { region = california_region }
+			NOT = { region = rio_grande_region }
+			NOT = { area = mexico_area }
+			NOT = { region = brazil_region }
+			NOT = { superregion = china_superregion }
+			NOT = { superregion = far_east_superregion }
+			NOT = { area = central_java_area }
+			NOT = { region = australia_region }
+			NOT = { area = te_ika_a_maui_waho_area }
+			NOT = { area = upper_doab_area }
+			NOT = { area = tapti_area }
+			NOT = { area = thrace_area }
+			NOT = { area = bahrain_area }
+			NOT = { area = pirate_coast_area }
+			NOT = { area = palatinate_area }
+			NOT = { province_id = 4815 }
+			NOT = { province_id = 146 }
+			NOT = { province_id = 151 }
+			NOT = { province_id = 257 }
+			NOT = { province_id = 361 }
+			NOT = { province_id = 519 }
+			NOT = { province_id = 529 }
+			NOT = { province_id = 540 }
+			NOT = { province_id = 542 }
+			NOT = { province_id = 561 }
+			NOT = { province_id = 504 }
+			NOT = { province_id = 564 }
+			NOT = { province_id = 778 }
+			NOT = { province_id = 1177 }
+			NOT = { province_id = 2031 }
+			NOT = { province_id = 2034 }
+			NOT = { province_id = 2054 }
+		}
+		is_year = 1980
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						has_terrain = artic
+						has_terrain = desert
+						has_terrain = drylands
+						has_terrain = forest
+						has_terrain = grasslands
+						has_terrain = glacier
+						has_terrain = marsh
+						has_terrain = mountain
+						has_terrain = highlands
+						has_terrain = jungle
+						has_terrain = savannah
+						has_terrain = steppe
+						province_id = 20
+						province_id = 1029
+						province_id = 1808
+						province_id = 2071
+						province_id = 2743
+						province_id = 3054
+						province_id = 4055
+						province_id = 4719
+					}
+				}
+				add_province_modifier = {
+					name = eh_city_developments_1980
+					duration = 20000
+				}
+				remove_province_modifier = eh_city_developments_1900
+			}
+		}
+	}
+
+	option = {
+		name = "eh_geography.15.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					AND = {
+						development = 20
+						NOT = { development = 94 }
+						OR = {
+							base_tax = 25
+							base_production = 25
+							base_manpower = 25
+						}
+					}
+					OR = {
+						NOT = { region = british_isles_region }
+						NOT = { region = france_region }
+						NOT = { region = north_german_region }
+						NOT = { region = south_german_region }
+						NOT = { region = italy_region }
+						NOT = { region = iberia_region }
+						NOT = { region = low_countries_region }
+						NOT = { region = russia_region }
+						NOT = { area = svealand_area }
+						NOT = { area = gotaland_area }
+						NOT = { area = skaneland_area }
+						NOT = { area = denmark_area }
+						NOT = { area = jutland_area }
+						NOT = { area = eastern_norway }
+						NOT = { area = western_norway }
+						NOT = { area = finland_area }
+						NOT = { area = iceland_area }
+						NOT = { superregion = north_america_superregion }
+						NOT = { region = california_region }
+						NOT = { region = rio_grande_region }
+						NOT = { area = mexico_area }
+						NOT = { region = brazil_region }
+						NOT = { superregion = china_superregion }
+						NOT = { superregion = far_east_superregion }
+						NOT = { area = central_java_area }
+						NOT = { region = australia_region }
+						NOT = { area = te_ika_a_maui_waho_area }
+						NOT = { area = upper_doab_area }
+						NOT = { area = tapti_area }
+						NOT = { area = thrace_area }
+						NOT = { area = bahrain_area }
+						NOT = { area = pirate_coast_area }
+						NOT = { area = palatinate_area }
+						NOT = { province_id = 4815 }
+						NOT = { province_id = 146 }
+						NOT = { province_id = 151 }
+						NOT = { province_id = 257 }
+						NOT = { province_id = 361 }
+						NOT = { province_id = 519 }
+						NOT = { province_id = 529 }
+						NOT = { province_id = 540 }
+						NOT = { province_id = 542 }
+						NOT = { province_id = 561 }
+						NOT = { province_id = 504 }
+						NOT = { province_id = 564 }
+						NOT = { province_id = 778 }
+						NOT = { province_id = 1177 }
+						NOT = { province_id = 2031 }
+						NOT = { province_id = 2034 }
+						NOT = { province_id = 2054 }
+					}
+				}
+			}
+			add_base_tax = -25
+			add_base_production = -25
+			add_base_manpower = -25
+		}
+	}
+}
+
+# City developments
+province_event = {
+	id = eh_geography.16
+	title = "eh_geography.16.t"
+	desc = "eh_geography.16.d"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	trigger = {
+		owner = { ai = yes }
+		AND = {
+			development = 151
+			OR = {
+				NOT = { province_id = 50 }
+				NOT = { province_id = 85 }
+				NOT = { province_id = 183 }
+				NOT = { province_id = 236 }
+				NOT = { province_id = 295 }
+				NOT = { province_id = 667 }
+				NOT = { province_id = 735 }
+				NOT = { province_id = 868 }
+				NOT = { province_id = 886 }
+				NOT = { province_id = 888 }
+				NOT = { province_id = 953 }
+				NOT = { province_id = 965 }
+				NOT = { province_id = 968 }
+				NOT = { province_id = 1020 }
+				NOT = { province_id = 1028 }
+				NOT = { province_id = 1816 }
+				NOT = { province_id = 1822 }
+				NOT = { province_id = 4637 }
+				NOT = { province_id = 4903 }
+			}
+		}
+		is_year = 1980
+		has_global_flag = eh_historic
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "eh_geography.16.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AND = {
+					development = 151
+					OR = {
+						NOT = { province_id = 50 }
+						NOT = { province_id = 85 }
+						NOT = { province_id = 183 }
+						NOT = { province_id = 236 }
+						NOT = { province_id = 295 }
+						NOT = { province_id = 667 }
+						NOT = { province_id = 735 }
+						NOT = { province_id = 868 }
+						NOT = { province_id = 886 }
+						NOT = { province_id = 888 }
+						NOT = { province_id = 953 }
+						NOT = { province_id = 965 }
+						NOT = { province_id = 968 }
+						NOT = { province_id = 1020 }
+						NOT = { province_id = 1028 }
+						NOT = { province_id = 1816 }
+						NOT = { province_id = 1822 }
+						NOT = { province_id = 4637 }
+						NOT = { province_id = 4903 }
+					}
+				}
+			}
+			add_base_tax = -35
+			add_base_production = -35
+			add_base_manpower = -35
+		}
+	}
+}
+
+# EH version

@@ -1,0 +1,152 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 1
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+capital = 2171
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# End of the Eastern Han dynasty (Jing)
+
+189.9.28 = {
+	monarch = {
+		name = "Biao"
+		dynasty = "Liu"
+		birth_date = 142.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+	
+200.1.1 = {
+	queen = {
+		country_of_origin = JNG
+		dynasty = "Cai"
+		birth_date = 160.1.1
+		death_date = 220.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+208.8.1 = {
+	monarch = {
+		name = "Cong"
+		dynasty = "Liu"
+		birth_date = 190.1.1
+		adm = 0
+		dip = 3
+		mil = 1
+	}
+	queen = {
+		country_of_origin = JNG
+		dynasty = "Cai"
+		birth_date = 190.1.1
+		death_date = 260.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+208.11.1 = {
+	capital = 2172
+	monarch = {
+		name = "Qi"
+		dynasty = "Liu"
+		birth_date = 170.1.1
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+}
+
+209.1.1 = {
+	monarch = {
+		name = "Bei" #Zhaolie
+		dynasty = "Liu"
+		birth_date = 161.1.1
+		adm = 4
+		dip = 3
+		mil = 3
+		leader = {	name = "Liu Bei"     	type = general	fire = 2	shock = 2	manuever = 1	siege = 0  death_date = 223.6.10 }
+	}
+	queen = {
+		country_of_origin = WUU
+		name = "Shangxiang"
+		dynasty = "Sun"
+		birth_date = 185.1.1
+		death_date = 222.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 6
+	}
+}
+
+209.1.1 = { leader = {	name = "Guan Yu"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 214.1.1 } }
+209.1.1 = { leader = {	name = "Zhang Fei"     	type = general	fire = 4	shock = 2	manuever = 0	siege = 0  death_date = 214.1.1 } }
+209.1.1 = { leader = {	name = "Zhao Yun"     	type = general	fire = 3	shock = 3	manuever = 3	siege = 0  death_date = 214.1.1 } }
+
+# Elevation to Shu Han
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# End of the Eastern Jin dynasty (Changsha)
+
+289.1.1 = {
+	government_rank = 2
+	capital = 671
+	monarch = {
+		name = "Ai" # Prince of Changsha
+		dynasty = "Sima"
+		birth_date = 277.1.1
+		adm = 0
+		dip = 0
+		mil = 2
+		leader = {	name = "Sima Ai"     	type = general	fire = 1	shock = 1	manuever = 1	siege = 0  death_date = 304.1.1 } # Not an actual death date
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+
+# End of the Tang dynasty (Wuzhen)
+
+896.1.1 = {
+	government_rank = 1
+	capital = 672
+	monarch = {
+		name = "(Wuzhen Circuit)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+902.1.1 = {
+	monarch = {
+		name = "Yangong"
+		dynasty = "Lei"
+		birth_date = 870.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

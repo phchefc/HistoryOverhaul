@@ -1,0 +1,79 @@
+# Northern China (Naming from Tang)
+686 = "Luzhou"
+2175 = "Chaizhou"
+688 = "Bianzhou"			#Kaifeng
+2139 = "Donglai"
+696 = "Fanyang"	   
+694 = "Hedong"
+2136 = "Shanggu"
+697 = "Dai"
+699 = "Longxi"
+700 = "Jingji"			#Xi'an
+701 = "Xiazhou"
+704 = "Yingzhou"
+707 = "Shazhou"
+708 = "Ganzhou"
+1816 = "Youzhou"
+687 = "Tangzhou"
+1838 = "Shuzhou"
+2182 = "Wuwei"
+2184 = "Xiping"
+2171 = "Xiangzhou"
+1836 = "Duji"
+2176 = "Songzhou"
+2144 = "Chenzhou"
+2143 = "Sizhou"
+2138 = "Cangzhou"
+2137 = "Wei"
+2178 = "Luzhou"
+693 = "Bingzhou"
+2181 = "Yuanzhou"
+702 = "Dingxiang"
+4194 = "Pingzhou"
+4195 = "Zhaozhou"
+
+# Southern China (Naming from Han)
+665 = "Duanzhou"					#Shiuhing
+667 = "Nanhai"
+669 = "Minzhong"
+670 = "Luling"
+672 = "Wuling"
+679 = "Shu"
+680 = "Ba"							#Chongqing	
+2172 = "Nan"							#Jiangling
+682 = "Jiangxia"
+684 = "Qiantang"
+1821 = "Jiankang"				#Nanjing				|incomplete
+1822 = "Wu"
+1840 = "Yulin"
+2161 = "Hepu"
+2158 = "Cangwu"
+2150 = "Xindu"
+2149 = "Kuaiji"
+2146 = "Danyang"
+2147 = "Linchuan"
+2174 = "Guiyang"
+2173 = "Lingling"
+2169 = "Guanghan"
+681 = "Guling"
+4197 = "Qichun"
+4211 = "Dangqu"				#Dazhou					|incomplete
+4213 = "Jianwei"
+
+#Korea
+733 = "Daifang"				#Hwangju
+1845 = "Lelang"				#Pyongan
+
+#Manchuria
+2109 = "Fuyu"
+726 = "Liaodong"
+3010 = "Beisha"
+4652 = "Anshi"
+2112 = "Anping"
+
+#Vietnam
+613 = "Jiaozhi"
+610 = "Jiuzhen"
+1016 = "Rinan"
+
+# EH version

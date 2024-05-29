@@ -1,0 +1,453 @@
+########################################################################
+# Form Asian Nations
+########################################################################
+
+country_decisions = {
+	
+	restore_han_dynasty_shu = {
+		major = yes
+		potential = {
+			tag = SHU
+			NOT = { exists = HND }
+			is_emperor_of_china = no
+			is_year = 190
+			NOT = { is_year = 280 }
+			NOT = { has_global_flag = eh_historic }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			num_of_cities = 30
+			owns_core_province = 679
+			owns_core_province = 700
+			owns_core_province = 1816
+			owns_core_province = 1836
+		}
+		effect = {
+			south_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = HND
+			}
+			xinan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = HND
+			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = HND
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_emperor_of_china = ROOT
+			add_government_reform = celestial_empire
+			set_capital = 1836 # Luoyang
+			change_tag = HND
+			add_prestige = 25
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	restore_han_dynasty = {
+		major = yes
+		potential = {
+			OR = {
+				tag = HJZ
+				tag = HLN
+				tag = LI2
+				tag = HQN
+				tag = HYA
+				tag = HYI
+				tag = JI0
+				tag = JNG
+				tag = XU0
+				tag = HNX
+			}
+			NOT = { exists = HND }
+			is_emperor_of_china = no
+			is_year = 190
+			NOT = { is_year = 280 }
+			NOT = { has_global_flag = eh_historic }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			num_of_cities = 30
+			owns_core_province = 667
+			owns_core_province = 679
+			owns_core_province = 700
+			owns_core_province = 1816
+			owns_core_province = 1821
+			owns_core_province = 1836
+		}
+		effect = {
+			set_emperor_of_china = ROOT
+			add_government_reform = celestial_empire
+			set_capital = 1836 # Luoyang
+			change_tag = HND
+			add_prestige = 25
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_china_nationalist = {
+		major = yes
+		potential = {
+			NOT = { exists = FRM }
+			NOT = { tag = CHN }
+			NOT = { tag = CNF }
+			NOT = { tag = MCK }
+			OR = {
+				primary_culture = chihan
+				primary_culture = chimin
+				primary_culture = cantonese
+				primary_culture = jin
+			}
+			is_year = 1925
+			NOT = { has_global_flag = eh_historic }
+		}
+		allow = {
+			adm_tech = 78
+			NOT = { government = monarchy }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 1816
+			owns_core_province = 1821
+			owns_core_province = 1822
+			owns_core_province = 667
+			owns_core_province = 700
+		}
+		effect = {
+			south_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = FRM
+			}
+			xinan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = FRM
+			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = FRM
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_capital = 1821 # Nanjing
+			add_prestige = 25
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_china_prc = {
+		major = yes
+		potential = {
+			NOT = { exists = CHN }
+			NOT = { tag = FRM }
+			NOT = { tag = CNF }
+			NOT = { tag = MCK }
+			OR = {
+				primary_culture = chihan
+				primary_culture = chimin
+				primary_culture = cantonese
+				primary_culture = jin
+			}
+			is_year = 1925
+			NOT = { has_global_flag = eh_historic }
+		}
+		allow = {
+			adm_tech = 78
+			NOT = { government = monarchy }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 1816
+			owns_core_province = 667
+			owns_core_province = 700
+		}
+		effect = {
+			south_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = CHN
+			}
+			xinan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = CHN
+			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_core = CHN
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_capital = 1816 # Beijing
+			add_prestige = 25
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	move_capital_to_beijing = {
+		major = yes
+		potential = {
+			OR = {
+				tag = LIO
+				tag = CJN
+				tag = YUA
+				tag = QNG
+				tag = MCK
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = move_capital_to_beijing }
+			stability = 3
+			1816 = { is_capital = no }
+		}
+		allow = {
+			is_subject = no
+			is_monarch_leader = yes
+			owns = 1816		# Beijing
+		}
+		effect = {
+			set_country_flag = move_capital_to_beijing
+			add_prestige = 10
+			1816 = {
+				move_capital_effect = yes
+				change_culture = ROOT
+				add_core = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	feudal_japanese_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = JP2 }
+			NOT = { tag = JAP }
+			culture_group = japanese_g
+			NOT = { has_reform = celestial_empire }
+			NOT = { has_reform = shogunate }
+			NOT = { has_reform = daimyo }
+			NOT = { has_reform = indep_daimyo }
+			NOT = { has_global_flag = eh_historic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1020
+				province_id = 1021
+				province_id = 1030
+				province_id = 1028
+				province_id = 1017
+				province_id = 1818
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			all_countries_including_self = { NOT = { has_reform = shogunate } }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 1020
+			owns_core_province = 1021
+			owns_core_province = 1030
+			owns_core_province = 1028
+			owns_core_province = 1017
+			owns_core_province = 1818
+		}
+		effect = {
+			set_country_flag = formed_japan_flag
+			japan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JP2
+			}
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_prestige = 25
+			change_tag = JP2
+			swap_non_generic_missions = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	united_korea_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = KOR }
+			OR = {
+				tag = NOK
+				tag = SKO
+			}
+			OR = {
+				AND = {
+					tag = NOK
+					NOT = { exists = SKO }
+				}
+				AND = {
+					tag = SKO
+					NOT = { exists = NOK }
+				}
+			}
+			primary_culture = korean
+			NOT = { has_global_flag = eh_historic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 735
+				province_id = 736
+				province_id = 737
+				province_id = 733
+				province_id = 1013
+				province_id = 1845
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 735
+			owns_core_province = 736
+			owns_core_province = 737
+			owns_core_province = 733
+			owns_core_province = 1013
+			owns_core_province = 1845
+		}
+		effect = {
+			country_event = { id = eh_asia_KOR.4 days = 1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}
+	
+########################################################################
+# Form Ancient Nations
+########################################################################
+
+country_decisions = {
+
+	macedonian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				NOT = { tag = ROM }
+				NOT = { tag = PES }
+				NOT = { tag = EGP }
+			}
+			NOT = { exists = A05 }
+			primary_culture = greek
+			NOT = { has_global_flag = eh_historic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 148
+				province_id = 151
+				province_id = 358
+				province_id = 409
+				province_id = 2077
+				province_id = 2218
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 148
+			owns_core_province = 151
+			owns_core_province = 358
+			owns_core_province = 409
+			owns_core_province = 2077
+			owns_core_province = 2218
+		}
+		effect = {
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_prestige = 25
+			change_tag = A05
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}
+
+# EH version

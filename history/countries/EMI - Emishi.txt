@@ -1,0 +1,64 @@
+government = tribal
+add_government_reform = tribal_despotism
+government_rank = 1
+primary_culture = emishi
+religion = animism
+technology_group = eastern_nomad_group
+capital = 1026
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+750.1.1 = {
+	monarch = {
+		name = "Aterui"
+		dynasty = "Emishi"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+802.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Republic of Ezo
+
+1869.1.27 = {
+	government = republic
+	add_government_reform = parliamentary_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = single_party_system
+	add_government_reform = democracy_reform
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = constitutional_republic
+	primary_culture = japanese
+	religion = shinto
+	capital = 1852
+	monarch = {
+		name = "Enomoto Takeaki"
+		birth_date = 1836.10.5
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+# EH version

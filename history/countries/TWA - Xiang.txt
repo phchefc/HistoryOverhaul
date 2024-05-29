@@ -1,0 +1,78 @@
+government = monarchy
+add_government_reform = chinese_warlord
+government_rank = 3
+technology_group = early_chinese
+religion = confucianism
+primary_culture = xiang
+capital = 682
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# End of the Yuan dynasty (Tianwan)
+
+1351.10.8 = {
+	monarch = {
+		name = "Shouhui"
+		dynasty = "Xu"
+		birth_date = 1320.2.28
+		death_date = 1360.5.3
+		adm = 1
+		dip = 1
+		mil = 4
+	}
+}
+
+# Hunan clique (Xiang clique)
+
+1916.6.7 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	add_government_reform = strengthen_executive_powers_reform
+	add_government_reform = dictatorial_rule
+	add_government_reform = military_government
+	add_government_reform = powerful_head_of_state
+	set_legacy_government = military_junta
+	government_rank = 1
+	primary_culture = jin
+	religion = secularism
+	technology_group = asian
+	capital = 693 # Taiyuan
+	monarch = {
+		name = "Tan Yankai"
+		birth_date = 1880.1.25
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1920.11.1 = {
+	monarch = {
+		name = "Zhao Hengti"
+		birth_date = 1880.1.12
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1926.3.1 = {
+	monarch = {
+		name = "Tang Shengzhi"
+		birth_date = 1889.10.12
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}

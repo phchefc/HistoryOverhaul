@@ -1,0 +1,396 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+capital = 4186 # Iyo
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1000.1.1 = {
+	set_country_flag = daimyo
+}
+
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1582.6.21 = {
+	monarch = {
+		name = "Takatora"
+		dynasty = "Todo"
+		birth_date = 1556.2.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = ISK
+		dynasty = "Isshiki"
+		birth_date = 1560.1.1
+		death_date = 1620.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1602.1.4 = {
+	heir = {
+		name = "Takatsugu"
+		monarch_name = "Takatsugu"
+		dynasty = "Todo"
+		birth_date = 1602.1.4
+		death_date = 1676.12.20
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1608.1.1 = { capital = 4359 } # Ise
+
+1630.11.9 = {
+	monarch = {
+		name = "Takatsugu"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		dynasty = "Sakai"
+		birth_date = 1605.1.1
+		death_date = 1665.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1638.3.11 = {
+	heir = {
+		name = "Takahisa"
+		monarch_name = "Takahisa"
+		dynasty = "Todo"
+		birth_date = 1638.3.11
+		death_date = 1703.6.13
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1669.1.1 = {
+	monarch = {
+		name = "Takahisa"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		name = "Kamehime"
+		dynasty = "Sakai"
+		birth_date = 1640.1.1
+		death_date = 1700.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Takachika"
+		monarch_name = "Takachika"
+		dynasty = "Todo"
+		birth_date = 1667.3.28
+		death_date = 1708.11.20
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1703.6.13 = {
+	monarch = {
+		name = "Takachika"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = OGS
+		name = "Oyoshi"
+		dynasty = "Ogasawara"
+		birth_date = 1670.1.1
+		death_date = 1730.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1708.11.20 = {
+	monarch = {
+		name = "Takatoshi"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		dynasty = "Nakagawa"
+		birth_date = 1700.1.1
+		death_date = 1760.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1710.9.12 = {
+	heir = {
+		name = "Takaharu"
+		monarch_name = "Takaharu"
+		dynasty = "Todo"
+		birth_date = 1710.9.12
+		death_date = 1735.9.18
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1728.5.21 = {
+	monarch = {
+		name = "Takaharu"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = SOO
+		dynasty = "So"
+		birth_date = 1710.1.1
+		death_date = 1770.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Takahora"
+		monarch_name = "Takahora"
+		dynasty = "Todo"
+		birth_date = 1717.11.30
+		death_date = 1785.5.15
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1735.9.18 = {
+	monarch = {
+		name = "Takahora"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = AKT
+		dynasty = "Ando"
+		birth_date = 1720.1.1
+		death_date = 1780.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1751.6.30 = {
+	heir = {
+		name = "Takanaga"
+		monarch_name = "Takanaga"
+		dynasty = "Todo"
+		birth_date = 1751.6.30
+		death_date = 1770.7.24
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1769.2.9 = {
+	monarch = {
+		name = "Takanaga"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1769.2.9 = {
+	heir = {
+		name = "Takasato"
+		monarch_name = "Takasato"
+		dynasty = "Todo"
+		birth_date = 1746.8.20
+		death_date = 1806.10.7
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1770.6.20 = {
+	monarch = {
+		name = "Takasato"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		dynasty = "Nakagawa"
+		birth_date = 1750.1.1
+		death_date = 1810.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1781.4.25 = {
+	heir = {
+		name = "Takasawa"
+		monarch_name = "Takasawa"
+		dynasty = "Todo"
+		birth_date = 1781.4.25
+		death_date = 1825.2.4
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1806.10.7 = {
+	monarch = {
+		name = "Takasawa"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		dynasty = "Nagai"
+		birth_date = 1785.1.1
+		death_date = 1845.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1813.3.11 = {
+	heir = {
+		name = "Takayuki"
+		monarch_name = "Takayuki"
+		dynasty = "Todo"
+		birth_date = 1813.3.11
+		death_date = 1895.2.9
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1824.12.17 = {
+	monarch = {
+		name = "Takayuki"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		dynasty = "Todo"
+		birth_date = 1815.1.1
+		death_date = 1885.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1837.10.19 = {
+	heir = {
+		name = "Takakiyo"
+		monarch_name = "Takakiyo"
+		dynasty = "Todo"
+		birth_date = 1837.10.19
+		death_date = 1889.11.18
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1871.6.21 = {
+	monarch = {
+		name = "Takakiyo"
+		dynasty = "Todo"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = TOD
+		name = "Kazuko"
+		dynasty = "Hachisuka"
+		birth_date = 1832.1.1
+		death_date = 1907.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

@@ -1,0 +1,248 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+capital = 700 # Chang'an
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+# Former Qin
+
+350.1.1 = {
+	monarch = {
+		name = "Hong" #Huiwu 
+		dynasty = "Fu"
+		birth_date = 284.1.1
+		culture = di
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+}
+
+351.3.4 = {
+	government_rank = 3
+	monarch = {
+		name = "Jian" #Jingming
+		dynasty = "Fu"
+		birth_date = 317.1.1
+		culture = di
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = QIN
+		name = "Mingde"
+		dynasty = "Qiang"
+		birth_date = 320.1.1
+		death_date = 356.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sheng"
+		monarch_name = "Sheng"
+		dynasty = "Fu"
+		birth_date = 335.1.1
+		death_date = 355.1.1
+		culture = di
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 4
+	}
+}
+
+355.7.10 = {
+	monarch = {
+		name = "Sheng"
+		dynasty = "Fu"
+		culture = di
+		adm = 0
+		dip = 0
+		mil = 4
+	}
+	queen = {
+		country_of_origin = QIN
+		dynasty = "Liang"
+		birth_date = 320.1.1
+		death_date = 356.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Coup
+
+357.7.1 = {
+	monarch = {
+		name = "Jian" #Xuanzhao
+		dynasty = "Fu"
+		birth_date = 337.1.1
+		culture = di
+		adm = 5
+		dip = 2
+		mil = 4
+		leader = {	name = "Fu Jian"     	type = general	fire = 3	shock = 2	manuever = 0	siege = 2  death_date = 385.10.16 }
+	}
+	queen = {
+		country_of_origin = QIN
+		dynasty = "Gou"
+		birth_date = 340.1.1
+		death_date = 386.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Pi"
+		monarch_name = "Aiping"
+		dynasty = "Fu"
+		birth_date = 357.1.1
+		death_date = 386.1.1
+		culture = di
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+357.7.1 = { leader = {	name = "Yao Chang"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 384.4.1 } }
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+370.12.10 = { leader = {	name = "Murong Chui"     	type = general	fire = 2	shock = 2	manuever = 0	siege = 0  death_date = 384.2.9 } }
+
+385.10.16 = {
+	capital = 693
+	monarch = {
+		name = "Pi" #Aiping
+		dynasty = "Fu"
+		culture = di
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	queen = {
+		country_of_origin = QIN
+		dynasty = "Yang"
+		birth_date = 360.1.1
+		death_date = 386.10.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+386.10.1 = {
+	monarch = {
+		name = "Deng" #Gao
+		dynasty = "Fu"
+		birth_date = 343.1.1
+		culture = di
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = QIN
+		dynasty = "Mao"
+		birth_date = 345.1.1
+		death_date = 389.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Chong"
+		monarch_name = "Chong"
+		dynasty = "Fu"
+		birth_date = 365.1.1
+		death_date = 394.10.1
+		culture = di
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+392.1.1 = {
+	queen = {
+		country_of_origin = QIN
+		dynasty = "Li"
+		birth_date = 345.1.1
+		death_date = 386.10.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+394.7.1 = {
+	monarch = {
+		name = "Chong"
+		dynasty = "Fu"
+		culture = di
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+# End of the Sui dynasty (Qin)
+
+617.5.13 = {
+	monarch = {
+		name = "Ju"
+		dynasty = "Xue"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	queen = {
+		country_of_origin = QIN
+		dynasty = "Ju"
+		birth_date = 575.1.1
+		death_date = 618.11.30
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+618.9.3 = {
+	monarch = {
+		name = "Rengao"
+		dynasty = "Xue"
+		birth_date = 590.1.1
+		death_date = 618.11.30
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,167 @@
+government = tribal
+add_government_reform = steppe_horde
+technology_group = eastern_nomad_group
+religion = vajrayana
+primary_culture = chahar
+culture_group_union = mongolic
+historical_rival = MCH
+capital = 2747
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Otchigin dynasty
+
+1360.1.1 = {
+	government = monarchy
+	add_government_reform = chinese_warlord
+	government_rank = 1
+	capital = 2109
+	monarch = {
+		name = "Ajasiri"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}
+
+# Uriankhai tribes
+
+1388.4.1 = {
+	government = tribal
+	add_government_reform = steppe_horde
+	monarch = {
+		name = "(unknown)"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+# Northern Yuan dynasty
+
+1547.1.1 = { changed_tag_from = KHA }
+
+1547.1.1 = {
+	government_rank = 3
+	capital = 2747
+	monarch = {
+		name = "Daraisung Guden"
+		dynasty = "Borjigin"
+		birth_date = 1520.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1547.1.1 = {
+	heir = {
+		name = "Tumen Zasagt"
+		monarch_name = "Tumen Zasagt"
+		dynasty = "Borjigin"
+		birth_date = 1539.1.1
+		death_date = 1592.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1551.1.1  = { changed_tag_from = KHA }
+
+1557.1.1 = {
+	monarch = {
+		name = "Tumen Zasagt"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1557.1.1 = {
+	heir = {
+		name = "Buyan Sechen"
+		monarch_name = "Buyan Sechen"
+		dynasty = "Borjigin"
+		birth_date = 1556.1.1
+		death_date = 1604.1.1
+		claim = 95 
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1592.1.1 = {
+	monarch = {
+		name = "Buyan Sechen"
+		dynasty = "Borjigin"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1592.1.1 = {
+	heir = {
+		name = "Lingdan Khutaghtu"
+		monarch_name = "Lingdan Khutaghtu"
+		dynasty = "Borjigin"
+		birth_date = 1588.1.1
+		death_date = 1634.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1604.1.1 = {
+	monarch = {
+		name = "Lingdan Khutaghtu"
+		dynasty = "Borjigin"
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Borjigin Lingdan"     	type = general	fire = 1	shock = 3	manuever = 3	siege = 0  death_date = 1634.8.7 }
+	}
+}
+
+1610.1.1 = {
+	heir = {
+		name = "Ejei"
+		monarch_name = "Ejei"
+		dynasty = "Borjigin"
+		birth_date = 1610.1.1
+		death_date = 1661.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1634.8.7 = {
+	monarch = {
+		name = "Ejei"
+		dynasty = "Borjigin"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}

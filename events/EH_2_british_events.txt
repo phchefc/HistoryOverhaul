@@ -1,0 +1,7321 @@
+namespace = eh_britain
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Great Britain
+########################################################################
+
+# Roman Britain
+country_event = {
+	id = eh_britain.1
+	title = "eh_britain.1.t"
+	desc = "eh_britain.1.d"
+	picture = ROMAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		is_year = 40
+		NOT = { is_year = 50 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		british_isles_region = {
+			limit = {
+				NOT = { area = wales_area }
+			}
+			remove_core = WLS 
+		}
+	}
+	
+	option = {
+		name = "eh_britain.1.a"
+		ai_chance = { factor = 100 }
+		ROM = {
+			wessex_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			home_counties_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			wales_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { owned_by = ROM }
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			248 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROM }
+					}
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+			249 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROM }
+					}
+				}
+				cede_province = ROM
+				add_core = ROM
+			}
+		}
+	}
+}
+
+# Setting on the Roman Britain
+country_event = {
+	id = eh_britain.2
+	title = "eh_britain.2.t"
+	desc = "eh_britain.2.d"
+	picture = ROMAN_ARMY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		is_year = 50
+		NOT = { is_year = 410 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_britain.2.a"
+		ai_chance = { factor = 100 }
+		ROM = {
+			236 = {
+				if = {
+					limit = { owned_by = ROM }
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+}
+
+# Early Anglo-Saxons
+country_event = {
+	id = eh_britain.3
+	title = "eh_britain.3.t"
+	desc = "eh_britain.3.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A01
+		is_year = 400
+		NOT = { is_year = 410 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BRN = {
+				246 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRN }
+						}
+					}
+					cede_province = BRN
+					add_core = BRN
+					remove_core = A01
+				}
+			}
+			DEI = {
+				yorkshire_area = {
+					limit = {
+						NOT = { owned_by = DEI }
+					}
+					cede_province = DEI
+					add_core = DEI
+					remove_core = A01
+				}
+			}
+			DUM = {
+				wessex_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DUM }
+							NOT = { province_id = 234 }
+						}
+					}
+					cede_province = DUM
+					add_core = DUM
+					remove_core = A01
+				}
+			}
+			DYF = {
+				4369 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRN }
+						}
+					}
+					cede_province = BRN
+					add_core = BRN
+					remove_core = A01
+				}
+			}
+			GOD = {
+				248 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GOD }
+						}
+					}
+					cede_province = GOD
+					add_core = GOD
+					remove_core = A01
+				}
+				4361 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GOD }
+						}
+					}
+					cede_province = GOD
+					add_core = GOD
+					remove_core = A01
+				}
+			}
+			GWE = {
+				241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWE }
+						}
+					}
+					cede_province = GWE
+					add_core = GWE
+					remove_core = A01
+				}
+			}
+			GWY = {
+				242 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWY }
+						}
+					}
+					cede_province = GWY
+					add_core = GWY
+					remove_core = A01
+				}
+			}
+			EAN = {
+				1860 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EAN }
+						}
+					}
+					cede_province = EAN
+					add_core = EAN
+					remove_core = A01
+				}
+				4370 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EAN }
+						}
+					}
+					cede_province = EAN
+					add_core = EAN
+					remove_core = A01
+				}
+			}
+			ERG = {
+				234 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERG }
+						}
+					}
+					cede_province = ERG
+					add_core = ERG
+					remove_core = A01
+				}
+				237 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERG }
+						}
+					}
+					cede_province = ERG
+					add_core = ERG
+					remove_core = A01
+				}
+				239 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ERG }
+						}
+					}
+					cede_province = ERG
+					add_core = ERG
+					remove_core = A01
+				}
+			}
+			ESX = {
+				236 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ESX }
+						}
+					}
+					cede_province = ESX
+					add_core = ESX
+					remove_core = A01
+				}
+				238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ESX }
+						}
+					}
+					cede_province = ESX
+					add_core = ESX
+					remove_core = A01
+				}
+			}
+			ELM = {
+				1861 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ELM }
+						}
+					}
+					cede_province = ELM
+					add_core = ELM
+					remove_core = A01
+				}
+				4372 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ELM }
+						}
+					}
+					cede_province = ELM
+					add_core = ELM
+					remove_core = A01
+				}
+				4376 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ELM }
+						}
+					}
+					cede_province = ELM
+					add_core = ELM
+					remove_core = A01
+				}
+			}
+			KEN = {
+				235 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KEN }
+						}
+					}
+					cede_province = KEN
+					add_core = KEN
+					remove_core = A01
+				}
+			}
+			SSX = {
+				4371 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SSX }
+						}
+					}
+					cede_province = SSX
+					add_core = SSX
+					remove_core = A01
+				}
+			}
+			STR = {
+				249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+					remove_core = A01
+				}
+				4362 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+					remove_core = A01
+				}
+				4365 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+					remove_core = A01
+				}
+			}
+			LIN = {
+				243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LIN }
+						}
+					}
+					cede_province = LIN
+					add_core = LIN
+					remove_core = A01
+				}
+			}
+			RHE = {
+				244 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RHE }
+						}
+					}
+					cede_province = RHE
+					add_core = RHE
+					remove_core = A01
+				}
+				247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RHE }
+						}
+					}
+					cede_province = RHE
+					add_core = RHE
+					remove_core = A01
+				}
+				4375 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RHE }
+						}
+					}
+					cede_province = RHE
+					add_core = RHE
+					remove_core = A01
+				}
+			}
+			PWY = {
+				240 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PWY }
+						}
+					}
+					cede_province = PWY
+					add_core = PWY
+					remove_core = A01
+				}
+				4366 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PWY }
+						}
+					}
+					cede_province = PWY
+					add_core = PWY
+					remove_core = A01
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.3.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				A01 = { was_player = yes }
+			}
+			switch_tag = ERG
+		}
+	}
+	
+	option = {
+		name = "eh_britain.3.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				A01 = { was_player = yes }
+			}
+			switch_tag = ELM
+		}
+	}
+	
+	option = {
+		name = "eh_britain.3.c"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Middle Anglo-Saxons
+country_event = {
+	id = eh_britain.4
+	title = "eh_britain.4.t"
+	desc = "eh_britain.4.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = ERG
+			tag = ELM
+		}
+		is_year = 660
+		NOT = { is_year = 670 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			DUM = {
+				4373 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DUM }
+						}
+					}
+					cede_province = DUM
+					add_core = DUM
+				}
+				233 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DUM }
+						}
+					}
+					cede_province = DUM
+					add_core = DUM
+				}
+			}
+			DYF = {
+				4369 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DYF }
+						}
+					}
+					cede_province = DYF
+					add_core = DYF
+				}
+			}
+			NOL = {
+				yorkshire_area = {
+					limit = {
+						NOT = { owned_by = NOL }
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+				246 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOL }
+						}
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+				248 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOL }
+						}
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+				4361 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOL }
+						}
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+			}
+			GWE = {
+				241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWE }
+						}
+					}
+					cede_province = GWE
+					add_core = GWE
+				}
+			}
+			GWY = {
+				242 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWY }
+						}
+					}
+					cede_province = GWY
+					add_core = GWY
+				}
+			}
+			EAN = {
+				1860 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EAN }
+						}
+					}
+					cede_province = EAN
+					add_core = EAN
+				}
+				4370 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EAN }
+						}
+					}
+					cede_province = EAN
+					add_core = EAN
+				}
+			}
+			ESX = {
+				238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ESX }
+						}
+					}
+					cede_province = ESX
+					add_core = ESX
+				}
+			}
+			KEN = {
+				235 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KEN }
+						}
+					}
+					cede_province = KEN
+					add_core = KEN
+				}
+			}
+			SSX = {
+				4371 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SSX }
+						}
+					}
+					cede_province = SSX
+					add_core = SSX
+				}
+			}
+			STR = {
+				247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+				249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+				4362 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+				4365 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+			}
+			LIN = {
+				243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LIN }
+						}
+					}
+					cede_province = LIN
+					add_core = LIN
+				}
+			}
+			RHE = {
+				244 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RHE }
+						}
+					}
+					cede_province = RHE
+					add_core = RHE
+				}
+				4375 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RHE }
+						}
+					}
+					cede_province = RHE
+					add_core = RHE
+				}
+			}
+			PWY = {
+				240 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PWY }
+						}
+					}
+					cede_province = PWY
+					add_core = PWY
+				}
+				4366 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PWY }
+						}
+					}
+					cede_province = PWY
+					add_core = PWY
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.4.a"
+		ai_chance = { factor = 100 }
+		ERG = {
+			change_tag = WSX
+			234 = {
+				if = {
+					limit = {
+						NOT = { owned_by = WSX }
+					}
+				}
+				cede_province = WSX
+				add_core = WSX
+			}
+			4130 = {
+				if = {
+					limit = {
+						NOT = { owned_by = WSX }
+					}
+				}
+				cede_province = WSX
+				add_core = WSX
+			}
+			4374 = {
+				if = {
+					limit = {
+						NOT = { owned_by = WSX }
+					}
+				}
+				cede_province = WSX
+				add_core = WSX
+			}
+		}
+		ELM = {
+			change_tag = MRC
+			236 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+				}
+				cede_province = MRC
+				add_core = MRC
+			}
+			237 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+				}
+				cede_province = MRC
+				add_core = MRC
+			}
+			239 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+				}
+				cede_province = MRC
+				add_core = MRC
+			}
+			1861 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+				}
+				cede_province = MRC
+				add_core = MRC
+			}
+			4372 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+				}
+				cede_province = MRC
+				add_core = MRC
+			}
+			4376 = {
+				if = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+				}
+				cede_province = MRC
+				add_core = MRC
+			}
+		}
+	}
+}
+
+# Danish invasions of England
+country_event = {
+	id = eh_britain.5
+	title = "eh_britain.5.t"
+	desc = "eh_britain.5.d"
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = MRC
+			tag = WSX
+		}
+		is_year = 880
+		NOT = { is_year = 890 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NOL = {
+				244 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOL }
+						}
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+				246 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOL }
+						}
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+				4375 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOL }
+						}
+					}
+					cede_province = NOL
+					add_core = NOL
+				}
+			}
+			GWE = {
+				241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWE }
+						}
+					}
+					cede_province = GWE
+					add_core = GWE
+				}
+			}
+			GWY = {
+				242 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GWY }
+						}
+					}
+					cede_province = GWY
+					add_core = GWY
+				}
+			}
+			WSX = {
+				home_counties_area = {
+					limit = {
+						NOT = { owned_by = WSX }
+					}
+					cede_province = WSX
+					add_core = WSX
+				}
+				wessex_area = {
+					limit = {
+						NOT = { owned_by = WSX }
+					}
+					cede_province = WSX
+					add_core = WSX
+				}
+				238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WSX }
+						}
+					}
+					cede_province = WSX
+					add_core = WSX
+				}
+			}
+			MRC = {
+				east_anglia_area = {
+					limit = {
+						NOT = { province_id = 238 }
+					}
+					cede_province = MRC
+					add_core = MRC
+				}
+				east_midlands_area = {
+					limit = {
+						NOT = { owned_by = MRC }
+					}
+					cede_province = MRC
+					add_core = MRC
+				}
+				west_midlands_area = {
+					limit = {
+						AND = {
+							NOT = { province_id = 244 }
+							NOT = { province_id = 4375 }
+						}
+					}
+					cede_province = MRC
+					add_core = MRC
+				}
+			}
+			STR = {
+				247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+				249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+				4362 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+				4365 = {
+					if = {
+						limit = {
+							NOT = { owned_by = STR }
+						}
+					}
+					cede_province = STR
+					add_core = STR
+				}
+			}
+			PWY = {
+				4366 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PWY }
+						}
+					}
+					cede_province = PWY
+					add_core = PWY
+				}
+			}
+			SCO = {
+				change_government = monarchy
+				add_government_reform = scottish_monarchy_reform
+				set_government_rank = 2
+				set_capital = 248
+				change_primary_culture = scottish
+				change_religion = catholic
+				change_technology_group = western
+				swap_free_idea_group = yes
+				highlands_area = {
+					limit = {
+						NOT = { owned_by = SCO }
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = PCT
+				}
+				lowlands_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SCO }
+							NOT = { province_id = 249 }
+						}
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = PCT
+				}
+				4361 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SCO }
+						}
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = PCT
+				}
+			}
+			LOI = {
+				kingdom_of_the_isles_area = {
+					limit = {
+						NOT = { owned_by = LOI }
+					}
+					cede_province = LOI
+					add_core = LOI
+					remove_core = PCT
+				}
+			}
+			DAN = { country_event = { id = eh_medieval_europe.13 days = 300 } }
+		}
+	}
+	
+	option = {
+		name = "eh_britain.5.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				MRC = { was_player = yes }
+			}
+			switch_tag = WSX
+		}
+	}
+	
+	option = {
+		name = "eh_britain.5.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				MRC = { was_player = yes }
+			}
+			switch_tag = DAN
+		}
+	}
+	
+	option = {
+		name = "eh_britain.5.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				MRC = { was_player = yes }
+			}
+			switch_tag = SCO
+		}
+	}
+}
+
+# Unification of England by the Wessex
+country_event = {
+	id = eh_britain.6
+	title = "eh_britain.6.t"
+	desc = "eh_britain.6.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			WSX = {
+				every_owned_province = {
+					add_core = ENG
+					remove_core = WSX
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.6.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_treasury = 30000
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			change_religion = catholic
+			set_capital = 236
+			swap_free_idea_group = yes
+			inherit = WSX
+			define_ruler = {
+				name = "Aethelstan"
+				dynasty = "Cerdicing"
+				change_adm = 2
+				change_dip = 4
+				change_mil = 1
+				age = 33
+			}
+			define_heir = {
+				name = "Edmund I"
+				dynasty = "of Wessex"
+				change_adm = 1
+				change_dip = 5
+				change_mil = 5
+				age = 3
+			}
+		}
+	}
+}
+
+# Norman Conquest
+country_event = {
+	id = eh_britain.7
+	title = "eh_britain.7.t"
+	desc = "eh_britain.7.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1066
+		NOT = { is_year = 1070 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				normandy_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = FRA
+				}
+				177 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = FRA
+				}
+				241 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.7.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			change_religion = catholic
+			change_primary_culture = english
+			add_accepted_culture = normand
+			set_capital = 236
+			define_ruler = {
+				name = "William"
+				dynasty = "de Normandie"
+				change_adm = 4
+				change_dip = 4
+				change_mil = 6
+				age = 38
+			}
+			define_consort = {
+				name = "Matilda"
+				dynasty = "of Flanders"
+				culture = flemish
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "de Normandie"
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						owned_by = ENG
+						NOT = { region = france_region }
+						NOT = { area = wales_area }
+					}
+				}
+				change_culture = english
+			}
+		}
+		SCO = {
+			change_primary_culture = scottish
+			lowlands_area = { change_culture = scottish }
+			highlands_area = { change_culture = scottish }
+		}
+	}
+}
+
+# Angevin Empire
+country_event = {
+	id = eh_britain.8
+	title = "eh_britain.8.t"
+	desc = "eh_britain.8.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1160
+		NOT = { is_year = 1170 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SCO
+				}
+				373 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				4121 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+			}
+			AQT = {
+				inherit = GUY
+				pyrenees_area = {
+					limit = {
+						NOT = { owned_by = AQT }
+					}
+					cede_province = AQT
+					add_core = AQT
+					remove_core = GUY
+				}
+				guyenne_area = {
+					limit = {
+						NOT = { owned_by = AQT }
+					}
+					cede_province = AQT
+					add_core = AQT
+					remove_core = GUY
+				}
+			}
+			LYO = {
+				203 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LYO }
+						}
+					}
+					cede_province = LYO
+					add_core = LYO
+					remove_core = BUR
+				}
+				4777 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LYO }
+						}
+					}
+					cede_province = LYO
+					add_core = LYO
+					remove_core = BUR
+				}
+			}
+			FLA = {
+				91 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FLA }
+						}
+					}
+					cede_province = FLA
+					add_core = FLA
+					remove_core = FRA
+				}
+				181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FLA }
+						}
+					}
+					cede_province = FLA
+					add_core = FLA
+					remove_core = FRA
+				}
+			}
+			SCO = {
+				249 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SCO }
+						}
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = STR
+				}
+				4362 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SCO }
+						}
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = STR
+				}
+			}
+			SAV = {
+				romandie_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SAV }
+							NOT = { province_id = 165 }
+							NOT = { province_id = 4721 }
+						}
+					}
+					cede_province = SAV
+					add_core = SAV
+					remove_core = BUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.8.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			add_stability = 1
+			add_prestige = 10
+			add_country_modifier = {
+				name = warlordism
+				duration = 20000
+			}
+			create_subject = {
+				subject_type = appanage
+				subject = AQT
+			}
+			create_subject = {
+				subject_type = appanage
+				subject = ANJ
+			}
+			create_subject = {
+				subject_type = appanage
+				subject = AUV
+			}
+			create_subject = {
+				subject_type = appanage
+				subject = ORL
+			}
+		}
+		FRA = {
+			add_prestige = -10
+			create_subject = {
+				subject_type = appanage
+				subject = LYO
+			}
+		}
+		AQT = { add_liberty_desire = -100 }
+		ANJ = { add_liberty_desire = -100 }
+		ORL = { add_liberty_desire = -100 }
+	}
+}
+
+# Magna Carta
+country_event = {
+	id = eh_britain.9
+	title = "eh_britain.9.t"
+	desc = "eh_britain.9.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1215
+		NOT = { is_year = 1220 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				add_legitimacy = -10
+				define_ruler = {
+					name = "John I"
+					dynasty = "Plantagenet"
+					change_adm = 0
+					change_dip = 1
+					change_mil = 0
+					age = 48
+				}
+				define_consort = {
+					name = "Isabella"
+					dynasty = "of Angouleme"
+					culture = cosmopolitan_french
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					female = yes
+				}
+				define_heir = {
+					dynasty = "Plantagenet"
+				}
+				173 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = AQT
+				}
+				174 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = AQT
+				}
+				176 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = AQT
+				}
+				4694 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = AQT
+				}
+			}
+			FRA = {
+				inherit = AQT
+				create_subject = {
+					subject_type = appanage
+					subject = ANJ
+				}
+				create_subject = {
+					subject_type = appanage
+					subject = ORL
+				}
+				create_subject = {
+					subject_type = appanage
+					subject = LYO
+				}
+				normandy_area = {
+					limit = {
+						AND = {
+							owned_by = ENG
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ENG
+				}
+				loire_area = {
+					limit = {
+						AND = {
+							owned_by = ENG
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ENG
+				}
+				poitou_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = AQT
+				}
+				guyenne_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 174 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = AQT
+				}
+				89 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = FLA
+				}
+				175 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = AQT
+				}
+				195 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = AQT
+				}
+				add_country_modifier = {
+					name = warlordism
+					duration = 20000
+				}
+			}
+			AUV = {
+				199 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUV }
+						}
+					}
+					cede_province = AUV
+					add_core = AUV
+					remove_core = AQT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.9.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			set_government_rank = 2
+			add_prestige = -10
+			add_faction_influence = {
+				faction = nobles
+				influence = 20
+			}
+		}
+		SCO = {
+			change_government = monarchy
+			add_government_reform = scottish_monarchy_reform
+			set_government_rank = 2
+		}
+		FRA = { 
+			create_subject = {
+				subject_type = appanage
+				subject = AUV
+			}
+		}
+		AUV = { add_liberty_desire = -100 }
+		ORL = { add_liberty_desire = -100 }
+	}
+}
+
+# Hundred Years' War - First Phase
+country_event = {
+	id = eh_britain.10
+	title = "eh_britain.10.t"
+	desc = "eh_britain.10.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1336
+		NOT = { is_year = 1338 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				wales_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				167 = {
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					cavalry = ENG
+					cavalry = ENG
+					cavalry = ENG
+					cavalry = ENG
+				}
+				168 = {
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					infantry = ENG
+					cavalry = ENG
+					cavalry = ENG
+				}
+				define_general = {
+					name = "Edward Plantagenet"
+					shock = 4
+					fire = 5
+					manuever = 3
+					siege = 1
+				}
+			}
+			BOU = {
+				190 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BOU }
+						}
+					}
+					cede_province = BOU
+					add_core = BOU
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.10.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			set_country_flag = hundred_years_war
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			add_manpower = 30
+			add_prestige = 30
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_years_of_income = 3
+			declare_war_with_cb = {
+				who = FRA
+				casus_belli = cb_claim_throne
+			}
+		}
+		FRA = {
+			set_country_flag = hundred_years_war
+			add_manpower = -30
+			add_prestige = -30
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_years_of_income = -3
+			create_subject = {
+				subject_type = appanage
+				subject = BOU
+			}
+			country_event = { id = eh_french.45 days = 1 }
+		}
+	}
+}
+
+# Hundred Years' War - Second Phase
+country_event = {
+	id = eh_britain.11
+	title = "eh_britain.11.t"
+	desc = "eh_britain.11.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1370
+		NOT = { is_year = 1375 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_britain.11.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			set_country_flag = hundred_years_war
+			add_manpower = 30
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_years_of_income = 3
+			declare_war_with_cb = {
+				who = FRA
+				casus_belli = cb_claim_throne
+			}
+		}
+		FRA = {
+			set_country_flag = hundred_years_war
+			add_manpower = -30
+			add_army_tradition = -10
+			add_army_professionalism = -0.1
+			add_years_of_income = -3
+			country_event = { id = eh_french.46 days = 1 }
+		}
+		SCO = {
+			define_ruler = {
+				dynasty = "Stuart"
+			}
+			define_heir = {
+				dynasty = "Stuart"
+			}
+		}
+	}
+}
+
+# Peasants' Revolt
+country_event = {
+	id = eh_britain.12
+	title = "eh_britain.12.t"
+	desc = "eh_britain.12.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1380
+		NOT = { is_year = 1385 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_britain.12.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			235 = {
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 10
+					leader = "Wat Tyler"
+				}
+			}
+			236 = {
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 10
+				}
+			}
+		}
+	}
+}
+
+# Hundred Years' War - Third Phase
+country_event = {
+	id = eh_britain.13
+	title = "eh_britain.13.t"
+	desc = "eh_britain.13.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1415
+		NOT = { is_year = 1420 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				create_subject = {
+					subject_type = appanage
+					subject = ORL
+				}
+				normandy_area = {
+					limit = {
+						AND = {
+							owned_by = FRA
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				champagne_area = {
+					limit = {
+						AND = {
+							owned_by = FRA
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				ile_de_france_area = {
+					limit = {
+						AND = {
+							owned_by = FRA
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				177 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				184 = { change_controller = ENG }
+			}
+			BUR = {
+				picardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BUR }
+							NOT = { province_id = 87 }
+						}
+					}
+					cede_province = BUR
+					add_core = BUR
+					remove_core = FRA
+				}
+				1866 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUR }
+						}
+					}
+					cede_province = BUR
+					add_core = BUR
+					remove_core = NAM
+				}
+			}
+			NEV = {
+				181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NEV }
+						}
+					}
+					cede_province = NEV
+					add_core = NEV
+					remove_core = BUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.13.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			set_country_flag = hundred_years_war
+			add_manpower = 10
+			create_alliance = BUR
+			declare_war_with_cb = {
+				who = FRA
+				casus_belli = cb_claim_throne
+			}
+		}
+		FRA = {
+			set_country_flag = hundred_years_war
+			add_manpower = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_years_of_income = 3
+			country_event = { id = eh_french.47 days = 1 }
+		}
+		BUR = {
+			create_union = BRB
+			create_union = FLA
+			create_union = HOL
+			create_union = NEV
+			add_country_modifier = {
+				name = warlordism
+				duration = 25000
+			}
+		}
+	}
+}
+
+# Hundred Years' War - Final Phase
+country_event = {
+	id = eh_britain.14
+	title = "eh_britain.14.t"
+	desc = "eh_britain.14.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1445
+		NOT = { is_year = 1450 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_britain.14.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			set_country_flag = hundred_years_war
+			declare_war_with_cb = {
+				who = FRA
+				casus_belli = cb_claim_throne
+			}
+		}
+		FRA = {
+			set_country_flag = hundred_years_war
+			country_event = { id = eh_french.48 days = 1 }
+		}
+	}
+}
+
+# War of the Roses
+country_event = {
+	id = eh_britain.15
+	title = "eh_britain.15.t"
+	desc = "eh_britain.15.d"
+	picture = WAR_OF_THE_ROSES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1460
+		NOT = { is_year = 1465 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_britain.15.a"
+		ai_chance = { factor = 100 }
+		ENG = { country_event = { id = war_of_the_roses.1 days = 7 } }
+	}
+}
+
+# Rise of the Tudors
+country_event = {
+	id = eh_britain.16
+	title = "eh_britain.16.t"
+	desc = "eh_britain.16.d"
+	picture = WAR_OF_THE_ROSES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1485
+		NOT = { is_year = 1490 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			FRA = {
+				inherit = AUV
+				inherit = BOU
+				inherit = ORL
+				inherit = PRO
+				loire_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ORL
+				}
+				201 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = PRO
+				}
+				2991 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = PRO
+				}
+			}
+			SCO = {
+				369 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SCO }
+						}
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = DAN
+				}
+				1978 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SCO }
+						}
+					}
+					cede_province = SCO
+					add_core = SCO
+					remove_core = DAN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.16.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			add_stability = 1
+			add_prestige = 10
+			add_legitimacy = 10
+			define_ruler = {
+				name = "Henry VII"
+				dynasty = "Tudor"
+				change_adm = 3
+				change_dip = 5
+				change_mil = 2
+				age = 28
+			}
+			define_consort = {
+				name = "Elisabeth"
+				dynasty = "York"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Tudor"
+			}
+		}
+		LOR = {
+			187 = {
+				if = {
+					limit = {
+						NOT = { owned_by = LOR }
+					}
+				}
+				cede_province = LOR
+				add_core = LOR
+				remove_core = PRO
+			}
+			4766 = {
+				if = {
+					limit = {
+						NOT = { owned_by = LOR }
+					}
+				}
+				cede_province = LOR
+				add_core = LOR
+				remove_core = PRO
+			}
+		}
+	}
+}
+
+# Elizabethan era
+country_event = {
+	id = eh_britain.17
+	title = "eh_britain.17.t"
+	desc = "eh_britain.17.d"
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = ENG
+		is_year = 1555
+		NOT = { is_year = 1560 }
+		NOT = { has_ruler = "Elizabeth" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				leinster_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ENG }
+							NOT = { province_id = 374 }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = LEI
+				}
+			}
+			FRA = {
+				inherit = NEV
+				181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = NEV
+				}
+				191 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = NEV
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.17.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 3
+			add_manpower = 30
+			add_prestige = 30
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_navy_tradition = 10
+			add_army_professionalism = 0.1
+			add_years_of_income = 3
+			change_religion = anglican
+			set_capital = 236
+			236 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			define_ruler = {
+				name = "Elizabeth"
+				dynasty = "Tudor"
+				culture = english
+				change_adm = 6
+				change_dip = 6
+				change_mil = 5
+				age = 25
+				female = yes
+			}
+			hidden_effect = {
+				add_ruler_personality = inspiring_leader_personality
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+		SCO = {
+			change_religion = reformed
+			british_isles_region = {
+				limit = { owned_by = SCO }
+				change_religion = reformed
+			}
+		}
+	}
+}
+
+# William Shakespeare
+country_event = {
+	id = eh_britain.18
+	title = "eh_britain.18.t"
+	desc = "eh_britain.18.d"
+	picture = CULTURE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1580
+		NOT = { is_year = 1585 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	option = {
+		name = "eh_britain.18.a"
+		ai_chance = { factor = 50 }
+		ENG = {
+			define_advisor = {
+				type = artist
+				name = "William Shakespeare"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.18.b"
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Armada invasion of England
+country_event = {
+	id = eh_britain.19
+	title = "eh_britain.19.t"
+	desc = "eh_britain.19.d"
+	picture = FLAGSHIP_SUNK_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_britain.19.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			clr_country_flag = anglo_spanish_war
+			add_stability = 1
+			add_prestige = 10
+			add_navy_tradition = 10
+			add_years_of_income = 1
+			remove_consort = yes
+			remove_heir = { allow_new_heir = no }
+		}
+		SPA = {
+			clr_country_flag = anglo_spanish_war
+			add_prestige = -10
+			add_navy_tradition = -10
+			add_years_of_income = -1
+			white_peace = ENG
+		}
+	}
+}
+
+# Union of the Crowns
+country_event = {
+	id = eh_britain.20
+	title = "eh_britain.20.t"
+	desc = "eh_britain.20.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1603
+		NOT = { is_year = 1605 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				add_trust = {
+					who = SCO
+					value = 100
+					mutual = yes
+				}
+				ulster_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = TYR
+				}
+				connacht_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ENG }
+							NOT = { province_id = 376 }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = SLN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.20.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				SCO = { was_player = yes }
+			}
+			switch_tag = ENG
+		}
+		ENG = {
+			create_union = SCO
+			define_ruler = {
+				name = "James I"
+				dynasty = "Stuart"
+				culture = scottish
+				change_adm = 3
+				change_dip = 3
+				change_mil = 1
+				age = 37
+			}
+			define_consort = {
+				name = "Anne"
+				dynasty = "von Oldenburg"
+				culture = danish
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Stuart"
+				culture = english
+			}
+			define_advisor = {
+				type = philosopher
+				name = "Francis Bacon"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# English Civil War
+country_event = {
+	id = eh_britain.21
+	title = "eh_britain.21.t"
+	desc = "eh_britain.21.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1648
+		NOT = { is_year = 1650 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			IE2 = {
+				leinster_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = IE2 }
+							NOT = { province_id = 373 }
+						}
+					}
+					cede_province = IE2
+					add_core = IE2
+					remove_core = ENG
+				}
+				munster_area = {
+					limit = {
+						NOT = { owned_by = IE2 }
+					}
+					cede_province = IE2
+					add_core = IE2
+					remove_core = ENG
+				}
+				connacht_area = {
+					limit = {
+						NOT = { owned_by = IE2 }
+					}
+					cede_province = IE2
+					add_core = IE2
+					remove_core = ENG
+				}
+			}
+			EIC = {
+				539 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NED
+				}
+				4417 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.21.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			set_country_flag = uprising_eh
+			define_ruler = {
+				name = "Charles I"
+				dynasty = "Stuart"
+				culture = english
+				change_adm = 0
+				change_dip = 2
+				change_mil = 4
+				age = 42
+			}
+			define_consort = {
+				name = "Henrietta Maria"
+				dynasty = "de Bourbon"
+				culture = cosmopolitan_french
+				change_adm = 3
+				change_dip = 4
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Stuart"
+				culture = english
+			}
+			define_advisor = {
+				type = philosopher
+				name = "Thomas Hobbes"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+			home_counties_area = {
+				limit = { owned_by = ENG }
+				change_controller = REB
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 10
+				}
+			}
+			east_anglia_area = {
+				limit = { owned_by = ENG }
+				change_controller = REB
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 10
+				}
+			}
+			yorkshire_area = {
+				limit = { owned_by = ENG }
+				change_controller = REB
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 10
+				}
+			}
+			create_subject = {
+				subject_type = commercial_enterprise
+				subject = EIC
+			}
+		}
+		EIC = {
+			change_government = republic
+			add_government_reform = trade_company_government
+			set_government_rank = 1
+		}
+	}
+}
+
+# Commonwealth
+country_event = {
+	id = eh_britain.22
+	title = "eh_britain.22.t"
+	desc = "eh_britain.22.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1650
+		NOT = { is_year = 1655 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				leinster_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = IE2
+				}
+				munster_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = IE2
+				}
+				connacht_area = {
+					limit = {
+						NOT = { owned_by = ENG }
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = IE2
+				}
+				1098 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+					remove_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.22.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			clr_country_flag = uprising_eh
+			change_government = republic
+			add_government_reform = english_parliamentary_republic_government
+			change_religion = reformed
+			create_subject = {
+				subject_type = client_vassal
+				subject = SCO
+			}
+			define_ruler = {
+				name = "Oliver Cromwell"
+				culture = english
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				age = 47
+			}
+			define_heir = {
+				name = "Richard Cromwell"
+				culture = english
+			}
+		}
+	}
+}
+
+# Restoration
+country_event = {
+	id = eh_britain.23
+	title = "eh_britain.23.t"
+	desc = "eh_britain.23.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1660
+		NOT = { is_year = 1662 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_britain.23.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			change_religion = anglican
+			create_union = SCO
+			define_ruler = {
+				name = "Charles II"
+				dynasty = "Stuart"
+				culture = english
+				change_adm = 3
+				change_dip = 2
+				change_mil = 0
+				age = 30
+			}
+			define_consort = {
+				name = "Catherine"
+				dynasty = "de Braganca"
+				culture = portugese
+				change_adm = 3
+				change_dip = 4
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				dynasty = "Stuart"
+				culture = english
+			}
+		}
+	}
+}
+
+# Glorious Revolution
+country_event = {
+	id = eh_britain.24
+	title = "eh_britain.24.t"
+	desc = "eh_britain.24.d"
+	picture = PARLIAMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1688
+		NOT = { is_year = 1690 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ENG = {
+				621 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				1004 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				1005 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+				2592 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ENG }
+						}
+					}
+					cede_province = ENG
+					add_core = ENG
+				}
+			}
+			FRA = {
+				75 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ALS
+				}
+				94 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = SPA
+				}
+				884 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				915 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				3004 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = SPA
+				}
+				4765 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ALS
+				}
+			}
+			SPA = {
+				moxos_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2667 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2498 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			NED = {
+				628 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				649 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				4845 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			MOR = {
+				334 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MOR }
+						}
+					}
+					cede_province = MOR
+					add_core = MOR
+					remove_core = ENG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.24.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			create_union = NED
+			add_prestige = 10
+			define_ruler = {
+				name = "William III"
+				dynasty = "van Oranje"
+				culture = dutch
+				change_adm = 3
+				change_dip = 5
+				change_mil = 5
+				age = 39
+			}
+			define_heir = {
+				name = "Anne"
+				dynasty = "Stuart"
+				culture = english
+				change_adm = 3
+				change_dip = 5
+				change_mil = 4
+				age = 24
+				female = yes
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Isaac Newton"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Treaty of Union
+country_event = {
+	id = eh_britain.25
+	title = "eh_britain.25.t"
+	desc = "eh_britain.25.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1707
+		NOT = { is_year = 1710 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			ENG = {
+				change_tag = GBR
+				inherit = SCO
+				british_isles_region = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SCO
+				}
+				1978 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DAN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.25.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			change_government = monarchy
+			add_government_reform = british_monarchy
+			set_government_rank = 2
+			add_accepted_culture = scottish
+			add_accepted_culture = irish
+			add_accepted_culture = welsh
+			break_union = NED
+			define_ruler = {
+				name = "Anne"
+				dynasty = "Stuart"
+				culture = english
+				change_adm = 3
+				change_dip = 5
+				change_mil = 4
+				age = 42
+				female = yes
+			}
+			define_consort = {
+				name = "George"
+				dynasty = "von Oldenburg"
+				culture = danish
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+				female = no
+			}
+			remove_heir = { allow_new_heir = no }
+		}
+	}
+}
+
+# Georgian era
+country_event = {
+	id = eh_britain.26
+	title = "eh_britain.26.t"
+	desc = "eh_britain.26.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1710
+		NOT = { is_year = 1715 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				newfoundland_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FRA
+				}
+				carolinas_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				south_carolina_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				226 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SPA
+				}
+				937 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				984 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FRA
+				}
+				1006 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2568 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2569 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FRA
+				}
+				4559 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SPA
+				}
+			}
+			LUN = {
+				change_tag = HAN
+				inherit = LAU
+				lower_saxony_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PLC }
+							NOT = { province_id = 44 }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = LAU
+				}
+				54 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = SWE
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.26.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			create_union = HAN
+			add_country_modifier = {
+				name = major_power
+				duration = 100000
+			}
+			define_ruler = {
+				name = "George I"
+				dynasty = "von Hannover"
+				culture = hannoverian
+				change_adm = 3
+				change_dip = 5
+				change_mil = 4
+				age = 54
+			}
+			define_heir = {
+				name = "George II"
+				dynasty = "von Hannover"
+				culture = english
+				change_adm = 4
+				change_dip = 3
+				change_mil = 4
+				age = 31
+			}
+			define_advisor = {
+				type = artist
+				name = "George Frideric Handel"
+				culture = saxon
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# Victorian era
+country_event = {
+	id = eh_britain.27
+	title = "eh_britain.27.t"
+	desc = "eh_britain.27.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1837
+		NOT = { is_year = 1840 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				eastern_australia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 1091 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				illawara_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				fiji_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				873 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				998 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1084 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1095 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1106 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1109 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1175 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4815 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = JOH
+				}
+				2734 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.27.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			break_union = HAN
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_navy_tradition = 10
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			define_ruler = {
+				name = "Victoria I"
+				dynasty = "von Hannover"
+				culture = english
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				age = 18
+				female = yes
+			}
+			define_consort = {
+				name = "Albert"
+				dynasty = "von Saxe-Coburg"
+				culture = saxon
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				female = no
+			}
+			remove_heir = { allow_new_heir = no }
+			define_advisor = {
+				type = natural_scientist
+				name = "Charles Darwin"
+				culture = english
+				skill = 3
+				discount = yes
+			}
+			country_event = { id = eh_britain.28 days = 300 }
+		}
+	}
+}
+
+# Pax Britannica
+country_event = {
+	id = eh_britain.28
+	title = "eh_britain.28.t"
+	desc = "eh_britain.28.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				south_african_plateau_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 1178 }
+							NOT = { province_id = 2856 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				southern_australia_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				murray_river_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				goldfields_esperance_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2736 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				te_ika_a_maui_hauauru_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}				
+				1108 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2736 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4782 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			EIC = {
+				makran_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 434 }
+							NOT = { province_id = 2233 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BAL
+				}
+				576 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BAL
+				}
+				2230 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = BAL
+				}
+			}
+			FR2 = {
+				kabylia_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ALG
+				}
+				1165 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+				}
+			}
+			PER = {
+				434 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = BAL
+				}
+				435 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = AFG
+				}
+				2233 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PER }
+						}
+					}
+					cede_province = PER
+					add_core = PER
+					remove_core = BAL
+				}
+			}
+			PUN = {
+				inherit = KSH
+				kashmir_area = {
+					limit = {
+						NOT = { owned_by = PUN }
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = KSH
+				} 
+				578 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+				2078 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PUN }
+						}
+					}
+					cede_province = PUN
+					add_core = PUN
+					remove_core = AFG
+				}
+			}
+			MDG = {
+				madagascar_highlands_area = {
+					limit = {
+						NOT = { owned_by = MDG }
+					}
+					cede_province = MDG
+					add_core = MDG
+				}
+				betsimasaraka_area = {
+					limit = {
+						NOT = { owned_by = MDG }
+					}
+					cede_province = MDG
+					add_core = MDG
+				}
+				sakalava_area = {
+					limit = {
+						NOT = { owned_by = MDG }
+					}
+					cede_province = MDG
+					add_core = MDG
+				}
+				southern_madagascar = {
+					limit = {
+						NOT = { owned_by = MDG }
+					}
+					cede_province = MDG
+					add_core = MDG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.28.a"
+		ai_chance = { factor = 100 }
+		GBR = { add_prestige = 10 }
+	}
+}
+
+# Pax Britannica
+country_event = {
+	id = eh_britain.29
+	title = "eh_britain.29.t"
+	desc = "eh_britain.29.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1845
+		NOT = { is_year = 1850 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				south_queensland_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				te_waipounamu_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				interior_plateau_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				south_african_plateau_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				974 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				975 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1091 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1094 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1139 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DAN
+				}
+				1181 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2025 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3041 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2018 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2726 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2736 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2017 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2587 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2609 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4864 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			EIC = {
+				inherit = MAR
+				inherit = SND
+				inherit = PUN
+				kashmir_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = PUN
+				}
+				lahore_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = PUN
+				}
+				sind_sagar_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = PUN
+				}
+				multan_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = EIC }
+							NOT = { province_id = 2079 }
+							NOT = { province_id = 4509 }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = PUN
+				}
+				sindh_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = SND
+				}
+				northern_sindh_area = {
+					limit = {
+						NOT = { owned_by = EIC }
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = SND
+				}
+				569 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				553 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = SBP
+				}
+				1788 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+				}
+				1950 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+				}
+				4473 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MLB
+				}
+				4416 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = DAN
+				}
+				4431 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+				4435 = {
+					if = {
+						limit = {
+							NOT = { owned_by = EIC }
+						}
+					}
+					cede_province = EIC
+					add_core = EIC
+					remove_core = MAR
+				}
+			}
+			SPA = {
+				palawan_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				651 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2701 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4348 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				1172 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1183 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1190 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				1800 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2952 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				3264 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+			TOG = {
+				1989 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TOG }
+						}
+					}
+					cede_province = TOG
+					add_core = TOG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.29.a"
+		ai_chance = { factor = 100 }
+		GBR = { add_prestige = 10 }
+	}
+}
+
+# Pax Britannica
+country_event = {
+	id = eh_britain.30
+	title = "eh_britain.30.t"
+	desc = "eh_britain.30.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1875
+		NOT = { is_year = 1880 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				inherit = OFS
+				transvaal_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = OFS
+				}
+				pilbara_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				northern_australia_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				eastern_australia_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}				
+				1237 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3053 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3054 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2258 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = NED
+				}
+				3145 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4784 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = OFS
+				}
+				3226 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = OFS
+				}
+			}
+			BRJ = {
+				baghelkhand_area = {
+					limit = {
+						NOT = { owned_by = BRJ }
+					}
+					cede_province = BRJ
+					add_core = BRJ
+					remove_core = BGL
+				}
+				kalat_area = {
+					limit = {
+						NOT = { owned_by = BRJ }
+					}
+					cede_province = BRJ
+					add_core = BRJ
+					remove_core = AFG
+				}
+				multan_area = {
+					limit = {
+						NOT = { owned_by = BRJ }
+					}
+					cede_province = BRJ
+					add_core = BRJ
+					remove_core = AFG
+				}
+			}
+			FR2 = {
+				create_subject = {
+					subject_type = protectorate
+					subject = TUN
+				}
+				1112 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = JOL
+				}
+				1113 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = JOL
+				}
+				1115 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FR2 }
+						}
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = SOF
+				}
+			}
+			CAN = {
+				hudson_bay_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CAN }
+							NOT = { area = inner_ontario_area }
+							NOT = { province_id = 910 }
+							NOT = { province_id = 1806 }
+							NOT = { province_id = 2016 }
+							NOT = { province_id = 2511 }
+							NOT = { province_id = 4902 }
+							NOT = { province_id = 1807 }
+							NOT = { province_id = 3109 }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				interior_plateau_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				straits_of_georgia_area = {
+					limit = {
+						NOT = { owned_by = CAN }
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				hecate_strait_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = CAN }
+							NOT = { province_id = 2022 }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				1002 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+					remove_core = GBR
+				}
+				1811 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+				3041 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+				3107 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+				3110 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAN }
+						}
+					}
+					cede_province = CAN
+					add_core = CAN
+				}
+			}
+			RZW = {
+				change_tag = GZI
+				3017 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GZI }
+						}
+					}
+					cede_province = GZI
+					add_core = GZI
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.30.a"
+		ai_chance = { factor = 100 }
+		GBR = { add_prestige = 10 }
+	}
+}
+
+# Berlin Conference
+country_event = {
+	id = eh_britain.31
+	title = "eh_britain.31.t"
+	desc = "eh_britain.31.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1885
+		NOT = { is_year = 1890 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				inherit = EG2
+				egypt_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { area = cyrenaica_area }
+							NOT = { province_id = 1794 }
+							NOT = { province_id = 4172 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				dongola_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				upper_nubia_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				kurdufan_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				darfur_central_sahara_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				south_sudan_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				kalahari_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 3223 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				botswana_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				cook_islands_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				364 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				1232 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				1239 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1248 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = DGL
+				}
+				1990 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1998 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4867 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2729 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2324 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = EG2
+				}
+				2721 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2722 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.31.a"
+		ai_chance = { factor = 100 }
+		GBR = { add_prestige = 10 }
+		FR2 = { country_event = { id = eh_french.34 days = 3 } }
+		TAU = { country_event = { id = eh_asia_MNM.12 days = 3 } }
+	}
+}
+
+# The end of the Great Game
+country_event = {
+	id = eh_britain.32
+	title = "eh_britain.32.t"
+	desc = "eh_britain.32.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1895
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				benin_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 1141 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				gulf_of_guinea_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 1141 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				jubba_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2777 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				northern_swahili_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2774 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				mombasa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 1200 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				kenya_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				uganda_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				bunyoro_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				nguni_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 4783 }
+							NOT = { province_id = 3011 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = XHO
+				}
+				zambezi_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { area = katanga_area }
+							NOT = { area = lower_zambezi_area }
+							NOT = { area = quelimane_area }
+							NOT = { province_id = 4094 }
+							NOT = { province_id = 4095 }
+							NOT = { province_id = 4039 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				dagbon_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 2267 }
+							NOT = { province_id = 2295 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1209 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2793 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2790 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4103 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4046 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4044 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				4045 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			ET2 = {
+				southern_ethiopia_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				hadiya_area = {
+					limit = {
+						NOT = { owned_by = ET2 }
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				ogaden_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ET2 }
+							NOT = { province_id = 2778 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				tigray_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ET2 }
+							NOT = { province_id = 2766 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				1211 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ET2 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				1214 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ET2 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+				2773 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ET2 }
+						}
+					}
+					cede_province = ET2
+					add_core = ET2
+				}
+			}
+			DAR = {
+				darfur_central_sahara_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DAR }
+							NOT = { province_id = 3026 }
+						}
+					}
+					cede_province = DAR
+					add_core = DAR
+				}
+			}
+			DER = {
+				1207 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DER }
+						}
+					}
+					cede_province = DER
+					add_core = DER
+				}
+				1208 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DER }
+						}
+					}
+					cede_province = DER
+					add_core = DER
+				}
+				2792 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DER }
+						}
+					}
+					cede_province = DER
+					add_core = DER
+				}
+			}
+			POR = {
+				4039 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.32.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			add_prestige = 10
+			236 = {
+				add_institution_embracement = {
+					which = electrification
+					value = 100
+				}
+			}
+		}
+		FR2 = { country_event = { id = eh_french.35 days = 7 } }
+	}
+}
+
+# Pax Britannica
+country_event = {
+	id = eh_britain.33
+	title = "eh_britain.33.t"
+	desc = "eh_britain.33.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1905
+		NOT = { is_year = 1910 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				lower_niger_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SOK
+				}
+				zazzau_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SOK
+				}
+				hausa_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = SOK
+				}
+				597 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = JOH
+				}
+				1138 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1148 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1149 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1157 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				1162 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2257 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2254 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2283 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2285 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3006 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3269 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			NFL = {
+				newfoundland_area = {
+					limit = {
+						NOT = { owned_by = NFL }
+					}
+					cede_province = NFL
+					add_core = NFL
+					remove_core = GBR
+				}
+				labrador_area = {
+					limit = {
+						NOT = { owned_by = NFL }
+					}
+					cede_province = NFL
+					add_core = NFL
+					remove_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.33.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			change_religion = secularism
+			add_prestige = 10
+			define_ruler = {
+				name = "Edward VII"
+				dynasty = "von Saxe-Coburg"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 4
+				age = 60
+			}
+			define_consort = {
+				name = "Alexandra"
+				dynasty = "von Glucksburg"
+				culture = danish
+				change_adm = 2
+				change_dip = 2
+				change_mil = 1
+				female = yes
+			}
+			define_heir = {
+				name = "George V"
+				dynasty = "of Windsor"
+			}
+			create_subject = {
+				subject_type = dominion
+				subject = NFL
+			}
+		}
+		FR2 = { country_event = { id = eh_french.36 days = 7 } }
+	}
+}
+
+# Irish War of Independence
+country_event = {
+	id = eh_britain.34
+	title = "eh_britain.34.t"
+	desc = "eh_britain.34.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1919
+		NOT = { is_year = 1920 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			IRE = {
+				connacht_area = {
+					limit = {
+						NOT = { owned_by = IRE }
+					}
+					cede_province = IRE
+					add_core = IRE
+					remove_core = GBR
+				}
+				ulster_area = {
+					limit = {
+						NOT = { owned_by = IRE }
+					}
+					cede_province = IRE
+					add_core = IRE
+					remove_core = GBR
+				}
+				munster_area = {
+					limit = {
+						NOT = { owned_by = IRE }
+					}
+					cede_province = IRE
+					add_core = IRE
+					remove_core = GBR
+				}
+				leinster_area = {
+					limit = {
+						NOT = { owned_by = IRE }
+					}
+					cede_province = IRE
+					add_core = IRE
+					remove_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.34.a"
+		ai_chance = { factor = 100 }
+		GBR = { country_event = { id = eh_britain.35 days = 700 } }
+		IRE = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 373
+			change_primary_culture = irish
+			add_accepted_culture = english
+			change_religion = secularism
+			every_owned_province = {
+				limit = {
+					NOT = { province_id = 4121 }
+				}
+				change_culture = irish
+				change_religion = catholic
+			}
+		}
+	}
+}
+
+# Irish Free State
+country_event = {
+	id = eh_britain.35
+	title = "eh_britain.35.t"
+	desc = "eh_britain.35.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			GBR = {
+				ulster_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GBR }
+							NOT = { province_id = 4380 }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = IRE
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.35.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			define_advisor = {
+				type = natural_scientist
+				name = "Alexander Fleming"
+				culture = scottish
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = treasurer
+				name = "John Keynes"
+				culture = english
+				skill = 6
+				discount = yes
+			}
+		}
+		USA = {
+			define_advisor = {
+				type = trader
+				name = "Willis Carrier"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = trader
+				name = "Henry Ford"
+				culture = irish
+				skill = 6
+				discount = yes
+			}
+			define_advisor = {
+				type = trader
+				name = "Walt Disney"
+				culture = american
+				skill = 6
+				discount = yes
+			}
+		}
+		IRE = {
+			add_country_modifier = {
+				name = great_power
+				duration = 100000
+			}
+		}
+	}
+}
+
+# Decline of the British Empire
+country_event = {
+	id = eh_britain.36
+	title = "eh_britain.36.t"
+	desc = "eh_britain.36.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1960
+		NOT = { is_year = 1962 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			LBY = {
+				cyrenaica_area = {
+					limit = {
+						NOT = { owned_by = LBY }
+					}
+					cede_province = LBY
+					add_core = LBY
+					remove_core = GBR
+				}
+				tripolitania_area = {
+					limit = {
+						NOT = { owned_by = LBY }
+					}
+					cede_province = LBY
+					add_core = LBY
+					remove_core = GBR
+				}
+				fezzan_area = {
+					limit = {
+						NOT = { owned_by = LBY }
+					}
+					cede_province = LBY
+					add_core = LBY
+					remove_core = FR2
+				}
+				1794 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LBY }
+						}
+					}
+					cede_province = LBY
+					add_core = LBY
+					remove_core = GBR
+				}
+				4172 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LBY }
+						}
+					}
+					cede_province = LBY
+					add_core = LBY
+					remove_core = GBR
+				}
+			}
+			SUD = {
+				darfur_central_sahara_area = {
+					limit = {
+						NOT = { owned_by = SUD }
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				dongola_area = {
+					limit = {
+						NOT = { owned_by = SUD }
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				kurdufan_area = {
+					limit = {
+						NOT = { owned_by = SUD }
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				sennar_area = {
+					limit = {
+						NOT = { owned_by = SUD }
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				south_sudan_area = {
+					limit = {
+						NOT = { owned_by = SUD }
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				upper_nubia_area = {
+					limit = {
+						NOT = { owned_by = SUD }
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				lower_nubia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SUD }
+							NOT = { province_id = 1234 }
+						}
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				1232 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+				3026 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = SUD
+					add_core = SUD
+					remove_core = GBR
+				}
+			}
+			GMB = {
+				3006 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GMB }
+						}
+					}
+					cede_province = GMB
+					add_core = GMB
+					remove_core = GBR
+				}
+			}
+			SRA = {
+				1118 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SRA }
+						}
+					}
+					cede_province = SRA
+					add_core = SRA
+					remove_core = GBR
+				}
+				3272 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SRA }
+						}
+					}
+					cede_province = SRA
+					add_core = SRA
+					remove_core = GBR
+				}
+			}
+			GHA = {
+				lower_volta_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHA }
+							NOT = { province_id = 2255 }
+							NOT = { province_id = 3270 }
+						}
+					}
+					cede_province = GHA
+					add_core = GHA
+					remove_core = GBR
+				}
+				dagbon_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GHA }
+							NOT = { province_id = 2267 }
+							NOT = { province_id = 2295 }
+						}
+					}
+					cede_province = GHA
+					add_core = GHA
+					remove_core = GBR
+				}
+				1139 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHA }
+						}
+					}
+					cede_province = GHA
+					add_core = GHA
+					remove_core = GBR
+				}
+				2258 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GHA }
+						}
+					}
+					cede_province = GHA
+					add_core = GHA
+					remove_core = GBR
+				}
+			}
+			NIG = {
+				benin_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NIG }
+							NOT = { province_id = 1141 }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				lower_niger_area = {
+					limit = {
+						NOT = { owned_by = NIG }
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				zazzau_area = {
+					limit = {
+						NOT = { owned_by = NIG }
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				hausa_area = {
+					limit = {
+						NOT = { owned_by = NIG }
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				gulf_of_guinea_area = {
+					limit = {
+						NOT = { owned_by = NIG }
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				adamawa_plateau_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NIG }
+							NOT = { province_id = 3033 }
+							NOT = { province_id = 3101 }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				1148 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIG }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				1149 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIG }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				1157 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIG }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				2283 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIG }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+				3273 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NIG }
+						}
+					}
+					cede_province = NIG
+					add_core = NIG
+					remove_core = GBR
+				}
+			}
+			SOM = {
+				somaliland_area = {
+					limit = {
+						NOT = { owned_by = SOM }
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = GBR
+				}
+				ajuuran_area = {
+					limit = {
+						NOT = { owned_by = SOM }
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = ITA
+				}
+				majarteen_area = {
+					limit = {
+						NOT = { owned_by = SOM }
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = ITA
+				}
+				mogadishu_area = {
+					limit = {
+						NOT = { owned_by = SOM }
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = ITA
+				}
+				1212 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOM }
+						}
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = GBR
+				}
+				2793 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOM }
+						}
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = GBR
+				}
+				2777 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOM }
+						}
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = ITA
+				}
+				2774 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SOM }
+						}
+					}
+					cede_province = SOM
+					add_core = SOM
+					remove_core = ITA
+				}
+			}
+			UGA = {
+				bunyoro_area = {
+					limit = {
+						NOT = { owned_by = UGA }
+					}
+					cede_province = UGA
+					add_core = UGA
+					remove_core = GBR
+				}
+				uganda_area = {
+					limit = {
+						NOT = { owned_by = UGA }
+					}
+					cede_province = UGA
+					add_core = UGA
+					remove_core = GBR
+				}
+			}
+			A15 = {
+				change_culture = masai
+				kenya_area = {
+					limit = {
+						NOT = { owned_by = A15 }
+					}
+					cede_province = A15
+					add_core = A15
+					remove_core = GBR
+				}
+				jubba_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = A15 }
+							NOT = { province_id = 2777 }
+						}
+					}
+					cede_province = A15
+					add_core = A15
+					remove_core = GBR
+				}
+				northern_swahili_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = A15 }
+							NOT = { province_id = 2774 }
+						}
+					}
+					cede_province = A15
+					add_core = A15
+					remove_core = GBR
+				}
+				mombasa_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = A15 }
+							NOT = { province_id = 1200 }
+						}
+					}
+					cede_province = A15
+					add_core = A15
+					remove_core = GBR
+				}
+			}
+			TNZ = {
+				tanzania_area = {
+					limit = {
+						NOT = { owned_by = TNZ }
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+				buha_area = {
+					limit = {
+						NOT = { owned_by = TNZ }
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+				buzinza_area = {
+					limit = {
+						NOT = { owned_by = TNZ }
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+				central_swahili_coast_area = {
+					limit = {
+						NOT = { owned_by = TNZ }
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+				ngonde_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TNZ }
+							NOT = { province_id = 4044 }
+							NOT = { province_id = 4045 }
+						}
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+				ruvuma_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TNZ }
+							NOT = { province_id = 4036 }
+							NOT = { province_id = 4037 }
+						}
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+				1200 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TNZ }
+						}
+					}
+					cede_province = TNZ
+					add_core = TNZ
+					remove_core = GBR
+				}
+			}
+			ZAM = {
+				zambia_area = {
+					limit = {
+						NOT = { owned_by = ZAM }
+					}
+					cede_province = ZAM
+					add_core = ZAM
+					remove_core = GBR
+				}
+				upper_zambezi_area = {
+					limit = {
+						NOT = { owned_by = ZAM }
+					}
+					cede_province = ZAM
+					add_core = ZAM
+					remove_core = GBR
+				} 
+				chokwe_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = ZAM }
+							NOT = { province_id = 4094 }
+							NOT = { province_id = 4095 }
+						}
+					}
+					cede_province = ZAM
+					add_core = ZAM
+					remove_core = GBR
+				}
+				4103 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ZAM }
+						}
+					}
+					cede_province = ZAM
+					add_core = ZAM
+					remove_core = GBR
+				}
+			}
+			MWI = {
+				ngonde_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MWI }
+							NOT = { province_id = 4073 }
+							NOT = { province_id = 4041 }
+						}
+					}
+					cede_province = MWI
+					add_core = MWI
+					remove_core = GBR
+				}
+				shire_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = MWI }
+							NOT = { province_id = 4039 }
+						}
+					}
+					cede_province = MWI
+					add_core = MWI
+					remove_core = GBR
+				}
+			}
+			RHO = {
+				zimbabwe_area = {
+					limit = {
+						NOT = { owned_by = RHO }
+					}
+					cede_province = RHO
+					add_core = RHO
+					remove_core = GBR
+				}
+				butua_area = {
+					limit = {
+						NOT = { owned_by = RHO }
+					}
+					cede_province = RHO
+					add_core = RHO
+					remove_core = GBR
+				}
+				matabeleland_area = {
+					limit = {
+						NOT = { owned_by = RHO }
+					}
+					cede_province = RHO
+					add_core = RHO
+					remove_core = GBR
+				}
+			}
+			BOT = {
+				kalahari_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BOT }
+							NOT = { province_id = 3223 }
+						}
+					}
+					cede_province = BOT
+					add_core = BOT
+					remove_core = GBR
+				}
+				botswana_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BOT }
+							NOT = { province_id = 4782 }
+						}
+					}
+					cede_province = BOT
+					add_core = BOT
+					remove_core = GBR
+				}
+			}
+			SWZ = {
+				4783 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWZ }
+						}
+					}
+					cede_province = SWZ
+					add_core = SWZ
+					remove_core = GBR
+				}
+			}
+			LES = {
+				3011 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LES }
+						}
+					}
+					cede_province = LES
+					add_core = LES
+					remove_core = GBR
+				}
+			}
+			AUS = {
+				1998 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUS }
+						}
+					}
+					cede_province = AUS
+					add_core = AUS
+					remove_core = GBR
+				}
+				1999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUS }
+						}
+					}
+					cede_province = AUS
+					add_core = AUS
+					remove_core = GBR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.36.a"
+		ai_chance = { factor = 100 }
+		GBR = { 
+			remove_country_modifier = major_power
+			add_prestige = -10
+			define_advisor = {
+				type = artist
+				name = "The Beatles"
+				culture = english
+				skill = 6
+				discount = yes
+			}
+		}
+		LBY = {
+			set_capital = 354
+			change_religion = sunni
+			every_owned_province = { change_religion = sunni }
+		}
+		FR2 = { country_event = { id = eh_french.38 days = 7 } }
+		BEL = { country_event = { id = eh_dutch.10 days = 7 } }
+	}
+}
+
+# Thatcher era
+country_event = {
+	id = eh_britain.37
+	title = "eh_britain.37.t"
+	desc = "eh_britain.37.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1980
+		NOT = { is_year = 1982 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BLZ = {
+				843 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLZ }
+						}
+					}
+					cede_province = BLZ
+					add_core = BLZ
+					remove_core = GBR
+				}
+				4589 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BLZ }
+						}
+					}
+					cede_province = BLZ
+					add_core = BLZ
+					remove_core = GBR
+				}
+			}
+			DJI = {
+				1215 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DJI }
+						}
+					}
+					cede_province = DJI
+					add_core = DJI
+					remove_core = FR2
+				}
+			}
+			RHO = { change_tag = GZI }
+		}
+	}
+	
+	option = {
+		name = "eh_britain.37.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+            add_stability = 1
+            add_prestige = 10
+			add_years_of_income = 1
+			home_counties_area = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 1
+			}
+			west_midlands_area = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 1
+			}
+			scottish_marches_area = {
+				add_prosperity = 5
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 1
+			}
+			define_advisor = {
+				type = statesman
+				name = "Margaret Thatcher"
+				culture = english
+				skill = 3
+				discount = yes
+				female = yes
+			}
+		}
+		NED = {
+			define_ruler = {
+				name = "Beatrix I"
+				dynasty = "van Oranje"
+				change_adm = 4
+				change_dip = 4
+				change_mil = 3
+				female = yes
+				age = 32
+			}
+		}
+	}
+}
+
+# Falklands War
+country_event = {
+	id = eh_britain.38
+	title = "eh_britain.38.t"
+	desc = "eh_britain.38.d"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 1982
+		NOT = { is_year = 1983 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_britain.38.a"
+		ai_chance = { factor = 100 }
+		GBR = { add_prestige = 10 }
+		LAP = { add_prestige = -10 }
+	}
+}
+
+# Scottish Independence referendum
+country_event = {
+	id = eh_britain.39
+	title = "eh_britain.39.t"
+	desc = "eh_britain.39.d"
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 2014
+		NOT = { is_year = 2015 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_britain.39.a"
+		ai_chance = { factor = 100 }
+		GBR = { add_prestige = 10 }
+	}
+	
+	option = {
+		name = "eh_britain.39.b"
+		ai_chance = { factor = 0 }
+		GBR = { add_prestige = -10 }
+		SCO = {
+			lowlands_area = {
+				limit = {
+					NOT = { owned_by = SCO }
+				}
+				cede_province = SCO
+				add_core = SCO
+				remove_core = GBR
+			}
+			highlands_area = {
+				limit = {
+					NOT = { owned_by = SCO }
+				}
+				cede_province = SCO
+				add_core = SCO
+				remove_core = GBR
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = SCO }
+						NOT = { province_id = 4365 }
+					}
+				}
+				cede_province = SCO
+				add_core = SCO
+				remove_core = GBR
+			}
+			1978 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SCO }
+					}
+				}
+				cede_province = SCO
+				add_core = SCO
+				remove_core = GBR
+			}
+			4361 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SCO }
+					}
+				}
+				cede_province = SCO
+				add_core = SCO
+				remove_core = GBR
+			}
+			4362 = {
+				if = {
+					limit = {
+						NOT = { owned_by = SCO }
+					}
+				}
+				cede_province = SCO
+				add_core = SCO
+				remove_core = GBR
+			}
+		}
+	}
+}
+
+# Brexit
+country_event = {
+	id = eh_britain.40
+	title = "eh_britain.40.t"
+	desc = "eh_britain.40.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GBR
+		is_year = 2020
+		NOT = { is_year = 2022 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "eh_britain.40.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			add_prestige = -10
+			add_years_of_income = -1
+		}
+		CAN = {
+			define_ruler = {
+				name = "Justin Trudeau"
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 44
+			}
+		}
+		FR2 = {
+			define_ruler = {
+				name = "Emmanuel Macron"
+				change_adm = 3
+				change_dip = 5
+				change_mil = 3
+				age = 40
+			}
+		}
+		SPA = {
+			define_ruler = {
+				name = "Felipe VI"
+				dynasty = "de Bourbon"
+				change_adm = 1
+				change_dip = 5
+				change_mil = 4
+				age = 46
+			}
+		}
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Henry VIII
+country_event = {
+	id = eh_britain.41
+	title = "eh_britain.41.t"
+	desc = "eh_britain.41.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		tag = ENG
+		is_year = 1510
+		NOT = { is_year = 1545 }
+		NOT = { has_ruler = "Henry VIII" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_britain.41.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			set_government_rank = 2
+			change_religion = anglican
+			define_ruler = {
+				name = "Henry VIII"
+				dynasty = "Tudor"
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				min_age = 20
+				max_age = 55
+			}
+			define_consort = {
+				name = "Catherine"
+				dynasty = "de Trastamara"
+				culture = aragonese
+				change_adm = 5
+				change_dip = 4
+				change_mil = 4
+				female = yes
+			}
+		}
+	}
+}
+
+# Queen Elizabeth I
+country_event = {
+	id = eh_britain.42
+	title = "eh_britain.42.t"
+	desc = "eh_britain.42.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = ENG
+		is_year = 1560
+		NOT = { is_year = 1600 }
+		NOT = { has_ruler = "Elizabeth I" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_britain.42.a"
+		ai_chance = { factor = 100 }
+		ENG = {
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			set_government_rank = 2
+			change_religion = anglican
+			define_ruler = {
+				name = "Elizabeth I"
+				dynasty = "Tudor"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 5
+				female = yes
+				min_age = 35
+				max_age = 70
+			}
+			remove_consort = yes
+		}
+	}
+}
+
+# Queen Victoria
+country_event = {
+	id = eh_britain.43
+	title = "eh_britain.43.t"
+	desc = "eh_britain.43.d"
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = GBR
+		is_year = 1840
+		NOT = { is_year = 1895 }
+		NOT = { has_ruler = "Victoria I" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_britain.43.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			set_government_rank = 3
+			define_ruler = {
+				name = "Victoria I"
+				dynasty = "von Hannover"
+				culture = english
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				female = yes
+				min_age = 20
+				max_age = 75
+			}
+			define_consort = {
+				name = "Albert"
+				dynasty = "von Saxe-Coburg"
+				culture = saxon
+				change_adm = 4
+				change_dip = 4
+				change_mil = 4
+				female = no
+			}
+		}
+	}
+}
+
+# Queen Elizabeth II
+country_event = {
+	id = eh_britain.44
+	title = "eh_britain.44.t"
+	desc = "eh_britain.44.d"
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	trigger = {
+		tag = GBR
+		is_year = 1952
+		NOT = { is_year = 2025 }
+		NOT = { has_ruler = "Elizabeth II" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_britain.44.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			define_ruler = {
+				name = "Elizabeth II"
+				dynasty = "of Windsor"
+				culture = english
+				change_adm = 5
+				change_dip = 4
+				change_mil = 2
+				female = yes
+				min_age = 26
+				max_age = 100
+			}
+			define_consort = {
+				name = "Philip"
+				dynasty = "Mountbatten"
+				culture = greek
+				change_adm = 3
+				change_dip = 3
+				change_mil = 3
+				female = no
+			}
+			define_heir = {
+				name = "Charles"
+				dynasty = "of Windsor"
+				culture = english
+				change_adm = 3
+				change_dip = 3
+				change_mil = 3
+			}
+		}
+	}
+}
+
+# Seven Years' War - Start for Britain
+country_event = {
+	id = eh_britain.45
+	title = "eh_britain.45.t"
+	desc = "eh_britain.45.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.45.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Seven Years' War - Finish for Britain
+country_event = {
+	id = eh_britain.46
+	title = "eh_britain.46.t"
+	desc = "eh_britain.46.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.46.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# War of the First Coalition - Start for Britain
+country_event = {
+	id = eh_britain.47
+	title = "eh_britain.47.t"
+	desc = "eh_britain.47.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.47.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Directorate - Finish for Britain
+country_event = {
+	id = eh_britain.48
+	title = "eh_britain.48.t"
+	desc = "eh_britain.48.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.48.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# War of the Fourth Coalition - Start for Britain
+country_event = {
+	id = eh_britain.49
+	title = "eh_britain.49.t"
+	desc = "eh_britain.49.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.49.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Confederation of the Rhine - Finish for Britain
+country_event = {
+	id = eh_britain.50
+	title = "eh_britain.50.t"
+	desc = "eh_britain.50.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.50.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Hundred Days - Start for Britain
+country_event = {
+	id = eh_britain.51
+	title = "eh_britain.51.t"
+	desc = "eh_britain.51.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.51.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Surrender of Napoleon - Finish for Britain
+country_event = {
+	id = eh_britain.52
+	title = "eh_britain.52.t"
+	desc = "eh_britain.52.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.52.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# First Opium War - Start for Britain
+country_event = {
+	id = eh_britain.53
+	title = "eh_britain.53.t"
+	desc = "eh_britain.53.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.53.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Treaty of Nanking - Finish for Britain
+country_event = {
+	id = eh_britain.54
+	title = "eh_britain.54.t"
+	desc = "eh_britain.54.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.54.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Second Opium War - Start for Britain
+country_event = {
+	id = eh_britain.55
+	title = "eh_britain.55.t"
+	desc = "eh_britain.55.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.55.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Convention of Peking - Finish for Britain
+country_event = {
+	id = eh_britain.56
+	title = "eh_britain.56.t"
+	desc = "eh_britain.56.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.56.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Disturbance in Japan - Start for Britain
+country_event = {
+	id = eh_britain.57
+	title = "eh_britain.57.t"
+	desc = "eh_britain.57.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.57.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Bombardment of Kagoshima - Finish for Britain
+country_event = {
+	id = eh_britain.58
+	title = "eh_britain.58.t"
+	desc = "eh_britain.58.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.58.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Bombardment of Shimonoseki - Start for Britain
+country_event = {
+	id = eh_britain.59
+	title = "eh_britain.59.t"
+	desc = "eh_britain.59.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.59.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Shimonoseki Campaign - Finish for Britain
+country_event = {
+	id = eh_britain.60
+	title = "eh_britain.60.t"
+	desc = "eh_britain.60.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.60.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Sepoy Rebellion of 1857 - Start for Britain
+country_event = {
+	id = eh_britain.61
+	title = "eh_britain.61.t"
+	desc = "eh_britain.61.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.61.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# British Raj - Finish for Britain
+country_event = {
+	id = eh_britain.62
+	title = "eh_britain.62.t"
+	desc = "eh_britain.62.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			EIC = {
+				change_tag = BRJ
+				change_government = republic
+				add_government_reform = crown_colony_government
+				set_government_rank = 1
+				add_liberty_desire = -100
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_britain.62.a"
+		ai_chance = { factor = 100 }
+		GBR = {
+			create_subject = {
+				subject_type = crown_colony
+				subject = BRJ
+			}
+		}
+	}
+}
+
+# Boxer Rebellion - Start for Britain
+country_event = {
+	id = eh_britain.63
+	title = "eh_britain.63.t"
+	desc = "eh_britain.63.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.63.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boxer Protocol - Finish for Britain
+country_event = {
+	id = eh_britain.64
+	title = "eh_britain.64.t"
+	desc = "eh_britain.64.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.64.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# World War I - Start for Britain
+country_event = {
+	id = eh_britain.65
+	title = "eh_britain.65.t"
+	desc = "eh_britain.65.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.65.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Treaty of Versaille - Finish for Britain
+country_event = {
+	id = eh_britain.66
+	title = "eh_britain.66.t"
+	desc = "eh_britain.66.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.66.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# World War II - Start for Britain
+country_event = {
+	id = eh_britain.67
+	title = "eh_britain.67.t"
+	desc = "eh_britain.67.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.67.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Victory over Japan Day - Finish for Britain
+country_event = {
+	id = eh_britain.68
+	title = "eh_britain.68.t"
+	desc = "eh_britain.68.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.68.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Korean War - Start for Britain
+country_event = {
+	id = eh_britain.69
+	title = "eh_britain.69.t"
+	desc = "eh_britain.69.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.69.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Korean War - Finish for Britain
+country_event = {
+	id = eh_britain.70
+	title = "eh_britain.70.t"
+	desc = "eh_britain.70.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_britain.70.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Religion in Scotland
+province_event = {
+	id = eh_britain.71
+	title = "eh_britain.71.t"
+	desc = "eh_britain.71.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		OR = {
+			area = highlands_area
+			area = lowlands_area
+			area = kingdom_of_the_isles_area
+		}
+		NOT = { religion = reformed }
+		is_year = 1550
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+
+		modifier = {
+			factor = 0.8
+			is_year = 650
+		}
+		modifier = {
+			factor = 0.8
+			any_neighbor_province = { religion = anglican }
+		}
+	}
+	
+	option = {
+		name = "eh_britain.71.a"
+		ai_chance = { factor = 100 }
+		every_province = {
+			limit = {
+				AND = {
+					OR = {
+						area = highlands_area
+						area = lowlands_area
+						area = kingdom_of_the_isles_area
+					}
+					NOT = { religion = reformed }
+				}
+			}
+			change_religion = reformed
+		}
+	}
+}
+
+# Religion in Ireland
+province_event = {
+	id = eh_britain.72
+	title = "eh_britain.72.t"
+	desc = "eh_britain.72.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	trigger = {
+		OR = {
+			AND = {
+				area = ulster_area
+				NOT = { province_id = 4121 }
+			}
+			area = leinster_area
+			area = munster_area
+			area = connacht_area
+		}
+		NOT = { religion = catholic }
+		is_year = 1500
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+
+		modifier = {
+			factor = 0.8
+			is_year = 650
+		}
+		modifier = {
+			factor = 0.8
+			any_neighbor_province = { religion = anglican }
+		}
+	}
+	
+	option = {
+		name = "eh_britain.72.a"
+		ai_chance = { factor = 100 }
+		every_province = {
+			limit = {
+				AND = {
+					OR = {
+						AND = {
+							area = ulster_area
+							NOT = { province_id = 4121 }
+						}
+						area = leinster_area
+						area = munster_area
+						area = connacht_area
+					}
+					NOT = { religion = catholic }
+				}
+			}
+			change_religion = catholic
+		}
+	}
+}
+
+# EH version

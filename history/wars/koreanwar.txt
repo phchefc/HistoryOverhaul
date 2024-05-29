@@ -1,0 +1,220 @@
+name = "Korean War"
+
+war_goal = {
+	type = war_goal_spread_communism
+	casus_belli = cb_spread_communism
+	tag = SKO
+}
+
+1950.6.25 = {
+	add_attacker = NOK
+	add_defender = SKO
+}
+
+1950.6.28 = {
+	battle = {
+		name = "Seoul"
+		location = 735
+		attacker = {
+			commander = "Kim Chaek"
+			infantry = 107000
+			losses = 5	# percent
+			country = NOK
+		}
+		defender = {
+			commander = "Chae Byung-duk"
+			infantry = 65000
+			losses = 70	# percent
+			country = SKO
+		}
+		result = yes
+	}
+}
+
+1950.7.7 = {
+	add_defender = USA
+	add_defender = GBR
+	add_defender = FR2
+	add_defender = AUS
+	add_defender = CAN
+	add_defender = NZL
+	add_defender = PHI
+	add_defender = TKY
+	add_defender = NED
+	add_defender = BEL
+	add_defender = LUX
+	add_defender = GRE
+	add_defender = RSA
+	add_defender = COL
+	add_defender = ETH
+	add_defender = SIA
+}
+
+1950.9.18 = {
+	battle = {
+		name = "Pusan Perimeter"
+		location = 2745
+		attacker = {
+			commander = "Choi Yong-kun"
+			infantry = 70000
+			losses = 90	# percent
+			country = NOK
+		}
+		defender = {
+			commander = "Douglas MacArthur"
+			infantry = 92000
+			losses = 60	# percent
+			country = USA
+		}
+		result = no
+	}
+}
+
+1950.9.20 = {
+	battle = {
+		name = "Inchon"
+		location = 735
+		attacker = {
+			commander = "Choi Yong-kun"
+			infantry = 6500
+			losses = 20	# percent
+			country = NOK
+		}
+		defender = {
+			commander = "Douglas MacArthur"
+			infantry = 40000
+			losses = 2	# percent
+			country = USA
+		}
+		result = no
+	}
+}
+
+1950.10.18 = {
+	battle = {
+		name = "Pyongyang"
+		location = 1845
+		attacker = {
+			commander = "Choi Yong-kun"
+			infantry = 10000
+			losses = 70	# percent
+			country = NOK
+		}
+		defender = {
+			commander = "Paik Sun-yup"
+			infantry = 28500
+			losses = 1	# percent
+			country = SKO
+		}
+		result = no
+	}
+}
+
+1950.10.19 = {
+	add_attacker = CHN
+}
+
+1950.12.13 = {
+	battle = {
+		name = "Chosin Reservoir"
+		location = 2743
+		attacker = {
+			commander = "Peng Dehuai"
+			infantry = 120000
+			losses = 50	# percent
+			country = CHN
+		}
+		defender = {
+			commander = "Edward Almond"
+			infantry = 30000
+			losses = 70	# percent
+			country = USA
+		}
+		result = yes
+	}
+}
+
+1951.1.4 = {
+	battle = {
+		name = "Seoul"
+		location = 735
+		attacker = {
+			commander = "Peng Dehuai"
+			infantry = 170000
+			losses = 5	# percent
+			country = CHN
+		}
+		defender = {
+			commander = "Matthew B. Ridgway"
+			infantry = 150000
+			losses = 1	# percent
+			country = USA
+		}
+		result = yes
+	}
+}
+
+1951.6.10 = {
+	battle = {
+		name = "Spring Offensive"
+		location = 734
+		attacker = {
+			commander = "Peng Dehuai"
+			infantry = 700000
+			losses = 25	# percent
+			country = CHN
+		}
+		defender = {
+			commander = "Matthew B. Ridgway"
+			infantry = 415800
+			losses = 5	# percent
+			country = USA
+		}
+		result = no
+	}
+}
+
+1952.10.15 = {
+	battle = {
+		name = "White Horse"
+		location = 734
+		attacker = {
+			commander = "Jiang Yonghui"
+			infantry = 44500
+			losses = 20	# percent
+			country = CHN
+		}
+		defender = {
+			commander = "Kim Jong-oh"
+			infantry = 20000
+			losses = 15	# percent
+			country = SKO
+		}
+		result = no
+	}
+}
+
+# Truce
+1953.7.27 = {
+	rem_attacker = NOK
+	rem_attacker = CHN
+	rem_defender = SKO
+	rem_defender = USA
+	rem_defender = GBR
+	rem_defender = FR2
+	rem_defender = AUS
+	rem_defender = CAN
+	rem_defender = NZL
+	rem_defender = PHI
+	rem_defender = TKY
+	rem_defender = NED
+	rem_defender = BEL
+	rem_defender = LUX
+	rem_defender = GRE
+	rem_defender = RSA
+	rem_defender = COL
+	rem_defender = ETH
+	rem_defender = SIA
+}
+
+# EH version

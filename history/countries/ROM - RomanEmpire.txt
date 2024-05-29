@@ -1,0 +1,908 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+primary_culture = roman
+add_accepted_culture = greek
+add_accepted_culture = gallian
+add_accepted_culture = frankish
+add_accepted_culture = old_egyptian
+add_accepted_culture = aramaic
+add_accepted_culture = berber
+add_accepted_culture = iberi
+add_accepted_culture = illyrian
+add_accepted_culture = thracian
+add_accepted_culture = dacian
+historical_rival = PRT
+historical_rival = ERS
+religion = hellenism
+technology_group = roman_group
+capital = 118 # Rome
+
+2.1.1 = { decision = dummy_pax_romana }
+
+2.1.1 = {
+	monarch = {
+		name = "Augustus"
+		dynasty = "Julio-Claudian"
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = righteous_personality
+	add_ruler_personality = just_personality
+	queen = {
+		country_of_origin = ROM
+		name = "Livia"
+		dynasty = "Drusilla"
+		birth_date = -59.1.10
+		death_date = 14.9.28
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+} # EH version
+
+14.9.18 = {
+	monarch = {
+		name = "Tiberius"
+		dynasty = "Julio-Claudian"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = strict_personality
+	add_ruler_personality = indulgent_personality
+}
+
+14.9.18 = {
+	heir = {
+		name = "Caligula"
+		monarch_name = "Caligula"
+		dynasty = "Julio-Claudian"
+		birth_date = 12.8.31
+		death_date = 41.1.24
+		claim = 80
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	add_heir_personality = babbling_buffoon_personality
+	add_heir_personality = cruel_personality
+} # EH version
+
+37.3.18 = {
+	monarch = {
+		name = "Caligula"
+		dynasty = "Julio-Claudian"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = babbling_buffoon_personality
+	add_ruler_personality = cruel_personality
+} # EH version
+
+37.3.18 = {
+	heir = {
+		name = "Claudius"
+		monarch_name = "Claudius"
+		dynasty = "Julio-Claudian"
+		birth_date = 2.1.1
+		death_date = 54.10.13
+		claim = 80
+		adm = 5
+		dip = 2
+		mil = 3
+	}
+	add_heir_personality = conqueror_personality
+	add_heir_personality = careful_personality
+}
+
+41.1.24 = {
+	monarch = {
+		name = "Claudius"
+		dynasty = "Julio-Claudian"
+		adm = 5
+		dip = 2
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality
+	add_ruler_personality = careful_personality
+}
+
+41.1.24 = {
+	heir = {
+		name = "Nero"
+		monarch_name = "Nero"
+		dynasty = "Julio-Claudian"
+		birth_date = 37.12.15
+		death_date = 68.6.9
+		claim = 80
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	add_heir_personality = greedy_personality
+	add_heir_personality = obsessive_perfectionist_personality
+} # EH version
+
+54.10.13 = {
+	monarch = {
+		name = "Nero"
+		dynasty = "Julio-Claudian"
+		birth_date = 37.12.15
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = greedy_personality
+	add_ruler_personality = obsessive_perfectionist_personality
+} # EH version
+
+58.1.1 = { leader = {	name = "Gnaeus Domitius Corbulo"               	type = general		fire = 1	shock = 4	manuever = 2	siege = 1	death_date = 67.6.1 } }
+
+# The great fire of Rome 
+# Roman-Parthian War 58-63
+# Boudica 60-61
+# Civil war 69 The year of the four emperors
+
+68.6.8 = {
+	monarch = {
+		name = "Galba"
+		dynasty = "Severius Sulpicius"
+		adm = 0
+		dip = 0
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+} # EH version
+
+69.1.15 = {
+	monarch = {
+		name = "Otho"
+		dynasty = "Marcus Salvius"
+		culture = etruscan
+		adm = 1
+		dip = 1
+		mil = 4
+	}
+} # EH version
+
+69.4.17 = {
+	monarch = {
+		name = "Vitellius"
+		dynasty = "Aulus"
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+} # EH version
+
+69.7.1 = {
+	monarch = {
+		name = "Vespasian"
+		dynasty = "Flavian"
+		culture = umbrian
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = architectural_visionary_personality
+} # EH version
+
+69.7.1 = {
+	heir = {
+		name = "Titus"
+		monarch_name = "Titus"
+		dynasty = "Flavian"
+		birth_date = 39.12.30
+		death_date = 81.9.13
+		culture = umbrian
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	add_heir_personality = kind_hearted_personality
+	add_heir_personality = entrepreneur_personality
+} # EH version
+
+79.6.24 = {
+	monarch = {
+		name = "Titus"
+		dynasty = "Flavian"
+		culture = umbrian
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = kind_hearted_personality
+	add_ruler_personality = entrepreneur_personality
+} # EH version
+
+#79 Pompeii, 80 Fire in Rome
+
+81.9.14 = {
+	monarch = {
+		name = "Domitian"
+		dynasty = "Flavian"
+		culture = umbrian
+		adm = 1
+		dip = 2
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = loose_lips_personality
+} # EH version
+
+#89 rebellion of Lucius Antonius Saturnius
+
+96.9.18 = {
+	monarch = {
+		name = "Nerva"
+		dynasty = "Nerva-Antonine"
+		culture = piedmontese
+		adm = 4
+		dip = 5
+		mil = 0
+	}
+	clear_scripted_personalities = yes
+} # EH version
+
+97.7.1 = {
+	heir = {
+		name = "Trajan"
+		monarch_name = "Trajan"
+		dynasty = "Nerva-Antonine"
+		birth_date = 53.9.18
+		death_date = 117.8.9
+		culture = umbrian
+		claim = 90
+		adm = 5
+		dip = 5
+		mil = 6
+	}
+	add_heir_personality = conqueror_personality
+	add_heir_personality = inspiring_leader_personality
+}
+
+98.1.28 = {
+	monarch = {
+		name = "Trajan"
+		dynasty = "Nerva-Antonine"
+		culture = umbrian
+		adm = 5
+		dip = 6
+		mil = 6
+		leader = {	name = "Trajan"      	type = general		fire = 2	shock = 4	manuever = 3	siege = 0}
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality
+	add_ruler_personality = inspiring_leader_personality
+} # EH version
+
+98.1.28 = {
+	heir = {
+		name = "Hadrian"
+		monarch_name = "Hadrian"
+		dynasty = "Nerva-Antonine"
+		birth_date = 76.1.24
+		death_date = 138.7.10
+		culture = piedmontese
+		claim = 90
+		adm = 6
+		dip = 4
+		mil = 4
+	}
+	add_heir_personality = calm_personality
+	add_heir_personality = architectural_visionary_personality
+} # EH version
+
+#101 Conquest of Dacia, 105 Rebellion in Dacia
+#112 War with Parthia & Armenia, Annexed Armenia, Babylon Seleucia, capital Ctesiphon at 116. Later in 116 also Susa.
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+117.8.11 = {
+	monarch = {
+		name = "Hadrian"
+		dynasty = "Nerva-Antonine"
+		culture = piedmontese
+		adm = 6
+		dip = 4
+		mil = 4
+		leader = {	name = "Hadrian"        	type = general		fire = 3	shock = 3	manuever = 3	siege = 0}
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = calm_personality
+	add_ruler_personality = architectural_visionary_personality
+} # EH version
+
+#Mesopotamian conquests surrendered, Jewish revolt in Judea 132-135
+
+138.2.25 = {
+	heir = {
+		name = "Antonius Pius"
+		monarch_name = "Antonius Pius"
+		dynasty = "Nerva-Antonine"
+		birth_date = 86.9.19
+		death_date = 161.3.7
+		culture = gallian
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	add_heir_personality = calm_personality
+	add_heir_personality = scholar_personality
+} # EH version
+
+138.6.10 = {
+	monarch = {
+		name = "Antonius Pius"
+		dynasty = "Nerva-Antonine"
+		culture = gallian
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = calm_personality
+	add_ruler_personality = scholar_personality
+} # EH version
+
+#Minor revolts in Mauretania, Judea & Britain
+
+139.7.15 = {
+	heir = {
+		name = "Marcus Aurelius"
+		monarch_name = "Marcus Aurelius"
+		dynasty = "Nerva-Antonine"
+		birth_date = 121.4.26
+		death_date = 180.3.17
+		culture = gallian
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	add_heir_personality = inspiring_leader_personality
+	add_heir_personality = scholar_personality
+}
+
+161.3.7 = {
+	monarch = {
+		name = "Marcus Aurelius"
+		dynasty = "Nerva-Antonine"
+		culture = gallian
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = {	name = "Marcus Aurelius"      	type = general		fire = 2	shock = 4	manuever = 3	siege = 0}
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = scholar_personality
+}
+
+#Germanic assaults
+#War with Parthia
+#175 Narcomannic Wars, rebellion of Avidius Cassius. Captured Egypt & Syria
+
+161.8.31 = {
+	heir = {
+		name = "Commodus"
+		monarch_name = "Commodus"
+		dynasty = "Nerva-Antonine"
+		birth_date = 161.8.31
+		death_date = 192.12.31
+		culture = gallian
+		claim = 90
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	add_heir_personality = craven_personality
+	add_heir_personality = babbling_buffoon_personality
+} # EH version
+
+165.1.1 = { leader = {	name = "Lucius Verus"               	type = general		fire = 1	shock = 4	manuever = 4	siege = 1	death_date = 169.8.1}}
+
+180.3.17 = { decision = end_pax_romana }
+
+180.3.17 = {
+	monarch = {
+		name = "Commodus"
+		dynasty = "Nerva-Antonine"
+		culture = gallian
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = craven_personality
+	add_ruler_personality = babbling_buffoon_personality
+} # EH version
+
+193.1.1 = {
+	monarch = {
+		name = "Pertinax"
+		dynasty = "Publius Helvius"
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+} # EH version
+
+193.3.28 = {
+	monarch = {
+		name = "Didius"
+		dynasty = "Severus Julianus"
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+} # EH version
+
+193.6.1 = {
+	monarch = {
+		name = "Septimius Severus"
+		dynasty = "Severan"
+		culture = punic
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = embezzler_personality
+} # EH version
+
+193.6.1 = {
+	heir = {
+		name = "Caracalla"
+		monarch_name = "Caracalla"
+		dynasty = "Severan"
+		birth_date = 188.4.4
+		death_date = 217.4.8
+		culture = punic
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	add_heir_personality = cruel_personality
+	add_heir_personality = lawgiver_personality
+} # EH version
+
+211.2.5 = {
+	monarch = {
+		name = "Caracalla"
+		dynasty = "Severan"
+		culture = punic
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = lawgiver_personality
+} # EH version
+
+217.4.9 = {
+	monarch = {
+		name = "Macrinus"
+		dynasty = "Pius Felix"
+		culture = umbrian
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+} # EH version
+
+218.6.8 = {
+	monarch = {
+		name = "Elagabalus"
+		dynasty = "Severan"
+		culture = aramaic
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+} # EH version
+
+222.3.12 = {
+	monarch = {
+		name = "Severus Alexander"
+		dynasty = "Severan"
+		culture = aramaic
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = craven_personality
+	add_ruler_personality = infertile_personality
+} # EH version
+
+#War with Sassanid Empire
+
+#Chrisis of the Third Century:
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+235.3.20 = { decision = dummy_empire_declining }
+
+235.3.20 = {
+	monarch = {
+		name = "Maximinus I"
+		dynasty = "Julius Verus"
+		culture = dacian
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+}
+
+238.3.22 = {
+	monarch = {
+		name = "Gordian I"
+		dynasty = "Semporianus"
+		culture = cappadocian
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+} # EH version
+
+238.4.22 = {
+	monarch = {
+		name = "Gordian III"
+		dynasty = "Marcus Antonius"
+		culture = cappadocian
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+} # EH version
+
+244.2.12 = {
+	monarch = {
+		name = "Philip I"
+		dynasty = "Marcus Julius"
+		culture = nabataean_culture
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+} # EH version
+
+249.10.1 = {
+	monarch = {
+		name = "Trajan Decius"
+		dynasty = "Decian"
+		culture = illyrian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+249.10.1 = {
+	heir = {
+		name = "Hostilian"
+		monarch_name = "Hostilian"
+		dynasty = "Decian"
+		birth_date = 230.1.1
+		death_date = 251.9.30
+		culture = illyrian
+		claim = 90
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+} # EH version
+
+251.6.14 = {
+	monarch = {
+		name = "Hostilian"
+		dynasty = "Decian"
+		culture = illyrian
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+} # EH version
+
+251.10.1 = {
+	monarch = {
+		name = "Trebonianus Gallus"
+		dynasty = "Gaius Vibius"
+		culture = etruscan
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+} # EH version
+
+253.8.1 = {
+	monarch = {
+		name = "Aemilian"
+		dynasty = "Aemilianus"
+		culture = berber
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+} # EH version
+
+253.9.1 = {
+	monarch = {
+		name = "Valerian"
+		dynasty = "Licinius"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+} # EH version
+
+253.9.1 = {
+	heir = {
+		name = "Gallienus"
+		monarch_name = "Gallienus"
+		dynasty = "Licinius"
+		birth_date = 218.1.1
+		death_date = 268.8.31
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+} # EH version
+
+260.1.1 = {
+	monarch = {
+		name = "Gallienus"
+		dynasty = "Licinius"
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+} # EH version
+
+268.9.1 = {
+	monarch = {
+		name = "Claudius Gothicus"
+		dynasty = "Aurelius"
+		culture = illyrian
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+270.1.1 = {
+	monarch = {
+		name = "Quintillus"
+		dynasty = "Aurelius"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+270.9.1 = {
+	monarch = {
+		name = "Aurelian"
+		dynasty = "Lucius Domitius"
+		culture = illyrian
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = entrepreneur_personality
+}
+
+275.9.25 = {
+	monarch = {
+		name = "Tacitus"
+		dynasty = "Marcus"
+		culture = thracian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+} # EH version
+
+276.6.1 = {
+	monarch = {
+		name = "Florian"
+		dynasty = "Marcus"
+		culture = thracian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+276.9.1 = {
+	monarch = {
+		name = "Probus"
+		culture = illyrian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+282.10.1 = {
+	monarch = {
+		name = "Carus"
+		culture = gallian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+283.8.1 = {
+	monarch = {
+		name = "Carinus"
+		culture = gallian
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+} # EH version
+
+284.11.20 = {
+	monarch = {
+		name = "Diocletian"
+		culture = dalmatian
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = zealot_personality
+} # EH version
+
+305.5.1 = {
+	monarch = {
+		name = "(Tetrarchy)" # Tetrarchy (A01/02/03/04)
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+} # EH version
+
+324.9.18 = {
+	monarch = {
+		name = "Constantine I" # Sole ruler
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 5
+		dip = 4
+		mil = 5
+		religion = chalcedonism
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = tolerant_personality
+} # EH version
+
+330.1.1 = { capital = 151 } #Constantinople
+
+337.9.9 = {
+	monarch = {
+		name = "(Division)" # Division (A01/02/03)
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+350.1.18 = {
+	monarch = {
+		name = "Constantius II" # Sole ruler (A03)
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 3
+		dip = 3
+		mil = 3
+		religion = arianism
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+361.11.3 = {
+	monarch = {
+		name = "Julian II" # Sole ruler (A02)
+		dynasty = "Constantinian"
+		culture = dacian
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = zealot_personality
+} # EH version
+
+363.6.26 = {
+	monarch = {
+		name = "Jovian"
+		dynasty = "Constantinian"
+		culture = illyrian
+		adm = 0
+		dip = 2
+		mil = 0
+		religion = chalcedonism
+	}
+	clear_scripted_personalities = yes
+} # EH version
+
+364.2.26 = {
+	monarch = {
+		name = "Valentinian I"
+		dynasty = "Valentinian"
+		culture = dalmatian
+		adm = 2
+		dip = 4
+		mil = 3
+		religion = chalcedonism
+	}
+} # EH version
+
+364.3.28 = {
+	monarch = {
+		name = "(Division)" # Division (A02/04)
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+
+380.2.27 = { religion = chalcedonism }
+
+392.3.15 = {
+	monarch = {
+		name = "Theodosius I" # Sole ruler (A04)
+		dynasty = "Theodosian"
+		culture = dacian
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = zealot_personality
+} # EH version
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

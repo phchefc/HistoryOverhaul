@@ -1,0 +1,411 @@
+﻿l_english:
+ urban: "Urban Terrain"
+ urban_desc: "This region is characterized by the large city in its center and the surrounding cultivation of farms and small villages."
+ 
+ # Asia
+ 
+ urban_doha: "Doha"
+ urban_doha_desc: "(CC,UC) Doha is the capital and most populous city of the State of Qatar. As the commercial capital of Qatar and one of the emergent financial centers in the Middle East, Doha is considered a beta-level global city by the Globalization and World Cities Research Network."
+ 
+ urban_dubai: "Dubai"
+ urban_dubai_desc: "(GC) Dubai is the most populous city in the United Arab Emirates and the capital of the Emirate of Dubai. A centre for regional and international trade since the early 20th century, Dubai's economy relies on revenues from trade, tourism, aviation, real estate, and financial services."
+ 
+ urban_jerusalem: "Jerusalem"
+ urban_jerusalem_desc: "(CC,UC3) Jerusalem is a city in Western Asia. It is one of the oldest cities in the world, and is considered holy for the three major Abrahamic religions: Judaism, Christianity, and Islam. Today, the status of Jerusalem remains one of the core issues of the Israeli-Palestinian conflict and its peace process."
+ 
+ urban_mecca: "Mecca"
+ urban_mecca_desc: "(C) Mecca is a city and administrative center of the Mecca Province of Saudi Arabia, and the holiest city in Islam. Mecca is generally considered "the fountainhead and cradle of Islam", which is one of Islam's holiest sites and the direction of prayer for all Muslims."
+ 
+ urban_bagdad: "Bagdad"
+ urban_bagdad_desc: "(CC) Bagdad is the capital of Iraq and the second-largest city in the Arab world after Cairo. In 762 CE, Baghdad was chosen as the capital of the Abbasid Caliphate, and became its most notable major development project. Within a short time, the city evolved into a significant cultural, commercial, and intellectual center of the Muslim world."
+ 
+ urban_isfahan: "Isfahan"
+ urban_isfahan_desc: "(C,UC) Isfahan is a major city in the Greater Isfahan Region, Isfahan Province, Iran. Isfahan flourished between the 9th and 18th centuries under the Safavid dynasty. Isfahan also has many historical buildings, monuments, paintings, and artifacts."
+ 
+ urban_samarkand: "Samarkand"
+ urban_samarkand_desc: "(R,UC2) Samarkand is a city in southeastern Uzbekistan and among the oldest continuously inhabited cities in Central Asia. Prospering from its location on the Silk Road between China and Europe, at times Samarkand was one of the largest cities of Central Asia."
+ 
+ urban_delhi: "Delhi"
+ urban_delhi_desc: "(CC,UC3) Delhi is the capital city of India. Delhi is one of the oldest cities in the world, and has been continuously inhabited since the 6th century BCE. For many centuries Delhi has been a dominant trading and commercial centre in northern India, and after 1990s it has emerged as an important node in the international corporate and financial network."
+ 
+ urban_agra: "Agra"
+ urban_agra_desc: "(C,UC2) Agra is the city of the Indian state of Uttar Pradesh. Agra is a major tourist destination because of its many Mughal-era buildings, most notably the Taj Mahal, and Agra Fort."
+ 
+ urban_kolkata: "Kolkata"
+ urban_kolkata_desc: "(C) Kolkata is the capital of the Indian state of West Bengal. It is the primary business, commercial, and financial hub of Eastern India and the main port of communication for North-East India."
+ 
+ urban_jakarta: "Jakarta"
+ urban_jakarta_desc: "(CC,GC) Jakarta is the capital and largest city of Indonesia. The city is the centre of the economy, culture, and politics of Indonesia. Jakarta is an alpha world city and is the seat of the ASEAN secretariat, Financial institutions."
+ 
+ urban_singapore: "Singapore"
+ urban_singapore_desc: "(CC,GC,UC) Singapore is a sovereign island city-state in maritime Southeast Asia. In modern times, the Singaporean economy is regarded as free, innovative, dynamic and business-friendly."
+
+ urban_everest: "Mount Everest"
+ urban_everest_desc: "(N,UN) Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. Its elevation of 8,848.86 m was most recently established in 2020. Mount Everest attracts many climbers, including highly experienced mountaineers."
+ 
+ urban_kualalumpur: "Kuala Lumpur"
+ urban_kualalumpur_desc: "(CC,GC) Kuala Lumpur is a federal territory and the capital city of Malaysia. It is among the fastest growing metropolitan regions in Southeast Asia, both in population and economic development."
+
+ urban_bangkok: "Bangkok"
+ urban_bangkok_desc: "(CC,GC) Bangkok is the capital and most populous city of Thailand. The city grew rapidly during the 1960s through the 1980s and now exerts a significant impact on Thailand's politics, economy, education, media and modern society."
+
+ # Asia - China
+ 
+ urban_guangzhou: "Guangzhou"
+ urban_guangzhou_desc: "(GC,UC) Guangzhou is the city in Guangdong, China. Long the only Chinese port accessible to most foreign traders, in modern commerce, Guangzhou is best known for its annual Canton Fair, the oldest and largest trade fair in China. Guangzhou is at the heart of the most-populous built-up metropolitan area in mainland China."
+ 
+ urban_lhasa: "Lhasa"
+ urban_lhasa_desc: "(C,UC) Lhasa is the urban center of the prefecture-level Lhasa City and the administrative capital of the Tibet Autonomous Region in China. It contains many culturally significant Tibetan Buddhist sites such as the Potala Palace."
+  
+ urban_chengdu: "Chengdu"
+ urban_chengdu_desc: "(C) Chengdu is a sub-provincial city which serves as the capital of the Chinese province of Sichuan. It was the capital of Liu Bei's Shu Han during the Three Kingdoms Era, as well as several other local kingdoms during the Middle Ages."
+ 
+ urban_chongqing: "Chongqing"
+ urban_chongqing_desc: "(C,UC) Chongqing is a municipality in southwest China. Due to a classification technicality, Chongqing municipality can claim to be the largest city proper in the world—though it does not have the world's largest urban area."
+ 
+ urban_hangzhou: "Hangzhou"
+ urban_hangzhou_desc: "(C,UC2) Hangzhou is the city in Zhejiang, China. Hangzhou grew to prominence as the southern terminus of the Grand Canal and has been one of the most renowned and prosperous cities in China for much of the last millennium."
+ 
+ urban_kaifeng: "Kaifeng"
+ urban_kaifeng_desc: "(C) Kaifeng is a city in east-central Henan province, China. It is one of the Eight Ancient Capitals of China, having been the capital seven times in history, and is best known for being the Chinese capital in the Northern Song dynasty."
+ 
+ urban_xian: "Xian"
+ urban_xian_desc: "(C,UC2) Xian is the city in Shaanxi, China. Xian is one of the oldest cities in China, the oldest prefecture capital and one of the Chinese Four Great Ancient Capitals, having held the position under several of the most important dynasties in Chinese history."
+
+ urban_liaoxi: "Liaoxi"
+ urban_liaoxi_desc: "(R,UC) Shanhai Pass is one of the major passes in the Great Wall of China. The pass is a popular tourist destination at the eastern terminal point of the Ming dynasty Great Wall."
+ 
+ urban_dunhuang: "Dunhuang"
+ urban_dunhuang_desc: "(R,UC) Dunhuang is a city in Northwestern Gansu Province, Western China. Dunhuang was a major stop on the ancient Silk Road and is best known for the nearby Mogao Caves."
+
+ urban_beijing: "Beijing"
+ urban_beijing_desc: "(CC,GC,UC4) Beijing is the capital city of China. Beijing is one of the oldest cities in the world, with a rich history dating back three millennia. Beijing has been the political center of the country for most of the past eight centuries. Beijing is a global city for culture, diplomacy and politics, business and economics, education, language, and science and technology."
+ 
+ urban_nanjing: "Nanjing"
+ urban_nanjing_desc: "(C) Nanjing is the capital of Jiangsu province of China. Nanjing has a prominent place in Chinese history and culture, having served as the capital of various Chinese dynasties and republican governments dating from the 3rd century to 1949. It has many important heritage sites, including the Presidential Palace and Sun Yat-sen Mausoleum."
+ 
+ urban_shanghai: "Shanghai"
+ urban_shanghai_desc: "(GC,UC) Shanghai is the city in China. Originally a fishing village and market town, Shanghai grew in importance in the 19th century. Shanghai is a global center for finance, technology, manufacturing, and transportation, and the Port of Shanghai is the world's busiest container port. Shanghai is a global financial center, ranking first in Asia and the Pacific and third globally."
+ 
+ urban_luoyang: "Luoyang"
+ urban_luoyang_desc: "(C,UC) Luoyang is a city located in the west of Henan province, China. Situated on the central plain of China, Luoyang is one of the cradles of Chinese civilization, and is one of the Four Great Ancient Capitals of China."
+ 
+ urban_karakorum: "Karakorum"
+ urban_karakorum_desc: "(R,UC) Karakorum was the capital of the Mongol Empire between 1235 and 1260 and of the Northern Yuan in the 14-15th centuries. They are part of the upper part of the World Heritage site Orkhon Valley."
+ 
+ urban_hongkong: "Hong Kong"
+ urban_hongkong_desc: "(GC) Hong Kong is the city in China. Hong Kong became a colony of the British Empire after 1942. The whole territory was transferred to China in 1997. It is the world's tenth-largest exporter and ninth-largest importer. Hong Kong has a major capitalist service economy characterised by low taxation and free trade."
+
+ urban_taipei: "Taipei"
+ urban_taipei_desc: "(CC,GC) Taipei is the capital city of Taiwan. Taipei is the political, economic, educational and cultural center of Taiwan. It is also a part of a major high-tech industrial area."
+
+ # Asia - Japan
+ 
+ urban_himeji: "Himeji"
+ urban_himeji_desc: "(C,UC) Himeji is the city in Hyogo, Japan. The Himeji Castle is regarded as the finest surviving example of prototypical Japanese castle architecture, comprising a network of 83 rooms with advanced defensive systems from the feudal period."
+ 
+ urban_kyoto: "Kyoto"
+ urban_kyoto_desc: "(C,UC)Kyoto is the city in Kyoto Prefecture, Japan. The emperors of Japan ruled from Kyoto in the following eleven centuries until 1869. Kyoto is considered the cultural capital of Japan and a major tourist destination. It is home to numerous Buddhist temples, Shinto shrines, palaces and gardens, some of which are listed collectively by UNESCO as a World Heritage Site."
+ 
+ urban_osaka: "Osaka"
+ urban_osaka_desc: "(GC) Osaka is a designated city in the Kansai region of Honshu in Japan. Metropolitan Area, the second-largest metropolitan area in Japan and the 10th largest urban area in the world with more than 19 million inhabitants. Following the Meiji Restoration, Osaka greatly expanded in size and underwent rapid industrialization."
+ 
+ urban_tokyo: "Tokyo"
+ urban_tokyo_desc: "(CC,GC,UC) Tokyo is the capital city of Japan. In 1868, the imperial capital in Kyoto was moved to the city, which was renamed Tokyo. Tokyo is the largest urban economy in the world by gross domestic product, and is categorized as an Alpha+ city by the Globalization and World Cities Research Network. Tokyo is Japan's leading center of business and finance."
+
+ urban_fuji: "Mount Fuji"
+ urban_fuji_desc: "(N,UN) Mount Fuji is the highest mountain in Japan, standing 3,776.24 m. It is a Special Place of Scenic Beauty and one of Japan's Historic Sites."
+ 
+ urban_nagoya: "Nagoya"
+ urban_nagoya_desc: "(C) Nagoya is the largest city in the Chubu region, Japan. Nagoya is an industrial and transport center of Japan."
+ 
+ urban_aki: "Aki"
+ urban_aki_desc: "(C,UC2) Hiroshima is the capital of Hiroshima Prefecture in Japan. Hiroshima is best remembered as the first city targeted by a nuclear weapon."
+ 
+ urban_nara: "Nara"
+ urban_nara_desc: "(R,UC3) Nara is the city in the Nara Prefecture, Japan. Nara is home to eight temples, shrines, and ruins."
+ 
+ urban_yokohama: "Yokohama"
+ urban_yokohama_desc: "(C) Yokohama is the second-largest city in Japan. Yokohama is the largest port city and hi-tech industrial hub in the Greater Tokyo Area and the Kanto region."
+ 
+ # Asia - Korea
+ 
+ urban_seoul: "Seoul"
+ urban_seoul_desc: "(CC,GC,UC3) Seoul is the capital city of South Korea. As with its long history, the Seoul Capital Area contains five UNESCO World Heritage Sites. In modern times, Seoul has become the economic, political and cultural hub of the country with major technology hubs centered in Gangnam and Digital Media City. Seoul was the world's 4th largest metropolitan economy."
+
+ urban_sangju: "Gyeongju"
+ urban_sangju_desc: "(R,UC2) Gyeongju is a coastal city in the far southeastern corner of North Gyeongsang Province in South Korea. Gyeongju was the capital of the ancient kingdom of Silla."
+
+ urban_pyongyang: "Pyongyang"
+ urban_pyongyang_desc: "(CC,UC) Pyongyang is the capital and largest city of North Korea. Following the establishment of North Korea in 1948, Pyongyang became its de facto capital. Pyongyang is the political, industrial and transport center of North Korea."
+
+ urban_gaema: "Mount Baekdu"
+ urban_gaema_desc: "(N) Mount Baekdu is an active stratovolcano on the Chinese-North Korean border. At 2,744 m, it plays an important mythological and cultural and nationalistic role in Korean and Manchus."
+ 
+ urban_kaesong: "Kaesong"
+ urban_kaesong_desc: "(R,UC) Kaesong is the city in the southern part of North Korea, and the capital of Korea during the Goryeo dynasty. Kaesong now functions as the DPRK's light industry centre."
+ 
+ urban_busan: "Busan"
+ urban_busan_desc: "(C,UC2) Busan is South Korea's second-most populous city after Seoul. It is the economic, cultural and educational center of southeastern South Korea, with its port—Korea's busiest and the sixth-busiest in the world."
+ 
+ urban_suwon: "Suwon"
+ urban_suwon_desc: "(C,UC) Suwon is the capital and largest city of Gyeonggi, South Korea. The Seoul Capital Area is ranked as the fifth largest metropolitan area in the world."
+ 
+ # Europe
+ 
+ urban_copenhagen: "Copenhagen"
+ urban_copenhagen_desc: "(CC) Copenhagen is the capital and most populous city of Denmark. The city is the cultural, economic and governmental centre of Denmark; it is one of the major financial centres of Northern Europe."
+ 
+ urban_stockholm: "Stockholm"
+ urban_stockholm_desc: "(CC,UC2) Stockholm is the capital and largest city of Sweden. Ranked as an alpha-global city, it is the largest in Scandinavia and the main centre for corporate headquarters in the Nordic region."
+ 
+ urban_fjord: "Fjord"
+ urban_fjord_desc: "(N,UN) The coastline of Norway was formed by glaciers that eroded the basement rock and formed countless valleys and fjords."
+ 
+ urban_petersburg: "Petersburg"
+ urban_petersburg_desc: "(C,UC) Saint Petersburg is Russia's second-largest city after Moscow. It served as a capital of the Tsardom of Russia and the subsequent Russian Empire. Saint Petersburg is known as the "Cultural Capital of Russia"."
+
+ urban_riga: "Riga"
+ urban_riga_desc: "(CC,UC) Riga is the capital of Latvia. Riga's historical centre is a UNESCO World Heritage Site. It is also the largest city in the three Baltic states."
+
+ urban_brussels: "Brussels"
+ urban_brussels_desc: "(CC,UC3) Brussels is a region of Belgium. Brussels is the de facto capital of the European Union, as it hosts a number of principal EU institutions. As the economic capital of Belgium and a top financial centre of Western Europe, it is classified as an Alpha global city."
+
+ urban_dalmatia: "Dalmatia"
+ urban_dalmatia_desc: "(R,UC) Dubrovnik is a city on the Adriatic Sea in southern Croatia. It is one of the most prominent tourist destinations in the Mediterranean Sea, a seaport and the centre of Dubrovnik-Neretva County."
+ 
+ urban_athens: "Athens"
+ urban_athens_desc: "(CC,UC) Athens is the capital city of Greece. Classical Athens was a powerful city-state. A center for the arts, learning and philosophy, it is widely referred to as the cradle of Western civilization and the birthplace of democracy."
+ 
+ urban_istanbul: "Istanbul"
+ urban_istanbul_desc: "(GC,UC) Istanbul is the most populous city in Turkey and the country's economic, cultural and historic center. Istanbul served as the capital of many Greek, Romans, and Turkish states."
+ 
+ urban_budapest: "Budapest"
+ urban_budapest_desc: "(CC,UC) Budapest is the capital and most populous city of Hungary. Budapest is a beta-global city with strengths in commerce, finance, media, art, fashion, research, technology, education and entertainment."
+ 
+ urban_warsaw: "Warsaw"
+ urban_warsaw_desc: "(CC,GC,UC) Warsaw is the capital and largest city of Poland. Warsaw is ranked an alpha-global city, a major international tourist destination, and a significant cultural, political and economic hub."
+ 
+ urban_praha: "Praha"
+ urban_praha_desc: "(CC,UC) Praha is the capital city in the Czech Republic. Prague is a political, cultural and economic centre of central Europe complete with a rich history. Prague is home to a number of well-known cultural attractions."
+
+ urban_moskow: "Moskow"
+ urban_moskow_desc: "(CC,GC,UC3) Moskow is the capital city of Russia. Moscow is governed as a federal city that serves as the political, economic, cultural, and scientific centre of Russia and Eastern Europe. As an alpha world city, Moscow has one of the world's largest urban economies, and is one of the most expensive cities in the world."
+ 
+ # Europe - Britain
+ 
+ urban_london: "London"
+ urban_london_desc: "(CC,GC,UC4) London is the capital city of England and the United Kingdom. London is one of the world's most important global cities and has been called the world's most powerful, most desirable, most influential, most visited, most expensive, sustainable, most investment-friendly, and most-popular-for-work city. It exerts a considerable impact upon the arts, commerce, education, entertainment, fashion, finance, healthcare, media, professional services, research and development, tourism and transportation."
+ 
+ urban_kent: "Kent"
+ urban_kent_desc: "(R,UC) Kent is a county in South East England. Canterbury Cathedral is one of the oldest and most famous Christian structures in England."
+ 
+ urban_stonehenge: "Stonehenge"
+ urban_stonehenge_desc: "(R,UC) Stonehenge is a prehistoric monument on Salisbury Plain in Wiltshire, England. Stonehenge is regarded as a British cultural icon."
+ 
+ urban_liverpool: "Liverpool"
+ urban_liverpool_desc: "(C) Liverpool is a city and metropolitan borough in Merseyside, England. Its growth as a major port was paralleled by the expansion of the city throughout the Industrial Revolution."
+ 
+ # Europe - France
+ 
+ urban_nice: "Nice"
+ urban_nice_desc: "(R,UC) Nice is the seventh most populous urban area in France. The city is nicknamed Nice la Belle, meaning "Nice the Beautiful"."
+ 
+ urban_montsaintmichel: "Mont-Saint-Michel"
+ urban_montsaintmichel_desc: "(R,UC) Mont-Saint-Michel is a tidal island and mainland commune in Normandy, France."
+ 
+ urban_paris: "Paris"
+ urban_paris_desc: "(CC,GC,UC2) Paris is the capital city of France. Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, science and arts. Paris is especially known for its museums and architectural landmarks. The historical district along the Seine in the city centre is classified as a UNESCO Heritage Site. It was ranked as the second most visited travel destination in the world."
+ 
+ urban_orleans: "Orleans"
+ urban_orleans_desc: "(R,UC) Orleans is a prefecture and commune in north-central France."
+ 
+ urban_reims: "Reims"
+ urban_reims_desc: "(R,UC2) Reims is the 12th most populous city in France. The royal anointing was performed at the Cathedral of Reims. For this reason, Reims is often referred to in French as "the Coronation City"."
+ 
+ urban_marseille: "Marseille"
+ urban_marseille_desc: "(C) Marseille is the capital of the Provence-Alpes-Côte d'Azur region, France. Founded around 600 BCE by Greek settlers from Phocaea, Marseille is the oldest city in France."
+ 
+ urban_carcassonne: "Carcassonne"
+ urban_carcassonne_desc: "(R,UC) Carcassonne is the fortified city loceted in the region of Occitanie."
+ 
+ urban_montblanc: "Mont Blanc"
+ urban_montblanc_desc: "(N,UN) Mont Blanc is the highest mountain in the Alps and Western Europe, rising 4,807.81 m above sea level. The Mont Blanc massif is popular for outdoor activities."
+ 
+ # Europe - Italy
+ 
+ urban_milano: "Milano"
+ urban_milano_desc: "(GC,UC) Milano is a city in northern Italy, capital of Lombardy, and the second-most populous city in Italy. Milan is considered a leading alpha global city, with strengths in the fields of art, commerce, design, education, entertainment, fashion, finance, healthcare, media, services, research and tourism."
+ 
+ urban_venezia: "Venezia"
+ urban_venezia_desc: "(R,UC) Venezia is a city in northeastern Italy. It is on a group of 118 small islands that are separated by canals and linked by over 400 bridges. The city was historically the capital of the Republic of Venice, which was a major financial and maritime power during the Middle Ages and Renaissance."
+ 
+ urban_pisa: "Pisa"
+ urban_pisa_desc: "(R,UC) Pisa is a city and comune in Tuscany, central Italy. Pisa is known worldwide for its leaning tower."
+ 
+ urban_firenze: "Firenze"
+ urban_firenze_desc: "(R,UC2) Firenze is a city in central Italy. Florence was a centre of medieval European trade and finance and one of the wealthiest cities of that era. The city is noted for its culture, Renaissance art and architecture and monuments."
+ 
+ urban_rome: "Rome"
+ urban_rome_desc: "(CC,GC,UC5) Rome is the capital city of Italy. Rome's history spans 28 centuriesr, making it one of the oldest continuously occupied cities in Europe. Beginning with the Renaissance, almost all popes pursued a coherent architectural and urban programme over four hundred years, aimed at making the city the artistic and cultural centre of the world."
+ 
+ urban_napoli: "Napoli"
+ urban_napoli_desc: "(C,UC4) Naples is the regional capital of Campania and the third-largest city of Italy. Naples is one of the oldest continuously inhabited urban areas in the world. A wide range of culturally and historically significant sites are nearby."
+ 
+ # Europe - German
+ 
+ urban_hamburg: "Hamburg"
+ urban_hamburg_desc: "(C) Hamburg is the second-largest city in Germany. Hamburg is Europe's third largest port, and a major international and domestic tourist destination."
+ 
+ urban_lubeck: "Lubeck"
+ urban_lubeck_desc: "(R,UC) Lubeck is a city in Northern Germany. Lübeck is famous for having been the cradle and the de facto capital of the Hanseatic League."
+ 
+ urban_berlin: "Berlin"
+ urban_berlin_desc: "(CC,GC,UC3) Berlin is the capital city of Germany. After World War II, the city was divided. Following German reunification in 1990, Berlin once again became the capital of all of Germany. Berlin is a world city of culture, politics, media and science. Its economy is based on high-tech firms and the service sector, encompassing a diverse range of creative industries, research facilities, media corporations and convention venues."
+ 
+ urban_munich: "Munich"
+ urban_munich_desc: "(GC) is the capital and most populous city of Bavaria, Germany. Munich is considered an alpha-world city, and it is one of the most prosperous and fastest growing cities in Germany."
+ 
+ urban_koln: "Koln"
+ urban_koln_desc: "(C,UC2) Cologne is the largest city of North Rhine-Westphalia, Germany. During World War II, the bombing reduced the population by 95%. The post-war rebuilding has resulted in a very mixed cityscape, restoring only major historic landmarks."
+ 
+ urban_aachen: "Aachen"
+ urban_aachen_desc: "(R,UC) Aachen is the city of Germany. It was developed as the medieval Imperial residence of Emperor Charlemagne."
+ 
+ urban_amsterdam: "Amsterdam"
+ urban_amsterdam_desc: "(CC,GC,UC3) Amsterdam is the capital of the Netherlands. Amsterdam became one of the most important ports in the world during the Dutch Golden Age of the 17th century, and became the leading centre for finance and trade. In modern times, many of the world's largest companies are based in Amsterdam or have established their European headquarters in the city."
+ 
+ urban_wien: "Wien"
+ urban_wien_desc: "(CC,UC3) Wien is the capital city of Austria. It is well known for having played a pivotal role as a leading European music center, from the age of Viennese Classicism through the early part of the 20th century. Vienna is known for its high quality of life."
+ 
+ urban_bern: "Bern"
+ urban_bern_desc: "(CC,UC) Bern is the de facto capital of Switzerland. It is notably surrounded by the Aare, a major river of the Swiss Plateau."
+ 
+ # Europe - Spain
+
+ urban_barcelona: "Barcelona"
+ urban_barcelona_desc: "(GC,UC2) Barcelona is a city on the coast of northeastern Spain. Barcelona continued to be an important city in the Aragon and Catalonia. Barcelona has a rich cultural heritage and is today an important cultural centre and a major tourist destination."
+ 
+ urban_madrid: "Madrid"
+ urban_madrid_desc: "(CC,GC,UC) Madrid is the capital city of Spain. As the capital city of Spain, seat of government, residence of the Spanish monarch, Madrid is also the political, economic and cultural centre of the country. Its influence in politics, education, entertainment, environment, media, fashion, science, culture, and the arts."
+ 
+ urban_granada: "Granada"
+ urban_granada_desc: "(R,UC) Granada is the capital city of the province of Granada, in the Andalusia, Spain. The Alhambra, an ancient Nasrid citadel and palace, is located in Granada."
+ 
+ urban_cordoba: "Cordoba"
+ urban_cordoba_desc: "(R,UC2) is a city in Andalusia, Spain. Cordoba is home to notable examples of Moorish architecture such as the Mezquita-Catedral."
+ 
+ urban_lisboa: "Lisbon"
+ urban_lisboa_desc: "(CC,GC,UC3) Lisbon is the capital city of Portugal. Lisbon is recognised as an alpha-level global city because of its importance in finance, commerce, media, entertainment, arts, international trade, education and tourism."
+
+ # World - Africa
+ 
+ urban_alexandria: "Alexandria"
+ urban_alexandria_desc: "(C,UC) Alexandria is a Mediterranean port city in Egypt. Founded in c.331 BCE by Alexander the Great. Alexandria was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World."
+ 
+ urban_cairo: "Cairo"
+ urban_cairo_desc: "(CC,UC2) Cairo is the capital city of Egypt. Cairo is associated with ancient Egypt, as the famous Giza pyramid complex and the ancient city of Memphis are located in its geographical area. Located near the Nile Delta. airo has long been a centre of the region's political and cultural life, and is titled "the city of a thousand minarets" for its preponderance of Islamic architecture."
+ 
+ urban_cape: "Cape"
+ urban_cape_desc: "(C,UC,UN) Cape Town is the city in South Africa. Cape Town outgrew its original purpose as the first European outpost at the Castle of Good Hope, becoming the economic and cultural hub of the Cape Colony."
+
+ urban_kilimanjaro: "Mount Kilimanjaro"
+ urban_kilimanjaro_desc: "(N,UN) Mount Kilimanjaro is a dormant volcano in Tanzania. Kilimanjaro is the fourth most topographically prominent peak on Earth, rising 5,895 m above sea level."
+
+ # World - North America
+ 
+ urban_losangeles: "Los Angeles"
+ urban_losangeles_desc: "(GC) Los Angeles is the city in California in the United States. The discovery of oil in the 1890s brought rapid growth to the city. Los Angeles has a diverse economy and hosts businesses in a broad range of professional and cultural fields. It also has the busiest container port in the Americas."
+ 
+ urban_seattle: "Seattle"
+ urban_seattle_desc: "(GC) Seattle is a seaport city on the West Coast of the United States. Growth after World War II was partially due to the local Boeing company, which established Seattle as a center for aircraft manufacturing. The Seattle area developed into a technology center from the 1980s onwards with companies."
+ 
+ urban_neworleans: "New Orleans"
+ urban_neworleans_desc: "(C) New Orleans is the city in Louisiana in the United States. New Orleans is world-renowned for its distinctive music, and its annual celebrations and festivals, most notably Mardi Gras."
+ 
+ urban_dallas: "Dallas"
+ urban_dallas_desc: "(C) Dallas is the largest city in Texas in the United States. Dominant sectors of its diverse economy include defense, financial services, information technology, telecommunications, and transportation."
+ 
+ urban_houston: "Houston"
+ urban_houston_desc: "(C) Houston is the most populous city in Texas in the United States. Since the late 19th century Houston's economy has had a broad industrial base, in energy, manufacturing, aeronautics, and transportation."
+ 
+ urban_chicago: "Chicago"
+ urban_chicago_desc: "(GC) Chicago is the city in Illinois in the United States. Chicago was incorporated as a city in 1837, and grew rapidly in the mid-19th century. Chicago made noted contributions to urban planning and zoning standards, including new construction styles. Chicago is an international hub for finance, culture, commerce, industry, education, technology, telecommunications, and transportation."
+ 
+ urban_washingtondc: "Washington DC"
+ urban_washingtondc_desc: "(CC,GC) Washington, D.C. is the capital city of the United States. The City of Washington was founded in 1791 to serve as the new national capital. Washington is home to many national monuments, museums, embassies, international organizations, trade unions, non-profits, lobbying groups, and professional associations."
+ 
+ urban_philadelphia: "Philadelphia"
+ urban_philadelphia_desc: "(C,UC) Philadelphia is a major city in Pennsylvania in the United States. Philadelphia went on to play a historic and vital role in the 18th century as the central meeting place for the nation's founding fathers."
+ 
+ urban_newyork: "New York"
+ urban_newyork_desc: "(GC,UC) New York is the city in the state of New York in the United States. Many districts and landmarks in New York City are well known. Times Square is the brightly illuminated hub of the Broadway Theater District, one of the world's busiest pedestrian intersections, and a major center of the world's entertainment industry. Many of the city's landmarks, skyscrapers, and parks are known around the world. Manhattan's real estate market is among the most expensive in the world."
+ 
+ urban_boston: "Boston"
+ urban_boston_desc: "(GC) Boston is the city in Massachusetts in the United States. Boston is one of the oldest municipalities in the United States. It was the scene of several key events of the American Revolution. Today, Boston is a thriving center of scientific research. The Boston area's many colleges and universities make it a world leader in higher education."
+
+ urban_vancouver: "Vancouver"
+ urban_vancouver_desc: "(C) Vancouver is a major city in western Canada. Vancouver is one of the most livable cities in Canada and in the world."
+ 
+ urban_niagara: "Niagara"
+ urban_niagara_desc: "(N) Niagara Falls is a group of three waterfalls between Canada and the United States. Niagara Falls is famed for its beauty and is a valuable source of hydroelectric power."
+ 
+ urban_quebec: "Montreal"
+ urban_quebec_desc: "(C) Montreal is the second-most populous city in Canada. Historically the commercial capital of Canada, Montreal remains an important centre of commerce."
+ 
+ urban_grandcanyon: "Grand Canyon"
+ urban_grandcanyon_desc: "(N,UN) Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona in the United States. Grand Canyon National Park is one of the world's premier natural attractions."
+
+ urban_sanfrancisco: "San Francisco"
+ urban_sanfrancisco_desc: "(GC) San Francisco is the city in California, U.S. A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge."
+
+ urban_miami: "Miami"
+ urban_miami_desc: "(GC,UN) Miami is the city in Florida in the United States. Miami is a major center and leader in finance, commerce, culture, arts, and international trade. Miami is nicknamed the "Capital of Latin America" and is the largest city with a Cuban-American plurality."
+ 
+ urban_toronto: "Toronto"
+ urban_toronto_desc: "(GC) Toronto is the city in Ontario, Canada. Toronto is a prominent centre for music, theatre, motion picture production, and television production of Canada."
+ 
+ # World - South America
+ 
+ urban_havana: "Havana"
+ urban_havana_desc: "(CC,UC) Havana is the capital city of Cuba. The city of Havana was founded by the Spanish in the 16th century. The city attracts over a million tourists annually."
+
+ urban_saopaulo: "Sao Paulo"
+ urban_saopaulo_desc: "(C) Sao Paulo is a city in the Southeast Region of Brazil. Having the largest economy by GDP in Latin America and the Southern Hemisphere, it is ranked an alpha-global city."
+ 
+ urban_riodejaneiro: "Rio de Janeiro"
+ urban_riodejaneiro_desc: "(C,UC3) Rio de Janeiro is the city of the state of Rio de Janeiro, Brazil. Rio de Janeiro is one of the most visited cities in the Southern Hemisphere and is known for its natural settings, Carnival, samba, bossa nova, and balneario beaches."
+ 
+ urban_buenosaires: "Buenos Aires"
+ urban_buenosaires_desc: "(CC,UC) Buenos Aires is the capital and largest city of Argentina. It is known for its preserved eclectic European architecture and rich cultural life."
+ 
+ urban_cusco: "Cusco"
+ urban_cusco_desc: "(R,UC2,UM) Cusco is the city of the Cusco Province, Peru. The city was the historic capital of the Inca Empire from the 13th century until the 16th-century Spanish conquest."
+ 
+ urban_mexico: "Mexico"
+ urban_mexico_desc: "(CC,UC3) Mexico is the capital city of Mexico. The city was originally built on an island of Lake Texcoco by the Aztecs in 1325 as Tenochtitlan. In modern times, Mexico City was the political, administrative, and financial center of a major part of Mexico."
+ 
+ # World - Oceania
+ 
+ urban_sydney: "Sydney"
+ urban_sydney_desc: "(GC,UC) Sydney is the city in the New South Wales, Australia. A gold rush occurred in the colony in 1851, and over the next century, Sydney transformed from a colonial outpost into a major global cultural and economic centre. Sydney has an advanced market economy with strengths in finance, manufacturing and tourism."
+ 
+ urban_melburn: "Melbourne"
+ urban_melburn_desc: "(GC,UC) Melbourne is the city in the Victoria, Australia. Today, it is a leading financial centre in the Asia-Pacific region."
+ 
+ urban_hawaii: "Hawaii"
+ urban_hawaii_desc: "(C,UN) Hawaii is a state in the Western United States, located in the Pacific Ocean. The state attracts tourists, surfers, and scientists from around the world with its diverse natural scenery."
+ 
+ urban_uluru: "Uluru"
+ urban_uluru_desc: "(N,UN) Uluru is a large sandstone formation in the centre of Australia. Uluru is one of Australia's most recognisable natural landmarks and has been a popular destination for tourists."
+ 
+ # CC - Capital city
+ # GC - Global city 255 8 0 / 230 32 32
+ # C - City         255 79 0
+ # R - Region       1 65 28
+ # N - Natural site 1 65 28
+ # UC - UNESCO World Heritage Site (Cultural)
+ # UN - UNESCO World Heritage Site (Natural)
+ # UM - UNESCO World Heritage Site (Mixed)
+ 
+ # EH version

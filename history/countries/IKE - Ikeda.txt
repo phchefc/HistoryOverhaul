@@ -1,0 +1,373 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = early_chinese
+historical_friend = KMK
+capital = 4360
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+1590.8.10 = { 
+	monarch = {
+		name = "Terumasa"
+		dynasty = "Ikeda"
+#		birth_date = 1565.1.31
+#		death_date = 1613.3.16
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = TKG
+		name = "Ofu"
+		dynasty = "Tokugawa"
+		birth_date = 1565.1.1
+		death_date = 1615.3.3
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 1
+	}
+	heir = {
+		name = "Toshitaka"
+		monarch_name = "Toshitaka"
+		dynasty = "Ikeda"
+		birth_date = 1584.10.10
+		death_date = 1616.7.26
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1600.10.21 = { capital = 1019 }	# Harima
+
+1613.3.16 = {
+	monarch = {
+		name = "Toshitaka"
+		dynasty = "Ikeda"
+#		birth_date = 1584.10.10
+#		death_date = 1616.7.26
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1613.3.16 = {
+	heir = {
+		name = "Mitsumasa"
+		monarch_name = "Mitsumasa"
+		dynasty = "Ikeda"
+		birth_date = 1609.5.10
+		death_date = 1682.6.27
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1616.7.26 = {
+	capital = 1830	# Bitchu
+}
+
+1616.7.26 = { 
+	monarch = {
+		name = "Mitsumasa"
+		dynasty = "Ikeda"
+#		birth_date = 1609.5.10
+#		death_date = 1682.6.27
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1632.1.1 = { capital = 4184 }	# Bizen
+
+1638.2.18 = {
+	queen = {
+		country_of_origin = IKE
+		name = "Katsuhime"
+		dynasty = "Honda"
+		birth_date = 1618.12.2
+		death_date = 1678.11.20
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tsunamasa"
+		monarch_name = "Tsunamasa"
+		dynasty = "Ikeda"
+		birth_date = 1638.2.18
+		death_date = 1714.12.5
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1672.1.1 = { 
+	monarch = {
+		name = "Tsunamasa"
+		dynasty = "Ikeda"
+#		birth_date = 1638.2.18
+#		death_date = 1714.12.5
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Senko"
+		dynasty = "Niwa"
+		birth_date = 1640.1.1
+		death_date = 1700.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1702.9.8 = {
+	heir = {
+		name = "Tsugumasa"
+		monarch_name = "Tsugumasa"
+		dynasty = "Ikeda"
+		birth_date = 1702.9.8
+		death_date = 1776.3.27
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1714.12.5 = { 
+	monarch = {
+		name = "Tsunamasa"
+		dynasty = "Ikeda"
+#		birth_date = 1702.9.8
+#		death_date = 1776.3.27
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1727.8.11 = {
+	queen = {
+		country_of_origin = DTE
+		name = "Kazuhime"
+		dynasty = "Date"
+		birth_date = 1705.1.1
+		death_date = 1765.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Munemasa"
+		monarch_name = "Munemasa"
+		dynasty = "Ikeda"
+		birth_date = 1727.8.11
+		death_date = 1764.4.14
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1752.1.1 = { 
+	monarch = {
+		name = "Munemasa"
+		dynasty = "Ikeda"
+#		birth_date = 1727.8.11
+#		death_date = 1764.4.14
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = KDA
+		name = "Fujiko"
+		dynasty = "Kuroda"
+		birth_date = 1730.1.1
+		death_date = 1790.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Harumasa"
+		monarch_name = "Harumasa"
+		dynasty = "Ikeda"
+		birth_date = 1750.2.15
+		death_date = 1819.1.14
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1764.4.14 = { 
+	monarch = {
+		name = "Harumasa"
+		dynasty = "Ikeda"
+#		birth_date = 1750.2.15
+#		death_date = 1819.1.14
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1773.5.28 = {
+	queen = {
+		country_of_origin = IKE
+		name = "Yonehime"
+		dynasty = "Sakai"
+		birth_date = 1750.1.1
+		death_date = 1810.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Narimasa"
+		monarch_name = "Narimasa"
+		dynasty = "Ikeda"
+		birth_date = 1773.5.28
+		death_date = 1833.8.11
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1794.1.1 = { 
+	monarch = {
+		name = "Narimasa"
+		dynasty = "Ikeda"
+#		birth_date = 1773.5.28
+#		death_date = 1833.8.11
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Ayako"
+		dynasty = "Ikeda"
+		birth_date = 1775.1.1
+		death_date = 1835.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1829.1.1 = { 
+	monarch = {
+		name = "Naritoshi"
+		dynasty = "Ikeda"
+#		birth_date = 1811.5.29
+#		death_date = 1842.3.11
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1842.3.11 = { 
+	monarch = {
+		name = "Yoshimasa"
+		dynasty = "Ikeda"
+#		birth_date = 1823.8.10
+#		death_date = 1893.3.4
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Utako"
+		dynasty = "Ikeda"
+		birth_date = 1830.1.1
+		death_date = 1900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1863.3.24 = { 
+	monarch = {
+		name = "Mochimasa"
+		dynasty = "Ikeda"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Manjuko"
+		dynasty = "Ikeda"
+		birth_date = 1840.1.1
+		death_date = 1900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1868.3.15 = { 
+	monarch = {
+		name = "Akimasa"
+		dynasty = "Ikeda"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	queen = {
+		country_of_origin = IKE
+		name = "Kanko"
+		dynasty = "Toda"
+		birth_date = 1840.1.1
+		death_date = 1900.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# EH version

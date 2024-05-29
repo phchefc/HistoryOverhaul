@@ -1,0 +1,14 @@
+
+bookmark =
+{
+	name = "FALLMONGOL_NAME"
+	desc = "FALLMONGOL_DESC"
+	date = 1363.10.4
+	
+	country = YUA
+	country = MNG
+	country = HND
+	country = WUU
+}
+
+# EH version

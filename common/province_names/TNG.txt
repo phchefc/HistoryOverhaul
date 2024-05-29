@@ -1,0 +1,81 @@
+662 = "Kunzhou"
+665 = "Enzhou"					#Shiuhing
+672 = "Chenzhou"
+680 = "Yuzhou"							#Chongqing	
+2172 = "Jingzhou"							#Jiangling
+682 = "Ezhou" 
+2142 = "Chuzhou"
+686 = "Luzhou"
+2175 = "Chaizhou"
+688 = "Bianzhou"			#Kaifeng
+696 = "Yizhou"	   
+693 = "Shuozhou"
+694 = "Hezhong"
+697 = "Yunzhou"
+699 = "Longxi"
+700 = "Jingji"			#Xi'an
+701 = "Xiazhou"
+704 = "Yingzhou"
+707 = "Shazhou"
+708 = "Ganzhou"
+1816 = "Youzhou"
+1821 = "Jiangning"				#Nanjing				|incomplete
+1833 = "Jizhou"
+687 = "Tangzhou"
+1838 = "Shuzhou"
+2184 = "Xiping"
+2164 = "Yongzhou"
+2161 = "Luzhou"
+2159 = "Gaozhou"
+2158 = "Shaozhou"
+2152 = "Jianzhou"
+2150 = "Xinzhou"
+2149 = "Mingzhou"
+2148 = "Yuezhou"
+2146 = "Huanzhou"
+2147 = "Chizhou"
+2174 = "Hengzhou"
+2173 = "Wuzhou"
+2171 = "Xiangzhou"
+681 = "Kuizhou"
+1836 = "Duji"
+2176 = "Songzhou"
+2144 = "Chenzhou"
+2143 = "Sizhou"
+2138 = "Cangzhou"
+2137 = "Wei"
+2178 = "Luzhou"
+693 = "Bingzhou"
+2181 = "Yuanzhou"
+702 = "Shengzhou"
+4194 = "Pingzhou"
+4195 = "Zhaozhou"
+4211 = "Bazhou"				#Dazhou					|incomplete
+
+#Korea
+733 = "Daifang"				#Hwangju
+2745 = "Jilin"				#Gyeongsang
+1013 = "Xiongjin"
+1845 = "Andong"				#Pyongan
+
+#Manchuria
+2109 = "Fuyu"
+726 = "Liaodong"
+3010 = "Beisha"
+4652 = "Anshi"
+2112 = "Wugu"
+
+#Vietnam
+613 = "Jiaozhou"
+610 = "Aizhou"
+1016 = "Huanzhou"
+
+#Xiyu
+710 = "Yutian"					#Khotan
+739 = "Shule"					#Kashgar
+2122 = "Yizhou"					#Hami
+2123 = "Loulan"					#Loulan
+4207 = "Jushi"					#Turfan
+4693 = "Hanmi"					#Keriya
+
+# EH version

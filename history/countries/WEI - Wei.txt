@@ -1,0 +1,796 @@
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = early_chinese
+religion = confucianism
+primary_culture = zhongyuan
+historical_rival = SHU
+capital = 688
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+
+# Cao Wei
+
+189.9.28 = {
+	government_rank = 1			
+	monarch = {
+		name = "Cao"
+		dynasty = "Cao"
+		birth_date = 155.1.1
+		adm = 5
+		dip = 4
+		mil = 6
+		leader = {	name = "Cao Cao"     	type = general	fire = 4	shock = 4	manuever = 2	siege = 2  death_date = 220.3.16 }
+	}
+	queen = {
+		country_of_origin = WEI
+		name = "Wuxuan"
+		dynasty = "Bian"
+		birth_date = 159.12.30
+		death_date = 230.7.9
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Pi"
+		monarch_name = "Pi"
+		dynasty = "Cao"
+		birth_date = 187.1.1
+		death_date = 226.6.29
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+189.9.28 = { leader = {	name = "Xiahou Dun"     	type = general	fire = 1	shock = 2	manuever = 3	siege = 0  death_date = 220.4.1 } } # Not an actual death date
+
+#196.9.1 = {
+#	add_country_flag = marionett_master
+#}
+
+200.6.1 = { leader = {	name = "Zhang He"     	type = general	fire = 3	shock = 3	manuever = 2	siege = 0  death_date = 231.1.1 } } # Not an actual death date
+
+216.5.25 = {
+	government_rank = 2
+	capital = 2137
+}
+
+220.3.15 = {
+	monarch = {
+		name = "Pi" #Wen
+		dynasty = "Cao"
+		birth_date = 187.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+	queen = {
+		country_of_origin = WEI
+		name = "Wenzhao"
+		dynasty = "Zhen"
+		birth_date = 183.1.26
+		death_date = 221.8.4
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Rui"
+		monarch_name = "Rui"
+		dynasty = "Cao"
+		birth_date = 205.1.1
+		death_date = 239.1.23
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+#220.12.11 = {
+#	clr_country_flag = marionett_master
+#}
+
+220.12.11 = {
+	add_government_reform = celestial_empire
+	government_rank = 3
+}
+
+222.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		name = "Nuwang"
+		dynasty = "Guo"
+		birth_date = 184.1.1
+		death_date = 235.3.14
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+226.3.15 = { capital = 1836 } # Luoyang
+
+226.6.29 = {
+	monarch = {
+		name = "Rui" #Ming
+		dynasty = "Cao"
+		birth_date = 205.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+227.6.1 = { leader = {	name = "Sima Yi"     	type = general	fire = 3	shock = 3	manuever = 6	siege = 0  death_date = 251.9.7 } }
+
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+
+232.1.1 = {
+	heir = {
+		name = "Fang"
+		monarch_name = "Fang"
+		dynasty = "Cao"
+		birth_date = 232.1.1
+		death_date = 274.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+239.1.16 = {
+	queen = {
+		country_of_origin = WEI
+		name = "Mingyuan"
+		dynasty = "Guo"
+		birth_date = 210.1.26
+		death_date = 264.2.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+239.1.23 = {
+	monarch = {
+		name = "Fang"
+		dynasty = "Cao"
+		birth_date = 232.1.1
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WEI
+		name = "Huai"
+		dynasty = "Zhen"
+		birth_date = 235.1.1
+		death_date = 251.8.22
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+241.1.1 = {
+	heir = {
+		name = "Mao"
+		monarch_name = "Mao"
+		dynasty = "Cao"
+		birth_date = 241.1.1
+		death_date = 260.6.2
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+249.1.1 = { leader = {	name = "Deng Ai"     	type = general	fire = 2	shock = 3	manuever = 2	siege = 0  death_date = 264.1.1 } } # Not an actual death date
+
+252.2.1 = {
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Zhang"
+		birth_date = 240.1.1
+		death_date = 254.5.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+254.5.1 = {
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Wang"
+		birth_date = 240.1.1
+		death_date = 300.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+254.11.1 = {
+	monarch = {
+		name = "Mao"
+		dynasty = "Cao"
+		birth_date = 241.1.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+255.4.1 = {
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Bian"
+		birth_date = 240.1.1
+		death_date = 260.6.2
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Huan"
+		monarch_name = "Huan"
+		dynasty = "Cao"
+		birth_date = 246.1.1
+		death_date = 303.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+260.6.2 = {
+	monarch = {
+		name = "Huan" #Yuan
+		dynasty = "Cao"
+		birth_date = 246.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+263.11.28 = {
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Bian"
+		birth_date = 250.1.1
+		death_date = 268.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+266.2.8 = { add_government_reform = chinese_warlord }
+
+# End of the Eastern Jin dynasty (Ran Wei)
+
+350.2.1 = {
+	capital = 2137
+	monarch = {
+		name = "Min"
+		dynasty = "Ran"
+		birth_date = 310.1.1
+		adm = 0
+		dip = 1
+		mil = 3
+		leader = {	name = "Ran Min"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 352.5.17 }
+	}
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Dong"
+		birth_date = 310.1.1
+		death_date = 354.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Zhi"
+		monarch_name = "Zhi"
+		dynasty = "Ran"
+		birth_date = 330.1.1
+		death_date = 354.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+352.5.17 = {
+	monarch = {
+		name = "Zhi"
+		dynasty = "Ran"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+
+# Northern Wei
+
+386.2.20 = {
+	religion = tengri_pagan_reformed
+	secondary_religion = mahayana
+	primary_culture = khitan
+	capital = 4670
+	monarch = {
+		name = "Gui" #Daowu
+		dynasty = "Tuoba"
+		birth_date = 371.1.1
+		adm = 4
+		dip = 3
+		mil = 5
+		leader = {	name = "Tuoba Gui"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 0  death_date = 409.11.10 }
+	}
+}
+
+392.1.1 = {
+	heir = {
+		name = "Si"
+		monarch_name = "Mingyuan"
+		dynasty = "Tuoba"
+		birth_date = 392.1.1
+		death_date = 423.12.23
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+398.1.1 = { capital = 697 }
+
+400.1.1 = {
+	queen = {
+		country_of_origin = YAN
+		dynasty = "Murong"
+		birth_date = 385.1.1
+		death_date = 410.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+409.11.6 = {
+	monarch = {
+		name = "Si" #Mingyuan
+		dynasty = "Tuoba"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = QNL
+		name = "Zhaoai"
+		dynasty = "Yao"
+		birth_date = 395.1.1
+		death_date = 420.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tao"
+		monarch_name = "Taiwu"
+		dynasty = "Tuoba"
+		birth_date = 408.1.1
+		death_date = 452.3.11
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+423.12.23 = {
+	monarch = {
+		name = "Tao" #Taiwu
+		dynasty = "Tuoba"
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = {	name = "Tuoba Tao"     	type = general	fire = 3	shock = 3	manuever = 0	siege = 1  death_date = 452.3.11 }
+	}
+	queen = {
+		country_of_origin = XIA
+		name = "Taiwu"
+		dynasty = "Helian"
+		birth_date = 410.1.1
+		death_date = 453.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+452.3.11 = {
+	monarch = {
+		name = "Yu"
+		dynasty = "Tuoba"
+		birth_date = 430.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+452.10.31 = {
+	monarch = {
+		name = "Jun" #Wencheng
+		dynasty = "Tuoba"
+		birth_date = 440.1.1
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+454.1.1 = {
+	heir = {
+		name = "Hong"
+		monarch_name = "Xianwen"
+		dynasty = "Tuoba"
+		birth_date = 454.1.1
+		death_date = 471.9.20
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 0
+	}
+}
+
+456.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		name = "Wenming"
+		dynasty = "Feng"
+		birth_date = 442.1.1
+		death_date = 490.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+465.6.20 = {
+	monarch = {
+		name = "Hong" #Xianwen
+		dynasty = "Tuoba"
+		adm = 4
+		dip = 4
+		mil = 0
+	}
+}
+
+467.10.13 = {
+	heir = {
+		name = "Hong"
+		monarch_name = "Xiaowen"
+		dynasty = "Yuan"
+		birth_date = 467.10.13
+		death_date = 499.4.26
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+471.9.20 = {
+	monarch = {
+		name = "Hong" #Xiaowen
+		dynasty = "Yuan"
+		adm = 5
+		dip = 5
+		mil = 4
+	}
+}
+
+483.1.1 = {
+	heir = {
+		name = "Ke"
+		monarch_name = "Xuanwu"
+		dynasty = "Yuan"
+		birth_date = 483.1.1
+		death_date = 515.2.9
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+
+493.1.1 = { 
+	religion = confucianism 
+	add_harmonized_religion = mahayana 
+	primary_culture = zhongyuan 
+	capital = 1836
+	queen = {
+		country_of_origin = WEI
+		name = "Qing"
+		dynasty = "Feng"
+		birth_date = 470.1.1
+		death_date = 510.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+497.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		name = "Run"
+		dynasty = "Feng"
+		birth_date = 470.1.1
+		death_date = 499.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+499.4.26 = {
+	monarch = {
+		name = "Ke" #Xuanwu
+		dynasty = "Yuan"
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+	
+501.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Yu"
+		birth_date = 488.1.1
+		death_date = 507.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+508.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		name = "Ying"
+		dynasty = "Gao"
+		birth_date = 490.1.1
+		death_date = 518.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+510.1.1 = {
+	heir = {
+		name = "Xu"
+		monarch_name = "Xiaoming"
+		dynasty = "Yuan"
+		birth_date = 510.1.1
+		death_date = 528.3.31
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+515.2.9 = {
+	monarch = {
+		name = "Xu" #Xiaoming
+		dynasty = "Yuan"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Hu"
+		birth_date = 515.1.1
+		death_date = 550.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+528.3.31 = {
+	monarch = {
+		name = "Zhao"
+		dynasty = "Yuan"
+		birth_date = 526.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Erzhu"
+		birth_date = 514.1.1
+		death_date = 556.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+528.5.17 = {
+	monarch = {
+		name = "Ziyou" #Xiaozhuang
+		dynasty = "Yuan"
+		birth_date = 507.1.1
+		adm = 0
+		dip = 1
+		mil = 0
+	}
+}
+
+530.12.5 = {
+	monarch = {
+		name = "Ye"
+		dynasty = "Yuan"
+		birth_date = 509.1.1
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Erzhu"
+		birth_date = 510.1.1
+		death_date = 570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+531.4.1 = {
+	monarch = {
+		name = "Gong" #Jiemin
+		dynasty = "Yuan"
+		birth_date = 498.1.1
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Erzhu"
+		birth_date = 510.1.1
+		death_date = 570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+532.6.1 = {
+	monarch = {
+		name = "Lang"
+		dynasty = "Yuan"
+		birth_date = 513.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+532.6.13 = {
+	monarch = {
+		name = "Xiu" #Xiaowu
+		dynasty = "Yuan"
+		birth_date = 510.1.1
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
+
+533.1.1 = {
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Gao"
+		birth_date = 510.1.1
+		death_date = 570.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+534.6.1 = { capital = 700 } # Eastern Wei
+
+# End of the Sui dynasty (Li Wei)
+
+617.1.1 = {
+	government_rank = 1
+	capital = 688
+	monarch = {
+		name = "Mi"
+		dynasty = "Li"
+		birth_date = 582.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+		leader = {	name = "Li Mi"     	type = general	fire = 1	shock = 2	manuever = 0	siege = 0  death_date = 619.6.1 } # Not an actual death date
+	}
+	queen = {
+		country_of_origin = WEI
+		dynasty = "Wang"
+		birth_date = 585.1.1
+		death_date = 618.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+618.6.18 = {
+	queen = {
+		country_of_origin = TNG
+		dynasty = "Dugu"
+		birth_date = 590.1.1
+		death_date = 650.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = chinese }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }

@@ -1,0 +1,6845 @@
+namespace = eh_german
+namespace = eh_dutch
+normal_or_historical_nations = yes
+
+########################################################################
+# Events for the Germanic
+########################################################################
+
+# Kingdom of Germany
+country_event = {
+	id = eh_german.1
+	title = "eh_german.1.t"
+	desc = "eh_german.1.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FKN
+		is_year = 960
+		NOT = { is_year = 965 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PO2 = {
+				poland_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PO2 }
+							NOT = { area = silesia_area }
+						}
+					}
+					cede_province = PO2
+					add_core = PO2
+				}
+				neumark_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+				}
+			}
+			SVE = {
+				change_tag = SWE
+				swap_free_idea_group = yes
+				svealand_area = {
+					limit = {
+						NOT = { owned_by = SWE }
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+				ostra_svealand_area = {
+					limit = {
+						NOT = { owned_by = SWE }
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+				gotaland_area = {
+					limit = {
+						NOT = { owned_by = SWE }
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+				vastra_gotaland_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SWE }
+							NOT = { province_id = 16 }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+				9 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SWE }
+						}
+					}
+					cede_province = SWE
+					add_core = SWE
+				}
+			}
+			SHL = {
+				holstein_area = {
+					limit = {
+						NOT = { owned_by = SHL }
+					}
+					cede_province = SHL
+					add_core = SHL
+				}
+			}
+			BOH = { 
+				inherit = SIL
+				silesia_area = {
+					limit = {
+						NOT = { owned_by = BOH }
+					}
+					cede_province = BOH
+					add_core = BOH
+					remove_core = SIL
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.1.a"
+		ai_chance = { factor = 100 }
+		SAX = {
+			set_emperor = yes
+			country_event = { id = eh_german.2 days = 7 }
+		}
+		FKN = {
+			change_government = monarchy
+			add_government_reform = imperial_march_reform
+			elector = yes
+		}
+		SWA = {
+			change_government = monarchy
+			add_government_reform = imperial_march_reform
+			elector = yes
+		}
+		PAL = {
+			change_government = monarchy
+			add_government_reform = imperial_march_reform
+			elector = yes
+		}
+		BOH = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+			elector = yes
+		}
+		BAV = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 1
+			set_capital = 65
+			change_primary_culture = bavarian
+			change_religion = catholic
+			change_technology_group = western
+			elector = yes
+			every_owned_province = { change_culture = bavarian }
+		}
+		BRA = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 1
+			set_capital = 50
+			change_primary_culture = saxon
+			add_accepted_culture = prussian
+			change_religion = catholic
+			change_technology_group = western
+			swap_free_idea_group = yes
+			elector = yes
+			every_owned_province = { change_culture = prussian }
+		}
+		POM = {
+			change_primary_culture = pommeranian
+			change_religion = catholic
+			every_owned_province = { change_culture = pommeranian }
+		}
+		EFR = {
+			change_primary_culture = lower_saxon
+			change_religion = catholic
+			every_owned_province = { change_culture = lower_saxon }
+		}
+		north_german_region = {
+			limit = {
+				AND = {
+					NOT = { owned_by = EFR }
+					NOT = { owned_by = POM }
+					NOT = { owned_by = SHL }
+				}
+			}
+			set_in_empire = yes
+		}
+		south_german_region = {
+			limit = {
+				NOT = { owned_by = BUR }
+			}
+			set_in_empire = yes
+		}
+		low_countries_region = {
+			limit = {
+				NOT = { owned_by = FLA }
+			}
+			set_in_empire = yes
+		}
+		emilia_romagna_area = {
+			limit = {
+				NOT = { province_id = 114 }
+			}
+			set_in_empire = yes
+		}
+		liguria_area = {
+			limit = {
+				NOT = { province_id = 102 }
+			}
+			set_in_empire = yes
+		}
+		tuscany_area = { set_in_empire = yes }
+		piedmont_area = { set_in_empire = yes }
+		lombardy_area = { set_in_empire = yes }
+		po_valley_area = { set_in_empire = yes }
+		venetia_area = { set_in_empire = yes }
+		lorraine_area = { set_in_empire = yes }
+	}
+}
+
+# Holy Roman Empire
+country_event = {
+	id = eh_german.2
+	title = "eh_german.2.t"
+	desc = "eh_german.2.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			SAX = {
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				set_government_rank = 1
+				add_imperial_influence = 100
+				swap_free_idea_group = yes
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_stability = 1
+				add_prestige = 10
+				change_primary_culture = saxon
+				add_accepted_culture = lower_saxon
+				grant_independence = yes
+				add_treasury = -10000
+				define_ruler = {
+					name = "Otto II"
+					dynasty = "Ottonian"
+					change_adm = 5
+					change_dip = 3
+					change_mil = 6
+					age = 50
+				}
+				define_consort = {
+					name = "Theophanu"
+					dynasty = "Skleros"
+					culture = greek
+					change_adm = 2
+					change_dip = 2
+					change_mil = 2
+					female = yes
+				}
+				define_heir = {
+					dynasty = "Ottonian"
+				}
+				create_subject = {
+					subject_type = personal_union
+					subject = FKN
+				}
+			}
+			HAB = {
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				change_primary_culture = austrian
+				add_treasury = 10000
+				add_years_of_income = 1
+				elector = yes
+				austria_proper_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					change_culture = austrian
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BAV
+				}
+			}
+			CAR = {
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				change_primary_culture = austrian
+				add_accepted_culture = slovene
+				change_religion = catholic
+				inner_austria_area = {
+					limit = {
+						NOT = { owned_by = CAR }
+					}
+					change_culture = austrian
+					cede_province = CAR
+					add_core = CAR
+					remove_core = BAV
+				}
+				carinthia_area = {
+					limit = {
+						NOT = { owned_by = CAR }
+					}
+					change_culture = slovene
+					cede_province = CAR
+					add_core = CAR
+					remove_core = BAV
+				}
+				1768 = {
+					if = {
+						limit = {
+							NOT = { owned_by = CAR }
+						}
+					}
+					cede_province = CAR
+					add_core = CAR
+					remove_core = BAV
+				}
+			}
+			IT2 = { country_event = { id = eh_italian.1 days = 300 } }
+		}
+	}
+	
+	option = {
+		name = "eh_german.2.a"
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "eh_german.2.b"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				SAX = { was_player = yes }
+			}
+			switch_tag = HAB
+		}
+	}
+	
+	option = {
+		name = "eh_german.2.c"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				SAX = { was_player = yes }
+			}
+			switch_tag = BRA
+		}
+	}
+}
+
+# German Feudalism
+country_event = {
+	id = eh_german.3
+	title = "eh_german.3.t"
+	desc = "eh_german.3.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAB
+		is_year = 1050
+		NOT = { is_year = 1060 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			THU = {
+				63 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THU }
+						}
+					}
+					cede_province = THU
+					add_core = THU
+					remove_core = FKN
+				}
+				81 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THU }
+						}
+					}
+					cede_province = THU
+					add_core = THU
+					remove_core = FKN
+				}
+				83 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THU }
+						}
+					}
+					cede_province = THU
+					add_core = THU
+					remove_core = FKN
+				}
+				1762 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THU }
+						}
+					}
+					cede_province = THU
+					add_core = THU
+					remove_core = FKN
+				}
+			}
+			ALS = {
+				alsace_area = {
+					limit = {
+						NOT = { owned_by = ALS }
+					}
+					cede_province = ALS
+					add_core = ALS
+					remove_core = SWA
+				}
+			}
+			UTR = {
+				98 = {
+					if = {
+						limit = {
+							NOT = { owned_by = UTR }
+						}
+					}
+					cede_province = UTR
+					add_core = UTR
+					remove_core = LOT
+				}
+			}
+			SWE = {
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				set_government_rank = 2
+				set_capital = 1
+				change_primary_culture = swedish
+				change_religion = catholic
+				change_technology_group = western
+			}
+			FRY = { change_tag = FRI }
+		}
+	}
+	
+	option = {
+		name = "eh_german.3.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Ostsiedlung
+country_event = {
+	id = eh_german.4
+	title = "eh_german.4.t"
+	desc = "eh_german.4.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAB
+		is_year = 1255
+		NOT = { is_year = 1260 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BRA = {
+				neumark_area = {
+					limit = {
+						NOT = { owned_by = BRA }
+					}
+					cede_province = BRA
+					add_core = BRA
+					remove_core = PO2
+				}
+			}
+			POM = {
+				inherit = PMR
+				hinter_pommern_area = {
+					limit = {
+						NOT = { owned_by = POM }
+					}
+					cede_province = POM
+					add_core = POM
+					remove_core = PMR
+				}
+			}
+			BRU = {
+				57 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRU }
+						}
+					}
+					cede_province = BRU
+					add_core = BRU
+					remove_core = SAX
+				}
+				1758 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRU }
+						}
+					}
+					cede_province = BRU
+					add_core = BRU
+					remove_core = SAX
+				}
+				2971 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRU }
+						}
+					}
+					cede_province = BRU
+					add_core = BRU
+					remove_core = SAX
+				}
+				4773 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRU }
+						}
+					}
+					cede_province = BRU
+					add_core = BRU
+					remove_core = SAX
+				}
+				4775 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRU }
+						}
+					}
+					cede_province = BRU
+					add_core = BRU
+					remove_core = SAX
+				}
+			}
+			THU = {
+				4716 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THU }
+						}
+					}
+					cede_province = THU
+					add_core = THU
+					remove_core = FKN
+				}
+				4717 = {
+					if = {
+						limit = {
+							NOT = { owned_by = THU }
+						}
+					}
+					cede_province = THU
+					add_core = THU
+					remove_core = FKN
+				}
+			}
+			HSA = {
+				45 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HSA }
+						}
+					}
+					cede_province = HSA
+					add_core = HSA
+					remove_core = DAN
+				}
+			}
+			HAM = {
+				44 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAM }
+						}
+					}
+					cede_province = HAM
+					add_core = HAM
+					remove_core = SAX
+				}
+			}
+			DTT = {
+				4141 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DTT }
+						}
+					}
+					cede_province = DTT
+					add_core = DTT
+					remove_core = SHL
+				}
+			}
+			LAU = {
+				1857 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LAU }
+						}
+					}
+					cede_province = LAU
+					add_core = LAU
+					remove_core = SAX
+				}
+			}
+			MAI = {
+				78 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAI }
+						}
+					}
+					cede_province = MAI
+					add_core = MAI
+					remove_core = FKN
+				}
+				4718 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAI }
+						}
+					}
+					cede_province = MAI
+					add_core = MAI
+					remove_core = FKN
+				}
+			}
+			HES = {
+				81 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = THU
+				}
+				83 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = THU
+				}
+				1762 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = THU
+				}
+				4774 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = FKN
+				}
+			}
+			KOL = {
+				82 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KOL }
+						}
+					}
+					cede_province = KOL
+					add_core = KOL
+					remove_core = SAX
+				}
+				2972 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KOL }
+						}
+					}
+					cede_province = KOL
+					add_core = KOL
+					remove_core = SAX
+				}
+			}
+			LUN = {
+				53 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LUN }
+						}
+					}
+					cede_province = LUN
+					add_core = LUN
+					remove_core = SAX
+				}
+				4771 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LUN }
+						}
+					}
+					cede_province = LUN
+					add_core = LUN
+					remove_core = SAX
+				}
+				4772 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LUN }
+						}
+					}
+					cede_province = LUN
+					add_core = LUN
+					remove_core = SAX
+				}
+			}
+			ANS = {
+				71 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ANS }
+						}
+					}
+					cede_province = ANS
+					add_core = ANS
+					remove_core = FKN
+				}
+				4715 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ANS }
+						}
+					}
+					cede_province = ANS
+					add_core = ANS
+					remove_core = FKN
+				}
+			}
+			BAV = {
+				4711 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = SWA
+				}
+			}
+			AUG = {
+				1868 = {
+					if = {
+						limit = {
+							NOT = { owned_by = AUG }
+						}
+					}
+					cede_province = AUG
+					add_core = AUG
+					remove_core = SWA
+				}
+			}
+			MEM = {
+				68 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MEM }
+						}
+					}
+					cede_province = MEM
+					add_core = MEM
+					remove_core = SWA
+				}
+			}
+			WUR = {
+				70 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WUR }
+						}
+					}
+					cede_province = WUR
+					add_core = WUR
+					remove_core = SWA
+				}
+			}
+			ULM = {
+				1872 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ULM }
+						}
+					}
+					cede_province = ULM
+					add_core = ULM
+					remove_core = SWA
+				}
+			}
+			RVA = {
+				69 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RVA }
+						}
+					}
+					cede_province = RVA
+					add_core = RVA
+					remove_core = KLE
+				}
+			}
+			SLZ = {
+				76 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SLZ }
+						}
+					}
+					cede_province = SLZ
+					add_core = SLZ
+					remove_core = BAV
+				}
+			}
+			PRS = {
+				change_tag = TEU
+				change_religion = catholic
+				east_prussia_area = {
+					limit = {
+						NOT = { owned_by = TEU }
+					}
+					cede_province = TEU
+					add_core = TEU
+				}
+				42 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TEU }
+						}
+					}
+					cede_province = TEU
+					add_core = TEU
+				}
+				1841 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TEU }
+						}
+					}
+					cede_province = TEU
+					add_core = TEU
+				}
+				1859 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TEU }
+						}
+					}
+					cede_province = TEU
+					add_core = TEU
+				}
+			}
+			LIV = {
+				change_government = monarchy
+				add_government_reform = livonian_monarchy
+				set_government_rank = 1
+				add_accepted_culture = estonian
+				curonia_area = {
+					limit = {
+						NOT = { owned_by = LIV }
+					}
+					cede_province = LIV
+					add_core = LIV
+					remove_core = LTG
+				}
+				livonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = LIV }
+							NOT = { province_id = 38 }
+						}
+					}
+					cede_province = LIV
+					add_core = LIV
+					remove_core = LTG
+				}
+				1834 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LIV }
+						}
+					}
+					cede_province = LIV
+					add_core = LIV
+					remove_core = LTG
+				}
+			}
+			RIG = {
+				38 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RIG }
+						}
+					}
+					cede_province = RIG
+					add_core = RIG
+					remove_core = LTG
+				}
+			}
+			NOV = {
+				34 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NOV }
+						}
+					}
+					cede_province = NOV
+					add_core = NOV
+					remove_core = EST
+				}
+			}
+			PSK = {
+				274 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PSK }
+						}
+					}
+					cede_province = PSK
+					add_core = PSK
+					remove_core = NOV
+				}
+				1960 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PSK }
+						}
+					}
+					cede_province = PSK
+					add_core = PSK
+					remove_core = NOV
+				}
+			}
+			FRA = {
+				inherit = TOU
+				picardy_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = FLA
+				}
+				languedoc_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 197 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = TOU
+				}
+				176 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ENG
+				}
+				198 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = TOU
+				}
+				204 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = PRO
+				}
+				4694 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = ENG
+				}
+			}
+			GEN = {
+				285 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = GLH
+				}
+				286 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = GLH
+				}
+				1247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = COR
+				}
+				2348 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = BYZ
+				}
+				2447 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = GLH
+				}
+			}
+			FEO = {
+				2410 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FEO }
+						}
+					}
+					cede_province = FEO
+					add_core = FEO
+					remove_core = GLH
+				}
+			}
+			CIL = {
+				332 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = CIL } 
+						}
+					}
+					cede_province = CIL
+					add_core = CIL
+					remove_core = RUM
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.4.a"
+		ai_chance = { factor = 100 }
+		FKN = { change_tag = FRN }
+		BUR = {
+			bourgogne_area = {
+				limit = {
+					NOT = { owned_by = BUR }
+				}
+				cede_province = BUR
+				add_core = BUR
+				remove_core = FRA
+			}
+			west_burgundy_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = BUR }
+						NOT = { province_id = 191 }
+					}
+				}
+				cede_province = BUR
+				add_core = BUR
+				remove_core = FRA
+			}
+		}
+	}
+}
+
+# Austria and Swiss
+country_event = {
+	id = eh_german.5
+	title = "eh_german.5.t"
+	desc = "eh_german.5.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAB
+		is_year = 1290
+		NOT = { is_year = 1295 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			HAB = {
+				austria_proper_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					change_culture = austrian
+					cede_province = HAB
+					add_core = HAB
+					remove_core = STY
+				}
+				inner_austria_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					change_culture = austrian
+					cede_province = HAB
+					add_core = HAB
+					remove_core = STY
+				}
+			}
+			SWA = {
+				change_tag = SWI
+				romandie_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SWI }
+							NOT = { province_id = 1867 }
+							NOT = { province_id = 1871 }
+							NOT = { province_id = 4720 }
+						}
+					}
+					change_culture = swiss
+					cede_province = SWI
+					add_core = SWI
+					remove_core = BUR
+				}
+				switzerland_area = {
+					limit = {
+						NOT = { owned_by = SWI }
+					}
+					change_culture = swiss
+					cede_province = SWI
+					add_core = SWI
+					remove_core = BUR
+				}
+			}
+			WUR = {
+				lower_swabia_area = {
+					limit = {
+						NOT = { owned_by = WUR }
+					}
+					cede_province = WUR
+					add_core = WUR
+					remove_core = SWI
+				}
+			}
+			BOH = {
+				60 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = BOH } 
+						}
+					}
+					cede_province = BOH
+					add_core = BOH
+					remove_core = MEI
+				}
+				1763 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = BOH } 
+						}
+					}
+					cede_province = BOH
+					add_core = BOH
+					remove_core = MEI
+				}
+			}
+			TEU = {
+				west_prussia_area = {
+					limit = {
+						NOT = { owned_by = TEU }
+					}
+					change_culture = prussian
+					cede_province = TEU
+					add_core = TEU
+					remove_core = POM
+				}
+			}
+			AQU = {
+				111 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = AQU } 
+						}
+					}
+					cede_province = AQU
+					add_core = AQU
+					remove_core = STY
+				}
+			}
+			SAR = {
+				corsica_sardinia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SAR }
+							NOT = { province_id = 1247 }
+						}
+					}
+					cede_province = SAR
+					add_core = SAR
+					remove_core = PIS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.5.a"
+		ai_chance = { factor = 100 }
+		HAB = {
+			add_legitimacy = 10
+			elector = yes
+			define_ruler = {
+				dynasty = "von Habsburg"
+			}
+			define_heir = {
+				dynasty = "von Habsburg"
+			}
+		}
+		SWI = {
+			change_government = republic
+			add_government_reform = democracy_reform 
+			set_government_rank = 2
+			swap_free_idea_group = yes
+			elector = no
+		}
+	}
+}
+
+# Hanseatic League
+country_event = {
+	id = eh_german.6
+	title = "eh_german.6.t"
+	desc = "eh_german.6.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HSA
+		is_year = 1355
+		NOT = { is_year = 1365 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	option = {
+		name = "eh_german.6.a"
+		ai_chance = { factor = 100 }
+		HSA = {
+			change_government = republic
+			add_government_reform = trading_city
+			set_government_rank = 1
+			add_mercantilism = 2
+			add_years_of_income = 10
+			create_alliance = DAN
+			create_alliance = HAM
+			create_alliance = BRE
+			create_alliance = MKL
+		}
+		DAN = {	
+			add_mercantilism = 2
+			add_years_of_income = 10
+			create_alliance = HAM
+			create_alliance = BRE
+			create_alliance = MKL
+		}
+		HAM = {
+			change_government = republic
+			add_government_reform = trading_city
+			set_government_rank = 1
+			add_mercantilism = 2
+			add_years_of_income = 10
+			create_alliance = BRE
+			create_alliance = MKL
+		}
+		BRE = {
+			change_government = republic
+			add_government_reform = trading_city
+			set_government_rank = 1
+			add_mercantilism = 2
+			add_years_of_income = 10
+			create_alliance = MKL
+		}
+	}
+}
+
+# Hussite War
+country_event = {
+	id = eh_german.7
+	title = "eh_german.7.t"
+	desc = "eh_german.7.d"
+	picture = DEFENESTRATION_PRAGUE_eventPicture
+	
+	trigger = {
+		tag = BOH
+		is_year = 1420
+		NOT = { is_year = 1435 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BOH = {
+				change_religion = hussite
+				bohemia_area = {
+					spawn_rebels = {
+						type = heretic_rebels
+						size = 1
+						leader = "Jan Zizka"
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.7.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				HU2 = { was_player = yes }
+			}
+			switch_tag = HAB
+		}
+		if = {
+			limit = {
+				BG2 = { was_player = yes }
+			}
+			switch_tag = HAB
+		}
+	}
+}
+
+# German Peasants' War
+country_event = {
+	id = eh_german.8
+	title = "eh_german.8.t"
+	desc = "eh_german.8.d"
+	picture = SIEGE_PRAGUE_CASTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.8.a"
+		ai_chance = { factor = 100 }
+		lower_swabia_area = {
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 1
+				leader = "Thomas Müntzer"
+			}
+		}
+		upper_rhineland_area = {
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 1
+				leader = "Michael Gaismair"
+			}
+		}
+		palatinate_area = {
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 1
+				leader = "Hans Müller von Bulgenbach"
+			}
+		}
+	}
+}
+
+# Habsburg Monarchy in the 16th century
+country_event = {
+	id = eh_german.9
+	title = "eh_german.9.t"
+	desc = "eh_german.9.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAB
+		is_year = 1525
+		NOT = { is_year = 1530 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			HAB = {
+				inherit = BOH
+				vassalize = SIL
+				inner_austria_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+				}
+				austria_proper_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+				}
+				tirol_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+				}
+				bohemia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BOH
+				}
+				erzgebirge_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BOH
+				}
+				moravia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BOH
+				}
+				slovakia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = HU2
+				}
+				transdanubia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = HU2
+				}
+				alfold_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = HU2
+				}
+				lusatia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BOH
+				}
+				silesia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 263 }
+							NOT = { province_id = 4723 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = SIL
+				}
+				vojvodina_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 4173 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = HU2
+				}
+			}
+			TUR = {
+				croatia_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+				slavonia_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+				red_sea_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = TUR }
+							NOT = { province_id = 2787 }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = NUB
+				}
+				356 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = MAM
+				}
+				4173 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HU2
+				}
+				4239 = {
+					if = {
+						limit = {
+							NOT = { owned_by = TUR }
+						}
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HU2
+				}
+			}
+			PRU = {
+				east_prussia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = TEU
+				}
+			}
+			SAX = {
+				59 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SAX }
+						}
+					}
+					cede_province = SAX
+					add_core = SAX
+					remove_core = THU
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.9.a"
+		ai_chance = { factor = 100 }
+		HAB = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+		}
+		HU2 = {
+			change_tag = TRA
+			transylvania_area = {
+				limit = { 
+					NOT = { owned_by = TRA }
+				}
+				cede_province = TRA
+				add_core = TRA
+				remove_core = HAB
+			}
+			southern_transylvania_area = {
+				limit = { 
+					NOT = { owned_by = TRA }
+				}
+				cede_province = TRA
+				add_core = TRA
+				remove_core = HAB
+			}
+		}
+		SWE = {
+			grant_independence = yes
+			define_ruler = {
+				dynasty = "Vasa"
+			}
+			define_heir = {
+				dynasty = "Vasa"
+			}
+		}
+		PO2 = {
+			inherit = MAZ
+			mazovia_area = {
+				limit = {
+					NOT = { owned_by = PO2 }
+				}
+				cede_province = PO2
+				add_core = PO2
+				remove_core = MAZ
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Nicolaus Copernicus"
+				culture = polish
+				skill = 3
+				discount = yes
+			}
+		}
+		TUR = { country_event = { id = eh_asia_turkey.9 days = 7 } }
+	}
+}
+
+# Protestant Reformation
+country_event = {
+	id = eh_german.10
+	title = "eh_german.10.t"
+	desc = "eh_german.10.d"
+	picture = PROTESTANT_PRINTED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SAX
+		is_year = 1517
+		NOT = { is_year = 1520 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	option = {
+		name = "eh_german.10.a"
+		ai_chance = { factor = 100 }
+		SAX = {
+			define_advisor = {
+				type = theologian
+				name = "Martin Luther"
+				culture = saxon
+				skill = 3
+				discount = yes
+			}
+			change_religion = protestant
+			every_owned_province = { change_religion = protestant }
+			59 = {
+				add_institution_embracement = {
+					which = printing_press
+					value = 100
+				}
+			}
+		}
+		SWI = {
+			change_religion = reformed
+			define_advisor = {
+				type = theologian
+				name = "Jean Calvin"
+				culture = cosmopolitan_french
+				skill = 3
+				discount = yes
+			}
+			every_owned_province = { change_religion = reformed }
+		}
+		ANS = {
+			change_religion = protestant
+			every_owned_province = { change_religion = protestant }
+		}
+		AUG = {
+			change_religion = protestant
+			every_owned_province = { change_religion = protestant }
+		}
+		HES = {
+			change_religion = protestant
+			every_owned_province = { change_religion = protestant }
+		}
+		ULM = {
+			change_religion = protestant
+			every_owned_province = { change_religion = protestant }
+		}
+	}
+}
+
+# Aftermath of the Thirty Years War
+country_event = {
+	id = eh_german.11
+	title = "eh_german.11.t"
+	desc = "eh_german.11.d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_hre_religion_treaty = yes
+			north_brabant_area = { set_in_empire = no }
+			holland_area = { set_in_empire = no }
+			frisia_area = { set_in_empire = no }
+			switzerland_area = { set_in_empire = no }
+			romandie_area = { set_in_empire = no }
+		}
+	}
+	
+	option = {
+		name = "eh_german.11.a"
+		ai_chance = { factor = 100 }
+		north_german_region = {
+			limit = {
+				NOT = { owned_by = BRA }
+			}
+			add_devastation = 30
+		}
+		south_german_region = {
+			limit = {
+				AND = {
+					NOT = { owned_by = SWI }
+					NOT = { area = austria_proper_area }
+					NOT = { area = inner_austria_area }
+					NOT = { area = tirol_area }
+					NOT = { area = carinthia_area }
+				}
+			}
+			add_devastation = 30
+		}
+		france_region = { change_religion = catholic }
+		italy_region = { change_religion = catholic }
+		poland_region = { change_religion = catholic }
+		iberia_region = { change_religion = catholic }
+		austria_proper_area = { change_religion = catholic }
+		inner_austria_area = { change_religion = catholic }
+	}
+}
+
+# Great Turkish War
+country_event = {
+	id = eh_german.12
+	title = "eh_german.12.t"
+	desc = "eh_german.12.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			HAB = {
+				transdanubia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				alfold_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				slovakia_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TUR
+				}
+				162 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TRA
+				}
+				1952 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = TRA
+				}
+			}
+			BRA = {
+				52 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRA }
+						}
+					}
+					cede_province = BRA
+					add_core = BRA
+					remove_core = MAG
+				}
+			}
+			ALH = {
+				394 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALH }
+						}
+					}
+					cede_province = ALH
+					add_core = ALH
+					remove_core = TUR
+				}
+				2347 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ALH }
+						}
+					}
+					cede_province = ALH
+					add_core = ALH
+					remove_core = TUR
+				}
+			}
+			HDR = {
+				hadramut_area = {
+					limit = {
+						NOT = { owned_by = HDR }
+					}
+					cede_province = HDR
+					add_core = HDR
+					remove_core = RAS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.12.a"
+		ai_chance = { factor = 100 }
+		HAB = {
+			clr_country_flag = great_turkish_war
+			add_stability = 1
+			add_prestige = 10
+			add_legitimacy = 10
+			white_peace = TUR
+			vassalize = TRA
+			134 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		TUR = {
+			clr_country_flag = great_turkish_war
+			add_prestige = -10
+			add_legitimacy = -10
+		}
+	}
+}
+
+# Rise of the Prussia
+country_event = {
+	id = eh_german.13
+	title = "eh_german.13.t"
+	desc = "eh_german.13.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BRA
+		is_year = 1701
+		NOT = { is_year = 1703 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BRA = {
+				change_tag = PRU
+				neumark_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = BRA
+				}
+				mittelmark_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = BRA
+				}
+				east_prussia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = BRA
+				}
+				2964 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = BRA
+				}
+				4746 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = POM
+				}
+				4749 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = BRA
+				}
+				4786 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = BRA
+				}
+			}
+			PLC = {
+				podolia_volhynia_area = {
+					limit = {
+						NOT = { owned_by = PLC }
+					}
+					cede_province = PLC
+					add_core = PLC
+					remove_core = TUR
+				}
+			}
+			RUS = {
+				33 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = SWE
+				}
+			}
+			VEN = {
+				morea_area = {
+					limit = {
+						NOT = { owned_by = VEN }
+					}
+					cede_province = VEN
+					add_core = VEN
+					remove_core = TUR
+				}
+				136 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VEN }
+						}
+					}
+					cede_province = VEN
+					add_core = VEN
+					remove_core = TUR
+				}
+				142 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VEN }
+						}
+					}
+					cede_province = VEN
+					add_core = VEN
+					remove_core = TUR
+				}
+				4753 = {
+					if = {
+						limit = {
+							NOT = { owned_by = VEN }
+						}
+					}
+					cede_province = VEN
+					add_core = VEN
+					remove_core = TUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.13.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			change_government = monarchy
+			add_government_reform = prussian_monarchy
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+			add_prestige = 30
+			add_legitimacy = 10
+			add_years_of_income = 3
+			change_religion = protestant
+			change_primary_culture = prussian
+			every_owned_province = { change_culture = prussian }
+			define_ruler = {
+				name = "Friedrich I"
+				dynasty = "von Hohenzollern"
+				culture = prussian 
+				change_adm = 2
+				change_dip = 3
+				change_mil = 1
+				age = 43
+			}
+			define_consort = {
+				name = "Sophia Charlotte"
+				dynasty = "von Hannover"
+				culture = lower_saxon
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Friedrich Wilhelm I"
+				dynasty = "von Hohenzollern"
+				culture = prussian 
+				change_adm = 4
+				change_dip = 4
+				change_mil = 6
+				age = 13
+			}
+			50 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+		HAB = {
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_government_rank = 2
+		}
+		SAX = {
+			define_advisor = {
+				type = artist
+				name = "Johann Sebastian Bach"
+				culture = saxon
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# War of the Austrian Succession
+country_event = {
+	id = eh_german.14
+	title = "eh_german.14.t"
+	desc = "eh_german.14.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAB
+		is_year = 1740
+		NOT = { is_year = 1745 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			SPI = {
+				2979 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = HAB
+				}
+				4728 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPI }
+						}
+					}
+					cede_province = SPI
+					add_core = SPI
+					remove_core = HAB
+				}
+			}
+			NAP = {
+				apulia_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+					remove_core = HAB
+				}
+				calabria_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+					remove_core = HAB
+				}
+				naples_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+					remove_core = HAB
+				}
+				sicily_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NAP }
+							NOT = { province_id = 126 }
+						}
+					}
+					cede_province = NAP
+					add_core = NAP
+					remove_core = HAB
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { owned_by = NAP }
+					}
+					cede_province = NAP
+					add_core = NAP
+					remove_core = HAB
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NAP }
+						}
+					}
+					cede_province = NAP
+					add_core = NAP
+					remove_core = HAB
+				}
+			}
+			COR = {
+				1247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = COR }
+						}
+					}
+					cede_province = COR
+					add_core = COR
+					remove_core = GEN
+				}
+			}
+			TUR = {
+				serbia_area = {
+					limit = {
+						NOT = { owned_by = TUR }
+					}
+					cede_province = TUR
+					add_core = TUR
+					remove_core = HAB
+				}
+			}
+			WAL = {
+				wallachia_area = {
+					limit = {
+						NOT = { owned_by = WAL }
+					}
+					cede_province = WAL
+					add_core = WAL
+					remove_core = HAB
+				}
+			}
+			GBR = {
+				piedmont_north_america_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				south_carolina_piedmont_area = {
+					limit = {
+						NOT = { owned_by = GBR }
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				838 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				929 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				955 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				969 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				970 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2549 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2540 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2553 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				2562 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				999 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+				3255 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+				}
+			}
+			FRA = {
+				895 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				900 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				910 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				913 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				958 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				997 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				1008 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2520 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2514 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2559 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				2593 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+				4885 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRA }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+				}
+			}
+			RUS = {
+				east_siberia_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = RUS }
+							NOT = { province_id = 2440 }
+							NOT = { province_id = 4657 }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+				}
+			}
+			SPA = {
+				banda_oriental_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				sonora_area = {
+					limit = {
+						NOT = { owned_by = SPA }
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				877 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				884 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				888 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2516 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				2860 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+				4633 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+				}
+			}
+			POR = {
+				goias_area = {
+					limit = {
+						NOT = { owned_by = POR }
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2857 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2920 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+				2904 = {
+					if = {
+						limit = {
+							NOT = { owned_by = POR }
+						}
+					}
+					cede_province = POR
+					add_core = POR
+				}
+			}
+			DAN = {
+				1105 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.14.a"
+		ai_chance = { factor = 100 }
+		HAB = {
+			define_ruler = {
+				name = "Maria Theresia"
+				dynasty = "von Habsburg"
+				culture = austrian 
+				change_adm = 6
+				change_dip = 4
+				change_mil = 6
+				age = 23
+				female = yes
+			}
+			define_consort = {
+				name = "Stephan"
+				dynasty = "von Lothringen"
+				culture = burgundian
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				age = 32
+				female = no
+			}
+			remove_heir = { allow_new_heir = no }
+			define_advisor = {
+				type = artist
+				name = "Joseph Haydn"
+				culture = austrian
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+# End of the Austrian Succession
+country_event = {
+	id = eh_german.15
+	title = "eh_german.15.t"
+	desc = "eh_german.15.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HAB
+		is_year = 1748
+		NOT = { is_year = 1750 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			PRU = {
+				silesia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = HAB
+				}
+				1763 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = SAX
+				}
+				1931 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = EFR
+				}
+				4778 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = HAB
+				}
+			}
+			GEN = {
+				1247 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GEN }
+						}
+					}
+					cede_province = GEN
+					add_core = GEN
+					remove_core = COR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.15.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			add_stability = 1
+			add_prestige = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+		}
+	}
+}
+
+# Seven Years' War
+country_event = {
+	id = eh_german.16
+	title = "eh_german.16.t"
+	desc = "eh_german.16.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		is_year = 1756
+		NOT = { is_year = 1760 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			PRU = {
+				set_country_flag = seven_years_war
+				create_alliance = GBR
+				create_alliance = HAN
+				create_alliance = HES
+			}
+			FRA = {
+				set_country_flag = seven_years_war
+				create_alliance = HAB
+				create_alliance = RUS
+				create_alliance = SWE
+			}
+			HAB = { set_country_flag = seven_years_war }
+			RUS = { set_country_flag = seven_years_war }
+			GBR = { set_country_flag = seven_years_war }
+			DAN = {
+				3043 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.16.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			50 = { add_building = fort_18th }
+			4361 = { add_building = fort_18th }
+			declare_war_with_cb = {
+				who = HAB
+				casus_belli = cb_imperial
+			}
+			define_general = {
+				name = "Gebhard von Blucher"
+				shock = 5
+				fire = 5
+				manuever = 5
+				siege = 0
+			}
+			define_advisor = {
+				type = philosopher
+				name = "Immanuel Kant"
+				culture = prussian
+				skill = 3
+				discount = yes
+			}
+		}
+		GBR = { 
+			join_all_offensive_wars_of = PRU
+			country_event = { id = eh_britain.45 days = 1 }
+		}
+		HAB = {
+			266 = { add_building = fort_18th }
+			4237 = { add_building = fort_18th }
+			europe = {
+				limit = { owned_by = HAB }
+				kill_units = {
+					who = HAB
+					type = infantry
+				}
+				kill_units = {
+					who = HAB
+					type = cavalry
+				}
+				kill_units = {
+					who = HAB
+					type = artillery
+				}
+			}
+			country_event = { id = eh_german.39 days = 1 }
+		}
+		FRA = {
+			join_all_defensive_wars_of = HAB
+			country_event = { id = eh_french.49 days = 1 }
+		}
+		RUS = { 
+			join_all_defensive_wars_of = HAB 
+			country_event = { id = eh_russian.39 days = 1 }
+		}
+	}
+}
+
+# Confederation of the Rhine
+country_event = {
+	id = eh_german.17
+	title = "eh_german.17.t"
+	desc = "eh_german.17.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			dismantle_hre = yes
+			FR2 = {
+				inherit = ETR
+				tuscany_area = {
+					limit = {
+						NOT = { owned_by = FR2 }
+					}
+					cede_province = FR2
+					add_core = FR2
+					remove_core = ETR
+				}
+			}
+			WES = {
+				westphalia_area = {
+					limit = {
+						NOT = { owned_by = WES }
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = PRU
+				}
+				braunschweig_area = {
+					limit = {
+						NOT = { owned_by = WES }
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = PRU
+				}
+				north_westphalia_area = {
+					limit = {
+						NOT = { owned_by = WES }
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = PRU
+				} 
+				hesse_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = WES }
+							NOT = { province_id = 78 }
+							NOT = { province_id = 1876 }
+						}
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = PRU
+				}
+				lower_saxony_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = WES }
+							NOT = { province_id = 44 }
+						}
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = HAN
+				}
+				northern_saxony_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = WES }
+							NOT = { province_id = 58 }
+						}
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = PRU
+				}
+				54 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WES }
+						}
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = HAN
+				}
+				83 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WES }
+						}
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = FR2
+				}
+				4771 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WES }
+						}
+					}
+					cede_province = WES
+					add_core = WES
+					remove_core = HAN
+				}
+			}
+			KLE = {
+				84 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLE }
+						}
+					}
+					cede_province = KLE
+					add_core = KLE
+					remove_core = FR2
+				}
+				3104 = {
+					if = {
+						limit = {
+							NOT = { owned_by = KLE }
+						}
+					}
+					cede_province = KLE
+					add_core = KLE
+					remove_core = FR2
+				}
+			}
+			NED = {
+				1931 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = PRU
+				}
+			}
+			SIC = {
+				sicily_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SIC }
+							NOT = { province_id = 126 }
+						}
+					}
+					cede_province = SIC
+					add_core = SIC
+					remove_core = NAP
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { owned_by = SIC }
+					}
+					cede_province = SIC
+					add_core = SIC
+					remove_core = NAP
+				}
+			}
+			RUS = {
+				269 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PRU
+				}
+				4924 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = PRU
+				}
+			}
+			PO2 = {
+				mazovia_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+				wielkopolska_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+				central_poland_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+				kuyavia_area = {
+					limit = {
+						NOT = { owned_by = PO2 }
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+				sandomierz_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PO2 }
+							NOT = { province_id = 2959 }
+							NOT = { province_id = 4538 }
+						}
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+				malopolska_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PO2 }
+							NOT = { province_id = 2960 }
+						}
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+				2997 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PO2 }
+						}
+					}
+					cede_province = PO2
+					add_core = PO2
+					remove_core = PRU
+				}
+			}
+			DNZ = {
+				43 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DNZ }
+						}
+					}
+					cede_province = DNZ
+					add_core = DNZ
+					remove_core = PRU
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.17.a"
+		ai_chance = { factor = 100 }
+		FR2 = {
+			clr_country_flag = napoleonic_wars
+			white_peace = PRU
+			create_subject = {
+				subject_type = client_vassal
+				subject = BAV
+			}
+			create_subject = {
+				subject_type = client_vassal
+				subject = THU
+			}
+			create_subject = {
+				subject_type = client_vassal
+				subject = NAP
+			}
+			create_subject = {
+				subject_type = client_vassal
+				subject = SAX
+			}
+			create_subject = {
+				subject_type = client_vassal
+				subject = PO2
+			}
+			create_subject = {
+				subject_type = client_vassal
+				subject = WES
+			}
+		}
+		IT2 = { clr_country_flag = napoleonic_wars }
+		SPA = { country_event = { id = eh_spanish.18 days = 300 } }
+		PRU = { 
+			clr_country_flag = napoleonic_wars
+			country_event = { id = eh_german.46 days = 1 }
+		}
+		GBR = { 
+			clr_country_flag = napoleonic_wars
+			country_event = { id = eh_britain.50 days = 1 }
+		}
+		HAB = {
+			set_government_rank = 3
+			define_advisor = {
+				type = artist
+				name = "Ludwig van Beethoven"
+				culture = hessian
+				skill = 3
+				discount = yes
+			}
+		}
+		SAX = {
+			define_advisor = {
+				type = philosopher
+				name = "Johann Wolfgang von Goethe"
+				culture = hessian
+				skill = 3
+				discount = yes
+			}
+		}
+		BAV = { set_government_rank = 2 }
+	}
+}
+
+# Congress of Vienna
+country_event = {
+	id = eh_german.18
+	title = "eh_german.18.t"
+	desc = "eh_german.18.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			PRU = {
+				set_government_rank = 2
+				west_prussia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PO2
+				}
+				wielkopolska_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { province_id = 255 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PO2
+				}
+				north_westphalia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { province_id = 56 }
+							NOT = { province_id = 2973 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				westphalia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				north_rhine_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				lower_rhineland_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { province_id = 78 }
+							NOT = { province_id = 83 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				52 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				1857 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				1859 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PO2
+				}
+				2964 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				4741 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = WES
+				}
+				4523 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = PO2
+				}
+			}
+			HAB = {
+				inherit = IT2
+				change_government = monarchy
+				add_government_reform = austrian_absolute_monarchy
+				set_government_rank = 3
+				lombardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 2979 }
+							NOT = { province_id = 4728 }
+							NOT = { province_id = 4740 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = IT2
+				}
+				tirol_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BAV
+				}
+				croatia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 1828 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = FR2
+				}
+				east_adriatic_coast_area = {
+					limit = {
+						NOT = { owned_by = HAB }
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = FR2
+				}
+				76 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BAV
+				}
+				130 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = FR2
+				}
+				131 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = FR2
+				}
+				262 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = PO2
+				}
+			}
+			BAV = {
+				change_government = monarchy
+				add_government_reform = multi_party_system
+				set_government_rank = 2
+				66 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = WES
+				}
+				1761 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = WES
+				}
+				4767 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BAV }
+						}
+					}
+					cede_province = BAV
+					add_core = BAV
+					remove_core = WES
+				}
+			}
+			NED = {
+				set_government_rank = 2
+				holland_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = FR2
+				}
+				north_brabant_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = FR2
+				}
+				frisia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 1931 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = FR2
+				}
+			}
+			HAN = {
+				braunschweig_area = {
+					limit = {
+						NOT = { owned_by = HAN }
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				53 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				54 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				56 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				1931 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				2973 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				4742 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				4771 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+				4772 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+			}
+			HAM = {
+				44 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAM }
+						}
+					}
+					cede_province = HAM
+					add_core = HAM
+					remove_core = FR2
+				}
+			}
+			HES = {
+				81 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = WES
+				}
+				1762 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = WES
+				}
+				4774 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = WES
+				}
+			}
+			MAI = {
+				78 = {
+					if = {
+						limit = {
+							NOT = { owned_by = MAI }
+						}
+					}
+					cede_province = MAI
+					add_core = MAI
+					remove_core = FRN
+				}
+			}
+			OLD = {
+				55 = {
+					if = {
+						limit = {
+							NOT = { owned_by = OLD }
+						}
+					}
+					cede_province = OLD
+					add_core = OLD
+					remove_core = WES
+				}
+			}
+			NSA = {
+				83 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NSA }
+						}
+					}
+					cede_province = NSA
+					add_core = NSA
+					remove_core = WES
+				}
+			}
+			FRN = {
+				1876 = {
+					if = {
+						limit = {
+							NOT = { owned_by = FRN }
+						}
+					}
+					cede_province = FRN
+					add_core = FRN
+					remove_core = WES
+				}
+			}
+			BRE = {
+				1874 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BRE }
+						}
+					}
+					cede_province = BRE
+					add_core = BRE
+					remove_core = FR2
+				}
+			}
+			HSA = {
+				45 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HSA }
+						}
+					}
+					cede_province = HSA
+					add_core = HSA
+					remove_core = FR2
+				}
+			}
+			GBR = {
+				126 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = KNI
+				}
+				142 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FR2
+				}
+				646 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = NED
+				}
+				4698 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GBR }
+						}
+					}
+					cede_province = GBR
+					add_core = GBR
+					remove_core = FR2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.18.a"
+		ai_chance = { factor = 100 }
+		GBR = { create_union = HAN }
+		BAV = { grant_independence = yes }
+		SAX = { grant_independence = yes }
+		NED = { country_event = { id = eh_dutch.7 days = 700 } }
+	}
+}
+
+# Bismarck era
+country_event = {
+	id = eh_german.19
+	title = "eh_german.19.t"
+	desc = "eh_german.19.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		is_year = 1860
+		NOT = { is_year = 1865 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			PRU = {
+				frisia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 1931 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = FR2
+				}
+				54 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAN }
+						}
+					}
+					cede_province = HAN
+					add_core = HAN
+					remove_core = WES
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.19.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			define_advisor = {
+				type = statesman
+				name = "Otto von Bismarck"
+				culture = saxon
+				skill = 3
+				discount = yes
+			}
+			country_event = { id = eh_german.20 days = 700 }
+		}
+	}
+}
+
+# Austro-Prussian War
+country_event = {
+	id = eh_german.20
+	title = "eh_german.20.t"
+	desc = "eh_german.20.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.20.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			set_country_flag = austro_prussian_war
+			declare_war_with_cb = {
+				who = HAB
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_german.21 days = 300 }
+		}
+		HAB = { 
+			set_country_flag = austro_prussian_war 
+			country_event = { id = eh_german.49 days = 1 }
+		}
+	}
+}
+
+# German Question
+country_event = {
+	id = eh_german.21
+	title = "eh_german.21.t"
+	desc = "eh_german.21.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			PRU = {
+				north_german_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { area = bohemia_area }
+							NOT = { area = erzgebirge_area }
+							NOT = { area = moravia_area }
+							NOT = { area = mecklenburg_area }
+							NOT = { province_id = 44 }
+							NOT = { province_id = 55 }
+							NOT = { province_id = 58 }
+							NOT = { province_id = 61 }
+							NOT = { province_id = 1876 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = HAN
+				}
+				1931 = {
+					if = {
+						limit = {
+							NOT = { owned_by = PRU }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = HAN
+				}
+			}
+			WAL = {
+				change_tag = RMN
+				change_religion = orthodox
+				every_owned_province = { change_religion = orthodox }
+				swap_free_idea_group = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.21.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			clr_country_flag = austro_prussian_war
+			set_country_flag = eh_override_name
+			override_country_name = "North German Confederation"
+			white_peace = HAB
+			vassalize = OLD
+			vassalize = HSA
+			vassalize = MKL
+			vassalize = SAX
+			vassalize = HAM
+		}
+		HAB = {
+			clr_country_flag = austro_prussian_war
+			change_tag = AUH
+			change_government = monarchy
+			add_government_reform = austrian_dual_monarchy
+			set_government_rank = 3
+			add_accepted_culture = czech
+			add_accepted_culture = hungarian
+			europe = {
+				limit = { owned_by = AUH }
+				add_unrest = -0.1
+			}
+			country_event = { id = eh_german.50 days = 1 }
+		}
+	}
+}
+
+# Franco-Prussian War
+country_event = {
+	id = eh_german.22
+	title = "eh_german.22.t"
+	desc = "eh_german.22.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRU
+		is_year = 1870
+		NOT = { is_year = 1872 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_german.22.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			set_country_flag = franco_prussian_war
+			declare_war_with_cb = {
+				who = FR2
+				casus_belli = cb_imperial
+			}
+			country_event = { id = eh_german.23 days = 300 }
+		}
+		FR2 = { 
+			set_country_flag = franco_prussian_war
+			country_event = { id = eh_french.53 days = 1 }
+		}
+		LU2 = { change_tag = LUX }
+	}
+}
+
+# German Empire
+country_event = {
+	id = eh_german.23
+	title = "eh_german.23.t"
+	desc = "eh_german.23.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			PRU = {
+				change_tag = DE2
+				inherit = BAV
+				inherit = ANH
+				inherit = SAX
+				inherit = HAM
+				inherit = MKL
+				inherit = OLD
+				inherit = HSA
+				inherit = FKN
+				inherit = BAD
+				inherit = WUR
+				north_german_region = {
+					limit = {
+						AND = {
+							NOT = { area = bohemia_area }
+							NOT = { area = erzgebirge_area }
+							NOT = { area = moravia_area }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = HES
+				}
+				south_german_region = {
+					limit = {
+						AND = {
+							NOT = { area = inner_austria_area }
+							NOT = { area = carinthia_area }
+							NOT = { area = tirol_area }
+							NOT = { area = austria_proper_area }
+							NOT = { area = switzerland_area }
+							NOT = { area = romandie_area }
+							NOT = { area = east_bavaria_area }
+							NOT = { province_id = 76 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = BAV
+				}
+				silesia_area = {
+					limit = {
+						NOT = { owned_by = DE2 }
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				wielkopolska_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DE2 }
+							NOT = { province_id = 255 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				west_prussia_area = {
+					limit = {
+						NOT = { owned_by = DE2 }
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				east_prussia_area = {
+					limit = {
+						NOT = { owned_by = DE2 }
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				188 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				1859 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				4523 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				4709 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.23.a"
+		ai_chance = { factor = 100 }
+		DE2 = {
+			clr_country_flag = franco_prussian_war
+			clr_country_flag = eh_override_name
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			change_primary_culture = prussian
+			change_religion = protestant
+			set_capital = 50
+			white_peace = FR2
+			restore_country_name = yes
+			add_country_modifier = {
+				name = major_power
+				duration = 30000
+			}
+			define_ruler = {
+				name = "Wilhelm I"
+				dynasty = "von Hohenzollern"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				age = 74
+			}
+			define_consort = {
+				name = "Augusta"
+				dynasty = "von Saxen-Weimar-Eisenach"
+				culture = saxon
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			define_heir = {
+				name = "Friedrich III"
+				dynasty = "von Hohenzollern"
+				change_adm = 4
+				change_dip = 3
+				change_mil = 5
+				age = 40
+			}
+			define_advisor = {
+				type = natural_scientist
+				name = "Friedrich Nietzsche"
+				culture = saxon
+				skill = 6
+				discount = yes
+			}
+		}
+		FR2 = {
+			clr_country_flag = franco_prussian_war
+			country_event = { id = eh_french.54 days = 1 }
+		}
+	}
+}
+
+# Berlin Conference
+country_event = {
+	id = eh_german.24
+	title = "eh_german.24.t"
+	desc = "eh_german.24.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			DE2 = {
+				cameroon_area = {
+					limit = {
+						NOT = { owned_by = DE2 }
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				damaraland_area = {
+					limit = {
+						NOT = { owned_by = DE2 }
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				central_swahili_coast_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DE2 }
+							NOT = { province_id = 1201 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = ZZB
+				}
+				tanzania_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DE2 }
+							NOT = { province_id = 4055 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = ZZB
+				}
+				buha_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DE2 }
+							NOT = { province_id = 4077 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = ZZB
+				}
+				buzinza_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DE2 }
+							NOT = { province_id = 4059 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+					remove_core = ZZB
+				}
+				1236 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				1238 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				1243 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				1992 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				1993 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				3007 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				3033 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				3066 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				2719 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				2720 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				3101 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				4041 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				4069 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				3225 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+			}
+			BEL = {
+				upper_kongo_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				equatorial_kongo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 3020 }
+							NOT = { province_id = 3064 }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				3261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				4081 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				4079 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				4085 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				4087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+			}
+			RUS = {
+				445 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RUS }
+						}
+					}
+					cede_province = RUS
+					add_core = RUS
+					remove_core = BUK
+				}
+			}
+			GR2 = {
+				147 = {
+					if = {
+						limit = {
+							NOT = { owned_by = GR2 }
+						}
+					}
+					cede_province = GR2
+					add_core = GR2
+					remove_core = TUR
+				}
+			}
+			BUL = {
+				2750 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUL }
+						}
+					}
+					cede_province = BUL
+					add_core = BUL
+					remove_core = TUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.24.a"
+		ai_chance = { factor = 100 }
+		ITA = { country_event = { id = eh_italian.11 days = 3 } }
+		C28 = { change_country_color = { color = { 193  26  14 } } }
+		C29 = { change_country_color = { color = { 193  26  14 } } }
+		BEL = {
+			add_country_modifier = {
+				name = major_power
+				duration = 40000
+			}
+		}
+	}
+}
+
+# German Colonial Empire
+country_event = {
+	id = eh_german.25
+	title = "eh_german.25.t"
+	desc = "eh_german.25.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DE2
+		is_year = 1895
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			DE2 = {
+				1200 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				4055 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				2295 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				4059 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+				3223 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DE2 }
+						}
+					}
+					cede_province = DE2
+					add_core = DE2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.25.a"
+		ai_chance = { factor = 100 }
+		DE2 = { add_prestige = 10 }
+	}
+}
+
+# German Revolution of 1918-19
+country_event = {
+	id = eh_german.26
+	title = "eh_german.26.t"
+	desc = "eh_german.26.d"
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_german.26.a"
+		ai_chance = { factor = 100 }
+		DE2 = {
+			set_country_flag = uprising_eh
+			50 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+			65 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+			1775 = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 1
+				}
+			}
+			country_event = { id = eh_german.27 days = 100 }
+		}
+	}
+}
+
+# Weimar Republic
+country_event = {
+	id = eh_german.27
+	title = "eh_german.27.t"
+	desc = "eh_german.27.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.27.a"
+		ai_chance = { factor = 100 }
+		DE2 = {
+			clr_country_flag = uprising_eh
+			change_tag = GER
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 50
+			change_primary_culture = prussian
+			change_religion = secularism
+			define_ruler = {
+				name = "Friedrich Ebert"
+			}
+		}
+		AUH = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 134
+			change_primary_culture = austrian
+			change_religion = secularism
+		}
+		FR2 = { country_event = { id = eh_ww1.8 days = 30 } }
+	}
+}
+
+# Economic collapse
+country_event = {
+	id = eh_german.28
+	title = "eh_german.28.t"
+	desc = "eh_german.28.d"
+	picture = OVEREXTENSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		is_year = 1934
+		NOT = { is_year = 1936 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_german.28.a"
+		ai_chance = { factor = 100 }
+		GER = {
+			add_stability = -1
+			add_prestige = -10
+			add_corruption = 10
+			add_inflation = 1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_years_of_income = -1
+			country_event = { id = eh_german.57 days = 100 }
+		}
+	}
+}
+
+# Nazi Germany
+country_event = {
+	id = eh_german.29
+	title = "eh_german.29.t"
+	desc = "eh_german.29.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			GER = {
+				every_owned_province = {
+					add_core = DEF
+					remove_core = GER
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.29.a"
+		ai_chance = { factor = 100 }
+		DEF = {
+			set_country_flag = eh_fascist
+			inherit = GER
+			add_treasury = 100000
+			add_years_of_income = 1
+			country_event = { id = eh_ww2.1 days = 100 }
+		}
+	}
+}
+
+# Division of Germany
+country_event = {
+	id = eh_german.30
+	title = "eh_german.30.t"
+	desc = "eh_german.30.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WGE
+		is_year = 1946
+		NOT = { is_year = 1948 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "eh_german.30.a"
+		ai_chance = { factor = 100 }
+		USA = {
+			create_subject = {
+				subject_type = sphere_member
+				subject = WGE
+			}
+		}
+		SOV = {
+			create_subject = {
+				subject_type = sphere_member
+				subject = EGE
+			}
+		}
+		WGE = { country_event = { id = eh_german.31 days = 700 } }
+	}
+}
+
+# Cold War history of Germany
+country_event = {
+	id = eh_german.31
+	title = "eh_german.31.t"
+	desc = "eh_german.31.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = "eh_german.31.a"
+		ai_chance = { factor = 100 }
+		WGE = { 
+			grant_independence = yes
+			define_ruler = {
+				name = "Konrad Adenauer"
+				change_adm = 5
+				change_dip = 6
+				change_mil = 1
+				age = 73
+			}
+		}
+		EGE = { grant_independence = yes }
+	}
+}
+
+# German reunification
+country_event = {
+	id = eh_german.32
+	title = "eh_german.32.t"
+	desc = "eh_german.32.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WGE
+		is_year = 1989
+		NOT = { is_year = 1991 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			WGE = { country_event = { id = eh_german.33 days = 3 } }
+			GER = {
+				50 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = GER }
+						}
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.32.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				WGE = { was_player = yes }
+			}
+			switch_tag = GER
+		}
+	}
+}
+
+# German reunification
+country_event = {
+	id = eh_german.33
+	title = "eh_german.33.t"
+	desc = "eh_german.33.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			WGE = {
+				every_owned_province = {
+					add_core = GER
+					remove_core = WGE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.33.a"
+		ai_chance = { factor = 100 }
+		GER = {
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 50
+			change_primary_culture = prussian
+			change_religion = secularism
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 3
+			add_republican_tradition = 10
+			add_prestige = 30
+			add_treasury = 800000
+			add_years_of_income = 3
+			inherit = WGE
+			add_country_modifier = {
+				name = great_power
+				duration = 100000
+			}
+			50 = {
+				add_prosperity = 10
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 5
+			}
+			country_event = { id = eh_german.34 days = 30 }
+		}
+	}
+}
+
+# German reunification
+country_event = {
+	id = eh_german.34
+	title = "eh_german.34.t"
+	desc = "eh_german.34.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			GER = {
+				inherit = EGE
+				mittelmark_area = {
+					limit = {
+						NOT = { owned_by = GER }
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+				vorpommern_area = {
+					limit = {
+						NOT = { owned_by = GER }
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+				mecklenburg_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = GER }
+							NOT = { province_id = 45 }
+						}
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+				thuringia_area = {
+					limit = {
+						NOT = { owned_by = GER }
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+				northern_saxony_area = {
+					limit = {
+						NOT = { owned_by = GER }
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+				south_saxony_area = {
+					limit = {
+						NOT = { owned_by = GER }
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+				1763 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = GER }
+						}
+					}
+					cede_province = GER
+					add_core = GER
+					remove_core = EGE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.34.a"
+		ai_chance = { factor = 100 }
+		GER = {
+			set_country_flag = change_tags
+			add_treasury = -300000
+			add_years_of_income = -3
+		}
+	}
+}
+
+########################################################################
+# Events for the Dutch
+########################################################################
+
+# Burgundian succession
+country_event = {
+	id = eh_dutch.1
+	title = "eh_dutch.1.t"
+	desc = "eh_dutch.1.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		is_year = 1477
+		NOT = { is_year = 1480 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			FRA = {
+				create_subject = {
+					subject_type = appanage
+					subject = PRO
+				}
+				create_subject = {
+					subject_type = appanage
+					subject = NEV
+				}
+				picardy_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 87 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = BUR
+				}
+				bourgogne_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = FRA }
+							NOT = { province_id = 193 }
+							NOT = { province_id = 4764 }
+						}
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = BUR
+				}
+				west_burgundy_area = {
+					limit = {
+						NOT = { owned_by = FRA }
+					}
+					cede_province = FRA
+					add_core = FRA
+					remove_core = BUR
+				}
+			}
+			HAB = {
+				inherit = HOL
+				inherit = BRB
+				inherit = FLA
+				inherit = BUR
+				add_accepted_culture = dutch
+				add_accepted_culture = flemish
+				add_accepted_culture = wallonian
+				low_countries_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = HAB }
+							NOT = { province_id = 55 }
+							NOT = { province_id = 93 }
+							NOT = { province_id = 98 }
+							NOT = { province_id = 99 }
+							NOT = { province_id = 100 }
+							NOT = { province_id = 1931 }
+							NOT = { province_id = 2974 }
+							NOT = { province_id = 4381 }
+							NOT = { province_id = 4382 }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BUR
+				}
+				72 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BUR
+				}
+				193 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BUR
+				}
+				1880 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BUR
+				}
+				4764 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HAB }
+						}
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = BUR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.1.a"
+		ai_chance = { factor = 100 }
+		FRA = { add_prestige = 10 }
+		HAB = { add_prestige = 10 }
+	}
+}
+
+# Habsburg rule from Spain
+country_event = {
+	id = eh_dutch.2
+	title = "eh_dutch.2.t"
+	desc = "eh_dutch.2.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			SPA = {
+				low_countries_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = SPA }
+							NOT = { province_id = 55 }
+							NOT = { province_id = 93 }
+							NOT = { province_id = 98 }
+							NOT = { province_id = 1931 }
+							NOT = { province_id = 4381 }
+							NOT = { province_id = 2974 }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = HAB
+				}
+				88 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = HAB
+				}
+				193 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = HAB
+				}
+				4764 = {
+					if = {
+						limit = {
+							NOT = { owned_by = SPA }
+						}
+					}
+					cede_province = SPA
+					add_core = SPA
+					remove_core = HAB
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.2.a"
+		ai_chance = { factor = 100 }
+		SPA = {
+			add_prestige = 10
+			add_years_of_income = 1
+			add_accepted_culture = dutch
+			add_accepted_culture = flemish
+			add_accepted_culture = wallonian
+			north_brabant_area = { change_culture = dutch }
+			holland_area = { change_culture = dutch }
+			flanders_area = { change_culture = flemish }
+			wallonia_area = { change_culture = wallonian }
+			brabant_area = { change_culture = wallonian }
+		}
+	}
+}
+
+# Dutch Reformation
+country_event = {
+	id = eh_dutch.3
+	title = "eh_dutch.3.t"
+	desc = "eh_dutch.3.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPA
+		is_year = 1579
+		NOT = { is_year = 1585 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NED = {
+				holland_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					change_religion = reformed
+					cede_province = NED
+					add_core = NED
+					remove_core = SPA
+				}
+				frisia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 1931 }
+						}
+					}
+					change_religion = reformed
+					cede_province = NED
+					add_core = NED
+					remove_core = FRY
+				}
+				north_brabant_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					change_religion = reformed
+					cede_province = NED
+					add_core = NED
+					remove_core = SPA
+				}
+				1744 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					change_religion = reformed
+					cede_province = NED
+					add_core = NED
+					remove_core = SPA
+				}
+			}
+			EFR = { set_country_flag = state_joined_netherlands }
+			LIE = { set_country_flag = state_joined_netherlands }
+			LU2 = { set_country_flag = state_joined_netherlands }
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.3.a"
+		ai_chance = { factor = 100 }
+		NED = {
+			set_country_flag = eighty_years_war
+			change_government = republic
+			add_government_reform = dutch_republic
+			set_government_rank = 2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_republican_tradition = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_treasury = 50000
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			change_religion = reformed
+			set_capital = 97
+			swap_free_idea_group = yes
+			define_ruler = {
+				name = "Willem I"
+				dynasty = "van Oranje"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				age = 43
+			}
+			define_consort = {
+				name = "Louise"
+				dynasty = "de Coligny"
+				culture = burgundian
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+			country_event = { id = eh_dutch.4 days = 700 }
+		}
+		SPA = {
+			set_country_flag = eighty_years_war
+			add_stability = -1
+			add_prestige = -10
+			add_years_of_income = -1
+		}
+		FRA = { create_guarantee = NED }
+		ENG = { create_guarantee = NED }
+	}
+}
+	
+# Eighty Years' War and Dutch independence
+country_event = {
+	id = eh_dutch.4
+	title = "eh_dutch.4.t"
+	desc = "eh_dutch.4.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			NED = {
+				clr_country_flag = eighty_years_war
+				grant_independence = yes
+				97 = {
+					add_institution_embracement = {
+						which = global_trade
+						value = 90
+					}
+				}
+			}
+			SPA = { 
+				clr_country_flag = eighty_years_war
+				white_peace = NED
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.4.a"
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				SPA = { was_player = yes }
+			}
+			switch_tag = NED
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.4.b"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Dutch Golden Age
+country_event = {
+	id = eh_dutch.5
+	title = "eh_dutch.5.t"
+	desc = "eh_dutch.5.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		is_year = 1675
+		NOT = { is_year = 1680 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_dutch.5.a"
+		ai_chance = { factor = 100 }
+		NED = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+            add_stability = 3
+			add_manpower = 30
+			add_sailors = 1000
+			add_legitimacy = 10
+			add_army_tradition = 10
+			add_army_professionalism = 0.1
+            add_prestige = 30
+			add_years_of_income = 3
+			add_war_exhaustion = -10
+			add_country_modifier = {
+				name = major_power
+				duration = 100000
+			}
+			97 = {
+				add_prosperity = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+}
+
+# Batavian Republic
+country_event = {
+	id = eh_dutch.6
+	title = "eh_dutch.6.t"
+	desc = "eh_dutch.6.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		is_year = 1795
+		NOT = { is_year = 1800 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = "eh_dutch.6.a"
+		ai_chance = { factor = 100 }
+		NED = {
+			change_government = republic
+			add_government_reform = single_party_system
+			kill_ruler = yes
+		}
+		FR2 = {
+			create_subject = {
+				subject_type = client_vassal
+				subject = NED
+			}
+		}
+	}
+}
+
+# Congress of Vienna
+country_event = {
+	id = eh_dutch.7
+	title = "eh_dutch.7.t"
+	desc = "eh_dutch.7.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			NED = {
+				low_countries_region = {
+					limit = {
+						AND = {
+							NOT = { owned_by = NED }
+							NOT = { province_id = 94 }
+							NOT = { province_id = 1931 }
+							NOT = { province_id = 3004 }
+							NOT = { province_id = 4769 }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = FR2
+				}
+				2678 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				2679 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			LU2 = {
+				94 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LU2 }
+						}
+					}
+					cede_province = LU2
+					add_core = LU2
+					remove_core = FR2
+				}
+				3004 = {
+					if = {
+						limit = {
+							NOT = { owned_by = LU2 }
+						}
+					}
+					cede_province = LU2
+					add_core = LU2
+					remove_core = FR2
+				}
+			}
+			PRU = {
+				north_rhine_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = FR2
+				}
+				thuringia_area = {
+					limit = {
+						NOT = { owned_by = PRU }
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = SAX
+				}
+				south_saxony_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = PRU }
+							NOT = { province_id = 61 }
+						}
+					}
+					cede_province = PRU
+					add_core = PRU
+					remove_core = SAX
+				}
+			}
+			DAN = {
+				1857 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DAN }
+						}
+					}
+					cede_province = DAN
+					add_core = DAN
+					remove_core = PRU
+				}
+			}
+			HES = {
+				78 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = MAI
+				}
+				4718 = {
+					if = {
+						limit = {
+							NOT = { owned_by = HES }
+						}
+					}
+					cede_province = HES
+					add_core = HES
+					remove_core = MAI
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_dutch.7.a"
+		ai_chance = { factor = 100 }
+		NED = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			set_capital = 97
+			change_primary_culture = dutch
+			change_religion = reformed
+			grant_independence = yes
+			define_ruler = {
+				dynasty = "van Oranje"
+			}
+			define_heir = {
+				dynasty = "van Oranje"
+			}
+			low_countries_region = {
+				limit = { 
+					AND = {
+						owned_by = NED
+						NOT = { area = flanders_area }
+						NOT = { area = wallonia_area }
+					}
+				}
+				change_religion = reformed
+			}
+		}
+		PRU = {
+			change_religion = protestant
+			north_german_region = {
+				limit = { owned_by = PRU }
+				change_religion = protestant
+			}
+		}
+	}
+}
+
+# Belgian Revolution
+country_event = {
+	id = eh_dutch.8
+	title = "eh_dutch.8.t"
+	desc = "eh_dutch.8.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NED
+		is_year = 1831
+		NOT = { is_year = 1835 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	immediate = {
+		hidden_effect = {
+			NED = {
+				south_sumatra_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = PLB
+				}
+				central_java_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = PLB
+				}
+				east_java_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = PLB
+				} 
+				west_java_area = {
+					limit = {
+						NOT = { owned_by = NED }
+					}
+					cede_province = NED
+					add_core = NED
+					remove_core = PLB
+				}
+				659 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				2686 = {
+					if = {
+						limit = {
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+			BEL = {
+				flanders_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 4769 }
+						}
+					}
+					change_religion = catholic
+					cede_province = BEL
+					add_core = BEL
+					remove_core = NED
+				}
+				wallonia_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 94 }
+						}
+					}
+					change_religion = catholic
+					cede_province = BEL
+					add_core = BEL
+					remove_core = NED
+				}
+				brabant_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					change_religion = catholic
+					cede_province = BEL
+					add_core = BEL
+					remove_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.8.a"
+		ai_chance = { factor = 100 }
+		BEL = {
+			change_government = monarchy
+			add_government_reform = multi_party_system
+			set_government_rank = 2
+			set_capital = 92
+			change_primary_culture = wallonian
+			add_accepted_culture = flemish
+			change_religion = catholic
+			change_technology_group = western
+			define_ruler = {
+				dynasty = "von Saxe-Coburg"
+			}
+			define_heir = {
+				dynasty = "von Saxe-Coburg"
+			}
+		}
+	}
+}
+
+# Belgian Colonial Empire
+country_event = {
+	id = eh_dutch.9
+	title = "eh_dutch.9.t"
+	desc = "eh_dutch.9.d"
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = BEL
+		is_year = 1895
+		NOT = { is_year = 1900 }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 300
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = { is_colony = yes }
+				add_colonysize = -1000
+			}
+			BEL = {
+				lower_kasai = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				sankuru_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				luba_area = {
+					limit = {
+						NOT = { owned_by = BEL }
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				katanga_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = BEL }
+							NOT = { province_id = 4103 }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+				4092 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BEL }
+						}
+					}
+					cede_province = BEL
+					add_core = BEL
+				}
+			}
+			NED = {
+				1245 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+				2718 = {
+					if = {
+						limit = { 
+							NOT = { owned_by = NED }
+						}
+					}
+					cede_province = NED
+					add_core = NED
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.9.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Decolonization
+country_event = {
+	id = eh_dutch.10
+	title = "eh_dutch.10.t"
+	desc = "eh_dutch.10.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DRC = {
+				upper_kongo_area = {
+					limit = {
+						NOT = { owned_by = DRC }
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				equatorial_kongo_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DRC }
+							NOT = { province_id = 3020 }
+							NOT = { province_id = 3064 }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				lower_kasai = {
+					limit = {
+						NOT = { owned_by = DRC }
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				sankuru_area = {
+					limit = {
+						NOT = { owned_by = DRC }
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				luba_area = {
+					limit = {
+						NOT = { owned_by = DRC }
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				katanga_area = {
+					limit = {
+						AND = {
+							NOT = { owned_by = DRC }
+							NOT = { province_id = 4103 }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				3018 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DRC }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				3261 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DRC }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				4079 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DRC }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				4087 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DRC }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				4092 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DRC }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+				4068 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DRC }
+						}
+					}
+					cede_province = DRC
+					add_core = DRC
+					remove_core = BEL
+				}
+			}
+			RWA = {
+				4067 = {
+					if = {
+						limit = {
+							NOT = { owned_by = RWA }
+						}
+					}
+					cede_province = RWA
+					add_core = RWA
+					remove_core = BEL
+				}
+			}
+			BUU = {
+				4069 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUU }
+						}
+					}
+					cede_province = BUU
+					add_core = BUU
+					remove_core = BEL
+				}
+				4070 = {
+					if = {
+						limit = {
+							NOT = { owned_by = BUU }
+						}
+					}
+					cede_province = BUU
+					add_core = BUU
+					remove_core = BEL
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_dutch.10.a"
+		ai_chance = { factor = 100 }
+		BEL = { add_prestige = -10 }
+	}
+}
+
+########################################################################
+# Events for the Minor history
+########################################################################
+
+# Friedrich Wilhelm I
+country_event = {
+	id = eh_german.35
+	title = "eh_german.35.t"
+	desc = "eh_german.35.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = PRU
+		is_year = 1715
+		NOT = { is_year = 1740 }
+		NOT = { has_ruler = "Friedrich Wilhelm I" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_german.35.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			change_government = monarchy
+			add_government_reform = prussian_monarchy
+			set_government_rank = 2
+			define_ruler = {
+				name = "Friedrich Wilhelm I"
+				dynasty = "von Hohenzollern"
+				culture = prussian 
+				change_adm = 4
+				change_dip = 4
+				change_mil = 6
+				min_age = 15
+				max_age = 40
+			}
+			define_consort = {
+				name = "Sophia Dorothea"
+				dynasty = "von Hannover"
+				culture = lower_saxon
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Frederick II the Great
+country_event = {
+	id = eh_german.36
+	title = "eh_german.36.t"
+	desc = "eh_german.36.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		tag = PRU
+		is_year = 1745
+		NOT = { is_year = 1780 }
+		NOT = { has_ruler = "Frederick II" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_german.36.a"
+		ai_chance = { factor = 100 }
+		PRU = {
+			change_government = monarchy
+			add_government_reform = prussian_monarchy
+			set_government_rank = 2
+			define_ruler = {
+				name = "Frederick II"
+				dynasty = "von Hohenzollern"
+				change_adm = 6
+				change_dip = 6
+				change_mil = 6
+				min_age = 30
+				max_age = 75
+			}
+			define_consort = {
+				name = "Elisabeth Christine"
+				dynasty = "von Braunschweig-Bevern"
+				culture = lower_saxon
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Wilhelm I
+country_event = {
+	id = eh_german.37
+	title = "eh_german.37.t"
+	desc = "eh_german.37.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = PRU
+			tag = GER
+		}
+		is_year = 1865
+		NOT = { is_year = 1885 }
+		NOT = { has_ruler = "Wilhelm I" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_german.37.a"
+		ai_chance = { factor = 100 }
+		ROOT = {
+			define_ruler = {
+				name = "Wilhelm I"
+				dynasty = "von Hohenzollern"
+				change_adm = 5
+				change_dip = 4
+				change_mil = 5
+				min_age = 65
+				max_age = 85
+			}
+			define_consort = {
+				name = "Augusta"
+				dynasty = "von Saxen-Weimar-Eisenach"
+				culture = saxon
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+				female = yes
+			}
+		}
+	}
+}
+
+# Adolf Hitler
+country_event = {
+	id = eh_german.38
+	title = "eh_german.38.t"
+	desc = "eh_german.38.d"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	trigger = {
+		tag = DEF
+		is_year = 1935
+		NOT = { is_year = 1945 }
+		NOT = { has_ruler = "Adolf Hitler" }
+		has_global_flag = eh_historic
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "eh_german.38.a"
+		ai_chance = { factor = 100 }
+		DEF = {
+			set_country_flag = eh_fascist
+			change_government = republic
+			add_government_reform = fascist_government
+			set_government_rank = 3
+			define_ruler = {
+				name = "Adolf Hitler"
+				change_adm = 4
+				change_dip = 0
+				change_mil = 5
+				min_age = 45
+				max_age = 55
+			}
+		}
+	}
+}
+
+# Seven Years' War - Start for Austria
+country_event = {
+	id = eh_german.39
+	title = "eh_german.39.t"
+	desc = "eh_german.39.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.39.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Seven Years' War - Finish for Austria
+country_event = {
+	id = eh_german.40
+	title = "eh_german.40.t"
+	desc = "eh_german.40.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.40.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# War of the First Coalition - Start for Austria
+country_event = {
+	id = eh_german.41
+	title = "eh_german.41.t"
+	desc = "eh_german.41.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.41.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# War of the First Coalition - Start for Prussia
+country_event = {
+	id = eh_german.42
+	title = "eh_german.42.t"
+	desc = "eh_german.42.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.42.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Directorate - Finish for Austria
+country_event = {
+	id = eh_german.43
+	title = "eh_german.43.t"
+	desc = "eh_german.43.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.43.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Directorate - Finish for Prussia
+country_event = {
+	id = eh_german.44
+	title = "eh_german.44.t"
+	desc = "eh_german.44.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.44.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# War of the Fourth Coalition - Start for Prussia
+country_event = {
+	id = eh_german.45
+	title = "eh_german.45.t"
+	desc = "eh_german.45.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.45.a"
+		ai_chance = { factor = 100 }
+		PRU = { country_event = { id = eh_german.17 days = 300 } }
+	}
+}
+
+# Confederation of the Rhine - Finish for Prussia
+country_event = {
+	id = eh_german.46
+	title = "eh_german.46.t"
+	desc = "eh_german.46.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.46.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Hundred Days - Start for Prussia
+country_event = {
+	id = eh_german.47
+	title = "eh_german.47.t"
+	desc = "eh_german.47.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.47.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Surrender of Napoleon - Finish for Prussia
+country_event = {
+	id = eh_german.48
+	title = "eh_german.48.t"
+	desc = "eh_german.48.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.48.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Austro-Prussian War - Start for Austria
+country_event = {
+	id = eh_german.49
+	title = "eh_german.49.t"
+	desc = "eh_german.49.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.49.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# German Question - Finish for Austria
+country_event = {
+	id = eh_german.50
+	title = "eh_german.50.t"
+	desc = "eh_german.50.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.50.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				AUH = { was_player = yes }
+			}
+			switch_tag = PRU
+		}
+	}
+}
+
+# Boxer Rebellion - Start for Germany
+country_event = {
+	id = eh_german.51
+	title = "eh_german.51.t"
+	desc = "eh_german.51.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.51.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Boxer Protocol - Finish for Germany
+country_event = {
+	id = eh_german.52
+	title = "eh_german.52.t"
+	desc = "eh_german.52.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.52.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# World War I - Start for Germany
+country_event = {
+	id = eh_german.53
+	title = "eh_german.53.t"
+	desc = "eh_german.53.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.53.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Treaty of Versailles - Finish for Germany
+country_event = {
+	id = eh_german.54
+	title = "eh_german.54.t"
+	desc = "eh_german.54.d"
+	picture = EUROPEAN_DEBATE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.54.a"
+		ai_chance = { factor = 100 }
+		DE2 = { country_event = { id = eh_german.26 days = 30 } }
+	}
+}
+
+# World War II - Start for Germany
+country_event = {
+	id = eh_german.55
+	title = "eh_german.55.t"
+	desc = "eh_german.55.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	option = {
+		name = "eh_german.55.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# German Instrument of Surrender - Finish for Germany
+country_event = {
+	id = eh_german.56
+	title = "eh_german.56.t"
+	desc = "eh_german.56.d"
+	picture = WW_ALLIES_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DEF = { country_event = { id = eh_german.58 days = 3 } }
+			WGE = {
+				85 = {
+					if = {
+						limit = {
+							NOT = { owned_by = WGE }
+						}
+					}
+					cede_province = WGE
+					add_core = WGE
+					remove_core = DEF
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "eh_german.56.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				DEF = { was_player = yes }
+			}
+			switch_tag = WGE
+		}
+	}
+}
+
+# Nazi Germany - Event for tag
+country_event = {
+	id = eh_german.57
+	title = "eh_german.57.t"
+	desc = "eh_german.57.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			GER = {
+				set_country_flag = change_tags
+				country_event = { id = eh_german.29 days = 3 } 
+			}
+			DEF = {
+				50 = {
+					if = {
+						limit = {
+							NOT = { owned_by = DEF }
+						}
+					}
+					cede_province = DEF
+					add_core = DEF
+					remove_core = GER
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.57.a"
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				GER = { was_player = yes }
+			}
+			switch_tag = DEF
+		}
+	}
+}
+
+# West Germany - Event for tag
+country_event = {
+	id = eh_german.58
+	title = "eh_german.58.t"
+	desc = "eh_german.58.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			DEF = {
+				every_owned_province = {
+					add_core = WGE
+					remove_core = DEF
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "eh_german.58.a"
+		ai_chance = { factor = 100 }
+		WGE = {
+			set_country_flag = change_tags
+			change_government = republic
+			add_government_reform = democracy_reform
+			set_government_rank = 2
+			set_capital = 85
+			change_primary_culture = hannoverian
+			change_religion = secularism
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_army_tradition = -30
+			add_navy_tradition = -30
+			add_army_professionalism = -0.3
+			add_inflation = 3
+			add_prestige = -30
+			add_war_exhaustion = -3
+			set_capital = 85
+			inherit = DEF
+			swap_free_idea_group = yes
+		}
+	}
+}
+
+# EH version

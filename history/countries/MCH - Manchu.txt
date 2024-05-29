@@ -1,0 +1,376 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+technology_group = eastern_nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = mahayana
+primary_culture = manchu
+historical_rival = CHH
+historical_rival = MNG
+capital = 2111
+
+100.1.1 = { add_government_reform = early_gov_reform_1 }
+230.1.1 = { add_government_reform = early_gov_reform_2 }
+360.1.1 = { add_government_reform = early_gov_reform_3 }
+490.1.1 = { add_government_reform = early_gov_reform_4 }
+620.1.1 = { add_government_reform = early_gov_reform_5 }
+750.1.1 = { add_government_reform = early_gov_reform_6 }
+750.1.1 = { technology_group = nomad_group }
+
+880.1.1 = { add_government_reform = early_gov_reform_7 }
+1010.1.1 = { add_government_reform = early_gov_reform_8 }
+1140.1.1 = { add_government_reform = early_gov_reform_9 }
+1270.1.1 = { add_government_reform = early_gov_reform_10 }
+
+# Jianzhou Jurchen
+
+1368.1.23 = {
+	monarch = {
+		name = "Bukuri Yongson"
+		dynasty = "Aisin Gioro"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Dudu Mengtemu"
+		monarch_name = "Dudu Mengtemu"
+		dynasty = "Aisin Gioro"
+		birth_date = 1370.1.1
+		death_date = 1433.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1405.1.1 = {
+	monarch = {
+		name = "Mengtemu"
+		dynasty = "Aisin Gioro"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1405.1.1 = {
+	heir = {
+		name = "Cungsan"
+		monarch_name = "Cungsan"
+		dynasty = "Aisin Gioro"
+		birth_date = 1405.1.1
+		death_date = 1467.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+1433.1.1 = {
+	monarch = {
+		name = "Cungsan"
+		dynasty = "Aisin Gioro"
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+1433.1.1 = {
+	heir = {
+		name = "Tolo"
+		monarch_name = "Tolo"
+		dynasty = "Aisin Gioro"
+		birth_date = 1433.1.1
+		death_date = 1506.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1467.1.1 = {
+	monarch = {
+		name = "Tolo"
+		dynasty = "Aisin Gioro"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1467.1.1 = {
+	heir = {
+		name = "Sibeoci Fiyanggu"
+		monarch_name = "Sibeoci Fiyanggu"
+		dynasty = "Aisin Gioro"
+		birth_date = 1467.1.1
+		death_date = 1522.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1481.1.1 = {
+	monarch = {
+		name = "Sibeoci Fiyanggu"
+		dynasty = "Aisin Gioro"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1481.1.1 = {
+	heir = {
+		name = "Fuman"
+		monarch_name = "Fuman"
+		dynasty = "Aisin Gioro"
+		birth_date = 1481.1.1
+		death_date = 1542.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1522.1.1 = {
+	monarch = {
+		name = "Fuman"
+		dynasty = "Aisin Gioro"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1522.1.1 = {
+	heir = {
+		name = "Giocangga"
+		monarch_name = "Giocangga"
+		dynasty = "Aisin Gioro"
+		birth_date = 1522.1.1
+		death_date = 1571.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1542.1.1 = {
+	monarch = {
+		name = "Giocangga"
+		dynasty = "Aisin Gioro"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1542.1.1 = {
+	heir = {
+		name = "Taksi"
+		monarch_name = "Taksi"
+		dynasty = "Aisin Gioro"
+		birth_date = 1532.1.1
+		death_date = 1583.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+1571.1.1 = {
+	monarch = {
+		name = "Taksi"
+		dynasty = "Aisin Gioro"
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+	queen = {
+		country_of_origin = MCH
+		name = "Emeci"
+		dynasty = "Hitara"
+		birth_date = 1535.1.1
+		death_date = 1569.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nurhachi"
+		monarch_name = "Nurhachi"
+		dynasty = "Aisin Gioro"
+		birth_date = 1559.2.21
+		death_date = 1626.9.30
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 6
+		leader = {	
+			name = "Nurhachi"
+			type = general
+			fire = 2
+			shock = 5
+			manuever = 4
+			siege = 2 
+			death_date = 1626.9.30
+		}
+	}
+}
+
+1583.1.1 = {
+	government_rank = 2
+	monarch = {
+		name = "Nurhachi"
+		dynasty = "Aisin Gioro"
+		adm = 5
+		dip = 4
+		mil = 6
+		leader = {	name = "Nurhachi"   	type = general	fire = 2	shock = 5	manuever = 4	siege = 2 death_date = 1626.9.30 }
+	}
+	queen = {
+		country_of_origin = MCH
+		name = "Hahana Jacing"
+		dynasty = "Tunggiya"
+		birth_date = 1560.1.1
+		death_date = 1592.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1592.11.28 = {
+	queen = {
+		country_of_origin = MHX
+		name = "Monggo Jerjer"
+		dynasty = "Yehe Nara"
+		birth_date = 1575.1.1
+		death_date = 1603.10.31
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Huang"
+		monarch_name = "Huang Taiji"
+		dynasty = "Aisin Gioro"
+		birth_date = 1592.11.28
+		death_date = 1643.9.21
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = { 
+			name = "Huang Taiji"
+			type = general
+			fire = 0
+			shock = 5
+			manuever = 3
+			siege = 0
+			death_date = 1643.9.22
+		}
+	}
+}
+
+# Later Jin dynasty
+
+1616.1.1 = { changed_tag_from = MJZ }
+
+1616.1.1 = { 
+	government = monarchy 
+	add_government_reform = autocracy_reform 
+	government_rank = 3 
+}
+
+1625.1.1 = { capital = 726 }
+
+1626.9.30 = {
+	monarch = {
+		name = "Huang"
+		dynasty = "Aisin Gioro"
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = { name = "Huang Taiji"   	type = general	fire = 0	shock = 5	manuever = 3	siege = 0 death_date = 1643.9.22 }
+	}
+	queen = {
+		country_of_origin = KRC
+		name = "Jerjer"
+		dynasty = "Borjigin"
+		birth_date = 1599.5.31
+		death_date = 1649.5.28
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1628.1.1 = { leader = {	name = "Dorgon"			type = general	fire = 4	shock = 4	manuever = 5	siege = 2	death_date = 1650.12.31 } }
+1636.1.1 = { leader = {	name = "Hooge"			type = general	fire = 3	shock = 4	manuever = 4	siege = 2	death_date = 1647.12.31 } }
+
+1636.5.15 = {
+	technology_group = chinese 
+	secondary_religion = confucianism
+	primary_culture = manchu_new
+	add_accepted_culture = yi
+	add_accepted_culture = zhuang
+	add_accepted_culture = mongol
+	add_accepted_culture = chahar
+	add_accepted_culture = shan
+	add_accepted_culture = tibetan
+	add_accepted_culture = tangut
+	add_accepted_culture = khams
+	add_accepted_culture = uyghur
+	culture_group_union = east_asian
+}
+
+1638.3.15 = {
+	heir = {
+		name = "Fulin"
+		monarch_name = "Fulin"
+		dynasty = "Aisin Gioro"
+		birth_date = 1638.3.15
+		death_date = 1661.2.5
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1643.9.22 = {
+	monarch = {
+		name = "Fulin"  #Shunzhi Emperor
+		dynasty = "Aisin Gioro"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1644.10.30 = {
+	government = monarchy
+	add_government_reform = celestial_empire
+	religion = confucianism 
+	add_harmonized_religion = mahayana
+	capital = 1816 
+}
